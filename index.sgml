@@ -581,6 +581,7 @@
 <ANCHOR id="harfbuzz-hb-coretext.description" href="harfbuzz/harfbuzz-hb-coretext.html#harfbuzz-hb-coretext.description">
 <ANCHOR id="harfbuzz-hb-coretext.functions_details" href="harfbuzz/harfbuzz-hb-coretext.html#harfbuzz-hb-coretext.functions_details">
 <ANCHOR id="hb-coretext-face-create" href="harfbuzz/harfbuzz-hb-coretext.html#hb-coretext-face-create">
+<ANCHOR id="hb-coretext-font-create" href="harfbuzz/harfbuzz-hb-coretext.html#hb-coretext-font-create">
 <ANCHOR id="hb-coretext-face-get-cg-font" href="harfbuzz/harfbuzz-hb-coretext.html#hb-coretext-face-get-cg-font">
 <ANCHOR id="hb-coretext-font-get-ct-font" href="harfbuzz/harfbuzz-hb-coretext.html#hb-coretext-font-get-ct-font">
 <ANCHOR id="harfbuzz-hb-coretext.other_details" href="harfbuzz/harfbuzz-hb-coretext.html#harfbuzz-hb-coretext.other_details">
