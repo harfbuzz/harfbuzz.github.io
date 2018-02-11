@@ -480,6 +480,8 @@
 <ANCHOR id="harfbuzz-hb-ot-shape.other_details" href="harfbuzz/harfbuzz-hb-ot-shape.html#harfbuzz-hb-ot-shape.other_details">
 <ANCHOR id="harfbuzz-hb-ot-math" href="harfbuzz/harfbuzz-hb-ot-math.html">
 <ANCHOR id="harfbuzz-hb-ot-math.functions" href="harfbuzz/harfbuzz-hb-ot-math.html#harfbuzz-hb-ot-math.functions">
+<ANCHOR id="hb-ot-math-glyph-variant-t" href="harfbuzz/harfbuzz-hb-ot-math.html#hb-ot-math-glyph-variant-t">
+<ANCHOR id="hb-ot-math-glyph-part-t" href="harfbuzz/harfbuzz-hb-ot-math.html#hb-ot-math-glyph-part-t">
 <ANCHOR id="harfbuzz-hb-ot-math.other" href="harfbuzz/harfbuzz-hb-ot-math.html#harfbuzz-hb-ot-math.other">
 <ANCHOR id="harfbuzz-hb-ot-math.object-hierarchy" href="harfbuzz/harfbuzz-hb-ot-math.html#harfbuzz-hb-ot-math.object-hierarchy">
 <ANCHOR id="harfbuzz-hb-ot-math.description" href="harfbuzz/harfbuzz-hb-ot-math.html#harfbuzz-hb-ot-math.description">
@@ -498,9 +500,9 @@
 <ANCHOR id="HB-OT-MATH-SCRIPT:CAPS" href="harfbuzz/harfbuzz-hb-ot-math.html#HB-OT-MATH-SCRIPT:CAPS">
 <ANCHOR id="hb-ot-math-constant-t" href="harfbuzz/harfbuzz-hb-ot-math.html#hb-ot-math-constant-t">
 <ANCHOR id="hb-ot-math-kern-t" href="harfbuzz/harfbuzz-hb-ot-math.html#hb-ot-math-kern-t">
-<ANCHOR id="hb-ot-math-glyph-variant-t" href="harfbuzz/harfbuzz-hb-ot-math.html#hb-ot-math-glyph-variant-t">
+<ANCHOR id="hb-ot-math-glyph-variant-t-struct" href="harfbuzz/harfbuzz-hb-ot-math.html#hb-ot-math-glyph-variant-t-struct">
 <ANCHOR id="hb-ot-math-glyph-part-flags-t" href="harfbuzz/harfbuzz-hb-ot-math.html#hb-ot-math-glyph-part-flags-t">
-<ANCHOR id="hb-ot-math-glyph-part-t" href="harfbuzz/harfbuzz-hb-ot-math.html#hb-ot-math-glyph-part-t">
+<ANCHOR id="hb-ot-math-glyph-part-t-struct" href="harfbuzz/harfbuzz-hb-ot-math.html#hb-ot-math-glyph-part-t-struct">
 <ANCHOR id="harfbuzz-hb-shape-plan" href="harfbuzz/harfbuzz-hb-shape-plan.html">
 <ANCHOR id="harfbuzz-hb-shape-plan.functions" href="harfbuzz/harfbuzz-hb-shape-plan.html#harfbuzz-hb-shape-plan.functions">
 <ANCHOR id="hb-shape-plan-t" href="harfbuzz/harfbuzz-hb-shape-plan.html#hb-shape-plan-t">
