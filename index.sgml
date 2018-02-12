@@ -610,7 +610,9 @@
 <ANCHOR id="HB-GOBJECT-TYPE-MEMORY-MODE:CAPS" href="harfbuzz/harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-MEMORY-MODE:CAPS">
 <ANCHOR id="HB-GOBJECT-TYPE-OT-LAYOUT-GLYPH-CLASS:CAPS" href="harfbuzz/harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-OT-LAYOUT-GLYPH-CLASS:CAPS">
 <ANCHOR id="HB-GOBJECT-TYPE-OT-MATH-CONSTANT:CAPS" href="harfbuzz/harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-OT-MATH-CONSTANT:CAPS">
+<ANCHOR id="HB-GOBJECT-TYPE-OT-MATH-GLYPH-PART:CAPS" href="harfbuzz/harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-OT-MATH-GLYPH-PART:CAPS">
 <ANCHOR id="HB-GOBJECT-TYPE-OT-MATH-GLYPH-PART-FLAGS:CAPS" href="harfbuzz/harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-OT-MATH-GLYPH-PART-FLAGS:CAPS">
+<ANCHOR id="HB-GOBJECT-TYPE-OT-MATH-GLYPH-VARIANT:CAPS" href="harfbuzz/harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-OT-MATH-GLYPH-VARIANT:CAPS">
 <ANCHOR id="HB-GOBJECT-TYPE-OT-MATH-KERN:CAPS" href="harfbuzz/harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-OT-MATH-KERN:CAPS">
 <ANCHOR id="HB-GOBJECT-TYPE-SCRIPT:CAPS" href="harfbuzz/harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-SCRIPT:CAPS">
 <ANCHOR id="HB-GOBJECT-TYPE-SHAPE-PLAN:CAPS" href="harfbuzz/harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-SHAPE-PLAN:CAPS">
@@ -639,7 +641,9 @@
 <ANCHOR id="hb-gobject-memory-mode-get-type" href="harfbuzz/harfbuzz-hb-gobject.html#hb-gobject-memory-mode-get-type">
 <ANCHOR id="hb-gobject-ot-layout-glyph-class-get-type" href="harfbuzz/harfbuzz-hb-gobject.html#hb-gobject-ot-layout-glyph-class-get-type">
 <ANCHOR id="hb-gobject-ot-math-constant-get-type" href="harfbuzz/harfbuzz-hb-gobject.html#hb-gobject-ot-math-constant-get-type">
+<ANCHOR id="hb-gobject-ot-math-glyph-part-get-type" href="harfbuzz/harfbuzz-hb-gobject.html#hb-gobject-ot-math-glyph-part-get-type">
 <ANCHOR id="hb-gobject-ot-math-glyph-part-flags-get-type" href="harfbuzz/harfbuzz-hb-gobject.html#hb-gobject-ot-math-glyph-part-flags-get-type">
+<ANCHOR id="hb-gobject-ot-math-glyph-variant-get-type" href="harfbuzz/harfbuzz-hb-gobject.html#hb-gobject-ot-math-glyph-variant-get-type">
 <ANCHOR id="hb-gobject-ot-math-kern-get-type" href="harfbuzz/harfbuzz-hb-gobject.html#hb-gobject-ot-math-kern-get-type">
 <ANCHOR id="hb-gobject-script-get-type" href="harfbuzz/harfbuzz-hb-gobject.html#hb-gobject-script-get-type">
 <ANCHOR id="hb-gobject-shape-plan-get-type" href="harfbuzz/harfbuzz-hb-gobject.html#hb-gobject-shape-plan-get-type">

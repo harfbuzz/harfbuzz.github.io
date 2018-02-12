@@ -530,7 +530,9 @@
     <keyword type="macro" name="HB_GOBJECT_TYPE_MEMORY_MODE" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-MEMORY-MODE:CAPS"/>
     <keyword type="macro" name="HB_GOBJECT_TYPE_OT_LAYOUT_GLYPH_CLASS" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-OT-LAYOUT-GLYPH-CLASS:CAPS"/>
     <keyword type="macro" name="HB_GOBJECT_TYPE_OT_MATH_CONSTANT" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-OT-MATH-CONSTANT:CAPS"/>
+    <keyword type="macro" name="HB_GOBJECT_TYPE_OT_MATH_GLYPH_PART" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-OT-MATH-GLYPH-PART:CAPS"/>
     <keyword type="macro" name="HB_GOBJECT_TYPE_OT_MATH_GLYPH_PART_FLAGS" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-OT-MATH-GLYPH-PART-FLAGS:CAPS"/>
+    <keyword type="macro" name="HB_GOBJECT_TYPE_OT_MATH_GLYPH_VARIANT" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-OT-MATH-GLYPH-VARIANT:CAPS"/>
     <keyword type="macro" name="HB_GOBJECT_TYPE_OT_MATH_KERN" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-OT-MATH-KERN:CAPS"/>
     <keyword type="macro" name="HB_GOBJECT_TYPE_SCRIPT" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-SCRIPT:CAPS"/>
     <keyword type="macro" name="HB_GOBJECT_TYPE_SHAPE_PLAN" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-SHAPE-PLAN:CAPS"/>
@@ -559,7 +561,9 @@
     <keyword type="function" name="hb_gobject_memory_mode_get_type ()" link="harfbuzz-hb-gobject.html#hb-gobject-memory-mode-get-type"/>
     <keyword type="function" name="hb_gobject_ot_layout_glyph_class_get_type ()" link="harfbuzz-hb-gobject.html#hb-gobject-ot-layout-glyph-class-get-type"/>
     <keyword type="function" name="hb_gobject_ot_math_constant_get_type ()" link="harfbuzz-hb-gobject.html#hb-gobject-ot-math-constant-get-type"/>
+    <keyword type="function" name="hb_gobject_ot_math_glyph_part_get_type ()" link="harfbuzz-hb-gobject.html#hb-gobject-ot-math-glyph-part-get-type"/>
     <keyword type="function" name="hb_gobject_ot_math_glyph_part_flags_get_type ()" link="harfbuzz-hb-gobject.html#hb-gobject-ot-math-glyph-part-flags-get-type"/>
+    <keyword type="function" name="hb_gobject_ot_math_glyph_variant_get_type ()" link="harfbuzz-hb-gobject.html#hb-gobject-ot-math-glyph-variant-get-type"/>
     <keyword type="function" name="hb_gobject_ot_math_kern_get_type ()" link="harfbuzz-hb-gobject.html#hb-gobject-ot-math-kern-get-type"/>
     <keyword type="function" name="hb_gobject_script_get_type ()" link="harfbuzz-hb-gobject.html#hb-gobject-script-get-type"/>
     <keyword type="function" name="hb_gobject_shape_plan_get_type ()" link="harfbuzz-hb-gobject.html#hb-gobject-shape-plan-get-type"/>
