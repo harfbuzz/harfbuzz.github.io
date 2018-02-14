@@ -178,6 +178,7 @@
 <ANCHOR id="harfbuzz-hb-blob.functions_details" href="harfbuzz/harfbuzz-hb-blob.html#harfbuzz-hb-blob.functions_details">
 <ANCHOR id="hb-blob-create" href="harfbuzz/harfbuzz-hb-blob.html#hb-blob-create">
 <ANCHOR id="hb-blob-create-sub-blob" href="harfbuzz/harfbuzz-hb-blob.html#hb-blob-create-sub-blob">
+<ANCHOR id="hb-blob-copy-writable-or-fail" href="harfbuzz/harfbuzz-hb-blob.html#hb-blob-copy-writable-or-fail">
 <ANCHOR id="hb-blob-destroy" href="harfbuzz/harfbuzz-hb-blob.html#hb-blob-destroy">
 <ANCHOR id="hb-blob-get-data" href="harfbuzz/harfbuzz-hb-blob.html#hb-blob-get-data">
 <ANCHOR id="hb-blob-get-data-writable" href="harfbuzz/harfbuzz-hb-blob.html#hb-blob-get-data-writable">
@@ -392,7 +393,9 @@
 <ANCHOR id="hb-set-is-empty" href="harfbuzz/harfbuzz-hb-set.html#hb-set-is-empty">
 <ANCHOR id="hb-set-is-equal" href="harfbuzz/harfbuzz-hb-set.html#hb-set-is-equal">
 <ANCHOR id="hb-set-next" href="harfbuzz/harfbuzz-hb-set.html#hb-set-next">
+<ANCHOR id="hb-set-previous" href="harfbuzz/harfbuzz-hb-set.html#hb-set-previous">
 <ANCHOR id="hb-set-next-range" href="harfbuzz/harfbuzz-hb-set.html#hb-set-next-range">
+<ANCHOR id="hb-set-previous-range" href="harfbuzz/harfbuzz-hb-set.html#hb-set-previous-range">
 <ANCHOR id="hb-set-reference" href="harfbuzz/harfbuzz-hb-set.html#hb-set-reference">
 <ANCHOR id="hb-set-set" href="harfbuzz/harfbuzz-hb-set.html#hb-set-set">
 <ANCHOR id="hb-set-set-user-data" href="harfbuzz/harfbuzz-hb-set.html#hb-set-set-user-data">
