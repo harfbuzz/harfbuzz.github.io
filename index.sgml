@@ -177,6 +177,7 @@
 <ANCHOR id="harfbuzz-hb-blob.description" href="harfbuzz/harfbuzz-hb-blob.html#harfbuzz-hb-blob.description">
 <ANCHOR id="harfbuzz-hb-blob.functions_details" href="harfbuzz/harfbuzz-hb-blob.html#harfbuzz-hb-blob.functions_details">
 <ANCHOR id="hb-blob-create" href="harfbuzz/harfbuzz-hb-blob.html#hb-blob-create">
+<ANCHOR id="hb-blob-create-from-file" href="harfbuzz/harfbuzz-hb-blob.html#hb-blob-create-from-file">
 <ANCHOR id="hb-blob-create-sub-blob" href="harfbuzz/harfbuzz-hb-blob.html#hb-blob-create-sub-blob">
 <ANCHOR id="hb-blob-copy-writable-or-fail" href="harfbuzz/harfbuzz-hb-blob.html#hb-blob-copy-writable-or-fail">
 <ANCHOR id="hb-blob-destroy" href="harfbuzz/harfbuzz-hb-blob.html#hb-blob-destroy">
