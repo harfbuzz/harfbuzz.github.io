@@ -1680,7 +1680,9 @@ the buffer that has a script other than <a class="link" href="harfbuzz-hb-common
 <a class="link" href="harfbuzz-hb-common.html#HB-SCRIPT-INHERITED:CAPS"><code class="literal">HB_SCRIPT_INHERITED</code></a>, and <a class="link" href="harfbuzz-hb-common.html#HB-SCRIPT-UNKNOWN:CAPS"><code class="literal">HB_SCRIPT_UNKNOWN</code></a>.</p>
 <p>Next, if buffer direction is not set (ie. is <a class="link" href="harfbuzz-hb-common.html#HB-DIRECTION-INVALID:CAPS"><code class="literal">HB_DIRECTION_INVALID</code></a>),
 it will be set to the natural horizontal direction of the
-buffer script as returned by <a class="link" href="harfbuzz-hb-common.html#hb-script-get-horizontal-direction" title="hb_script_get_horizontal_direction ()"><code class="function">hb_script_get_horizontal_direction()</code></a>.</p>
+buffer script as returned by <a class="link" href="harfbuzz-hb-common.html#hb-script-get-horizontal-direction" title="hb_script_get_horizontal_direction ()"><code class="function">hb_script_get_horizontal_direction()</code></a>.
+If <a class="link" href="harfbuzz-hb-common.html#hb-script-get-horizontal-direction" title="hb_script_get_horizontal_direction ()"><code class="function">hb_script_get_horizontal_direction()</code></a> returns <a class="link" href="harfbuzz-hb-common.html#HB-DIRECTION-INVALID:CAPS"><code class="literal">HB_DIRECTION_INVALID</code></a>,
+then <a class="link" href="harfbuzz-hb-common.html#HB-DIRECTION-LTR:CAPS"><code class="literal">HB_DIRECTION_LTR</code></a> is used.</p>
 <p>Finally, if buffer language is not set (ie. is <a class="link" href="harfbuzz-hb-common.html#HB-LANGUAGE-INVALID:CAPS" title="HB_LANGUAGE_INVALID"><code class="literal">HB_LANGUAGE_INVALID</code></a>),
 it will be set to the process's default language as returned by
 <a class="link" href="harfbuzz-hb-common.html#hb-language-get-default" title="hb_language_get_default ()"><code class="function">hb_language_get_default()</code></a>.  This may change in the future by
