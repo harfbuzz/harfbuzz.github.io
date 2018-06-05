@@ -237,7 +237,7 @@
     <keyword type="enum" name="enum hb_buffer_serialize_flags_t" link="harfbuzz-Buffers.html#hb-buffer-serialize-flags-t" since="0.9.20"/>
     <keyword type="enum" name="enum hb_buffer_diff_flags_t" link="harfbuzz-Buffers.html#hb-buffer-diff-flags-t"/>
     <keyword type="function" name="hb_blob_create ()" link="harfbuzz-hb-blob.html#hb-blob-create" since="0.9.2"/>
-    <keyword type="function" name="hb_blob_create_from_file ()" link="harfbuzz-hb-blob.html#hb-blob-create-from-file" since="REPLACEME"/>
+    <keyword type="function" name="hb_blob_create_from_file ()" link="harfbuzz-hb-blob.html#hb-blob-create-from-file" since="1.7.7"/>
     <keyword type="function" name="hb_blob_create_sub_blob ()" link="harfbuzz-hb-blob.html#hb-blob-create-sub-blob" since="0.9.2"/>
     <keyword type="function" name="hb_blob_copy_writable_or_fail ()" link="harfbuzz-hb-blob.html#hb-blob-copy-writable-or-fail" since="1.8.0"/>
     <keyword type="function" name="hb_blob_destroy ()" link="harfbuzz-hb-blob.html#hb-blob-destroy" since="0.9.2"/>
