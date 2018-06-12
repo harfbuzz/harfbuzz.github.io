@@ -394,9 +394,10 @@
 <ANCHOR id="hb-set-intersect" href="harfbuzz/harfbuzz-hb-set.html#hb-set-intersect">
 <ANCHOR id="hb-set-is-empty" href="harfbuzz/harfbuzz-hb-set.html#hb-set-is-empty">
 <ANCHOR id="hb-set-is-equal" href="harfbuzz/harfbuzz-hb-set.html#hb-set-is-equal">
+<ANCHOR id="hb-set-is-subset" href="harfbuzz/harfbuzz-hb-set.html#hb-set-is-subset">
 <ANCHOR id="hb-set-next" href="harfbuzz/harfbuzz-hb-set.html#hb-set-next">
-<ANCHOR id="hb-set-previous" href="harfbuzz/harfbuzz-hb-set.html#hb-set-previous">
 <ANCHOR id="hb-set-next-range" href="harfbuzz/harfbuzz-hb-set.html#hb-set-next-range">
+<ANCHOR id="hb-set-previous" href="harfbuzz/harfbuzz-hb-set.html#hb-set-previous">
 <ANCHOR id="hb-set-previous-range" href="harfbuzz/harfbuzz-hb-set.html#hb-set-previous-range">
 <ANCHOR id="hb-set-reference" href="harfbuzz/harfbuzz-hb-set.html#hb-set-reference">
 <ANCHOR id="hb-set-set" href="harfbuzz/harfbuzz-hb-set.html#hb-set-set">
@@ -435,6 +436,7 @@
 <ANCHOR id="hb-ot-layout-language-get-required-feature" href="harfbuzz/harfbuzz-hb-ot-layout.html#hb-ot-layout-language-get-required-feature">
 <ANCHOR id="hb-ot-layout-lookup-collect-glyphs" href="harfbuzz/harfbuzz-hb-ot-layout.html#hb-ot-layout-lookup-collect-glyphs">
 <ANCHOR id="hb-ot-layout-lookup-substitute-closure" href="harfbuzz/harfbuzz-hb-ot-layout.html#hb-ot-layout-lookup-substitute-closure">
+<ANCHOR id="hb-ot-layout-lookups-substitute-closure" href="harfbuzz/harfbuzz-hb-ot-layout.html#hb-ot-layout-lookups-substitute-closure">
 <ANCHOR id="hb-ot-layout-lookup-would-substitute" href="harfbuzz/harfbuzz-hb-ot-layout.html#hb-ot-layout-lookup-would-substitute">
 <ANCHOR id="hb-ot-layout-script-find-language" href="harfbuzz/harfbuzz-hb-ot-layout.html#hb-ot-layout-script-find-language">
 <ANCHOR id="hb-ot-layout-script-get-language-tags" href="harfbuzz/harfbuzz-hb-ot-layout.html#hb-ot-layout-script-get-language-tags">
