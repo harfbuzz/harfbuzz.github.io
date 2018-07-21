@@ -422,6 +422,7 @@
 <ANCHOR id="hb-ot-layout-feature-get-lookups" href="harfbuzz/harfbuzz-hb-ot-layout.html#hb-ot-layout-feature-get-lookups">
 <ANCHOR id="hb-ot-layout-feature-with-variations-get-lookups" href="harfbuzz/harfbuzz-hb-ot-layout.html#hb-ot-layout-feature-with-variations-get-lookups">
 <ANCHOR id="hb-ot-layout-get-attach-points" href="harfbuzz/harfbuzz-hb-ot-layout.html#hb-ot-layout-get-attach-points">
+<ANCHOR id="hb-ot-layout-get-feature-name-ids" href="harfbuzz/harfbuzz-hb-ot-layout.html#hb-ot-layout-get-feature-name-ids">
 <ANCHOR id="hb-ot-layout-get-glyph-class" href="harfbuzz/harfbuzz-hb-ot-layout.html#hb-ot-layout-get-glyph-class">
 <ANCHOR id="hb-ot-layout-get-glyphs-in-class" href="harfbuzz/harfbuzz-hb-ot-layout.html#hb-ot-layout-get-glyphs-in-class">
 <ANCHOR id="hb-ot-layout-get-ligature-carets" href="harfbuzz/harfbuzz-hb-ot-layout.html#hb-ot-layout-get-ligature-carets">
