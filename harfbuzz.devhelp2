@@ -419,6 +419,7 @@
     <keyword type="function" name="hb_set_union ()" link="harfbuzz-hb-set.html#hb-set-union" since="0.9.2"/>
     <keyword type="typedef" name="hb_set_t" link="harfbuzz-hb-set.html#hb-set-t"/>
     <keyword type="function" name="hb_ot_layout_collect_lookups ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-collect-lookups" since="0.9.8"/>
+    <keyword type="function" name="hb_ot_layout_collect_features ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-collect-features" since="REPLACEME"/>
     <keyword type="function" name="hb_ot_layout_feature_get_lookups ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-feature-get-lookups" since="0.9.7"/>
     <keyword type="function" name="hb_ot_layout_feature_with_variations_get_lookups ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-feature-with-variations-get-lookups"/>
     <keyword type="function" name="hb_ot_layout_get_attach_points ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-get-attach-points"/>
