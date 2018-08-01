@@ -423,7 +423,6 @@
     <keyword type="function" name="hb_ot_layout_feature_get_lookups ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-feature-get-lookups" since="0.9.7"/>
     <keyword type="function" name="hb_ot_layout_feature_with_variations_get_lookups ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-feature-with-variations-get-lookups"/>
     <keyword type="function" name="hb_ot_layout_get_attach_points ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-get-attach-points"/>
-    <keyword type="function" name="hb_ot_layout_get_feature_name_ids ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-get-feature-name-ids" since="REPLACEME"/>
     <keyword type="function" name="hb_ot_layout_get_glyph_class ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-get-glyph-class" since="0.9.7"/>
     <keyword type="function" name="hb_ot_layout_get_glyphs_in_class ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-get-glyphs-in-class" since="0.9.7"/>
     <keyword type="function" name="hb_ot_layout_get_ligature_carets ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-get-ligature-carets"/>
