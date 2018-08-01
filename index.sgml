@@ -616,6 +616,7 @@
 <ANCHOR id="HB-GOBJECT-TYPE-FONT:CAPS" href="harfbuzz/harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-FONT:CAPS">
 <ANCHOR id="HB-GOBJECT-TYPE-FONT-FUNCS:CAPS" href="harfbuzz/harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-FONT-FUNCS:CAPS">
 <ANCHOR id="HB-GOBJECT-TYPE-GLYPH-FLAGS:CAPS" href="harfbuzz/harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-GLYPH-FLAGS:CAPS">
+<ANCHOR id="HB-GOBJECT-TYPE-MAP:CAPS" href="harfbuzz/harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-MAP:CAPS">
 <ANCHOR id="HB-GOBJECT-TYPE-MEMORY-MODE:CAPS" href="harfbuzz/harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-MEMORY-MODE:CAPS">
 <ANCHOR id="HB-GOBJECT-TYPE-OT-LAYOUT-GLYPH-CLASS:CAPS" href="harfbuzz/harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-OT-LAYOUT-GLYPH-CLASS:CAPS">
 <ANCHOR id="HB-GOBJECT-TYPE-OT-MATH-CONSTANT:CAPS" href="harfbuzz/harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-OT-MATH-CONSTANT:CAPS">
@@ -647,6 +648,7 @@
 <ANCHOR id="hb-gobject-font-funcs-get-type" href="harfbuzz/harfbuzz-hb-gobject.html#hb-gobject-font-funcs-get-type">
 <ANCHOR id="hb-gobject-font-get-type" href="harfbuzz/harfbuzz-hb-gobject.html#hb-gobject-font-get-type">
 <ANCHOR id="hb-gobject-glyph-flags-get-type" href="harfbuzz/harfbuzz-hb-gobject.html#hb-gobject-glyph-flags-get-type">
+<ANCHOR id="hb-gobject-map-get-type" href="harfbuzz/harfbuzz-hb-gobject.html#hb-gobject-map-get-type">
 <ANCHOR id="hb-gobject-memory-mode-get-type" href="harfbuzz/harfbuzz-hb-gobject.html#hb-gobject-memory-mode-get-type">
 <ANCHOR id="hb-gobject-ot-layout-glyph-class-get-type" href="harfbuzz/harfbuzz-hb-gobject.html#hb-gobject-ot-layout-glyph-class-get-type">
 <ANCHOR id="hb-gobject-ot-math-constant-get-type" href="harfbuzz/harfbuzz-hb-gobject.html#hb-gobject-ot-math-constant-get-type">
