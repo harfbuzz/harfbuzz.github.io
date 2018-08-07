@@ -260,6 +260,7 @@
 <ANCHOR id="hb-font-get-glyph" href="harfbuzz/harfbuzz-hb-font.html#hb-font-get-glyph">
 <ANCHOR id="hb-font-get-glyph-advance-for-direction" href="harfbuzz/harfbuzz-hb-font.html#hb-font-get-glyph-advance-for-direction">
 <ANCHOR id="hb-font-get-glyph-advance-func-t" href="harfbuzz/harfbuzz-hb-font.html#hb-font-get-glyph-advance-func-t">
+<ANCHOR id="hb-font-get-glyph-advances-for-direction" href="harfbuzz/harfbuzz-hb-font.html#hb-font-get-glyph-advances-for-direction">
 <ANCHOR id="hb-font-get-glyph-contour-point" href="harfbuzz/harfbuzz-hb-font.html#hb-font-get-glyph-contour-point">
 <ANCHOR id="hb-font-get-glyph-contour-point-for-origin" href="harfbuzz/harfbuzz-hb-font.html#hb-font-get-glyph-contour-point-for-origin">
 <ANCHOR id="hb-font-get-glyph-contour-point-func-t" href="harfbuzz/harfbuzz-hb-font.html#hb-font-get-glyph-contour-point-func-t">
@@ -269,6 +270,7 @@
 <ANCHOR id="hb-font-get-glyph-from-name" href="harfbuzz/harfbuzz-hb-font.html#hb-font-get-glyph-from-name">
 <ANCHOR id="hb-font-get-glyph-from-name-func-t" href="harfbuzz/harfbuzz-hb-font.html#hb-font-get-glyph-from-name-func-t">
 <ANCHOR id="hb-font-get-glyph-h-advance" href="harfbuzz/harfbuzz-hb-font.html#hb-font-get-glyph-h-advance">
+<ANCHOR id="hb-font-get-glyph-h-advances" href="harfbuzz/harfbuzz-hb-font.html#hb-font-get-glyph-h-advances">
 <ANCHOR id="hb-font-get-glyph-h-kerning" href="harfbuzz/harfbuzz-hb-font.html#hb-font-get-glyph-h-kerning">
 <ANCHOR id="hb-font-get-glyph-h-origin" href="harfbuzz/harfbuzz-hb-font.html#hb-font-get-glyph-h-origin">
 <ANCHOR id="hb-font-get-glyph-kerning-for-direction" href="harfbuzz/harfbuzz-hb-font.html#hb-font-get-glyph-kerning-for-direction">
@@ -278,6 +280,7 @@
 <ANCHOR id="hb-font-get-glyph-origin-for-direction" href="harfbuzz/harfbuzz-hb-font.html#hb-font-get-glyph-origin-for-direction">
 <ANCHOR id="hb-font-get-glyph-origin-func-t" href="harfbuzz/harfbuzz-hb-font.html#hb-font-get-glyph-origin-func-t">
 <ANCHOR id="hb-font-get-glyph-v-advance" href="harfbuzz/harfbuzz-hb-font.html#hb-font-get-glyph-v-advance">
+<ANCHOR id="hb-font-get-glyph-v-advances" href="harfbuzz/harfbuzz-hb-font.html#hb-font-get-glyph-v-advances">
 <ANCHOR id="hb-font-get-glyph-v-kerning" href="harfbuzz/harfbuzz-hb-font.html#hb-font-get-glyph-v-kerning">
 <ANCHOR id="hb-font-get-glyph-v-origin" href="harfbuzz/harfbuzz-hb-font.html#hb-font-get-glyph-v-origin">
 <ANCHOR id="hb-font-get-nominal-glyph" href="harfbuzz/harfbuzz-hb-font.html#hb-font-get-nominal-glyph">
