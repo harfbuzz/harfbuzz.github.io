@@ -165,7 +165,7 @@
     <keyword type="function" name="hb_unicode_mirroring_func_t ()" link="harfbuzz-hb-unicode.html#hb-unicode-mirroring-func-t"/>
     <keyword type="function" name="hb_unicode_script ()" link="harfbuzz-hb-unicode.html#hb-unicode-script" since="0.9.2"/>
     <keyword type="function" name="hb_unicode_script_func_t ()" link="harfbuzz-hb-unicode.html#hb-unicode-script-func-t"/>
-    <keyword type="macro" name="HB_UNICODE_MAX" link="harfbuzz-hb-unicode.html#HB-UNICODE-MAX:CAPS"/>
+    <keyword type="macro" name="HB_UNICODE_MAX" link="harfbuzz-hb-unicode.html#HB-UNICODE-MAX:CAPS" since="1.9.0"/>
     <keyword type="enum" name="enum hb_unicode_combining_class_t" link="harfbuzz-hb-unicode.html#hb-unicode-combining-class-t"/>
     <keyword type="typedef" name="hb_unicode_funcs_t" link="harfbuzz-hb-unicode.html#hb-unicode-funcs-t"/>
     <keyword type="enum" name="enum hb_unicode_general_category_t" link="harfbuzz-hb-unicode.html#hb-unicode-general-category-t"/>
@@ -272,11 +272,11 @@
     <keyword type="function" name="hb_face_set_index ()" link="harfbuzz-hb-face.html#hb-face-set-index" since="0.9.2"/>
     <keyword type="function" name="hb_face_set_upem ()" link="harfbuzz-hb-face.html#hb-face-set-upem" since="0.9.2"/>
     <keyword type="function" name="hb_face_set_user_data ()" link="harfbuzz-hb-face.html#hb-face-set-user-data" since="0.9.2"/>
-    <keyword type="function" name="hb_face_collect_unicodes ()" link="harfbuzz-hb-face.html#hb-face-collect-unicodes" since="REPLACEME"/>
-    <keyword type="function" name="hb_face_collect_variation_selectors ()" link="harfbuzz-hb-face.html#hb-face-collect-variation-selectors" since="REPLACEME"/>
-    <keyword type="function" name="hb_face_collect_variation_unicodes ()" link="harfbuzz-hb-face.html#hb-face-collect-variation-unicodes" since="REPLACEME"/>
-    <keyword type="function" name="hb_face_builder_create ()" link="harfbuzz-hb-face.html#hb-face-builder-create" since="REPLACEME"/>
-    <keyword type="function" name="hb_face_builder_add_table ()" link="harfbuzz-hb-face.html#hb-face-builder-add-table" since="REPLACEME"/>
+    <keyword type="function" name="hb_face_collect_unicodes ()" link="harfbuzz-hb-face.html#hb-face-collect-unicodes" since="1.9.0"/>
+    <keyword type="function" name="hb_face_collect_variation_selectors ()" link="harfbuzz-hb-face.html#hb-face-collect-variation-selectors" since="1.9.0"/>
+    <keyword type="function" name="hb_face_collect_variation_unicodes ()" link="harfbuzz-hb-face.html#hb-face-collect-variation-unicodes" since="1.9.0"/>
+    <keyword type="function" name="hb_face_builder_create ()" link="harfbuzz-hb-face.html#hb-face-builder-create" since="1.9.0"/>
+    <keyword type="function" name="hb_face_builder_add_table ()" link="harfbuzz-hb-face.html#hb-face-builder-add-table" since="1.9.0"/>
     <keyword type="typedef" name="hb_face_t" link="harfbuzz-hb-face.html#hb-face-t"/>
     <keyword type="function" name="hb_font_add_glyph_origin_for_direction ()" link="harfbuzz-hb-font.html#hb-font-add-glyph-origin-for-direction" since="0.9.2"/>
     <keyword type="function" name="hb_font_create ()" link="harfbuzz-hb-font.html#hb-font-create"/>
