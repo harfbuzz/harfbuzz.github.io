@@ -387,6 +387,8 @@
     <keyword type="function" name="hb_shape ()" link="harfbuzz-Shaping.html#hb-shape" since="0.9.2"/>
     <keyword type="function" name="hb_shape_full ()" link="harfbuzz-Shaping.html#hb-shape-full" since="0.9.2"/>
     <keyword type="function" name="hb_shape_list_shapers ()" link="harfbuzz-Shaping.html#hb-shape-list-shapers" since="0.9.2"/>
+    <keyword type="macro" name="HB_FEATURE_GLOBAL_END" link="harfbuzz-Shaping.html#HB-FEATURE-GLOBAL-END:CAPS" since="REPLACEME"/>
+    <keyword type="macro" name="HB_FEATURE_GLOBAL_START" link="harfbuzz-Shaping.html#HB-FEATURE-GLOBAL-START:CAPS" since="REPLACEME"/>
     <keyword type="struct" name="hb_feature_t" link="harfbuzz-Shaping.html#hb-feature-t-struct"/>
     <keyword type="macro" name="HB_VERSION_ATLEAST()" link="harfbuzz-hb-version.html#HB-VERSION-ATLEAST:CAPS"/>
     <keyword type="function" name="hb_version ()" link="harfbuzz-hb-version.html#hb-version" since="0.9.2"/>
