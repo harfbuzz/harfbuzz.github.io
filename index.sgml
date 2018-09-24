@@ -93,7 +93,6 @@
 <ANCHOR id="harfbuzz-Buffers" href="harfbuzz/harfbuzz-Buffers.html">
 <ANCHOR id="harfbuzz-Buffers.functions" href="harfbuzz/harfbuzz-Buffers.html#harfbuzz-Buffers.functions">
 <ANCHOR id="hb-buffer-t" href="harfbuzz/harfbuzz-Buffers.html#hb-buffer-t">
-<ANCHOR id="hb-glyph-info-t" href="harfbuzz/harfbuzz-Buffers.html#hb-glyph-info-t">
 <ANCHOR id="hb-glyph-position-t" href="harfbuzz/harfbuzz-Buffers.html#hb-glyph-position-t">
 <ANCHOR id="hb-segment-properties-t" href="harfbuzz/harfbuzz-Buffers.html#hb-segment-properties-t">
 <ANCHOR id="harfbuzz-Buffers.other" href="harfbuzz/harfbuzz-Buffers.html#harfbuzz-Buffers.other">
@@ -160,7 +159,6 @@
 <ANCHOR id="HB-SEGMENT-PROPERTIES-DEFAULT:CAPS" href="harfbuzz/harfbuzz-Buffers.html#HB-SEGMENT-PROPERTIES-DEFAULT:CAPS">
 <ANCHOR id="HB-BUFFER-REPLACEMENT-CODEPOINT-DEFAULT:CAPS" href="harfbuzz/harfbuzz-Buffers.html#HB-BUFFER-REPLACEMENT-CODEPOINT-DEFAULT:CAPS">
 <ANCHOR id="hb-buffer-t" href="harfbuzz/harfbuzz-Buffers.html#hb-buffer-t">
-<ANCHOR id="hb-glyph-info-t-struct" href="harfbuzz/harfbuzz-Buffers.html#hb-glyph-info-t-struct">
 <ANCHOR id="hb-glyph-flags-t" href="harfbuzz/harfbuzz-Buffers.html#hb-glyph-flags-t">
 <ANCHOR id="hb-glyph-position-t-struct" href="harfbuzz/harfbuzz-Buffers.html#hb-glyph-position-t-struct">
 <ANCHOR id="hb-buffer-content-type-t" href="harfbuzz/harfbuzz-Buffers.html#hb-buffer-content-type-t">

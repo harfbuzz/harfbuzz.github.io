@@ -227,12 +227,11 @@
     <keyword type="macro" name="HB_SEGMENT_PROPERTIES_DEFAULT" link="harfbuzz-Buffers.html#HB-SEGMENT-PROPERTIES-DEFAULT:CAPS"/>
     <keyword type="macro" name="HB_BUFFER_REPLACEMENT_CODEPOINT_DEFAULT" link="harfbuzz-Buffers.html#HB-BUFFER-REPLACEMENT-CODEPOINT-DEFAULT:CAPS" since="0.9.31"/>
     <keyword type="typedef" name="hb_buffer_t" link="harfbuzz-Buffers.html#hb-buffer-t"/>
-    <keyword type="struct" name="hb_glyph_info_t" link="harfbuzz-Buffers.html#hb-glyph-info-t-struct"/>
     <keyword type="enum" name="enum hb_glyph_flags_t" link="harfbuzz-Buffers.html#hb-glyph-flags-t"/>
     <keyword type="struct" name="hb_glyph_position_t" link="harfbuzz-Buffers.html#hb-glyph-position-t-struct"/>
     <keyword type="enum" name="enum hb_buffer_content_type_t" link="harfbuzz-Buffers.html#hb-buffer-content-type-t"/>
     <keyword type="enum" name="enum hb_buffer_flags_t" link="harfbuzz-Buffers.html#hb-buffer-flags-t" since="0.9.20"/>
-    <keyword type="enum" name="enum hb_buffer_cluster_level_t" link="harfbuzz-Buffers.html#hb-buffer-cluster-level-t"/>
+    <keyword type="enum" name="enum hb_buffer_cluster_level_t" link="harfbuzz-Buffers.html#hb-buffer-cluster-level-t" since="0.9.42"/>
     <keyword type="struct" name="hb_segment_properties_t" link="harfbuzz-Buffers.html#hb-segment-properties-t-struct"/>
     <keyword type="enum" name="enum hb_buffer_serialize_format_t" link="harfbuzz-Buffers.html#hb-buffer-serialize-format-t" since="0.9.2"/>
     <keyword type="enum" name="enum hb_buffer_serialize_flags_t" link="harfbuzz-Buffers.html#hb-buffer-serialize-flags-t" since="0.9.20"/>
@@ -253,7 +252,7 @@
     <keyword type="function" name="hb_blob_set_user_data ()" link="harfbuzz-hb-blob.html#hb-blob-set-user-data" since="0.9.2"/>
     <keyword type="typedef" name="hb_blob_t" link="harfbuzz-hb-blob.html#hb-blob-t"/>
     <keyword type="enum" name="enum hb_memory_mode_t" link="harfbuzz-hb-blob.html#hb-memory-mode-t"/>
-    <keyword type="function" name="hb_face_count ()" link="harfbuzz-hb-face.html#hb-face-count"/>
+    <keyword type="function" name="hb_face_count ()" link="harfbuzz-hb-face.html#hb-face-count" since="1.7.7"/>
     <keyword type="function" name="hb_face_create ()" link="harfbuzz-hb-face.html#hb-face-create"/>
     <keyword type="function" name="hb_face_create_for_tables ()" link="harfbuzz-hb-face.html#hb-face-create-for-tables" since="0.9.2"/>
     <keyword type="function" name="hb_face_destroy ()" link="harfbuzz-hb-face.html#hb-face-destroy" since="0.9.2"/>
