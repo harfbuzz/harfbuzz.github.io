@@ -537,8 +537,15 @@ the caller. </p>
 <a name="hb-language-get-default"></a><h3>hb_language_get_default ()</h3>
 <pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-language-t" title="hb_language_t"><span class="returnvalue">hb_language_t</span></a>
 hb_language_get_default (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Get default language from current locale.</p>
+<p>Note that the first time this function is called, it calls
+"setlocale (LC_CTYPE, nullptr)" to fetch current locale.  The underlying
+setlocale function is, in many implementations, NOT threadsafe.  To avoid
+problems, call this function once before multiple threads can call it.
+This function is only used from <a class="link" href="harfbuzz-Buffers.html#hb-buffer-guess-segment-properties" title="hb_buffer_guess_segment_properties ()"><code class="function">hb_buffer_guess_segment_properties()</code></a> by
+HarfBuzz itself.</p>
 <div class="refsect3">
-<a name="id-1.3.3.3.8.12.4"></a><h4>Returns</h4>
+<a name="id-1.3.3.3.8.12.6"></a><h4>Returns</h4>
 <p>. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
@@ -553,13 +560,13 @@ hb_language_get_default (<em class="parameter"><code><span class="type">void</sp
 <hr>
 <div class="refsect2">
 <a name="HB-TAG:CAPS"></a><h3>HB_TAG()</h3>
-<pre class="programlisting">#define HB_TAG(c1,c2,c3,c4) ((hb_tag_t)((((uint8_t)(c1))&lt;&lt;24)|(((uint8_t)(c2))&lt;&lt;16)|(((uint8_t)(c3))&lt;&lt;8)|((uint8_t)(c4))))
+<pre class="programlisting">#define HB_TAG(c1,c2,c3,c4) ((hb_tag_t)((((uint32_t)(c1)&amp;0xFF)&lt;&lt;24)|(((uint32_t)(c2)&amp;0xFF)&lt;&lt;16)|(((uint32_t)(c3)&amp;0xFF)&lt;&lt;8)|((uint32_t)(c4)&amp;0xFF)))
 </pre>
 </div>
 <hr>
 <div class="refsect2">
 <a name="HB-UNTAG:CAPS"></a><h3>HB_UNTAG()</h3>
-<pre class="programlisting">#define HB_UNTAG(tag)   ((uint8_t)((tag)&gt;&gt;24)), ((uint8_t)((tag)&gt;&gt;16)), ((uint8_t)((tag)&gt;&gt;8)), ((uint8_t)(tag))
+<pre class="programlisting">#define HB_UNTAG(tag)   (((tag)&gt;&gt;24)&amp;0xFF), (((tag)&gt;&gt;16)&amp;0xFF), (((tag)&gt;&gt;8)&amp;0xFF), ((tag)&amp;0xFF)
 </pre>
 </div>
 <hr>
