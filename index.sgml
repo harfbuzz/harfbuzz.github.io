@@ -138,6 +138,8 @@
 <ANCHOR id="hb-buffer-get-user-data" href="harfbuzz/harfbuzz-Buffers.html#hb-buffer-get-user-data">
 <ANCHOR id="hb-buffer-get-glyph-infos" href="harfbuzz/harfbuzz-Buffers.html#hb-buffer-get-glyph-infos">
 <ANCHOR id="hb-buffer-get-glyph-positions" href="harfbuzz/harfbuzz-Buffers.html#hb-buffer-get-glyph-positions">
+<ANCHOR id="hb-buffer-get-invisible-codepoint" href="harfbuzz/harfbuzz-Buffers.html#hb-buffer-get-invisible-codepoint">
+<ANCHOR id="hb-buffer-set-invisible-codepoint" href="harfbuzz/harfbuzz-Buffers.html#hb-buffer-set-invisible-codepoint">
 <ANCHOR id="hb-buffer-set-replacement-codepoint" href="harfbuzz/harfbuzz-Buffers.html#hb-buffer-set-replacement-codepoint">
 <ANCHOR id="hb-buffer-get-replacement-codepoint" href="harfbuzz/harfbuzz-Buffers.html#hb-buffer-get-replacement-codepoint">
 <ANCHOR id="hb-buffer-normalize-glyphs" href="harfbuzz/harfbuzz-Buffers.html#hb-buffer-normalize-glyphs">

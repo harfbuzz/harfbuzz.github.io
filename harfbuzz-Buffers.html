@@ -345,6 +345,22 @@
 </tr>
 <tr>
 <td class="function_type">
+<a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="returnvalue">hb_codepoint_t</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-Buffers.html#hb-buffer-get-invisible-codepoint" title="hb_buffer_get_invisible_codepoint ()">hb_buffer_get_invisible_codepoint</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-Buffers.html#hb-buffer-set-invisible-codepoint" title="hb_buffer_set_invisible_codepoint ()">hb_buffer_set_invisible_codepoint</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
 <span class="returnvalue">void</span>
 </td>
 <td class="function_name">
@@ -1891,6 +1907,69 @@ The value valid as long as buffer has not been modified. </p>
 </div>
 <hr>
 <div class="refsect2">
+<a name="hb-buffer-get-invisible-codepoint"></a><h3>hb_buffer_get_invisible_codepoint ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="returnvalue">hb_codepoint_t</span></a>
+hb_buffer_get_invisible_codepoint (<em class="parameter"><code><a class="link" href="harfbuzz-Buffers.html#hb-buffer-t"><span class="type">hb_buffer_t</span></a> *buffer</code></em>);</pre>
+<p>See <a class="link" href="harfbuzz-Buffers.html#hb-buffer-set-invisible-codepoint" title="hb_buffer_set_invisible_codepoint ()"><code class="function">hb_buffer_set_invisible_codepoint()</code></a>.</p>
+<div class="refsect3">
+<a name="id-1.3.3.5.11.40.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>buffer</p></td>
+<td class="parameter_description"><p>an <a class="link" href="harfbuzz-Buffers.html#hb-buffer-t"><span class="type">hb_buffer_t</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.3.5.11.40.6"></a><h4>Returns</h4>
+<p>The <em class="parameter"><code>buffer</code></em>
+invisible <a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a>.</p>
+<p></p>
+</div>
+<p class="since">Since REPLACEME</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-buffer-set-invisible-codepoint"></a><h3>hb_buffer_set_invisible_codepoint ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_buffer_set_invisible_codepoint (<em class="parameter"><code><a class="link" href="harfbuzz-Buffers.html#hb-buffer-t"><span class="type">hb_buffer_t</span></a> *buffer</code></em>,
+                                   <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> invisible</code></em>);</pre>
+<p>Sets the <a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> that replaces invisible characters in
+the shaping result.  If set to zero (default), the glyph for the
+U+0020 SPACE character is used.  Otherwise, this value is used
+verbatim.</p>
+<div class="refsect3">
+<a name="id-1.3.3.5.11.41.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>buffer</p></td>
+<td class="parameter_description"><p>an <a class="link" href="harfbuzz-Buffers.html#hb-buffer-t"><span class="type">hb_buffer_t</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>invisible</p></td>
+<td class="parameter_description"><p>the invisible <a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since REPLACEME</p>
+</div>
+<hr>
+<div class="refsect2">
 <a name="hb-buffer-set-replacement-codepoint"></a><h3>hb_buffer_set_replacement_codepoint ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 hb_buffer_set_replacement_codepoint (<em class="parameter"><code><a class="link" href="harfbuzz-Buffers.html#hb-buffer-t"><span class="type">hb_buffer_t</span></a> *buffer</code></em>,
@@ -1900,7 +1979,7 @@ when adding text to <em class="parameter"><code>buffer</code></em>
 .</p>
 <p>Default is <a class="link" href="harfbuzz-Buffers.html#HB-BUFFER-REPLACEMENT-CODEPOINT-DEFAULT:CAPS" title="HB_BUFFER_REPLACEMENT_CODEPOINT_DEFAULT"><code class="literal">HB_BUFFER_REPLACEMENT_CODEPOINT_DEFAULT</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.3.3.5.11.40.6"></a><h4>Parameters</h4>
+<a name="id-1.3.3.5.11.42.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1930,7 +2009,7 @@ when adding text to <em class="parameter"><code>buffer</code></em>
 hb_buffer_get_replacement_codepoint (<em class="parameter"><code><a class="link" href="harfbuzz-Buffers.html#hb-buffer-t"><span class="type">hb_buffer_t</span></a> *buffer</code></em>);</pre>
 <p>See <a class="link" href="harfbuzz-Buffers.html#hb-buffer-set-replacement-codepoint" title="hb_buffer_set_replacement_codepoint ()"><code class="function">hb_buffer_set_replacement_codepoint()</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.3.3.5.11.41.5"></a><h4>Parameters</h4>
+<a name="id-1.3.3.5.11.43.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1945,7 +2024,7 @@ hb_buffer_get_replacement_codepoint (<em class="parameter"><code><a class="link"
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.3.5.11.41.6"></a><h4>Returns</h4>
+<a name="id-1.3.3.5.11.43.6"></a><h4>Returns</h4>
 <p>The <em class="parameter"><code>buffer</code></em>
 replacement <a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a>.</p>
 <p></p>
@@ -1961,7 +2040,7 @@ hb_buffer_normalize_glyphs (<em class="parameter"><code><a class="link" href="ha
 The resulting clusters should behave identical to pre-reordering clusters.</p>
 <div class="note">This has nothing to do with Unicode normalization.</div>
 <div class="refsect3">
-<a name="id-1.3.3.5.11.42.6"></a><h4>Parameters</h4>
+<a name="id-1.3.3.5.11.44.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1984,7 +2063,7 @@ The resulting clusters should behave identical to pre-reordering clusters.</p>
 hb_buffer_reverse (<em class="parameter"><code><a class="link" href="harfbuzz-Buffers.html#hb-buffer-t"><span class="type">hb_buffer_t</span></a> *buffer</code></em>);</pre>
 <p>Reverses buffer contents.</p>
 <div class="refsect3">
-<a name="id-1.3.3.5.11.43.5"></a><h4>Parameters</h4>
+<a name="id-1.3.3.5.11.45.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2009,7 +2088,7 @@ hb_buffer_reverse_range (<em class="parameter"><code><a class="link" href="harfb
                          <em class="parameter"><code>unsigned <span class="type">int</span> end</code></em>);</pre>
 <p>Reverses buffer contents between start to end.</p>
 <div class="refsect3">
-<a name="id-1.3.3.5.11.44.5"></a><h4>Parameters</h4>
+<a name="id-1.3.3.5.11.46.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2046,7 +2125,7 @@ hb_buffer_reverse_clusters (<em class="parameter"><code><a class="link" href="ha
 reversed, then each cluster (consecutive items having the
 same cluster number) are reversed again.</p>
 <div class="refsect3">
-<a name="id-1.3.3.5.11.45.5"></a><h4>Parameters</h4>
+<a name="id-1.3.3.5.11.47.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2080,7 +2159,7 @@ hb_buffer_serialize_glyphs (<em class="parameter"><code><a class="link" href="ha
 useful for showing the contents of the buffer, for example during debugging.
 There are currently two supported serialization formats:</p>
 <div class="refsect3">
-<a name="id-1.3.3.5.11.46.5"></a><h4>text</h4>
+<a name="id-1.3.3.5.11.48.5"></a><h4>text</h4>
 <p>A human-readable, plain text format.
 The serialized glyphs will look something like:</p>
 <p><code class="literal">
@@ -2109,11 +2188,11 @@ The serialized glyphs will look something like:</p>
 </ul></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.3.5.11.46.6"></a><h4>json</h4>
+<a name="id-1.3.3.5.11.48.6"></a><h4>json</h4>
 <p>TODO.</p>
 </div>
 <div class="refsect3">
-<a name="id-1.3.3.5.11.46.7"></a><h4>Parameters</h4>
+<a name="id-1.3.3.5.11.48.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2177,7 +2256,7 @@ to serialize.</p></td>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.3.5.11.46.8"></a><h4>Returns</h4>
+<a name="id-1.3.3.5.11.48.8"></a><h4>Returns</h4>
 <p>The number of serialized items.</p>
 <p></p>
 </div>
@@ -2194,7 +2273,7 @@ hb_buffer_deserialize_glyphs (<em class="parameter"><code><a class="link" href="
                               <em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t"><span class="type">hb_font_t</span></a> *font</code></em>,
                               <em class="parameter"><code><a class="link" href="harfbuzz-Buffers.html#hb-buffer-serialize-format-t" title="enum hb_buffer_serialize_format_t"><span class="type">hb_buffer_serialize_format_t</span></a> format</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.3.5.11.47.4"></a><h4>Parameters</h4>
+<a name="id-1.3.3.5.11.49.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2221,7 +2300,7 @@ hb_buffer_deserialize_glyphs (<em class="parameter"><code><a class="link" href="
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.3.5.11.47.5"></a><h4>Returns</h4>
+<a name="id-1.3.3.5.11.49.5"></a><h4>Returns</h4>
 <p></p>
 </div>
 <p class="since">Since 0.9.7</p>
@@ -2238,7 +2317,7 @@ hb_buffer_serialize_format_from_string
  is a valid buffer serialization format, use
 <a class="link" href="harfbuzz-Buffers.html#hb-buffer-serialize-list-formats" title="hb_buffer_serialize_list_formats ()"><code class="function">hb_buffer_serialize_list_formats()</code></a> to get the list of supported formats.</p>
 <div class="refsect3">
-<a name="id-1.3.3.5.11.48.5"></a><h4>Parameters</h4>
+<a name="id-1.3.3.5.11.50.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2261,7 +2340,7 @@ hb_buffer_serialize_format_from_string
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.3.5.11.48.6"></a><h4>Returns</h4>
+<a name="id-1.3.3.5.11.50.6"></a><h4>Returns</h4>
 <p>The parsed <a class="link" href="harfbuzz-Buffers.html#hb-buffer-serialize-format-t" title="enum hb_buffer_serialize_format_t"><span class="type">hb_buffer_serialize_format_t</span></a>.</p>
 <p></p>
 </div>
@@ -2276,7 +2355,7 @@ hb_buffer_serialize_format_to_string (<em class="parameter"><code><a class="link
  to the string corresponding it, or <code class="literal">NULL</code> if it is not a valid
 <a class="link" href="harfbuzz-Buffers.html#hb-buffer-serialize-format-t" title="enum hb_buffer_serialize_format_t"><span class="type">hb_buffer_serialize_format_t</span></a>.</p>
 <div class="refsect3">
-<a name="id-1.3.3.5.11.49.5"></a><h4>Parameters</h4>
+<a name="id-1.3.3.5.11.51.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2291,7 +2370,7 @@ hb_buffer_serialize_format_to_string (<em class="parameter"><code><a class="link
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.3.5.11.49.6"></a><h4>Returns</h4>
+<a name="id-1.3.3.5.11.51.6"></a><h4>Returns</h4>
 <p>A <code class="literal">NULL</code> terminated string corresponding to <em class="parameter"><code>format</code></em>
 . Should not be freed. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
@@ -2305,7 +2384,7 @@ hb_buffer_serialize_format_to_string (<em class="parameter"><code><a class="link
 hb_buffer_serialize_list_formats (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
 <p>Returns a list of supported buffer serialization formats.</p>
 <div class="refsect3">
-<a name="id-1.3.3.5.11.50.5"></a><h4>Returns</h4>
+<a name="id-1.3.3.5.11.52.5"></a><h4>Returns</h4>
 <p>A string array of buffer serialization formats. Should not be freed. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
@@ -2319,7 +2398,7 @@ hb_segment_properties_equal (<em class="parameter"><code>const <a class="link" h
                              <em class="parameter"><code>const <a class="link" href="harfbuzz-Buffers.html#hb-segment-properties-t"><span class="type">hb_segment_properties_t</span></a> *b</code></em>);</pre>
 <p>Checks the equality of two <a class="link" href="harfbuzz-Buffers.html#hb-segment-properties-t"><span class="type">hb_segment_properties_t</span></a>'s.</p>
 <div class="refsect3">
-<a name="id-1.3.3.5.11.51.5"></a><h4>Parameters</h4>
+<a name="id-1.3.3.5.11.53.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2341,7 +2420,7 @@ hb_segment_properties_equal (<em class="parameter"><code>const <a class="link" h
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.3.5.11.51.6"></a><h4>Returns</h4>
+<a name="id-1.3.3.5.11.53.6"></a><h4>Returns</h4>
 <p><code class="literal">true</code> if all properties of <em class="parameter"><code>a</code></em>
 equal those of <em class="parameter"><code>b</code></em>
 , false otherwise.</p>
@@ -2357,7 +2436,7 @@ hb_segment_properties_hash (<em class="parameter"><code>const <a class="link" hr
 <p>Creates a hash representing <em class="parameter"><code>p</code></em>
 .</p>
 <div class="refsect3">
-<a name="id-1.3.3.5.11.52.5"></a><h4>Parameters</h4>
+<a name="id-1.3.3.5.11.54.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2372,7 +2451,7 @@ hb_segment_properties_hash (<em class="parameter"><code>const <a class="link" hr
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.3.5.11.52.6"></a><h4>Returns</h4>
+<a name="id-1.3.3.5.11.54.6"></a><h4>Returns</h4>
 <p>A hash of <em class="parameter"><code>p</code></em>
 .</p>
 <p></p>
@@ -2391,7 +2470,7 @@ hb_buffer_diff (<em class="parameter"><code><a class="link" href="harfbuzz-Buffe
 and <a class="link" href="harfbuzz-Buffers.html#HB-BUFFER-DIFF-FLAG-NOTDEF-PRESENT:CAPS"><code class="literal">HB_BUFFER_DIFF_FLAG_NOTDEF_PRESENT</code></a> are never returned.  This should be used by most
 callers if just comparing two buffers is needed.</p>
 <div class="refsect3">
-<a name="id-1.3.3.5.11.53.5"></a><h4>Parameters</h4>
+<a name="id-1.3.3.5.11.55.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2433,7 +2512,7 @@ hb_buffer_set_message_func (<em class="parameter"><code><a class="link" href="ha
                             <em class="parameter"><code><span class="type">void</span> *user_data</code></em>,
                             <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-destroy-func-t" title="hb_destroy_func_t ()"><span class="type">hb_destroy_func_t</span></a> destroy</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.3.5.11.54.4"></a><h4>Parameters</h4>
+<a name="id-1.3.3.5.11.56.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2463,7 +2542,7 @@ hb_buffer_set_message_func (<em class="parameter"><code><a class="link" href="ha
 hb_glyph_info_get_glyph_flags (<em class="parameter"><code>const <span class="type">hb_glyph_info_t</span> *info</code></em>);</pre>
 <p>Returns glyph flags encoded within a <span class="type">hb_glyph_info_t</span>.</p>
 <div class="refsect3">
-<a name="id-1.3.3.5.11.55.5"></a><h4>Parameters</h4>
+<a name="id-1.3.3.5.11.57.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2478,7 +2557,7 @@ hb_glyph_info_get_glyph_flags (<em class="parameter"><code>const <span class="ty
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.3.5.11.55.6"></a><h4>Returns</h4>
+<a name="id-1.3.3.5.11.57.6"></a><h4>Returns</h4>
 <p>The <a class="link" href="harfbuzz-Buffers.html#hb-glyph-flags-t" title="enum hb_glyph_flags_t"><span class="type">hb_glyph_flags_t</span></a> encoded within <em class="parameter"><code>info</code></em>
 .</p>
 <p></p>
