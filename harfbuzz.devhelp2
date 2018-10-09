@@ -132,15 +132,12 @@
     <keyword type="macro" name="HB_TAG_NONE" link="harfbuzz-hb-common.html#HB-TAG-NONE:CAPS"/>
     <keyword type="macro" name="HB_TAG_MAX" link="harfbuzz-hb-common.html#HB-TAG-MAX:CAPS"/>
     <keyword type="macro" name="HB_TAG_MAX_SIGNED" link="harfbuzz-hb-common.html#HB-TAG-MAX-SIGNED:CAPS"/>
-    <keyword type="macro" name="HB_UNICODE_MAX_DECOMPOSITION_LEN" link="harfbuzz-hb-unicode.html#HB-UNICODE-MAX-DECOMPOSITION-LEN:CAPS"/>
     <keyword type="function" name="hb_unicode_combining_class ()" link="harfbuzz-hb-unicode.html#hb-unicode-combining-class" since="0.9.2"/>
     <keyword type="function" name="hb_unicode_combining_class_func_t ()" link="harfbuzz-hb-unicode.html#hb-unicode-combining-class-func-t"/>
     <keyword type="function" name="hb_unicode_compose ()" link="harfbuzz-hb-unicode.html#hb-unicode-compose" since="0.9.2"/>
     <keyword type="function" name="hb_unicode_compose_func_t ()" link="harfbuzz-hb-unicode.html#hb-unicode-compose-func-t"/>
     <keyword type="function" name="hb_unicode_decompose ()" link="harfbuzz-hb-unicode.html#hb-unicode-decompose" since="0.9.2"/>
-    <keyword type="function" name="hb_unicode_decompose_compatibility ()" link="harfbuzz-hb-unicode.html#hb-unicode-decompose-compatibility" since="0.9.2"/>
     <keyword type="function" name="hb_unicode_decompose_func_t ()" link="harfbuzz-hb-unicode.html#hb-unicode-decompose-func-t"/>
-    <keyword type="function" name="hb_unicode_eastasian_width ()" link="harfbuzz-hb-unicode.html#hb-unicode-eastasian-width" since="0.9.2"/>
     <keyword type="function" name="hb_unicode_funcs_create ()" link="harfbuzz-hb-unicode.html#hb-unicode-funcs-create"/>
     <keyword type="function" name="hb_unicode_funcs_destroy ()" link="harfbuzz-hb-unicode.html#hb-unicode-funcs-destroy" since="0.9.2"/>
     <keyword type="function" name="hb_unicode_funcs_get_default ()" link="harfbuzz-hb-unicode.html#hb-unicode-funcs-get-default"/>
@@ -152,9 +149,7 @@
     <keyword type="function" name="hb_unicode_funcs_reference ()" link="harfbuzz-hb-unicode.html#hb-unicode-funcs-reference" since="0.9.2"/>
     <keyword type="function" name="hb_unicode_funcs_set_combining_class_func ()" link="harfbuzz-hb-unicode.html#hb-unicode-funcs-set-combining-class-func" since="0.9.2"/>
     <keyword type="function" name="hb_unicode_funcs_set_compose_func ()" link="harfbuzz-hb-unicode.html#hb-unicode-funcs-set-compose-func" since="0.9.2"/>
-    <keyword type="function" name="hb_unicode_funcs_set_decompose_compatibility_func ()" link="harfbuzz-hb-unicode.html#hb-unicode-funcs-set-decompose-compatibility-func" since="0.9.2"/>
     <keyword type="function" name="hb_unicode_funcs_set_decompose_func ()" link="harfbuzz-hb-unicode.html#hb-unicode-funcs-set-decompose-func" since="0.9.2"/>
-    <keyword type="function" name="hb_unicode_funcs_set_eastasian_width_func ()" link="harfbuzz-hb-unicode.html#hb-unicode-funcs-set-eastasian-width-func" since="0.9.2"/>
     <keyword type="function" name="hb_unicode_funcs_set_general_category_func ()" link="harfbuzz-hb-unicode.html#hb-unicode-funcs-set-general-category-func" since="0.9.2"/>
     <keyword type="function" name="hb_unicode_funcs_set_mirroring_func ()" link="harfbuzz-hb-unicode.html#hb-unicode-funcs-set-mirroring-func" since="0.9.2"/>
     <keyword type="function" name="hb_unicode_funcs_set_script_func ()" link="harfbuzz-hb-unicode.html#hb-unicode-funcs-set-script-func" since="0.9.2"/>
@@ -295,12 +290,10 @@
     <keyword type="function" name="hb_font_funcs_set_glyph_from_name_func ()" link="harfbuzz-hb-font.html#hb-font-funcs-set-glyph-from-name-func" since="0.9.2"/>
     <keyword type="function" name="hb_font_funcs_set_glyph_h_advance_func ()" link="harfbuzz-hb-font.html#hb-font-funcs-set-glyph-h-advance-func" since="0.9.2"/>
     <keyword type="function" name="hb_font_funcs_set_glyph_h_advances_func ()" link="harfbuzz-hb-font.html#hb-font-funcs-set-glyph-h-advances-func" since="1.8.6"/>
-    <keyword type="function" name="hb_font_funcs_set_glyph_h_kerning_func ()" link="harfbuzz-hb-font.html#hb-font-funcs-set-glyph-h-kerning-func" since="0.9.2"/>
     <keyword type="function" name="hb_font_funcs_set_glyph_h_origin_func ()" link="harfbuzz-hb-font.html#hb-font-funcs-set-glyph-h-origin-func" since="0.9.2"/>
     <keyword type="function" name="hb_font_funcs_set_glyph_name_func ()" link="harfbuzz-hb-font.html#hb-font-funcs-set-glyph-name-func" since="0.9.2"/>
     <keyword type="function" name="hb_font_funcs_set_glyph_v_advance_func ()" link="harfbuzz-hb-font.html#hb-font-funcs-set-glyph-v-advance-func" since="0.9.2"/>
     <keyword type="function" name="hb_font_funcs_set_glyph_v_advances_func ()" link="harfbuzz-hb-font.html#hb-font-funcs-set-glyph-v-advances-func" since="1.8.6"/>
-    <keyword type="function" name="hb_font_funcs_set_glyph_v_kerning_func ()" link="harfbuzz-hb-font.html#hb-font-funcs-set-glyph-v-kerning-func" since="0.9.2"/>
     <keyword type="function" name="hb_font_funcs_set_glyph_v_origin_func ()" link="harfbuzz-hb-font.html#hb-font-funcs-set-glyph-v-origin-func" since="0.9.2"/>
     <keyword type="function" name="hb_font_funcs_set_nominal_glyph_func ()" link="harfbuzz-hb-font.html#hb-font-funcs-set-nominal-glyph-func" since="1.2.3"/>
     <keyword type="function" name="hb_font_funcs_set_user_data ()" link="harfbuzz-hb-font.html#hb-font-funcs-set-user-data" since="0.9.2"/>
@@ -322,17 +315,13 @@
     <keyword type="function" name="hb_font_get_glyph_from_name_func_t ()" link="harfbuzz-hb-font.html#hb-font-get-glyph-from-name-func-t"/>
     <keyword type="function" name="hb_font_get_glyph_h_advance ()" link="harfbuzz-hb-font.html#hb-font-get-glyph-h-advance" since="0.9.2"/>
     <keyword type="function" name="hb_font_get_glyph_h_advances ()" link="harfbuzz-hb-font.html#hb-font-get-glyph-h-advances" since="1.8.6"/>
-    <keyword type="function" name="hb_font_get_glyph_h_kerning ()" link="harfbuzz-hb-font.html#hb-font-get-glyph-h-kerning" since="0.9.2"/>
     <keyword type="function" name="hb_font_get_glyph_h_origin ()" link="harfbuzz-hb-font.html#hb-font-get-glyph-h-origin" since="0.9.2"/>
-    <keyword type="function" name="hb_font_get_glyph_kerning_for_direction ()" link="harfbuzz-hb-font.html#hb-font-get-glyph-kerning-for-direction" since="0.9.2"/>
-    <keyword type="function" name="hb_font_get_glyph_kerning_func_t ()" link="harfbuzz-hb-font.html#hb-font-get-glyph-kerning-func-t"/>
     <keyword type="function" name="hb_font_get_glyph_name ()" link="harfbuzz-hb-font.html#hb-font-get-glyph-name" since="0.9.2"/>
     <keyword type="function" name="hb_font_get_glyph_name_func_t ()" link="harfbuzz-hb-font.html#hb-font-get-glyph-name-func-t"/>
     <keyword type="function" name="hb_font_get_glyph_origin_for_direction ()" link="harfbuzz-hb-font.html#hb-font-get-glyph-origin-for-direction" since="0.9.2"/>
     <keyword type="function" name="hb_font_get_glyph_origin_func_t ()" link="harfbuzz-hb-font.html#hb-font-get-glyph-origin-func-t"/>
     <keyword type="function" name="hb_font_get_glyph_v_advance ()" link="harfbuzz-hb-font.html#hb-font-get-glyph-v-advance" since="0.9.2"/>
     <keyword type="function" name="hb_font_get_glyph_v_advances ()" link="harfbuzz-hb-font.html#hb-font-get-glyph-v-advances" since="1.8.6"/>
-    <keyword type="function" name="hb_font_get_glyph_v_kerning ()" link="harfbuzz-hb-font.html#hb-font-get-glyph-v-kerning" since="0.9.2"/>
     <keyword type="function" name="hb_font_get_glyph_v_origin ()" link="harfbuzz-hb-font.html#hb-font-get-glyph-v-origin" since="0.9.2"/>
     <keyword type="function" name="hb_font_get_nominal_glyph ()" link="harfbuzz-hb-font.html#hb-font-get-nominal-glyph" since="1.2.3"/>
     <keyword type="function" name="hb_font_get_nominal_glyph_func_t ()" link="harfbuzz-hb-font.html#hb-font-get-nominal-glyph-func-t"/>
@@ -373,11 +362,9 @@
     <keyword type="typedef" name="hb_font_funcs_t" link="harfbuzz-hb-font.html#hb-font-funcs-t"/>
     <keyword type="typedef" name="hb_font_get_glyph_h_advance_func_t" link="harfbuzz-hb-font.html#hb-font-get-glyph-h-advance-func-t"/>
     <keyword type="typedef" name="hb_font_get_glyph_h_advances_func_t" link="harfbuzz-hb-font.html#hb-font-get-glyph-h-advances-func-t"/>
-    <keyword type="typedef" name="hb_font_get_glyph_h_kerning_func_t" link="harfbuzz-hb-font.html#hb-font-get-glyph-h-kerning-func-t"/>
     <keyword type="typedef" name="hb_font_get_glyph_h_origin_func_t" link="harfbuzz-hb-font.html#hb-font-get-glyph-h-origin-func-t"/>
     <keyword type="typedef" name="hb_font_get_glyph_v_advance_func_t" link="harfbuzz-hb-font.html#hb-font-get-glyph-v-advance-func-t"/>
     <keyword type="typedef" name="hb_font_get_glyph_v_advances_func_t" link="harfbuzz-hb-font.html#hb-font-get-glyph-v-advances-func-t"/>
-    <keyword type="typedef" name="hb_font_get_glyph_v_kerning_func_t" link="harfbuzz-hb-font.html#hb-font-get-glyph-v-kerning-func-t"/>
     <keyword type="typedef" name="hb_font_get_glyph_v_origin_func_t" link="harfbuzz-hb-font.html#hb-font-get-glyph-v-origin-func-t"/>
     <keyword type="struct" name="hb_variation_t" link="harfbuzz-hb-font.html#hb-variation-t" since="1.4.2"/>
     <keyword type="typedef" name="hb_font_t" link="harfbuzz-hb-font.html#hb-font-t"/>
@@ -399,12 +386,19 @@
     <keyword type="macro" name="HB_VERSION_MICRO" link="harfbuzz-hb-version.html#HB-VERSION-MICRO:CAPS"/>
     <keyword type="macro" name="HB_VERSION_MINOR" link="harfbuzz-hb-version.html#HB-VERSION-MINOR:CAPS"/>
     <keyword type="macro" name="HB_VERSION_STRING" link="harfbuzz-hb-version.html#HB-VERSION-STRING:CAPS"/>
-    <keyword type="function" name="hb_font_funcs_set_glyph_func ()" link="harfbuzz-hb-deprecated.html#hb-font-funcs-set-glyph-func" deprecated="1.2.3" since="0.9.2"/>
     <keyword type="function" name="hb_font_get_glyph_func_t ()" link="harfbuzz-hb-deprecated.html#hb-font-get-glyph-func-t" deprecated=""/>
-    <keyword type="function" name="hb_set_invert ()" link="harfbuzz-hb-deprecated.html#hb-set-invert" deprecated="1.6.1" since="0.9.10"/>
+    <keyword type="macro" name="HB_UNICODE_MAX_DECOMPOSITION_LEN" link="harfbuzz-hb-deprecated.html#HB-UNICODE-MAX-DECOMPOSITION-LEN:CAPS" deprecated="REPLACEME"/>
+    <keyword type="function" name="hb_font_funcs_set_glyph_h_kerning_func ()" link="harfbuzz-hb-deprecated.html#hb-font-funcs-set-glyph-h-kerning-func" deprecated="REPLACEME" since="0.9.2"/>
+    <keyword type="function" name="hb_font_funcs_set_glyph_v_kerning_func ()" link="harfbuzz-hb-deprecated.html#hb-font-funcs-set-glyph-v-kerning-func" deprecated="REPLACEME" since="0.9.2"/>
+    <keyword type="function" name="hb_font_get_glyph_h_kerning ()" link="harfbuzz-hb-deprecated.html#hb-font-get-glyph-h-kerning" deprecated="REPLACEME" since="0.9.2"/>
+    <keyword type="function" name="hb_font_get_glyph_kerning_for_direction ()" link="harfbuzz-hb-deprecated.html#hb-font-get-glyph-kerning-for-direction" deprecated="REPLACEME" since="0.9.2"/>
+    <keyword type="function" name="hb_font_get_glyph_kerning_func_t ()" link="harfbuzz-hb-deprecated.html#hb-font-get-glyph-kerning-func-t" deprecated=""/>
+    <keyword type="function" name="hb_font_get_glyph_v_kerning ()" link="harfbuzz-hb-deprecated.html#hb-font-get-glyph-v-kerning" deprecated="REPLACEME" since="0.9.2"/>
     <keyword type="macro" name="HB_BUFFER_FLAGS_DEFAULT" link="harfbuzz-hb-deprecated.html#HB-BUFFER-FLAGS-DEFAULT:CAPS" deprecated=""/>
     <keyword type="macro" name="HB_BUFFER_SERIALIZE_FLAGS_DEFAULT" link="harfbuzz-hb-deprecated.html#HB-BUFFER-SERIALIZE-FLAGS-DEFAULT:CAPS" deprecated=""/>
     <keyword type="macro" name="HB_SCRIPT_CANADIAN_ABORIGINAL" link="harfbuzz-hb-deprecated.html#HB-SCRIPT-CANADIAN-ABORIGINAL:CAPS" deprecated=""/>
+    <keyword type="typedef" name="hb_font_get_glyph_h_kerning_func_t" link="harfbuzz-hb-deprecated.html#hb-font-get-glyph-h-kerning-func-t" deprecated=""/>
+    <keyword type="typedef" name="hb_font_get_glyph_v_kerning_func_t" link="harfbuzz-hb-deprecated.html#hb-font-get-glyph-v-kerning-func-t" deprecated=""/>
     <keyword type="macro" name="HB_SET_VALUE_INVALID" link="harfbuzz-hb-set.html#HB-SET-VALUE-INVALID:CAPS"/>
     <keyword type="function" name="hb_set_add ()" link="harfbuzz-hb-set.html#hb-set-add" since="0.9.2"/>
     <keyword type="function" name="hb_set_add_range ()" link="harfbuzz-hb-set.html#hb-set-add-range" since="0.9.7"/>
