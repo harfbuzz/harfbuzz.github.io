@@ -1576,7 +1576,7 @@ hb_font_get_glyph_advances_for_direction
                                (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t"><span class="type">hb_font_t</span></a> *font</code></em>,
                                 <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-direction-t" title="enum hb_direction_t"><span class="type">hb_direction_t</span></a> direction</code></em>,
                                 <em class="parameter"><code><span class="type">unsigned </span> count</code></em>,
-                                <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> *first_glyph</code></em>,
+                                <em class="parameter"><code>const <a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> *first_glyph</code></em>,
                                 <em class="parameter"><code><span class="type">unsigned </span> glyph_stride</code></em>,
                                 <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-position-t" title="hb_position_t"><span class="type">hb_position_t</span></a> *first_advance</code></em>,
                                 <em class="parameter"><code><span class="type">unsigned </span> advance_stride</code></em>);</pre>
@@ -1604,7 +1604,7 @@ hb_font_get_glyph_advances_for_direction
 <span class="c_punctuation">(</span>*hb_font_get_glyph_advances_func_t<span class="c_punctuation">)</span> (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t"><span class="type">hb_font_t</span></a> *font</code></em>,
                                       <em class="parameter"><code><span class="type">void</span> *font_data</code></em>,
                                       <em class="parameter"><code><span class="type">unsigned </span> count</code></em>,
-                                      <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> *first_glyph</code></em>,
+                                      <em class="parameter"><code>const <a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> *first_glyph</code></em>,
                                       <em class="parameter"><code><span class="type">unsigned </span> glyph_stride</code></em>,
                                       <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-position-t" title="hb_position_t"><span class="type">hb_position_t</span></a> *first_advance</code></em>,
                                       <em class="parameter"><code><span class="type">unsigned </span> advance_stride</code></em>,
@@ -1873,7 +1873,7 @@ hb_font_get_glyph_h_advance (<em class="parameter"><code><a class="link" href="h
 <pre class="programlisting"><span class="returnvalue">void</span>
 hb_font_get_glyph_h_advances (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t"><span class="type">hb_font_t</span></a> *font</code></em>,
                               <em class="parameter"><code><span class="type">unsigned </span> count</code></em>,
-                              <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> *first_glyph</code></em>,
+                              <em class="parameter"><code>const <a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> *first_glyph</code></em>,
                               <em class="parameter"><code><span class="type">unsigned </span> glyph_stride</code></em>,
                               <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-position-t" title="hb_position_t"><span class="type">hb_position_t</span></a> *first_advance</code></em>,
                               <em class="parameter"><code><span class="type">unsigned </span> advance_stride</code></em>);</pre>
@@ -2065,7 +2065,7 @@ hb_font_get_glyph_v_advance (<em class="parameter"><code><a class="link" href="h
 <pre class="programlisting"><span class="returnvalue">void</span>
 hb_font_get_glyph_v_advances (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t"><span class="type">hb_font_t</span></a> *font</code></em>,
                               <em class="parameter"><code><span class="type">unsigned </span> count</code></em>,
-                              <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> *first_glyph</code></em>,
+                              <em class="parameter"><code>const <a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> *first_glyph</code></em>,
                               <em class="parameter"><code><span class="type">unsigned </span> glyph_stride</code></em>,
                               <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-position-t" title="hb_position_t"><span class="type">hb_position_t</span></a> *first_advance</code></em>,
                               <em class="parameter"><code><span class="type">unsigned </span> advance_stride</code></em>);</pre>
