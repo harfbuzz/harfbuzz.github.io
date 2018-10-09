@@ -252,6 +252,7 @@
 <ANCHOR id="hb-font-funcs-set-glyph-v-advances-func" href="harfbuzz/harfbuzz-hb-font.html#hb-font-funcs-set-glyph-v-advances-func">
 <ANCHOR id="hb-font-funcs-set-glyph-v-origin-func" href="harfbuzz/harfbuzz-hb-font.html#hb-font-funcs-set-glyph-v-origin-func">
 <ANCHOR id="hb-font-funcs-set-nominal-glyph-func" href="harfbuzz/harfbuzz-hb-font.html#hb-font-funcs-set-nominal-glyph-func">
+<ANCHOR id="hb-font-funcs-set-nominal-glyphs-func" href="harfbuzz/harfbuzz-hb-font.html#hb-font-funcs-set-nominal-glyphs-func">
 <ANCHOR id="hb-font-funcs-set-user-data" href="harfbuzz/harfbuzz-hb-font.html#hb-font-funcs-set-user-data">
 <ANCHOR id="hb-font-funcs-set-variation-glyph-func" href="harfbuzz/harfbuzz-hb-font.html#hb-font-funcs-set-variation-glyph-func">
 <ANCHOR id="hb-font-get-empty" href="harfbuzz/harfbuzz-hb-font.html#hb-font-get-empty">

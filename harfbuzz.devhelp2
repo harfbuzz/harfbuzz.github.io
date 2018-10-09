@@ -296,6 +296,7 @@
     <keyword type="function" name="hb_font_funcs_set_glyph_v_advances_func ()" link="harfbuzz-hb-font.html#hb-font-funcs-set-glyph-v-advances-func" since="1.8.6"/>
     <keyword type="function" name="hb_font_funcs_set_glyph_v_origin_func ()" link="harfbuzz-hb-font.html#hb-font-funcs-set-glyph-v-origin-func" since="0.9.2"/>
     <keyword type="function" name="hb_font_funcs_set_nominal_glyph_func ()" link="harfbuzz-hb-font.html#hb-font-funcs-set-nominal-glyph-func" since="1.2.3"/>
+    <keyword type="function" name="hb_font_funcs_set_nominal_glyphs_func ()" link="harfbuzz-hb-font.html#hb-font-funcs-set-nominal-glyphs-func" since="REPLACEME"/>
     <keyword type="function" name="hb_font_funcs_set_user_data ()" link="harfbuzz-hb-font.html#hb-font-funcs-set-user-data" since="0.9.2"/>
     <keyword type="function" name="hb_font_funcs_set_variation_glyph_func ()" link="harfbuzz-hb-font.html#hb-font-funcs-set-variation-glyph-func" since="1.2.3"/>
     <keyword type="function" name="hb_font_get_empty ()" link="harfbuzz-hb-font.html#hb-font-get-empty" since="0.9.2"/>
