@@ -42,14 +42,6 @@
 <tbody>
 <tr>
 <td class="function_type">
-<a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="returnvalue">hb_tag_t</span></a>
-</td>
-<td class="function_name">
-<a class="link" href="harfbuzz-hb-ot-tag.html#hb-ot-tag-from-language" title="hb_ot_tag_from_language ()">hb_ot_tag_from_language</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
 <a class="link" href="harfbuzz-hb-common.html#hb-language-t" title="hb_language_t"><span class="returnvalue">hb_language_t</span></a>
 </td>
 <td class="function_name">
@@ -69,7 +61,15 @@
 <span class="returnvalue">void</span>
 </td>
 <td class="function_name">
-<a class="link" href="harfbuzz-hb-ot-tag.html#hb-ot-tags-from-script" title="hb_ot_tags_from_script ()">hb_ot_tags_from_script</a> <span class="c_punctuation">()</span>
+<a class="link" href="harfbuzz-hb-ot-tag.html#hb-ot-tags-from-script-and-language" title="hb_ot_tags_from_script_and_language ()">hb_ot_tags_from_script_and_language</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-ot-tag.html#hb-ot-tags-to-script-and-language" title="hb_ot_tags_to_script_and_language ()">hb_ot_tags_to_script_and_language</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 </tbody>
@@ -83,6 +83,14 @@
 <col class="description">
 </colgroup>
 <tbody>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="harfbuzz-hb-ot-tag.html#HB-OT-MAX-TAGS-PER-LANGUAGE:CAPS" title="HB_OT_MAX_TAGS_PER_LANGUAGE">HB_OT_MAX_TAGS_PER_LANGUAGE</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="harfbuzz-hb-ot-tag.html#HB-OT-MAX-TAGS-PER-SCRIPT:CAPS" title="HB_OT_MAX_TAGS_PER_SCRIPT">HB_OT_MAX_TAGS_PER_SCRIPT</a></td>
+</tr>
 <tr>
 <td class="define_keyword">#define</td>
 <td class="function_name"><a class="link" href="harfbuzz-hb-ot-tag.html#HB-OT-TAG-DEFAULT-LANGUAGE:CAPS" title="HB_OT_TAG_DEFAULT_LANGUAGE">HB_OT_TAG_DEFAULT_LANGUAGE</a></td>
@@ -105,17 +113,11 @@
 <div class="refsect1">
 <a name="harfbuzz-hb-ot-tag.functions_details"></a><h2>Functions</h2>
 <div class="refsect2">
-<a name="hb-ot-tag-from-language"></a><h3>hb_ot_tag_from_language ()</h3>
-<pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="returnvalue">hb_tag_t</span></a>
-hb_ot_tag_from_language (<em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-language-t" title="hb_language_t"><span class="type">hb_language_t</span></a> language</code></em>);</pre>
-</div>
-<hr>
-<div class="refsect2">
 <a name="hb-ot-tag-to-language"></a><h3>hb_ot_tag_to_language ()</h3>
 <pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-language-t" title="hb_language_t"><span class="returnvalue">hb_language_t</span></a>
 hb_ot_tag_to_language (<em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="type">hb_tag_t</span></a> tag</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.3.15.7.3.4"></a><h4>Returns</h4>
+<a name="id-1.3.3.15.7.2.4"></a><h4>Returns</h4>
 <p>. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
@@ -129,15 +131,124 @@ hb_ot_tag_to_script (<em class="parameter"><code><a class="link" href="harfbuzz-
 </div>
 <hr>
 <div class="refsect2">
-<a name="hb-ot-tags-from-script"></a><h3>hb_ot_tags_from_script ()</h3>
+<a name="hb-ot-tags-from-script-and-language"></a><h3>hb_ot_tags_from_script_and_language ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
-hb_ot_tags_from_script (<em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-script-t" title="enum hb_script_t"><span class="type">hb_script_t</span></a> script</code></em>,
-                        <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="type">hb_tag_t</span></a> *script_tag_1</code></em>,
-                        <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="type">hb_tag_t</span></a> *script_tag_2</code></em>);</pre>
+hb_ot_tags_from_script_and_language (<em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-script-t" title="enum hb_script_t"><span class="type">hb_script_t</span></a> script</code></em>,
+                                     <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-language-t" title="hb_language_t"><span class="type">hb_language_t</span></a> language</code></em>,
+                                     <em class="parameter"><code>unsigned <span class="type">int</span> *script_count</code></em>,
+                                     <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="type">hb_tag_t</span></a> *script_tags</code></em>,
+                                     <em class="parameter"><code>unsigned <span class="type">int</span> *language_count</code></em>,
+                                     <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="type">hb_tag_t</span></a> *language_tags</code></em>);</pre>
+<p>Converts an <a class="link" href="harfbuzz-hb-common.html#hb-script-t" title="enum hb_script_t"><span class="type">hb_script_t</span></a> and an <a class="link" href="harfbuzz-hb-common.html#hb-language-t" title="hb_language_t"><span class="type">hb_language_t</span></a> to script and language tags.</p>
+<div class="refsect3">
+<a name="id-1.3.3.15.7.4.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>script</p></td>
+<td class="parameter_description"><p>an <a class="link" href="harfbuzz-hb-common.html#hb-script-t" title="enum hb_script_t"><span class="type">hb_script_t</span></a> to convert.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>language</p></td>
+<td class="parameter_description"><p>an <a class="link" href="harfbuzz-hb-common.html#hb-language-t" title="hb_language_t"><span class="type">hb_language_t</span></a> to convert.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>script_count</p></td>
+<td class="parameter_description"><p> maximum number of script tags to retrieve (IN)
+and actual number of script tags retrieved (OUT). </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>script_tags</p></td>
+<td class="parameter_description"><p> array of size at least <em class="parameter"><code>script_count</code></em>
+to store the
+script tag results. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>language_count</p></td>
+<td class="parameter_description"><p> maximum number of language tags to retrieve
+(IN) and actual number of language tags retrieved (OUT). </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>language_tags</p></td>
+<td class="parameter_description"><p> array of size at least <em class="parameter"><code>language_count</code></em>
+to store
+the language tag results. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since REPLACEME</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-ot-tags-to-script-and-language"></a><h3>hb_ot_tags_to_script_and_language ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_ot_tags_to_script_and_language (<em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="type">hb_tag_t</span></a> script_tag</code></em>,
+                                   <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="type">hb_tag_t</span></a> language_tag</code></em>,
+                                   <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-script-t" title="enum hb_script_t"><span class="type">hb_script_t</span></a> *script</code></em>,
+                                   <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-language-t" title="hb_language_t"><span class="type">hb_language_t</span></a> *language</code></em>);</pre>
+<p>Converts a script tag and a language tag to an <a class="link" href="harfbuzz-hb-common.html#hb-script-t" title="enum hb_script_t"><span class="type">hb_script_t</span></a> and an
+<a class="link" href="harfbuzz-hb-common.html#hb-language-t" title="hb_language_t"><span class="type">hb_language_t</span></a>.</p>
+<div class="refsect3">
+<a name="id-1.3.3.15.7.5.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>script_tag</p></td>
+<td class="parameter_description"><p>a script tag</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>language_tag</p></td>
+<td class="parameter_description"><p>a language tag
+<em class="parameter"><code>script</code></em>
+(allow-none): the <a class="link" href="harfbuzz-hb-common.html#hb-script-t" title="enum hb_script_t"><span class="type">hb_script_t</span></a> corresponding to <em class="parameter"><code>script_tag</code></em>
+(OUT).
+<em class="parameter"><code>language</code></em>
+(allow-none): the <a class="link" href="harfbuzz-hb-common.html#hb-language-t" title="hb_language_t"><span class="type">hb_language_t</span></a> corresponding to <em class="parameter"><code>script_tag</code></em>
+and
+<em class="parameter"><code>language_tag</code></em>
+(OUT).</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since REPLACEME</p>
 </div>
 </div>
 <div class="refsect1">
 <a name="harfbuzz-hb-ot-tag.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="HB-OT-MAX-TAGS-PER-LANGUAGE:CAPS"></a><h3>HB_OT_MAX_TAGS_PER_LANGUAGE</h3>
+<pre class="programlisting">#define HB_OT_MAX_TAGS_PER_LANGUAGE 3u
+</pre>
+<p class="since">Since REPLACEME</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="HB-OT-MAX-TAGS-PER-SCRIPT:CAPS"></a><h3>HB_OT_MAX_TAGS_PER_SCRIPT</h3>
+<pre class="programlisting">#define HB_OT_MAX_TAGS_PER_SCRIPT 3u
+</pre>
+<p class="since">Since REPLACEME</p>
+</div>
+<hr>
 <div class="refsect2">
 <a name="HB-OT-TAG-DEFAULT-LANGUAGE:CAPS"></a><h3>HB_OT_TAG_DEFAULT_LANGUAGE</h3>
 <pre class="programlisting">#define HB_OT_TAG_DEFAULT_LANGUAGE HB_TAG ('d', 'f', 'l', 't')

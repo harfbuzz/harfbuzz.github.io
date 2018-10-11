@@ -49,6 +49,14 @@
 </td>
 </tr>
 <tr>
+<td class="function_type">
+<a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-deprecated.html#hb-ot-layout-table-find-script" title="hb_ot_layout_table_find_script ()">hb_ot_layout_table_find_script</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
 <td class="define_keyword">#define</td>
 <td class="function_name"><a class="link" href="harfbuzz-hb-deprecated.html#HB-UNICODE-MAX-DECOMPOSITION-LEN:CAPS" title="HB_UNICODE_MAX_DECOMPOSITION_LEN">HB_UNICODE_MAX_DECOMPOSITION_LEN</a></td>
 </tr>
@@ -157,6 +165,15 @@
 </div>
 <hr>
 <div class="refsect2">
+<a name="hb-ot-layout-table-find-script"></a><h3>hb_ot_layout_table_find_script ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+hb_ot_layout_table_find_script (<em class="parameter"><code><a class="link" href="harfbuzz-hb-face.html#hb-face-t"><span class="type">hb_face_t</span></a> *face</code></em>,
+                                <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="type">hb_tag_t</span></a> table_tag</code></em>,
+                                <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="type">hb_tag_t</span></a> script_tag</code></em>,
+                                <em class="parameter"><code>unsigned <span class="type">int</span> *script_index</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
 <a name="HB-UNICODE-MAX-DECOMPOSITION-LEN:CAPS"></a><h3>HB_UNICODE_MAX_DECOMPOSITION_LEN</h3>
 <pre class="programlisting">#define HB_UNICODE_MAX_DECOMPOSITION_LEN (18+1) /* codepoints */
 </pre>
@@ -180,7 +197,7 @@ hb_font_funcs_set_glyph_h_kerning_func
 <p>REPLACEME</p>
 </div>
 <div class="refsect3">
-<a name="id-1.3.3.11.7.4.6"></a><h4>Parameters</h4>
+<a name="id-1.3.3.11.7.5.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -217,7 +234,7 @@ hb_font_funcs_set_glyph_v_kerning_func
 <p>REPLACEME</p>
 </div>
 <div class="refsect3">
-<a name="id-1.3.3.11.7.5.6"></a><h4>Parameters</h4>
+<a name="id-1.3.3.11.7.6.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -252,7 +269,7 @@ hb_font_get_glyph_h_kerning (<em class="parameter"><code><a class="link" href="h
 <p>REPLACEME</p>
 </div>
 <div class="refsect3">
-<a name="id-1.3.3.11.7.6.6"></a><h4>Parameters</h4>
+<a name="id-1.3.3.11.7.7.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -267,7 +284,7 @@ hb_font_get_glyph_h_kerning (<em class="parameter"><code><a class="link" href="h
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.3.11.7.6.7"></a><h4>Returns</h4>
+<a name="id-1.3.3.11.7.7.7"></a><h4>Returns</h4>
 <p></p>
 </div>
 <p class="since">Since 0.9.2</p>
@@ -288,7 +305,7 @@ hb_font_get_glyph_kerning_for_direction
 <p>REPLACEME</p>
 </div>
 <div class="refsect3">
-<a name="id-1.3.3.11.7.7.6"></a><h4>Parameters</h4>
+<a name="id-1.3.3.11.7.8.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -339,7 +356,7 @@ hb_font_get_glyph_v_kerning (<em class="parameter"><code><a class="link" href="h
 <p>REPLACEME</p>
 </div>
 <div class="refsect3">
-<a name="id-1.3.3.11.7.9.6"></a><h4>Parameters</h4>
+<a name="id-1.3.3.11.7.10.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -354,7 +371,7 @@ hb_font_get_glyph_v_kerning (<em class="parameter"><code><a class="link" href="h
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.3.11.7.9.7"></a><h4>Returns</h4>
+<a name="id-1.3.3.11.7.10.7"></a><h4>Returns</h4>
 <p></p>
 </div>
 <p class="since">Since 0.9.2</p>
