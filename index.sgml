@@ -432,7 +432,9 @@
 <ANCHOR id="harfbuzz-hb-ot-layout.functions_details" href="harfbuzz/harfbuzz-hb-ot-layout.html#harfbuzz-hb-ot-layout.functions_details">
 <ANCHOR id="hb-ot-layout-collect-lookups" href="harfbuzz/harfbuzz-hb-ot-layout.html#hb-ot-layout-collect-lookups">
 <ANCHOR id="hb-ot-layout-collect-features" href="harfbuzz/harfbuzz-hb-ot-layout.html#hb-ot-layout-collect-features">
+<ANCHOR id="hb-ot-layout-feature-get-characters" href="harfbuzz/harfbuzz-hb-ot-layout.html#hb-ot-layout-feature-get-characters">
 <ANCHOR id="hb-ot-layout-feature-get-lookups" href="harfbuzz/harfbuzz-hb-ot-layout.html#hb-ot-layout-feature-get-lookups">
+<ANCHOR id="hb-ot-layout-feature-get-name-ids" href="harfbuzz/harfbuzz-hb-ot-layout.html#hb-ot-layout-feature-get-name-ids">
 <ANCHOR id="hb-ot-layout-feature-with-variations-get-lookups" href="harfbuzz/harfbuzz-hb-ot-layout.html#hb-ot-layout-feature-with-variations-get-lookups">
 <ANCHOR id="hb-ot-layout-get-attach-points" href="harfbuzz/harfbuzz-hb-ot-layout.html#hb-ot-layout-get-attach-points">
 <ANCHOR id="hb-ot-layout-get-glyph-class" href="harfbuzz/harfbuzz-hb-ot-layout.html#hb-ot-layout-get-glyph-class">
@@ -586,7 +588,6 @@
 <ANCHOR id="harfbuzz-hb-graphite2.description" href="harfbuzz/harfbuzz-hb-graphite2.html#harfbuzz-hb-graphite2.description">
 <ANCHOR id="harfbuzz-hb-graphite2.functions_details" href="harfbuzz/harfbuzz-hb-graphite2.html#harfbuzz-hb-graphite2.functions_details">
 <ANCHOR id="hb-graphite2-face-get-gr-face" href="harfbuzz/harfbuzz-hb-graphite2.html#hb-graphite2-face-get-gr-face">
-<ANCHOR id="hb-graphite2-font-get-gr-font" href="harfbuzz/harfbuzz-hb-graphite2.html#hb-graphite2-font-get-gr-font">
 <ANCHOR id="harfbuzz-hb-graphite2.other_details" href="harfbuzz/harfbuzz-hb-graphite2.html#harfbuzz-hb-graphite2.other_details">
 <ANCHOR id="HB-GRAPHITE2-TAG-SILF:CAPS" href="harfbuzz/harfbuzz-hb-graphite2.html#HB-GRAPHITE2-TAG-SILF:CAPS">
 <ANCHOR id="harfbuzz-hb-uniscribe" href="harfbuzz/harfbuzz-hb-uniscribe.html">

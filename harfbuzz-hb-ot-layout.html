@@ -60,7 +60,22 @@
 <td class="function_type">unsigned <span class="returnvalue">int</span>
 </td>
 <td class="function_name">
+<a class="link" href="harfbuzz-hb-ot-layout.html#hb-ot-layout-feature-get-characters" title="hb_ot_layout_feature_get_characters ()">hb_ot_layout_feature_get_characters</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">unsigned <span class="returnvalue">int</span>
+</td>
+<td class="function_name">
 <a class="link" href="harfbuzz-hb-ot-layout.html#hb-ot-layout-feature-get-lookups" title="hb_ot_layout_feature_get_lookups ()">hb_ot_layout_feature_get_lookups</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-ot-layout.html#hb-ot-layout-feature-get-name-ids" title="hb_ot_layout_feature_get_name_ids ()">hb_ot_layout_feature_get_name_ids</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 <tr>
@@ -356,6 +371,17 @@ hb_ot_layout_collect_features (<em class="parameter"><code><a class="link" href=
 </div>
 <hr>
 <div class="refsect2">
+<a name="hb-ot-layout-feature-get-characters"></a><h3>hb_ot_layout_feature_get_characters ()</h3>
+<pre class="programlisting">unsigned <span class="returnvalue">int</span>
+hb_ot_layout_feature_get_characters (<em class="parameter"><code><a class="link" href="harfbuzz-hb-face.html#hb-face-t"><span class="type">hb_face_t</span></a> *face</code></em>,
+                                     <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="type">hb_tag_t</span></a> table_tag</code></em>,
+                                     <em class="parameter"><code>unsigned <span class="type">int</span> feature_index</code></em>,
+                                     <em class="parameter"><code>unsigned <span class="type">int</span> start_offset</code></em>,
+                                     <em class="parameter"><code>unsigned <span class="type">int</span> *char_count</code></em>,
+                                     <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> *characters</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
 <a name="hb-ot-layout-feature-get-lookups"></a><h3>hb_ot_layout_feature_get_lookups ()</h3>
 <pre class="programlisting">unsigned <span class="returnvalue">int</span>
 hb_ot_layout_feature_get_lookups (<em class="parameter"><code><a class="link" href="harfbuzz-hb-face.html#hb-face-t"><span class="type">hb_face_t</span></a> *face</code></em>,
@@ -365,6 +391,75 @@ hb_ot_layout_feature_get_lookups (<em class="parameter"><code><a class="link" hr
                                   <em class="parameter"><code>unsigned <span class="type">int</span> *lookup_count</code></em>,
                                   <em class="parameter"><code>unsigned <span class="type">int</span> *lookup_indexes</code></em>);</pre>
 <p class="since">Since 0.9.7</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-ot-layout-feature-get-name-ids"></a><h3>hb_ot_layout_feature_get_name_ids ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+hb_ot_layout_feature_get_name_ids (<em class="parameter"><code><a class="link" href="harfbuzz-hb-face.html#hb-face-t"><span class="type">hb_face_t</span></a> *face</code></em>,
+                                   <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="type">hb_tag_t</span></a> table_tag</code></em>,
+                                   <em class="parameter"><code>unsigned <span class="type">int</span> feature_index</code></em>,
+                                   <em class="parameter"><code><span class="type">hb_name_id_t</span> *label_id</code></em>,
+                                   <em class="parameter"><code><span class="type">hb_name_id_t</span> *tooltip_id</code></em>,
+                                   <em class="parameter"><code><span class="type">hb_name_id_t</span> *sample_id</code></em>,
+                                   <em class="parameter"><code>unsigned <span class="type">int</span> *num_named_parameters</code></em>,
+                                   <em class="parameter"><code><span class="type">hb_name_id_t</span> *first_param_id</code></em>);</pre>
+<p>Fetches name indices from feature parameters for "Stylistic Set" ('ssXX') or
+"Character Variant" ('cvXX') features.</p>
+<div class="refsect3">
+<a name="id-1.3.3.14.7.6.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>face</p></td>
+<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-face.html#hb-face-t"><span class="type">hb_face_t</span></a> to work upon</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>label_id</p></td>
+<td class="parameter_description"><p> The ‘name’ table name ID that specifies a string
+for a user-interface label for this feature. (May be NULL.). </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tooltip_id</p></td>
+<td class="parameter_description"><p> The ‘name’ table name ID that specifies a string
+that an application can use for tooltip text for this
+feature. (May be NULL.). </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>sample_id</p></td>
+<td class="parameter_description"><p> The ‘name’ table name ID that specifies sample text
+that illustrates the effect of this feature. (May be NULL.). </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>num_named_parameters</p></td>
+<td class="parameter_description"><p>  Number of named parameters. (May be zero.). </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>first_param_id</p></td>
+<td class="parameter_description"><p> The first ‘name’ table name ID used to specify
+strings for user-interface labels for the feature
+parameters. (Must be zero if numParameters is zero.). </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.3.14.7.6.6"></a><h4>Returns</h4>
+<p> true if data found, false otherwise</p>
+<p></p>
+</div>
+<p class="since">Since REPLACEME</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -424,7 +519,7 @@ hb_ot_layout_get_ligature_carets (<em class="parameter"><code><a class="link" hr
 hb_ot_layout_get_size_params (<em class="parameter"><code><a class="link" href="harfbuzz-hb-face.html#hb-face-t"><span class="type">hb_face_t</span></a> *face</code></em>,
                               <em class="parameter"><code>unsigned <span class="type">int</span> *design_size</code></em>,
                               <em class="parameter"><code>unsigned <span class="type">int</span> *subfamily_id</code></em>,
-                              <em class="parameter"><code>unsigned <span class="type">int</span> *subfamily_name_id</code></em>,
+                              <em class="parameter"><code><span class="type">hb_name_id_t</span> *subfamily_name_id</code></em>,
                               <em class="parameter"><code>unsigned <span class="type">int</span> *range_start</code></em>,
                               <em class="parameter"><code>unsigned <span class="type">int</span> *range_end</code></em>);</pre>
 <p class="since">Since 0.9.10</p>
