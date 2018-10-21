@@ -379,6 +379,62 @@ hb_ot_layout_feature_get_characters (<em class="parameter"><code><a class="link"
                                      <em class="parameter"><code>unsigned <span class="type">int</span> start_offset</code></em>,
                                      <em class="parameter"><code>unsigned <span class="type">int</span> *char_count</code></em>,
                                      <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> *characters</code></em>);</pre>
+<p>Fetches characters listed by designer under feature parameters for "Character
+Variant" ("cvXX") features.</p>
+<div class="refsect3">
+<a name="id-1.3.3.14.7.4.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>face</p></td>
+<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-face.html#hb-face-t"><span class="type">hb_face_t</span></a> to work upon</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>table_tag</p></td>
+<td class="parameter_description"><p>table tag to query, "GSUB" or "GPOS".</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>feature_index</p></td>
+<td class="parameter_description"><p>index of feature to query.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>start_offset</p></td>
+<td class="parameter_description"><p>In case the resulting char_count was equal to its input value, there
+is a chance there were more characters on the tag so this API can be
+called with an offset till resulting char_count gets to a number
+lower than input buffer (or consider using just a bigger buffer for
+one shot copying).</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>char_count</p></td>
+<td class="parameter_description"><p> The count of characters for which this feature
+provides glyph variants. (May be zero.). </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>characters</p></td>
+<td class="parameter_description"><p> A buffer pointer. The Unicode Scalar Value
+of the characters for which this feature provides glyph variants. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.3.14.7.4.6"></a><h4>Returns</h4>
+<p> Number of total sample characters in the cvXX feature.</p>
+<p></p>
+</div>
+<p class="since">Since 2.0.0</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -418,6 +474,16 @@ hb_ot_layout_feature_get_name_ids (<em class="parameter"><code><a class="link" h
 <tr>
 <td class="parameter_name"><p>face</p></td>
 <td class="parameter_description"><p><a class="link" href="harfbuzz-hb-face.html#hb-face-t"><span class="type">hb_face_t</span></a> to work upon</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>table_tag</p></td>
+<td class="parameter_description"><p>table tag to query, "GSUB" or "GPOS".</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>feature_index</p></td>
+<td class="parameter_description"><p>index of feature to query.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
