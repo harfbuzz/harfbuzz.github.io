@@ -364,6 +364,7 @@
 <ANCHOR id="harfbuzz-hb-ot-font" href="harfbuzz/harfbuzz-hb-ot-font.html">
 <ANCHOR id="harfbuzz-hb-ot-font.functions" href="harfbuzz/harfbuzz-hb-ot-font.html#harfbuzz-hb-ot-font.functions">
 <ANCHOR id="harfbuzz-hb-ot-font.object-hierarchy" href="harfbuzz/harfbuzz-hb-ot-font.html#harfbuzz-hb-ot-font.object-hierarchy">
+<ANCHOR id="harfbuzz-hb-ot-font.includes" href="harfbuzz/harfbuzz-hb-ot-font.html#harfbuzz-hb-ot-font.includes">
 <ANCHOR id="harfbuzz-hb-ot-font.description" href="harfbuzz/harfbuzz-hb-ot-font.html#harfbuzz-hb-ot-font.description">
 <ANCHOR id="harfbuzz-hb-ot-font.functions_details" href="harfbuzz/harfbuzz-hb-ot-font.html#harfbuzz-hb-ot-font.functions_details">
 <ANCHOR id="hb-ot-font-set-funcs" href="harfbuzz/harfbuzz-hb-ot-font.html#hb-ot-font-set-funcs">
@@ -372,6 +373,7 @@
 <ANCHOR id="harfbuzz-hb-ot-layout.functions" href="harfbuzz/harfbuzz-hb-ot-layout.html#harfbuzz-hb-ot-layout.functions">
 <ANCHOR id="harfbuzz-hb-ot-layout.other" href="harfbuzz/harfbuzz-hb-ot-layout.html#harfbuzz-hb-ot-layout.other">
 <ANCHOR id="harfbuzz-hb-ot-layout.object-hierarchy" href="harfbuzz/harfbuzz-hb-ot-layout.html#harfbuzz-hb-ot-layout.object-hierarchy">
+<ANCHOR id="harfbuzz-hb-ot-layout.includes" href="harfbuzz/harfbuzz-hb-ot-layout.html#harfbuzz-hb-ot-layout.includes">
 <ANCHOR id="harfbuzz-hb-ot-layout.description" href="harfbuzz/harfbuzz-hb-ot-layout.html#harfbuzz-hb-ot-layout.description">
 <ANCHOR id="harfbuzz-hb-ot-layout.functions_details" href="harfbuzz/harfbuzz-hb-ot-layout.html#harfbuzz-hb-ot-layout.functions_details">
 <ANCHOR id="hb-ot-tag-to-language" href="harfbuzz/harfbuzz-hb-ot-layout.html#hb-ot-tag-to-language">
@@ -429,6 +431,7 @@
 <ANCHOR id="harfbuzz-hb-ot-color.functions" href="harfbuzz/harfbuzz-hb-ot-color.html#harfbuzz-hb-ot-color.functions">
 <ANCHOR id="harfbuzz-hb-ot-color.other" href="harfbuzz/harfbuzz-hb-ot-color.html#harfbuzz-hb-ot-color.other">
 <ANCHOR id="harfbuzz-hb-ot-color.object-hierarchy" href="harfbuzz/harfbuzz-hb-ot-color.html#harfbuzz-hb-ot-color.object-hierarchy">
+<ANCHOR id="harfbuzz-hb-ot-color.includes" href="harfbuzz/harfbuzz-hb-ot-color.html#harfbuzz-hb-ot-color.includes">
 <ANCHOR id="harfbuzz-hb-ot-color.description" href="harfbuzz/harfbuzz-hb-ot-color.html#harfbuzz-hb-ot-color.description">
 <ANCHOR id="harfbuzz-hb-ot-color.functions_details" href="harfbuzz/harfbuzz-hb-ot-color.html#harfbuzz-hb-ot-color.functions_details">
 <ANCHOR id="HB-COLOR:CAPS" href="harfbuzz/harfbuzz-hb-ot-color.html#HB-COLOR:CAPS">
@@ -451,6 +454,7 @@
 <ANCHOR id="harfbuzz-hb-ot-name.functions" href="harfbuzz/harfbuzz-hb-ot-name.html#harfbuzz-hb-ot-name.functions">
 <ANCHOR id="harfbuzz-hb-ot-name.other" href="harfbuzz/harfbuzz-hb-ot-name.html#harfbuzz-hb-ot-name.other">
 <ANCHOR id="harfbuzz-hb-ot-name.object-hierarchy" href="harfbuzz/harfbuzz-hb-ot-name.html#harfbuzz-hb-ot-name.object-hierarchy">
+<ANCHOR id="harfbuzz-hb-ot-name.includes" href="harfbuzz/harfbuzz-hb-ot-name.html#harfbuzz-hb-ot-name.includes">
 <ANCHOR id="harfbuzz-hb-ot-name.description" href="harfbuzz/harfbuzz-hb-ot-name.html#harfbuzz-hb-ot-name.description">
 <ANCHOR id="harfbuzz-hb-ot-name.functions_details" href="harfbuzz/harfbuzz-hb-ot-name.html#harfbuzz-hb-ot-name.functions_details">
 <ANCHOR id="hb-ot-name-list-names" href="harfbuzz/harfbuzz-hb-ot-name.html#hb-ot-name-list-names">
@@ -465,6 +469,7 @@
 <ANCHOR id="hb-ot-math-glyph-part-t" href="harfbuzz/harfbuzz-hb-ot-math.html#hb-ot-math-glyph-part-t">
 <ANCHOR id="harfbuzz-hb-ot-math.other" href="harfbuzz/harfbuzz-hb-ot-math.html#harfbuzz-hb-ot-math.other">
 <ANCHOR id="harfbuzz-hb-ot-math.object-hierarchy" href="harfbuzz/harfbuzz-hb-ot-math.html#harfbuzz-hb-ot-math.object-hierarchy">
+<ANCHOR id="harfbuzz-hb-ot-math.includes" href="harfbuzz/harfbuzz-hb-ot-math.html#harfbuzz-hb-ot-math.includes">
 <ANCHOR id="harfbuzz-hb-ot-math.description" href="harfbuzz/harfbuzz-hb-ot-math.html#harfbuzz-hb-ot-math.description">
 <ANCHOR id="harfbuzz-hb-ot-math.functions_details" href="harfbuzz/harfbuzz-hb-ot-math.html#harfbuzz-hb-ot-math.functions_details">
 <ANCHOR id="hb-ot-math-has-data" href="harfbuzz/harfbuzz-hb-ot-math.html#hb-ot-math-has-data">
@@ -487,6 +492,7 @@
 <ANCHOR id="harfbuzz-hb-ot-shape" href="harfbuzz/harfbuzz-hb-ot-shape.html">
 <ANCHOR id="harfbuzz-hb-ot-shape.functions" href="harfbuzz/harfbuzz-hb-ot-shape.html#harfbuzz-hb-ot-shape.functions">
 <ANCHOR id="harfbuzz-hb-ot-shape.object-hierarchy" href="harfbuzz/harfbuzz-hb-ot-shape.html#harfbuzz-hb-ot-shape.object-hierarchy">
+<ANCHOR id="harfbuzz-hb-ot-shape.includes" href="harfbuzz/harfbuzz-hb-ot-shape.html#harfbuzz-hb-ot-shape.includes">
 <ANCHOR id="harfbuzz-hb-ot-shape.description" href="harfbuzz/harfbuzz-hb-ot-shape.html#harfbuzz-hb-ot-shape.description">
 <ANCHOR id="harfbuzz-hb-ot-shape.functions_details" href="harfbuzz/harfbuzz-hb-ot-shape.html#harfbuzz-hb-ot-shape.functions_details">
 <ANCHOR id="hb-ot-shape-glyphs-closure" href="harfbuzz/harfbuzz-hb-ot-shape.html#hb-ot-shape-glyphs-closure">
