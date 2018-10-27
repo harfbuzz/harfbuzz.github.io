@@ -5,9 +5,9 @@
 <title>HarfBuzz Manual: hb-font</title>
 <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
 <link rel="home" href="index.html" title="HarfBuzz Manual">
-<link rel="up" href="ch08.html" title="HarfBuzz API">
+<link rel="up" href="ch08.html" title="Core API">
 <link rel="prev" href="harfbuzz-hb-face.html" title="hb-face">
-<link rel="next" href="harfbuzz-hb-buffer.html" title="hb-buffer">
+<link rel="next" href="hb-map-t.html" title="hb_map_t">
 <meta name="generator" content="GTK-Doc V1.20 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
@@ -21,7 +21,7 @@
 <td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
 <td><a accesskey="u" href="ch08.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
 <td><a accesskey="p" href="harfbuzz-hb-face.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
-<td><a accesskey="n" href="harfbuzz-hb-buffer.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+<td><a accesskey="n" href="hb-map-t.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
 </tr></table>
 <div class="refentry">
 <a name="harfbuzz-hb-font"></a><div class="titlepage"></div>
@@ -816,7 +816,7 @@ hb_font_add_glyph_origin_for_direction
                                 <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-position-t" title="hb_position_t"><span class="type">hb_position_t</span></a> *x</code></em>,
                                 <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-position-t" title="hb_position_t"><span class="type">hb_position_t</span></a> *y</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.2.4"></a><h4>Parameters</h4>
+<a name="id-1.3.3.7.10.2.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -856,7 +856,7 @@ hb_font_create (<em class="parameter"><code><a class="link" href="harfbuzz-hb-fa
 <pre class="programlisting"><a class="link" href="harfbuzz-hb-font.html#hb-font-t"><span class="returnvalue">hb_font_t</span></a> *
 hb_font_create_sub_font (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t"><span class="type">hb_font_t</span></a> *parent</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.4.4"></a><h4>Parameters</h4>
+<a name="id-1.3.3.7.10.4.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -871,7 +871,7 @@ hb_font_create_sub_font (<em class="parameter"><code><a class="link" href="harfb
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.4.5"></a><h4>Returns</h4>
+<a name="id-1.3.3.7.10.4.5"></a><h4>Returns</h4>
 <p>. </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
@@ -883,7 +883,7 @@ hb_font_create_sub_font (<em class="parameter"><code><a class="link" href="harfb
 <pre class="programlisting"><span class="returnvalue">void</span>
 hb_font_destroy (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t"><span class="type">hb_font_t</span></a> *font</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.5.4"></a><h4>Parameters</h4>
+<a name="id-1.3.3.7.10.5.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -911,7 +911,7 @@ hb_font_funcs_create (<em class="parameter"><code><span class="type">void</span>
 <pre class="programlisting"><span class="returnvalue">void</span>
 hb_font_funcs_destroy (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-funcs-t"><span class="type">hb_font_funcs_t</span></a> *ffuncs</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.7.4"></a><h4>Parameters</h4>
+<a name="id-1.3.3.7.10.7.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -933,7 +933,7 @@ hb_font_funcs_destroy (<em class="parameter"><code><a class="link" href="harfbuz
 <pre class="programlisting"><a class="link" href="harfbuzz-hb-font.html#hb-font-funcs-t"><span class="returnvalue">hb_font_funcs_t</span></a> *
 hb_font_funcs_get_empty (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.8.4"></a><h4>Returns</h4>
+<a name="id-1.3.3.7.10.8.4"></a><h4>Returns</h4>
 <p>. </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
@@ -946,7 +946,7 @@ hb_font_funcs_get_empty (<em class="parameter"><code><span class="type">void</sp
 hb_font_funcs_get_user_data (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-funcs-t"><span class="type">hb_font_funcs_t</span></a> *ffuncs</code></em>,
                              <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-user-data-key-t"><span class="type">hb_user_data_key_t</span></a> *key</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.9.4"></a><h4>Parameters</h4>
+<a name="id-1.3.3.7.10.9.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -961,7 +961,7 @@ hb_font_funcs_get_user_data (<em class="parameter"><code><a class="link" href="h
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.9.5"></a><h4>Returns</h4>
+<a name="id-1.3.3.7.10.9.5"></a><h4>Returns</h4>
 <p>. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
@@ -973,7 +973,7 @@ hb_font_funcs_get_user_data (<em class="parameter"><code><a class="link" href="h
 <pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
 hb_font_funcs_is_immutable (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-funcs-t"><span class="type">hb_font_funcs_t</span></a> *ffuncs</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.10.4"></a><h4>Parameters</h4>
+<a name="id-1.3.3.7.10.10.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -988,7 +988,7 @@ hb_font_funcs_is_immutable (<em class="parameter"><code><a class="link" href="ha
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.10.5"></a><h4>Returns</h4>
+<a name="id-1.3.3.7.10.10.5"></a><h4>Returns</h4>
 <p></p>
 </div>
 <p class="since">Since 0.9.2</p>
@@ -999,7 +999,7 @@ hb_font_funcs_is_immutable (<em class="parameter"><code><a class="link" href="ha
 <pre class="programlisting"><span class="returnvalue">void</span>
 hb_font_funcs_make_immutable (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-funcs-t"><span class="type">hb_font_funcs_t</span></a> *ffuncs</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.11.4"></a><h4>Parameters</h4>
+<a name="id-1.3.3.7.10.11.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1021,7 +1021,7 @@ hb_font_funcs_make_immutable (<em class="parameter"><code><a class="link" href="
 <pre class="programlisting"><a class="link" href="harfbuzz-hb-font.html#hb-font-funcs-t"><span class="returnvalue">hb_font_funcs_t</span></a> *
 hb_font_funcs_reference (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-funcs-t"><span class="type">hb_font_funcs_t</span></a> *ffuncs</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.12.4"></a><h4>Parameters</h4>
+<a name="id-1.3.3.7.10.12.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1036,7 +1036,7 @@ hb_font_funcs_reference (<em class="parameter"><code><a class="link" href="harfb
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.12.5"></a><h4>Returns</h4>
+<a name="id-1.3.3.7.10.12.5"></a><h4>Returns</h4>
 <p></p>
 </div>
 <p class="since">Since 0.9.2</p>
@@ -1051,7 +1051,7 @@ hb_font_funcs_set_glyph_contour_point_func
                                 <em class="parameter"><code><span class="type">void</span> *user_data</code></em>,
                                 <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-destroy-func-t" title="hb_destroy_func_t ()"><span class="type">hb_destroy_func_t</span></a> destroy</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.13.4"></a><h4>Parameters</h4>
+<a name="id-1.3.3.7.10.13.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1083,7 +1083,7 @@ hb_font_funcs_set_glyph_extents_func (<em class="parameter"><code><a class="link
                                       <em class="parameter"><code><span class="type">void</span> *user_data</code></em>,
                                       <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-destroy-func-t" title="hb_destroy_func_t ()"><span class="type">hb_destroy_func_t</span></a> destroy</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.14.4"></a><h4>Parameters</h4>
+<a name="id-1.3.3.7.10.14.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1116,7 +1116,7 @@ hb_font_funcs_set_glyph_from_name_func
                                 <em class="parameter"><code><span class="type">void</span> *user_data</code></em>,
                                 <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-destroy-func-t" title="hb_destroy_func_t ()"><span class="type">hb_destroy_func_t</span></a> destroy</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.15.4"></a><h4>Parameters</h4>
+<a name="id-1.3.3.7.10.15.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1149,7 +1149,7 @@ hb_font_funcs_set_glyph_h_advance_func
                                 <em class="parameter"><code><span class="type">void</span> *user_data</code></em>,
                                 <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-destroy-func-t" title="hb_destroy_func_t ()"><span class="type">hb_destroy_func_t</span></a> destroy</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.16.4"></a><h4>Parameters</h4>
+<a name="id-1.3.3.7.10.16.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1182,7 +1182,7 @@ hb_font_funcs_set_glyph_h_advances_func
                                 <em class="parameter"><code><span class="type">void</span> *user_data</code></em>,
                                 <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-destroy-func-t" title="hb_destroy_func_t ()"><span class="type">hb_destroy_func_t</span></a> destroy</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.17.4"></a><h4>Parameters</h4>
+<a name="id-1.3.3.7.10.17.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1214,7 +1214,7 @@ hb_font_funcs_set_glyph_h_origin_func (<em class="parameter"><code><a class="lin
                                        <em class="parameter"><code><span class="type">void</span> *user_data</code></em>,
                                        <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-destroy-func-t" title="hb_destroy_func_t ()"><span class="type">hb_destroy_func_t</span></a> destroy</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.18.4"></a><h4>Parameters</h4>
+<a name="id-1.3.3.7.10.18.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1246,7 +1246,7 @@ hb_font_funcs_set_glyph_name_func (<em class="parameter"><code><a class="link" h
                                    <em class="parameter"><code><span class="type">void</span> *user_data</code></em>,
                                    <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-destroy-func-t" title="hb_destroy_func_t ()"><span class="type">hb_destroy_func_t</span></a> destroy</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.19.4"></a><h4>Parameters</h4>
+<a name="id-1.3.3.7.10.19.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1279,7 +1279,7 @@ hb_font_funcs_set_glyph_v_advance_func
                                 <em class="parameter"><code><span class="type">void</span> *user_data</code></em>,
                                 <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-destroy-func-t" title="hb_destroy_func_t ()"><span class="type">hb_destroy_func_t</span></a> destroy</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.20.4"></a><h4>Parameters</h4>
+<a name="id-1.3.3.7.10.20.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1312,7 +1312,7 @@ hb_font_funcs_set_glyph_v_advances_func
                                 <em class="parameter"><code><span class="type">void</span> *user_data</code></em>,
                                 <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-destroy-func-t" title="hb_destroy_func_t ()"><span class="type">hb_destroy_func_t</span></a> destroy</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.21.4"></a><h4>Parameters</h4>
+<a name="id-1.3.3.7.10.21.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1344,7 +1344,7 @@ hb_font_funcs_set_glyph_v_origin_func (<em class="parameter"><code><a class="lin
                                        <em class="parameter"><code><span class="type">void</span> *user_data</code></em>,
                                        <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-destroy-func-t" title="hb_destroy_func_t ()"><span class="type">hb_destroy_func_t</span></a> destroy</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.22.4"></a><h4>Parameters</h4>
+<a name="id-1.3.3.7.10.22.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1376,7 +1376,7 @@ hb_font_funcs_set_nominal_glyph_func (<em class="parameter"><code><a class="link
                                       <em class="parameter"><code><span class="type">void</span> *user_data</code></em>,
                                       <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-destroy-func-t" title="hb_destroy_func_t ()"><span class="type">hb_destroy_func_t</span></a> destroy</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.23.4"></a><h4>Parameters</h4>
+<a name="id-1.3.3.7.10.23.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1408,7 +1408,7 @@ hb_font_funcs_set_nominal_glyphs_func (<em class="parameter"><code><a class="lin
                                        <em class="parameter"><code><span class="type">void</span> *user_data</code></em>,
                                        <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-destroy-func-t" title="hb_destroy_func_t ()"><span class="type">hb_destroy_func_t</span></a> destroy</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.24.4"></a><h4>Parameters</h4>
+<a name="id-1.3.3.7.10.24.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1441,7 +1441,7 @@ hb_font_funcs_set_user_data (<em class="parameter"><code><a class="link" href="h
                              <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-destroy-func-t" title="hb_destroy_func_t ()"><span class="type">hb_destroy_func_t</span></a> destroy</code></em>,
                              <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="type">hb_bool_t</span></a> replace</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.25.4"></a><h4>Parameters</h4>
+<a name="id-1.3.3.7.10.25.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1456,7 +1456,7 @@ hb_font_funcs_set_user_data (<em class="parameter"><code><a class="link" href="h
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.25.5"></a><h4>Returns</h4>
+<a name="id-1.3.3.7.10.25.5"></a><h4>Returns</h4>
 <p></p>
 </div>
 <p class="since">Since 0.9.2</p>
@@ -1471,7 +1471,7 @@ hb_font_funcs_set_variation_glyph_func
                                 <em class="parameter"><code><span class="type">void</span> *user_data</code></em>,
                                 <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-destroy-func-t" title="hb_destroy_func_t ()"><span class="type">hb_destroy_func_t</span></a> destroy</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.26.4"></a><h4>Parameters</h4>
+<a name="id-1.3.3.7.10.26.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1500,7 +1500,7 @@ hb_font_funcs_set_variation_glyph_func
 <pre class="programlisting"><a class="link" href="harfbuzz-hb-font.html#hb-font-t"><span class="returnvalue">hb_font_t</span></a> *
 hb_font_get_empty (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.27.4"></a><h4>Returns</h4>
+<a name="id-1.3.3.7.10.27.4"></a><h4>Returns</h4>
 <p> (transfer full)</p>
 <p></p>
 </div>
@@ -1512,7 +1512,7 @@ hb_font_get_empty (<em class="parameter"><code><span class="type">void</span></c
 <pre class="programlisting"><a class="link" href="harfbuzz-hb-face.html#hb-face-t"><span class="returnvalue">hb_face_t</span></a> *
 hb_font_get_face (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t"><span class="type">hb_font_t</span></a> *font</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.28.4"></a><h4>Parameters</h4>
+<a name="id-1.3.3.7.10.28.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1527,7 +1527,7 @@ hb_font_get_face (<em class="parameter"><code><a class="link" href="harfbuzz-hb-
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.28.5"></a><h4>Returns</h4>
+<a name="id-1.3.3.7.10.28.5"></a><h4>Returns</h4>
 <p>. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
@@ -1542,7 +1542,7 @@ hb_font_get_glyph (<em class="parameter"><code><a class="link" href="harfbuzz-hb
                    <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> variation_selector</code></em>,
                    <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> *glyph</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.29.4"></a><h4>Parameters</h4>
+<a name="id-1.3.3.7.10.29.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1564,7 +1564,7 @@ hb_font_get_glyph (<em class="parameter"><code><a class="link" href="harfbuzz-hb
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.29.5"></a><h4>Returns</h4>
+<a name="id-1.3.3.7.10.29.5"></a><h4>Returns</h4>
 <p></p>
 </div>
 <p class="since">Since 0.9.2</p>
@@ -1580,7 +1580,7 @@ hb_font_get_glyph_advance_for_direction
                                 <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-position-t" title="hb_position_t"><span class="type">hb_position_t</span></a> *x</code></em>,
                                 <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-position-t" title="hb_position_t"><span class="type">hb_position_t</span></a> *y</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.30.4"></a><h4>Parameters</h4>
+<a name="id-1.3.3.7.10.30.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1630,7 +1630,7 @@ hb_font_get_glyph_advances_for_direction
                                 <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-position-t" title="hb_position_t"><span class="type">hb_position_t</span></a> *first_advance</code></em>,
                                 <em class="parameter"><code><span class="type">unsigned </span> advance_stride</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.32.4"></a><h4>Parameters</h4>
+<a name="id-1.3.3.7.10.32.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1669,7 +1669,7 @@ hb_font_get_glyph_contour_point (<em class="parameter"><code><a class="link" hre
                                  <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-position-t" title="hb_position_t"><span class="type">hb_position_t</span></a> *x</code></em>,
                                  <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-position-t" title="hb_position_t"><span class="type">hb_position_t</span></a> *y</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.34.4"></a><h4>Parameters</h4>
+<a name="id-1.3.3.7.10.34.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1696,7 +1696,7 @@ hb_font_get_glyph_contour_point (<em class="parameter"><code><a class="link" hre
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.34.5"></a><h4>Returns</h4>
+<a name="id-1.3.3.7.10.34.5"></a><h4>Returns</h4>
 <p></p>
 </div>
 <p class="since">Since 0.9.2</p>
@@ -1713,7 +1713,7 @@ hb_font_get_glyph_contour_point_for_origin
                                 <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-position-t" title="hb_position_t"><span class="type">hb_position_t</span></a> *x</code></em>,
                                 <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-position-t" title="hb_position_t"><span class="type">hb_position_t</span></a> *y</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.35.4"></a><h4>Parameters</h4>
+<a name="id-1.3.3.7.10.35.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1740,7 +1740,7 @@ hb_font_get_glyph_contour_point_for_origin
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.35.5"></a><h4>Returns</h4>
+<a name="id-1.3.3.7.10.35.5"></a><h4>Returns</h4>
 <p></p>
 </div>
 <p class="since">Since 0.9.2</p>
@@ -1766,7 +1766,7 @@ hb_font_get_glyph_extents (<em class="parameter"><code><a class="link" href="har
                            <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> glyph</code></em>,
                            <em class="parameter"><code><span class="type">hb_glyph_extents_t</span> *extents</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.37.4"></a><h4>Parameters</h4>
+<a name="id-1.3.3.7.10.37.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1788,7 +1788,7 @@ hb_font_get_glyph_extents (<em class="parameter"><code><a class="link" href="har
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.37.5"></a><h4>Returns</h4>
+<a name="id-1.3.3.7.10.37.5"></a><h4>Returns</h4>
 <p></p>
 </div>
 <p class="since">Since 0.9.2</p>
@@ -1802,7 +1802,7 @@ hb_font_get_glyph_extents_for_origin (<em class="parameter"><code><a class="link
                                       <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-direction-t" title="enum hb_direction_t"><span class="type">hb_direction_t</span></a> direction</code></em>,
                                       <em class="parameter"><code><span class="type">hb_glyph_extents_t</span> *extents</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.38.4"></a><h4>Parameters</h4>
+<a name="id-1.3.3.7.10.38.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1824,7 +1824,7 @@ hb_font_get_glyph_extents_for_origin (<em class="parameter"><code><a class="link
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.38.5"></a><h4>Returns</h4>
+<a name="id-1.3.3.7.10.38.5"></a><h4>Returns</h4>
 <p></p>
 </div>
 <p class="since">Since 0.9.2</p>
@@ -1848,7 +1848,7 @@ hb_font_get_glyph_from_name (<em class="parameter"><code><a class="link" href="h
                              <em class="parameter"><code><span class="type">int</span> len</code></em>,
                              <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> *glyph</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.40.4"></a><h4>Parameters</h4>
+<a name="id-1.3.3.7.10.40.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1875,7 +1875,7 @@ hb_font_get_glyph_from_name (<em class="parameter"><code><a class="link" href="h
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.40.5"></a><h4>Returns</h4>
+<a name="id-1.3.3.7.10.40.5"></a><h4>Returns</h4>
 <p></p>
 </div>
 <p class="since">Since 0.9.2</p>
@@ -1896,7 +1896,7 @@ hb_font_get_glyph_from_name (<em class="parameter"><code><a class="link" href="h
 hb_font_get_glyph_h_advance (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t"><span class="type">hb_font_t</span></a> *font</code></em>,
                              <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> glyph</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.42.4"></a><h4>Parameters</h4>
+<a name="id-1.3.3.7.10.42.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1911,7 +1911,7 @@ hb_font_get_glyph_h_advance (<em class="parameter"><code><a class="link" href="h
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.42.5"></a><h4>Returns</h4>
+<a name="id-1.3.3.7.10.42.5"></a><h4>Returns</h4>
 <p></p>
 </div>
 <p class="since">Since 0.9.2</p>
@@ -1927,7 +1927,7 @@ hb_font_get_glyph_h_advances (<em class="parameter"><code><a class="link" href="
                               <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-position-t" title="hb_position_t"><span class="type">hb_position_t</span></a> *first_advance</code></em>,
                               <em class="parameter"><code><span class="type">unsigned </span> advance_stride</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.43.4"></a><h4>Parameters</h4>
+<a name="id-1.3.3.7.10.43.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1952,7 +1952,7 @@ hb_font_get_glyph_h_origin (<em class="parameter"><code><a class="link" href="ha
                             <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-position-t" title="hb_position_t"><span class="type">hb_position_t</span></a> *x</code></em>,
                             <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-position-t" title="hb_position_t"><span class="type">hb_position_t</span></a> *y</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.44.4"></a><h4>Parameters</h4>
+<a name="id-1.3.3.7.10.44.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1979,7 +1979,7 @@ hb_font_get_glyph_h_origin (<em class="parameter"><code><a class="link" href="ha
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.44.5"></a><h4>Returns</h4>
+<a name="id-1.3.3.7.10.44.5"></a><h4>Returns</h4>
 <p></p>
 </div>
 <p class="since">Since 0.9.2</p>
@@ -1993,7 +1993,7 @@ hb_font_get_glyph_name (<em class="parameter"><code><a class="link" href="harfbu
                         <em class="parameter"><code><span class="type">char</span> *name</code></em>,
                         <em class="parameter"><code>unsigned <span class="type">int</span> size</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.45.4"></a><h4>Parameters</h4>
+<a name="id-1.3.3.7.10.45.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2015,7 +2015,7 @@ hb_font_get_glyph_name (<em class="parameter"><code><a class="link" href="harfbu
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.45.5"></a><h4>Returns</h4>
+<a name="id-1.3.3.7.10.45.5"></a><h4>Returns</h4>
 <p></p>
 </div>
 <p class="since">Since 0.9.2</p>
@@ -2042,7 +2042,7 @@ hb_font_get_glyph_origin_for_direction
                                 <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-position-t" title="hb_position_t"><span class="type">hb_position_t</span></a> *x</code></em>,
                                 <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-position-t" title="hb_position_t"><span class="type">hb_position_t</span></a> *y</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.47.4"></a><h4>Parameters</h4>
+<a name="id-1.3.3.7.10.47.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2088,7 +2088,7 @@ hb_font_get_glyph_origin_for_direction
 hb_font_get_glyph_v_advance (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t"><span class="type">hb_font_t</span></a> *font</code></em>,
                              <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> glyph</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.49.4"></a><h4>Parameters</h4>
+<a name="id-1.3.3.7.10.49.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2103,7 +2103,7 @@ hb_font_get_glyph_v_advance (<em class="parameter"><code><a class="link" href="h
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.49.5"></a><h4>Returns</h4>
+<a name="id-1.3.3.7.10.49.5"></a><h4>Returns</h4>
 <p></p>
 </div>
 <p class="since">Since 0.9.2</p>
@@ -2119,7 +2119,7 @@ hb_font_get_glyph_v_advances (<em class="parameter"><code><a class="link" href="
                               <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-position-t" title="hb_position_t"><span class="type">hb_position_t</span></a> *first_advance</code></em>,
                               <em class="parameter"><code><span class="type">unsigned </span> advance_stride</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.50.4"></a><h4>Parameters</h4>
+<a name="id-1.3.3.7.10.50.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2144,7 +2144,7 @@ hb_font_get_glyph_v_origin (<em class="parameter"><code><a class="link" href="ha
                             <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-position-t" title="hb_position_t"><span class="type">hb_position_t</span></a> *x</code></em>,
                             <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-position-t" title="hb_position_t"><span class="type">hb_position_t</span></a> *y</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.51.4"></a><h4>Parameters</h4>
+<a name="id-1.3.3.7.10.51.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2171,7 +2171,7 @@ hb_font_get_glyph_v_origin (<em class="parameter"><code><a class="link" href="ha
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.51.5"></a><h4>Returns</h4>
+<a name="id-1.3.3.7.10.51.5"></a><h4>Returns</h4>
 <p></p>
 </div>
 <p class="since">Since 0.9.2</p>
@@ -2184,7 +2184,7 @@ hb_font_get_nominal_glyph (<em class="parameter"><code><a class="link" href="har
                            <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> unicode</code></em>,
                            <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> *glyph</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.52.4"></a><h4>Parameters</h4>
+<a name="id-1.3.3.7.10.52.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2206,7 +2206,7 @@ hb_font_get_nominal_glyph (<em class="parameter"><code><a class="link" href="har
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.52.5"></a><h4>Returns</h4>
+<a name="id-1.3.3.7.10.52.5"></a><h4>Returns</h4>
 <p></p>
 </div>
 <p class="since">Since 1.2.3</p>
@@ -2227,7 +2227,7 @@ hb_font_get_nominal_glyph (<em class="parameter"><code><a class="link" href="har
 <pre class="programlisting"><a class="link" href="harfbuzz-hb-font.html#hb-font-t"><span class="returnvalue">hb_font_t</span></a> *
 hb_font_get_parent (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t"><span class="type">hb_font_t</span></a> *font</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.54.4"></a><h4>Parameters</h4>
+<a name="id-1.3.3.7.10.54.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2242,7 +2242,7 @@ hb_font_get_parent (<em class="parameter"><code><a class="link" href="harfbuzz-h
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.54.5"></a><h4>Returns</h4>
+<a name="id-1.3.3.7.10.54.5"></a><h4>Returns</h4>
 <p>. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
@@ -2256,7 +2256,7 @@ hb_font_get_ppem (<em class="parameter"><code><a class="link" href="harfbuzz-hb-
                   <em class="parameter"><code>unsigned <span class="type">int</span> *x_ppem</code></em>,
                   <em class="parameter"><code>unsigned <span class="type">int</span> *y_ppem</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.55.4"></a><h4>Parameters</h4>
+<a name="id-1.3.3.7.10.55.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2291,7 +2291,7 @@ hb_font_get_ppem (<em class="parameter"><code><a class="link" href="harfbuzz-hb-
 hb_font_get_ptem (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t"><span class="type">hb_font_t</span></a> *font</code></em>);</pre>
 <p>Gets the "point size" of the font.  A value of 0 means unset.</p>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.56.5"></a><h4>Parameters</h4>
+<a name="id-1.3.3.7.10.56.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2306,7 +2306,7 @@ hb_font_get_ptem (<em class="parameter"><code><a class="link" href="harfbuzz-hb-
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.56.6"></a><h4>Returns</h4>
+<a name="id-1.3.3.7.10.56.6"></a><h4>Returns</h4>
 <p> Point size.</p>
 <p></p>
 </div>
@@ -2320,7 +2320,7 @@ hb_font_get_scale (<em class="parameter"><code><a class="link" href="harfbuzz-hb
                    <em class="parameter"><code><span class="type">int</span> *x_scale</code></em>,
                    <em class="parameter"><code><span class="type">int</span> *y_scale</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.57.4"></a><h4>Parameters</h4>
+<a name="id-1.3.3.7.10.57.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2355,7 +2355,7 @@ hb_font_get_scale (<em class="parameter"><code><a class="link" href="harfbuzz-hb
 hb_font_get_user_data (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t"><span class="type">hb_font_t</span></a> *font</code></em>,
                        <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-user-data-key-t"><span class="type">hb_user_data_key_t</span></a> *key</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.58.4"></a><h4>Parameters</h4>
+<a name="id-1.3.3.7.10.58.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2370,7 +2370,7 @@ hb_font_get_user_data (<em class="parameter"><code><a class="link" href="harfbuz
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.58.5"></a><h4>Returns</h4>
+<a name="id-1.3.3.7.10.58.5"></a><h4>Returns</h4>
 <p>. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
@@ -2385,7 +2385,7 @@ hb_font_get_variation_glyph (<em class="parameter"><code><a class="link" href="h
                              <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> variation_selector</code></em>,
                              <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> *glyph</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.59.4"></a><h4>Parameters</h4>
+<a name="id-1.3.3.7.10.59.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2407,7 +2407,7 @@ hb_font_get_variation_glyph (<em class="parameter"><code><a class="link" href="h
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.59.5"></a><h4>Returns</h4>
+<a name="id-1.3.3.7.10.59.5"></a><h4>Returns</h4>
 <p></p>
 </div>
 <p class="since">Since 1.2.3</p>
@@ -2442,7 +2442,7 @@ hb_font_glyph_from_string (<em class="parameter"><code><a class="link" href="har
                            <em class="parameter"><code><span class="type">int</span> len</code></em>,
                            <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> *glyph</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.62.4"></a><h4>Parameters</h4>
+<a name="id-1.3.3.7.10.62.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2469,7 +2469,7 @@ hb_font_glyph_from_string (<em class="parameter"><code><a class="link" href="har
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.62.5"></a><h4>Returns</h4>
+<a name="id-1.3.3.7.10.62.5"></a><h4>Returns</h4>
 <p></p>
 </div>
 <p class="since">Since 0.9.2</p>
@@ -2483,7 +2483,7 @@ hb_font_glyph_to_string (<em class="parameter"><code><a class="link" href="harfb
                          <em class="parameter"><code><span class="type">char</span> *s</code></em>,
                          <em class="parameter"><code>unsigned <span class="type">int</span> size</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.63.4"></a><h4>Parameters</h4>
+<a name="id-1.3.3.7.10.63.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2512,7 +2512,7 @@ hb_font_glyph_to_string (<em class="parameter"><code><a class="link" href="harfb
 <pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
 hb_font_is_immutable (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t"><span class="type">hb_font_t</span></a> *font</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.64.4"></a><h4>Parameters</h4>
+<a name="id-1.3.3.7.10.64.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2527,7 +2527,7 @@ hb_font_is_immutable (<em class="parameter"><code><a class="link" href="harfbuzz
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.64.5"></a><h4>Returns</h4>
+<a name="id-1.3.3.7.10.64.5"></a><h4>Returns</h4>
 <p></p>
 </div>
 <p class="since">Since 0.9.2</p>
@@ -2538,7 +2538,7 @@ hb_font_is_immutable (<em class="parameter"><code><a class="link" href="harfbuzz
 <pre class="programlisting"><span class="returnvalue">void</span>
 hb_font_make_immutable (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t"><span class="type">hb_font_t</span></a> *font</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.65.4"></a><h4>Parameters</h4>
+<a name="id-1.3.3.7.10.65.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2560,7 +2560,7 @@ hb_font_make_immutable (<em class="parameter"><code><a class="link" href="harfbu
 <pre class="programlisting"><a class="link" href="harfbuzz-hb-font.html#hb-font-t"><span class="returnvalue">hb_font_t</span></a> *
 hb_font_reference (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t"><span class="type">hb_font_t</span></a> *font</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.66.4"></a><h4>Parameters</h4>
+<a name="id-1.3.3.7.10.66.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2575,7 +2575,7 @@ hb_font_reference (<em class="parameter"><code><a class="link" href="harfbuzz-hb
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.66.5"></a><h4>Returns</h4>
+<a name="id-1.3.3.7.10.66.5"></a><h4>Returns</h4>
 <p>. </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
@@ -2590,7 +2590,7 @@ hb_font_set_face (<em class="parameter"><code><a class="link" href="harfbuzz-hb-
 <p>Sets font-face of <em class="parameter"><code>font</code></em>
 .</p>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.67.5"></a><h4>Parameters</h4>
+<a name="id-1.3.3.7.10.67.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2622,7 +2622,7 @@ hb_font_set_funcs (<em class="parameter"><code><a class="link" href="harfbuzz-hb
                    <em class="parameter"><code><span class="type">void</span> *font_data</code></em>,
                    <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-destroy-func-t" title="hb_destroy_func_t ()"><span class="type">hb_destroy_func_t</span></a> destroy</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.68.4"></a><h4>Parameters</h4>
+<a name="id-1.3.3.7.10.68.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2653,7 +2653,7 @@ hb_font_set_funcs_data (<em class="parameter"><code><a class="link" href="harfbu
                         <em class="parameter"><code><span class="type">void</span> *font_data</code></em>,
                         <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-destroy-func-t" title="hb_destroy_func_t ()"><span class="type">hb_destroy_func_t</span></a> destroy</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.69.4"></a><h4>Parameters</h4>
+<a name="id-1.3.3.7.10.69.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2685,7 +2685,7 @@ hb_font_set_parent (<em class="parameter"><code><a class="link" href="harfbuzz-h
 <p>Sets parent font of <em class="parameter"><code>font</code></em>
 .</p>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.70.5"></a><h4>Parameters</h4>
+<a name="id-1.3.3.7.10.70.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2716,7 +2716,7 @@ hb_font_set_ppem (<em class="parameter"><code><a class="link" href="harfbuzz-hb-
                   <em class="parameter"><code>unsigned <span class="type">int</span> x_ppem</code></em>,
                   <em class="parameter"><code>unsigned <span class="type">int</span> y_ppem</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.71.4"></a><h4>Parameters</h4>
+<a name="id-1.3.3.7.10.71.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2741,7 +2741,7 @@ hb_font_set_ptem (<em class="parameter"><code><a class="link" href="harfbuzz-hb-
 <p>Sets "point size" of the font.  Set to 0 to unset.</p>
 <p>There are 72 points in an inch.</p>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.72.6"></a><h4>Parameters</h4>
+<a name="id-1.3.3.7.10.72.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2772,7 +2772,7 @@ hb_font_set_scale (<em class="parameter"><code><a class="link" href="harfbuzz-hb
                    <em class="parameter"><code><span class="type">int</span> x_scale</code></em>,
                    <em class="parameter"><code><span class="type">int</span> y_scale</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.73.4"></a><h4>Parameters</h4>
+<a name="id-1.3.3.7.10.73.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2798,7 +2798,7 @@ hb_font_set_user_data (<em class="parameter"><code><a class="link" href="harfbuz
                        <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-destroy-func-t" title="hb_destroy_func_t ()"><span class="type">hb_destroy_func_t</span></a> destroy</code></em>,
                        <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="type">hb_bool_t</span></a> replace</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.74.4"></a><h4>Parameters</h4>
+<a name="id-1.3.3.7.10.74.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2813,7 +2813,7 @@ hb_font_set_user_data (<em class="parameter"><code><a class="link" href="harfbuz
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.74.5"></a><h4>Returns</h4>
+<a name="id-1.3.3.7.10.74.5"></a><h4>Returns</h4>
 <p></p>
 </div>
 <p class="since">Since 0.9.2</p>
@@ -2874,7 +2874,7 @@ hb_font_subtract_glyph_origin_for_direction
                                 <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-position-t" title="hb_position_t"><span class="type">hb_position_t</span></a> *x</code></em>,
                                 <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-position-t" title="hb_position_t"><span class="type">hb_position_t</span></a> *y</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.80.4"></a><h4>Parameters</h4>
+<a name="id-1.3.3.7.10.80.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2919,7 +2919,7 @@ hb_font_funcs_set_font_h_extents_func (<em class="parameter"><code><a class="lin
                                        <em class="parameter"><code><span class="type">void</span> *user_data</code></em>,
                                        <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-destroy-func-t" title="hb_destroy_func_t ()"><span class="type">hb_destroy_func_t</span></a> destroy</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.82.4"></a><h4>Parameters</h4>
+<a name="id-1.3.3.7.10.82.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2951,7 +2951,7 @@ hb_font_funcs_set_font_v_extents_func (<em class="parameter"><code><a class="lin
                                        <em class="parameter"><code><span class="type">void</span> *user_data</code></em>,
                                        <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-destroy-func-t" title="hb_destroy_func_t ()"><span class="type">hb_destroy_func_t</span></a> destroy</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.83.4"></a><h4>Parameters</h4>
+<a name="id-1.3.3.7.10.83.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2982,7 +2982,7 @@ hb_font_get_extents_for_direction (<em class="parameter"><code><a class="link" h
                                    <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-direction-t" title="enum hb_direction_t"><span class="type">hb_direction_t</span></a> direction</code></em>,
                                    <em class="parameter"><code><span class="type">hb_font_extents_t</span> *extents</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.84.4"></a><h4>Parameters</h4>
+<a name="id-1.3.3.7.10.84.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -3021,7 +3021,7 @@ hb_font_get_extents_for_direction (<em class="parameter"><code><a class="link" h
 hb_font_get_h_extents (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t"><span class="type">hb_font_t</span></a> *font</code></em>,
                        <em class="parameter"><code><span class="type">hb_font_extents_t</span> *extents</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.86.4"></a><h4>Parameters</h4>
+<a name="id-1.3.3.7.10.86.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -3043,7 +3043,7 @@ hb_font_get_h_extents (<em class="parameter"><code><a class="link" href="harfbuz
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.86.5"></a><h4>Returns</h4>
+<a name="id-1.3.3.7.10.86.5"></a><h4>Returns</h4>
 <p></p>
 </div>
 <p class="since">Since 1.1.3</p>
@@ -3055,7 +3055,7 @@ hb_font_get_h_extents (<em class="parameter"><code><a class="link" href="harfbuz
 hb_font_get_v_extents (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t"><span class="type">hb_font_t</span></a> *font</code></em>,
                        <em class="parameter"><code><span class="type">hb_font_extents_t</span> *extents</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.87.4"></a><h4>Parameters</h4>
+<a name="id-1.3.3.7.10.87.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -3077,7 +3077,7 @@ hb_font_get_v_extents (<em class="parameter"><code><a class="link" href="harfbuz
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.3.5.10.87.5"></a><h4>Returns</h4>
+<a name="id-1.3.3.7.10.87.5"></a><h4>Returns</h4>
 <p></p>
 </div>
 <p class="since">Since 1.1.3</p>
