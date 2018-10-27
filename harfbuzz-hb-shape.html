@@ -2,12 +2,12 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>HarfBuzz Manual: Shaping</title>
+<title>HarfBuzz Manual: hb-shape</title>
 <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
 <link rel="home" href="index.html" title="HarfBuzz Manual">
 <link rel="up" href="ch08.html" title="HarfBuzz API">
-<link rel="prev" href="hb-buffer-t.html" title="hb_buffer_t">
-<link rel="next" href="hb-unicode-funcs-t.html" title="hb_unicode_funcs_t">
+<link rel="prev" href="harfbuzz-hb-buffer.html" title="hb-buffer">
+<link rel="next" href="harfbuzz-hb-unicode.html" title="hb-unicode">
 <meta name="generator" content="GTK-Doc V1.20 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
@@ -15,25 +15,25 @@
 <table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="10"><tr valign="middle">
 <td width="100%" align="left" class="shortcuts">
 <a href="#" class="shortcut">Top</a><span id="nav_description"> <span class="dim">|</span> 
-                  <a href="#harfbuzz-Shaping.description" class="shortcut">Description</a></span><span id="nav_hierarchy"> <span class="dim">|</span> 
-                  <a href="#harfbuzz-Shaping.object-hierarchy" class="shortcut">Object Hierarchy</a></span>
+                  <a href="#harfbuzz-hb-shape.description" class="shortcut">Description</a></span><span id="nav_hierarchy"> <span class="dim">|</span> 
+                  <a href="#harfbuzz-hb-shape.object-hierarchy" class="shortcut">Object Hierarchy</a></span>
 </td>
 <td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
 <td><a accesskey="u" href="ch08.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
-<td><a accesskey="p" href="hb-buffer-t.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
-<td><a accesskey="n" href="hb-unicode-funcs-t.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+<td><a accesskey="p" href="harfbuzz-hb-buffer.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="harfbuzz-hb-unicode.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
 </tr></table>
 <div class="refentry">
-<a name="harfbuzz-Shaping"></a><div class="titlepage"></div>
+<a name="harfbuzz-hb-shape"></a><div class="titlepage"></div>
 <div class="refnamediv"><table width="100%"><tr>
 <td valign="top">
-<h2><span class="refentrytitle"><a name="harfbuzz-Shaping.top_of_page"></a>Shaping</span></h2>
-<p>Shaping — Conversion of text strings into positioned glyphs</p>
+<h2><span class="refentrytitle"><a name="harfbuzz-hb-shape.top_of_page"></a>hb-shape</span></h2>
+<p>hb-shape — Conversion of text strings into positioned glyphs</p>
 </td>
 <td class="gallery_image" valign="top" align="right"></td>
 </tr></table></div>
 <div class="refsect1">
-<a name="harfbuzz-Shaping.functions"></a><h2>Functions</h2>
+<a name="harfbuzz-hb-shape.functions"></a><h2>Functions</h2>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="functions_return">
@@ -42,10 +42,10 @@
 <tbody>
 <tr>
 <td class="function_type">
-<a class="link" href="harfbuzz-Common-types.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+<a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
 </td>
 <td class="function_name">
-<a class="link" href="harfbuzz-Shaping.html#hb-feature-from-string" title="hb_feature_from_string ()">hb_feature_from_string</a> <span class="c_punctuation">()</span>
+<a class="link" href="harfbuzz-hb-shape.html#hb-feature-from-string" title="hb_feature_from_string ()">hb_feature_from_string</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 <tr>
@@ -53,7 +53,7 @@
 <span class="returnvalue">void</span>
 </td>
 <td class="function_name">
-<a class="link" href="harfbuzz-Shaping.html#hb-feature-to-string" title="hb_feature_to_string ()">hb_feature_to_string</a> <span class="c_punctuation">()</span>
+<a class="link" href="harfbuzz-hb-shape.html#hb-feature-to-string" title="hb_feature_to_string ()">hb_feature_to_string</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 <tr>
@@ -61,29 +61,29 @@
 <span class="returnvalue">void</span>
 </td>
 <td class="function_name">
-<a class="link" href="harfbuzz-Shaping.html#hb-shape" title="hb_shape ()">hb_shape</a> <span class="c_punctuation">()</span>
+<a class="link" href="harfbuzz-hb-shape.html#hb-shape" title="hb_shape ()">hb_shape</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 <tr>
 <td class="function_type">
-<a class="link" href="harfbuzz-Common-types.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+<a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
 </td>
 <td class="function_name">
-<a class="link" href="harfbuzz-Shaping.html#hb-shape-full" title="hb_shape_full ()">hb_shape_full</a> <span class="c_punctuation">()</span>
+<a class="link" href="harfbuzz-hb-shape.html#hb-shape-full" title="hb_shape_full ()">hb_shape_full</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 <tr>
 <td class="function_type">const <span class="returnvalue">char</span> **
 </td>
 <td class="function_name">
-<a class="link" href="harfbuzz-Shaping.html#hb-shape-list-shapers" title="hb_shape_list_shapers ()">hb_shape_list_shapers</a> <span class="c_punctuation">()</span>
+<a class="link" href="harfbuzz-hb-shape.html#hb-shape-list-shapers" title="hb_shape_list_shapers ()">hb_shape_list_shapers</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 </tbody>
 </table></div>
 </div>
 <a name="hb-feature-t"></a><div class="refsect1">
-<a name="harfbuzz-Shaping.other"></a><h2>Types and Values</h2>
+<a name="harfbuzz-hb-shape.other"></a><h2>Types and Values</h2>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="name">
@@ -92,46 +92,46 @@
 <tbody>
 <tr>
 <td class="define_keyword">#define</td>
-<td class="function_name"><a class="link" href="harfbuzz-Shaping.html#HB-FEATURE-GLOBAL-END:CAPS" title="HB_FEATURE_GLOBAL_END">HB_FEATURE_GLOBAL_END</a></td>
+<td class="function_name"><a class="link" href="harfbuzz-hb-shape.html#HB-FEATURE-GLOBAL-END:CAPS" title="HB_FEATURE_GLOBAL_END">HB_FEATURE_GLOBAL_END</a></td>
 </tr>
 <tr>
 <td class="define_keyword">#define</td>
-<td class="function_name"><a class="link" href="harfbuzz-Shaping.html#HB-FEATURE-GLOBAL-START:CAPS" title="HB_FEATURE_GLOBAL_START">HB_FEATURE_GLOBAL_START</a></td>
+<td class="function_name"><a class="link" href="harfbuzz-hb-shape.html#HB-FEATURE-GLOBAL-START:CAPS" title="HB_FEATURE_GLOBAL_START">HB_FEATURE_GLOBAL_START</a></td>
 </tr>
 <tr>
 <td class="datatype_keyword"> </td>
-<td class="function_name"><a class="link" href="harfbuzz-Shaping.html#hb-feature-t-struct" title="hb_feature_t">hb_feature_t</a></td>
+<td class="function_name"><a class="link" href="harfbuzz-hb-shape.html#hb-feature-t-struct" title="hb_feature_t">hb_feature_t</a></td>
 </tr>
 </tbody>
 </table></div>
 </div>
 <div class="refsect1">
-<a name="harfbuzz-Shaping.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<a name="harfbuzz-hb-shape.object-hierarchy"></a><h2>Object Hierarchy</h2>
 <pre class="screen">    GBoxed
     <span class="lineart">╰──</span> hb_feature_t
 </pre>
 </div>
 <div class="refsect1">
-<a name="harfbuzz-Shaping.includes"></a><h2>Includes</h2>
+<a name="harfbuzz-hb-shape.includes"></a><h2>Includes</h2>
 <pre class="synopsis">#include &lt;hb.h&gt;
 </pre>
 </div>
 <div class="refsect1">
-<a name="harfbuzz-Shaping.description"></a><h2>Description</h2>
+<a name="harfbuzz-hb-shape.description"></a><h2>Description</h2>
 <p>Shaping is the central operation of HarfBuzz. Shaping operates on buffers,
 which are sequences of Unicode characters that use the same font and have
 the same text direction, script, and language. After shaping the buffer
 contains the output glyphs and their positions.</p>
 </div>
 <div class="refsect1">
-<a name="harfbuzz-Shaping.functions_details"></a><h2>Functions</h2>
+<a name="harfbuzz-hb-shape.functions_details"></a><h2>Functions</h2>
 <div class="refsect2">
 <a name="hb-feature-from-string"></a><h3>hb_feature_from_string ()</h3>
-<pre class="programlisting"><a class="link" href="harfbuzz-Common-types.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
 hb_feature_from_string (<em class="parameter"><code>const <span class="type">char</span> *str</code></em>,
                         <em class="parameter"><code><span class="type">int</span> len</code></em>,
-                        <em class="parameter"><code><a class="link" href="harfbuzz-Shaping.html#hb-feature-t"><span class="type">hb_feature_t</span></a> *feature</code></em>);</pre>
-<p>Parses a string into a <a class="link" href="harfbuzz-Shaping.html#hb-feature-t"><span class="type">hb_feature_t</span></a>.</p>
+                        <em class="parameter"><code><a class="link" href="harfbuzz-hb-shape.html#hb-feature-t"><span class="type">hb_feature_t</span></a> *feature</code></em>);</pre>
+<p>Parses a string into a <a class="link" href="harfbuzz-hb-shape.html#hb-feature-t"><span class="type">hb_feature_t</span></a>.</p>
 <p>TODO: document the syntax here.</p>
 <div class="refsect3">
 <a name="id-1.3.3.7.9.2.6"></a><h4>Parameters</h4>
@@ -155,7 +155,7 @@ hb_feature_from_string (<em class="parameter"><code>const <span class="type">cha
 </tr>
 <tr>
 <td class="parameter_name"><p>feature</p></td>
-<td class="parameter_description"><p> the <a class="link" href="harfbuzz-Shaping.html#hb-feature-t"><span class="type">hb_feature_t</span></a> to initialize with the parsed values. </p></td>
+<td class="parameter_description"><p> the <a class="link" href="harfbuzz-hb-shape.html#hb-feature-t"><span class="type">hb_feature_t</span></a> to initialize with the parsed values. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
 </tr>
 </tbody>
@@ -173,11 +173,11 @@ is successfully parsed, <code class="literal">false</code> otherwise.</p>
 <div class="refsect2">
 <a name="hb-feature-to-string"></a><h3>hb_feature_to_string ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
-hb_feature_to_string (<em class="parameter"><code><a class="link" href="harfbuzz-Shaping.html#hb-feature-t"><span class="type">hb_feature_t</span></a> *feature</code></em>,
+hb_feature_to_string (<em class="parameter"><code><a class="link" href="harfbuzz-hb-shape.html#hb-feature-t"><span class="type">hb_feature_t</span></a> *feature</code></em>,
                       <em class="parameter"><code><span class="type">char</span> *buf</code></em>,
                       <em class="parameter"><code>unsigned <span class="type">int</span> size</code></em>);</pre>
-<p>Converts a <a class="link" href="harfbuzz-Shaping.html#hb-feature-t"><span class="type">hb_feature_t</span></a> into a <code class="literal">NULL</code>-terminated string in the format
-understood by <a class="link" href="harfbuzz-Shaping.html#hb-feature-from-string" title="hb_feature_from_string ()"><code class="function">hb_feature_from_string()</code></a>. The client in responsible for
+<p>Converts a <a class="link" href="harfbuzz-hb-shape.html#hb-feature-t"><span class="type">hb_feature_t</span></a> into a <code class="literal">NULL</code>-terminated string in the format
+understood by <a class="link" href="harfbuzz-hb-shape.html#hb-feature-from-string" title="hb_feature_from_string ()"><code class="function">hb_feature_from_string()</code></a>. The client in responsible for
 allocating big enough size for <em class="parameter"><code>buf</code></em>
 , 128 bytes is more than enough.</p>
 <div class="refsect3">
@@ -191,7 +191,7 @@ allocating big enough size for <em class="parameter"><code>buf</code></em>
 <tbody>
 <tr>
 <td class="parameter_name"><p>feature</p></td>
-<td class="parameter_description"><p>an <a class="link" href="harfbuzz-Shaping.html#hb-feature-t"><span class="type">hb_feature_t</span></a> to convert</p></td>
+<td class="parameter_description"><p>an <a class="link" href="harfbuzz-hb-shape.html#hb-feature-t"><span class="type">hb_feature_t</span></a> to convert</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -214,9 +214,9 @@ allocating big enough size for <em class="parameter"><code>buf</code></em>
 <div class="refsect2">
 <a name="hb-shape"></a><h3>hb_shape ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
-hb_shape (<em class="parameter"><code><a class="link" href="hb-font-t.html" title="hb_font_t"><span class="type">hb_font_t</span></a> *font</code></em>,
-          <em class="parameter"><code><a class="link" href="hb-buffer-t.html" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a> *buffer</code></em>,
-          <em class="parameter"><code>const <a class="link" href="harfbuzz-Shaping.html#hb-feature-t"><span class="type">hb_feature_t</span></a> *features</code></em>,
+hb_shape (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t"><span class="type">hb_font_t</span></a> *font</code></em>,
+          <em class="parameter"><code><a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t"><span class="type">hb_buffer_t</span></a> *buffer</code></em>,
+          <em class="parameter"><code>const <a class="link" href="harfbuzz-hb-shape.html#hb-feature-t"><span class="type">hb_feature_t</span></a> *features</code></em>,
           <em class="parameter"><code>unsigned <span class="type">int</span> num_features</code></em>);</pre>
 <p>Shapes <em class="parameter"><code>buffer</code></em>
  using <em class="parameter"><code>font</code></em>
@@ -235,18 +235,18 @@ features applied during shaping.</p>
 <tbody>
 <tr>
 <td class="parameter_name"><p>font</p></td>
-<td class="parameter_description"><p>an <a class="link" href="hb-font-t.html" title="hb_font_t"><span class="type">hb_font_t</span></a> to use for shaping</p></td>
+<td class="parameter_description"><p>an <a class="link" href="harfbuzz-hb-font.html#hb-font-t"><span class="type">hb_font_t</span></a> to use for shaping</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>buffer</p></td>
-<td class="parameter_description"><p>an <a class="link" href="hb-buffer-t.html" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a> to shape</p></td>
+<td class="parameter_description"><p>an <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t"><span class="type">hb_buffer_t</span></a> to shape</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>features</p></td>
 <td class="parameter_description"><p> an array of user
-specified <a class="link" href="harfbuzz-Shaping.html#hb-feature-t"><span class="type">hb_feature_t</span></a> or <code class="literal">NULL</code>. </p></td>
+specified <a class="link" href="harfbuzz-hb-shape.html#hb-feature-t"><span class="type">hb_feature_t</span></a> or <code class="literal">NULL</code>. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=num_features][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
 </tr>
 <tr>
@@ -263,13 +263,13 @@ array</p></td>
 <hr>
 <div class="refsect2">
 <a name="hb-shape-full"></a><h3>hb_shape_full ()</h3>
-<pre class="programlisting"><a class="link" href="harfbuzz-Common-types.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
-hb_shape_full (<em class="parameter"><code><a class="link" href="hb-font-t.html" title="hb_font_t"><span class="type">hb_font_t</span></a> *font</code></em>,
-               <em class="parameter"><code><a class="link" href="hb-buffer-t.html" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a> *buffer</code></em>,
-               <em class="parameter"><code>const <a class="link" href="harfbuzz-Shaping.html#hb-feature-t"><span class="type">hb_feature_t</span></a> *features</code></em>,
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+hb_shape_full (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t"><span class="type">hb_font_t</span></a> *font</code></em>,
+               <em class="parameter"><code><a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t"><span class="type">hb_buffer_t</span></a> *buffer</code></em>,
+               <em class="parameter"><code>const <a class="link" href="harfbuzz-hb-shape.html#hb-feature-t"><span class="type">hb_feature_t</span></a> *features</code></em>,
                <em class="parameter"><code>unsigned <span class="type">int</span> num_features</code></em>,
                <em class="parameter"><code>const <span class="type">char</span> * const *shaper_list</code></em>);</pre>
-<p>See <a class="link" href="harfbuzz-Shaping.html#hb-shape" title="hb_shape ()"><code class="function">hb_shape()</code></a> for details. If <em class="parameter"><code>shaper_list</code></em>
+<p>See <a class="link" href="harfbuzz-hb-shape.html#hb-shape" title="hb_shape ()"><code class="function">hb_shape()</code></a> for details. If <em class="parameter"><code>shaper_list</code></em>
  is not <code class="literal">NULL</code>, the specified
 shapers will be used in the given order, otherwise the default shapers list
 will be used.</p>
@@ -284,18 +284,18 @@ will be used.</p>
 <tbody>
 <tr>
 <td class="parameter_name"><p>font</p></td>
-<td class="parameter_description"><p>an <a class="link" href="hb-font-t.html" title="hb_font_t"><span class="type">hb_font_t</span></a> to use for shaping</p></td>
+<td class="parameter_description"><p>an <a class="link" href="harfbuzz-hb-font.html#hb-font-t"><span class="type">hb_font_t</span></a> to use for shaping</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>buffer</p></td>
-<td class="parameter_description"><p>an <a class="link" href="hb-buffer-t.html" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a> to shape</p></td>
+<td class="parameter_description"><p>an <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t"><span class="type">hb_buffer_t</span></a> to shape</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>features</p></td>
 <td class="parameter_description"><p> an array of user
-specified <a class="link" href="harfbuzz-Shaping.html#hb-feature-t"><span class="type">hb_feature_t</span></a> or <code class="literal">NULL</code>. </p></td>
+specified <a class="link" href="harfbuzz-hb-shape.html#hb-feature-t"><span class="type">hb_feature_t</span></a> or <code class="literal">NULL</code>. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=num_features][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
 </tr>
 <tr>
@@ -336,7 +336,7 @@ constant strings. </p>
 </div>
 </div>
 <div class="refsect1">
-<a name="harfbuzz-Shaping.other_details"></a><h2>Types and Values</h2>
+<a name="harfbuzz-hb-shape.other_details"></a><h2>Types and Values</h2>
 <div class="refsect2">
 <a name="HB-FEATURE-GLOBAL-END:CAPS"></a><h3>HB_FEATURE_GLOBAL_END</h3>
 <pre class="programlisting">#define HB_FEATURE_GLOBAL_END ((unsigned int) -1)
