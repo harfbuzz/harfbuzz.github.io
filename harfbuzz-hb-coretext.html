@@ -7,7 +7,7 @@
 <link rel="home" href="index.html" title="HarfBuzz Manual">
 <link rel="up" href="ch08.html" title="HarfBuzz API">
 <link rel="prev" href="harfbuzz-hb-uniscribe.html" title="hb-uniscribe">
-<link rel="next" href="harfbuzz-hb-gobject.html" title="hb-gobject">
+<link rel="next" href="harfbuzz-hb-deprecated.html" title="hb-deprecated">
 <meta name="generator" content="GTK-Doc V1.20 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
@@ -21,14 +21,14 @@
 <td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
 <td><a accesskey="u" href="ch08.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
 <td><a accesskey="p" href="harfbuzz-hb-uniscribe.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
-<td><a accesskey="n" href="harfbuzz-hb-gobject.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+<td><a accesskey="n" href="harfbuzz-hb-deprecated.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
 </tr></table>
 <div class="refentry">
 <a name="harfbuzz-hb-coretext"></a><div class="titlepage"></div>
 <div class="refnamediv"><table width="100%"><tr>
 <td valign="top">
 <h2><span class="refentrytitle"><a name="harfbuzz-hb-coretext.top_of_page"></a>hb-coretext</span></h2>
-<p>hb-coretext</p>
+<p>hb-coretext — CoreText integration</p>
 </td>
 <td class="gallery_image" valign="top" align="right"></td>
 </tr></table></div>
@@ -42,7 +42,7 @@
 <tbody>
 <tr>
 <td class="function_type">
-<a class="link" href="harfbuzz-hb-face.html#hb-face-t"><span class="returnvalue">hb_face_t</span></a> *
+<a class="link" href="hb-face-t.html" title="hb_face_t"><span class="returnvalue">hb_face_t</span></a> *
 </td>
 <td class="function_name">
 <a class="link" href="harfbuzz-hb-coretext.html#hb-coretext-face-create" title="hb_coretext_face_create ()">hb_coretext_face_create</a> <span class="c_punctuation">()</span>
@@ -50,7 +50,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<a class="link" href="harfbuzz-hb-font.html#hb-font-t"><span class="returnvalue">hb_font_t</span></a> *
+<a class="link" href="hb-font-t.html" title="hb_font_t"><span class="returnvalue">hb_font_t</span></a> *
 </td>
 <td class="function_name">
 <a class="link" href="harfbuzz-hb-coretext.html#hb-coretext-font-create" title="hb_coretext_font_create ()">hb_coretext_font_create</a> <span class="c_punctuation">()</span>
@@ -104,32 +104,38 @@
 </pre>
 </div>
 <div class="refsect1">
+<a name="harfbuzz-hb-coretext.includes"></a><h2>Includes</h2>
+<pre class="synopsis">#include &lt;hb-coretext.h&gt;
+</pre>
+</div>
+<div class="refsect1">
 <a name="harfbuzz-hb-coretext.description"></a><h2>Description</h2>
+<p>Functions for using HarfBuzz with the CoreText fonts.</p>
 </div>
 <div class="refsect1">
 <a name="harfbuzz-hb-coretext.functions_details"></a><h2>Functions</h2>
 <div class="refsect2">
 <a name="hb-coretext-face-create"></a><h3>hb_coretext_face_create ()</h3>
-<pre class="programlisting"><a class="link" href="harfbuzz-hb-face.html#hb-face-t"><span class="returnvalue">hb_face_t</span></a> *
+<pre class="programlisting"><a class="link" href="hb-face-t.html" title="hb_face_t"><span class="returnvalue">hb_face_t</span></a> *
 hb_coretext_face_create (<em class="parameter"><code><span class="type">CGFontRef</span> cg_font</code></em>);</pre>
 </div>
 <hr>
 <div class="refsect2">
 <a name="hb-coretext-font-create"></a><h3>hb_coretext_font_create ()</h3>
-<pre class="programlisting"><a class="link" href="harfbuzz-hb-font.html#hb-font-t"><span class="returnvalue">hb_font_t</span></a> *
+<pre class="programlisting"><a class="link" href="hb-font-t.html" title="hb_font_t"><span class="returnvalue">hb_font_t</span></a> *
 hb_coretext_font_create (<em class="parameter"><code><span class="type">CTFontRef</span> ct_font</code></em>);</pre>
 </div>
 <hr>
 <div class="refsect2">
 <a name="hb-coretext-face-get-cg-font"></a><h3>hb_coretext_face_get_cg_font ()</h3>
 <pre class="programlisting"><span class="returnvalue">CGFontRef</span>
-hb_coretext_face_get_cg_font (<em class="parameter"><code><a class="link" href="harfbuzz-hb-face.html#hb-face-t"><span class="type">hb_face_t</span></a> *face</code></em>);</pre>
+hb_coretext_face_get_cg_font (<em class="parameter"><code><a class="link" href="hb-face-t.html" title="hb_face_t"><span class="type">hb_face_t</span></a> *face</code></em>);</pre>
 </div>
 <hr>
 <div class="refsect2">
 <a name="hb-coretext-font-get-ct-font"></a><h3>hb_coretext_font_get_ct_font ()</h3>
 <pre class="programlisting"><span class="returnvalue">CTFontRef</span>
-hb_coretext_font_get_ct_font (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t"><span class="type">hb_font_t</span></a> *font</code></em>);</pre>
+hb_coretext_font_get_ct_font (<em class="parameter"><code><a class="link" href="hb-font-t.html" title="hb_font_t"><span class="type">hb_font_t</span></a> *font</code></em>);</pre>
 </div>
 </div>
 <div class="refsect1">
