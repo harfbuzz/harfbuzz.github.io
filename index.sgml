@@ -467,6 +467,7 @@
 <ANCHOR id="HB-OT-LAYOUT-NO-FEATURE-INDEX:CAPS" href="harfbuzz/harfbuzz-hb-ot-layout.html#HB-OT-LAYOUT-NO-FEATURE-INDEX:CAPS">
 <ANCHOR id="HB-OT-LAYOUT-NO-SCRIPT-INDEX:CAPS" href="harfbuzz/harfbuzz-hb-ot-layout.html#HB-OT-LAYOUT-NO-SCRIPT-INDEX:CAPS">
 <ANCHOR id="HB-OT-LAYOUT-NO-VARIATIONS-INDEX:CAPS" href="harfbuzz/harfbuzz-hb-ot-layout.html#HB-OT-LAYOUT-NO-VARIATIONS-INDEX:CAPS">
+<ANCHOR id="HB-OT-TAG-BASE:CAPS" href="harfbuzz/harfbuzz-hb-ot-layout.html#HB-OT-TAG-BASE:CAPS">
 <ANCHOR id="HB-OT-TAG-GDEF:CAPS" href="harfbuzz/harfbuzz-hb-ot-layout.html#HB-OT-TAG-GDEF:CAPS">
 <ANCHOR id="HB-OT-TAG-GPOS:CAPS" href="harfbuzz/harfbuzz-hb-ot-layout.html#HB-OT-TAG-GPOS:CAPS">
 <ANCHOR id="HB-OT-TAG-GSUB:CAPS" href="harfbuzz/harfbuzz-hb-ot-layout.html#HB-OT-TAG-GSUB:CAPS">
@@ -631,6 +632,7 @@
 <ANCHOR id="HB-GOBJECT-TYPE-GLYPH-FLAGS:CAPS" href="harfbuzz/harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-GLYPH-FLAGS:CAPS">
 <ANCHOR id="HB-GOBJECT-TYPE-MAP:CAPS" href="harfbuzz/harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-MAP:CAPS">
 <ANCHOR id="HB-GOBJECT-TYPE-MEMORY-MODE:CAPS" href="harfbuzz/harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-MEMORY-MODE:CAPS">
+<ANCHOR id="HB-GOBJECT-TYPE-OT-COLOR-PALETTE-FLAGS:CAPS" href="harfbuzz/harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-OT-COLOR-PALETTE-FLAGS:CAPS">
 <ANCHOR id="HB-GOBJECT-TYPE-OT-LAYOUT-GLYPH-CLASS:CAPS" href="harfbuzz/harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-OT-LAYOUT-GLYPH-CLASS:CAPS">
 <ANCHOR id="HB-GOBJECT-TYPE-OT-MATH-CONSTANT:CAPS" href="harfbuzz/harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-OT-MATH-CONSTANT:CAPS">
 <ANCHOR id="HB-GOBJECT-TYPE-OT-MATH-GLYPH-PART:CAPS" href="harfbuzz/harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-OT-MATH-GLYPH-PART:CAPS">
@@ -663,6 +665,7 @@
 <ANCHOR id="hb-gobject-glyph-flags-get-type" href="harfbuzz/harfbuzz-hb-gobject.html#hb-gobject-glyph-flags-get-type">
 <ANCHOR id="hb-gobject-map-get-type" href="harfbuzz/harfbuzz-hb-gobject.html#hb-gobject-map-get-type">
 <ANCHOR id="hb-gobject-memory-mode-get-type" href="harfbuzz/harfbuzz-hb-gobject.html#hb-gobject-memory-mode-get-type">
+<ANCHOR id="hb-gobject-ot-color-palette-flags-get-type" href="harfbuzz/harfbuzz-hb-gobject.html#hb-gobject-ot-color-palette-flags-get-type">
 <ANCHOR id="hb-gobject-ot-layout-glyph-class-get-type" href="harfbuzz/harfbuzz-hb-gobject.html#hb-gobject-ot-layout-glyph-class-get-type">
 <ANCHOR id="hb-gobject-ot-math-constant-get-type" href="harfbuzz/harfbuzz-hb-gobject.html#hb-gobject-ot-math-constant-get-type">
 <ANCHOR id="hb-gobject-ot-math-glyph-part-get-type" href="harfbuzz/harfbuzz-hb-gobject.html#hb-gobject-ot-math-glyph-part-get-type">

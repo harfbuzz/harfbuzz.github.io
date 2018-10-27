@@ -7,7 +7,7 @@
 <link rel="home" href="index.html" title="HarfBuzz Manual">
 <link rel="up" href="pt02.html" title="Part II. Reference manual">
 <link rel="prev" href="object-tree.html" title="Object Hierarchy">
-<link rel="next" href="api-index-0-9-2.html" title="Index of new symbols in 0.9.2">
+<link rel="next" href="deprecated-api-index.html" title="Index of deprecated API">
 <meta name="generator" content="GTK-Doc V1.20 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
@@ -29,6 +29,8 @@
                      <span class="dim">|</span> 
                   <a class="shortcut" href="#idxM">M</a>
                      <span class="dim">|</span> 
+                  <a class="shortcut" href="#idxN">N</a>
+                     <span class="dim">|</span> 
                   <a class="shortcut" href="#idxO">O</a>
                      <span class="dim">|</span> 
                   <a class="shortcut" href="#idxP">P</a>
@@ -45,7 +47,7 @@
 <td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
 <td><a accesskey="u" href="pt02.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
 <td><a accesskey="p" href="object-tree.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
-<td><a accesskey="n" href="api-index-0-9-2.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+<td><a accesskey="n" href="deprecated-api-index.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
 </tr></table>
 <div class="index">
 <div class="titlepage"><div><div><h2 class="title">
@@ -374,6 +376,30 @@
 <a name="idxC"></a><h3 class="title">C</h3>
 <dt>
 <a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t">hb_codepoint_t</a>, typedef in <a class="link" href="harfbuzz-hb-common.html" title="hb-common">hb-common</a>
+</dt>
+<dd></dd>
+<dt>
+HB_COLOR, macro in hb-ot-color
+</dt>
+<dd></dd>
+<dt>
+hb_color_get_alpha, macro in hb-ot-color
+</dt>
+<dd></dd>
+<dt>
+hb_color_get_blue, macro in hb-ot-color
+</dt>
+<dd></dd>
+<dt>
+hb_color_get_green, macro in hb-ot-color
+</dt>
+<dd></dd>
+<dt>
+hb_color_get_red, macro in hb-ot-color
+</dt>
+<dd></dd>
+<dt>
+hb_color_t, typedef in hb-ot-color
 </dt>
 <dd></dd>
 <dt>
@@ -1116,6 +1142,10 @@
 </dt>
 <dd></dd>
 <dt>
+<a class="link" href="harfbuzz-hb-gobject.html#hb-gobject-ot-color-palette-flags-get-type" title="hb_gobject_ot_color_palette_flags_get_type ()">hb_gobject_ot_color_palette_flags_get_type</a>, function in <a class="link" href="harfbuzz-hb-gobject.html" title="hb-gobject">hb-gobject</a>
+</dt>
+<dd></dd>
+<dt>
 <a class="link" href="harfbuzz-hb-gobject.html#hb-gobject-ot-layout-glyph-class-get-type" title="hb_gobject_ot_layout_glyph_class_get_type ()">hb_gobject_ot_layout_glyph_class_get_type</a>, function in <a class="link" href="harfbuzz-hb-gobject.html" title="hb-gobject">hb-gobject</a>
 </dt>
 <dd></dd>
@@ -1225,6 +1255,10 @@
 <dd></dd>
 <dt>
 <a class="link" href="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-MEMORY-MODE:CAPS" title="HB_GOBJECT_TYPE_MEMORY_MODE">HB_GOBJECT_TYPE_MEMORY_MODE</a>, macro in <a class="link" href="harfbuzz-hb-gobject.html" title="hb-gobject">hb-gobject</a>
+</dt>
+<dd></dd>
+<dt>
+<a class="link" href="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-OT-COLOR-PALETTE-FLAGS:CAPS" title="HB_GOBJECT_TYPE_OT_COLOR_PALETTE_FLAGS">HB_GOBJECT_TYPE_OT_COLOR_PALETTE_FLAGS</a>, macro in <a class="link" href="harfbuzz-hb-gobject.html" title="hb-gobject">hb-gobject</a>
 </dt>
 <dd></dd>
 <dt>
@@ -1412,6 +1446,15 @@ HB_MAP_VALUE_INVALID, macro in hb-map
 <dd></dd>
 <dt>
 <a class="link" href="harfbuzz-hb-blob.html#hb-memory-mode-t" title="enum hb_memory_mode_t">hb_memory_mode_t</a>, enum in <a class="link" href="harfbuzz-hb-blob.html" title="hb-blob">hb-blob</a>
+</dt>
+<dd></dd>
+<a name="idxN"></a><h3 class="title">N</h3>
+<dt>
+HB_NAME_ID_INVALID, macro in hb-ot-name
+</dt>
+<dd></dd>
+<dt>
+hb_name_id_t, typedef in hb-ot-name
 </dt>
 <dd></dd>
 <a name="idxO"></a><h3 class="title">O</h3>
@@ -1672,6 +1715,22 @@ hb_ot_color_palette_get_name_id, function in hb-ot-color
 </dt>
 <dd></dd>
 <dt>
+hb_ot_name_get_names, function in hb-ot-name
+</dt>
+<dd></dd>
+<dt>
+hb_ot_name_get_utf16, function in hb-ot-name
+</dt>
+<dd></dd>
+<dt>
+hb_ot_name_get_utf32, function in hb-ot-name
+</dt>
+<dd></dd>
+<dt>
+hb_ot_name_get_utf8, function in hb-ot-name
+</dt>
+<dd></dd>
+<dt>
 <a class="link" href="harfbuzz-hb-ot-shape.html#hb-ot-shape-glyphs-closure" title="hb_ot_shape_glyphs_closure ()">hb_ot_shape_glyphs_closure</a>, function in <a class="link" href="harfbuzz-hb-ot-shape.html" title="hb-ot-shape">hb-ot-shape</a>
 </dt>
 <dd></dd>
@@ -1685,6 +1744,10 @@ hb_ot_color_palette_get_name_id, function in hb-ot-color
 <dd></dd>
 <dt>
 <a class="link" href="harfbuzz-hb-ot-tag.html#hb-ot-tags-to-script-and-language" title="hb_ot_tags_to_script_and_language ()">hb_ot_tags_to_script_and_language</a>, function in <a class="link" href="harfbuzz-hb-ot-tag.html" title="hb-ot-tag">hb-ot-tag</a>
+</dt>
+<dd></dd>
+<dt>
+<a class="link" href="harfbuzz-hb-ot-layout.html#HB-OT-TAG-BASE:CAPS" title="HB_OT_TAG_BASE">HB_OT_TAG_BASE</a>, macro in <a class="link" href="harfbuzz-hb-ot-layout.html" title="hb-ot-layout">hb-ot-layout</a>
 </dt>
 <dd></dd>
 <dt>
@@ -2226,11 +2289,11 @@ HB_OT_VAR_NO_AXIS_INDEX, macro in hb-ot-var
 </dt>
 <dd></dd>
 <dt>
-<a class="link" href="harfbuzz-hb-version.html#HB-VERSION-STRING:CAPS" title="HB_VERSION_STRING">HB_VERSION_STRING</a>, macro in <a class="link" href="harfbuzz-hb-version.html" title="hb-version">hb-version</a>
+<a class="link" href="harfbuzz-hb-version.html#hb-version-string" title="hb_version_string ()">hb_version_string</a>, function in <a class="link" href="harfbuzz-hb-version.html" title="hb-version">hb-version</a>
 </dt>
 <dd></dd>
 <dt>
-<a class="link" href="harfbuzz-hb-version.html#hb-version-string" title="hb_version_string ()">hb_version_string</a>, function in <a class="link" href="harfbuzz-hb-version.html" title="hb-version">hb-version</a>
+<a class="link" href="harfbuzz-hb-version.html#HB-VERSION-STRING:CAPS" title="HB_VERSION_STRING">HB_VERSION_STRING</a>, macro in <a class="link" href="harfbuzz-hb-version.html" title="hb-version">hb-version</a>
 </dt>
 <dd></dd>
 </div>
