@@ -52,12 +52,15 @@
         <sub name="hb-version" link="harfbuzz-hb-version.html"/>
         <sub name="hb-deprecated" link="harfbuzz-hb-deprecated.html"/>
         <sub name="hb-set" link="harfbuzz-hb-set.html"/>
+        <sub name="hb-map" link="harfbuzz-hb-map.html"/>
         <sub name="hb-ot" link="harfbuzz-hb-ot.html"/>
+        <sub name="hb-ot-font" link="harfbuzz-hb-ot-font.html"/>
         <sub name="hb-ot-layout" link="harfbuzz-hb-ot-layout.html"/>
         <sub name="hb-ot-tag" link="harfbuzz-hb-ot-tag.html"/>
-        <sub name="hb-ot-font" link="harfbuzz-hb-ot-font.html"/>
-        <sub name="hb-ot-shape" link="harfbuzz-hb-ot-shape.html"/>
+        <sub name="hb-ot-color" link="harfbuzz-hb-ot-color.html"/>
+        <sub name="hb-ot-name" link="harfbuzz-hb-ot-name.html"/>
         <sub name="hb-ot-math" link="harfbuzz-hb-ot-math.html"/>
+        <sub name="hb-ot-shape" link="harfbuzz-hb-ot-shape.html"/>
         <sub name="hb-shape-plan" link="harfbuzz-hb-shape-plan.html"/>
         <sub name="hb-glib" link="harfbuzz-hb-glib.html"/>
         <sub name="hb-icu" link="harfbuzz-hb-icu.html"/>
@@ -440,6 +443,23 @@
     <keyword type="function" name="hb_set_symmetric_difference ()" link="harfbuzz-hb-set.html#hb-set-symmetric-difference" since="0.9.2"/>
     <keyword type="function" name="hb_set_union ()" link="harfbuzz-hb-set.html#hb-set-union" since="0.9.2"/>
     <keyword type="typedef" name="hb_set_t" link="harfbuzz-hb-set.html#hb-set-t"/>
+    <keyword type="macro" name="HB_MAP_VALUE_INVALID" link="harfbuzz-hb-map.html#HB-MAP-VALUE-INVALID:CAPS"/>
+    <keyword type="function" name="hb_map_allocation_successful ()" link="harfbuzz-hb-map.html#hb-map-allocation-successful" since="1.7.7"/>
+    <keyword type="function" name="hb_map_clear ()" link="harfbuzz-hb-map.html#hb-map-clear" since="1.7.7"/>
+    <keyword type="function" name="hb_map_create ()" link="harfbuzz-hb-map.html#hb-map-create"/>
+    <keyword type="function" name="hb_map_del ()" link="harfbuzz-hb-map.html#hb-map-del" since="1.7.7"/>
+    <keyword type="function" name="hb_map_destroy ()" link="harfbuzz-hb-map.html#hb-map-destroy" since="1.7.7"/>
+    <keyword type="function" name="hb_map_get ()" link="harfbuzz-hb-map.html#hb-map-get" since="1.7.7"/>
+    <keyword type="function" name="hb_map_get_empty ()" link="harfbuzz-hb-map.html#hb-map-get-empty" since="1.7.7"/>
+    <keyword type="function" name="hb_map_get_population ()" link="harfbuzz-hb-map.html#hb-map-get-population" since="1.7.7"/>
+    <keyword type="function" name="hb_map_get_user_data ()" link="harfbuzz-hb-map.html#hb-map-get-user-data" since="1.7.7"/>
+    <keyword type="function" name="hb_map_has ()" link="harfbuzz-hb-map.html#hb-map-has" since="1.7.7"/>
+    <keyword type="function" name="hb_map_is_empty ()" link="harfbuzz-hb-map.html#hb-map-is-empty" since="1.7.7"/>
+    <keyword type="function" name="hb_map_reference ()" link="harfbuzz-hb-map.html#hb-map-reference" since="1.7.7"/>
+    <keyword type="function" name="hb_map_set ()" link="harfbuzz-hb-map.html#hb-map-set" since="1.7.7"/>
+    <keyword type="function" name="hb_map_set_user_data ()" link="harfbuzz-hb-map.html#hb-map-set-user-data" since="1.7.7"/>
+    <keyword type="typedef" name="hb_map_t" link="harfbuzz-hb-map.html#hb-map-t"/>
+    <keyword type="function" name="hb_ot_font_set_funcs ()" link="harfbuzz-hb-ot-font.html#hb-ot-font-set-funcs" since="0.9.28"/>
     <keyword type="function" name="hb_ot_layout_collect_lookups ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-collect-lookups" since="0.9.8"/>
     <keyword type="function" name="hb_ot_layout_collect_features ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-collect-features" since="1.8.5"/>
     <keyword type="function" name="hb_ot_layout_feature_get_characters ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-feature-get-characters" since="2.0.0"/>
@@ -490,8 +510,26 @@
     <keyword type="macro" name="HB_OT_MAX_TAGS_PER_SCRIPT" link="harfbuzz-hb-ot-tag.html#HB-OT-MAX-TAGS-PER-SCRIPT:CAPS" since="2.0.0"/>
     <keyword type="macro" name="HB_OT_TAG_DEFAULT_LANGUAGE" link="harfbuzz-hb-ot-tag.html#HB-OT-TAG-DEFAULT-LANGUAGE:CAPS"/>
     <keyword type="macro" name="HB_OT_TAG_DEFAULT_SCRIPT" link="harfbuzz-hb-ot-tag.html#HB-OT-TAG-DEFAULT-SCRIPT:CAPS"/>
-    <keyword type="function" name="hb_ot_font_set_funcs ()" link="harfbuzz-hb-ot-font.html#hb-ot-font-set-funcs" since="0.9.28"/>
-    <keyword type="function" name="hb_ot_shape_glyphs_closure ()" link="harfbuzz-hb-ot-shape.html#hb-ot-shape-glyphs-closure" since="0.9.2"/>
+    <keyword type="macro" name="HB_COLOR()" link="harfbuzz-hb-ot-color.html#HB-COLOR:CAPS"/>
+    <keyword type="macro" name="hb_color_get_alpha()" link="harfbuzz-hb-ot-color.html#hb-color-get-alpha" since="2.1.0"/>
+    <keyword type="macro" name="hb_color_get_blue()" link="harfbuzz-hb-ot-color.html#hb-color-get-blue" since="2.1.0"/>
+    <keyword type="macro" name="hb_color_get_green()" link="harfbuzz-hb-ot-color.html#hb-color-get-green" since="2.1.0"/>
+    <keyword type="macro" name="hb_color_get_red()" link="harfbuzz-hb-ot-color.html#hb-color-get-red" since="2.1.0"/>
+    <keyword type="function" name="hb_ot_color_glyph_get_layers ()" link="harfbuzz-hb-ot-color.html#hb-ot-color-glyph-get-layers" since="2.1.0"/>
+    <keyword type="function" name="hb_ot_color_has_layers ()" link="harfbuzz-hb-ot-color.html#hb-ot-color-has-layers" since="2.1.0"/>
+    <keyword type="function" name="hb_ot_color_has_palettes ()" link="harfbuzz-hb-ot-color.html#hb-ot-color-has-palettes" since="2.1.0"/>
+    <keyword type="function" name="hb_ot_color_palette_color_get_name_id ()" link="harfbuzz-hb-ot-color.html#hb-ot-color-palette-color-get-name-id" since="2.1.0"/>
+    <keyword type="function" name="hb_ot_color_palette_get_colors ()" link="harfbuzz-hb-ot-color.html#hb-ot-color-palette-get-colors" since="2.1.0"/>
+    <keyword type="function" name="hb_ot_color_palette_get_count ()" link="harfbuzz-hb-ot-color.html#hb-ot-color-palette-get-count" since="2.1.0"/>
+    <keyword type="function" name="hb_ot_color_palette_get_flags ()" link="harfbuzz-hb-ot-color.html#hb-ot-color-palette-get-flags" since="2.1.0"/>
+    <keyword type="function" name="hb_ot_color_palette_get_name_id ()" link="harfbuzz-hb-ot-color.html#hb-ot-color-palette-get-name-id" since="2.1.0"/>
+    <keyword type="typedef" name="hb_color_t" link="harfbuzz-hb-ot-color.html#hb-color-t" since="2.1.0"/>
+    <keyword type="enum" name="enum hb_ot_color_palette_flags_t" link="harfbuzz-hb-ot-color.html#hb-ot-color-palette-flags-t" since="REPLACEME"/>
+    <keyword type="function" name="hb_ot_name_list_names ()" link="harfbuzz-hb-ot-name.html#hb-ot-name-list-names" since="2.1.0"/>
+    <keyword type="function" name="hb_ot_name_get_utf16 ()" link="harfbuzz-hb-ot-name.html#hb-ot-name-get-utf16" since="2.1.0"/>
+    <keyword type="function" name="hb_ot_name_get_utf32 ()" link="harfbuzz-hb-ot-name.html#hb-ot-name-get-utf32" since="2.1.0"/>
+    <keyword type="function" name="hb_ot_name_get_utf8 ()" link="harfbuzz-hb-ot-name.html#hb-ot-name-get-utf8" since="2.1.0"/>
+    <keyword type="enum" name="enum hb_name_id_t" link="harfbuzz-hb-ot-name.html#hb-name-id-t" since="2.0.0"/>
     <keyword type="function" name="hb_ot_math_has_data ()" link="harfbuzz-hb-ot-math.html#hb-ot-math-has-data" since="1.3.3"/>
     <keyword type="function" name="hb_ot_math_get_constant ()" link="harfbuzz-hb-ot-math.html#hb-ot-math-get-constant" since="1.3.3"/>
     <keyword type="function" name="hb_ot_math_get_glyph_italics_correction ()" link="harfbuzz-hb-ot-math.html#hb-ot-math-get-glyph-italics-correction" since="1.3.3"/>
@@ -508,6 +546,7 @@
     <keyword type="struct" name="hb_ot_math_glyph_variant_t" link="harfbuzz-hb-ot-math.html#hb-ot-math-glyph-variant-t-struct"/>
     <keyword type="enum" name="enum hb_ot_math_glyph_part_flags_t" link="harfbuzz-hb-ot-math.html#hb-ot-math-glyph-part-flags-t" since="1.3.3"/>
     <keyword type="struct" name="hb_ot_math_glyph_part_t" link="harfbuzz-hb-ot-math.html#hb-ot-math-glyph-part-t-struct"/>
+    <keyword type="function" name="hb_ot_shape_glyphs_closure ()" link="harfbuzz-hb-ot-shape.html#hb-ot-shape-glyphs-closure" since="0.9.2"/>
     <keyword type="function" name="hb_shape_plan_create ()" link="harfbuzz-hb-shape-plan.html#hb-shape-plan-create"/>
     <keyword type="function" name="hb_shape_plan_create_cached ()" link="harfbuzz-hb-shape-plan.html#hb-shape-plan-create-cached" since="0.9.7"/>
     <keyword type="function" name="hb_shape_plan_create2 ()" link="harfbuzz-hb-shape-plan.html#hb-shape-plan-create2"/>
@@ -562,6 +601,7 @@
     <keyword type="macro" name="HB_GOBJECT_TYPE_GLYPH_FLAGS" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-GLYPH-FLAGS:CAPS"/>
     <keyword type="macro" name="HB_GOBJECT_TYPE_MAP" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-MAP:CAPS"/>
     <keyword type="macro" name="HB_GOBJECT_TYPE_MEMORY_MODE" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-MEMORY-MODE:CAPS"/>
+    <keyword type="macro" name="HB_GOBJECT_TYPE_NAME_ID" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-NAME-ID:CAPS"/>
     <keyword type="macro" name="HB_GOBJECT_TYPE_OT_COLOR_PALETTE_FLAGS" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-OT-COLOR-PALETTE-FLAGS:CAPS"/>
     <keyword type="macro" name="HB_GOBJECT_TYPE_OT_LAYOUT_GLYPH_CLASS" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-OT-LAYOUT-GLYPH-CLASS:CAPS"/>
     <keyword type="macro" name="HB_GOBJECT_TYPE_OT_MATH_CONSTANT" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-OT-MATH-CONSTANT:CAPS"/>
@@ -595,6 +635,7 @@
     <keyword type="function" name="hb_gobject_glyph_flags_get_type ()" link="harfbuzz-hb-gobject.html#hb-gobject-glyph-flags-get-type"/>
     <keyword type="function" name="hb_gobject_map_get_type ()" link="harfbuzz-hb-gobject.html#hb-gobject-map-get-type"/>
     <keyword type="function" name="hb_gobject_memory_mode_get_type ()" link="harfbuzz-hb-gobject.html#hb-gobject-memory-mode-get-type"/>
+    <keyword type="function" name="hb_gobject_name_id_get_type ()" link="harfbuzz-hb-gobject.html#hb-gobject-name-id-get-type"/>
     <keyword type="function" name="hb_gobject_ot_color_palette_flags_get_type ()" link="harfbuzz-hb-gobject.html#hb-gobject-ot-color-palette-flags-get-type"/>
     <keyword type="function" name="hb_gobject_ot_layout_glyph_class_get_type ()" link="harfbuzz-hb-gobject.html#hb-gobject-ot-layout-glyph-class-get-type"/>
     <keyword type="function" name="hb_gobject_ot_math_constant_get_type ()" link="harfbuzz-hb-gobject.html#hb-gobject-ot-math-constant-get-type"/>

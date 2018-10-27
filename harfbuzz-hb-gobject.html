@@ -98,6 +98,10 @@
 </tr>
 <tr>
 <td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-NAME-ID:CAPS" title="HB_GOBJECT_TYPE_NAME_ID">HB_GOBJECT_TYPE_NAME_ID</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
 <td class="function_name"><a class="link" href="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-OT-COLOR-PALETTE-FLAGS:CAPS" title="HB_GOBJECT_TYPE_OT_COLOR_PALETTE_FLAGS">HB_GOBJECT_TYPE_OT_COLOR_PALETTE_FLAGS</a></td>
 </tr>
 <tr>
@@ -282,6 +286,14 @@
 </td>
 <td class="function_name">
 <a class="link" href="harfbuzz-hb-gobject.html#hb-gobject-memory-mode-get-type" title="hb_gobject_memory_mode_get_type ()">hb_gobject_memory_mode_get_type</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">GType</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-gobject.html#hb-gobject-name-id-get-type" title="hb_gobject_name_id_get_type ()">hb_gobject_name_id_get_type</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 <tr>
@@ -534,6 +546,12 @@
 </div>
 <hr>
 <div class="refsect2">
+<a name="HB-GOBJECT-TYPE-NAME-ID:CAPS"></a><h3>HB_GOBJECT_TYPE_NAME_ID</h3>
+<pre class="programlisting">#define HB_GOBJECT_TYPE_NAME_ID (hb_gobject_name_id_get_type ())
+</pre>
+</div>
+<hr>
+<div class="refsect2">
 <a name="HB-GOBJECT-TYPE-OT-COLOR-PALETTE-FLAGS:CAPS"></a><h3>HB_GOBJECT_TYPE_OT_COLOR_PALETTE_FLAGS</h3>
 <pre class="programlisting">#define HB_GOBJECT_TYPE_OT_COLOR_PALETTE_FLAGS (hb_gobject_ot_color_palette_flags_get_type ())
 </pre>
@@ -737,6 +755,12 @@ hb_gobject_map_get_type (<em class="parameter"><code><span class="type">void</sp
 <a name="hb-gobject-memory-mode-get-type"></a><h3>hb_gobject_memory_mode_get_type ()</h3>
 <pre class="programlisting"><span class="returnvalue">GType</span>
 hb_gobject_memory_mode_get_type (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-gobject-name-id-get-type"></a><h3>hb_gobject_name_id_get_type ()</h3>
+<pre class="programlisting"><span class="returnvalue">GType</span>
+hb_gobject_name_id_get_type (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
 </div>
 <hr>
 <div class="refsect2">
