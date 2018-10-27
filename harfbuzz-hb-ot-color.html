@@ -221,13 +221,24 @@ hb_ot_color_glyph_get_layers (<em class="parameter"><code><a class="link" href="
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
+<td class="parameter_name"><p>glyph</p></td>
+<td class="parameter_description"><p>a layered color glyph id.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>start_offset</p></td>
+<td class="parameter_description"><p>starting offset of layers.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
 <td class="parameter_name"><p>count</p></td>
-<td class="parameter_description"><p>. </p></td>
+<td class="parameter_description"><p> gets number of layers available to be written on buffer
+and returns number of written layers. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][optional]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>layers</p></td>
-<td class="parameter_description"><p>. </p></td>
+<td class="parameter_description"><p> layers buffer to buffer. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=count][<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][optional]</span></td>
 </tr>
 </tbody>
@@ -235,6 +246,7 @@ hb_ot_color_glyph_get_layers (<em class="parameter"><code><a class="link" href="
 </div>
 <div class="refsect3">
 <a name="id-1.3.3.18.7.7.5"></a><h4>Returns</h4>
+<p> Total number of layers a layered color glyph have.</p>
 <p></p>
 </div>
 <p class="since">Since 2.1.0</p>
@@ -307,11 +319,18 @@ hb_ot_color_palette_color_get_name_id (<em class="parameter"><code><a class="lin
 <col class="parameters_description">
 <col width="200px" class="parameters_annotations">
 </colgroup>
-<tbody><tr>
+<tbody>
+<tr>
 <td class="parameter_name"><p>face</p></td>
 <td class="parameter_description"><p>a font face.</p></td>
 <td class="parameter_annotations"> </td>
-</tr></tbody>
+</tr>
+<tr>
+<td class="parameter_name"><p>color_index</p></td>
+<td class="parameter_description"><p>palette entry index.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
 </table></div>
 </div>
 <div class="refsect3">
