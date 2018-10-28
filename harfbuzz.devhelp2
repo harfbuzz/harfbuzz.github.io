@@ -47,9 +47,9 @@
         <sub name="hb-deprecated" link="harfbuzz-hb-deprecated.html"/>
         <sub name="hb-face" link="harfbuzz-hb-face.html"/>
         <sub name="hb-font" link="harfbuzz-hb-font.html"/>
-        <sub name="hb_map_t" link="hb-map-t.html"/>
-        <sub name="hb_set_t" link="hb-set-t.html"/>
-        <sub name="hb_shape_plan_t" link="hb-shape-plan-t.html"/>
+        <sub name="hb-map" link="harfbuzz-hb-map.html"/>
+        <sub name="hb-set" link="harfbuzz-hb-set.html"/>
+        <sub name="hb-shape-plan" link="harfbuzz-hb-shape-plan.html"/>
         <sub name="hb-shape" link="harfbuzz-hb-shape.html"/>
         <sub name="hb-unicode" link="harfbuzz-hb-unicode.html"/>
         <sub name="hb-version" link="harfbuzz-hb-version.html"/>
@@ -366,64 +366,64 @@
     <keyword type="typedef" name="hb_font_t" link="harfbuzz-hb-font.html#hb-font-t"/>
     <keyword type="typedef" name="hb_font_get_font_h_extents_func_t" link="harfbuzz-hb-font.html#hb-font-get-font-h-extents-func-t"/>
     <keyword type="typedef" name="hb_font_get_font_v_extents_func_t" link="harfbuzz-hb-font.html#hb-font-get-font-v-extents-func-t"/>
-    <keyword type="macro" name="HB_MAP_VALUE_INVALID" link="hb-map-t.html#HB-MAP-VALUE-INVALID:CAPS"/>
-    <keyword type="function" name="hb_map_allocation_successful ()" link="hb-map-t.html#hb-map-allocation-successful" since="1.7.7"/>
-    <keyword type="function" name="hb_map_clear ()" link="hb-map-t.html#hb-map-clear" since="1.7.7"/>
-    <keyword type="function" name="hb_map_create ()" link="hb-map-t.html#hb-map-create"/>
-    <keyword type="function" name="hb_map_del ()" link="hb-map-t.html#hb-map-del" since="1.7.7"/>
-    <keyword type="function" name="hb_map_destroy ()" link="hb-map-t.html#hb-map-destroy" since="1.7.7"/>
-    <keyword type="function" name="hb_map_get ()" link="hb-map-t.html#hb-map-get" since="1.7.7"/>
-    <keyword type="function" name="hb_map_get_empty ()" link="hb-map-t.html#hb-map-get-empty" since="1.7.7"/>
-    <keyword type="function" name="hb_map_get_population ()" link="hb-map-t.html#hb-map-get-population" since="1.7.7"/>
-    <keyword type="function" name="hb_map_get_user_data ()" link="hb-map-t.html#hb-map-get-user-data" since="1.7.7"/>
-    <keyword type="function" name="hb_map_has ()" link="hb-map-t.html#hb-map-has" since="1.7.7"/>
-    <keyword type="function" name="hb_map_is_empty ()" link="hb-map-t.html#hb-map-is-empty" since="1.7.7"/>
-    <keyword type="function" name="hb_map_reference ()" link="hb-map-t.html#hb-map-reference" since="1.7.7"/>
-    <keyword type="function" name="hb_map_set ()" link="hb-map-t.html#hb-map-set" since="1.7.7"/>
-    <keyword type="function" name="hb_map_set_user_data ()" link="hb-map-t.html#hb-map-set-user-data" since="1.7.7"/>
-    <keyword type="typedef" name="hb_map_t" link="hb-map-t.html#hb-map-t"/>
-    <keyword type="macro" name="HB_SET_VALUE_INVALID" link="hb-set-t.html#HB-SET-VALUE-INVALID:CAPS"/>
-    <keyword type="function" name="hb_set_add ()" link="hb-set-t.html#hb-set-add" since="0.9.2"/>
-    <keyword type="function" name="hb_set_add_range ()" link="hb-set-t.html#hb-set-add-range" since="0.9.7"/>
-    <keyword type="function" name="hb_set_allocation_successful ()" link="hb-set-t.html#hb-set-allocation-successful" since="0.9.2"/>
-    <keyword type="function" name="hb_set_clear ()" link="hb-set-t.html#hb-set-clear" since="0.9.2"/>
-    <keyword type="function" name="hb_set_create ()" link="hb-set-t.html#hb-set-create"/>
-    <keyword type="function" name="hb_set_del ()" link="hb-set-t.html#hb-set-del" since="0.9.2"/>
-    <keyword type="function" name="hb_set_del_range ()" link="hb-set-t.html#hb-set-del-range" since="0.9.7"/>
-    <keyword type="function" name="hb_set_destroy ()" link="hb-set-t.html#hb-set-destroy" since="0.9.2"/>
-    <keyword type="function" name="hb_set_get_empty ()" link="hb-set-t.html#hb-set-get-empty" since="0.9.2"/>
-    <keyword type="function" name="hb_set_get_max ()" link="hb-set-t.html#hb-set-get-max" since="0.9.7"/>
-    <keyword type="function" name="hb_set_get_min ()" link="hb-set-t.html#hb-set-get-min" since="0.9.7"/>
-    <keyword type="function" name="hb_set_get_population ()" link="hb-set-t.html#hb-set-get-population" since="0.9.7"/>
-    <keyword type="function" name="hb_set_get_user_data ()" link="hb-set-t.html#hb-set-get-user-data" since="0.9.2"/>
-    <keyword type="function" name="hb_set_has ()" link="hb-set-t.html#hb-set-has" since="0.9.2"/>
-    <keyword type="function" name="hb_set_intersect ()" link="hb-set-t.html#hb-set-intersect" since="0.9.2"/>
-    <keyword type="function" name="hb_set_is_empty ()" link="hb-set-t.html#hb-set-is-empty" since="0.9.7"/>
-    <keyword type="function" name="hb_set_is_equal ()" link="hb-set-t.html#hb-set-is-equal" since="0.9.7"/>
-    <keyword type="function" name="hb_set_is_subset ()" link="hb-set-t.html#hb-set-is-subset" since="1.8.1"/>
-    <keyword type="function" name="hb_set_next ()" link="hb-set-t.html#hb-set-next" since="0.9.2"/>
-    <keyword type="function" name="hb_set_next_range ()" link="hb-set-t.html#hb-set-next-range" since="0.9.7"/>
-    <keyword type="function" name="hb_set_previous ()" link="hb-set-t.html#hb-set-previous" since="1.8.0"/>
-    <keyword type="function" name="hb_set_previous_range ()" link="hb-set-t.html#hb-set-previous-range" since="1.8.0"/>
-    <keyword type="function" name="hb_set_reference ()" link="hb-set-t.html#hb-set-reference" since="0.9.2"/>
-    <keyword type="function" name="hb_set_set ()" link="hb-set-t.html#hb-set-set" since="0.9.2"/>
-    <keyword type="function" name="hb_set_set_user_data ()" link="hb-set-t.html#hb-set-set-user-data" since="0.9.2"/>
-    <keyword type="function" name="hb_set_subtract ()" link="hb-set-t.html#hb-set-subtract" since="0.9.2"/>
-    <keyword type="function" name="hb_set_symmetric_difference ()" link="hb-set-t.html#hb-set-symmetric-difference" since="0.9.2"/>
-    <keyword type="function" name="hb_set_union ()" link="hb-set-t.html#hb-set-union" since="0.9.2"/>
-    <keyword type="typedef" name="hb_set_t" link="hb-set-t.html#hb-set-t"/>
-    <keyword type="function" name="hb_shape_plan_create ()" link="hb-shape-plan-t.html#hb-shape-plan-create"/>
-    <keyword type="function" name="hb_shape_plan_create_cached ()" link="hb-shape-plan-t.html#hb-shape-plan-create-cached" since="0.9.7"/>
-    <keyword type="function" name="hb_shape_plan_create2 ()" link="hb-shape-plan-t.html#hb-shape-plan-create2"/>
-    <keyword type="function" name="hb_shape_plan_create_cached2 ()" link="hb-shape-plan-t.html#hb-shape-plan-create-cached2"/>
-    <keyword type="function" name="hb_shape_plan_destroy ()" link="hb-shape-plan-t.html#hb-shape-plan-destroy" since="0.9.7"/>
-    <keyword type="function" name="hb_shape_plan_execute ()" link="hb-shape-plan-t.html#hb-shape-plan-execute" since="0.9.7"/>
-    <keyword type="function" name="hb_shape_plan_get_empty ()" link="hb-shape-plan-t.html#hb-shape-plan-get-empty" since="0.9.7"/>
-    <keyword type="function" name="hb_shape_plan_get_shaper ()" link="hb-shape-plan-t.html#hb-shape-plan-get-shaper" since="0.9.7"/>
-    <keyword type="function" name="hb_shape_plan_get_user_data ()" link="hb-shape-plan-t.html#hb-shape-plan-get-user-data" since="0.9.7"/>
-    <keyword type="function" name="hb_shape_plan_reference ()" link="hb-shape-plan-t.html#hb-shape-plan-reference" since="0.9.7"/>
-    <keyword type="function" name="hb_shape_plan_set_user_data ()" link="hb-shape-plan-t.html#hb-shape-plan-set-user-data" since="0.9.7"/>
-    <keyword type="typedef" name="hb_shape_plan_t" link="hb-shape-plan-t.html#hb-shape-plan-t"/>
+    <keyword type="macro" name="HB_MAP_VALUE_INVALID" link="harfbuzz-hb-map.html#HB-MAP-VALUE-INVALID:CAPS"/>
+    <keyword type="function" name="hb_map_allocation_successful ()" link="harfbuzz-hb-map.html#hb-map-allocation-successful" since="1.7.7"/>
+    <keyword type="function" name="hb_map_clear ()" link="harfbuzz-hb-map.html#hb-map-clear" since="1.7.7"/>
+    <keyword type="function" name="hb_map_create ()" link="harfbuzz-hb-map.html#hb-map-create"/>
+    <keyword type="function" name="hb_map_del ()" link="harfbuzz-hb-map.html#hb-map-del" since="1.7.7"/>
+    <keyword type="function" name="hb_map_destroy ()" link="harfbuzz-hb-map.html#hb-map-destroy" since="1.7.7"/>
+    <keyword type="function" name="hb_map_get ()" link="harfbuzz-hb-map.html#hb-map-get" since="1.7.7"/>
+    <keyword type="function" name="hb_map_get_empty ()" link="harfbuzz-hb-map.html#hb-map-get-empty" since="1.7.7"/>
+    <keyword type="function" name="hb_map_get_population ()" link="harfbuzz-hb-map.html#hb-map-get-population" since="1.7.7"/>
+    <keyword type="function" name="hb_map_get_user_data ()" link="harfbuzz-hb-map.html#hb-map-get-user-data" since="1.7.7"/>
+    <keyword type="function" name="hb_map_has ()" link="harfbuzz-hb-map.html#hb-map-has" since="1.7.7"/>
+    <keyword type="function" name="hb_map_is_empty ()" link="harfbuzz-hb-map.html#hb-map-is-empty" since="1.7.7"/>
+    <keyword type="function" name="hb_map_reference ()" link="harfbuzz-hb-map.html#hb-map-reference" since="1.7.7"/>
+    <keyword type="function" name="hb_map_set ()" link="harfbuzz-hb-map.html#hb-map-set" since="1.7.7"/>
+    <keyword type="function" name="hb_map_set_user_data ()" link="harfbuzz-hb-map.html#hb-map-set-user-data" since="1.7.7"/>
+    <keyword type="typedef" name="hb_map_t" link="harfbuzz-hb-map.html#hb-map-t"/>
+    <keyword type="macro" name="HB_SET_VALUE_INVALID" link="harfbuzz-hb-set.html#HB-SET-VALUE-INVALID:CAPS"/>
+    <keyword type="function" name="hb_set_add ()" link="harfbuzz-hb-set.html#hb-set-add" since="0.9.2"/>
+    <keyword type="function" name="hb_set_add_range ()" link="harfbuzz-hb-set.html#hb-set-add-range" since="0.9.7"/>
+    <keyword type="function" name="hb_set_allocation_successful ()" link="harfbuzz-hb-set.html#hb-set-allocation-successful" since="0.9.2"/>
+    <keyword type="function" name="hb_set_clear ()" link="harfbuzz-hb-set.html#hb-set-clear" since="0.9.2"/>
+    <keyword type="function" name="hb_set_create ()" link="harfbuzz-hb-set.html#hb-set-create"/>
+    <keyword type="function" name="hb_set_del ()" link="harfbuzz-hb-set.html#hb-set-del" since="0.9.2"/>
+    <keyword type="function" name="hb_set_del_range ()" link="harfbuzz-hb-set.html#hb-set-del-range" since="0.9.7"/>
+    <keyword type="function" name="hb_set_destroy ()" link="harfbuzz-hb-set.html#hb-set-destroy" since="0.9.2"/>
+    <keyword type="function" name="hb_set_get_empty ()" link="harfbuzz-hb-set.html#hb-set-get-empty" since="0.9.2"/>
+    <keyword type="function" name="hb_set_get_max ()" link="harfbuzz-hb-set.html#hb-set-get-max" since="0.9.7"/>
+    <keyword type="function" name="hb_set_get_min ()" link="harfbuzz-hb-set.html#hb-set-get-min" since="0.9.7"/>
+    <keyword type="function" name="hb_set_get_population ()" link="harfbuzz-hb-set.html#hb-set-get-population" since="0.9.7"/>
+    <keyword type="function" name="hb_set_get_user_data ()" link="harfbuzz-hb-set.html#hb-set-get-user-data" since="0.9.2"/>
+    <keyword type="function" name="hb_set_has ()" link="harfbuzz-hb-set.html#hb-set-has" since="0.9.2"/>
+    <keyword type="function" name="hb_set_intersect ()" link="harfbuzz-hb-set.html#hb-set-intersect" since="0.9.2"/>
+    <keyword type="function" name="hb_set_is_empty ()" link="harfbuzz-hb-set.html#hb-set-is-empty" since="0.9.7"/>
+    <keyword type="function" name="hb_set_is_equal ()" link="harfbuzz-hb-set.html#hb-set-is-equal" since="0.9.7"/>
+    <keyword type="function" name="hb_set_is_subset ()" link="harfbuzz-hb-set.html#hb-set-is-subset" since="1.8.1"/>
+    <keyword type="function" name="hb_set_next ()" link="harfbuzz-hb-set.html#hb-set-next" since="0.9.2"/>
+    <keyword type="function" name="hb_set_next_range ()" link="harfbuzz-hb-set.html#hb-set-next-range" since="0.9.7"/>
+    <keyword type="function" name="hb_set_previous ()" link="harfbuzz-hb-set.html#hb-set-previous" since="1.8.0"/>
+    <keyword type="function" name="hb_set_previous_range ()" link="harfbuzz-hb-set.html#hb-set-previous-range" since="1.8.0"/>
+    <keyword type="function" name="hb_set_reference ()" link="harfbuzz-hb-set.html#hb-set-reference" since="0.9.2"/>
+    <keyword type="function" name="hb_set_set ()" link="harfbuzz-hb-set.html#hb-set-set" since="0.9.2"/>
+    <keyword type="function" name="hb_set_set_user_data ()" link="harfbuzz-hb-set.html#hb-set-set-user-data" since="0.9.2"/>
+    <keyword type="function" name="hb_set_subtract ()" link="harfbuzz-hb-set.html#hb-set-subtract" since="0.9.2"/>
+    <keyword type="function" name="hb_set_symmetric_difference ()" link="harfbuzz-hb-set.html#hb-set-symmetric-difference" since="0.9.2"/>
+    <keyword type="function" name="hb_set_union ()" link="harfbuzz-hb-set.html#hb-set-union" since="0.9.2"/>
+    <keyword type="typedef" name="hb_set_t" link="harfbuzz-hb-set.html#hb-set-t"/>
+    <keyword type="function" name="hb_shape_plan_create ()" link="harfbuzz-hb-shape-plan.html#hb-shape-plan-create"/>
+    <keyword type="function" name="hb_shape_plan_create_cached ()" link="harfbuzz-hb-shape-plan.html#hb-shape-plan-create-cached" since="0.9.7"/>
+    <keyword type="function" name="hb_shape_plan_create2 ()" link="harfbuzz-hb-shape-plan.html#hb-shape-plan-create2"/>
+    <keyword type="function" name="hb_shape_plan_create_cached2 ()" link="harfbuzz-hb-shape-plan.html#hb-shape-plan-create-cached2"/>
+    <keyword type="function" name="hb_shape_plan_destroy ()" link="harfbuzz-hb-shape-plan.html#hb-shape-plan-destroy" since="0.9.7"/>
+    <keyword type="function" name="hb_shape_plan_execute ()" link="harfbuzz-hb-shape-plan.html#hb-shape-plan-execute" since="0.9.7"/>
+    <keyword type="function" name="hb_shape_plan_get_empty ()" link="harfbuzz-hb-shape-plan.html#hb-shape-plan-get-empty" since="0.9.7"/>
+    <keyword type="function" name="hb_shape_plan_get_shaper ()" link="harfbuzz-hb-shape-plan.html#hb-shape-plan-get-shaper" since="0.9.7"/>
+    <keyword type="function" name="hb_shape_plan_get_user_data ()" link="harfbuzz-hb-shape-plan.html#hb-shape-plan-get-user-data" since="0.9.7"/>
+    <keyword type="function" name="hb_shape_plan_reference ()" link="harfbuzz-hb-shape-plan.html#hb-shape-plan-reference" since="0.9.7"/>
+    <keyword type="function" name="hb_shape_plan_set_user_data ()" link="harfbuzz-hb-shape-plan.html#hb-shape-plan-set-user-data" since="0.9.7"/>
+    <keyword type="typedef" name="hb_shape_plan_t" link="harfbuzz-hb-shape-plan.html#hb-shape-plan-t"/>
     <keyword type="function" name="hb_feature_from_string ()" link="harfbuzz-hb-shape.html#hb-feature-from-string" since="0.9.5"/>
     <keyword type="function" name="hb_feature_to_string ()" link="harfbuzz-hb-shape.html#hb-feature-to-string" since="0.9.5"/>
     <keyword type="function" name="hb_shape ()" link="harfbuzz-hb-shape.html#hb-shape" since="0.9.2"/>
@@ -558,7 +558,7 @@
     <keyword type="function" name="hb_ot_name_get_utf16 ()" link="harfbuzz-hb-ot-name.html#hb-ot-name-get-utf16" since="2.1.0"/>
     <keyword type="function" name="hb_ot_name_get_utf32 ()" link="harfbuzz-hb-ot-name.html#hb-ot-name-get-utf32" since="2.1.0"/>
     <keyword type="function" name="hb_ot_name_get_utf8 ()" link="harfbuzz-hb-ot-name.html#hb-ot-name-get-utf8" since="2.1.0"/>
-    <keyword type="enum" name="enum hb_name_id_t" link="harfbuzz-hb-ot-name.html#hb-name-id-t" since="2.0.0"/>
+    <keyword type="typedef" name="hb_name_id_t" link="harfbuzz-hb-ot-name.html#hb-name-id-t" since="2.0.0"/>
     <keyword type="function" name="hb_ot_shape_glyphs_closure ()" link="harfbuzz-hb-ot-shape.html#hb-ot-shape-glyphs-closure" since="0.9.2"/>
     <keyword type="function" name="hb_ot_var_has_data ()" link="harfbuzz-hb-ot-var.html#hb-ot-var-has-data" since="1.4.2"/>
     <keyword type="function" name="hb_ot_var_find_axis ()" link="harfbuzz-hb-ot-var.html#hb-ot-var-find-axis" since="1.4.2"/>
@@ -608,7 +608,6 @@
     <keyword type="macro" name="HB_GOBJECT_TYPE_GLYPH_FLAGS" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-GLYPH-FLAGS:CAPS"/>
     <keyword type="macro" name="HB_GOBJECT_TYPE_MAP" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-MAP:CAPS"/>
     <keyword type="macro" name="HB_GOBJECT_TYPE_MEMORY_MODE" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-MEMORY-MODE:CAPS"/>
-    <keyword type="macro" name="HB_GOBJECT_TYPE_NAME_ID" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-NAME-ID:CAPS"/>
     <keyword type="macro" name="HB_GOBJECT_TYPE_OT_COLOR_PALETTE_FLAGS" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-OT-COLOR-PALETTE-FLAGS:CAPS"/>
     <keyword type="macro" name="HB_GOBJECT_TYPE_OT_LAYOUT_GLYPH_CLASS" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-OT-LAYOUT-GLYPH-CLASS:CAPS"/>
     <keyword type="macro" name="HB_GOBJECT_TYPE_OT_MATH_CONSTANT" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-OT-MATH-CONSTANT:CAPS"/>
@@ -642,7 +641,6 @@
     <keyword type="function" name="hb_gobject_glyph_flags_get_type ()" link="harfbuzz-hb-gobject.html#hb-gobject-glyph-flags-get-type"/>
     <keyword type="function" name="hb_gobject_map_get_type ()" link="harfbuzz-hb-gobject.html#hb-gobject-map-get-type"/>
     <keyword type="function" name="hb_gobject_memory_mode_get_type ()" link="harfbuzz-hb-gobject.html#hb-gobject-memory-mode-get-type"/>
-    <keyword type="function" name="hb_gobject_name_id_get_type ()" link="harfbuzz-hb-gobject.html#hb-gobject-name-id-get-type"/>
     <keyword type="function" name="hb_gobject_ot_color_palette_flags_get_type ()" link="harfbuzz-hb-gobject.html#hb-gobject-ot-color-palette-flags-get-type"/>
     <keyword type="function" name="hb_gobject_ot_layout_glyph_class_get_type ()" link="harfbuzz-hb-gobject.html#hb-gobject-ot-layout-glyph-class-get-type"/>
     <keyword type="function" name="hb_gobject_ot_math_constant_get_type ()" link="harfbuzz-hb-gobject.html#hb-gobject-ot-math-constant-get-type"/>

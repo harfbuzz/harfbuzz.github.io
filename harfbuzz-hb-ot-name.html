@@ -79,15 +79,14 @@
 <col class="description">
 </colgroup>
 <tbody><tr>
-<td class="datatype_keyword">enum</td>
-<td class="function_name"><a class="link" href="harfbuzz-hb-ot-name.html#hb-name-id-t" title="enum hb_name_id_t">hb_name_id_t</a></td>
+<td class="typedef_keyword">typedef</td>
+<td class="function_name"><a class="link" href="harfbuzz-hb-ot-name.html#hb-name-id-t" title="hb_name_id_t">hb_name_id_t</a></td>
 </tr></tbody>
 </table></div>
 </div>
 <div class="refsect1">
 <a name="harfbuzz-hb-ot-name.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    GEnum
-    <span class="lineart">╰──</span> hb_name_id_t
+<pre class="screen">
 </pre>
 </div>
 <div class="refsect1">
@@ -145,7 +144,7 @@ used as long as <em class="parameter"><code>face</code></em>
 <a name="hb-ot-name-get-utf16"></a><h3>hb_ot_name_get_utf16 ()</h3>
 <pre class="programlisting">unsigned <span class="returnvalue">int</span>
 hb_ot_name_get_utf16 (<em class="parameter"><code><a class="link" href="harfbuzz-hb-face.html#hb-face-t"><span class="type">hb_face_t</span></a> *face</code></em>,
-                      <em class="parameter"><code><a class="link" href="harfbuzz-hb-ot-name.html#hb-name-id-t" title="enum hb_name_id_t"><span class="type">hb_name_id_t</span></a> name_id</code></em>,
+                      <em class="parameter"><code><a class="link" href="harfbuzz-hb-ot-name.html#hb-name-id-t" title="hb_name_id_t"><span class="type">hb_name_id_t</span></a> name_id</code></em>,
                       <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-language-t" title="hb_language_t"><span class="type">hb_language_t</span></a> language</code></em>,
                       <em class="parameter"><code>unsigned <span class="type">int</span> *text_size</code></em>,
                       <em class="parameter"><code><span class="type">uint16_t</span> *text</code></em>);</pre>
@@ -204,7 +203,7 @@ text written to buffer. </p></td>
 <a name="hb-ot-name-get-utf32"></a><h3>hb_ot_name_get_utf32 ()</h3>
 <pre class="programlisting">unsigned <span class="returnvalue">int</span>
 hb_ot_name_get_utf32 (<em class="parameter"><code><a class="link" href="harfbuzz-hb-face.html#hb-face-t"><span class="type">hb_face_t</span></a> *face</code></em>,
-                      <em class="parameter"><code><a class="link" href="harfbuzz-hb-ot-name.html#hb-name-id-t" title="enum hb_name_id_t"><span class="type">hb_name_id_t</span></a> name_id</code></em>,
+                      <em class="parameter"><code><a class="link" href="harfbuzz-hb-ot-name.html#hb-name-id-t" title="hb_name_id_t"><span class="type">hb_name_id_t</span></a> name_id</code></em>,
                       <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-language-t" title="hb_language_t"><span class="type">hb_language_t</span></a> language</code></em>,
                       <em class="parameter"><code>unsigned <span class="type">int</span> *text_size</code></em>,
                       <em class="parameter"><code><span class="type">uint32_t</span> *text</code></em>);</pre>
@@ -263,7 +262,7 @@ text written to buffer. </p></td>
 <a name="hb-ot-name-get-utf8"></a><h3>hb_ot_name_get_utf8 ()</h3>
 <pre class="programlisting">unsigned <span class="returnvalue">int</span>
 hb_ot_name_get_utf8 (<em class="parameter"><code><a class="link" href="harfbuzz-hb-face.html#hb-face-t"><span class="type">hb_face_t</span></a> *face</code></em>,
-                     <em class="parameter"><code><a class="link" href="harfbuzz-hb-ot-name.html#hb-name-id-t" title="enum hb_name_id_t"><span class="type">hb_name_id_t</span></a> name_id</code></em>,
+                     <em class="parameter"><code><a class="link" href="harfbuzz-hb-ot-name.html#hb-name-id-t" title="hb_name_id_t"><span class="type">hb_name_id_t</span></a> name_id</code></em>,
                      <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-language-t" title="hb_language_t"><span class="type">hb_language_t</span></a> language</code></em>,
                      <em class="parameter"><code>unsigned <span class="type">int</span> *text_size</code></em>,
                      <em class="parameter"><code><span class="type">char</span> *text</code></em>);</pre>
@@ -321,159 +320,12 @@ text written to buffer. </p></td>
 <div class="refsect1">
 <a name="harfbuzz-hb-ot-name.other_details"></a><h2>Types and Values</h2>
 <div class="refsect2">
-<a name="hb-name-id-t"></a><h3>enum hb_name_id_t</h3>
+<a name="hb-name-id-t"></a><h3>hb_name_id_t</h3>
+<pre class="programlisting">typedef unsigned int hb_name_id_t;
+</pre>
 <p>An integral type representing an OpenType 'name' table name identifier.
 There are predefined name IDs, as well as name IDs return from other
 API.  These can be used to fetch name strings from a font face.</p>
-<div class="refsect3">
-<a name="id-1.3.4.6.9.2.4"></a><h4>Members</h4>
-<div class="informaltable"><table width="100%" border="0">
-<colgroup>
-<col width="300px" class="enum_members_name">
-<col class="enum_members_description">
-<col width="200px" class="enum_members_annotations">
-</colgroup>
-<tbody>
-<tr>
-<td class="enum_member_name"><p><a name="HB-NAME-ID-COPYRIGHT:CAPS"></a>HB_NAME_ID_COPYRIGHT</p></td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td class="enum_member_name"><p><a name="HB-NAME-ID-FONT-FAMILY:CAPS"></a>HB_NAME_ID_FONT_FAMILY</p></td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td class="enum_member_name"><p><a name="HB-NAME-ID-FONT-SUBFAMILY:CAPS"></a>HB_NAME_ID_FONT_SUBFAMILY</p></td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td class="enum_member_name"><p><a name="HB-NAME-ID-UNIQUE-ID:CAPS"></a>HB_NAME_ID_UNIQUE_ID</p></td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td class="enum_member_name"><p><a name="HB-NAME-ID-FULL-NAME:CAPS"></a>HB_NAME_ID_FULL_NAME</p></td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td class="enum_member_name"><p><a name="HB-NAME-ID-VERSION-STRING:CAPS"></a>HB_NAME_ID_VERSION_STRING</p></td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td class="enum_member_name"><p><a name="HB-NAME-ID-POSTSCRIPT-NAME:CAPS"></a>HB_NAME_ID_POSTSCRIPT_NAME</p></td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td class="enum_member_name"><p><a name="HB-NAME-ID-TRADEMARK:CAPS"></a>HB_NAME_ID_TRADEMARK</p></td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td class="enum_member_name"><p><a name="HB-NAME-ID-MANUFACTURER:CAPS"></a>HB_NAME_ID_MANUFACTURER</p></td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td class="enum_member_name"><p><a name="HB-NAME-ID-DESIGNER:CAPS"></a>HB_NAME_ID_DESIGNER</p></td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td class="enum_member_name"><p><a name="HB-NAME-ID-DESCRIPTION:CAPS"></a>HB_NAME_ID_DESCRIPTION</p></td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td class="enum_member_name"><p><a name="HB-NAME-ID-VENDOR-URL:CAPS"></a>HB_NAME_ID_VENDOR_URL</p></td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td class="enum_member_name"><p><a name="HB-NAME-ID-DESIGNER-URL:CAPS"></a>HB_NAME_ID_DESIGNER_URL</p></td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td class="enum_member_name"><p><a name="HB-NAME-ID-LICENSE:CAPS"></a>HB_NAME_ID_LICENSE</p></td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td class="enum_member_name"><p><a name="HB-NAME-ID-LICENSE-URL:CAPS"></a>HB_NAME_ID_LICENSE_URL</p></td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td class="enum_member_name"><p><a name="HB-NAME-ID-TYPOGRAPHIC-FAMILY:CAPS"></a>HB_NAME_ID_TYPOGRAPHIC_FAMILY</p></td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td class="enum_member_name"><p><a name="HB-NAME-ID-TYPOGRAPHIC-SUBFAMILY:CAPS"></a>HB_NAME_ID_TYPOGRAPHIC_SUBFAMILY</p></td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td class="enum_member_name"><p><a name="HB-NAME-ID-MAC-FULL-NAME:CAPS"></a>HB_NAME_ID_MAC_FULL_NAME</p></td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td class="enum_member_name"><p><a name="HB-NAME-ID-SAMPLE-TEXT:CAPS"></a>HB_NAME_ID_SAMPLE_TEXT</p></td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td class="enum_member_name"><p><a name="HB-NAME-ID-CID-FINDFONT-NAME:CAPS"></a>HB_NAME_ID_CID_FINDFONT_NAME</p></td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td class="enum_member_name"><p><a name="HB-NAME-ID-WWS-FAMILY:CAPS"></a>HB_NAME_ID_WWS_FAMILY</p></td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td class="enum_member_name"><p><a name="HB-NAME-ID-WWS-SUBFAMILY:CAPS"></a>HB_NAME_ID_WWS_SUBFAMILY</p></td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td class="enum_member_name"><p><a name="HB-NAME-ID-LIGHT-BACKGROUND:CAPS"></a>HB_NAME_ID_LIGHT_BACKGROUND</p></td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td class="enum_member_name"><p><a name="HB-NAME-ID-DARK-BACKGROUND:CAPS"></a>HB_NAME_ID_DARK_BACKGROUND</p></td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td class="enum_member_name"><p><a name="HB-NAME-ID-VARIATIONS-PS-PREFIX:CAPS"></a>HB_NAME_ID_VARIATIONS_PS_PREFIX</p></td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td class="enum_member_name"><p><a name="HB-NAME-ID-INVALID:CAPS"></a>HB_NAME_ID_INVALID</p></td>
-<td class="enum_member_description">
-<p>Value to represent a nonexistent name ID.</p>
-</td>
-<td class="enum_member_annotations"> </td>
-</tr>
-<tr>
-<td class="enum_member_name"><p><a name="HB-NAME-ID-MAX-VALUE-SIGNED:CAPS"></a>_HB_NAME_ID_MAX_VALUE_SIGNED</p></td>
-<td> </td>
-<td> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
 <p class="since">Since 2.0.0</p>
 </div>
 </div>
