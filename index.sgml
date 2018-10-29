@@ -481,8 +481,12 @@
 <ANCHOR id="hb-color-get-green" href="harfbuzz/harfbuzz-hb-ot-color.html#hb-color-get-green">
 <ANCHOR id="hb-color-get-red" href="harfbuzz/harfbuzz-hb-ot-color.html#hb-color-get-red">
 <ANCHOR id="hb-ot-color-glyph-get-layers" href="harfbuzz/harfbuzz-hb-ot-color.html#hb-ot-color-glyph-get-layers">
+<ANCHOR id="hb-ot-color-glyph-reference-png" href="harfbuzz/harfbuzz-hb-ot-color.html#hb-ot-color-glyph-reference-png">
+<ANCHOR id="hb-ot-color-glyph-reference-svg" href="harfbuzz/harfbuzz-hb-ot-color.html#hb-ot-color-glyph-reference-svg">
 <ANCHOR id="hb-ot-color-has-layers" href="harfbuzz/harfbuzz-hb-ot-color.html#hb-ot-color-has-layers">
 <ANCHOR id="hb-ot-color-has-palettes" href="harfbuzz/harfbuzz-hb-ot-color.html#hb-ot-color-has-palettes">
+<ANCHOR id="hb-ot-color-has-png" href="harfbuzz/harfbuzz-hb-ot-color.html#hb-ot-color-has-png">
+<ANCHOR id="hb-ot-color-has-svg" href="harfbuzz/harfbuzz-hb-ot-color.html#hb-ot-color-has-svg">
 <ANCHOR id="hb-ot-color-palette-color-get-name-id" href="harfbuzz/harfbuzz-hb-ot-color.html#hb-ot-color-palette-color-get-name-id">
 <ANCHOR id="hb-ot-color-palette-get-colors" href="harfbuzz/harfbuzz-hb-ot-color.html#hb-ot-color-palette-get-colors">
 <ANCHOR id="hb-ot-color-palette-get-count" href="harfbuzz/harfbuzz-hb-ot-color.html#hb-ot-color-palette-get-count">

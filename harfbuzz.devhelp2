@@ -478,8 +478,12 @@
     <keyword type="macro" name="hb_color_get_green()" link="harfbuzz-hb-ot-color.html#hb-color-get-green" since="2.1.0"/>
     <keyword type="macro" name="hb_color_get_red()" link="harfbuzz-hb-ot-color.html#hb-color-get-red" since="2.1.0"/>
     <keyword type="function" name="hb_ot_color_glyph_get_layers ()" link="harfbuzz-hb-ot-color.html#hb-ot-color-glyph-get-layers" since="2.1.0"/>
+    <keyword type="function" name="hb_ot_color_glyph_reference_png ()" link="harfbuzz-hb-ot-color.html#hb-ot-color-glyph-reference-png" since="REPLACEME"/>
+    <keyword type="function" name="hb_ot_color_glyph_reference_svg ()" link="harfbuzz-hb-ot-color.html#hb-ot-color-glyph-reference-svg" since="REPLACEME"/>
     <keyword type="function" name="hb_ot_color_has_layers ()" link="harfbuzz-hb-ot-color.html#hb-ot-color-has-layers" since="2.1.0"/>
     <keyword type="function" name="hb_ot_color_has_palettes ()" link="harfbuzz-hb-ot-color.html#hb-ot-color-has-palettes" since="2.1.0"/>
+    <keyword type="function" name="hb_ot_color_has_png ()" link="harfbuzz-hb-ot-color.html#hb-ot-color-has-png" since="REPLACEME"/>
+    <keyword type="function" name="hb_ot_color_has_svg ()" link="harfbuzz-hb-ot-color.html#hb-ot-color-has-svg" since="REPLACEME"/>
     <keyword type="function" name="hb_ot_color_palette_color_get_name_id ()" link="harfbuzz-hb-ot-color.html#hb-ot-color-palette-color-get-name-id" since="2.1.0"/>
     <keyword type="function" name="hb_ot_color_palette_get_colors ()" link="harfbuzz-hb-ot-color.html#hb-ot-color-palette-get-colors" since="2.1.0"/>
     <keyword type="function" name="hb_ot_color_palette_get_count ()" link="harfbuzz-hb-ot-color.html#hb-ot-color-palette-get-count" since="2.1.0"/>
