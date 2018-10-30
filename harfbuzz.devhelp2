@@ -582,7 +582,7 @@
     <keyword type="function" name="hb_ot_name_get_utf16 ()" link="harfbuzz-hb-ot-name.html#hb-ot-name-get-utf16" since="2.1.0"/>
     <keyword type="function" name="hb_ot_name_get_utf32 ()" link="harfbuzz-hb-ot-name.html#hb-ot-name-get-utf32" since="2.1.0"/>
     <keyword type="function" name="hb_ot_name_get_utf8 ()" link="harfbuzz-hb-ot-name.html#hb-ot-name-get-utf8" since="2.1.0"/>
-    <keyword type="typedef" name="hb_name_id_t" link="harfbuzz-hb-ot-name.html#hb-name-id-t" since="2.0.0"/>
+    <keyword type="typedef" name="hb_ot_name_id_t" link="harfbuzz-hb-ot-name.html#hb-ot-name-id-t" since="2.0.0"/>
     <keyword type="function" name="hb_ot_shape_glyphs_closure ()" link="harfbuzz-hb-ot-shape.html#hb-ot-shape-glyphs-closure" since="0.9.2"/>
     <keyword type="function" name="hb_ot_var_has_data ()" link="harfbuzz-hb-ot-var.html#hb-ot-var-has-data" since="1.4.2"/>
     <keyword type="function" name="hb_ot_var_find_axis ()" link="harfbuzz-hb-ot-var.html#hb-ot-var-find-axis" since="1.4.2"/>

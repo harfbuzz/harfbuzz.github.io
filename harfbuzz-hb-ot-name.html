@@ -80,7 +80,7 @@
 </colgroup>
 <tbody><tr>
 <td class="typedef_keyword">typedef</td>
-<td class="function_name"><a class="link" href="harfbuzz-hb-ot-name.html#hb-name-id-t" title="hb_name_id_t">hb_name_id_t</a></td>
+<td class="function_name"><a class="link" href="harfbuzz-hb-ot-name.html#hb-ot-name-id-t" title="hb_ot_name_id_t">hb_ot_name_id_t</a></td>
 </tr></tbody>
 </table></div>
 </div>
@@ -144,7 +144,7 @@ used as long as <em class="parameter"><code>face</code></em>
 <a name="hb-ot-name-get-utf16"></a><h3>hb_ot_name_get_utf16 ()</h3>
 <pre class="programlisting">unsigned <span class="returnvalue">int</span>
 hb_ot_name_get_utf16 (<em class="parameter"><code><a class="link" href="harfbuzz-hb-face.html#hb-face-t"><span class="type">hb_face_t</span></a> *face</code></em>,
-                      <em class="parameter"><code><a class="link" href="harfbuzz-hb-ot-name.html#hb-name-id-t" title="hb_name_id_t"><span class="type">hb_name_id_t</span></a> name_id</code></em>,
+                      <em class="parameter"><code><a class="link" href="harfbuzz-hb-ot-name.html#hb-ot-name-id-t" title="hb_ot_name_id_t"><span class="type">hb_ot_name_id_t</span></a> name_id</code></em>,
                       <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-language-t" title="hb_language_t"><span class="type">hb_language_t</span></a> language</code></em>,
                       <em class="parameter"><code>unsigned <span class="type">int</span> *text_size</code></em>,
                       <em class="parameter"><code><span class="type">uint16_t</span> *text</code></em>);</pre>
@@ -203,7 +203,7 @@ text written to buffer. </p></td>
 <a name="hb-ot-name-get-utf32"></a><h3>hb_ot_name_get_utf32 ()</h3>
 <pre class="programlisting">unsigned <span class="returnvalue">int</span>
 hb_ot_name_get_utf32 (<em class="parameter"><code><a class="link" href="harfbuzz-hb-face.html#hb-face-t"><span class="type">hb_face_t</span></a> *face</code></em>,
-                      <em class="parameter"><code><a class="link" href="harfbuzz-hb-ot-name.html#hb-name-id-t" title="hb_name_id_t"><span class="type">hb_name_id_t</span></a> name_id</code></em>,
+                      <em class="parameter"><code><a class="link" href="harfbuzz-hb-ot-name.html#hb-ot-name-id-t" title="hb_ot_name_id_t"><span class="type">hb_ot_name_id_t</span></a> name_id</code></em>,
                       <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-language-t" title="hb_language_t"><span class="type">hb_language_t</span></a> language</code></em>,
                       <em class="parameter"><code>unsigned <span class="type">int</span> *text_size</code></em>,
                       <em class="parameter"><code><span class="type">uint32_t</span> *text</code></em>);</pre>
@@ -262,7 +262,7 @@ text written to buffer. </p></td>
 <a name="hb-ot-name-get-utf8"></a><h3>hb_ot_name_get_utf8 ()</h3>
 <pre class="programlisting">unsigned <span class="returnvalue">int</span>
 hb_ot_name_get_utf8 (<em class="parameter"><code><a class="link" href="harfbuzz-hb-face.html#hb-face-t"><span class="type">hb_face_t</span></a> *face</code></em>,
-                     <em class="parameter"><code><a class="link" href="harfbuzz-hb-ot-name.html#hb-name-id-t" title="hb_name_id_t"><span class="type">hb_name_id_t</span></a> name_id</code></em>,
+                     <em class="parameter"><code><a class="link" href="harfbuzz-hb-ot-name.html#hb-ot-name-id-t" title="hb_ot_name_id_t"><span class="type">hb_ot_name_id_t</span></a> name_id</code></em>,
                      <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-language-t" title="hb_language_t"><span class="type">hb_language_t</span></a> language</code></em>,
                      <em class="parameter"><code>unsigned <span class="type">int</span> *text_size</code></em>,
                      <em class="parameter"><code><span class="type">char</span> *text</code></em>);</pre>
@@ -320,8 +320,8 @@ text written to buffer. </p></td>
 <div class="refsect1">
 <a name="harfbuzz-hb-ot-name.other_details"></a><h2>Types and Values</h2>
 <div class="refsect2">
-<a name="hb-name-id-t"></a><h3>hb_name_id_t</h3>
-<pre class="programlisting">typedef unsigned int hb_name_id_t;
+<a name="hb-ot-name-id-t"></a><h3>hb_ot_name_id_t</h3>
+<pre class="programlisting">typedef unsigned int hb_ot_name_id_t;
 </pre>
 <p>An integral type representing an OpenType 'name' table name identifier.
 There are predefined name IDs, as well as name IDs return from other
