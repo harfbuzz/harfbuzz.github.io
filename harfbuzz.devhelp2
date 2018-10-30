@@ -94,6 +94,7 @@
       </sub>
       <sub name="API Index" link="api-index-full.html"/>
       <sub name="Index of deprecated API" link="deprecated-api-index.html"/>
+      <sub name="Index of new symbols in 2.1.0" link="api-index-2-1-0.html"/>
       <sub name="Index of new symbols in 2.0.0" link="api-index-2-0-0.html"/>
       <sub name="Index of new symbols in 1.9.0" link="api-index-1-9-0.html"/>
       <sub name="Index of new symbols in 1.8.6" link="api-index-1-8-6.html"/>
@@ -498,19 +499,19 @@
     <keyword type="macro" name="hb_color_get_green()" link="harfbuzz-hb-ot-color.html#hb-color-get-green" since="2.1.0"/>
     <keyword type="macro" name="hb_color_get_red()" link="harfbuzz-hb-ot-color.html#hb-color-get-red" since="2.1.0"/>
     <keyword type="function" name="hb_ot_color_glyph_get_layers ()" link="harfbuzz-hb-ot-color.html#hb-ot-color-glyph-get-layers" since="2.1.0"/>
-    <keyword type="function" name="hb_ot_color_glyph_reference_png ()" link="harfbuzz-hb-ot-color.html#hb-ot-color-glyph-reference-png" since="REPLACEME"/>
-    <keyword type="function" name="hb_ot_color_glyph_reference_svg ()" link="harfbuzz-hb-ot-color.html#hb-ot-color-glyph-reference-svg" since="REPLACEME"/>
+    <keyword type="function" name="hb_ot_color_glyph_reference_png ()" link="harfbuzz-hb-ot-color.html#hb-ot-color-glyph-reference-png" since="2.1.0"/>
+    <keyword type="function" name="hb_ot_color_glyph_reference_svg ()" link="harfbuzz-hb-ot-color.html#hb-ot-color-glyph-reference-svg" since="2.1.0"/>
     <keyword type="function" name="hb_ot_color_has_layers ()" link="harfbuzz-hb-ot-color.html#hb-ot-color-has-layers" since="2.1.0"/>
     <keyword type="function" name="hb_ot_color_has_palettes ()" link="harfbuzz-hb-ot-color.html#hb-ot-color-has-palettes" since="2.1.0"/>
-    <keyword type="function" name="hb_ot_color_has_png ()" link="harfbuzz-hb-ot-color.html#hb-ot-color-has-png" since="REPLACEME"/>
-    <keyword type="function" name="hb_ot_color_has_svg ()" link="harfbuzz-hb-ot-color.html#hb-ot-color-has-svg" since="REPLACEME"/>
+    <keyword type="function" name="hb_ot_color_has_png ()" link="harfbuzz-hb-ot-color.html#hb-ot-color-has-png" since="2.1.0"/>
+    <keyword type="function" name="hb_ot_color_has_svg ()" link="harfbuzz-hb-ot-color.html#hb-ot-color-has-svg" since="2.1.0"/>
     <keyword type="function" name="hb_ot_color_palette_color_get_name_id ()" link="harfbuzz-hb-ot-color.html#hb-ot-color-palette-color-get-name-id" since="2.1.0"/>
     <keyword type="function" name="hb_ot_color_palette_get_colors ()" link="harfbuzz-hb-ot-color.html#hb-ot-color-palette-get-colors" since="2.1.0"/>
     <keyword type="function" name="hb_ot_color_palette_get_count ()" link="harfbuzz-hb-ot-color.html#hb-ot-color-palette-get-count" since="2.1.0"/>
     <keyword type="function" name="hb_ot_color_palette_get_flags ()" link="harfbuzz-hb-ot-color.html#hb-ot-color-palette-get-flags" since="2.1.0"/>
     <keyword type="function" name="hb_ot_color_palette_get_name_id ()" link="harfbuzz-hb-ot-color.html#hb-ot-color-palette-get-name-id" since="2.1.0"/>
     <keyword type="typedef" name="hb_color_t" link="harfbuzz-hb-ot-color.html#hb-color-t" since="2.1.0"/>
-    <keyword type="enum" name="enum hb_ot_color_palette_flags_t" link="harfbuzz-hb-ot-color.html#hb-ot-color-palette-flags-t" since="REPLACEME"/>
+    <keyword type="enum" name="enum hb_ot_color_palette_flags_t" link="harfbuzz-hb-ot-color.html#hb-ot-color-palette-flags-t" since="2.1.0"/>
     <keyword type="function" name="hb_ot_font_set_funcs ()" link="harfbuzz-hb-ot-font.html#hb-ot-font-set-funcs" since="0.9.28"/>
     <keyword type="function" name="hb_ot_tag_to_language ()" link="harfbuzz-hb-ot-layout.html#hb-ot-tag-to-language" since="0.9.2"/>
     <keyword type="function" name="hb_ot_tag_to_script ()" link="harfbuzz-hb-ot-layout.html#hb-ot-tag-to-script"/>
