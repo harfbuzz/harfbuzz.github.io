@@ -4,15 +4,35 @@
   <chapters>
     <sub name="User's manual" link="pt01.html">
       <sub name="What is HarfBuzz?" link="what-is-harfbuzz.html">
-        <sub name="Why do I need it?" link="what-is-harfbuzz.html#why-do-i-need-it"/>
+        <sub name="What is text shaping?" link="what-is-harfbuzz.html#what-is-text-shaping"/>
+        <sub name="Why do I need a shaping engine?" link="why-do-i-need-a-shaping-engine.html"/>
+        <sub name="What does HarfBuzz do?" link="ch01s03.html"/>
+        <sub name="What HarfBuzz doesn't do" link="what-harfbuzz-doesnt-do.html"/>
         <sub name="Why is it called HarfBuzz?" link="why-is-it-called-harfbuzz.html"/>
       </sub>
-      <sub name="Install HarfBuzz" link="install-harfbuzz.html">
-        <sub name="Download" link="install-harfbuzz.html#download"/>
-        <sub name="Building" link="building.html"/>
+      <sub name="Installing HarfBuzz" link="install-harfbuzz.html">
+        <sub name="Downloading HarfBuzz" link="install-harfbuzz.html#download"/>
+        <sub name="Building HarfBuzz" link="building.html">
+          <sub name="Building on Linux" link="building.html#building.linux"/>
+          <sub name="Building on Windows" link="building.html#building.windows"/>
+          <sub name="Building on macOS" link="building.html#building.macos"/>
+          <sub name="Configuration options" link="building.html#configuration"/>
+        </sub>
       </sub>
-      <sub name="Hello, HarfBuzz" link="hello-harfbuzz.html">
-        <sub name="What HarfBuzz doesn't do" link="hello-harfbuzz.html#what-harfbuzz-doesnt-do"/>
+      <sub name="Getting started with HarfBuzz" link="getting-started.html">
+        <sub name="An overview of the HarfBuzz shaping API" link="getting-started.html#id-1.2.4.2"/>
+        <sub name="Terminology" link="ch03s02.html"/>
+        <sub name="A simple shaping example" link="ch03s03.html"/>
+      </sub>
+      <sub name="Shaping concepts" link="shaping-concepts.html">
+        <sub name="Text shaping" link="shaping-concepts.html#text-shaping-concepts"/>
+        <sub name="Complex scripts" link="complex-scripts.html"/>
+        <sub name="Shaping operations" link="shaping-operations.html"/>
+        <sub name="Unicode character categories" link="unicode-character-categories.html"/>
+        <sub name="Text runs" link="text-runs.html"/>
+        <sub name="OpenType shaping models" link="opentype-shaping-models.html"/>
+        <sub name="Graphite shaping" link="graphite-shaping.html"/>
+        <sub name="AAT shaping" link="aat-shaping.html"/>
       </sub>
       <sub name="Buffers, language, script and direction" link="buffers-language-script-and-direction.html">
         <sub name="Creating and destroying buffers" link="buffers-language-script-and-direction.html#creating-and-destroying-buffers"/>
@@ -40,7 +60,7 @@
       <sub name="Glyph information" link="pt01.html#glyph-information"/>
     </sub>
     <sub name="Reference manual" link="pt02.html">
-      <sub name="Core API" link="ch08.html">
+      <sub name="Core API" link="ch09.html">
         <sub name="hb-blob" link="harfbuzz-hb-blob.html"/>
         <sub name="hb-buffer" link="harfbuzz-hb-buffer.html"/>
         <sub name="hb-common" link="harfbuzz-hb-common.html"/>
@@ -54,7 +74,7 @@
         <sub name="hb-unicode" link="harfbuzz-hb-unicode.html"/>
         <sub name="hb-version" link="harfbuzz-hb-version.html"/>
       </sub>
-      <sub name="OpenType API" link="ch09.html">
+      <sub name="OpenType API" link="ch10.html">
         <sub name="hb-ot-color" link="harfbuzz-hb-ot-color.html"/>
         <sub name="hb-ot-font" link="harfbuzz-hb-ot-font.html"/>
         <sub name="hb-ot-layout" link="harfbuzz-hb-ot-layout.html"/>
@@ -63,7 +83,7 @@
         <sub name="hb-ot-shape" link="harfbuzz-hb-ot-shape.html"/>
         <sub name="hb-ot-var" link="harfbuzz-hb-ot-var.html"/>
       </sub>
-      <sub name="Integration API" link="ch10.html">
+      <sub name="Integration API" link="ch11.html">
         <sub name="hb-coretext" link="harfbuzz-hb-coretext.html"/>
         <sub name="hb-ft" link="harfbuzz-hb-ft.html"/>
         <sub name="hb-glib" link="harfbuzz-hb-glib.html"/>

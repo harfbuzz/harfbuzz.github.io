@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>HarfBuzz Manual: HarfBuzz Manual</title>
 <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
-<meta name="description" content="HarfBuzz  HarfBuzz is an OpenType text shaping engine. The current HarfBuzz codebase, formerly known as harfbuzz-ng, is versioned 1.x.x and is stable and under active maintenance. This is what is used in latest versions of Firefox, GNOME, ChromeOS, Chrome, LibreOffice, XeTeX, Android, and KDE, among other places. The canonical source tree is available here. Also available on github. See for release tarballs. The old HarfBuzz codebase, these days known as harfbuzz-old, was derived from FreeType, Pango, and Qt and is available here. It is not actively developed or maintained, and is extremely buggy. All users are encouraged to switch over to the new HarfBuzz as soon as possible. There are no release tarballs of old HarfBuzz whatsoever.">
+<meta name="description" content="HarfBuzz  HarfBuzz is an OpenType text shaping engine. Using the HarfBuzz library allows programs to convert a sequence of Unicode input into properly formatted and positioned glyph output—for any writing system and language. The canonical source-code tree is available at github.com/harfbuzz/harfbuzz and is also available at cgit.freedesktop.org/harfbuzz. See for release tarballs.">
 <link rel="home" href="index.html" title="HarfBuzz Manual">
 <link rel="next" href="pt01.html" title="Part I. User's manual">
 <meta name="generator" content="GTK-Doc V1.20 (XML mode)">
@@ -20,28 +20,18 @@
 <div align="center"><img src="HarfBuzz.png" align="middle"></div>
 <p>
         HarfBuzz is an <a class="ulink" href="http://www.microsoft.com/typography/otspec/" target="_top">OpenType</a>
-        text shaping engine.
+        text shaping engine. Using the HarfBuzz library allows
+	programs to convert a sequence of Unicode input into
+	properly formatted and positioned glyph output—for any writing
+	system and language.
       </p>
 <p>
-        The current HarfBuzz codebase, formerly known as harfbuzz-ng, is
-        versioned 1.x.x and is stable and under active maintenance. This is
-        what is used in latest versions of Firefox, GNOME, ChromeOS, Chrome,
-        LibreOffice, XeTeX, Android, and KDE, among other places. The canonical
-        source tree is available
-        <a class="ulink" href="http://cgit.freedesktop.org/harfbuzz/" target="_top">here</a>.
-        Also available on
-        <a class="ulink" href="https://github.com/harfbuzz/harfbuzz" target="_top">github</a>.
-        See <a class="xref" href="install-harfbuzz.html#download" title="Download">Download</a> for release tarballs.
-      </p>
-<p>
-        The old HarfBuzz codebase, these days known as harfbuzz-old, was
-        derived from <a class="ulink" href="http://freetype.org/" target="_top">FreeType</a>,
-        <a class="ulink" href="http://pango.org/" target="_top">Pango</a>, and
-        <a class="ulink" href="http://qt-project.org/" target="_top">Qt</a> and is available
-        <a class="ulink" href="http://cgit.freedesktop.org/harfbuzz.old/" target="_top">here</a>.
-        It is not actively developed or maintained, and is extremely buggy. All
-        users are encouraged to switch over to the new HarfBuzz as soon as
-        possible.  There are no release tarballs of old HarfBuzz whatsoever.
+	The canonical source-code tree is available at
+        <a class="ulink" href="https://github.com/harfbuzz/harfbuzz" target="_top">github.com/harfbuzz/harfbuzz</a>
+        and is also available at
+        <a class="ulink" href="http://cgit.freedesktop.org/harfbuzz/" target="_top">cgit.freedesktop.org/harfbuzz</a>.
+	See <a class="xref" href="install-harfbuzz.html#download" title="Downloading HarfBuzz">Downloading HarfBuzz</a> for
+	release tarballs.
       </p>
 </div></div>
 </div>
@@ -52,16 +42,40 @@
 <dd><dl>
 <dt><span class="chapter"><a href="what-is-harfbuzz.html">What is HarfBuzz?</a></span></dt>
 <dd><dl>
-<dt><span class="section"><a href="what-is-harfbuzz.html#why-do-i-need-it">Why do I need it?</a></span></dt>
+<dt><span class="section"><a href="what-is-harfbuzz.html#what-is-text-shaping">What is text shaping?</a></span></dt>
+<dt><span class="section"><a href="why-do-i-need-a-shaping-engine.html">Why do I need a shaping engine?</a></span></dt>
+<dt><span class="section"><a href="ch01s03.html">What does HarfBuzz do?</a></span></dt>
+<dt><span class="section"><a href="what-harfbuzz-doesnt-do.html">What HarfBuzz doesn't do</a></span></dt>
 <dt><span class="section"><a href="why-is-it-called-harfbuzz.html">Why is it called HarfBuzz?</a></span></dt>
 </dl></dd>
-<dt><span class="chapter"><a href="install-harfbuzz.html">Install HarfBuzz</a></span></dt>
+<dt><span class="chapter"><a href="install-harfbuzz.html">Installing HarfBuzz</a></span></dt>
 <dd><dl>
-<dt><span class="section"><a href="install-harfbuzz.html#download">Download</a></span></dt>
-<dt><span class="section"><a href="building.html">Building</a></span></dt>
+<dt><span class="section"><a href="install-harfbuzz.html#download">Downloading HarfBuzz</a></span></dt>
+<dt><span class="section"><a href="building.html">Building HarfBuzz</a></span></dt>
+<dd><dl>
+<dt><span class="section"><a href="building.html#building.linux">Building on Linux</a></span></dt>
+<dt><span class="section"><a href="building.html#building.windows">Building on Windows</a></span></dt>
+<dt><span class="section"><a href="building.html#building.macos">Building on macOS</a></span></dt>
+<dt><span class="section"><a href="building.html#configuration">Configuration options</a></span></dt>
 </dl></dd>
-<dt><span class="chapter"><a href="hello-harfbuzz.html">Hello, HarfBuzz</a></span></dt>
-<dd><dl><dt><span class="section"><a href="hello-harfbuzz.html#what-harfbuzz-doesnt-do">What HarfBuzz doesn't do</a></span></dt></dl></dd>
+</dl></dd>
+<dt><span class="chapter"><a href="getting-started.html">Getting started with HarfBuzz</a></span></dt>
+<dd><dl>
+<dt><span class="section"><a href="getting-started.html#id-1.2.4.2">An overview of the HarfBuzz shaping API</a></span></dt>
+<dt><span class="section"><a href="ch03s02.html">Terminology</a></span></dt>
+<dt><span class="section"><a href="ch03s03.html">A simple shaping example</a></span></dt>
+</dl></dd>
+<dt><span class="chapter"><a href="shaping-concepts.html">Shaping concepts</a></span></dt>
+<dd><dl>
+<dt><span class="section"><a href="shaping-concepts.html#text-shaping-concepts">Text shaping</a></span></dt>
+<dt><span class="section"><a href="complex-scripts.html">Complex scripts</a></span></dt>
+<dt><span class="section"><a href="shaping-operations.html">Shaping operations</a></span></dt>
+<dt><span class="section"><a href="unicode-character-categories.html">Unicode character categories</a></span></dt>
+<dt><span class="section"><a href="text-runs.html">Text runs</a></span></dt>
+<dt><span class="section"><a href="opentype-shaping-models.html">OpenType shaping models</a></span></dt>
+<dt><span class="section"><a href="graphite-shaping.html">Graphite shaping</a></span></dt>
+<dt><span class="section"><a href="aat-shaping.html">AAT shaping</a></span></dt>
+</dl></dd>
 <dt><span class="chapter"><a href="buffers-language-script-and-direction.html">Buffers, language, script and direction</a></span></dt>
 <dd><dl>
 <dt><span class="section"><a href="buffers-language-script-and-direction.html#creating-and-destroying-buffers">Creating and destroying buffers</a></span></dt>
@@ -96,7 +110,7 @@
 </dl></dd>
 <dt><span class="part"><a href="pt02.html">II. Reference manual</a></span></dt>
 <dd><dl>
-<dt><span class="chapter"><a href="ch08.html">Core API</a></span></dt>
+<dt><span class="chapter"><a href="ch09.html">Core API</a></span></dt>
 <dd><dl>
 <dt>
 <span class="refentrytitle"><a href="harfbuzz-hb-blob.html">hb-blob</a></span><span class="refpurpose"> — Binary data containers</span>
@@ -135,7 +149,7 @@
 <span class="refentrytitle"><a href="harfbuzz-hb-version.html">hb-version</a></span><span class="refpurpose"> — Information about the version of HarfBuzz in use</span>
 </dt>
 </dl></dd>
-<dt><span class="chapter"><a href="ch09.html">OpenType API</a></span></dt>
+<dt><span class="chapter"><a href="ch10.html">OpenType API</a></span></dt>
 <dd><dl>
 <dt>
 <span class="refentrytitle"><a href="harfbuzz-hb-ot-color.html">hb-ot-color</a></span><span class="refpurpose"> — OpenType Color Fonts</span>
@@ -159,7 +173,7 @@
 <span class="refentrytitle"><a href="harfbuzz-hb-ot-var.html">hb-ot-var</a></span><span class="refpurpose"> — OpenType Font Variations</span>
 </dt>
 </dl></dd>
-<dt><span class="chapter"><a href="ch10.html">Integration API</a></span></dt>
+<dt><span class="chapter"><a href="ch11.html">Integration API</a></span></dt>
 <dd><dl>
 <dt>
 <span class="refentrytitle"><a href="harfbuzz-hb-coretext.html">hb-coretext</a></span><span class="refpurpose"> — CoreText integration</span>

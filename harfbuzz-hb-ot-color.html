@@ -5,8 +5,8 @@
 <title>HarfBuzz Manual: hb-ot-color</title>
 <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
 <link rel="home" href="index.html" title="HarfBuzz Manual">
-<link rel="up" href="ch09.html" title="OpenType API">
-<link rel="prev" href="ch09.html" title="OpenType API">
+<link rel="up" href="ch10.html" title="OpenType API">
+<link rel="prev" href="ch10.html" title="OpenType API">
 <link rel="next" href="harfbuzz-hb-ot-font.html" title="hb-ot-font">
 <meta name="generator" content="GTK-Doc V1.20 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
@@ -19,8 +19,8 @@
                   <a href="#harfbuzz-hb-ot-color.object-hierarchy" class="shortcut">Object Hierarchy</a></span>
 </td>
 <td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
-<td><a accesskey="u" href="ch09.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
-<td><a accesskey="p" href="ch09.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch10.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="ch10.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
 <td><a accesskey="n" href="harfbuzz-hb-ot-font.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
 </tr></table>
 <div class="refentry">
@@ -245,7 +245,7 @@ hb_ot_color_glyph_get_layers (<em class="parameter"><code><a class="link" href="
                               <em class="parameter"><code>unsigned <span class="type">int</span> *count</code></em>,
                               <em class="parameter"><code><span class="type">hb_ot_color_layer_t</span> *layers</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.4.2.8.7.4"></a><h4>Parameters</h4>
+<a name="id-1.3.5.2.8.7.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -283,7 +283,7 @@ and returns number of written layers. </p></td>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.4.2.8.7.5"></a><h4>Returns</h4>
+<a name="id-1.3.5.2.8.7.5"></a><h4>Returns</h4>
 <p> Total number of layers a layered color glyph have.</p>
 <p></p>
 </div>
@@ -296,7 +296,7 @@ and returns number of written layers. </p></td>
 hb_ot_color_glyph_reference_png (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t"><span class="type">hb_font_t</span></a> *font</code></em>,
                                  <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> glyph</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.4.2.8.8.4"></a><h4>Parameters</h4>
+<a name="id-1.3.5.2.8.8.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -320,7 +320,7 @@ return the biggest one</p></td>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.4.2.8.8.5"></a><h4>Returns</h4>
+<a name="id-1.3.5.2.8.8.5"></a><h4>Returns</h4>
 <p> respective png blob of the glyph, if available. </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
@@ -333,7 +333,7 @@ return the biggest one</p></td>
 hb_ot_color_glyph_reference_svg (<em class="parameter"><code><a class="link" href="harfbuzz-hb-face.html#hb-face-t"><span class="type">hb_face_t</span></a> *face</code></em>,
                                  <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> glyph</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.4.2.8.9.4"></a><h4>Parameters</h4>
+<a name="id-1.3.5.2.8.9.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -355,7 +355,7 @@ hb_ot_color_glyph_reference_svg (<em class="parameter"><code><a class="link" hre
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.4.2.8.9.5"></a><h4>Returns</h4>
+<a name="id-1.3.5.2.8.9.5"></a><h4>Returns</h4>
 <p> respective svg blob of the glyph, if available. </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
@@ -367,7 +367,7 @@ hb_ot_color_glyph_reference_svg (<em class="parameter"><code><a class="link" hre
 <pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
 hb_ot_color_has_layers (<em class="parameter"><code><a class="link" href="harfbuzz-hb-face.html#hb-face-t"><span class="type">hb_face_t</span></a> *face</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.4.2.8.10.4"></a><h4>Parameters</h4>
+<a name="id-1.3.5.2.8.10.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -382,7 +382,7 @@ hb_ot_color_has_layers (<em class="parameter"><code><a class="link" href="harfbu
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.4.2.8.10.5"></a><h4>Returns</h4>
+<a name="id-1.3.5.2.8.10.5"></a><h4>Returns</h4>
 <p> whether COLR table is available.</p>
 <p></p>
 </div>
@@ -394,7 +394,7 @@ hb_ot_color_has_layers (<em class="parameter"><code><a class="link" href="harfbu
 <pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
 hb_ot_color_has_palettes (<em class="parameter"><code><a class="link" href="harfbuzz-hb-face.html#hb-face-t"><span class="type">hb_face_t</span></a> *face</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.4.2.8.11.4"></a><h4>Parameters</h4>
+<a name="id-1.3.5.2.8.11.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -409,7 +409,7 @@ hb_ot_color_has_palettes (<em class="parameter"><code><a class="link" href="harf
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.4.2.8.11.5"></a><h4>Returns</h4>
+<a name="id-1.3.5.2.8.11.5"></a><h4>Returns</h4>
 <p> whether CPAL table is available.</p>
 <p></p>
 </div>
@@ -421,7 +421,7 @@ hb_ot_color_has_palettes (<em class="parameter"><code><a class="link" href="harf
 <pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
 hb_ot_color_has_png (<em class="parameter"><code><a class="link" href="harfbuzz-hb-face.html#hb-face-t"><span class="type">hb_face_t</span></a> *face</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.4.2.8.12.4"></a><h4>Parameters</h4>
+<a name="id-1.3.5.2.8.12.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -436,7 +436,7 @@ hb_ot_color_has_png (<em class="parameter"><code><a class="link" href="harfbuzz-
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.4.2.8.12.5"></a><h4>Returns</h4>
+<a name="id-1.3.5.2.8.12.5"></a><h4>Returns</h4>
 <p> whether either of CBDT or sbix tables is available.</p>
 <p></p>
 </div>
@@ -448,7 +448,7 @@ hb_ot_color_has_png (<em class="parameter"><code><a class="link" href="harfbuzz-
 <pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
 hb_ot_color_has_svg (<em class="parameter"><code><a class="link" href="harfbuzz-hb-face.html#hb-face-t"><span class="type">hb_face_t</span></a> *face</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.4.2.8.13.4"></a><h4>Parameters</h4>
+<a name="id-1.3.5.2.8.13.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -463,7 +463,7 @@ hb_ot_color_has_svg (<em class="parameter"><code><a class="link" href="harfbuzz-
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.4.2.8.13.5"></a><h4>Returns</h4>
+<a name="id-1.3.5.2.8.13.5"></a><h4>Returns</h4>
 <p> whether SVG table is available.</p>
 <p></p>
 </div>
@@ -476,7 +476,7 @@ hb_ot_color_has_svg (<em class="parameter"><code><a class="link" href="harfbuzz-
 hb_ot_color_palette_color_get_name_id (<em class="parameter"><code><a class="link" href="harfbuzz-hb-face.html#hb-face-t"><span class="type">hb_face_t</span></a> *face</code></em>,
                                        <em class="parameter"><code>unsigned <span class="type">int</span> color_index</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.4.2.8.14.4"></a><h4>Parameters</h4>
+<a name="id-1.3.5.2.8.14.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -498,7 +498,7 @@ hb_ot_color_palette_color_get_name_id (<em class="parameter"><code><a class="lin
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.4.2.8.14.5"></a><h4>Returns</h4>
+<a name="id-1.3.5.2.8.14.5"></a><h4>Returns</h4>
 <p> Name ID associated with a palette entry, e.g. eye color</p>
 <p></p>
 </div>
@@ -515,7 +515,7 @@ hb_ot_color_palette_get_colors (<em class="parameter"><code><a class="link" href
                                 <em class="parameter"><code><a class="link" href="harfbuzz-hb-ot-color.html#hb-color-t" title="hb_color_t"><span class="type">hb_color_t</span></a> *colors</code></em>);</pre>
 <p>Retrieves the colors in a color palette.</p>
 <div class="refsect3">
-<a name="id-1.3.4.2.8.15.5"></a><h4>Parameters</h4>
+<a name="id-1.3.5.2.8.15.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -564,7 +564,7 @@ for allocating a buffer of suitable size before calling
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.4.2.8.15.6"></a><h4>Returns</h4>
+<a name="id-1.3.5.2.8.15.6"></a><h4>Returns</h4>
 <p> the total number of colors in the palette.</p>
 <p></p>
 </div>
@@ -576,7 +576,7 @@ for allocating a buffer of suitable size before calling
 <pre class="programlisting">unsigned <span class="returnvalue">int</span>
 hb_ot_color_palette_get_count (<em class="parameter"><code><a class="link" href="harfbuzz-hb-face.html#hb-face-t"><span class="type">hb_face_t</span></a> *face</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.4.2.8.16.4"></a><h4>Parameters</h4>
+<a name="id-1.3.5.2.8.16.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -591,7 +591,7 @@ hb_ot_color_palette_get_count (<em class="parameter"><code><a class="link" href=
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.4.2.8.16.5"></a><h4>Returns</h4>
+<a name="id-1.3.5.2.8.16.5"></a><h4>Returns</h4>
 <p> the number of color palettes in <em class="parameter"><code>face</code></em>
 , or zero if <em class="parameter"><code>face</code></em>
 has
@@ -607,7 +607,7 @@ no colors.</p>
 hb_ot_color_palette_get_flags (<em class="parameter"><code><a class="link" href="harfbuzz-hb-face.html#hb-face-t"><span class="type">hb_face_t</span></a> *face</code></em>,
                                <em class="parameter"><code>unsigned <span class="type">int</span> palette_index</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.4.2.8.17.4"></a><h4>Parameters</h4>
+<a name="id-1.3.5.2.8.17.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -629,7 +629,7 @@ hb_ot_color_palette_get_flags (<em class="parameter"><code><a class="link" href=
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.4.2.8.17.5"></a><h4>Returns</h4>
+<a name="id-1.3.5.2.8.17.5"></a><h4>Returns</h4>
 <p> the flags for the requested color palette.</p>
 <p></p>
 </div>
@@ -644,7 +644,7 @@ hb_ot_color_palette_get_name_id (<em class="parameter"><code><a class="link" hre
 <p>Retrieves the name id of a color palette. For example, a color font can
 have themed palettes like "Spring", "Summer", "Fall", and "Winter".</p>
 <div class="refsect3">
-<a name="id-1.3.4.2.8.18.5"></a><h4>Parameters</h4>
+<a name="id-1.3.5.2.8.18.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -666,7 +666,7 @@ have themed palettes like "Spring", "Summer", "Fall", and "Winter".</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.4.2.8.18.6"></a><h4>Returns</h4>
+<a name="id-1.3.5.2.8.18.6"></a><h4>Returns</h4>
 <p> an identifier within <em class="parameter"><code>face</code></em>
 's <code class="literal">name</code> table.
 If the requested palette has no name the result is <span class="type">HB_NAME_ID_INVALID</span>.</p>
@@ -688,7 +688,7 @@ If the requested palette has no name the result is <span class="type">HB_NAME_ID
 <div class="refsect2">
 <a name="hb-ot-color-palette-flags-t"></a><h3>enum hb_ot_color_palette_flags_t</h3>
 <div class="refsect3">
-<a name="id-1.3.4.2.9.3.3"></a><h4>Members</h4>
+<a name="id-1.3.5.2.9.3.3"></a><h4>Members</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="300px" class="enum_members_name">
