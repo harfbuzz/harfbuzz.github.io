@@ -620,6 +620,10 @@
 <ANCHOR id="hb-ot-var-get-axis-count" href="harfbuzz/harfbuzz-hb-ot-var.html#hb-ot-var-get-axis-count">
 <ANCHOR id="hb-ot-var-get-axes" href="harfbuzz/harfbuzz-hb-ot-var.html#hb-ot-var-get-axes">
 <ANCHOR id="hb-ot-var-axis-get-flags" href="harfbuzz/harfbuzz-hb-ot-var.html#hb-ot-var-axis-get-flags">
+<ANCHOR id="hb-ot-var-get-named-instance-count" href="harfbuzz/harfbuzz-hb-ot-var.html#hb-ot-var-get-named-instance-count">
+<ANCHOR id="hb-ot-var-named-instance-get-subfamily-name-id" href="harfbuzz/harfbuzz-hb-ot-var.html#hb-ot-var-named-instance-get-subfamily-name-id">
+<ANCHOR id="hb-ot-var-named-instance-get-postscript-name-id" href="harfbuzz/harfbuzz-hb-ot-var.html#hb-ot-var-named-instance-get-postscript-name-id">
+<ANCHOR id="hb-ot-var-named-instance-get-design-coords" href="harfbuzz/harfbuzz-hb-ot-var.html#hb-ot-var-named-instance-get-design-coords">
 <ANCHOR id="hb-ot-var-normalize-variations" href="harfbuzz/harfbuzz-hb-ot-var.html#hb-ot-var-normalize-variations">
 <ANCHOR id="hb-ot-var-normalize-coords" href="harfbuzz/harfbuzz-hb-ot-var.html#hb-ot-var-normalize-coords">
 <ANCHOR id="harfbuzz-hb-ot-var.other_details" href="harfbuzz/harfbuzz-hb-ot-var.html#harfbuzz-hb-ot-var.other_details">

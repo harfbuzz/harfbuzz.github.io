@@ -79,6 +79,36 @@
 </td>
 </tr>
 <tr>
+<td class="function_type">unsigned <span class="returnvalue">int</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-ot-var.html#hb-ot-var-get-named-instance-count" title="hb_ot_var_get_named_instance_count ()">hb_ot_var_get_named_instance_count</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="harfbuzz-hb-ot-name.html#hb-ot-name-id-t" title="hb_ot_name_id_t"><span class="returnvalue">hb_ot_name_id_t</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-ot-var.html#hb-ot-var-named-instance-get-subfamily-name-id" title="hb_ot_var_named_instance_get_subfamily_name_id ()">hb_ot_var_named_instance_get_subfamily_name_id</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="harfbuzz-hb-ot-name.html#hb-ot-name-id-t" title="hb_ot_name_id_t"><span class="returnvalue">hb_ot_name_id_t</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-ot-var.html#hb-ot-var-named-instance-get-postscript-name-id" title="hb_ot_var_named_instance_get_postscript_name_id ()">hb_ot_var_named_instance_get_postscript_name_id</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">unsigned <span class="returnvalue">int</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-ot-var.html#hb-ot-var-named-instance-get-design-coords" title="hb_ot_var_named_instance_get_design_coords ()">hb_ot_var_named_instance_get_design_coords</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
 <td class="function_type">
 <span class="returnvalue">void</span>
 </td>
@@ -219,6 +249,38 @@ hb_ot_var_get_axes (<em class="parameter"><code><a class="link" href="harfbuzz-h
 hb_ot_var_axis_get_flags (<em class="parameter"><code><a class="link" href="harfbuzz-hb-face.html#hb-face-t"><span class="type">hb_face_t</span></a> *face</code></em>,
                           <em class="parameter"><code>unsigned <span class="type">int</span> axis_index</code></em>);</pre>
 <p class="since">Since REPLACEME</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-ot-var-get-named-instance-count"></a><h3>hb_ot_var_get_named_instance_count ()</h3>
+<pre class="programlisting">unsigned <span class="returnvalue">int</span>
+hb_ot_var_get_named_instance_count (<em class="parameter"><code><a class="link" href="harfbuzz-hb-face.html#hb-face-t"><span class="type">hb_face_t</span></a> *face</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-ot-var-named-instance-get-subfamily-name-id"></a><h3>hb_ot_var_named_instance_get_subfamily_name_id ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-ot-name.html#hb-ot-name-id-t" title="hb_ot_name_id_t"><span class="returnvalue">hb_ot_name_id_t</span></a>
+hb_ot_var_named_instance_get_subfamily_name_id
+                               (<em class="parameter"><code><a class="link" href="harfbuzz-hb-face.html#hb-face-t"><span class="type">hb_face_t</span></a> *face</code></em>,
+                                <em class="parameter"><code>unsigned <span class="type">int</span> instance_index</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-ot-var-named-instance-get-postscript-name-id"></a><h3>hb_ot_var_named_instance_get_postscript_name_id ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-ot-name.html#hb-ot-name-id-t" title="hb_ot_name_id_t"><span class="returnvalue">hb_ot_name_id_t</span></a>
+hb_ot_var_named_instance_get_postscript_name_id
+                               (<em class="parameter"><code><a class="link" href="harfbuzz-hb-face.html#hb-face-t"><span class="type">hb_face_t</span></a> *face</code></em>,
+                                <em class="parameter"><code>unsigned <span class="type">int</span> instance_index</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-ot-var-named-instance-get-design-coords"></a><h3>hb_ot_var_named_instance_get_design_coords ()</h3>
+<pre class="programlisting">unsigned <span class="returnvalue">int</span>
+hb_ot_var_named_instance_get_design_coords
+                               (<em class="parameter"><code><a class="link" href="harfbuzz-hb-face.html#hb-face-t"><span class="type">hb_face_t</span></a> *face</code></em>,
+                                <em class="parameter"><code>unsigned <span class="type">int</span> instance_index</code></em>,
+                                <em class="parameter"><code>unsigned <span class="type">int</span> *coords_length</code></em>,
+                                <em class="parameter"><code><span class="type">int</span> *coords</code></em>);</pre>
 </div>
 <hr>
 <div class="refsect2">
