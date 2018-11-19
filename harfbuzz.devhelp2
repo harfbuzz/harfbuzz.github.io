@@ -208,7 +208,7 @@
     <keyword type="macro" name="HB_SEGMENT_PROPERTIES_DEFAULT" link="harfbuzz-hb-buffer.html#HB-SEGMENT-PROPERTIES-DEFAULT:CAPS"/>
     <keyword type="macro" name="HB_BUFFER_REPLACEMENT_CODEPOINT_DEFAULT" link="harfbuzz-hb-buffer.html#HB-BUFFER-REPLACEMENT-CODEPOINT-DEFAULT:CAPS" since="0.9.31"/>
     <keyword type="typedef" name="hb_buffer_t" link="harfbuzz-hb-buffer.html#hb-buffer-t"/>
-    <keyword type="enum" name="enum hb_glyph_flags_t" link="harfbuzz-hb-buffer.html#hb-glyph-flags-t"/>
+    <keyword type="enum" name="enum hb_glyph_flags_t" link="harfbuzz-hb-buffer.html#hb-glyph-flags-t" since="1.5.0"/>
     <keyword type="struct" name="hb_glyph_position_t" link="harfbuzz-hb-buffer.html#hb-glyph-position-t-struct"/>
     <keyword type="enum" name="enum hb_buffer_content_type_t" link="harfbuzz-hb-buffer.html#hb-buffer-content-type-t"/>
     <keyword type="enum" name="enum hb_buffer_flags_t" link="harfbuzz-hb-buffer.html#hb-buffer-flags-t" since="0.9.20"/>
@@ -589,6 +589,7 @@
     <keyword type="function" name="hb_ot_var_find_axis ()" link="harfbuzz-hb-ot-var.html#hb-ot-var-find-axis" since="1.4.2"/>
     <keyword type="function" name="hb_ot_var_get_axis_count ()" link="harfbuzz-hb-ot-var.html#hb-ot-var-get-axis-count" since="1.4.2"/>
     <keyword type="function" name="hb_ot_var_get_axes ()" link="harfbuzz-hb-ot-var.html#hb-ot-var-get-axes" since="1.4.2"/>
+    <keyword type="function" name="hb_ot_var_axis_get_flags ()" link="harfbuzz-hb-ot-var.html#hb-ot-var-axis-get-flags" since="REPLACEME"/>
     <keyword type="function" name="hb_ot_var_normalize_variations ()" link="harfbuzz-hb-ot-var.html#hb-ot-var-normalize-variations" since="1.4.2"/>
     <keyword type="function" name="hb_ot_var_normalize_coords ()" link="harfbuzz-hb-ot-var.html#hb-ot-var-normalize-coords" since="1.4.2"/>
     <keyword type="macro" name="HB_OT_TAG_VAR_AXIS_ITALIC" link="harfbuzz-hb-ot-var.html#HB-OT-TAG-VAR-AXIS-ITALIC:CAPS"/>
@@ -598,6 +599,7 @@
     <keyword type="macro" name="HB_OT_TAG_VAR_AXIS_WIDTH" link="harfbuzz-hb-ot-var.html#HB-OT-TAG-VAR-AXIS-WIDTH:CAPS"/>
     <keyword type="macro" name="HB_OT_VAR_NO_AXIS_INDEX" link="harfbuzz-hb-ot-var.html#HB-OT-VAR-NO-AXIS-INDEX:CAPS" since="1.4.2"/>
     <keyword type="struct" name="hb_ot_var_axis_t" link="harfbuzz-hb-ot-var.html#hb-ot-var-axis-t" since="1.4.2"/>
+    <keyword type="enum" name="enum hb_ot_var_axis_flags_t" link="harfbuzz-hb-ot-var.html#hb-ot-var-axis-flags-t" since="REPLACEME"/>
     <keyword type="function" name="hb_coretext_face_create ()" link="harfbuzz-hb-coretext.html#hb-coretext-face-create"/>
     <keyword type="function" name="hb_coretext_font_create ()" link="harfbuzz-hb-coretext.html#hb-coretext-font-create"/>
     <keyword type="function" name="hb_coretext_face_get_cg_font ()" link="harfbuzz-hb-coretext.html#hb-coretext-face-get-cg-font"/>

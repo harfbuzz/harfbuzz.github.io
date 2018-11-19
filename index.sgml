@@ -619,6 +619,7 @@
 <ANCHOR id="hb-ot-var-find-axis" href="harfbuzz/harfbuzz-hb-ot-var.html#hb-ot-var-find-axis">
 <ANCHOR id="hb-ot-var-get-axis-count" href="harfbuzz/harfbuzz-hb-ot-var.html#hb-ot-var-get-axis-count">
 <ANCHOR id="hb-ot-var-get-axes" href="harfbuzz/harfbuzz-hb-ot-var.html#hb-ot-var-get-axes">
+<ANCHOR id="hb-ot-var-axis-get-flags" href="harfbuzz/harfbuzz-hb-ot-var.html#hb-ot-var-axis-get-flags">
 <ANCHOR id="hb-ot-var-normalize-variations" href="harfbuzz/harfbuzz-hb-ot-var.html#hb-ot-var-normalize-variations">
 <ANCHOR id="hb-ot-var-normalize-coords" href="harfbuzz/harfbuzz-hb-ot-var.html#hb-ot-var-normalize-coords">
 <ANCHOR id="harfbuzz-hb-ot-var.other_details" href="harfbuzz/harfbuzz-hb-ot-var.html#harfbuzz-hb-ot-var.other_details">
@@ -629,6 +630,7 @@
 <ANCHOR id="HB-OT-TAG-VAR-AXIS-WIDTH:CAPS" href="harfbuzz/harfbuzz-hb-ot-var.html#HB-OT-TAG-VAR-AXIS-WIDTH:CAPS">
 <ANCHOR id="HB-OT-VAR-NO-AXIS-INDEX:CAPS" href="harfbuzz/harfbuzz-hb-ot-var.html#HB-OT-VAR-NO-AXIS-INDEX:CAPS">
 <ANCHOR id="hb-ot-var-axis-t" href="harfbuzz/harfbuzz-hb-ot-var.html#hb-ot-var-axis-t">
+<ANCHOR id="hb-ot-var-axis-flags-t" href="harfbuzz/harfbuzz-hb-ot-var.html#hb-ot-var-axis-flags-t">
 <ANCHOR id="harfbuzz-hb-coretext" href="harfbuzz/harfbuzz-hb-coretext.html">
 <ANCHOR id="harfbuzz-hb-coretext.functions" href="harfbuzz/harfbuzz-hb-coretext.html#harfbuzz-hb-coretext.functions">
 <ANCHOR id="harfbuzz-hb-coretext.other" href="harfbuzz/harfbuzz-hb-coretext.html#harfbuzz-hb-coretext.other">
