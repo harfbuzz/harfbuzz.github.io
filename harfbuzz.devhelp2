@@ -263,6 +263,7 @@
     <keyword type="macro" name="HB_BUFFER_FLAGS_DEFAULT" link="harfbuzz-hb-deprecated.html#HB-BUFFER-FLAGS-DEFAULT:CAPS" deprecated=""/>
     <keyword type="macro" name="HB_BUFFER_SERIALIZE_FLAGS_DEFAULT" link="harfbuzz-hb-deprecated.html#HB-BUFFER-SERIALIZE-FLAGS-DEFAULT:CAPS" deprecated=""/>
     <keyword type="macro" name="HB_SCRIPT_CANADIAN_ABORIGINAL" link="harfbuzz-hb-deprecated.html#HB-SCRIPT-CANADIAN-ABORIGINAL:CAPS" deprecated=""/>
+    <keyword type="macro" name="HB_OT_VAR_NO_AXIS_INDEX" link="harfbuzz-hb-deprecated.html#HB-OT-VAR-NO-AXIS-INDEX:CAPS" deprecated="REPLACEME" since="1.4.2"/>
     <keyword type="typedef" name="hb_font_get_glyph_h_kerning_func_t" link="harfbuzz-hb-deprecated.html#hb-font-get-glyph-h-kerning-func-t" deprecated=""/>
     <keyword type="typedef" name="hb_font_get_glyph_v_kerning_func_t" link="harfbuzz-hb-deprecated.html#hb-font-get-glyph-v-kerning-func-t" deprecated=""/>
     <keyword type="function" name="hb_face_count ()" link="harfbuzz-hb-face.html#hb-face-count" since="1.7.7"/>
@@ -583,13 +584,12 @@
     <keyword type="function" name="hb_ot_name_get_utf16 ()" link="harfbuzz-hb-ot-name.html#hb-ot-name-get-utf16" since="2.1.0"/>
     <keyword type="function" name="hb_ot_name_get_utf32 ()" link="harfbuzz-hb-ot-name.html#hb-ot-name-get-utf32" since="2.1.0"/>
     <keyword type="function" name="hb_ot_name_get_utf8 ()" link="harfbuzz-hb-ot-name.html#hb-ot-name-get-utf8" since="2.1.0"/>
-    <keyword type="typedef" name="hb_ot_name_id_t" link="harfbuzz-hb-ot-name.html#hb-ot-name-id-t" since="2.0.0"/>
+    <keyword type="typedef" name="hb_ot_name_id_t" link="harfbuzz-hb-ot-name.html#hb-ot-name-id-t" deprecated="" since="2.0.0"/>
     <keyword type="function" name="hb_ot_shape_glyphs_closure ()" link="harfbuzz-hb-ot-shape.html#hb-ot-shape-glyphs-closure" since="0.9.2"/>
     <keyword type="function" name="hb_ot_var_has_data ()" link="harfbuzz-hb-ot-var.html#hb-ot-var-has-data" since="1.4.2"/>
-    <keyword type="function" name="hb_ot_var_find_axis ()" link="harfbuzz-hb-ot-var.html#hb-ot-var-find-axis" since="1.4.2"/>
+    <keyword type="function" name="hb_ot_var_find_axis_info ()" link="harfbuzz-hb-ot-var.html#hb-ot-var-find-axis-info" since="REPLACEME"/>
     <keyword type="function" name="hb_ot_var_get_axis_count ()" link="harfbuzz-hb-ot-var.html#hb-ot-var-get-axis-count" since="1.4.2"/>
-    <keyword type="function" name="hb_ot_var_get_axes ()" link="harfbuzz-hb-ot-var.html#hb-ot-var-get-axes" since="1.4.2"/>
-    <keyword type="function" name="hb_ot_var_axis_get_flags ()" link="harfbuzz-hb-ot-var.html#hb-ot-var-axis-get-flags" since="REPLACEME"/>
+    <keyword type="function" name="hb_ot_var_get_axis_infos ()" link="harfbuzz-hb-ot-var.html#hb-ot-var-get-axis-infos" since="REPLACEME"/>
     <keyword type="function" name="hb_ot_var_get_named_instance_count ()" link="harfbuzz-hb-ot-var.html#hb-ot-var-get-named-instance-count"/>
     <keyword type="function" name="hb_ot_var_named_instance_get_subfamily_name_id ()" link="harfbuzz-hb-ot-var.html#hb-ot-var-named-instance-get-subfamily-name-id"/>
     <keyword type="function" name="hb_ot_var_named_instance_get_postscript_name_id ()" link="harfbuzz-hb-ot-var.html#hb-ot-var-named-instance-get-postscript-name-id"/>
@@ -601,8 +601,6 @@
     <keyword type="macro" name="HB_OT_TAG_VAR_AXIS_SLANT" link="harfbuzz-hb-ot-var.html#HB-OT-TAG-VAR-AXIS-SLANT:CAPS"/>
     <keyword type="macro" name="HB_OT_TAG_VAR_AXIS_WEIGHT" link="harfbuzz-hb-ot-var.html#HB-OT-TAG-VAR-AXIS-WEIGHT:CAPS"/>
     <keyword type="macro" name="HB_OT_TAG_VAR_AXIS_WIDTH" link="harfbuzz-hb-ot-var.html#HB-OT-TAG-VAR-AXIS-WIDTH:CAPS"/>
-    <keyword type="macro" name="HB_OT_VAR_NO_AXIS_INDEX" link="harfbuzz-hb-ot-var.html#HB-OT-VAR-NO-AXIS-INDEX:CAPS" since="1.4.2"/>
-    <keyword type="struct" name="hb_ot_var_axis_t" link="harfbuzz-hb-ot-var.html#hb-ot-var-axis-t" since="1.4.2"/>
     <keyword type="enum" name="enum hb_ot_var_axis_flags_t" link="harfbuzz-hb-ot-var.html#hb-ot-var-axis-flags-t" since="REPLACEME"/>
     <keyword type="function" name="hb_coretext_face_create ()" link="harfbuzz-hb-coretext.html#hb-coretext-face-create"/>
     <keyword type="function" name="hb_coretext_font_create ()" link="harfbuzz-hb-coretext.html#hb-coretext-font-create"/>
