@@ -46,12 +46,16 @@
         <sub name="Using HarfBuzz's native OpenType implementation" link="using-harfbuzzs-native-opentype-implementation.html"/>
         <sub name="Using your own font functions" link="using-your-own-font-functions.html"/>
       </sub>
-      <sub name="" link="clusters.html">
+      <sub name="Clusters" link="clusters.html">
         <sub name="Clusters" link="clusters.html#clusters"/>
         <sub name="A clustering example for levels 0 and 1" link="a-clustering-example-for-levels-0-and-1.html"/>
         <sub name="Reordering in levels 0 and 1" link="reordering-in-levels-0-and-1.html"/>
         <sub name="The distinction between levels 0 and 1" link="the-distinction-between-levels-0-and-1.html"/>
-        <sub name="Level 2" link="level-2.html"/>
+        <sub name="Level 2" link="level-2.html">
+          <sub name="Ligatures with combining marks in level 2" link="level-2.html#ligatures-with-combining-marks-in-level-2"/>
+          <sub name="Reordering in level 2" link="level-2.html#reordering-in-level-2"/>
+          <sub name="Other considerations in level 2" link="level-2.html#other-considerations-in-level-2"/>
+        </sub>
       </sub>
       <sub name="Shaping and shape plans" link="shaping-and-shape-plans.html">
         <sub name="OpenType features" link="shaping-and-shape-plans.html#opentype-features"/>
