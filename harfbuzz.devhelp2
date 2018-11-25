@@ -87,7 +87,10 @@
         <sub name="hb-ot-shape" link="harfbuzz-hb-ot-shape.html"/>
         <sub name="hb-ot-var" link="harfbuzz-hb-ot-var.html"/>
       </sub>
-      <sub name="Integration API" link="ch11.html">
+      <sub name="Apple Advanced Typography API" link="ch11.html">
+        <sub name="hb-aat-layout" link="harfbuzz-hb-aat-layout.html"/>
+      </sub>
+      <sub name="Integration API" link="ch12.html">
         <sub name="hb-coretext" link="harfbuzz-hb-coretext.html"/>
         <sub name="hb-ft" link="harfbuzz-hb-ft.html"/>
         <sub name="hb-glib" link="harfbuzz-hb-glib.html"/>
@@ -606,6 +609,12 @@
     <keyword type="macro" name="HB_OT_TAG_VAR_AXIS_WEIGHT" link="harfbuzz-hb-ot-var.html#HB-OT-TAG-VAR-AXIS-WEIGHT:CAPS"/>
     <keyword type="macro" name="HB_OT_TAG_VAR_AXIS_WIDTH" link="harfbuzz-hb-ot-var.html#HB-OT-TAG-VAR-AXIS-WIDTH:CAPS"/>
     <keyword type="enum" name="enum hb_ot_var_axis_flags_t" link="harfbuzz-hb-ot-var.html#hb-ot-var-axis-flags-t" since="REPLACEME"/>
+    <keyword type="function" name="hb_aat_layout_get_feature_types ()" link="harfbuzz-hb-aat-layout.html#hb-aat-layout-get-feature-types" since="REPLACEME"/>
+    <keyword type="function" name="hb_aat_layout_feature_type_get_name_id ()" link="harfbuzz-hb-aat-layout.html#hb-aat-layout-feature-type-get-name-id" since="REPLACEME"/>
+    <keyword type="function" name="hb_aat_layout_feature_type_get_selector_infos ()" link="harfbuzz-hb-aat-layout.html#hb-aat-layout-feature-type-get-selector-infos"/>
+    <keyword type="macro" name="HB_AAT_LAYOUT_NO_SELECTOR_INDEX" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-NO-SELECTOR-INDEX:CAPS"/>
+    <keyword type="enum" name="enum hb_aat_layout_feature_type_t" link="harfbuzz-hb-aat-layout.html#hb-aat-layout-feature-type-t" since="REPLACEME"/>
+    <keyword type="enum" name="enum hb_aat_layout_feature_selector_t" link="harfbuzz-hb-aat-layout.html#hb-aat-layout-feature-selector-t" since="REPLACEME"/>
     <keyword type="function" name="hb_coretext_face_create ()" link="harfbuzz-hb-coretext.html#hb-coretext-face-create"/>
     <keyword type="function" name="hb_coretext_font_create ()" link="harfbuzz-hb-coretext.html#hb-coretext-font-create"/>
     <keyword type="function" name="hb_coretext_face_get_cg_font ()" link="harfbuzz-hb-coretext.html#hb-coretext-face-get-cg-font"/>
