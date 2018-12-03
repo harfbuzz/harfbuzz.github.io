@@ -609,11 +609,12 @@
     <keyword type="macro" name="HB_OT_TAG_VAR_AXIS_WEIGHT" link="harfbuzz-hb-ot-var.html#HB-OT-TAG-VAR-AXIS-WEIGHT:CAPS"/>
     <keyword type="macro" name="HB_OT_TAG_VAR_AXIS_WIDTH" link="harfbuzz-hb-ot-var.html#HB-OT-TAG-VAR-AXIS-WIDTH:CAPS"/>
     <keyword type="enum" name="enum hb_ot_var_axis_flags_t" link="harfbuzz-hb-ot-var.html#hb-ot-var-axis-flags-t" since="2.2.0"/>
-    <keyword type="function" name="hb_aat_layout_get_feature_types ()" link="harfbuzz-hb-aat-layout.html#hb-aat-layout-get-feature-types" since="2.2.0"/>
     <keyword type="function" name="hb_aat_layout_feature_type_get_name_id ()" link="harfbuzz-hb-aat-layout.html#hb-aat-layout-feature-type-get-name-id" since="2.2.0"/>
     <keyword type="function" name="hb_aat_layout_feature_type_get_selector_infos ()" link="harfbuzz-hb-aat-layout.html#hb-aat-layout-feature-type-get-selector-infos"/>
-    <keyword type="function" name="hb_aat_layout_has_substitution ()" link="harfbuzz-hb-aat-layout.html#hb-aat-layout-has-substitution"/>
+    <keyword type="function" name="hb_aat_layout_get_feature_types ()" link="harfbuzz-hb-aat-layout.html#hb-aat-layout-get-feature-types" since="2.2.0"/>
     <keyword type="function" name="hb_aat_layout_has_positioning ()" link="harfbuzz-hb-aat-layout.html#hb-aat-layout-has-positioning"/>
+    <keyword type="function" name="hb_aat_layout_has_substitution ()" link="harfbuzz-hb-aat-layout.html#hb-aat-layout-has-substitution"/>
+    <keyword type="function" name="hb_aat_layout_has_tracking ()" link="harfbuzz-hb-aat-layout.html#hb-aat-layout-has-tracking"/>
     <keyword type="macro" name="HB_AAT_LAYOUT_NO_SELECTOR_INDEX" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-NO-SELECTOR-INDEX:CAPS"/>
     <keyword type="enum" name="enum hb_aat_layout_feature_type_t" link="harfbuzz-hb-aat-layout.html#hb-aat-layout-feature-type-t" since="2.2.0"/>
     <keyword type="enum" name="enum hb_aat_layout_feature_selector_t" link="harfbuzz-hb-aat-layout.html#hb-aat-layout-feature-selector-t" since="2.2.0"/>

@@ -640,11 +640,12 @@
 <ANCHOR id="harfbuzz-hb-aat-layout.includes" href="harfbuzz/harfbuzz-hb-aat-layout.html#harfbuzz-hb-aat-layout.includes">
 <ANCHOR id="harfbuzz-hb-aat-layout.description" href="harfbuzz/harfbuzz-hb-aat-layout.html#harfbuzz-hb-aat-layout.description">
 <ANCHOR id="harfbuzz-hb-aat-layout.functions_details" href="harfbuzz/harfbuzz-hb-aat-layout.html#harfbuzz-hb-aat-layout.functions_details">
-<ANCHOR id="hb-aat-layout-get-feature-types" href="harfbuzz/harfbuzz-hb-aat-layout.html#hb-aat-layout-get-feature-types">
 <ANCHOR id="hb-aat-layout-feature-type-get-name-id" href="harfbuzz/harfbuzz-hb-aat-layout.html#hb-aat-layout-feature-type-get-name-id">
 <ANCHOR id="hb-aat-layout-feature-type-get-selector-infos" href="harfbuzz/harfbuzz-hb-aat-layout.html#hb-aat-layout-feature-type-get-selector-infos">
-<ANCHOR id="hb-aat-layout-has-substitution" href="harfbuzz/harfbuzz-hb-aat-layout.html#hb-aat-layout-has-substitution">
+<ANCHOR id="hb-aat-layout-get-feature-types" href="harfbuzz/harfbuzz-hb-aat-layout.html#hb-aat-layout-get-feature-types">
 <ANCHOR id="hb-aat-layout-has-positioning" href="harfbuzz/harfbuzz-hb-aat-layout.html#hb-aat-layout-has-positioning">
+<ANCHOR id="hb-aat-layout-has-substitution" href="harfbuzz/harfbuzz-hb-aat-layout.html#hb-aat-layout-has-substitution">
+<ANCHOR id="hb-aat-layout-has-tracking" href="harfbuzz/harfbuzz-hb-aat-layout.html#hb-aat-layout-has-tracking">
 <ANCHOR id="harfbuzz-hb-aat-layout.other_details" href="harfbuzz/harfbuzz-hb-aat-layout.html#harfbuzz-hb-aat-layout.other_details">
 <ANCHOR id="HB-AAT-LAYOUT-NO-SELECTOR-INDEX:CAPS" href="harfbuzz/harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-NO-SELECTOR-INDEX:CAPS">
 <ANCHOR id="hb-aat-layout-feature-type-t" href="harfbuzz/harfbuzz-hb-aat-layout.html#hb-aat-layout-feature-type-t">
