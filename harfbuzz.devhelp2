@@ -47,7 +47,8 @@
         <sub name="Using your own font functions" link="using-your-own-font-functions.html"/>
       </sub>
       <sub name="Clusters" link="clusters.html">
-        <sub name="Clusters" link="clusters.html#clusters"/>
+        <sub name="Clusters and shaping" link="clusters.html#clusters-and-shaping"/>
+        <sub name="Working with HarfBuzz clusters" link="working-with-harfbuzz-clusters.html"/>
         <sub name="A clustering example for levels 0 and 1" link="a-clustering-example-for-levels-0-and-1.html"/>
         <sub name="Reordering in levels 0 and 1" link="reordering-in-levels-0-and-1.html"/>
         <sub name="The distinction between levels 0 and 1" link="the-distinction-between-levels-0-and-1.html"/>
