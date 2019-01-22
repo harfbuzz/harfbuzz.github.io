@@ -572,7 +572,7 @@ HarfBuzz itself.</p>
 <hr>
 <div class="refsect2">
 <a name="HB-UNTAG:CAPS"></a><h3>HB_UNTAG()</h3>
-<pre class="programlisting">#define HB_UNTAG(tag)   (((tag)&gt;&gt;24)&amp;0xFF), (((tag)&gt;&gt;16)&amp;0xFF), (((tag)&gt;&gt;8)&amp;0xFF), ((tag)&amp;0xFF)
+<pre class="programlisting">#define HB_UNTAG(tag)   (uint8_t)(((tag)&gt;&gt;24)&amp;0xFF), (uint8_t)(((tag)&gt;&gt;16)&amp;0xFF), (uint8_t)(((tag)&gt;&gt;8)&amp;0xFF), (uint8_t)((tag)&amp;0xFF)
 </pre>
 </div>
 <hr>
