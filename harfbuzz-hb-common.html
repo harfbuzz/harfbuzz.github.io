@@ -144,6 +144,22 @@
 </tr>
 <tr>
 <td class="function_type">
+<a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-common.html#hb-variation-from-string" title="hb_variation_from_string ()">hb_variation_from_string</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-common.html#hb-variation-to-string" title="hb_variation_to_string ()">hb_variation_to_string</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
 <span class="returnvalue">void</span>
 </td>
 <td class="function_name">
@@ -232,6 +248,10 @@
 <tr>
 <td class="datatype_keyword"> </td>
 <td class="function_name"><a class="link" href="harfbuzz-hb-common.html#hb-feature-t-struct" title="hb_feature_t">hb_feature_t</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="harfbuzz-hb-common.html#hb-variation-t" title="hb_variation_t">hb_variation_t</a></td>
 </tr>
 <tr>
 <td class="typedef_keyword">typedef</td>
@@ -809,6 +829,24 @@ allocating big enough size for <em class="parameter"><code>buf</code></em>
 </div>
 <hr>
 <div class="refsect2">
+<a name="hb-variation-from-string"></a><h3>hb_variation_from_string ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+hb_variation_from_string (<em class="parameter"><code>const <span class="type">char</span> *str</code></em>,
+                          <em class="parameter"><code><span class="type">int</span> len</code></em>,
+                          <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-variation-t" title="hb_variation_t"><span class="type">hb_variation_t</span></a> *variation</code></em>);</pre>
+<p class="since">Since 1.4.2</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-variation-to-string"></a><h3>hb_variation_to_string ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_variation_to_string (<em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-variation-t" title="hb_variation_t"><span class="type">hb_variation_t</span></a> *variation</code></em>,
+                        <em class="parameter"><code><span class="type">char</span> *buf</code></em>,
+                        <em class="parameter"><code>unsigned <span class="type">int</span> size</code></em>);</pre>
+<p class="since">Since 1.4.2</p>
+</div>
+<hr>
+<div class="refsect2">
 <a name="hb-destroy-func-t"></a><h3>hb_destroy_func_t ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 <span class="c_punctuation">(</span>*hb_destroy_func_t<span class="c_punctuation">)</span> (<em class="parameter"><code><span class="type">void</span> *user_data</code></em>);</pre>
@@ -951,6 +989,16 @@ allocating big enough size for <em class="parameter"><code>buf</code></em>
 </div>
 <hr>
 <div class="refsect2">
+<a name="hb-variation-t"></a><h3>hb_variation_t</h3>
+<pre class="programlisting">typedef struct {
+  hb_tag_t tag;
+  float    value;
+} hb_variation_t;
+</pre>
+<p class="since">Since 1.4.2</p>
+</div>
+<hr>
+<div class="refsect2">
 <a name="hb-mask-t"></a><h3>hb_mask_t</h3>
 <pre class="programlisting">typedef uint32_t hb_mask_t;
 </pre>
@@ -971,7 +1019,7 @@ allocating big enough size for <em class="parameter"><code>buf</code></em>
 <div class="refsect2">
 <a name="hb-script-t"></a><h3>enum hb_script_t</h3>
 <div class="refsect3">
-<a name="id-1.3.4.4.11.10.3"></a><h4>Members</h4>
+<a name="id-1.3.4.4.11.11.3"></a><h4>Members</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="300px" class="enum_members_name">

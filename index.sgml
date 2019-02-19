@@ -125,6 +125,8 @@
 <ANCHOR id="hb-language-get-default" href="harfbuzz/harfbuzz-hb-common.html#hb-language-get-default">
 <ANCHOR id="hb-feature-from-string" href="harfbuzz/harfbuzz-hb-common.html#hb-feature-from-string">
 <ANCHOR id="hb-feature-to-string" href="harfbuzz/harfbuzz-hb-common.html#hb-feature-to-string">
+<ANCHOR id="hb-variation-from-string" href="harfbuzz/harfbuzz-hb-common.html#hb-variation-from-string">
+<ANCHOR id="hb-variation-to-string" href="harfbuzz/harfbuzz-hb-common.html#hb-variation-to-string">
 <ANCHOR id="hb-destroy-func-t" href="harfbuzz/harfbuzz-hb-common.html#hb-destroy-func-t">
 <ANCHOR id="HB-TAG:CAPS" href="harfbuzz/harfbuzz-hb-common.html#HB-TAG:CAPS">
 <ANCHOR id="HB-UNTAG:CAPS" href="harfbuzz/harfbuzz-hb-common.html#HB-UNTAG:CAPS">
@@ -141,6 +143,7 @@
 <ANCHOR id="hb-direction-t" href="harfbuzz/harfbuzz-hb-common.html#hb-direction-t">
 <ANCHOR id="hb-language-t" href="harfbuzz/harfbuzz-hb-common.html#hb-language-t">
 <ANCHOR id="hb-feature-t-struct" href="harfbuzz/harfbuzz-hb-common.html#hb-feature-t-struct">
+<ANCHOR id="hb-variation-t" href="harfbuzz/harfbuzz-hb-common.html#hb-variation-t">
 <ANCHOR id="hb-mask-t" href="harfbuzz/harfbuzz-hb-common.html#hb-mask-t">
 <ANCHOR id="hb-position-t" href="harfbuzz/harfbuzz-hb-common.html#hb-position-t">
 <ANCHOR id="hb-tag-t" href="harfbuzz/harfbuzz-hb-common.html#hb-tag-t">
@@ -291,8 +294,6 @@
 <ANCHOR id="hb-font-set-ptem" href="harfbuzz/harfbuzz-hb-font.html#hb-font-set-ptem">
 <ANCHOR id="hb-font-set-scale" href="harfbuzz/harfbuzz-hb-font.html#hb-font-set-scale">
 <ANCHOR id="hb-font-set-user-data" href="harfbuzz/harfbuzz-hb-font.html#hb-font-set-user-data">
-<ANCHOR id="hb-variation-from-string" href="harfbuzz/harfbuzz-hb-font.html#hb-variation-from-string">
-<ANCHOR id="hb-variation-to-string" href="harfbuzz/harfbuzz-hb-font.html#hb-variation-to-string">
 <ANCHOR id="hb-font-set-variations" href="harfbuzz/harfbuzz-hb-font.html#hb-font-set-variations">
 <ANCHOR id="hb-font-set-var-coords-design" href="harfbuzz/harfbuzz-hb-font.html#hb-font-set-var-coords-design">
 <ANCHOR id="hb-font-set-var-coords-normalized" href="harfbuzz/harfbuzz-hb-font.html#hb-font-set-var-coords-normalized">
@@ -312,7 +313,6 @@
 <ANCHOR id="hb-font-get-glyph-v-advance-func-t" href="harfbuzz/harfbuzz-hb-font.html#hb-font-get-glyph-v-advance-func-t">
 <ANCHOR id="hb-font-get-glyph-v-advances-func-t" href="harfbuzz/harfbuzz-hb-font.html#hb-font-get-glyph-v-advances-func-t">
 <ANCHOR id="hb-font-get-glyph-v-origin-func-t" href="harfbuzz/harfbuzz-hb-font.html#hb-font-get-glyph-v-origin-func-t">
-<ANCHOR id="hb-variation-t" href="harfbuzz/harfbuzz-hb-font.html#hb-variation-t">
 <ANCHOR id="hb-font-t" href="harfbuzz/harfbuzz-hb-font.html#hb-font-t">
 <ANCHOR id="hb-font-get-font-h-extents-func-t" href="harfbuzz/harfbuzz-hb-font.html#hb-font-get-font-h-extents-func-t">
 <ANCHOR id="hb-font-get-font-v-extents-func-t" href="harfbuzz/harfbuzz-hb-font.html#hb-font-get-font-v-extents-func-t">

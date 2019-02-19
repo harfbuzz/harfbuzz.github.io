@@ -238,6 +238,8 @@
     <keyword type="function" name="hb_language_get_default ()" link="harfbuzz-hb-common.html#hb-language-get-default" since="0.9.2"/>
     <keyword type="function" name="hb_feature_from_string ()" link="harfbuzz-hb-common.html#hb-feature-from-string" since="0.9.5"/>
     <keyword type="function" name="hb_feature_to_string ()" link="harfbuzz-hb-common.html#hb-feature-to-string" since="0.9.5"/>
+    <keyword type="function" name="hb_variation_from_string ()" link="harfbuzz-hb-common.html#hb-variation-from-string" since="1.4.2"/>
+    <keyword type="function" name="hb_variation_to_string ()" link="harfbuzz-hb-common.html#hb-variation-to-string" since="1.4.2"/>
     <keyword type="function" name="hb_destroy_func_t ()" link="harfbuzz-hb-common.html#hb-destroy-func-t"/>
     <keyword type="macro" name="HB_TAG()" link="harfbuzz-hb-common.html#HB-TAG:CAPS"/>
     <keyword type="macro" name="HB_UNTAG()" link="harfbuzz-hb-common.html#HB-UNTAG:CAPS"/>
@@ -253,6 +255,7 @@
     <keyword type="enum" name="enum hb_direction_t" link="harfbuzz-hb-common.html#hb-direction-t"/>
     <keyword type="typedef" name="hb_language_t" link="harfbuzz-hb-common.html#hb-language-t"/>
     <keyword type="struct" name="hb_feature_t" link="harfbuzz-hb-common.html#hb-feature-t-struct"/>
+    <keyword type="struct" name="hb_variation_t" link="harfbuzz-hb-common.html#hb-variation-t" since="1.4.2"/>
     <keyword type="typedef" name="hb_mask_t" link="harfbuzz-hb-common.html#hb-mask-t"/>
     <keyword type="typedef" name="hb_position_t" link="harfbuzz-hb-common.html#hb-position-t"/>
     <keyword type="typedef" name="hb_tag_t" link="harfbuzz-hb-common.html#hb-tag-t"/>
@@ -377,8 +380,6 @@
     <keyword type="function" name="hb_font_set_ptem ()" link="harfbuzz-hb-font.html#hb-font-set-ptem" since="1.6.0"/>
     <keyword type="function" name="hb_font_set_scale ()" link="harfbuzz-hb-font.html#hb-font-set-scale" since="0.9.2"/>
     <keyword type="function" name="hb_font_set_user_data ()" link="harfbuzz-hb-font.html#hb-font-set-user-data" since="0.9.2"/>
-    <keyword type="function" name="hb_variation_from_string ()" link="harfbuzz-hb-font.html#hb-variation-from-string" since="1.4.2"/>
-    <keyword type="function" name="hb_variation_to_string ()" link="harfbuzz-hb-font.html#hb-variation-to-string" since="1.4.2"/>
     <keyword type="function" name="hb_font_set_variations ()" link="harfbuzz-hb-font.html#hb-font-set-variations" since="1.4.2"/>
     <keyword type="function" name="hb_font_set_var_coords_design ()" link="harfbuzz-hb-font.html#hb-font-set-var-coords-design" since="1.4.2"/>
     <keyword type="function" name="hb_font_set_var_coords_normalized ()" link="harfbuzz-hb-font.html#hb-font-set-var-coords-normalized" since="1.4.2"/>
@@ -397,7 +398,6 @@
     <keyword type="typedef" name="hb_font_get_glyph_v_advance_func_t" link="harfbuzz-hb-font.html#hb-font-get-glyph-v-advance-func-t"/>
     <keyword type="typedef" name="hb_font_get_glyph_v_advances_func_t" link="harfbuzz-hb-font.html#hb-font-get-glyph-v-advances-func-t"/>
     <keyword type="typedef" name="hb_font_get_glyph_v_origin_func_t" link="harfbuzz-hb-font.html#hb-font-get-glyph-v-origin-func-t"/>
-    <keyword type="struct" name="hb_variation_t" link="harfbuzz-hb-font.html#hb-variation-t" since="1.4.2"/>
     <keyword type="typedef" name="hb_font_t" link="harfbuzz-hb-font.html#hb-font-t"/>
     <keyword type="typedef" name="hb_font_get_font_h_extents_func_t" link="harfbuzz-hb-font.html#hb-font-get-font-h-extents-func-t"/>
     <keyword type="typedef" name="hb_font_get_font_v_extents_func_t" link="harfbuzz-hb-font.html#hb-font-get-font-v-extents-func-t"/>
