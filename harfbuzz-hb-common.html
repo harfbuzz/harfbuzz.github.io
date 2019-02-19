@@ -128,6 +128,22 @@
 </tr>
 <tr>
 <td class="function_type">
+<a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-common.html#hb-feature-from-string" title="hb_feature_from_string ()">hb_feature_from_string</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-common.html#hb-feature-to-string" title="hb_feature_to_string ()">hb_feature_to_string</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
 <span class="returnvalue">void</span>
 </td>
 <td class="function_name">
@@ -189,7 +205,7 @@
 </tbody>
 </table></div>
 </div>
-<a name="hb-user-data-key-t"></a><div class="refsect1">
+<a name="hb-feature-t"></a><a name="hb-user-data-key-t"></a><div class="refsect1">
 <a name="harfbuzz-hb-common.other"></a><h2>Types and Values</h2>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
@@ -212,6 +228,10 @@
 <tr>
 <td class="typedef_keyword">typedef</td>
 <td class="function_name"><a class="link" href="harfbuzz-hb-common.html#hb-language-t" title="hb_language_t">hb_language_t</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="harfbuzz-hb-common.html#hb-feature-t-struct" title="hb_feature_t">hb_feature_t</a></td>
 </tr>
 <tr>
 <td class="typedef_keyword">typedef</td>
@@ -249,12 +269,21 @@
 <td class="define_keyword">#define</td>
 <td class="function_name"><a class="link" href="harfbuzz-hb-common.html#HB-TAG-MAX-SIGNED:CAPS" title="HB_TAG_MAX_SIGNED">HB_TAG_MAX_SIGNED</a></td>
 </tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="harfbuzz-hb-common.html#HB-FEATURE-GLOBAL-END:CAPS" title="HB_FEATURE_GLOBAL_END">HB_FEATURE_GLOBAL_END</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="harfbuzz-hb-common.html#HB-FEATURE-GLOBAL-START:CAPS" title="HB_FEATURE_GLOBAL_START">HB_FEATURE_GLOBAL_START</a></td>
+</tr>
 </tbody>
 </table></div>
 </div>
 <div class="refsect1">
 <a name="harfbuzz-hb-common.object-hierarchy"></a><h2>Object Hierarchy</h2>
 <pre class="screen">    GBoxed
+    <span class="lineart">├──</span> hb_feature_t
     <span class="lineart">╰──</span> hb_user_data_key_t
     GEnum
     <span class="lineart">├──</span> hb_direction_t
@@ -278,7 +307,7 @@
 hb_tag_from_string (<em class="parameter"><code>const <span class="type">char</span> *str</code></em>,
                     <em class="parameter"><code><span class="type">int</span> len</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.4.4.9.2.4"></a><h4>Parameters</h4>
+<a name="id-1.3.4.4.10.2.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -293,7 +322,7 @@ hb_tag_from_string (<em class="parameter"><code>const <span class="type">char</s
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.4.4.9.2.5"></a><h4>Returns</h4>
+<a name="id-1.3.4.4.10.2.5"></a><h4>Returns</h4>
 <p></p>
 </div>
 <p class="since">Since 0.9.2</p>
@@ -305,7 +334,7 @@ hb_tag_from_string (<em class="parameter"><code>const <span class="type">char</s
 hb_tag_to_string (<em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="type">hb_tag_t</span></a> tag</code></em>,
                   <em class="parameter"><code><span class="type">char</span> *buf</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.4.4.9.3.4"></a><h4>Parameters</h4>
+<a name="id-1.3.4.4.10.3.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -328,7 +357,7 @@ hb_tag_to_string (<em class="parameter"><code><a class="link" href="harfbuzz-hb-
 hb_direction_from_string (<em class="parameter"><code>const <span class="type">char</span> *str</code></em>,
                           <em class="parameter"><code><span class="type">int</span> len</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.4.4.9.4.4"></a><h4>Parameters</h4>
+<a name="id-1.3.4.4.10.4.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -343,7 +372,7 @@ hb_direction_from_string (<em class="parameter"><code>const <span class="type">c
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.4.4.9.4.5"></a><h4>Returns</h4>
+<a name="id-1.3.4.4.10.4.5"></a><h4>Returns</h4>
 <p></p>
 </div>
 <p class="since">Since 0.9.2</p>
@@ -354,7 +383,7 @@ hb_direction_from_string (<em class="parameter"><code>const <span class="type">c
 <pre class="programlisting">const <span class="returnvalue">char</span> *
 hb_direction_to_string (<em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-direction-t" title="enum hb_direction_t"><span class="type">hb_direction_t</span></a> direction</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.4.4.9.5.4"></a><h4>Returns</h4>
+<a name="id-1.3.4.4.10.5.4"></a><h4>Returns</h4>
 <p>. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
@@ -367,7 +396,7 @@ hb_direction_to_string (<em class="parameter"><code><a class="link" href="harfbu
 hb_script_from_iso15924_tag (<em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="type">hb_tag_t</span></a> tag</code></em>);</pre>
 <p>Converts an ISO 15924 script tag to a corresponding <a class="link" href="harfbuzz-hb-common.html#hb-script-t" title="enum hb_script_t"><span class="type">hb_script_t</span></a>.</p>
 <div class="refsect3">
-<a name="id-1.3.4.4.9.6.5"></a><h4>Parameters</h4>
+<a name="id-1.3.4.4.10.6.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -382,7 +411,7 @@ hb_script_from_iso15924_tag (<em class="parameter"><code><a class="link" href="h
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.4.4.9.6.6"></a><h4>Returns</h4>
+<a name="id-1.3.4.4.10.6.6"></a><h4>Returns</h4>
 <p>An <a class="link" href="harfbuzz-hb-common.html#hb-script-t" title="enum hb_script_t"><span class="type">hb_script_t</span></a> corresponding to the ISO 15924 tag.</p>
 <p></p>
 </div>
@@ -399,7 +428,7 @@ hb_script_from_string (<em class="parameter"><code>const <span class="type">char
 corresponding <a class="link" href="harfbuzz-hb-common.html#hb-script-t" title="enum hb_script_t"><span class="type">hb_script_t</span></a>. Shorthand for <a class="link" href="harfbuzz-hb-common.html#hb-tag-from-string" title="hb_tag_from_string ()"><code class="function">hb_tag_from_string()</code></a> then
 <a class="link" href="harfbuzz-hb-common.html#hb-script-from-iso15924-tag" title="hb_script_from_iso15924_tag ()"><code class="function">hb_script_from_iso15924_tag()</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.3.4.4.9.7.5"></a><h4>Parameters</h4>
+<a name="id-1.3.4.4.10.7.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -423,7 +452,7 @@ ISO 15924 tag. </p></td>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.4.4.9.7.6"></a><h4>Returns</h4>
+<a name="id-1.3.4.4.10.7.6"></a><h4>Returns</h4>
 <p>An <a class="link" href="harfbuzz-hb-common.html#hb-script-t" title="enum hb_script_t"><span class="type">hb_script_t</span></a> corresponding to the ISO 15924 tag.</p>
 <p></p>
 </div>
@@ -436,7 +465,7 @@ ISO 15924 tag. </p></td>
 hb_script_to_iso15924_tag (<em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-script-t" title="enum hb_script_t"><span class="type">hb_script_t</span></a> script</code></em>);</pre>
 <p>See <a class="link" href="harfbuzz-hb-common.html#hb-script-from-iso15924-tag" title="hb_script_from_iso15924_tag ()"><code class="function">hb_script_from_iso15924_tag()</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.3.4.4.9.8.5"></a><h4>Parameters</h4>
+<a name="id-1.3.4.4.10.8.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -451,7 +480,7 @@ hb_script_to_iso15924_tag (<em class="parameter"><code><a class="link" href="har
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.4.4.9.8.6"></a><h4>Returns</h4>
+<a name="id-1.3.4.4.10.8.6"></a><h4>Returns</h4>
 <p>An <a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="type">hb_tag_t</span></a> representing an ISO 15924 script tag.</p>
 <p></p>
 </div>
@@ -463,7 +492,7 @@ hb_script_to_iso15924_tag (<em class="parameter"><code><a class="link" href="har
 <pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-direction-t" title="enum hb_direction_t"><span class="returnvalue">hb_direction_t</span></a>
 hb_script_get_horizontal_direction (<em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-script-t" title="enum hb_script_t"><span class="type">hb_script_t</span></a> script</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.4.4.9.9.4"></a><h4>Returns</h4>
+<a name="id-1.3.4.4.10.9.4"></a><h4>Returns</h4>
 <p></p>
 </div>
 <p class="since">Since 0.9.2</p>
@@ -478,7 +507,7 @@ hb_language_from_string (<em class="parameter"><code>const <span class="type">ch
  representing a BCP 47 language tag to the corresponding
 <a class="link" href="harfbuzz-hb-common.html#hb-language-t" title="hb_language_t"><span class="type">hb_language_t</span></a>.</p>
 <div class="refsect3">
-<a name="id-1.3.4.4.9.10.5"></a><h4>Parameters</h4>
+<a name="id-1.3.4.4.10.10.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -502,7 +531,7 @@ a BCP 47 language tag. </p></td>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.4.4.9.10.6"></a><h4>Returns</h4>
+<a name="id-1.3.4.4.10.10.6"></a><h4>Returns</h4>
 <p>The <a class="link" href="harfbuzz-hb-common.html#hb-language-t" title="hb_language_t"><span class="type">hb_language_t</span></a> corresponding to the BCP 47 language tag. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
@@ -515,7 +544,7 @@ a BCP 47 language tag. </p></td>
 hb_language_to_string (<em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-language-t" title="hb_language_t"><span class="type">hb_language_t</span></a> language</code></em>);</pre>
 <p>See <a class="link" href="harfbuzz-hb-common.html#hb-language-from-string" title="hb_language_from_string ()"><code class="function">hb_language_from_string()</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.3.4.4.9.11.5"></a><h4>Parameters</h4>
+<a name="id-1.3.4.4.10.11.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -530,7 +559,7 @@ hb_language_to_string (<em class="parameter"><code><a class="link" href="harfbuz
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.4.4.9.11.6"></a><h4>Returns</h4>
+<a name="id-1.3.4.4.10.11.6"></a><h4>Returns</h4>
 <p>A <code class="literal">NULL</code>-terminated string representing the <em class="parameter"><code>language</code></em>
 . Must not be freed by
 the caller. </p>
@@ -551,11 +580,232 @@ problems, call this function once before multiple threads can call it.
 This function is only used from <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-guess-segment-properties" title="hb_buffer_guess_segment_properties ()"><code class="function">hb_buffer_guess_segment_properties()</code></a> by
 HarfBuzz itself.</p>
 <div class="refsect3">
-<a name="id-1.3.4.4.9.12.6"></a><h4>Returns</h4>
+<a name="id-1.3.4.4.10.12.6"></a><h4>Returns</h4>
 <p>. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
 <p class="since">Since 0.9.2</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-feature-from-string"></a><h3>hb_feature_from_string ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+hb_feature_from_string (<em class="parameter"><code>const <span class="type">char</span> *str</code></em>,
+                        <em class="parameter"><code><span class="type">int</span> len</code></em>,
+                        <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-feature-t"><span class="type">hb_feature_t</span></a> *feature</code></em>);</pre>
+<p>Parses a string into a <a class="link" href="harfbuzz-hb-common.html#hb-feature-t"><span class="type">hb_feature_t</span></a>.</p>
+<p>The format for specifying feature strings follows. All valid CSS
+font-feature-settings values other than 'normal' and 'inherited' are also
+accepted, though, not documented below.</p>
+<p>The range indices refer to the positions between Unicode characters. The
+position before the first character is always 0.</p>
+<p>The format is Python-esque.  Here is how it all works:</p>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead><tr>
+<th align="left">Syntax</th>
+<th align="left">Value</th>
+<th align="left">Start</th>
+<th align="left">End</th>
+<td class="auto-generated"> </td>
+</tr></thead>
+<tbody>
+<tr>
+<td align="left">Setting value:</td>
+<td class="auto-generated"> </td>
+<td class="auto-generated"> </td>
+<td class="auto-generated"> </td>
+<td class="auto-generated"> </td>
+</tr>
+<tr>
+<td align="left">kern</td>
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">∞</td>
+<td align="left">Turn feature on</td>
+</tr>
+<tr>
+<td align="left">+kern</td>
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">∞</td>
+<td align="left">Turn feature on</td>
+</tr>
+<tr>
+<td align="left">-kern</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">∞</td>
+<td align="left">Turn feature off</td>
+</tr>
+<tr>
+<td align="left">kern=0</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">∞</td>
+<td align="left">Turn feature off</td>
+</tr>
+<tr>
+<td align="left">kern=1</td>
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">∞</td>
+<td align="left">Turn feature on</td>
+</tr>
+<tr>
+<td align="left">aalt=2</td>
+<td align="left">2</td>
+<td align="left">0</td>
+<td align="left">∞</td>
+<td align="left">Choose 2nd alternate</td>
+</tr>
+<tr>
+<td align="left">Setting index:</td>
+<td class="auto-generated"> </td>
+<td class="auto-generated"> </td>
+<td class="auto-generated"> </td>
+<td class="auto-generated"> </td>
+</tr>
+<tr>
+<td align="left">kern[]</td>
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">∞</td>
+<td align="left">Turn feature on</td>
+</tr>
+<tr>
+<td align="left">kern[:]</td>
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">∞</td>
+<td align="left">Turn feature on</td>
+</tr>
+<tr>
+<td align="left">kern[5:]</td>
+<td align="left">1</td>
+<td align="left">5</td>
+<td align="left">∞</td>
+<td align="left">Turn feature on, partial</td>
+</tr>
+<tr>
+<td align="left">kern[:5]</td>
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">5</td>
+<td align="left">Turn feature on, partial</td>
+</tr>
+<tr>
+<td align="left">kern[3:5]</td>
+<td align="left">1</td>
+<td align="left">3</td>
+<td align="left">5</td>
+<td align="left">Turn feature on, range</td>
+</tr>
+<tr>
+<td align="left">kern[3]</td>
+<td align="left">1</td>
+<td align="left">3</td>
+<td align="left">3+1</td>
+<td align="left">Turn feature on, single char</td>
+</tr>
+<tr>
+<td align="left">Mixing it all:</td>
+<td class="auto-generated"> </td>
+<td class="auto-generated"> </td>
+<td class="auto-generated"> </td>
+<td class="auto-generated"> </td>
+</tr>
+<tr>
+<td align="left">aalt[3:5]=2</td>
+<td align="left">2</td>
+<td align="left">3</td>
+<td align="left">5</td>
+<td align="left">Turn 2nd alternate on for range</td>
+</tr>
+</tbody>
+</table></div>
+<div class="refsect3">
+<a name="id-1.3.4.4.10.13.9"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>str</p></td>
+<td class="parameter_description"><p> a string to parse. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=len][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> uint8_t]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>len</p></td>
+<td class="parameter_description"><p>length of <em class="parameter"><code>str</code></em>
+, or -1 if string is <code class="literal">NULL</code> terminated</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>feature</p></td>
+<td class="parameter_description"><p> the <a class="link" href="harfbuzz-hb-common.html#hb-feature-t"><span class="type">hb_feature_t</span></a> to initialize with the parsed values. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.4.4.10.13.10"></a><h4>Returns</h4>
+<p><code class="literal">true</code> if <em class="parameter"><code>str</code></em>
+is successfully parsed, <code class="literal">false</code> otherwise.</p>
+<p></p>
+</div>
+<p class="since">Since 0.9.5</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-feature-to-string"></a><h3>hb_feature_to_string ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_feature_to_string (<em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-feature-t"><span class="type">hb_feature_t</span></a> *feature</code></em>,
+                      <em class="parameter"><code><span class="type">char</span> *buf</code></em>,
+                      <em class="parameter"><code>unsigned <span class="type">int</span> size</code></em>);</pre>
+<p>Converts a <a class="link" href="harfbuzz-hb-common.html#hb-feature-t"><span class="type">hb_feature_t</span></a> into a <code class="literal">NULL</code>-terminated string in the format
+understood by <a class="link" href="harfbuzz-hb-common.html#hb-feature-from-string" title="hb_feature_from_string ()"><code class="function">hb_feature_from_string()</code></a>. The client in responsible for
+allocating big enough size for <em class="parameter"><code>buf</code></em>
+, 128 bytes is more than enough.</p>
+<div class="refsect3">
+<a name="id-1.3.4.4.10.14.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>feature</p></td>
+<td class="parameter_description"><p>an <a class="link" href="harfbuzz-hb-common.html#hb-feature-t"><span class="type">hb_feature_t</span></a> to convert</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>buf</p></td>
+<td class="parameter_description"><p> output string. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=size][<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>size</p></td>
+<td class="parameter_description"><p>the allocated size of <em class="parameter"><code>buf</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.9.5</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -635,7 +885,7 @@ HarfBuzz itself.</p>
 <div class="refsect2">
 <a name="hb-direction-t"></a><h3>enum hb_direction_t</h3>
 <div class="refsect3">
-<a name="id-1.3.4.4.10.4.3"></a><h4>Members</h4>
+<a name="id-1.3.4.4.11.4.3"></a><h4>Members</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="300px" class="enum_members_name">
@@ -690,6 +940,17 @@ HarfBuzz itself.</p>
 </div>
 <hr>
 <div class="refsect2">
+<a name="hb-feature-t-struct"></a><h3>hb_feature_t</h3>
+<pre class="programlisting">typedef struct {
+  hb_tag_t      tag;
+  uint32_t      value;
+  unsigned int  start;
+  unsigned int  end;
+} hb_feature_t;
+</pre>
+</div>
+<hr>
+<div class="refsect2">
 <a name="hb-mask-t"></a><h3>hb_mask_t</h3>
 <pre class="programlisting">typedef uint32_t hb_mask_t;
 </pre>
@@ -710,7 +971,7 @@ HarfBuzz itself.</p>
 <div class="refsect2">
 <a name="hb-script-t"></a><h3>enum hb_script_t</h3>
 <div class="refsect3">
-<a name="id-1.3.4.4.10.9.3"></a><h4>Members</h4>
+<a name="id-1.3.4.4.11.10.3"></a><h4>Members</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="300px" class="enum_members_name">
@@ -1510,6 +1771,20 @@ HarfBuzz itself.</p>
 <a name="HB-TAG-MAX-SIGNED:CAPS"></a><h3>HB_TAG_MAX_SIGNED</h3>
 <pre class="programlisting">#define HB_TAG_MAX_SIGNED HB_TAG(0x7f,0xff,0xff,0xff)
 </pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="HB-FEATURE-GLOBAL-END:CAPS"></a><h3>HB_FEATURE_GLOBAL_END</h3>
+<pre class="programlisting">#define HB_FEATURE_GLOBAL_END ((unsigned int) -1)
+</pre>
+<p class="since">Since 2.0.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="HB-FEATURE-GLOBAL-START:CAPS"></a><h3>HB_FEATURE_GLOBAL_START</h3>
+<pre class="programlisting">#define HB_FEATURE_GLOBAL_START 0
+</pre>
+<p class="since">Since 2.0.0</p>
 </div>
 </div>
 </div>

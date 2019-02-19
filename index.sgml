@@ -105,6 +105,7 @@
 <ANCHOR id="hb-buffer-diff-flags-t" href="harfbuzz/harfbuzz-hb-buffer.html#hb-buffer-diff-flags-t">
 <ANCHOR id="harfbuzz-hb-common" href="harfbuzz/harfbuzz-hb-common.html">
 <ANCHOR id="harfbuzz-hb-common.functions" href="harfbuzz/harfbuzz-hb-common.html#harfbuzz-hb-common.functions">
+<ANCHOR id="hb-feature-t" href="harfbuzz/harfbuzz-hb-common.html#hb-feature-t">
 <ANCHOR id="hb-user-data-key-t" href="harfbuzz/harfbuzz-hb-common.html#hb-user-data-key-t">
 <ANCHOR id="harfbuzz-hb-common.other" href="harfbuzz/harfbuzz-hb-common.html#harfbuzz-hb-common.other">
 <ANCHOR id="harfbuzz-hb-common.object-hierarchy" href="harfbuzz/harfbuzz-hb-common.html#harfbuzz-hb-common.object-hierarchy">
@@ -122,6 +123,8 @@
 <ANCHOR id="hb-language-from-string" href="harfbuzz/harfbuzz-hb-common.html#hb-language-from-string">
 <ANCHOR id="hb-language-to-string" href="harfbuzz/harfbuzz-hb-common.html#hb-language-to-string">
 <ANCHOR id="hb-language-get-default" href="harfbuzz/harfbuzz-hb-common.html#hb-language-get-default">
+<ANCHOR id="hb-feature-from-string" href="harfbuzz/harfbuzz-hb-common.html#hb-feature-from-string">
+<ANCHOR id="hb-feature-to-string" href="harfbuzz/harfbuzz-hb-common.html#hb-feature-to-string">
 <ANCHOR id="hb-destroy-func-t" href="harfbuzz/harfbuzz-hb-common.html#hb-destroy-func-t">
 <ANCHOR id="HB-TAG:CAPS" href="harfbuzz/harfbuzz-hb-common.html#HB-TAG:CAPS">
 <ANCHOR id="HB-UNTAG:CAPS" href="harfbuzz/harfbuzz-hb-common.html#HB-UNTAG:CAPS">
@@ -137,6 +140,7 @@
 <ANCHOR id="hb-codepoint-t" href="harfbuzz/harfbuzz-hb-common.html#hb-codepoint-t">
 <ANCHOR id="hb-direction-t" href="harfbuzz/harfbuzz-hb-common.html#hb-direction-t">
 <ANCHOR id="hb-language-t" href="harfbuzz/harfbuzz-hb-common.html#hb-language-t">
+<ANCHOR id="hb-feature-t-struct" href="harfbuzz/harfbuzz-hb-common.html#hb-feature-t-struct">
 <ANCHOR id="hb-mask-t" href="harfbuzz/harfbuzz-hb-common.html#hb-mask-t">
 <ANCHOR id="hb-position-t" href="harfbuzz/harfbuzz-hb-common.html#hb-position-t">
 <ANCHOR id="hb-tag-t" href="harfbuzz/harfbuzz-hb-common.html#hb-tag-t">
@@ -146,6 +150,8 @@
 <ANCHOR id="HB-TAG-NONE:CAPS" href="harfbuzz/harfbuzz-hb-common.html#HB-TAG-NONE:CAPS">
 <ANCHOR id="HB-TAG-MAX:CAPS" href="harfbuzz/harfbuzz-hb-common.html#HB-TAG-MAX:CAPS">
 <ANCHOR id="HB-TAG-MAX-SIGNED:CAPS" href="harfbuzz/harfbuzz-hb-common.html#HB-TAG-MAX-SIGNED:CAPS">
+<ANCHOR id="HB-FEATURE-GLOBAL-END:CAPS" href="harfbuzz/harfbuzz-hb-common.html#HB-FEATURE-GLOBAL-END:CAPS">
+<ANCHOR id="HB-FEATURE-GLOBAL-START:CAPS" href="harfbuzz/harfbuzz-hb-common.html#HB-FEATURE-GLOBAL-START:CAPS">
 <ANCHOR id="harfbuzz-hb-deprecated" href="harfbuzz/harfbuzz-hb-deprecated.html">
 <ANCHOR id="harfbuzz-hb-deprecated.functions" href="harfbuzz/harfbuzz-hb-deprecated.html#harfbuzz-hb-deprecated.functions">
 <ANCHOR id="harfbuzz-hb-deprecated.other" href="harfbuzz/harfbuzz-hb-deprecated.html#harfbuzz-hb-deprecated.other">
@@ -397,21 +403,14 @@
 <ANCHOR id="hb-shape-plan-t" href="harfbuzz/harfbuzz-hb-shape-plan.html#hb-shape-plan-t">
 <ANCHOR id="harfbuzz-hb-shape" href="harfbuzz/harfbuzz-hb-shape.html">
 <ANCHOR id="harfbuzz-hb-shape.functions" href="harfbuzz/harfbuzz-hb-shape.html#harfbuzz-hb-shape.functions">
-<ANCHOR id="hb-feature-t" href="harfbuzz/harfbuzz-hb-shape.html#hb-feature-t">
-<ANCHOR id="harfbuzz-hb-shape.other" href="harfbuzz/harfbuzz-hb-shape.html#harfbuzz-hb-shape.other">
 <ANCHOR id="harfbuzz-hb-shape.object-hierarchy" href="harfbuzz/harfbuzz-hb-shape.html#harfbuzz-hb-shape.object-hierarchy">
 <ANCHOR id="harfbuzz-hb-shape.includes" href="harfbuzz/harfbuzz-hb-shape.html#harfbuzz-hb-shape.includes">
 <ANCHOR id="harfbuzz-hb-shape.description" href="harfbuzz/harfbuzz-hb-shape.html#harfbuzz-hb-shape.description">
 <ANCHOR id="harfbuzz-hb-shape.functions_details" href="harfbuzz/harfbuzz-hb-shape.html#harfbuzz-hb-shape.functions_details">
-<ANCHOR id="hb-feature-from-string" href="harfbuzz/harfbuzz-hb-shape.html#hb-feature-from-string">
-<ANCHOR id="hb-feature-to-string" href="harfbuzz/harfbuzz-hb-shape.html#hb-feature-to-string">
 <ANCHOR id="hb-shape" href="harfbuzz/harfbuzz-hb-shape.html#hb-shape">
 <ANCHOR id="hb-shape-full" href="harfbuzz/harfbuzz-hb-shape.html#hb-shape-full">
 <ANCHOR id="hb-shape-list-shapers" href="harfbuzz/harfbuzz-hb-shape.html#hb-shape-list-shapers">
 <ANCHOR id="harfbuzz-hb-shape.other_details" href="harfbuzz/harfbuzz-hb-shape.html#harfbuzz-hb-shape.other_details">
-<ANCHOR id="HB-FEATURE-GLOBAL-END:CAPS" href="harfbuzz/harfbuzz-hb-shape.html#HB-FEATURE-GLOBAL-END:CAPS">
-<ANCHOR id="HB-FEATURE-GLOBAL-START:CAPS" href="harfbuzz/harfbuzz-hb-shape.html#HB-FEATURE-GLOBAL-START:CAPS">
-<ANCHOR id="hb-feature-t-struct" href="harfbuzz/harfbuzz-hb-shape.html#hb-feature-t-struct">
 <ANCHOR id="harfbuzz-hb-unicode" href="harfbuzz/harfbuzz-hb-unicode.html">
 <ANCHOR id="harfbuzz-hb-unicode.functions" href="harfbuzz/harfbuzz-hb-unicode.html#harfbuzz-hb-unicode.functions">
 <ANCHOR id="hb-unicode-funcs-t" href="harfbuzz/harfbuzz-hb-unicode.html#hb-unicode-funcs-t">
