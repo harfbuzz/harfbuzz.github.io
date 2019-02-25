@@ -615,8 +615,9 @@ hb_feature_from_string (<em class="parameter"><code>const <span class="type">cha
                         <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-feature-t"><span class="type">hb_feature_t</span></a> *feature</code></em>);</pre>
 <p>Parses a string into a <a class="link" href="harfbuzz-hb-common.html#hb-feature-t"><span class="type">hb_feature_t</span></a>.</p>
 <p>The format for specifying feature strings follows. All valid CSS
-font-feature-settings values other than 'normal' and 'inherited' are also
-accepted, though, not documented below.</p>
+font-feature-settings values other than 'normal' and the global values are
+also accepted, though not documented below. CSS string escapes are not
+supported.</p>
 <p>The range indices refer to the positions between Unicode characters. The
 position before the first character is always 0.</p>
 <p>The format is Python-esque.  Here is how it all works:</p>
