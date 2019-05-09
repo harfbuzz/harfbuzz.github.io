@@ -34,6 +34,13 @@
         <sub name="Graphite shaping" link="graphite-shaping.html"/>
         <sub name="AAT shaping" link="aat-shaping.html"/>
       </sub>
+      <sub name="The HarfBuzz object model" link="object-model.html">
+        <sub name="An overview of data types in HarfBuzz" link="object-model.html#object-model-intro"/>
+        <sub name="Objects in HarfBuzz" link="object-model-object-types.html"/>
+        <sub name="Object lifecycle management" link="object-model-lifecycle.html"/>
+        <sub name="User data" link="object-model-user-data.html"/>
+        <sub name="Blobs" link="object-model-blobs.html"/>
+      </sub>
       <sub name="Buffers, language, script and direction" link="buffers-language-script-and-direction.html">
         <sub name="Creating and destroying buffers" link="buffers-language-script-and-direction.html#creating-and-destroying-buffers"/>
         <sub name="Adding text to the buffer" link="adding-text-to-the-buffer.html"/>
@@ -65,7 +72,7 @@
       <sub name="Glyph information" link="pt01.html#glyph-information"/>
     </sub>
     <sub name="Reference manual" link="pt02.html">
-      <sub name="Core API" link="ch09.html">
+      <sub name="Core API" link="ch10.html">
         <sub name="hb-blob" link="harfbuzz-hb-blob.html"/>
         <sub name="hb-buffer" link="harfbuzz-hb-buffer.html"/>
         <sub name="hb-common" link="harfbuzz-hb-common.html"/>
@@ -79,7 +86,7 @@
         <sub name="hb-unicode" link="harfbuzz-hb-unicode.html"/>
         <sub name="hb-version" link="harfbuzz-hb-version.html"/>
       </sub>
-      <sub name="OpenType API" link="ch10.html">
+      <sub name="OpenType API" link="ch11.html">
         <sub name="hb-ot-color" link="harfbuzz-hb-ot-color.html"/>
         <sub name="hb-ot-font" link="harfbuzz-hb-ot-font.html"/>
         <sub name="hb-ot-layout" link="harfbuzz-hb-ot-layout.html"/>
@@ -88,10 +95,10 @@
         <sub name="hb-ot-shape" link="harfbuzz-hb-ot-shape.html"/>
         <sub name="hb-ot-var" link="harfbuzz-hb-ot-var.html"/>
       </sub>
-      <sub name="Apple Advanced Typography API" link="ch11.html">
+      <sub name="Apple Advanced Typography API" link="ch12.html">
         <sub name="hb-aat-layout" link="harfbuzz-hb-aat-layout.html"/>
       </sub>
-      <sub name="Integration API" link="ch12.html">
+      <sub name="Integration API" link="ch13.html">
         <sub name="hb-coretext" link="harfbuzz-hb-coretext.html"/>
         <sub name="hb-ft" link="harfbuzz-hb-ft.html"/>
         <sub name="hb-glib" link="harfbuzz-hb-glib.html"/>
