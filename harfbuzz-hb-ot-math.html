@@ -172,6 +172,9 @@
 <div class="refsect1">
 <a name="harfbuzz-hb-ot-math.description"></a><h2>Description</h2>
 <p>Functions for fetching mathematics layout data from OpenType fonts.</p>
+<p>HarfBuzz itself does not implement a math layout solution. The
+functions and types provided can be used by client programs to access
+the font data necessary for typesetting OpenType Math layout.</p>
 </div>
 <div class="refsect1">
 <a name="harfbuzz-hb-ot-math.functions_details"></a><h2>Functions</h2>
@@ -179,8 +182,7 @@
 <a name="hb-ot-math-has-data"></a><h3>hb_ot_math_has_data ()</h3>
 <pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
 hb_ot_math_has_data (<em class="parameter"><code><a class="link" href="harfbuzz-hb-face.html#hb-face-t"><span class="type">hb_face_t</span></a> *face</code></em>);</pre>
-<p>This function allows to verify the presence of an OpenType MATH table on the
-face.</p>
+<p>Tests whether a face has a <code class="literal">MATH</code> table.</p>
 <div class="refsect3">
 <a name="id-1.3.5.5.10.2.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
@@ -198,7 +200,7 @@ face.</p>
 </div>
 <div class="refsect3">
 <a name="id-1.3.5.5.10.2.6"></a><h4>Returns</h4>
-<p> true if face has a MATH table, false otherwise</p>
+<p> true if the table is found, false otherwise</p>
 <p></p>
 </div>
 <p class="since">Since 1.3.3</p>
@@ -209,13 +211,14 @@ face.</p>
 <pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-position-t" title="hb_position_t"><span class="returnvalue">hb_position_t</span></a>
 hb_ot_math_get_constant (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t"><span class="type">hb_font_t</span></a> *font</code></em>,
                          <em class="parameter"><code><a class="link" href="harfbuzz-hb-ot-math.html#hb-ot-math-constant-t" title="enum hb_ot_math_constant_t"><span class="type">hb_ot_math_constant_t</span></a> constant</code></em>);</pre>
-<p>This function returns the requested math constants as a <a class="link" href="harfbuzz-hb-common.html#hb-position-t" title="hb_position_t"><span class="type">hb_position_t</span></a>.
-If the request constant is HB_OT_MATH_CONSTANT_SCRIPT_PERCENT_SCALE_DOWN,
-HB_OT_MATH_CONSTANT_SCRIPT_SCRIPT_PERCENT_SCALE_DOWN or
-HB_OT_MATH_CONSTANT_SCRIPT_PERCENT_SCALE_DOWN then the return value is
-actually an integer between 0 and 100 representing that percentage.</p>
+<p>Fetches the specified math constant. For most constants, the value returned
+is an <a class="link" href="harfbuzz-hb-common.html#hb-position-t" title="hb_position_t"><span class="type">hb_position_t</span></a>.</p>
+<p>However, if the requested constant is <a class="link" href="harfbuzz-hb-ot-math.html#HB-OT-MATH-CONSTANT-SCRIPT-PERCENT-SCALE-DOWN:CAPS"><span class="type">HB_OT_MATH_CONSTANT_SCRIPT_PERCENT_SCALE_DOWN</span></a>,
+<a class="link" href="harfbuzz-hb-ot-math.html#HB-OT-MATH-CONSTANT-SCRIPT-SCRIPT-PERCENT-SCALE-DOWN:CAPS"><span class="type">HB_OT_MATH_CONSTANT_SCRIPT_SCRIPT_PERCENT_SCALE_DOWN</span></a> or
+<a class="link" href="harfbuzz-hb-ot-math.html#HB-OT-MATH-CONSTANT-SCRIPT-PERCENT-SCALE-DOWN:CAPS"><span class="type">HB_OT_MATH_CONSTANT_SCRIPT_PERCENT_SCALE_DOWN</span></a>, then the return value is
+an integer between 0 and 100 representing that percentage.</p>
 <div class="refsect3">
-<a name="id-1.3.5.5.10.3.5"></a><h4>Parameters</h4>
+<a name="id-1.3.5.5.10.3.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -225,7 +228,7 @@ actually an integer between 0 and 100 representing that percentage.</p>
 <tbody>
 <tr>
 <td class="parameter_name"><p>font</p></td>
-<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-font.html#hb-font-t"><span class="type">hb_font_t</span></a> from which to retrieve the value</p></td>
+<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-font.html#hb-font-t"><span class="type">hb_font_t</span></a> to work upon</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -237,8 +240,8 @@ actually an integer between 0 and 100 representing that percentage.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.5.5.10.3.6"></a><h4>Returns</h4>
-<p> the requested constant or 0</p>
+<a name="id-1.3.5.5.10.3.7"></a><h4>Returns</h4>
+<p> the requested constant or zero</p>
 <p></p>
 </div>
 <p class="since">Since 1.3.3</p>
@@ -250,8 +253,10 @@ actually an integer between 0 and 100 representing that percentage.</p>
 hb_ot_math_get_glyph_italics_correction
                                (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t"><span class="type">hb_font_t</span></a> *font</code></em>,
                                 <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> glyph</code></em>);</pre>
+<p>Fetches an italics-correction value (if one exists) for the specified
+glyph index.</p>
 <div class="refsect3">
-<a name="id-1.3.5.5.10.4.4"></a><h4>Parameters</h4>
+<a name="id-1.3.5.5.10.4.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -261,20 +266,20 @@ hb_ot_math_get_glyph_italics_correction
 <tbody>
 <tr>
 <td class="parameter_name"><p>font</p></td>
-<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-font.html#hb-font-t"><span class="type">hb_font_t</span></a> from which to retrieve the value</p></td>
+<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-font.html#hb-font-t"><span class="type">hb_font_t</span></a> to work upon</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>glyph</p></td>
-<td class="parameter_description"><p>glyph index from which to retrieve the value</p></td>
+<td class="parameter_description"><p>The glyph index from which to retrieve the value</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.5.5.10.4.5"></a><h4>Returns</h4>
-<p> the italics correction of the glyph or 0</p>
+<a name="id-1.3.5.5.10.4.6"></a><h4>Returns</h4>
+<p> the italics correction of the glyph or zero</p>
 <p></p>
 </div>
 <p class="since">Since 1.3.3</p>
@@ -286,8 +291,16 @@ hb_ot_math_get_glyph_italics_correction
 hb_ot_math_get_glyph_top_accent_attachment
                                (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t"><span class="type">hb_font_t</span></a> *font</code></em>,
                                 <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> glyph</code></em>);</pre>
+<p>Fetches a top-accent-attachment value (if one exists) for the specified
+glyph index.</p>
+<p>For any glyph that does not have a top-accent-attachment value - that is,
+a glyph not covered by the <code class="literal">MathTopAccentAttachment</code> table (or, when
+<em class="parameter"><code>font</code></em>
+ has no <code class="literal">MathTopAccentAttachment</code> table or no <code class="literal">MATH</code> table, any
+glyph) - the function synthesizes a value, returning the position at
+one-half the glyph's advance width.</p>
 <div class="refsect3">
-<a name="id-1.3.5.5.10.5.4"></a><h4>Parameters</h4>
+<a name="id-1.3.5.5.10.5.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -297,20 +310,22 @@ hb_ot_math_get_glyph_top_accent_attachment
 <tbody>
 <tr>
 <td class="parameter_name"><p>font</p></td>
-<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-font.html#hb-font-t"><span class="type">hb_font_t</span></a> from which to retrieve the value</p></td>
+<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-font.html#hb-font-t"><span class="type">hb_font_t</span></a> to work upon</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>glyph</p></td>
-<td class="parameter_description"><p>glyph index from which to retrieve the value</p></td>
+<td class="parameter_description"><p>The glyph index from which to retrieve the value</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.5.5.10.5.5"></a><h4>Returns</h4>
-<p> the top accent attachment of the glyph or 0</p>
+<a name="id-1.3.5.5.10.5.7"></a><h4>Returns</h4>
+<p> the top accent attachment of the glyph or 0.5 * the advance
+width of <em class="parameter"><code>glyph</code></em>
+</p>
 <p></p>
 </div>
 <p class="since">Since 1.3.3</p>
@@ -323,13 +338,16 @@ hb_ot_math_get_glyph_kerning (<em class="parameter"><code><a class="link" href="
                               <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> glyph</code></em>,
                               <em class="parameter"><code><a class="link" href="harfbuzz-hb-ot-math.html#hb-ot-math-kern-t" title="enum hb_ot_math_kern_t"><span class="type">hb_ot_math_kern_t</span></a> kern</code></em>,
                               <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-position-t" title="hb_position_t"><span class="type">hb_position_t</span></a> correction_height</code></em>);</pre>
-<p>This function tries to retrieve the MathKern table for the specified font,
-glyph and <a class="link" href="harfbuzz-hb-ot-math.html#hb-ot-math-kern-t" title="enum hb_ot_math_kern_t"><span class="type">hb_ot_math_kern_t</span></a>. Then it browses the list of heights from the
-MathKern table to find one value that is greater or equal to specified
-correction_height. If one is found the corresponding value from the list of
-kerns is returned and otherwise the last kern value is returned.</p>
+<p>Fetches the math kerning (cut-ins) value for the specified font, glyph index, and
+<em class="parameter"><code>kern</code></em>
+. </p>
+<p>If the MathKern table is found, the function examines it to find a height
+value that is greater or equal to <em class="parameter"><code>correction_height</code></em>
+. If such a height
+value is found, corresponding kerning value from the table is returned. If
+no such height value is found, the last kerning value is returned.</p>
 <div class="refsect3">
-<a name="id-1.3.5.5.10.6.5"></a><h4>Parameters</h4>
+<a name="id-1.3.5.5.10.6.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -339,17 +357,17 @@ kerns is returned and otherwise the last kern value is returned.</p>
 <tbody>
 <tr>
 <td class="parameter_name"><p>font</p></td>
-<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-font.html#hb-font-t"><span class="type">hb_font_t</span></a> from which to retrieve the value</p></td>
+<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-font.html#hb-font-t"><span class="type">hb_font_t</span></a> to work upon</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>glyph</p></td>
-<td class="parameter_description"><p>glyph index from which to retrieve the value</p></td>
+<td class="parameter_description"><p>The glyph index from which to retrieve the value</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>kern</p></td>
-<td class="parameter_description"><p>the <a class="link" href="harfbuzz-hb-ot-math.html#hb-ot-math-kern-t" title="enum hb_ot_math_kern_t"><span class="type">hb_ot_math_kern_t</span></a> from which to retrieve the value</p></td>
+<td class="parameter_description"><p>The <a class="link" href="harfbuzz-hb-ot-math.html#hb-ot-math-kern-t" title="enum hb_ot_math_kern_t"><span class="type">hb_ot_math_kern_t</span></a> from which to retrieve the value</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -361,8 +379,8 @@ kerns is returned and otherwise the last kern value is returned.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.5.5.10.6.6"></a><h4>Returns</h4>
-<p> requested kerning or 0</p>
+<a name="id-1.3.5.5.10.6.7"></a><h4>Returns</h4>
+<p> requested kerning value or zero</p>
 <p></p>
 </div>
 <p class="since">Since 1.3.3</p>
@@ -373,8 +391,9 @@ kerns is returned and otherwise the last kern value is returned.</p>
 <pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
 hb_ot_math_is_glyph_extended_shape (<em class="parameter"><code><a class="link" href="harfbuzz-hb-face.html#hb-face-t"><span class="type">hb_face_t</span></a> *face</code></em>,
                                     <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> glyph</code></em>);</pre>
+<p>Tests whether the given glyph index is an extended shape in the face.</p>
 <div class="refsect3">
-<a name="id-1.3.5.5.10.7.4"></a><h4>Parameters</h4>
+<a name="id-1.3.5.5.10.7.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -384,19 +403,19 @@ hb_ot_math_is_glyph_extended_shape (<em class="parameter"><code><a class="link" 
 <tbody>
 <tr>
 <td class="parameter_name"><p>face</p></td>
-<td class="parameter_description"><p>a <a class="link" href="harfbuzz-hb-face.html#hb-face-t"><span class="type">hb_face_t</span></a> to test</p></td>
+<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-face.html#hb-face-t"><span class="type">hb_face_t</span></a> to work upon</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>glyph</p></td>
-<td class="parameter_description"><p>a glyph index to test</p></td>
+<td class="parameter_description"><p>The glyph index to test</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.5.5.10.7.5"></a><h4>Returns</h4>
+<a name="id-1.3.5.5.10.7.6"></a><h4>Returns</h4>
 <p> true if the glyph is an extended shape, false otherwise</p>
 <p></p>
 </div>
@@ -412,12 +431,15 @@ hb_ot_math_get_glyph_variants (<em class="parameter"><code><a class="link" href=
                                <em class="parameter"><code>unsigned <span class="type">int</span> start_offset</code></em>,
                                <em class="parameter"><code>unsigned <span class="type">int</span> *variants_count</code></em>,
                                <em class="parameter"><code><a class="link" href="harfbuzz-hb-ot-math.html#hb-ot-math-glyph-variant-t"><span class="type">hb_ot_math_glyph_variant_t</span></a> *variants</code></em>);</pre>
-<p>This function tries to retrieve the MathGlyphConstruction for the specified
-font, glyph and direction. Note that only the value of
-<a class="link" href="harfbuzz-hb-common.html#HB-DIRECTION-IS-HORIZONTAL:CAPS" title="HB_DIRECTION_IS_HORIZONTAL()"><span class="type">HB_DIRECTION_IS_HORIZONTAL</span></a> is considered. It provides the corresponding list
-of size variants as an array of hb_ot_math_glyph_variant_t structs.</p>
+<p>Fetches the MathGlyphConstruction for the specified font, glyph index, and
+direction. The corresponding list of size variants is returned as a list of
+<a class="link" href="harfbuzz-hb-ot-math.html#hb-ot-math-glyph-variant-t"><span class="type">hb_ot_math_glyph_variant_t</span></a> structs.</p>
+<div class="note">The <em class="parameter"><code>direction</code></em> parameter is only used to select between horizontal
+or vertical directions for the construction. Even though all <a class="link" href="harfbuzz-hb-common.html#hb-direction-t" title="enum hb_direction_t"><span class="type">hb_direction_t</span></a>
+values are accepted, only the result of <a class="link" href="harfbuzz-hb-common.html#HB-DIRECTION-IS-HORIZONTAL:CAPS" title="HB_DIRECTION_IS_HORIZONTAL()"><span class="type">HB_DIRECTION_IS_HORIZONTAL</span></a> is
+considered.</div>
 <div class="refsect3">
-<a name="id-1.3.5.5.10.8.5"></a><h4>Parameters</h4>
+<a name="id-1.3.5.5.10.8.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -427,17 +449,17 @@ of size variants as an array of hb_ot_math_glyph_variant_t structs.</p>
 <tbody>
 <tr>
 <td class="parameter_name"><p>font</p></td>
-<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-font.html#hb-font-t"><span class="type">hb_font_t</span></a> from which to retrieve the values</p></td>
+<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-font.html#hb-font-t"><span class="type">hb_font_t</span></a> to work upon</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>glyph</p></td>
-<td class="parameter_description"><p>index of the glyph to stretch</p></td>
+<td class="parameter_description"><p>The index of the glyph to stretch</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>direction</p></td>
-<td class="parameter_description"><p>direction of the stretching</p></td>
+<td class="parameter_description"><p>The direction of the stretching (horizontal or vertical)</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -447,22 +469,21 @@ of size variants as an array of hb_ot_math_glyph_variant_t structs.</p>
 </tr>
 <tr>
 <td class="parameter_name"><p>variants_count</p></td>
-<td class="parameter_description"><p>maximum number of variants to retrieve after start_offset
-(IN) and actual number of variants retrieved (OUT)</p></td>
-<td class="parameter_annotations"> </td>
+<td class="parameter_description"><p> Input = the maximum number of variants to return;
+Output = the actual number of variants returned. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>variants</p></td>
-<td class="parameter_description"><p>array of size at least <em class="parameter"><code>variants_count</code></em>
-to store the result</p></td>
-<td class="parameter_annotations"> </td>
+<td class="parameter_description"><p> array of variants returned. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=variants_count]</span></td>
 </tr>
 </tbody>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.5.5.10.8.6"></a><h4>Returns</h4>
-<p> the total number of size variants available or 0</p>
+<a name="id-1.3.5.5.10.8.7"></a><h4>Returns</h4>
+<p> the total number of size variants available or zero</p>
 <p></p>
 </div>
 <p class="since">Since 1.3.3</p>
@@ -473,12 +494,15 @@ to store the result</p></td>
 <pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-position-t" title="hb_position_t"><span class="returnvalue">hb_position_t</span></a>
 hb_ot_math_get_min_connector_overlap (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t"><span class="type">hb_font_t</span></a> *font</code></em>,
                                       <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-direction-t" title="enum hb_direction_t"><span class="type">hb_direction_t</span></a> direction</code></em>);</pre>
-<p>This function tries to retrieve the MathVariants table for the specified
-font and returns the minimum overlap of connecting glyphs to draw a glyph
-assembly in the specified direction. Note that only the value of
-<a class="link" href="harfbuzz-hb-common.html#HB-DIRECTION-IS-HORIZONTAL:CAPS" title="HB_DIRECTION_IS_HORIZONTAL()"><span class="type">HB_DIRECTION_IS_HORIZONTAL</span></a> is considered.</p>
+<p>Fetches the MathVariants table for the specified font and returns the
+minimum overlap of connecting glyphs that are required to draw a glyph
+assembly in the specified direction.</p>
+<div class="note">The <em class="parameter"><code>direction</code></em> parameter is only used to select between horizontal
+or vertical directions for the construction. Even though all <a class="link" href="harfbuzz-hb-common.html#hb-direction-t" title="enum hb_direction_t"><span class="type">hb_direction_t</span></a>
+values are accepted, only the result of <a class="link" href="harfbuzz-hb-common.html#HB-DIRECTION-IS-HORIZONTAL:CAPS" title="HB_DIRECTION_IS_HORIZONTAL()"><span class="type">HB_DIRECTION_IS_HORIZONTAL</span></a> is
+considered.</div>
 <div class="refsect3">
-<a name="id-1.3.5.5.10.9.5"></a><h4>Parameters</h4>
+<a name="id-1.3.5.5.10.9.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -488,20 +512,20 @@ assembly in the specified direction. Note that only the value of
 <tbody>
 <tr>
 <td class="parameter_name"><p>font</p></td>
-<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-font.html#hb-font-t"><span class="type">hb_font_t</span></a> from which to retrieve the value</p></td>
+<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-font.html#hb-font-t"><span class="type">hb_font_t</span></a> to work upon</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>direction</p></td>
-<td class="parameter_description"><p>direction of the stretching</p></td>
+<td class="parameter_description"><p>direction of the stretching (horizontal or vertical)</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.5.5.10.9.6"></a><h4>Returns</h4>
-<p> requested min connector overlap or 0</p>
+<a name="id-1.3.5.5.10.9.7"></a><h4>Returns</h4>
+<p> requested minimum connector overlap or zero</p>
 <p></p>
 </div>
 <p class="since">Since 1.3.3</p>
@@ -517,12 +541,16 @@ hb_ot_math_get_glyph_assembly (<em class="parameter"><code><a class="link" href=
                                <em class="parameter"><code>unsigned <span class="type">int</span> *parts_count</code></em>,
                                <em class="parameter"><code><a class="link" href="harfbuzz-hb-ot-math.html#hb-ot-math-glyph-part-t"><span class="type">hb_ot_math_glyph_part_t</span></a> *parts</code></em>,
                                <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-position-t" title="hb_position_t"><span class="type">hb_position_t</span></a> *italics_correction</code></em>);</pre>
-<p>This function tries to retrieve the GlyphAssembly for the specified font,
-glyph and direction. Note that only the value of <a class="link" href="harfbuzz-hb-common.html#HB-DIRECTION-IS-HORIZONTAL:CAPS" title="HB_DIRECTION_IS_HORIZONTAL()"><span class="type">HB_DIRECTION_IS_HORIZONTAL</span></a>
-is considered. It provides the information necessary to draw the glyph
-assembly as an array of <a class="link" href="harfbuzz-hb-ot-math.html#hb-ot-math-glyph-part-t"><span class="type">hb_ot_math_glyph_part_t</span></a>.</p>
+<p>Fetches the GlyphAssembly for the specified font, glyph index, and direction.
+Returned are a list of <a class="link" href="harfbuzz-hb-ot-math.html#hb-ot-math-glyph-part-t"><span class="type">hb_ot_math_glyph_part_t</span></a> glyph parts that can be
+used to draw the glyph and an italics-correction value (if one is defined
+in the font).</p>
+<div class="note">The <em class="parameter"><code>direction</code></em> parameter is only used to select between horizontal
+or vertical directions for the construction. Even though all <a class="link" href="harfbuzz-hb-common.html#hb-direction-t" title="enum hb_direction_t"><span class="type">hb_direction_t</span></a>
+values are accepted, only the result of <a class="link" href="harfbuzz-hb-common.html#HB-DIRECTION-IS-HORIZONTAL:CAPS" title="HB_DIRECTION_IS_HORIZONTAL()"><span class="type">HB_DIRECTION_IS_HORIZONTAL</span></a> is
+considered.</div>
 <div class="refsect3">
-<a name="id-1.3.5.5.10.10.5"></a><h4>Parameters</h4>
+<a name="id-1.3.5.5.10.10.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -532,17 +560,17 @@ assembly as an array of <a class="link" href="harfbuzz-hb-ot-math.html#hb-ot-mat
 <tbody>
 <tr>
 <td class="parameter_name"><p>font</p></td>
-<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-font.html#hb-font-t"><span class="type">hb_font_t</span></a> from which to retrieve the values</p></td>
+<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-font.html#hb-font-t"><span class="type">hb_font_t</span></a> to work upon</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>glyph</p></td>
-<td class="parameter_description"><p>index of the glyph to stretch</p></td>
+<td class="parameter_description"><p>The index of the glyph to stretch</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>direction</p></td>
-<td class="parameter_description"><p>direction of the stretching</p></td>
+<td class="parameter_description"><p>direction of the stretching (horizontal or vertical)</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -552,26 +580,25 @@ assembly as an array of <a class="link" href="harfbuzz-hb-ot-math.html#hb-ot-mat
 </tr>
 <tr>
 <td class="parameter_name"><p>parts_count</p></td>
-<td class="parameter_description"><p>maximum number of glyph parts to retrieve after start_offset
-(IN) and actual number of parts retrieved (OUT)</p></td>
-<td class="parameter_annotations"> </td>
+<td class="parameter_description"><p> Input = maximum number of glyph parts to return;
+Output = actual number of parts returned. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>parts</p></td>
-<td class="parameter_description"><p>array of size at least <em class="parameter"><code>parts_count</code></em>
-to store the result</p></td>
-<td class="parameter_annotations"> </td>
+<td class="parameter_description"><p> the glyph parts returned. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=parts_count]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>italics_correction</p></td>
-<td class="parameter_description"><p>italic correction of the glyph assembly</p></td>
-<td class="parameter_annotations"> </td>
+<td class="parameter_description"><p> italics correction of the glyph assembly. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
 </tr>
 </tbody>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.5.5.10.10.6"></a><h4>Returns</h4>
+<a name="id-1.3.5.5.10.10.7"></a><h4>Returns</h4>
 <p> the total number of parts in the glyph assembly</p>
 <p></p>
 </div>
@@ -594,8 +621,10 @@ to store the result</p></td>
 <hr>
 <div class="refsect2">
 <a name="hb-ot-math-constant-t"></a><h3>enum hb_ot_math_constant_t</h3>
+<p>The 'MATH' table constants specified at
+https://docs.microsoft.com/en-us/typography/opentype/spec/math</p>
 <div class="refsect3">
-<a name="id-1.3.5.5.11.4.3"></a><h4>Members</h4>
+<a name="id-1.3.5.5.11.4.4"></a><h4>Members</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="300px" class="enum_members_name">
@@ -891,8 +920,10 @@ to store the result</p></td>
 <hr>
 <div class="refsect2">
 <a name="hb-ot-math-kern-t"></a><h3>enum hb_ot_math_kern_t</h3>
+<p>The math kerning-table types defined for the four corners
+of a glyph.</p>
 <div class="refsect3">
-<a name="id-1.3.5.5.11.5.3"></a><h4>Members</h4>
+<a name="id-1.3.5.5.11.5.4"></a><h4>Members</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="300px" class="enum_members_name">
@@ -933,13 +964,37 @@ to store the result</p></td>
   hb_position_t advance;
 } hb_ot_math_glyph_variant_t;
 </pre>
+<p>Data type to hold math-variant information for a glyph.</p>
+<div class="refsect3">
+<a name="id-1.3.5.5.11.6.5"></a><h4>Members</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> <em class="structfield"><code><a name="hb-ot-math-glyph-variant-t-struct.glyph"></a>glyph</code></em>;</p></td>
+<td class="struct_member_description"><p>The glyph index of the variant</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="harfbuzz-hb-common.html#hb-position-t" title="hb_position_t"><span class="type">hb_position_t</span></a> <em class="structfield"><code><a name="hb-ot-math-glyph-variant-t-struct.advance"></a>advance</code></em>;</p></td>
+<td class="struct_member_description"><p>The advance width of the variant</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
 <p class="since">Since 1.3.3</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="hb-ot-math-glyph-part-flags-t"></a><h3>enum hb_ot_math_glyph_part_flags_t</h3>
+<p>Flags for math glyph parts.</p>
 <div class="refsect3">
-<a name="id-1.3.5.5.11.7.3"></a><h4>Members</h4>
+<a name="id-1.3.5.5.11.7.4"></a><h4>Members</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="300px" class="enum_members_name">
@@ -966,6 +1021,46 @@ to store the result</p></td>
   hb_ot_math_glyph_part_flags_t flags;
 } hb_ot_math_glyph_part_t;
 </pre>
+<p>Data type to hold information for a "part" component of a math-variant glyph.
+Large variants for stretchable math glyphs (such as parentheses) can be constructed
+on the fly from parts.</p>
+<div class="refsect3">
+<a name="id-1.3.5.5.11.8.5"></a><h4>Members</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> <em class="structfield"><code><a name="hb-ot-math-glyph-part-t-struct.glyph"></a>glyph</code></em>;</p></td>
+<td class="struct_member_description"><p>The glyph index of the variant part</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="harfbuzz-hb-common.html#hb-position-t" title="hb_position_t"><span class="type">hb_position_t</span></a> <em class="structfield"><code><a name="hb-ot-math-glyph-part-t-struct.start-connector-length"></a>start_connector_length</code></em>;</p></td>
+<td class="struct_member_description"><p>The length of the connector on the starting side of the variant part</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="harfbuzz-hb-common.html#hb-position-t" title="hb_position_t"><span class="type">hb_position_t</span></a> <em class="structfield"><code><a name="hb-ot-math-glyph-part-t-struct.end-connector-length"></a>end_connector_length</code></em>;</p></td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="harfbuzz-hb-common.html#hb-position-t" title="hb_position_t"><span class="type">hb_position_t</span></a> <em class="structfield"><code><a name="hb-ot-math-glyph-part-t-struct.full-advance"></a>full_advance</code></em>;</p></td>
+<td class="struct_member_description"><p>The total advance of the part</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="harfbuzz-hb-ot-math.html#hb-ot-math-glyph-part-flags-t" title="enum hb_ot_math_glyph_part_flags_t"><span class="type">hb_ot_math_glyph_part_flags_t</span></a> <em class="structfield"><code><a name="hb-ot-math-glyph-part-t-struct.flags"></a>flags</code></em>;</p></td>
+<td class="struct_member_description"><p><a class="link" href="harfbuzz-hb-ot-math.html#hb-ot-math-glyph-part-flags-t" title="enum hb_ot_math_glyph_part_flags_t"><span class="type">hb_ot_math_glyph_part_flags_t</span></a> flags for the part</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
 <p class="since">Since 1.3.3</p>
 </div>
 </div>
