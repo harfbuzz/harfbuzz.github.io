@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<!DOCTYPE book PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "">
 <book xmlns="http://www.devhelp.net/book" title="HarfBuzz Manual" link="index.html" author="" name="harfbuzz" version="2" language="c">
   <chapters>
     <sub name="User's manual" link="pt01.html">
@@ -163,7 +162,7 @@
     <keyword type="function" name="hb_blob_set_user_data ()" link="harfbuzz-hb-blob.html#hb-blob-set-user-data" since="0.9.2"/>
     <keyword type="typedef" name="hb_blob_t" link="harfbuzz-hb-blob.html#hb-blob-t"/>
     <keyword type="enum" name="enum hb_memory_mode_t" link="harfbuzz-hb-blob.html#hb-memory-mode-t"/>
-    <keyword type="function" name="hb_buffer_create ()" link="harfbuzz-hb-buffer.html#hb-buffer-create"/>
+    <keyword type="function" name="hb_buffer_create ()" link="harfbuzz-hb-buffer.html#hb-buffer-create" since="0.9.2"/>
     <keyword type="function" name="hb_buffer_reference ()" link="harfbuzz-hb-buffer.html#hb-buffer-reference" since="0.9.2"/>
     <keyword type="function" name="hb_buffer_get_empty ()" link="harfbuzz-hb-buffer.html#hb-buffer-get-empty" since="0.9.2"/>
     <keyword type="function" name="hb_buffer_destroy ()" link="harfbuzz-hb-buffer.html#hb-buffer-destroy" since="0.9.2"/>
@@ -256,7 +255,6 @@
     <keyword type="macro" name="HB_DIRECTION_IS_HORIZONTAL()" link="harfbuzz-hb-common.html#HB-DIRECTION-IS-HORIZONTAL:CAPS"/>
     <keyword type="macro" name="HB_DIRECTION_IS_VALID()" link="harfbuzz-hb-common.html#HB-DIRECTION-IS-VALID:CAPS"/>
     <keyword type="macro" name="HB_DIRECTION_IS_VERTICAL()" link="harfbuzz-hb-common.html#HB-DIRECTION-IS-VERTICAL:CAPS"/>
-    <keyword type="macro" name="HB_LANGUAGE_INVALID" link="harfbuzz-hb-common.html#HB-LANGUAGE-INVALID:CAPS"/>
     <keyword type="typedef" name="hb_bool_t" link="harfbuzz-hb-common.html#hb-bool-t"/>
     <keyword type="typedef" name="hb_codepoint_t" link="harfbuzz-hb-common.html#hb-codepoint-t"/>
     <keyword type="enum" name="enum hb_direction_t" link="harfbuzz-hb-common.html#hb-direction-t"/>
@@ -272,11 +270,11 @@
     <keyword type="macro" name="HB_TAG_NONE" link="harfbuzz-hb-common.html#HB-TAG-NONE:CAPS"/>
     <keyword type="macro" name="HB_TAG_MAX" link="harfbuzz-hb-common.html#HB-TAG-MAX:CAPS"/>
     <keyword type="macro" name="HB_TAG_MAX_SIGNED" link="harfbuzz-hb-common.html#HB-TAG-MAX-SIGNED:CAPS"/>
+    <keyword type="macro" name="HB_LANGUAGE_INVALID" link="harfbuzz-hb-common.html#HB-LANGUAGE-INVALID:CAPS"/>
     <keyword type="macro" name="HB_FEATURE_GLOBAL_END" link="harfbuzz-hb-common.html#HB-FEATURE-GLOBAL-END:CAPS" since="2.0.0"/>
     <keyword type="macro" name="HB_FEATURE_GLOBAL_START" link="harfbuzz-hb-common.html#HB-FEATURE-GLOBAL-START:CAPS" since="2.0.0"/>
     <keyword type="function" name="hb_font_get_glyph_func_t ()" link="harfbuzz-hb-deprecated.html#hb-font-get-glyph-func-t" deprecated=""/>
     <keyword type="function" name="hb_ot_layout_table_find_script ()" link="harfbuzz-hb-deprecated.html#hb-ot-layout-table-find-script"/>
-    <keyword type="macro" name="HB_UNICODE_MAX_DECOMPOSITION_LEN" link="harfbuzz-hb-deprecated.html#HB-UNICODE-MAX-DECOMPOSITION-LEN:CAPS" deprecated="2.0.0"/>
     <keyword type="function" name="hb_font_funcs_set_glyph_h_kerning_func ()" link="harfbuzz-hb-deprecated.html#hb-font-funcs-set-glyph-h-kerning-func" deprecated="2.0.0" since="0.9.2"/>
     <keyword type="function" name="hb_font_funcs_set_glyph_v_kerning_func ()" link="harfbuzz-hb-deprecated.html#hb-font-funcs-set-glyph-v-kerning-func" deprecated="2.0.0" since="0.9.2"/>
     <keyword type="function" name="hb_font_get_glyph_h_kerning ()" link="harfbuzz-hb-deprecated.html#hb-font-get-glyph-h-kerning" deprecated="2.0.0" since="0.9.2"/>
@@ -287,10 +285,11 @@
     <keyword type="macro" name="HB_BUFFER_SERIALIZE_FLAGS_DEFAULT" link="harfbuzz-hb-deprecated.html#HB-BUFFER-SERIALIZE-FLAGS-DEFAULT:CAPS" deprecated=""/>
     <keyword type="macro" name="HB_SCRIPT_CANADIAN_ABORIGINAL" link="harfbuzz-hb-deprecated.html#HB-SCRIPT-CANADIAN-ABORIGINAL:CAPS" deprecated=""/>
     <keyword type="macro" name="HB_OT_VAR_NO_AXIS_INDEX" link="harfbuzz-hb-deprecated.html#HB-OT-VAR-NO-AXIS-INDEX:CAPS" deprecated="2.2.0" since="1.4.2"/>
+    <keyword type="macro" name="HB_UNICODE_MAX_DECOMPOSITION_LEN" link="harfbuzz-hb-deprecated.html#HB-UNICODE-MAX-DECOMPOSITION-LEN:CAPS" deprecated="2.0.0"/>
     <keyword type="typedef" name="hb_font_get_glyph_h_kerning_func_t" link="harfbuzz-hb-deprecated.html#hb-font-get-glyph-h-kerning-func-t" deprecated=""/>
     <keyword type="typedef" name="hb_font_get_glyph_v_kerning_func_t" link="harfbuzz-hb-deprecated.html#hb-font-get-glyph-v-kerning-func-t" deprecated=""/>
     <keyword type="function" name="hb_face_count ()" link="harfbuzz-hb-face.html#hb-face-count" since="1.7.7"/>
-    <keyword type="function" name="hb_face_create ()" link="harfbuzz-hb-face.html#hb-face-create"/>
+    <keyword type="function" name="hb_face_create ()" link="harfbuzz-hb-face.html#hb-face-create" since="0.9.2"/>
     <keyword type="function" name="hb_face_create_for_tables ()" link="harfbuzz-hb-face.html#hb-face-create-for-tables" since="0.9.2"/>
     <keyword type="function" name="hb_face_destroy ()" link="harfbuzz-hb-face.html#hb-face-destroy" since="0.9.2"/>
     <keyword type="function" name="hb_face_get_empty ()" link="harfbuzz-hb-face.html#hb-face-get-empty" since="0.9.2"/>
@@ -315,10 +314,10 @@
     <keyword type="function" name="hb_face_builder_add_table ()" link="harfbuzz-hb-face.html#hb-face-builder-add-table" since="1.9.0"/>
     <keyword type="typedef" name="hb_face_t" link="harfbuzz-hb-face.html#hb-face-t"/>
     <keyword type="function" name="hb_font_add_glyph_origin_for_direction ()" link="harfbuzz-hb-font.html#hb-font-add-glyph-origin-for-direction" since="0.9.2"/>
-    <keyword type="function" name="hb_font_create ()" link="harfbuzz-hb-font.html#hb-font-create"/>
+    <keyword type="function" name="hb_font_create ()" link="harfbuzz-hb-font.html#hb-font-create" since="0.9.2"/>
     <keyword type="function" name="hb_font_create_sub_font ()" link="harfbuzz-hb-font.html#hb-font-create-sub-font" since="0.9.2"/>
     <keyword type="function" name="hb_font_destroy ()" link="harfbuzz-hb-font.html#hb-font-destroy" since="0.9.2"/>
-    <keyword type="function" name="hb_font_funcs_create ()" link="harfbuzz-hb-font.html#hb-font-funcs-create"/>
+    <keyword type="function" name="hb_font_funcs_create ()" link="harfbuzz-hb-font.html#hb-font-funcs-create" since="0.9.2"/>
     <keyword type="function" name="hb_font_funcs_destroy ()" link="harfbuzz-hb-font.html#hb-font-funcs-destroy" since="0.9.2"/>
     <keyword type="function" name="hb_font_funcs_get_empty ()" link="harfbuzz-hb-font.html#hb-font-funcs-get-empty" since="0.9.2"/>
     <keyword type="function" name="hb_font_funcs_get_user_data ()" link="harfbuzz-hb-font.html#hb-font-funcs-get-user-data" since="0.9.2"/>
@@ -408,10 +407,9 @@
     <keyword type="typedef" name="hb_font_t" link="harfbuzz-hb-font.html#hb-font-t"/>
     <keyword type="typedef" name="hb_font_get_font_h_extents_func_t" link="harfbuzz-hb-font.html#hb-font-get-font-h-extents-func-t"/>
     <keyword type="typedef" name="hb_font_get_font_v_extents_func_t" link="harfbuzz-hb-font.html#hb-font-get-font-v-extents-func-t"/>
-    <keyword type="macro" name="HB_MAP_VALUE_INVALID" link="harfbuzz-hb-map.html#HB-MAP-VALUE-INVALID:CAPS"/>
     <keyword type="function" name="hb_map_allocation_successful ()" link="harfbuzz-hb-map.html#hb-map-allocation-successful" since="1.7.7"/>
     <keyword type="function" name="hb_map_clear ()" link="harfbuzz-hb-map.html#hb-map-clear" since="1.7.7"/>
-    <keyword type="function" name="hb_map_create ()" link="harfbuzz-hb-map.html#hb-map-create"/>
+    <keyword type="function" name="hb_map_create ()" link="harfbuzz-hb-map.html#hb-map-create" since="1.7.7"/>
     <keyword type="function" name="hb_map_del ()" link="harfbuzz-hb-map.html#hb-map-del" since="1.7.7"/>
     <keyword type="function" name="hb_map_destroy ()" link="harfbuzz-hb-map.html#hb-map-destroy" since="1.7.7"/>
     <keyword type="function" name="hb_map_get ()" link="harfbuzz-hb-map.html#hb-map-get" since="1.7.7"/>
@@ -423,13 +421,13 @@
     <keyword type="function" name="hb_map_reference ()" link="harfbuzz-hb-map.html#hb-map-reference" since="1.7.7"/>
     <keyword type="function" name="hb_map_set ()" link="harfbuzz-hb-map.html#hb-map-set" since="1.7.7"/>
     <keyword type="function" name="hb_map_set_user_data ()" link="harfbuzz-hb-map.html#hb-map-set-user-data" since="1.7.7"/>
+    <keyword type="macro" name="HB_MAP_VALUE_INVALID" link="harfbuzz-hb-map.html#HB-MAP-VALUE-INVALID:CAPS"/>
     <keyword type="typedef" name="hb_map_t" link="harfbuzz-hb-map.html#hb-map-t"/>
-    <keyword type="macro" name="HB_SET_VALUE_INVALID" link="harfbuzz-hb-set.html#HB-SET-VALUE-INVALID:CAPS"/>
     <keyword type="function" name="hb_set_add ()" link="harfbuzz-hb-set.html#hb-set-add" since="0.9.2"/>
     <keyword type="function" name="hb_set_add_range ()" link="harfbuzz-hb-set.html#hb-set-add-range" since="0.9.7"/>
     <keyword type="function" name="hb_set_allocation_successful ()" link="harfbuzz-hb-set.html#hb-set-allocation-successful" since="0.9.2"/>
     <keyword type="function" name="hb_set_clear ()" link="harfbuzz-hb-set.html#hb-set-clear" since="0.9.2"/>
-    <keyword type="function" name="hb_set_create ()" link="harfbuzz-hb-set.html#hb-set-create"/>
+    <keyword type="function" name="hb_set_create ()" link="harfbuzz-hb-set.html#hb-set-create" since="0.9.2"/>
     <keyword type="function" name="hb_set_del ()" link="harfbuzz-hb-set.html#hb-set-del" since="0.9.2"/>
     <keyword type="function" name="hb_set_del_range ()" link="harfbuzz-hb-set.html#hb-set-del-range" since="0.9.7"/>
     <keyword type="function" name="hb_set_destroy ()" link="harfbuzz-hb-set.html#hb-set-destroy" since="0.9.2"/>
@@ -453,8 +451,9 @@
     <keyword type="function" name="hb_set_subtract ()" link="harfbuzz-hb-set.html#hb-set-subtract" since="0.9.2"/>
     <keyword type="function" name="hb_set_symmetric_difference ()" link="harfbuzz-hb-set.html#hb-set-symmetric-difference" since="0.9.2"/>
     <keyword type="function" name="hb_set_union ()" link="harfbuzz-hb-set.html#hb-set-union" since="0.9.2"/>
+    <keyword type="macro" name="HB_SET_VALUE_INVALID" link="harfbuzz-hb-set.html#HB-SET-VALUE-INVALID:CAPS"/>
     <keyword type="typedef" name="hb_set_t" link="harfbuzz-hb-set.html#hb-set-t"/>
-    <keyword type="function" name="hb_shape_plan_create ()" link="harfbuzz-hb-shape-plan.html#hb-shape-plan-create"/>
+    <keyword type="function" name="hb_shape_plan_create ()" link="harfbuzz-hb-shape-plan.html#hb-shape-plan-create" since="0.9.7"/>
     <keyword type="function" name="hb_shape_plan_create_cached ()" link="harfbuzz-hb-shape-plan.html#hb-shape-plan-create-cached" since="0.9.7"/>
     <keyword type="function" name="hb_shape_plan_create2 ()" link="harfbuzz-hb-shape-plan.html#hb-shape-plan-create2"/>
     <keyword type="function" name="hb_shape_plan_create_cached2 ()" link="harfbuzz-hb-shape-plan.html#hb-shape-plan-create-cached2"/>
@@ -475,7 +474,7 @@
     <keyword type="function" name="hb_unicode_compose_func_t ()" link="harfbuzz-hb-unicode.html#hb-unicode-compose-func-t"/>
     <keyword type="function" name="hb_unicode_decompose ()" link="harfbuzz-hb-unicode.html#hb-unicode-decompose" since="0.9.2"/>
     <keyword type="function" name="hb_unicode_decompose_func_t ()" link="harfbuzz-hb-unicode.html#hb-unicode-decompose-func-t"/>
-    <keyword type="function" name="hb_unicode_funcs_create ()" link="harfbuzz-hb-unicode.html#hb-unicode-funcs-create"/>
+    <keyword type="function" name="hb_unicode_funcs_create ()" link="harfbuzz-hb-unicode.html#hb-unicode-funcs-create" since="0.9.2"/>
     <keyword type="function" name="hb_unicode_funcs_destroy ()" link="harfbuzz-hb-unicode.html#hb-unicode-funcs-destroy" since="0.9.2"/>
     <keyword type="function" name="hb_unicode_funcs_get_default ()" link="harfbuzz-hb-unicode.html#hb-unicode-funcs-get-default"/>
     <keyword type="function" name="hb_unicode_funcs_get_empty ()" link="harfbuzz-hb-unicode.html#hb-unicode-funcs-get-empty" since="0.9.2"/>
@@ -647,39 +646,6 @@
     <keyword type="function" name="hb_glib_script_from_script ()" link="harfbuzz-hb-glib.html#hb-glib-script-from-script"/>
     <keyword type="function" name="hb_glib_script_to_script ()" link="harfbuzz-hb-glib.html#hb-glib-script-to-script"/>
     <keyword type="function" name="hb_glib_blob_create ()" link="harfbuzz-hb-glib.html#hb-glib-blob-create" since="0.9.38"/>
-    <keyword type="macro" name="HB_GOBJECT_TYPE_BLOB" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-BLOB:CAPS"/>
-    <keyword type="macro" name="HB_GOBJECT_TYPE_BUFFER" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-BUFFER:CAPS"/>
-    <keyword type="macro" name="HB_GOBJECT_TYPE_BUFFER_CONTENT_TYPE" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-BUFFER-CONTENT-TYPE:CAPS"/>
-    <keyword type="macro" name="HB_GOBJECT_TYPE_BUFFER_DIFF_FLAGS" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-BUFFER-DIFF-FLAGS:CAPS"/>
-    <keyword type="macro" name="HB_GOBJECT_TYPE_BUFFER_FLAGS" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-BUFFER-FLAGS:CAPS"/>
-    <keyword type="macro" name="HB_GOBJECT_TYPE_BUFFER_SERIALIZE_FLAGS" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-BUFFER-SERIALIZE-FLAGS:CAPS"/>
-    <keyword type="macro" name="HB_GOBJECT_TYPE_BUFFER_SERIALIZE_FORMAT" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-BUFFER-SERIALIZE-FORMAT:CAPS"/>
-    <keyword type="macro" name="HB_GOBJECT_TYPE_DIRECTION" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-DIRECTION:CAPS"/>
-    <keyword type="macro" name="HB_GOBJECT_TYPE_FACE" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-FACE:CAPS"/>
-    <keyword type="macro" name="HB_GOBJECT_TYPE_FONT" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-FONT:CAPS"/>
-    <keyword type="macro" name="HB_GOBJECT_TYPE_FONT_FUNCS" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-FONT-FUNCS:CAPS"/>
-    <keyword type="macro" name="HB_GOBJECT_TYPE_GLYPH_FLAGS" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-GLYPH-FLAGS:CAPS"/>
-    <keyword type="macro" name="HB_GOBJECT_TYPE_MAP" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-MAP:CAPS"/>
-    <keyword type="macro" name="HB_GOBJECT_TYPE_MEMORY_MODE" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-MEMORY-MODE:CAPS"/>
-    <keyword type="macro" name="HB_GOBJECT_TYPE_OT_COLOR_PALETTE_FLAGS" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-OT-COLOR-PALETTE-FLAGS:CAPS"/>
-    <keyword type="macro" name="HB_GOBJECT_TYPE_OT_LAYOUT_GLYPH_CLASS" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-OT-LAYOUT-GLYPH-CLASS:CAPS"/>
-    <keyword type="macro" name="HB_GOBJECT_TYPE_OT_MATH_CONSTANT" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-OT-MATH-CONSTANT:CAPS"/>
-    <keyword type="macro" name="HB_GOBJECT_TYPE_OT_MATH_GLYPH_PART" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-OT-MATH-GLYPH-PART:CAPS"/>
-    <keyword type="macro" name="HB_GOBJECT_TYPE_OT_MATH_GLYPH_PART_FLAGS" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-OT-MATH-GLYPH-PART-FLAGS:CAPS"/>
-    <keyword type="macro" name="HB_GOBJECT_TYPE_OT_MATH_GLYPH_VARIANT" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-OT-MATH-GLYPH-VARIANT:CAPS"/>
-    <keyword type="macro" name="HB_GOBJECT_TYPE_OT_MATH_KERN" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-OT-MATH-KERN:CAPS"/>
-    <keyword type="macro" name="HB_GOBJECT_TYPE_SCRIPT" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-SCRIPT:CAPS"/>
-    <keyword type="macro" name="HB_GOBJECT_TYPE_SHAPE_PLAN" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-SHAPE-PLAN:CAPS"/>
-    <keyword type="macro" name="HB_GOBJECT_TYPE_UNICODE_COMBINING_CLASS" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-UNICODE-COMBINING-CLASS:CAPS"/>
-    <keyword type="macro" name="HB_GOBJECT_TYPE_UNICODE_FUNCS" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-UNICODE-FUNCS:CAPS"/>
-    <keyword type="macro" name="HB_GOBJECT_TYPE_UNICODE_GENERAL_CATEGORY" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-UNICODE-GENERAL-CATEGORY:CAPS"/>
-    <keyword type="macro" name="HB_GOBJECT_TYPE_BUFFER_CLUSTER_LEVEL" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-BUFFER-CLUSTER-LEVEL:CAPS"/>
-    <keyword type="macro" name="HB_GOBJECT_TYPE_FEATURE" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-FEATURE:CAPS"/>
-    <keyword type="macro" name="HB_GOBJECT_TYPE_GLYPH_INFO" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-GLYPH-INFO:CAPS"/>
-    <keyword type="macro" name="HB_GOBJECT_TYPE_GLYPH_POSITION" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-GLYPH-POSITION:CAPS"/>
-    <keyword type="macro" name="HB_GOBJECT_TYPE_SEGMENT_PROPERTIES" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-SEGMENT-PROPERTIES:CAPS"/>
-    <keyword type="macro" name="HB_GOBJECT_TYPE_SET" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-SET:CAPS"/>
-    <keyword type="macro" name="HB_GOBJECT_TYPE_USER_DATA_KEY" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-USER-DATA-KEY:CAPS"/>
     <keyword type="function" name="hb_gobject_blob_get_type ()" link="harfbuzz-hb-gobject.html#hb-gobject-blob-get-type" since="0.9.2"/>
     <keyword type="function" name="hb_gobject_buffer_content_type_get_type ()" link="harfbuzz-hb-gobject.html#hb-gobject-buffer-content-type-get-type"/>
     <keyword type="function" name="hb_gobject_buffer_diff_flags_get_type ()" link="harfbuzz-hb-gobject.html#hb-gobject-buffer-diff-flags-get-type"/>
@@ -713,6 +679,39 @@
     <keyword type="function" name="hb_gobject_segment_properties_get_type ()" link="harfbuzz-hb-gobject.html#hb-gobject-segment-properties-get-type"/>
     <keyword type="function" name="hb_gobject_set_get_type ()" link="harfbuzz-hb-gobject.html#hb-gobject-set-get-type"/>
     <keyword type="function" name="hb_gobject_user_data_key_get_type ()" link="harfbuzz-hb-gobject.html#hb-gobject-user-data-key-get-type"/>
+    <keyword type="macro" name="HB_GOBJECT_TYPE_BLOB" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-BLOB:CAPS"/>
+    <keyword type="macro" name="HB_GOBJECT_TYPE_BUFFER" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-BUFFER:CAPS"/>
+    <keyword type="macro" name="HB_GOBJECT_TYPE_BUFFER_CONTENT_TYPE" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-BUFFER-CONTENT-TYPE:CAPS"/>
+    <keyword type="macro" name="HB_GOBJECT_TYPE_BUFFER_DIFF_FLAGS" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-BUFFER-DIFF-FLAGS:CAPS"/>
+    <keyword type="macro" name="HB_GOBJECT_TYPE_BUFFER_FLAGS" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-BUFFER-FLAGS:CAPS"/>
+    <keyword type="macro" name="HB_GOBJECT_TYPE_BUFFER_SERIALIZE_FLAGS" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-BUFFER-SERIALIZE-FLAGS:CAPS"/>
+    <keyword type="macro" name="HB_GOBJECT_TYPE_BUFFER_SERIALIZE_FORMAT" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-BUFFER-SERIALIZE-FORMAT:CAPS"/>
+    <keyword type="macro" name="HB_GOBJECT_TYPE_DIRECTION" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-DIRECTION:CAPS"/>
+    <keyword type="macro" name="HB_GOBJECT_TYPE_FACE" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-FACE:CAPS"/>
+    <keyword type="macro" name="HB_GOBJECT_TYPE_FONT" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-FONT:CAPS"/>
+    <keyword type="macro" name="HB_GOBJECT_TYPE_FONT_FUNCS" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-FONT-FUNCS:CAPS"/>
+    <keyword type="macro" name="HB_GOBJECT_TYPE_GLYPH_FLAGS" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-GLYPH-FLAGS:CAPS"/>
+    <keyword type="macro" name="HB_GOBJECT_TYPE_MAP" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-MAP:CAPS"/>
+    <keyword type="macro" name="HB_GOBJECT_TYPE_MEMORY_MODE" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-MEMORY-MODE:CAPS"/>
+    <keyword type="macro" name="HB_GOBJECT_TYPE_OT_COLOR_PALETTE_FLAGS" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-OT-COLOR-PALETTE-FLAGS:CAPS"/>
+    <keyword type="macro" name="HB_GOBJECT_TYPE_OT_LAYOUT_GLYPH_CLASS" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-OT-LAYOUT-GLYPH-CLASS:CAPS"/>
+    <keyword type="macro" name="HB_GOBJECT_TYPE_OT_MATH_CONSTANT" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-OT-MATH-CONSTANT:CAPS"/>
+    <keyword type="macro" name="HB_GOBJECT_TYPE_OT_MATH_GLYPH_PART" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-OT-MATH-GLYPH-PART:CAPS"/>
+    <keyword type="macro" name="HB_GOBJECT_TYPE_OT_MATH_GLYPH_PART_FLAGS" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-OT-MATH-GLYPH-PART-FLAGS:CAPS"/>
+    <keyword type="macro" name="HB_GOBJECT_TYPE_OT_MATH_GLYPH_VARIANT" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-OT-MATH-GLYPH-VARIANT:CAPS"/>
+    <keyword type="macro" name="HB_GOBJECT_TYPE_OT_MATH_KERN" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-OT-MATH-KERN:CAPS"/>
+    <keyword type="macro" name="HB_GOBJECT_TYPE_SCRIPT" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-SCRIPT:CAPS"/>
+    <keyword type="macro" name="HB_GOBJECT_TYPE_SHAPE_PLAN" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-SHAPE-PLAN:CAPS"/>
+    <keyword type="macro" name="HB_GOBJECT_TYPE_UNICODE_COMBINING_CLASS" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-UNICODE-COMBINING-CLASS:CAPS"/>
+    <keyword type="macro" name="HB_GOBJECT_TYPE_UNICODE_FUNCS" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-UNICODE-FUNCS:CAPS"/>
+    <keyword type="macro" name="HB_GOBJECT_TYPE_UNICODE_GENERAL_CATEGORY" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-UNICODE-GENERAL-CATEGORY:CAPS"/>
+    <keyword type="macro" name="HB_GOBJECT_TYPE_BUFFER_CLUSTER_LEVEL" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-BUFFER-CLUSTER-LEVEL:CAPS"/>
+    <keyword type="macro" name="HB_GOBJECT_TYPE_FEATURE" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-FEATURE:CAPS"/>
+    <keyword type="macro" name="HB_GOBJECT_TYPE_GLYPH_INFO" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-GLYPH-INFO:CAPS"/>
+    <keyword type="macro" name="HB_GOBJECT_TYPE_GLYPH_POSITION" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-GLYPH-POSITION:CAPS"/>
+    <keyword type="macro" name="HB_GOBJECT_TYPE_SEGMENT_PROPERTIES" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-SEGMENT-PROPERTIES:CAPS"/>
+    <keyword type="macro" name="HB_GOBJECT_TYPE_SET" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-SET:CAPS"/>
+    <keyword type="macro" name="HB_GOBJECT_TYPE_USER_DATA_KEY" link="harfbuzz-hb-gobject.html#HB-GOBJECT-TYPE-USER-DATA-KEY:CAPS"/>
     <keyword type="function" name="hb_graphite2_face_get_gr_face ()" link="harfbuzz-hb-graphite2.html#hb-graphite2-face-get-gr-face"/>
     <keyword type="macro" name="HB_GRAPHITE2_TAG_SILF" link="harfbuzz-hb-graphite2.html#HB-GRAPHITE2-TAG-SILF:CAPS"/>
     <keyword type="function" name="hb_icu_get_unicode_funcs ()" link="harfbuzz-hb-icu.html#hb-icu-get-unicode-funcs"/>
@@ -720,5 +719,669 @@
     <keyword type="function" name="hb_icu_script_to_script ()" link="harfbuzz-hb-icu.html#hb-icu-script-to-script"/>
     <keyword type="function" name="hb_uniscribe_font_get_hfont ()" link="harfbuzz-hb-uniscribe.html#hb-uniscribe-font-get-hfont"/>
     <keyword type="function" name="hb_uniscribe_font_get_logfontw ()" link="harfbuzz-hb-uniscribe.html#hb-uniscribe-font-get-logfontw"/>
+    <keyword type="constant" name="HB_MEMORY_MODE_DUPLICATE" link="harfbuzz-hb-blob.html#HB-MEMORY-MODE-DUPLICATE:CAPS"/>
+    <keyword type="constant" name="HB_MEMORY_MODE_READONLY" link="harfbuzz-hb-blob.html#HB-MEMORY-MODE-READONLY:CAPS"/>
+    <keyword type="constant" name="HB_MEMORY_MODE_WRITABLE" link="harfbuzz-hb-blob.html#HB-MEMORY-MODE-WRITABLE:CAPS"/>
+    <keyword type="constant" name="HB_MEMORY_MODE_READONLY_MAY_MAKE_WRITABLE" link="harfbuzz-hb-blob.html#HB-MEMORY-MODE-READONLY-MAY-MAKE-WRITABLE:CAPS"/>
+    <keyword type="constant" name="HB_GLYPH_FLAG_UNSAFE_TO_BREAK" link="harfbuzz-hb-buffer.html#HB-GLYPH-FLAG-UNSAFE-TO-BREAK:CAPS"/>
+    <keyword type="constant" name="HB_GLYPH_FLAG_DEFINED" link="harfbuzz-hb-buffer.html#HB-GLYPH-FLAG-DEFINED:CAPS"/>
+    <keyword type="constant" name="HB_BUFFER_CONTENT_TYPE_INVALID" link="harfbuzz-hb-buffer.html#HB-BUFFER-CONTENT-TYPE-INVALID:CAPS"/>
+    <keyword type="constant" name="HB_BUFFER_CONTENT_TYPE_UNICODE" link="harfbuzz-hb-buffer.html#HB-BUFFER-CONTENT-TYPE-UNICODE:CAPS"/>
+    <keyword type="constant" name="HB_BUFFER_CONTENT_TYPE_GLYPHS" link="harfbuzz-hb-buffer.html#HB-BUFFER-CONTENT-TYPE-GLYPHS:CAPS"/>
+    <keyword type="constant" name="HB_BUFFER_FLAG_DEFAULT" link="harfbuzz-hb-buffer.html#HB-BUFFER-FLAG-DEFAULT:CAPS"/>
+    <keyword type="constant" name="HB_BUFFER_FLAG_BOT" link="harfbuzz-hb-buffer.html#HB-BUFFER-FLAG-BOT:CAPS"/>
+    <keyword type="constant" name="HB_BUFFER_FLAG_EOT" link="harfbuzz-hb-buffer.html#HB-BUFFER-FLAG-EOT:CAPS"/>
+    <keyword type="constant" name="HB_BUFFER_FLAG_PRESERVE_DEFAULT_IGNORABLES" link="harfbuzz-hb-buffer.html#HB-BUFFER-FLAG-PRESERVE-DEFAULT-IGNORABLES:CAPS"/>
+    <keyword type="constant" name="HB_BUFFER_FLAG_REMOVE_DEFAULT_IGNORABLES" link="harfbuzz-hb-buffer.html#HB-BUFFER-FLAG-REMOVE-DEFAULT-IGNORABLES:CAPS"/>
+    <keyword type="constant" name="HB_BUFFER_FLAG_DO_NOT_INSERT_DOTTED_CIRCLE" link="harfbuzz-hb-buffer.html#HB-BUFFER-FLAG-DO-NOT-INSERT-DOTTED-CIRCLE:CAPS"/>
+    <keyword type="constant" name="HB_BUFFER_CLUSTER_LEVEL_MONOTONE_GRAPHEMES" link="harfbuzz-hb-buffer.html#HB-BUFFER-CLUSTER-LEVEL-MONOTONE-GRAPHEMES:CAPS"/>
+    <keyword type="constant" name="HB_BUFFER_CLUSTER_LEVEL_MONOTONE_CHARACTERS" link="harfbuzz-hb-buffer.html#HB-BUFFER-CLUSTER-LEVEL-MONOTONE-CHARACTERS:CAPS"/>
+    <keyword type="constant" name="HB_BUFFER_CLUSTER_LEVEL_CHARACTERS" link="harfbuzz-hb-buffer.html#HB-BUFFER-CLUSTER-LEVEL-CHARACTERS:CAPS"/>
+    <keyword type="constant" name="HB_BUFFER_CLUSTER_LEVEL_DEFAULT" link="harfbuzz-hb-buffer.html#HB-BUFFER-CLUSTER-LEVEL-DEFAULT:CAPS"/>
+    <keyword type="constant" name="HB_BUFFER_SERIALIZE_FORMAT_TEXT" link="harfbuzz-hb-buffer.html#HB-BUFFER-SERIALIZE-FORMAT-TEXT:CAPS"/>
+    <keyword type="constant" name="HB_BUFFER_SERIALIZE_FORMAT_JSON" link="harfbuzz-hb-buffer.html#HB-BUFFER-SERIALIZE-FORMAT-JSON:CAPS"/>
+    <keyword type="constant" name="HB_BUFFER_SERIALIZE_FORMAT_INVALID" link="harfbuzz-hb-buffer.html#HB-BUFFER-SERIALIZE-FORMAT-INVALID:CAPS"/>
+    <keyword type="constant" name="HB_BUFFER_SERIALIZE_FLAG_DEFAULT" link="harfbuzz-hb-buffer.html#HB-BUFFER-SERIALIZE-FLAG-DEFAULT:CAPS"/>
+    <keyword type="constant" name="HB_BUFFER_SERIALIZE_FLAG_NO_CLUSTERS" link="harfbuzz-hb-buffer.html#HB-BUFFER-SERIALIZE-FLAG-NO-CLUSTERS:CAPS"/>
+    <keyword type="constant" name="HB_BUFFER_SERIALIZE_FLAG_NO_POSITIONS" link="harfbuzz-hb-buffer.html#HB-BUFFER-SERIALIZE-FLAG-NO-POSITIONS:CAPS"/>
+    <keyword type="constant" name="HB_BUFFER_SERIALIZE_FLAG_NO_GLYPH_NAMES" link="harfbuzz-hb-buffer.html#HB-BUFFER-SERIALIZE-FLAG-NO-GLYPH-NAMES:CAPS"/>
+    <keyword type="constant" name="HB_BUFFER_SERIALIZE_FLAG_GLYPH_EXTENTS" link="harfbuzz-hb-buffer.html#HB-BUFFER-SERIALIZE-FLAG-GLYPH-EXTENTS:CAPS"/>
+    <keyword type="constant" name="HB_BUFFER_SERIALIZE_FLAG_GLYPH_FLAGS" link="harfbuzz-hb-buffer.html#HB-BUFFER-SERIALIZE-FLAG-GLYPH-FLAGS:CAPS"/>
+    <keyword type="constant" name="HB_BUFFER_SERIALIZE_FLAG_NO_ADVANCES" link="harfbuzz-hb-buffer.html#HB-BUFFER-SERIALIZE-FLAG-NO-ADVANCES:CAPS"/>
+    <keyword type="constant" name="HB_BUFFER_DIFF_FLAG_EQUAL" link="harfbuzz-hb-buffer.html#HB-BUFFER-DIFF-FLAG-EQUAL:CAPS"/>
+    <keyword type="constant" name="HB_BUFFER_DIFF_FLAG_CONTENT_TYPE_MISMATCH" link="harfbuzz-hb-buffer.html#HB-BUFFER-DIFF-FLAG-CONTENT-TYPE-MISMATCH:CAPS"/>
+    <keyword type="constant" name="HB_BUFFER_DIFF_FLAG_LENGTH_MISMATCH" link="harfbuzz-hb-buffer.html#HB-BUFFER-DIFF-FLAG-LENGTH-MISMATCH:CAPS"/>
+    <keyword type="constant" name="HB_BUFFER_DIFF_FLAG_NOTDEF_PRESENT" link="harfbuzz-hb-buffer.html#HB-BUFFER-DIFF-FLAG-NOTDEF-PRESENT:CAPS"/>
+    <keyword type="constant" name="HB_BUFFER_DIFF_FLAG_DOTTED_CIRCLE_PRESENT" link="harfbuzz-hb-buffer.html#HB-BUFFER-DIFF-FLAG-DOTTED-CIRCLE-PRESENT:CAPS"/>
+    <keyword type="constant" name="HB_BUFFER_DIFF_FLAG_CODEPOINT_MISMATCH" link="harfbuzz-hb-buffer.html#HB-BUFFER-DIFF-FLAG-CODEPOINT-MISMATCH:CAPS"/>
+    <keyword type="constant" name="HB_BUFFER_DIFF_FLAG_CLUSTER_MISMATCH" link="harfbuzz-hb-buffer.html#HB-BUFFER-DIFF-FLAG-CLUSTER-MISMATCH:CAPS"/>
+    <keyword type="constant" name="HB_BUFFER_DIFF_FLAG_GLYPH_FLAGS_MISMATCH" link="harfbuzz-hb-buffer.html#HB-BUFFER-DIFF-FLAG-GLYPH-FLAGS-MISMATCH:CAPS"/>
+    <keyword type="constant" name="HB_BUFFER_DIFF_FLAG_POSITION_MISMATCH" link="harfbuzz-hb-buffer.html#HB-BUFFER-DIFF-FLAG-POSITION-MISMATCH:CAPS"/>
+    <keyword type="constant" name="HB_DIRECTION_INVALID" link="harfbuzz-hb-common.html#HB-DIRECTION-INVALID:CAPS"/>
+    <keyword type="constant" name="HB_DIRECTION_LTR" link="harfbuzz-hb-common.html#HB-DIRECTION-LTR:CAPS"/>
+    <keyword type="constant" name="HB_DIRECTION_RTL" link="harfbuzz-hb-common.html#HB-DIRECTION-RTL:CAPS"/>
+    <keyword type="constant" name="HB_DIRECTION_TTB" link="harfbuzz-hb-common.html#HB-DIRECTION-TTB:CAPS"/>
+    <keyword type="constant" name="HB_DIRECTION_BTT" link="harfbuzz-hb-common.html#HB-DIRECTION-BTT:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_COMMON" link="harfbuzz-hb-common.html#HB-SCRIPT-COMMON:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_INHERITED" link="harfbuzz-hb-common.html#HB-SCRIPT-INHERITED:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_UNKNOWN" link="harfbuzz-hb-common.html#HB-SCRIPT-UNKNOWN:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_ARABIC" link="harfbuzz-hb-common.html#HB-SCRIPT-ARABIC:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_ARMENIAN" link="harfbuzz-hb-common.html#HB-SCRIPT-ARMENIAN:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_BENGALI" link="harfbuzz-hb-common.html#HB-SCRIPT-BENGALI:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_CYRILLIC" link="harfbuzz-hb-common.html#HB-SCRIPT-CYRILLIC:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_DEVANAGARI" link="harfbuzz-hb-common.html#HB-SCRIPT-DEVANAGARI:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_GEORGIAN" link="harfbuzz-hb-common.html#HB-SCRIPT-GEORGIAN:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_GREEK" link="harfbuzz-hb-common.html#HB-SCRIPT-GREEK:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_GUJARATI" link="harfbuzz-hb-common.html#HB-SCRIPT-GUJARATI:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_GURMUKHI" link="harfbuzz-hb-common.html#HB-SCRIPT-GURMUKHI:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_HANGUL" link="harfbuzz-hb-common.html#HB-SCRIPT-HANGUL:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_HAN" link="harfbuzz-hb-common.html#HB-SCRIPT-HAN:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_HEBREW" link="harfbuzz-hb-common.html#HB-SCRIPT-HEBREW:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_HIRAGANA" link="harfbuzz-hb-common.html#HB-SCRIPT-HIRAGANA:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_KANNADA" link="harfbuzz-hb-common.html#HB-SCRIPT-KANNADA:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_KATAKANA" link="harfbuzz-hb-common.html#HB-SCRIPT-KATAKANA:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_LAO" link="harfbuzz-hb-common.html#HB-SCRIPT-LAO:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_LATIN" link="harfbuzz-hb-common.html#HB-SCRIPT-LATIN:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_MALAYALAM" link="harfbuzz-hb-common.html#HB-SCRIPT-MALAYALAM:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_ORIYA" link="harfbuzz-hb-common.html#HB-SCRIPT-ORIYA:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_TAMIL" link="harfbuzz-hb-common.html#HB-SCRIPT-TAMIL:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_TELUGU" link="harfbuzz-hb-common.html#HB-SCRIPT-TELUGU:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_THAI" link="harfbuzz-hb-common.html#HB-SCRIPT-THAI:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_TIBETAN" link="harfbuzz-hb-common.html#HB-SCRIPT-TIBETAN:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_BOPOMOFO" link="harfbuzz-hb-common.html#HB-SCRIPT-BOPOMOFO:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_BRAILLE" link="harfbuzz-hb-common.html#HB-SCRIPT-BRAILLE:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_CANADIAN_SYLLABICS" link="harfbuzz-hb-common.html#HB-SCRIPT-CANADIAN-SYLLABICS:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_CHEROKEE" link="harfbuzz-hb-common.html#HB-SCRIPT-CHEROKEE:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_ETHIOPIC" link="harfbuzz-hb-common.html#HB-SCRIPT-ETHIOPIC:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_KHMER" link="harfbuzz-hb-common.html#HB-SCRIPT-KHMER:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_MONGOLIAN" link="harfbuzz-hb-common.html#HB-SCRIPT-MONGOLIAN:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_MYANMAR" link="harfbuzz-hb-common.html#HB-SCRIPT-MYANMAR:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_OGHAM" link="harfbuzz-hb-common.html#HB-SCRIPT-OGHAM:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_RUNIC" link="harfbuzz-hb-common.html#HB-SCRIPT-RUNIC:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_SINHALA" link="harfbuzz-hb-common.html#HB-SCRIPT-SINHALA:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_SYRIAC" link="harfbuzz-hb-common.html#HB-SCRIPT-SYRIAC:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_THAANA" link="harfbuzz-hb-common.html#HB-SCRIPT-THAANA:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_YI" link="harfbuzz-hb-common.html#HB-SCRIPT-YI:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_DESERET" link="harfbuzz-hb-common.html#HB-SCRIPT-DESERET:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_GOTHIC" link="harfbuzz-hb-common.html#HB-SCRIPT-GOTHIC:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_OLD_ITALIC" link="harfbuzz-hb-common.html#HB-SCRIPT-OLD-ITALIC:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_BUHID" link="harfbuzz-hb-common.html#HB-SCRIPT-BUHID:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_HANUNOO" link="harfbuzz-hb-common.html#HB-SCRIPT-HANUNOO:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_TAGALOG" link="harfbuzz-hb-common.html#HB-SCRIPT-TAGALOG:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_TAGBANWA" link="harfbuzz-hb-common.html#HB-SCRIPT-TAGBANWA:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_CYPRIOT" link="harfbuzz-hb-common.html#HB-SCRIPT-CYPRIOT:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_LIMBU" link="harfbuzz-hb-common.html#HB-SCRIPT-LIMBU:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_LINEAR_B" link="harfbuzz-hb-common.html#HB-SCRIPT-LINEAR-B:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_OSMANYA" link="harfbuzz-hb-common.html#HB-SCRIPT-OSMANYA:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_SHAVIAN" link="harfbuzz-hb-common.html#HB-SCRIPT-SHAVIAN:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_TAI_LE" link="harfbuzz-hb-common.html#HB-SCRIPT-TAI-LE:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_UGARITIC" link="harfbuzz-hb-common.html#HB-SCRIPT-UGARITIC:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_BUGINESE" link="harfbuzz-hb-common.html#HB-SCRIPT-BUGINESE:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_COPTIC" link="harfbuzz-hb-common.html#HB-SCRIPT-COPTIC:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_GLAGOLITIC" link="harfbuzz-hb-common.html#HB-SCRIPT-GLAGOLITIC:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_KHAROSHTHI" link="harfbuzz-hb-common.html#HB-SCRIPT-KHAROSHTHI:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_NEW_TAI_LUE" link="harfbuzz-hb-common.html#HB-SCRIPT-NEW-TAI-LUE:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_OLD_PERSIAN" link="harfbuzz-hb-common.html#HB-SCRIPT-OLD-PERSIAN:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_SYLOTI_NAGRI" link="harfbuzz-hb-common.html#HB-SCRIPT-SYLOTI-NAGRI:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_TIFINAGH" link="harfbuzz-hb-common.html#HB-SCRIPT-TIFINAGH:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_BALINESE" link="harfbuzz-hb-common.html#HB-SCRIPT-BALINESE:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_CUNEIFORM" link="harfbuzz-hb-common.html#HB-SCRIPT-CUNEIFORM:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_NKO" link="harfbuzz-hb-common.html#HB-SCRIPT-NKO:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_PHAGS_PA" link="harfbuzz-hb-common.html#HB-SCRIPT-PHAGS-PA:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_PHOENICIAN" link="harfbuzz-hb-common.html#HB-SCRIPT-PHOENICIAN:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_CARIAN" link="harfbuzz-hb-common.html#HB-SCRIPT-CARIAN:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_CHAM" link="harfbuzz-hb-common.html#HB-SCRIPT-CHAM:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_KAYAH_LI" link="harfbuzz-hb-common.html#HB-SCRIPT-KAYAH-LI:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_LEPCHA" link="harfbuzz-hb-common.html#HB-SCRIPT-LEPCHA:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_LYCIAN" link="harfbuzz-hb-common.html#HB-SCRIPT-LYCIAN:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_LYDIAN" link="harfbuzz-hb-common.html#HB-SCRIPT-LYDIAN:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_OL_CHIKI" link="harfbuzz-hb-common.html#HB-SCRIPT-OL-CHIKI:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_REJANG" link="harfbuzz-hb-common.html#HB-SCRIPT-REJANG:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_SAURASHTRA" link="harfbuzz-hb-common.html#HB-SCRIPT-SAURASHTRA:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_SUNDANESE" link="harfbuzz-hb-common.html#HB-SCRIPT-SUNDANESE:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_VAI" link="harfbuzz-hb-common.html#HB-SCRIPT-VAI:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_AVESTAN" link="harfbuzz-hb-common.html#HB-SCRIPT-AVESTAN:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_BAMUM" link="harfbuzz-hb-common.html#HB-SCRIPT-BAMUM:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_EGYPTIAN_HIEROGLYPHS" link="harfbuzz-hb-common.html#HB-SCRIPT-EGYPTIAN-HIEROGLYPHS:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_IMPERIAL_ARAMAIC" link="harfbuzz-hb-common.html#HB-SCRIPT-IMPERIAL-ARAMAIC:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_INSCRIPTIONAL_PAHLAVI" link="harfbuzz-hb-common.html#HB-SCRIPT-INSCRIPTIONAL-PAHLAVI:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_INSCRIPTIONAL_PARTHIAN" link="harfbuzz-hb-common.html#HB-SCRIPT-INSCRIPTIONAL-PARTHIAN:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_JAVANESE" link="harfbuzz-hb-common.html#HB-SCRIPT-JAVANESE:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_KAITHI" link="harfbuzz-hb-common.html#HB-SCRIPT-KAITHI:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_LISU" link="harfbuzz-hb-common.html#HB-SCRIPT-LISU:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_MEETEI_MAYEK" link="harfbuzz-hb-common.html#HB-SCRIPT-MEETEI-MAYEK:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_OLD_SOUTH_ARABIAN" link="harfbuzz-hb-common.html#HB-SCRIPT-OLD-SOUTH-ARABIAN:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_OLD_TURKIC" link="harfbuzz-hb-common.html#HB-SCRIPT-OLD-TURKIC:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_SAMARITAN" link="harfbuzz-hb-common.html#HB-SCRIPT-SAMARITAN:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_TAI_THAM" link="harfbuzz-hb-common.html#HB-SCRIPT-TAI-THAM:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_TAI_VIET" link="harfbuzz-hb-common.html#HB-SCRIPT-TAI-VIET:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_BATAK" link="harfbuzz-hb-common.html#HB-SCRIPT-BATAK:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_BRAHMI" link="harfbuzz-hb-common.html#HB-SCRIPT-BRAHMI:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_MANDAIC" link="harfbuzz-hb-common.html#HB-SCRIPT-MANDAIC:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_CHAKMA" link="harfbuzz-hb-common.html#HB-SCRIPT-CHAKMA:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_MEROITIC_CURSIVE" link="harfbuzz-hb-common.html#HB-SCRIPT-MEROITIC-CURSIVE:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_MEROITIC_HIEROGLYPHS" link="harfbuzz-hb-common.html#HB-SCRIPT-MEROITIC-HIEROGLYPHS:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_MIAO" link="harfbuzz-hb-common.html#HB-SCRIPT-MIAO:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_SHARADA" link="harfbuzz-hb-common.html#HB-SCRIPT-SHARADA:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_SORA_SOMPENG" link="harfbuzz-hb-common.html#HB-SCRIPT-SORA-SOMPENG:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_TAKRI" link="harfbuzz-hb-common.html#HB-SCRIPT-TAKRI:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_BASSA_VAH" link="harfbuzz-hb-common.html#HB-SCRIPT-BASSA-VAH:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_CAUCASIAN_ALBANIAN" link="harfbuzz-hb-common.html#HB-SCRIPT-CAUCASIAN-ALBANIAN:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_DUPLOYAN" link="harfbuzz-hb-common.html#HB-SCRIPT-DUPLOYAN:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_ELBASAN" link="harfbuzz-hb-common.html#HB-SCRIPT-ELBASAN:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_GRANTHA" link="harfbuzz-hb-common.html#HB-SCRIPT-GRANTHA:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_KHOJKI" link="harfbuzz-hb-common.html#HB-SCRIPT-KHOJKI:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_KHUDAWADI" link="harfbuzz-hb-common.html#HB-SCRIPT-KHUDAWADI:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_LINEAR_A" link="harfbuzz-hb-common.html#HB-SCRIPT-LINEAR-A:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_MAHAJANI" link="harfbuzz-hb-common.html#HB-SCRIPT-MAHAJANI:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_MANICHAEAN" link="harfbuzz-hb-common.html#HB-SCRIPT-MANICHAEAN:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_MENDE_KIKAKUI" link="harfbuzz-hb-common.html#HB-SCRIPT-MENDE-KIKAKUI:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_MODI" link="harfbuzz-hb-common.html#HB-SCRIPT-MODI:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_MRO" link="harfbuzz-hb-common.html#HB-SCRIPT-MRO:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_NABATAEAN" link="harfbuzz-hb-common.html#HB-SCRIPT-NABATAEAN:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_OLD_NORTH_ARABIAN" link="harfbuzz-hb-common.html#HB-SCRIPT-OLD-NORTH-ARABIAN:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_OLD_PERMIC" link="harfbuzz-hb-common.html#HB-SCRIPT-OLD-PERMIC:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_PAHAWH_HMONG" link="harfbuzz-hb-common.html#HB-SCRIPT-PAHAWH-HMONG:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_PALMYRENE" link="harfbuzz-hb-common.html#HB-SCRIPT-PALMYRENE:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_PAU_CIN_HAU" link="harfbuzz-hb-common.html#HB-SCRIPT-PAU-CIN-HAU:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_PSALTER_PAHLAVI" link="harfbuzz-hb-common.html#HB-SCRIPT-PSALTER-PAHLAVI:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_SIDDHAM" link="harfbuzz-hb-common.html#HB-SCRIPT-SIDDHAM:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_TIRHUTA" link="harfbuzz-hb-common.html#HB-SCRIPT-TIRHUTA:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_WARANG_CITI" link="harfbuzz-hb-common.html#HB-SCRIPT-WARANG-CITI:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_AHOM" link="harfbuzz-hb-common.html#HB-SCRIPT-AHOM:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_ANATOLIAN_HIEROGLYPHS" link="harfbuzz-hb-common.html#HB-SCRIPT-ANATOLIAN-HIEROGLYPHS:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_HATRAN" link="harfbuzz-hb-common.html#HB-SCRIPT-HATRAN:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_MULTANI" link="harfbuzz-hb-common.html#HB-SCRIPT-MULTANI:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_OLD_HUNGARIAN" link="harfbuzz-hb-common.html#HB-SCRIPT-OLD-HUNGARIAN:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_SIGNWRITING" link="harfbuzz-hb-common.html#HB-SCRIPT-SIGNWRITING:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_ADLAM" link="harfbuzz-hb-common.html#HB-SCRIPT-ADLAM:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_BHAIKSUKI" link="harfbuzz-hb-common.html#HB-SCRIPT-BHAIKSUKI:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_MARCHEN" link="harfbuzz-hb-common.html#HB-SCRIPT-MARCHEN:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_OSAGE" link="harfbuzz-hb-common.html#HB-SCRIPT-OSAGE:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_TANGUT" link="harfbuzz-hb-common.html#HB-SCRIPT-TANGUT:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_NEWA" link="harfbuzz-hb-common.html#HB-SCRIPT-NEWA:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_MASARAM_GONDI" link="harfbuzz-hb-common.html#HB-SCRIPT-MASARAM-GONDI:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_NUSHU" link="harfbuzz-hb-common.html#HB-SCRIPT-NUSHU:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_SOYOMBO" link="harfbuzz-hb-common.html#HB-SCRIPT-SOYOMBO:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_ZANABAZAR_SQUARE" link="harfbuzz-hb-common.html#HB-SCRIPT-ZANABAZAR-SQUARE:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_DOGRA" link="harfbuzz-hb-common.html#HB-SCRIPT-DOGRA:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_GUNJALA_GONDI" link="harfbuzz-hb-common.html#HB-SCRIPT-GUNJALA-GONDI:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_HANIFI_ROHINGYA" link="harfbuzz-hb-common.html#HB-SCRIPT-HANIFI-ROHINGYA:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_MAKASAR" link="harfbuzz-hb-common.html#HB-SCRIPT-MAKASAR:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_MEDEFAIDRIN" link="harfbuzz-hb-common.html#HB-SCRIPT-MEDEFAIDRIN:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_OLD_SOGDIAN" link="harfbuzz-hb-common.html#HB-SCRIPT-OLD-SOGDIAN:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_SOGDIAN" link="harfbuzz-hb-common.html#HB-SCRIPT-SOGDIAN:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_ELYMAIC" link="harfbuzz-hb-common.html#HB-SCRIPT-ELYMAIC:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_NANDINAGARI" link="harfbuzz-hb-common.html#HB-SCRIPT-NANDINAGARI:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_NYIAKENG_PUACHUE_HMONG" link="harfbuzz-hb-common.html#HB-SCRIPT-NYIAKENG-PUACHUE-HMONG:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_WANCHO" link="harfbuzz-hb-common.html#HB-SCRIPT-WANCHO:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_INVALID" link="harfbuzz-hb-common.html#HB-SCRIPT-INVALID:CAPS"/>
+    <keyword type="constant" name="_HB_SCRIPT_MAX_VALUE" link="harfbuzz-hb-common.html#HB-SCRIPT-MAX-VALUE:CAPS"/>
+    <keyword type="constant" name="_HB_SCRIPT_MAX_VALUE_SIGNED" link="harfbuzz-hb-common.html#HB-SCRIPT-MAX-VALUE-SIGNED:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_COMBINING_CLASS_NOT_REORDERED" link="harfbuzz-hb-unicode.html#HB-UNICODE-COMBINING-CLASS-NOT-REORDERED:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_COMBINING_CLASS_OVERLAY" link="harfbuzz-hb-unicode.html#HB-UNICODE-COMBINING-CLASS-OVERLAY:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_COMBINING_CLASS_NUKTA" link="harfbuzz-hb-unicode.html#HB-UNICODE-COMBINING-CLASS-NUKTA:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_COMBINING_CLASS_KANA_VOICING" link="harfbuzz-hb-unicode.html#HB-UNICODE-COMBINING-CLASS-KANA-VOICING:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_COMBINING_CLASS_VIRAMA" link="harfbuzz-hb-unicode.html#HB-UNICODE-COMBINING-CLASS-VIRAMA:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_COMBINING_CLASS_CCC10" link="harfbuzz-hb-unicode.html#HB-UNICODE-COMBINING-CLASS-CCC10:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_COMBINING_CLASS_CCC11" link="harfbuzz-hb-unicode.html#HB-UNICODE-COMBINING-CLASS-CCC11:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_COMBINING_CLASS_CCC12" link="harfbuzz-hb-unicode.html#HB-UNICODE-COMBINING-CLASS-CCC12:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_COMBINING_CLASS_CCC13" link="harfbuzz-hb-unicode.html#HB-UNICODE-COMBINING-CLASS-CCC13:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_COMBINING_CLASS_CCC14" link="harfbuzz-hb-unicode.html#HB-UNICODE-COMBINING-CLASS-CCC14:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_COMBINING_CLASS_CCC15" link="harfbuzz-hb-unicode.html#HB-UNICODE-COMBINING-CLASS-CCC15:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_COMBINING_CLASS_CCC16" link="harfbuzz-hb-unicode.html#HB-UNICODE-COMBINING-CLASS-CCC16:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_COMBINING_CLASS_CCC17" link="harfbuzz-hb-unicode.html#HB-UNICODE-COMBINING-CLASS-CCC17:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_COMBINING_CLASS_CCC18" link="harfbuzz-hb-unicode.html#HB-UNICODE-COMBINING-CLASS-CCC18:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_COMBINING_CLASS_CCC19" link="harfbuzz-hb-unicode.html#HB-UNICODE-COMBINING-CLASS-CCC19:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_COMBINING_CLASS_CCC20" link="harfbuzz-hb-unicode.html#HB-UNICODE-COMBINING-CLASS-CCC20:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_COMBINING_CLASS_CCC21" link="harfbuzz-hb-unicode.html#HB-UNICODE-COMBINING-CLASS-CCC21:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_COMBINING_CLASS_CCC22" link="harfbuzz-hb-unicode.html#HB-UNICODE-COMBINING-CLASS-CCC22:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_COMBINING_CLASS_CCC23" link="harfbuzz-hb-unicode.html#HB-UNICODE-COMBINING-CLASS-CCC23:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_COMBINING_CLASS_CCC24" link="harfbuzz-hb-unicode.html#HB-UNICODE-COMBINING-CLASS-CCC24:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_COMBINING_CLASS_CCC25" link="harfbuzz-hb-unicode.html#HB-UNICODE-COMBINING-CLASS-CCC25:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_COMBINING_CLASS_CCC26" link="harfbuzz-hb-unicode.html#HB-UNICODE-COMBINING-CLASS-CCC26:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_COMBINING_CLASS_CCC27" link="harfbuzz-hb-unicode.html#HB-UNICODE-COMBINING-CLASS-CCC27:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_COMBINING_CLASS_CCC28" link="harfbuzz-hb-unicode.html#HB-UNICODE-COMBINING-CLASS-CCC28:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_COMBINING_CLASS_CCC29" link="harfbuzz-hb-unicode.html#HB-UNICODE-COMBINING-CLASS-CCC29:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_COMBINING_CLASS_CCC30" link="harfbuzz-hb-unicode.html#HB-UNICODE-COMBINING-CLASS-CCC30:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_COMBINING_CLASS_CCC31" link="harfbuzz-hb-unicode.html#HB-UNICODE-COMBINING-CLASS-CCC31:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_COMBINING_CLASS_CCC32" link="harfbuzz-hb-unicode.html#HB-UNICODE-COMBINING-CLASS-CCC32:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_COMBINING_CLASS_CCC33" link="harfbuzz-hb-unicode.html#HB-UNICODE-COMBINING-CLASS-CCC33:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_COMBINING_CLASS_CCC34" link="harfbuzz-hb-unicode.html#HB-UNICODE-COMBINING-CLASS-CCC34:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_COMBINING_CLASS_CCC35" link="harfbuzz-hb-unicode.html#HB-UNICODE-COMBINING-CLASS-CCC35:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_COMBINING_CLASS_CCC36" link="harfbuzz-hb-unicode.html#HB-UNICODE-COMBINING-CLASS-CCC36:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_COMBINING_CLASS_CCC84" link="harfbuzz-hb-unicode.html#HB-UNICODE-COMBINING-CLASS-CCC84:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_COMBINING_CLASS_CCC91" link="harfbuzz-hb-unicode.html#HB-UNICODE-COMBINING-CLASS-CCC91:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_COMBINING_CLASS_CCC103" link="harfbuzz-hb-unicode.html#HB-UNICODE-COMBINING-CLASS-CCC103:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_COMBINING_CLASS_CCC107" link="harfbuzz-hb-unicode.html#HB-UNICODE-COMBINING-CLASS-CCC107:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_COMBINING_CLASS_CCC118" link="harfbuzz-hb-unicode.html#HB-UNICODE-COMBINING-CLASS-CCC118:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_COMBINING_CLASS_CCC122" link="harfbuzz-hb-unicode.html#HB-UNICODE-COMBINING-CLASS-CCC122:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_COMBINING_CLASS_CCC129" link="harfbuzz-hb-unicode.html#HB-UNICODE-COMBINING-CLASS-CCC129:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_COMBINING_CLASS_CCC130" link="harfbuzz-hb-unicode.html#HB-UNICODE-COMBINING-CLASS-CCC130:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_COMBINING_CLASS_CCC133" link="harfbuzz-hb-unicode.html#HB-UNICODE-COMBINING-CLASS-CCC133:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_COMBINING_CLASS_ATTACHED_BELOW_LEFT" link="harfbuzz-hb-unicode.html#HB-UNICODE-COMBINING-CLASS-ATTACHED-BELOW-LEFT:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_COMBINING_CLASS_ATTACHED_BELOW" link="harfbuzz-hb-unicode.html#HB-UNICODE-COMBINING-CLASS-ATTACHED-BELOW:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_COMBINING_CLASS_ATTACHED_ABOVE" link="harfbuzz-hb-unicode.html#HB-UNICODE-COMBINING-CLASS-ATTACHED-ABOVE:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_COMBINING_CLASS_ATTACHED_ABOVE_RIGHT" link="harfbuzz-hb-unicode.html#HB-UNICODE-COMBINING-CLASS-ATTACHED-ABOVE-RIGHT:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_COMBINING_CLASS_BELOW_LEFT" link="harfbuzz-hb-unicode.html#HB-UNICODE-COMBINING-CLASS-BELOW-LEFT:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_COMBINING_CLASS_BELOW" link="harfbuzz-hb-unicode.html#HB-UNICODE-COMBINING-CLASS-BELOW:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_COMBINING_CLASS_BELOW_RIGHT" link="harfbuzz-hb-unicode.html#HB-UNICODE-COMBINING-CLASS-BELOW-RIGHT:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_COMBINING_CLASS_LEFT" link="harfbuzz-hb-unicode.html#HB-UNICODE-COMBINING-CLASS-LEFT:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_COMBINING_CLASS_RIGHT" link="harfbuzz-hb-unicode.html#HB-UNICODE-COMBINING-CLASS-RIGHT:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_COMBINING_CLASS_ABOVE_LEFT" link="harfbuzz-hb-unicode.html#HB-UNICODE-COMBINING-CLASS-ABOVE-LEFT:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_COMBINING_CLASS_ABOVE" link="harfbuzz-hb-unicode.html#HB-UNICODE-COMBINING-CLASS-ABOVE:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_COMBINING_CLASS_ABOVE_RIGHT" link="harfbuzz-hb-unicode.html#HB-UNICODE-COMBINING-CLASS-ABOVE-RIGHT:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_COMBINING_CLASS_DOUBLE_BELOW" link="harfbuzz-hb-unicode.html#HB-UNICODE-COMBINING-CLASS-DOUBLE-BELOW:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_COMBINING_CLASS_DOUBLE_ABOVE" link="harfbuzz-hb-unicode.html#HB-UNICODE-COMBINING-CLASS-DOUBLE-ABOVE:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_COMBINING_CLASS_IOTA_SUBSCRIPT" link="harfbuzz-hb-unicode.html#HB-UNICODE-COMBINING-CLASS-IOTA-SUBSCRIPT:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_COMBINING_CLASS_INVALID" link="harfbuzz-hb-unicode.html#HB-UNICODE-COMBINING-CLASS-INVALID:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_GENERAL_CATEGORY_CONTROL" link="harfbuzz-hb-unicode.html#HB-UNICODE-GENERAL-CATEGORY-CONTROL:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_GENERAL_CATEGORY_FORMAT" link="harfbuzz-hb-unicode.html#HB-UNICODE-GENERAL-CATEGORY-FORMAT:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_GENERAL_CATEGORY_UNASSIGNED" link="harfbuzz-hb-unicode.html#HB-UNICODE-GENERAL-CATEGORY-UNASSIGNED:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_GENERAL_CATEGORY_PRIVATE_USE" link="harfbuzz-hb-unicode.html#HB-UNICODE-GENERAL-CATEGORY-PRIVATE-USE:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_GENERAL_CATEGORY_SURROGATE" link="harfbuzz-hb-unicode.html#HB-UNICODE-GENERAL-CATEGORY-SURROGATE:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_GENERAL_CATEGORY_LOWERCASE_LETTER" link="harfbuzz-hb-unicode.html#HB-UNICODE-GENERAL-CATEGORY-LOWERCASE-LETTER:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_GENERAL_CATEGORY_MODIFIER_LETTER" link="harfbuzz-hb-unicode.html#HB-UNICODE-GENERAL-CATEGORY-MODIFIER-LETTER:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_GENERAL_CATEGORY_OTHER_LETTER" link="harfbuzz-hb-unicode.html#HB-UNICODE-GENERAL-CATEGORY-OTHER-LETTER:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_GENERAL_CATEGORY_TITLECASE_LETTER" link="harfbuzz-hb-unicode.html#HB-UNICODE-GENERAL-CATEGORY-TITLECASE-LETTER:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_GENERAL_CATEGORY_UPPERCASE_LETTER" link="harfbuzz-hb-unicode.html#HB-UNICODE-GENERAL-CATEGORY-UPPERCASE-LETTER:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_GENERAL_CATEGORY_SPACING_MARK" link="harfbuzz-hb-unicode.html#HB-UNICODE-GENERAL-CATEGORY-SPACING-MARK:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_GENERAL_CATEGORY_ENCLOSING_MARK" link="harfbuzz-hb-unicode.html#HB-UNICODE-GENERAL-CATEGORY-ENCLOSING-MARK:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_GENERAL_CATEGORY_NON_SPACING_MARK" link="harfbuzz-hb-unicode.html#HB-UNICODE-GENERAL-CATEGORY-NON-SPACING-MARK:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_GENERAL_CATEGORY_DECIMAL_NUMBER" link="harfbuzz-hb-unicode.html#HB-UNICODE-GENERAL-CATEGORY-DECIMAL-NUMBER:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_GENERAL_CATEGORY_LETTER_NUMBER" link="harfbuzz-hb-unicode.html#HB-UNICODE-GENERAL-CATEGORY-LETTER-NUMBER:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_GENERAL_CATEGORY_OTHER_NUMBER" link="harfbuzz-hb-unicode.html#HB-UNICODE-GENERAL-CATEGORY-OTHER-NUMBER:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_GENERAL_CATEGORY_CONNECT_PUNCTUATION" link="harfbuzz-hb-unicode.html#HB-UNICODE-GENERAL-CATEGORY-CONNECT-PUNCTUATION:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_GENERAL_CATEGORY_DASH_PUNCTUATION" link="harfbuzz-hb-unicode.html#HB-UNICODE-GENERAL-CATEGORY-DASH-PUNCTUATION:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_GENERAL_CATEGORY_CLOSE_PUNCTUATION" link="harfbuzz-hb-unicode.html#HB-UNICODE-GENERAL-CATEGORY-CLOSE-PUNCTUATION:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_GENERAL_CATEGORY_FINAL_PUNCTUATION" link="harfbuzz-hb-unicode.html#HB-UNICODE-GENERAL-CATEGORY-FINAL-PUNCTUATION:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_GENERAL_CATEGORY_INITIAL_PUNCTUATION" link="harfbuzz-hb-unicode.html#HB-UNICODE-GENERAL-CATEGORY-INITIAL-PUNCTUATION:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_GENERAL_CATEGORY_OTHER_PUNCTUATION" link="harfbuzz-hb-unicode.html#HB-UNICODE-GENERAL-CATEGORY-OTHER-PUNCTUATION:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_GENERAL_CATEGORY_OPEN_PUNCTUATION" link="harfbuzz-hb-unicode.html#HB-UNICODE-GENERAL-CATEGORY-OPEN-PUNCTUATION:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_GENERAL_CATEGORY_CURRENCY_SYMBOL" link="harfbuzz-hb-unicode.html#HB-UNICODE-GENERAL-CATEGORY-CURRENCY-SYMBOL:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_GENERAL_CATEGORY_MODIFIER_SYMBOL" link="harfbuzz-hb-unicode.html#HB-UNICODE-GENERAL-CATEGORY-MODIFIER-SYMBOL:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_GENERAL_CATEGORY_MATH_SYMBOL" link="harfbuzz-hb-unicode.html#HB-UNICODE-GENERAL-CATEGORY-MATH-SYMBOL:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_GENERAL_CATEGORY_OTHER_SYMBOL" link="harfbuzz-hb-unicode.html#HB-UNICODE-GENERAL-CATEGORY-OTHER-SYMBOL:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_GENERAL_CATEGORY_LINE_SEPARATOR" link="harfbuzz-hb-unicode.html#HB-UNICODE-GENERAL-CATEGORY-LINE-SEPARATOR:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_GENERAL_CATEGORY_PARAGRAPH_SEPARATOR" link="harfbuzz-hb-unicode.html#HB-UNICODE-GENERAL-CATEGORY-PARAGRAPH-SEPARATOR:CAPS"/>
+    <keyword type="constant" name="HB_UNICODE_GENERAL_CATEGORY_SPACE_SEPARATOR" link="harfbuzz-hb-unicode.html#HB-UNICODE-GENERAL-CATEGORY-SPACE-SEPARATOR:CAPS"/>
+    <keyword type="constant" name="HB_OT_COLOR_PALETTE_FLAG_DEFAULT" link="harfbuzz-hb-ot-color.html#HB-OT-COLOR-PALETTE-FLAG-DEFAULT:CAPS"/>
+    <keyword type="constant" name="HB_OT_COLOR_PALETTE_FLAG_USABLE_WITH_LIGHT_BACKGROUND" link="harfbuzz-hb-ot-color.html#HB-OT-COLOR-PALETTE-FLAG-USABLE-WITH-LIGHT-BACKGROUND:CAPS"/>
+    <keyword type="constant" name="HB_OT_COLOR_PALETTE_FLAG_USABLE_WITH_DARK_BACKGROUND" link="harfbuzz-hb-ot-color.html#HB-OT-COLOR-PALETTE-FLAG-USABLE-WITH-DARK-BACKGROUND:CAPS"/>
+    <keyword type="constant" name="HB_OT_LAYOUT_GLYPH_CLASS_UNCLASSIFIED" link="harfbuzz-hb-ot-layout.html#HB-OT-LAYOUT-GLYPH-CLASS-UNCLASSIFIED:CAPS"/>
+    <keyword type="constant" name="HB_OT_LAYOUT_GLYPH_CLASS_BASE_GLYPH" link="harfbuzz-hb-ot-layout.html#HB-OT-LAYOUT-GLYPH-CLASS-BASE-GLYPH:CAPS"/>
+    <keyword type="constant" name="HB_OT_LAYOUT_GLYPH_CLASS_LIGATURE" link="harfbuzz-hb-ot-layout.html#HB-OT-LAYOUT-GLYPH-CLASS-LIGATURE:CAPS"/>
+    <keyword type="constant" name="HB_OT_LAYOUT_GLYPH_CLASS_MARK" link="harfbuzz-hb-ot-layout.html#HB-OT-LAYOUT-GLYPH-CLASS-MARK:CAPS"/>
+    <keyword type="constant" name="HB_OT_LAYOUT_GLYPH_CLASS_COMPONENT" link="harfbuzz-hb-ot-layout.html#HB-OT-LAYOUT-GLYPH-CLASS-COMPONENT:CAPS"/>
+    <keyword type="constant" name="HB_OT_MATH_CONSTANT_SCRIPT_PERCENT_SCALE_DOWN" link="harfbuzz-hb-ot-math.html#HB-OT-MATH-CONSTANT-SCRIPT-PERCENT-SCALE-DOWN:CAPS"/>
+    <keyword type="constant" name="HB_OT_MATH_CONSTANT_SCRIPT_SCRIPT_PERCENT_SCALE_DOWN" link="harfbuzz-hb-ot-math.html#HB-OT-MATH-CONSTANT-SCRIPT-SCRIPT-PERCENT-SCALE-DOWN:CAPS"/>
+    <keyword type="constant" name="HB_OT_MATH_CONSTANT_DELIMITED_SUB_FORMULA_MIN_HEIGHT" link="harfbuzz-hb-ot-math.html#HB-OT-MATH-CONSTANT-DELIMITED-SUB-FORMULA-MIN-HEIGHT:CAPS"/>
+    <keyword type="constant" name="HB_OT_MATH_CONSTANT_DISPLAY_OPERATOR_MIN_HEIGHT" link="harfbuzz-hb-ot-math.html#HB-OT-MATH-CONSTANT-DISPLAY-OPERATOR-MIN-HEIGHT:CAPS"/>
+    <keyword type="constant" name="HB_OT_MATH_CONSTANT_MATH_LEADING" link="harfbuzz-hb-ot-math.html#HB-OT-MATH-CONSTANT-MATH-LEADING:CAPS"/>
+    <keyword type="constant" name="HB_OT_MATH_CONSTANT_AXIS_HEIGHT" link="harfbuzz-hb-ot-math.html#HB-OT-MATH-CONSTANT-AXIS-HEIGHT:CAPS"/>
+    <keyword type="constant" name="HB_OT_MATH_CONSTANT_ACCENT_BASE_HEIGHT" link="harfbuzz-hb-ot-math.html#HB-OT-MATH-CONSTANT-ACCENT-BASE-HEIGHT:CAPS"/>
+    <keyword type="constant" name="HB_OT_MATH_CONSTANT_FLATTENED_ACCENT_BASE_HEIGHT" link="harfbuzz-hb-ot-math.html#HB-OT-MATH-CONSTANT-FLATTENED-ACCENT-BASE-HEIGHT:CAPS"/>
+    <keyword type="constant" name="HB_OT_MATH_CONSTANT_SUBSCRIPT_SHIFT_DOWN" link="harfbuzz-hb-ot-math.html#HB-OT-MATH-CONSTANT-SUBSCRIPT-SHIFT-DOWN:CAPS"/>
+    <keyword type="constant" name="HB_OT_MATH_CONSTANT_SUBSCRIPT_TOP_MAX" link="harfbuzz-hb-ot-math.html#HB-OT-MATH-CONSTANT-SUBSCRIPT-TOP-MAX:CAPS"/>
+    <keyword type="constant" name="HB_OT_MATH_CONSTANT_SUBSCRIPT_BASELINE_DROP_MIN" link="harfbuzz-hb-ot-math.html#HB-OT-MATH-CONSTANT-SUBSCRIPT-BASELINE-DROP-MIN:CAPS"/>
+    <keyword type="constant" name="HB_OT_MATH_CONSTANT_SUPERSCRIPT_SHIFT_UP" link="harfbuzz-hb-ot-math.html#HB-OT-MATH-CONSTANT-SUPERSCRIPT-SHIFT-UP:CAPS"/>
+    <keyword type="constant" name="HB_OT_MATH_CONSTANT_SUPERSCRIPT_SHIFT_UP_CRAMPED" link="harfbuzz-hb-ot-math.html#HB-OT-MATH-CONSTANT-SUPERSCRIPT-SHIFT-UP-CRAMPED:CAPS"/>
+    <keyword type="constant" name="HB_OT_MATH_CONSTANT_SUPERSCRIPT_BOTTOM_MIN" link="harfbuzz-hb-ot-math.html#HB-OT-MATH-CONSTANT-SUPERSCRIPT-BOTTOM-MIN:CAPS"/>
+    <keyword type="constant" name="HB_OT_MATH_CONSTANT_SUPERSCRIPT_BASELINE_DROP_MAX" link="harfbuzz-hb-ot-math.html#HB-OT-MATH-CONSTANT-SUPERSCRIPT-BASELINE-DROP-MAX:CAPS"/>
+    <keyword type="constant" name="HB_OT_MATH_CONSTANT_SUB_SUPERSCRIPT_GAP_MIN" link="harfbuzz-hb-ot-math.html#HB-OT-MATH-CONSTANT-SUB-SUPERSCRIPT-GAP-MIN:CAPS"/>
+    <keyword type="constant" name="HB_OT_MATH_CONSTANT_SUPERSCRIPT_BOTTOM_MAX_WITH_SUBSCRIPT" link="harfbuzz-hb-ot-math.html#HB-OT-MATH-CONSTANT-SUPERSCRIPT-BOTTOM-MAX-WITH-SUBSCRIPT:CAPS"/>
+    <keyword type="constant" name="HB_OT_MATH_CONSTANT_SPACE_AFTER_SCRIPT" link="harfbuzz-hb-ot-math.html#HB-OT-MATH-CONSTANT-SPACE-AFTER-SCRIPT:CAPS"/>
+    <keyword type="constant" name="HB_OT_MATH_CONSTANT_UPPER_LIMIT_GAP_MIN" link="harfbuzz-hb-ot-math.html#HB-OT-MATH-CONSTANT-UPPER-LIMIT-GAP-MIN:CAPS"/>
+    <keyword type="constant" name="HB_OT_MATH_CONSTANT_UPPER_LIMIT_BASELINE_RISE_MIN" link="harfbuzz-hb-ot-math.html#HB-OT-MATH-CONSTANT-UPPER-LIMIT-BASELINE-RISE-MIN:CAPS"/>
+    <keyword type="constant" name="HB_OT_MATH_CONSTANT_LOWER_LIMIT_GAP_MIN" link="harfbuzz-hb-ot-math.html#HB-OT-MATH-CONSTANT-LOWER-LIMIT-GAP-MIN:CAPS"/>
+    <keyword type="constant" name="HB_OT_MATH_CONSTANT_LOWER_LIMIT_BASELINE_DROP_MIN" link="harfbuzz-hb-ot-math.html#HB-OT-MATH-CONSTANT-LOWER-LIMIT-BASELINE-DROP-MIN:CAPS"/>
+    <keyword type="constant" name="HB_OT_MATH_CONSTANT_STACK_TOP_SHIFT_UP" link="harfbuzz-hb-ot-math.html#HB-OT-MATH-CONSTANT-STACK-TOP-SHIFT-UP:CAPS"/>
+    <keyword type="constant" name="HB_OT_MATH_CONSTANT_STACK_TOP_DISPLAY_STYLE_SHIFT_UP" link="harfbuzz-hb-ot-math.html#HB-OT-MATH-CONSTANT-STACK-TOP-DISPLAY-STYLE-SHIFT-UP:CAPS"/>
+    <keyword type="constant" name="HB_OT_MATH_CONSTANT_STACK_BOTTOM_SHIFT_DOWN" link="harfbuzz-hb-ot-math.html#HB-OT-MATH-CONSTANT-STACK-BOTTOM-SHIFT-DOWN:CAPS"/>
+    <keyword type="constant" name="HB_OT_MATH_CONSTANT_STACK_BOTTOM_DISPLAY_STYLE_SHIFT_DOWN" link="harfbuzz-hb-ot-math.html#HB-OT-MATH-CONSTANT-STACK-BOTTOM-DISPLAY-STYLE-SHIFT-DOWN:CAPS"/>
+    <keyword type="constant" name="HB_OT_MATH_CONSTANT_STACK_GAP_MIN" link="harfbuzz-hb-ot-math.html#HB-OT-MATH-CONSTANT-STACK-GAP-MIN:CAPS"/>
+    <keyword type="constant" name="HB_OT_MATH_CONSTANT_STACK_DISPLAY_STYLE_GAP_MIN" link="harfbuzz-hb-ot-math.html#HB-OT-MATH-CONSTANT-STACK-DISPLAY-STYLE-GAP-MIN:CAPS"/>
+    <keyword type="constant" name="HB_OT_MATH_CONSTANT_STRETCH_STACK_TOP_SHIFT_UP" link="harfbuzz-hb-ot-math.html#HB-OT-MATH-CONSTANT-STRETCH-STACK-TOP-SHIFT-UP:CAPS"/>
+    <keyword type="constant" name="HB_OT_MATH_CONSTANT_STRETCH_STACK_BOTTOM_SHIFT_DOWN" link="harfbuzz-hb-ot-math.html#HB-OT-MATH-CONSTANT-STRETCH-STACK-BOTTOM-SHIFT-DOWN:CAPS"/>
+    <keyword type="constant" name="HB_OT_MATH_CONSTANT_STRETCH_STACK_GAP_ABOVE_MIN" link="harfbuzz-hb-ot-math.html#HB-OT-MATH-CONSTANT-STRETCH-STACK-GAP-ABOVE-MIN:CAPS"/>
+    <keyword type="constant" name="HB_OT_MATH_CONSTANT_STRETCH_STACK_GAP_BELOW_MIN" link="harfbuzz-hb-ot-math.html#HB-OT-MATH-CONSTANT-STRETCH-STACK-GAP-BELOW-MIN:CAPS"/>
+    <keyword type="constant" name="HB_OT_MATH_CONSTANT_FRACTION_NUMERATOR_SHIFT_UP" link="harfbuzz-hb-ot-math.html#HB-OT-MATH-CONSTANT-FRACTION-NUMERATOR-SHIFT-UP:CAPS"/>
+    <keyword type="constant" name="HB_OT_MATH_CONSTANT_FRACTION_NUMERATOR_DISPLAY_STYLE_SHIFT_UP" link="harfbuzz-hb-ot-math.html#HB-OT-MATH-CONSTANT-FRACTION-NUMERATOR-DISPLAY-STYLE-SHIFT-UP:CAPS"/>
+    <keyword type="constant" name="HB_OT_MATH_CONSTANT_FRACTION_DENOMINATOR_SHIFT_DOWN" link="harfbuzz-hb-ot-math.html#HB-OT-MATH-CONSTANT-FRACTION-DENOMINATOR-SHIFT-DOWN:CAPS"/>
+    <keyword type="constant" name="HB_OT_MATH_CONSTANT_FRACTION_DENOMINATOR_DISPLAY_STYLE_SHIFT_DOWN" link="harfbuzz-hb-ot-math.html#HB-OT-MATH-CONSTANT-FRACTION-DENOMINATOR-DISPLAY-STYLE-SHIFT-DOWN:CAPS"/>
+    <keyword type="constant" name="HB_OT_MATH_CONSTANT_FRACTION_NUMERATOR_GAP_MIN" link="harfbuzz-hb-ot-math.html#HB-OT-MATH-CONSTANT-FRACTION-NUMERATOR-GAP-MIN:CAPS"/>
+    <keyword type="constant" name="HB_OT_MATH_CONSTANT_FRACTION_NUM_DISPLAY_STYLE_GAP_MIN" link="harfbuzz-hb-ot-math.html#HB-OT-MATH-CONSTANT-FRACTION-NUM-DISPLAY-STYLE-GAP-MIN:CAPS"/>
+    <keyword type="constant" name="HB_OT_MATH_CONSTANT_FRACTION_RULE_THICKNESS" link="harfbuzz-hb-ot-math.html#HB-OT-MATH-CONSTANT-FRACTION-RULE-THICKNESS:CAPS"/>
+    <keyword type="constant" name="HB_OT_MATH_CONSTANT_FRACTION_DENOMINATOR_GAP_MIN" link="harfbuzz-hb-ot-math.html#HB-OT-MATH-CONSTANT-FRACTION-DENOMINATOR-GAP-MIN:CAPS"/>
+    <keyword type="constant" name="HB_OT_MATH_CONSTANT_FRACTION_DENOM_DISPLAY_STYLE_GAP_MIN" link="harfbuzz-hb-ot-math.html#HB-OT-MATH-CONSTANT-FRACTION-DENOM-DISPLAY-STYLE-GAP-MIN:CAPS"/>
+    <keyword type="constant" name="HB_OT_MATH_CONSTANT_SKEWED_FRACTION_HORIZONTAL_GAP" link="harfbuzz-hb-ot-math.html#HB-OT-MATH-CONSTANT-SKEWED-FRACTION-HORIZONTAL-GAP:CAPS"/>
+    <keyword type="constant" name="HB_OT_MATH_CONSTANT_SKEWED_FRACTION_VERTICAL_GAP" link="harfbuzz-hb-ot-math.html#HB-OT-MATH-CONSTANT-SKEWED-FRACTION-VERTICAL-GAP:CAPS"/>
+    <keyword type="constant" name="HB_OT_MATH_CONSTANT_OVERBAR_VERTICAL_GAP" link="harfbuzz-hb-ot-math.html#HB-OT-MATH-CONSTANT-OVERBAR-VERTICAL-GAP:CAPS"/>
+    <keyword type="constant" name="HB_OT_MATH_CONSTANT_OVERBAR_RULE_THICKNESS" link="harfbuzz-hb-ot-math.html#HB-OT-MATH-CONSTANT-OVERBAR-RULE-THICKNESS:CAPS"/>
+    <keyword type="constant" name="HB_OT_MATH_CONSTANT_OVERBAR_EXTRA_ASCENDER" link="harfbuzz-hb-ot-math.html#HB-OT-MATH-CONSTANT-OVERBAR-EXTRA-ASCENDER:CAPS"/>
+    <keyword type="constant" name="HB_OT_MATH_CONSTANT_UNDERBAR_VERTICAL_GAP" link="harfbuzz-hb-ot-math.html#HB-OT-MATH-CONSTANT-UNDERBAR-VERTICAL-GAP:CAPS"/>
+    <keyword type="constant" name="HB_OT_MATH_CONSTANT_UNDERBAR_RULE_THICKNESS" link="harfbuzz-hb-ot-math.html#HB-OT-MATH-CONSTANT-UNDERBAR-RULE-THICKNESS:CAPS"/>
+    <keyword type="constant" name="HB_OT_MATH_CONSTANT_UNDERBAR_EXTRA_DESCENDER" link="harfbuzz-hb-ot-math.html#HB-OT-MATH-CONSTANT-UNDERBAR-EXTRA-DESCENDER:CAPS"/>
+    <keyword type="constant" name="HB_OT_MATH_CONSTANT_RADICAL_VERTICAL_GAP" link="harfbuzz-hb-ot-math.html#HB-OT-MATH-CONSTANT-RADICAL-VERTICAL-GAP:CAPS"/>
+    <keyword type="constant" name="HB_OT_MATH_CONSTANT_RADICAL_DISPLAY_STYLE_VERTICAL_GAP" link="harfbuzz-hb-ot-math.html#HB-OT-MATH-CONSTANT-RADICAL-DISPLAY-STYLE-VERTICAL-GAP:CAPS"/>
+    <keyword type="constant" name="HB_OT_MATH_CONSTANT_RADICAL_RULE_THICKNESS" link="harfbuzz-hb-ot-math.html#HB-OT-MATH-CONSTANT-RADICAL-RULE-THICKNESS:CAPS"/>
+    <keyword type="constant" name="HB_OT_MATH_CONSTANT_RADICAL_EXTRA_ASCENDER" link="harfbuzz-hb-ot-math.html#HB-OT-MATH-CONSTANT-RADICAL-EXTRA-ASCENDER:CAPS"/>
+    <keyword type="constant" name="HB_OT_MATH_CONSTANT_RADICAL_KERN_BEFORE_DEGREE" link="harfbuzz-hb-ot-math.html#HB-OT-MATH-CONSTANT-RADICAL-KERN-BEFORE-DEGREE:CAPS"/>
+    <keyword type="constant" name="HB_OT_MATH_CONSTANT_RADICAL_KERN_AFTER_DEGREE" link="harfbuzz-hb-ot-math.html#HB-OT-MATH-CONSTANT-RADICAL-KERN-AFTER-DEGREE:CAPS"/>
+    <keyword type="constant" name="HB_OT_MATH_CONSTANT_RADICAL_DEGREE_BOTTOM_RAISE_PERCENT" link="harfbuzz-hb-ot-math.html#HB-OT-MATH-CONSTANT-RADICAL-DEGREE-BOTTOM-RAISE-PERCENT:CAPS"/>
+    <keyword type="constant" name="HB_OT_MATH_KERN_TOP_RIGHT" link="harfbuzz-hb-ot-math.html#HB-OT-MATH-KERN-TOP-RIGHT:CAPS"/>
+    <keyword type="constant" name="HB_OT_MATH_KERN_TOP_LEFT" link="harfbuzz-hb-ot-math.html#HB-OT-MATH-KERN-TOP-LEFT:CAPS"/>
+    <keyword type="constant" name="HB_OT_MATH_KERN_BOTTOM_RIGHT" link="harfbuzz-hb-ot-math.html#HB-OT-MATH-KERN-BOTTOM-RIGHT:CAPS"/>
+    <keyword type="constant" name="HB_OT_MATH_KERN_BOTTOM_LEFT" link="harfbuzz-hb-ot-math.html#HB-OT-MATH-KERN-BOTTOM-LEFT:CAPS"/>
+    <keyword type="constant" name="HB_MATH_GLYPH_PART_FLAG_EXTENDER" link="harfbuzz-hb-ot-math.html#HB-MATH-GLYPH-PART-FLAG-EXTENDER:CAPS"/>
+    <keyword type="constant" name="HB_OT_VAR_AXIS_FLAG_HIDDEN" link="harfbuzz-hb-ot-var.html#HB-OT-VAR-AXIS-FLAG-HIDDEN:CAPS"/>
+    <keyword type="constant" name="_HB_OT_VAR_AXIS_FLAG_MAX_VALUE" link="harfbuzz-hb-ot-var.html#HB-OT-VAR-AXIS-FLAG-MAX-VALUE:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_TYPE_INVALID" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-TYPE-INVALID:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_TYPE_ALL_TYPOGRAPHIC" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-TYPE-ALL-TYPOGRAPHIC:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_TYPE_LIGATURES" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-TYPE-LIGATURES:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_TYPE_CURISVE_CONNECTION" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-TYPE-CURISVE-CONNECTION:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_TYPE_LETTER_CASE" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-TYPE-LETTER-CASE:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_TYPE_VERTICAL_SUBSTITUTION" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-TYPE-VERTICAL-SUBSTITUTION:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_TYPE_LINGUISTIC_REARRANGEMENT" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-TYPE-LINGUISTIC-REARRANGEMENT:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_TYPE_NUMBER_SPACING" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-TYPE-NUMBER-SPACING:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_TYPE_SMART_SWASH_TYPE" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-TYPE-SMART-SWASH-TYPE:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_TYPE_DIACRITICS_TYPE" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-TYPE-DIACRITICS-TYPE:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_TYPE_VERTICAL_POSITION" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-TYPE-VERTICAL-POSITION:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_TYPE_FRACTIONS" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-TYPE-FRACTIONS:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_TYPE_OVERLAPPING_CHARACTERS_TYPE" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-TYPE-OVERLAPPING-CHARACTERS-TYPE:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_TYPE_TYPOGRAPHIC_EXTRAS" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-TYPE-TYPOGRAPHIC-EXTRAS:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_TYPE_MATHEMATICAL_EXTRAS" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-TYPE-MATHEMATICAL-EXTRAS:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_TYPE_ORNAMENT_SETS_TYPE" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-TYPE-ORNAMENT-SETS-TYPE:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_TYPE_CHARACTER_ALTERNATIVES" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-TYPE-CHARACTER-ALTERNATIVES:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_TYPE_DESIGN_COMPLEXITY_TYPE" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-TYPE-DESIGN-COMPLEXITY-TYPE:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_TYPE_STYLE_OPTIONS" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-TYPE-STYLE-OPTIONS:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_TYPE_CHARACTER_SHAPE" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-TYPE-CHARACTER-SHAPE:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_TYPE_NUMBER_CASE" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-TYPE-NUMBER-CASE:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_TYPE_TEXT_SPACING" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-TYPE-TEXT-SPACING:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_TYPE_TRANSLITERATION" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-TYPE-TRANSLITERATION:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_TYPE_ANNOTATION_TYPE" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-TYPE-ANNOTATION-TYPE:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_TYPE_KANA_SPACING_TYPE" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-TYPE-KANA-SPACING-TYPE:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_TYPE_IDEOGRAPHIC_SPACING_TYPE" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-TYPE-IDEOGRAPHIC-SPACING-TYPE:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_TYPE_UNICODE_DECOMPOSITION_TYPE" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-TYPE-UNICODE-DECOMPOSITION-TYPE:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_TYPE_RUBY_KANA" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-TYPE-RUBY-KANA:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_TYPE_CJK_SYMBOL_ALTERNATIVES_TYPE" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-TYPE-CJK-SYMBOL-ALTERNATIVES-TYPE:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_TYPE_IDEOGRAPHIC_ALTERNATIVES_TYPE" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-TYPE-IDEOGRAPHIC-ALTERNATIVES-TYPE:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_TYPE_CJK_VERTICAL_ROMAN_PLACEMENT_TYPE" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-TYPE-CJK-VERTICAL-ROMAN-PLACEMENT-TYPE:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_TYPE_ITALIC_CJK_ROMAN" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-TYPE-ITALIC-CJK-ROMAN:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_TYPE_CASE_SENSITIVE_LAYOUT" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-TYPE-CASE-SENSITIVE-LAYOUT:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_TYPE_ALTERNATE_KANA" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-TYPE-ALTERNATE-KANA:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_TYPE_STYLISTIC_ALTERNATIVES" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-TYPE-STYLISTIC-ALTERNATIVES:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_TYPE_CONTEXTUAL_ALTERNATIVES" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-TYPE-CONTEXTUAL-ALTERNATIVES:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_TYPE_LOWER_CASE" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-TYPE-LOWER-CASE:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_TYPE_UPPER_CASE" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-TYPE-UPPER-CASE:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_TYPE_LANGUAGE_TAG_TYPE" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-TYPE-LANGUAGE-TAG-TYPE:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_TYPE_CJK_ROMAN_SPACING_TYPE" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-TYPE-CJK-ROMAN-SPACING-TYPE:CAPS"/>
+    <keyword type="constant" name="_HB_AAT_LAYOUT_FEATURE_TYPE_MAX_VALUE" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-TYPE-MAX-VALUE:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_INVALID" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-INVALID:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_ALL_TYPE_FEATURES_ON" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-ALL-TYPE-FEATURES-ON:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_ALL_TYPE_FEATURES_OFF" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-ALL-TYPE-FEATURES-OFF:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_REQUIRED_LIGATURES_ON" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-REQUIRED-LIGATURES-ON:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_REQUIRED_LIGATURES_OFF" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-REQUIRED-LIGATURES-OFF:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_COMMON_LIGATURES_ON" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-COMMON-LIGATURES-ON:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_COMMON_LIGATURES_OFF" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-COMMON-LIGATURES-OFF:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_RARE_LIGATURES_ON" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-RARE-LIGATURES-ON:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_RARE_LIGATURES_OFF" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-RARE-LIGATURES-OFF:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_LOGOS_ON" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-LOGOS-ON:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_LOGOS_OFF" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-LOGOS-OFF:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_REBUS_PICTURES_ON" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-REBUS-PICTURES-ON:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_REBUS_PICTURES_OFF" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-REBUS-PICTURES-OFF:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_DIPHTHONG_LIGATURES_ON" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-DIPHTHONG-LIGATURES-ON:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_DIPHTHONG_LIGATURES_OFF" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-DIPHTHONG-LIGATURES-OFF:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_SQUARED_LIGATURES_ON" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-SQUARED-LIGATURES-ON:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_SQUARED_LIGATURES_OFF" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-SQUARED-LIGATURES-OFF:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_ABBREV_SQUARED_LIGATURES_ON" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-ABBREV-SQUARED-LIGATURES-ON:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_ABBREV_SQUARED_LIGATURES_OFF" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-ABBREV-SQUARED-LIGATURES-OFF:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_SYMBOL_LIGATURES_ON" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-SYMBOL-LIGATURES-ON:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_SYMBOL_LIGATURES_OFF" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-SYMBOL-LIGATURES-OFF:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_CONTEXTUAL_LIGATURES_ON" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-CONTEXTUAL-LIGATURES-ON:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_CONTEXTUAL_LIGATURES_OFF" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-CONTEXTUAL-LIGATURES-OFF:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_HISTORICAL_LIGATURES_ON" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-HISTORICAL-LIGATURES-ON:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_HISTORICAL_LIGATURES_OFF" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-HISTORICAL-LIGATURES-OFF:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_UNCONNECTED" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-UNCONNECTED:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_PARTIALLY_CONNECTED" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-PARTIALLY-CONNECTED:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_CURSIVE" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-CURSIVE:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_UPPER_AND_LOWER_CASE" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-UPPER-AND-LOWER-CASE:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_ALL_CAPS" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-ALL-CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_ALL_LOWER_CASE" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-ALL-LOWER-CASE:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_SMALL_CAPS" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-SMALL-CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_INITIAL_CAPS" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-INITIAL-CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_INITIAL_CAPS_AND_SMALL_CAPS" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-INITIAL-CAPS-AND-SMALL-CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_SUBSTITUTE_VERTICAL_FORMS_ON" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-SUBSTITUTE-VERTICAL-FORMS-ON:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_SUBSTITUTE_VERTICAL_FORMS_OFF" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-SUBSTITUTE-VERTICAL-FORMS-OFF:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_LINGUISTIC_REARRANGEMENT_ON" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-LINGUISTIC-REARRANGEMENT-ON:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_LINGUISTIC_REARRANGEMENT_OFF" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-LINGUISTIC-REARRANGEMENT-OFF:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_MONOSPACED_NUMBERS" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-MONOSPACED-NUMBERS:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_PROPORTIONAL_NUMBERS" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-PROPORTIONAL-NUMBERS:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_THIRD_WIDTH_NUMBERS" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-THIRD-WIDTH-NUMBERS:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_QUARTER_WIDTH_NUMBERS" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-QUARTER-WIDTH-NUMBERS:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_WORD_INITIAL_SWASHES_ON" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-WORD-INITIAL-SWASHES-ON:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_WORD_INITIAL_SWASHES_OFF" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-WORD-INITIAL-SWASHES-OFF:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_WORD_FINAL_SWASHES_ON" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-WORD-FINAL-SWASHES-ON:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_WORD_FINAL_SWASHES_OFF" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-WORD-FINAL-SWASHES-OFF:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_LINE_INITIAL_SWASHES_ON" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-LINE-INITIAL-SWASHES-ON:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_LINE_INITIAL_SWASHES_OFF" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-LINE-INITIAL-SWASHES-OFF:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_LINE_FINAL_SWASHES_ON" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-LINE-FINAL-SWASHES-ON:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_LINE_FINAL_SWASHES_OFF" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-LINE-FINAL-SWASHES-OFF:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_NON_FINAL_SWASHES_ON" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-NON-FINAL-SWASHES-ON:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_NON_FINAL_SWASHES_OFF" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-NON-FINAL-SWASHES-OFF:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_SHOW_DIACRITICS" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-SHOW-DIACRITICS:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_HIDE_DIACRITICS" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-HIDE-DIACRITICS:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_DECOMPOSE_DIACRITICS" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-DECOMPOSE-DIACRITICS:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_NORMAL_POSITION" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-NORMAL-POSITION:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_SUPERIORS" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-SUPERIORS:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_INFERIORS" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-INFERIORS:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_ORDINALS" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-ORDINALS:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_SCIENTIFIC_INFERIORS" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-SCIENTIFIC-INFERIORS:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_NO_FRACTIONS" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-NO-FRACTIONS:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_VERTICAL_FRACTIONS" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-VERTICAL-FRACTIONS:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_DIAGONAL_FRACTIONS" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-DIAGONAL-FRACTIONS:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_PREVENT_OVERLAP_ON" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-PREVENT-OVERLAP-ON:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_PREVENT_OVERLAP_OFF" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-PREVENT-OVERLAP-OFF:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_HYPHENS_TO_EM_DASH_ON" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-HYPHENS-TO-EM-DASH-ON:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_HYPHENS_TO_EM_DASH_OFF" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-HYPHENS-TO-EM-DASH-OFF:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_HYPHEN_TO_EN_DASH_ON" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-HYPHEN-TO-EN-DASH-ON:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_HYPHEN_TO_EN_DASH_OFF" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-HYPHEN-TO-EN-DASH-OFF:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_SLASHED_ZERO_ON" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-SLASHED-ZERO-ON:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_SLASHED_ZERO_OFF" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-SLASHED-ZERO-OFF:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_FORM_INTERROBANG_ON" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-FORM-INTERROBANG-ON:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_FORM_INTERROBANG_OFF" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-FORM-INTERROBANG-OFF:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_SMART_QUOTES_ON" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-SMART-QUOTES-ON:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_SMART_QUOTES_OFF" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-SMART-QUOTES-OFF:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_PERIODS_TO_ELLIPSIS_ON" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-PERIODS-TO-ELLIPSIS-ON:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_PERIODS_TO_ELLIPSIS_OFF" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-PERIODS-TO-ELLIPSIS-OFF:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_HYPHEN_TO_MINUS_ON" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-HYPHEN-TO-MINUS-ON:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_HYPHEN_TO_MINUS_OFF" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-HYPHEN-TO-MINUS-OFF:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_ASTERISK_TO_MULTIPLY_ON" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-ASTERISK-TO-MULTIPLY-ON:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_ASTERISK_TO_MULTIPLY_OFF" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-ASTERISK-TO-MULTIPLY-OFF:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_SLASH_TO_DIVIDE_ON" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-SLASH-TO-DIVIDE-ON:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_SLASH_TO_DIVIDE_OFF" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-SLASH-TO-DIVIDE-OFF:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_INEQUALITY_LIGATURES_ON" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-INEQUALITY-LIGATURES-ON:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_INEQUALITY_LIGATURES_OFF" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-INEQUALITY-LIGATURES-OFF:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_EXPONENTS_ON" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-EXPONENTS-ON:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_EXPONENTS_OFF" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-EXPONENTS-OFF:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_MATHEMATICAL_GREEK_ON" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-MATHEMATICAL-GREEK-ON:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_MATHEMATICAL_GREEK_OFF" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-MATHEMATICAL-GREEK-OFF:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_NO_ORNAMENTS" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-NO-ORNAMENTS:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_DINGBATS" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-DINGBATS:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_PI_CHARACTERS" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-PI-CHARACTERS:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_FLEURONS" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-FLEURONS:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_DECORATIVE_BORDERS" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-DECORATIVE-BORDERS:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_INTERNATIONAL_SYMBOLS" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-INTERNATIONAL-SYMBOLS:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_MATH_SYMBOLS" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-MATH-SYMBOLS:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_NO_ALTERNATES" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-NO-ALTERNATES:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_DESIGN_LEVEL1" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-DESIGN-LEVEL1:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_DESIGN_LEVEL2" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-DESIGN-LEVEL2:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_DESIGN_LEVEL3" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-DESIGN-LEVEL3:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_DESIGN_LEVEL4" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-DESIGN-LEVEL4:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_DESIGN_LEVEL5" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-DESIGN-LEVEL5:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_NO_STYLE_OPTIONS" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-NO-STYLE-OPTIONS:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_DISPLAY_TEXT" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-DISPLAY-TEXT:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_ENGRAVED_TEXT" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-ENGRAVED-TEXT:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_ILLUMINATED_CAPS" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-ILLUMINATED-CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_TITLING_CAPS" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-TITLING-CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_TALL_CAPS" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-TALL-CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_TRADITIONAL_CHARACTERS" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-TRADITIONAL-CHARACTERS:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_SIMPLIFIED_CHARACTERS" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-SIMPLIFIED-CHARACTERS:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_JIS1978_CHARACTERS" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-JIS1978-CHARACTERS:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_JIS1983_CHARACTERS" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-JIS1983-CHARACTERS:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_JIS1990_CHARACTERS" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-JIS1990-CHARACTERS:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_TRADITIONAL_ALT_ONE" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-TRADITIONAL-ALT-ONE:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_TRADITIONAL_ALT_TWO" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-TRADITIONAL-ALT-TWO:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_TRADITIONAL_ALT_THREE" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-TRADITIONAL-ALT-THREE:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_TRADITIONAL_ALT_FOUR" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-TRADITIONAL-ALT-FOUR:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_TRADITIONAL_ALT_FIVE" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-TRADITIONAL-ALT-FIVE:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_EXPERT_CHARACTERS" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-EXPERT-CHARACTERS:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_JIS2004_CHARACTERS" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-JIS2004-CHARACTERS:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_HOJO_CHARACTERS" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-HOJO-CHARACTERS:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_NLCCHARACTERS" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-NLCCHARACTERS:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_TRADITIONAL_NAMES_CHARACTERS" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-TRADITIONAL-NAMES-CHARACTERS:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_LOWER_CASE_NUMBERS" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-LOWER-CASE-NUMBERS:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_UPPER_CASE_NUMBERS" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-UPPER-CASE-NUMBERS:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_PROPORTIONAL_TEXT" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-PROPORTIONAL-TEXT:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_MONOSPACED_TEXT" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-MONOSPACED-TEXT:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_HALF_WIDTH_TEXT" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-HALF-WIDTH-TEXT:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_THIRD_WIDTH_TEXT" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-THIRD-WIDTH-TEXT:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_QUARTER_WIDTH_TEXT" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-QUARTER-WIDTH-TEXT:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_ALT_PROPORTIONAL_TEXT" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-ALT-PROPORTIONAL-TEXT:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_ALT_HALF_WIDTH_TEXT" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-ALT-HALF-WIDTH-TEXT:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_NO_TRANSLITERATION" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-NO-TRANSLITERATION:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_HANJA_TO_HANGUL" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-HANJA-TO-HANGUL:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_HIRAGANA_TO_KATAKANA" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-HIRAGANA-TO-KATAKANA:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_KATAKANA_TO_HIRAGANA" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-KATAKANA-TO-HIRAGANA:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_KANA_TO_ROMANIZATION" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-KANA-TO-ROMANIZATION:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_ROMANIZATION_TO_HIRAGANA" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-ROMANIZATION-TO-HIRAGANA:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_ROMANIZATION_TO_KATAKANA" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-ROMANIZATION-TO-KATAKANA:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_HANJA_TO_HANGUL_ALT_ONE" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-HANJA-TO-HANGUL-ALT-ONE:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_HANJA_TO_HANGUL_ALT_TWO" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-HANJA-TO-HANGUL-ALT-TWO:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_HANJA_TO_HANGUL_ALT_THREE" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-HANJA-TO-HANGUL-ALT-THREE:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_NO_ANNOTATION" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-NO-ANNOTATION:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_BOX_ANNOTATION" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-BOX-ANNOTATION:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_ROUNDED_BOX_ANNOTATION" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-ROUNDED-BOX-ANNOTATION:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_CIRCLE_ANNOTATION" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-CIRCLE-ANNOTATION:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_INVERTED_CIRCLE_ANNOTATION" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-INVERTED-CIRCLE-ANNOTATION:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_PARENTHESIS_ANNOTATION" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-PARENTHESIS-ANNOTATION:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_PERIOD_ANNOTATION" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-PERIOD-ANNOTATION:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_ROMAN_NUMERAL_ANNOTATION" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-ROMAN-NUMERAL-ANNOTATION:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_DIAMOND_ANNOTATION" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-DIAMOND-ANNOTATION:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_INVERTED_BOX_ANNOTATION" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-INVERTED-BOX-ANNOTATION:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_INVERTED_ROUNDED_BOX_ANNOTATION" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-INVERTED-ROUNDED-BOX-ANNOTATION:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_FULL_WIDTH_KANA" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-FULL-WIDTH-KANA:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_PROPORTIONAL_KANA" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-PROPORTIONAL-KANA:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_FULL_WIDTH_IDEOGRAPHS" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-FULL-WIDTH-IDEOGRAPHS:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_PROPORTIONAL_IDEOGRAPHS" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-PROPORTIONAL-IDEOGRAPHS:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_HALF_WIDTH_IDEOGRAPHS" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-HALF-WIDTH-IDEOGRAPHS:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_CANONICAL_COMPOSITION_ON" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-CANONICAL-COMPOSITION-ON:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_CANONICAL_COMPOSITION_OFF" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-CANONICAL-COMPOSITION-OFF:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_COMPATIBILITY_COMPOSITION_ON" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-COMPATIBILITY-COMPOSITION-ON:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_COMPATIBILITY_COMPOSITION_OFF" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-COMPATIBILITY-COMPOSITION-OFF:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_TRANSCODING_COMPOSITION_ON" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-TRANSCODING-COMPOSITION-ON:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_TRANSCODING_COMPOSITION_OFF" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-TRANSCODING-COMPOSITION-OFF:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_NO_RUBY_KANA" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-NO-RUBY-KANA:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_RUBY_KANA" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-RUBY-KANA:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_RUBY_KANA_ON" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-RUBY-KANA-ON:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_RUBY_KANA_OFF" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-RUBY-KANA-OFF:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_NO_CJK_SYMBOL_ALTERNATIVES" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-NO-CJK-SYMBOL-ALTERNATIVES:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_CJK_SYMBOL_ALT_ONE" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-CJK-SYMBOL-ALT-ONE:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_CJK_SYMBOL_ALT_TWO" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-CJK-SYMBOL-ALT-TWO:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_CJK_SYMBOL_ALT_THREE" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-CJK-SYMBOL-ALT-THREE:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_CJK_SYMBOL_ALT_FOUR" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-CJK-SYMBOL-ALT-FOUR:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_CJK_SYMBOL_ALT_FIVE" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-CJK-SYMBOL-ALT-FIVE:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_NO_IDEOGRAPHIC_ALTERNATIVES" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-NO-IDEOGRAPHIC-ALTERNATIVES:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_IDEOGRAPHIC_ALT_ONE" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-IDEOGRAPHIC-ALT-ONE:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_IDEOGRAPHIC_ALT_TWO" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-IDEOGRAPHIC-ALT-TWO:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_IDEOGRAPHIC_ALT_THREE" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-IDEOGRAPHIC-ALT-THREE:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_IDEOGRAPHIC_ALT_FOUR" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-IDEOGRAPHIC-ALT-FOUR:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_IDEOGRAPHIC_ALT_FIVE" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-IDEOGRAPHIC-ALT-FIVE:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_CJK_VERTICAL_ROMAN_CENTERED" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-CJK-VERTICAL-ROMAN-CENTERED:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_CJK_VERTICAL_ROMAN_HBASELINE" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-CJK-VERTICAL-ROMAN-HBASELINE:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_NO_CJK_ITALIC_ROMAN" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-NO-CJK-ITALIC-ROMAN:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_CJK_ITALIC_ROMAN" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-CJK-ITALIC-ROMAN:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_CJK_ITALIC_ROMAN_ON" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-CJK-ITALIC-ROMAN-ON:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_CJK_ITALIC_ROMAN_OFF" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-CJK-ITALIC-ROMAN-OFF:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_CASE_SENSITIVE_LAYOUT_ON" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-CASE-SENSITIVE-LAYOUT-ON:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_CASE_SENSITIVE_LAYOUT_OFF" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-CASE-SENSITIVE-LAYOUT-OFF:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_CASE_SENSITIVE_SPACING_ON" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-CASE-SENSITIVE-SPACING-ON:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_CASE_SENSITIVE_SPACING_OFF" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-CASE-SENSITIVE-SPACING-OFF:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_ALTERNATE_HORIZ_KANA_ON" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-ALTERNATE-HORIZ-KANA-ON:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_ALTERNATE_HORIZ_KANA_OFF" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-ALTERNATE-HORIZ-KANA-OFF:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_ALTERNATE_VERT_KANA_ON" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-ALTERNATE-VERT-KANA-ON:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_ALTERNATE_VERT_KANA_OFF" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-ALTERNATE-VERT-KANA-OFF:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_NO_STYLISTIC_ALTERNATES" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-NO-STYLISTIC-ALTERNATES:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_STYLISTIC_ALT_ONE_ON" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-STYLISTIC-ALT-ONE-ON:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_STYLISTIC_ALT_ONE_OFF" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-STYLISTIC-ALT-ONE-OFF:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_STYLISTIC_ALT_TWO_ON" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-STYLISTIC-ALT-TWO-ON:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_STYLISTIC_ALT_TWO_OFF" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-STYLISTIC-ALT-TWO-OFF:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_STYLISTIC_ALT_THREE_ON" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-STYLISTIC-ALT-THREE-ON:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_STYLISTIC_ALT_THREE_OFF" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-STYLISTIC-ALT-THREE-OFF:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_STYLISTIC_ALT_FOUR_ON" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-STYLISTIC-ALT-FOUR-ON:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_STYLISTIC_ALT_FOUR_OFF" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-STYLISTIC-ALT-FOUR-OFF:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_STYLISTIC_ALT_FIVE_ON" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-STYLISTIC-ALT-FIVE-ON:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_STYLISTIC_ALT_FIVE_OFF" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-STYLISTIC-ALT-FIVE-OFF:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_STYLISTIC_ALT_SIX_ON" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-STYLISTIC-ALT-SIX-ON:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_STYLISTIC_ALT_SIX_OFF" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-STYLISTIC-ALT-SIX-OFF:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_STYLISTIC_ALT_SEVEN_ON" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-STYLISTIC-ALT-SEVEN-ON:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_STYLISTIC_ALT_SEVEN_OFF" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-STYLISTIC-ALT-SEVEN-OFF:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_STYLISTIC_ALT_EIGHT_ON" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-STYLISTIC-ALT-EIGHT-ON:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_STYLISTIC_ALT_EIGHT_OFF" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-STYLISTIC-ALT-EIGHT-OFF:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_STYLISTIC_ALT_NINE_ON" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-STYLISTIC-ALT-NINE-ON:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_STYLISTIC_ALT_NINE_OFF" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-STYLISTIC-ALT-NINE-OFF:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_STYLISTIC_ALT_TEN_ON" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-STYLISTIC-ALT-TEN-ON:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_STYLISTIC_ALT_TEN_OFF" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-STYLISTIC-ALT-TEN-OFF:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_STYLISTIC_ALT_ELEVEN_ON" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-STYLISTIC-ALT-ELEVEN-ON:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_STYLISTIC_ALT_ELEVEN_OFF" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-STYLISTIC-ALT-ELEVEN-OFF:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_STYLISTIC_ALT_TWELVE_ON" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-STYLISTIC-ALT-TWELVE-ON:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_STYLISTIC_ALT_TWELVE_OFF" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-STYLISTIC-ALT-TWELVE-OFF:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_STYLISTIC_ALT_THIRTEEN_ON" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-STYLISTIC-ALT-THIRTEEN-ON:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_STYLISTIC_ALT_THIRTEEN_OFF" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-STYLISTIC-ALT-THIRTEEN-OFF:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_STYLISTIC_ALT_FOURTEEN_ON" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-STYLISTIC-ALT-FOURTEEN-ON:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_STYLISTIC_ALT_FOURTEEN_OFF" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-STYLISTIC-ALT-FOURTEEN-OFF:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_STYLISTIC_ALT_FIFTEEN_ON" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-STYLISTIC-ALT-FIFTEEN-ON:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_STYLISTIC_ALT_FIFTEEN_OFF" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-STYLISTIC-ALT-FIFTEEN-OFF:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_STYLISTIC_ALT_SIXTEEN_ON" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-STYLISTIC-ALT-SIXTEEN-ON:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_STYLISTIC_ALT_SIXTEEN_OFF" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-STYLISTIC-ALT-SIXTEEN-OFF:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_STYLISTIC_ALT_SEVENTEEN_ON" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-STYLISTIC-ALT-SEVENTEEN-ON:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_STYLISTIC_ALT_SEVENTEEN_OFF" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-STYLISTIC-ALT-SEVENTEEN-OFF:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_STYLISTIC_ALT_EIGHTEEN_ON" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-STYLISTIC-ALT-EIGHTEEN-ON:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_STYLISTIC_ALT_EIGHTEEN_OFF" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-STYLISTIC-ALT-EIGHTEEN-OFF:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_STYLISTIC_ALT_NINETEEN_ON" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-STYLISTIC-ALT-NINETEEN-ON:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_STYLISTIC_ALT_NINETEEN_OFF" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-STYLISTIC-ALT-NINETEEN-OFF:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_STYLISTIC_ALT_TWENTY_ON" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-STYLISTIC-ALT-TWENTY-ON:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_STYLISTIC_ALT_TWENTY_OFF" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-STYLISTIC-ALT-TWENTY-OFF:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_CONTEXTUAL_ALTERNATES_ON" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-CONTEXTUAL-ALTERNATES-ON:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_CONTEXTUAL_ALTERNATES_OFF" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-CONTEXTUAL-ALTERNATES-OFF:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_SWASH_ALTERNATES_ON" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-SWASH-ALTERNATES-ON:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_SWASH_ALTERNATES_OFF" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-SWASH-ALTERNATES-OFF:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_CONTEXTUAL_SWASH_ALTERNATES_ON" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-CONTEXTUAL-SWASH-ALTERNATES-ON:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_CONTEXTUAL_SWASH_ALTERNATES_OFF" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-CONTEXTUAL-SWASH-ALTERNATES-OFF:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_DEFAULT_LOWER_CASE" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-DEFAULT-LOWER-CASE:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_LOWER_CASE_SMALL_CAPS" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-LOWER-CASE-SMALL-CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_LOWER_CASE_PETITE_CAPS" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-LOWER-CASE-PETITE-CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_DEFAULT_UPPER_CASE" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-DEFAULT-UPPER-CASE:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_UPPER_CASE_SMALL_CAPS" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-UPPER-CASE-SMALL-CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_UPPER_CASE_PETITE_CAPS" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-UPPER-CASE-PETITE-CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_HALF_WIDTH_CJK_ROMAN" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-HALF-WIDTH-CJK-ROMAN:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_PROPORTIONAL_CJK_ROMAN" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-PROPORTIONAL-CJK-ROMAN:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_DEFAULT_CJK_ROMAN" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-DEFAULT-CJK-ROMAN:CAPS"/>
+    <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_FULL_WIDTH_CJK_ROMAN" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-FULL-WIDTH-CJK-ROMAN:CAPS"/>
+    <keyword type="constant" name="_HB_AAT_LAYOUT_FEATURE_SELECTOR_MAX_VALUE" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-MAX-VALUE:CAPS"/>
+    <keyword type="member" name="hb-glyph-position-t-struct.x-advance" link="harfbuzz-hb-buffer.html#hb-glyph-position-t-struct.x-advance"/>
+    <keyword type="member" name="hb-glyph-position-t-struct.y-advance" link="harfbuzz-hb-buffer.html#hb-glyph-position-t-struct.y-advance"/>
+    <keyword type="member" name="hb-glyph-position-t-struct.x-offset" link="harfbuzz-hb-buffer.html#hb-glyph-position-t-struct.x-offset"/>
+    <keyword type="member" name="hb-glyph-position-t-struct.y-offset" link="harfbuzz-hb-buffer.html#hb-glyph-position-t-struct.y-offset"/>
+    <keyword type="member" name="hb-segment-properties-t-struct.direction" link="harfbuzz-hb-buffer.html#hb-segment-properties-t-struct.direction"/>
+    <keyword type="member" name="hb-segment-properties-t-struct.script" link="harfbuzz-hb-buffer.html#hb-segment-properties-t-struct.script"/>
+    <keyword type="member" name="hb-segment-properties-t-struct.language" link="harfbuzz-hb-buffer.html#hb-segment-properties-t-struct.language"/>
+    <keyword type="member" name="hb-ot-math-glyph-variant-t-struct.glyph" link="harfbuzz-hb-ot-math.html#hb-ot-math-glyph-variant-t-struct.glyph"/>
+    <keyword type="member" name="hb-ot-math-glyph-variant-t-struct.advance" link="harfbuzz-hb-ot-math.html#hb-ot-math-glyph-variant-t-struct.advance"/>
+    <keyword type="member" name="hb-ot-math-glyph-part-t-struct.glyph" link="harfbuzz-hb-ot-math.html#hb-ot-math-glyph-part-t-struct.glyph"/>
+    <keyword type="member" name="hb-ot-math-glyph-part-t-struct.start-connector-length" link="harfbuzz-hb-ot-math.html#hb-ot-math-glyph-part-t-struct.start-connector-length"/>
+    <keyword type="member" name="hb-ot-math-glyph-part-t-struct.end-connector-length" link="harfbuzz-hb-ot-math.html#hb-ot-math-glyph-part-t-struct.end-connector-length"/>
+    <keyword type="member" name="hb-ot-math-glyph-part-t-struct.full-advance" link="harfbuzz-hb-ot-math.html#hb-ot-math-glyph-part-t-struct.full-advance"/>
+    <keyword type="member" name="hb-ot-math-glyph-part-t-struct.flags" link="harfbuzz-hb-ot-math.html#hb-ot-math-glyph-part-t-struct.flags"/>
   </functions>
 </book>
