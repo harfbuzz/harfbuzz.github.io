@@ -509,10 +509,10 @@
     <keyword type="macro" name="HB_VERSION_MINOR" link="harfbuzz-hb-version.html#HB-VERSION-MINOR:CAPS"/>
     <keyword type="macro" name="HB_VERSION_STRING" link="harfbuzz-hb-version.html#HB-VERSION-STRING:CAPS"/>
     <keyword type="macro" name="HB_COLOR()" link="harfbuzz-hb-ot-color.html#HB-COLOR:CAPS"/>
-    <keyword type="function" name="hb_color_get_alpha ()" link="harfbuzz-hb-ot-color.html#hb-color-get-alpha" since="REPLACEME"/>
-    <keyword type="function" name="hb_color_get_blue ()" link="harfbuzz-hb-ot-color.html#hb-color-get-blue" since="REPLACEME"/>
-    <keyword type="function" name="hb_color_get_green ()" link="harfbuzz-hb-ot-color.html#hb-color-get-green" since="REPLACEME"/>
-    <keyword type="function" name="hb_color_get_red ()" link="harfbuzz-hb-ot-color.html#hb-color-get-red" since="REPLACEME"/>
+    <keyword type="function" name="hb_color_get_alpha ()" link="harfbuzz-hb-ot-color.html#hb-color-get-alpha" since="2.1.0"/>
+    <keyword type="function" name="hb_color_get_blue ()" link="harfbuzz-hb-ot-color.html#hb-color-get-blue" since="2.1.0"/>
+    <keyword type="function" name="hb_color_get_green ()" link="harfbuzz-hb-ot-color.html#hb-color-get-green" since="2.1.0"/>
+    <keyword type="function" name="hb_color_get_red ()" link="harfbuzz-hb-ot-color.html#hb-color-get-red" since="2.1.0"/>
     <keyword type="function" name="hb_ot_color_glyph_get_layers ()" link="harfbuzz-hb-ot-color.html#hb-ot-color-glyph-get-layers" since="2.1.0"/>
     <keyword type="function" name="hb_ot_color_glyph_reference_png ()" link="harfbuzz-hb-ot-color.html#hb-ot-color-glyph-reference-png" since="2.1.0"/>
     <keyword type="function" name="hb_ot_color_glyph_reference_svg ()" link="harfbuzz-hb-ot-color.html#hb-ot-color-glyph-reference-svg" since="2.1.0"/>
