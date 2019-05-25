@@ -44,13 +44,19 @@
         <sub name="Creating and destroying buffers" link="buffers-language-script-and-direction.html#creating-and-destroying-buffers"/>
         <sub name="Adding text to the buffer" link="adding-text-to-the-buffer.html"/>
         <sub name="Setting buffer properties" link="setting-buffer-properties.html"/>
-        <sub name="What about the other scripts?" link="what-about-the-other-scripts.html"/>
         <sub name="Customizing Unicode functions" link="customizing-unicode-functions.html"/>
       </sub>
-      <sub name="Fonts and faces" link="fonts-and-faces.html">
-        <sub name="Using FreeType" link="fonts-and-faces.html#using-freetype"/>
-        <sub name="Using HarfBuzz's native OpenType implementation" link="using-harfbuzzs-native-opentype-implementation.html"/>
-        <sub name="Using your own font functions" link="using-your-own-font-functions.html"/>
+      <sub name="Fonts, faces, and output" link="fonts-and-faces.html">
+        <sub name="Font and face objects" link="fonts-and-faces.html#fonts-and-faces-objects"/>
+        <sub name="Customizing font functions" link="fonts-and-faces-custom-functions.html"/>
+        <sub name="Font objects and HarfBuzz's native OpenType implementation" link="fonts-and-faces-native-opentype.html"/>
+        <sub name="Working with OpenType Variable Fonts" link="fonts-and-faces-variable.html"/>
+      </sub>
+      <sub name="Shaping and shape plans" link="shaping-and-shape-plans.html">
+        <sub name="Shaping and buffer output" link="shaping-and-shape-plans.html#shaping-buffer-output"/>
+        <sub name="OpenType features" link="shaping-opentype-features.html"/>
+        <sub name="Shaper selection" link="shaping-shaper-selection.html"/>
+        <sub name="Plans and caching" link="shaping-plans-and-caching.html"/>
       </sub>
       <sub name="Clusters" link="clusters.html">
         <sub name="Clusters and shaping" link="clusters.html#clusters-and-shaping"/>
@@ -64,14 +70,18 @@
           <sub name="Other considerations in level 2" link="level-2.html#other-considerations-in-level-2"/>
         </sub>
       </sub>
-      <sub name="Shaping and shape plans" link="shaping-and-shape-plans.html">
-        <sub name="OpenType features" link="shaping-and-shape-plans.html#opentype-features"/>
-        <sub name="Plans and caching" link="plans-and-caching.html"/>
+      <sub name="Utilities" link="utilities.html">
+        <sub name="Command-line tools" link="utilities.html#utilities-command-line-tools">
+          <sub name="hb-shape" link="utilities.html#utilities-command-line-hbshape"/>
+          <sub name="hb-view" link="utilities.html#utilities-command-line-hbview"/>
+          <sub name="hb-subset" link="utilities.html#utilities-command-line-hbsubset"/>
+        </sub>
+        <sub name="Common data types and APIs" link="utilities-common-types-apis.html"/>
+        <sub name="UCDN" link="utilities-ucdn.html"/>
       </sub>
-      <sub name="Glyph information" link="pt01.html#glyph-information"/>
     </sub>
     <sub name="Reference manual" link="pt02.html">
-      <sub name="Core API" link="ch10.html">
+      <sub name="Core API" link="ch11.html">
         <sub name="hb-blob" link="harfbuzz-hb-blob.html"/>
         <sub name="hb-buffer" link="harfbuzz-hb-buffer.html"/>
         <sub name="hb-common" link="harfbuzz-hb-common.html"/>
@@ -85,7 +95,7 @@
         <sub name="hb-unicode" link="harfbuzz-hb-unicode.html"/>
         <sub name="hb-version" link="harfbuzz-hb-version.html"/>
       </sub>
-      <sub name="OpenType API" link="ch11.html">
+      <sub name="OpenType API" link="ch12.html">
         <sub name="hb-ot-color" link="harfbuzz-hb-ot-color.html"/>
         <sub name="hb-ot-font" link="harfbuzz-hb-ot-font.html"/>
         <sub name="hb-ot-layout" link="harfbuzz-hb-ot-layout.html"/>
@@ -94,10 +104,10 @@
         <sub name="hb-ot-shape" link="harfbuzz-hb-ot-shape.html"/>
         <sub name="hb-ot-var" link="harfbuzz-hb-ot-var.html"/>
       </sub>
-      <sub name="Apple Advanced Typography API" link="ch12.html">
+      <sub name="Apple Advanced Typography API" link="ch13.html">
         <sub name="hb-aat-layout" link="harfbuzz-hb-aat-layout.html"/>
       </sub>
-      <sub name="Integration API" link="ch13.html">
+      <sub name="Integration API" link="ch14.html">
         <sub name="hb-coretext" link="harfbuzz-hb-coretext.html"/>
         <sub name="hb-ft" link="harfbuzz-hb-ft.html"/>
         <sub name="hb-glib" link="harfbuzz-hb-glib.html"/>
