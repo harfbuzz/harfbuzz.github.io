@@ -1083,7 +1083,7 @@
     <keyword type="constant" name="HB_OT_MATH_KERN_TOP_LEFT" link="harfbuzz-hb-ot-math.html#HB-OT-MATH-KERN-TOP-LEFT:CAPS"/>
     <keyword type="constant" name="HB_OT_MATH_KERN_BOTTOM_RIGHT" link="harfbuzz-hb-ot-math.html#HB-OT-MATH-KERN-BOTTOM-RIGHT:CAPS"/>
     <keyword type="constant" name="HB_OT_MATH_KERN_BOTTOM_LEFT" link="harfbuzz-hb-ot-math.html#HB-OT-MATH-KERN-BOTTOM-LEFT:CAPS"/>
-    <keyword type="constant" name="HB_MATH_GLYPH_PART_FLAG_EXTENDER" link="harfbuzz-hb-ot-math.html#HB-MATH-GLYPH-PART-FLAG-EXTENDER:CAPS"/>
+    <keyword type="constant" name="HB_OT_MATH_GLYPH_PART_FLAG_EXTENDER" link="harfbuzz-hb-ot-math.html#HB-OT-MATH-GLYPH-PART-FLAG-EXTENDER:CAPS"/>
     <keyword type="constant" name="HB_OT_VAR_AXIS_FLAG_HIDDEN" link="harfbuzz-hb-ot-var.html#HB-OT-VAR-AXIS-FLAG-HIDDEN:CAPS"/>
     <keyword type="constant" name="_HB_OT_VAR_AXIS_FLAG_MAX_VALUE" link="harfbuzz-hb-ot-var.html#HB-OT-VAR-AXIS-FLAG-MAX-VALUE:CAPS"/>
     <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_TYPE_INVALID" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-TYPE-INVALID:CAPS"/>
