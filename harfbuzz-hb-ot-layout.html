@@ -2,20 +2,20 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>hb-ot-layout: HarfBuzz Manual</title>
-<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<title>HarfBuzz Manual: hb-ot-layout</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
 <link rel="home" href="index.html" title="HarfBuzz Manual">
 <link rel="up" href="ch12.html" title="OpenType API">
 <link rel="prev" href="harfbuzz-hb-ot-font.html" title="hb-ot-font">
 <link rel="next" href="harfbuzz-hb-ot-math.html" title="hb-ot-math">
-<meta name="generator" content="GTK-Doc V1.25 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.20 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
-<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="10"><tr valign="middle">
 <td width="100%" align="left" class="shortcuts">
-<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
-                  <a href="#harfbuzz-hb-ot-layout.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+<a href="#" class="shortcut">Top</a><span id="nav_description"> <span class="dim">|</span> 
+                  <a href="#harfbuzz-hb-ot-layout.description" class="shortcut">Description</a></span><span id="nav_hierarchy"> <span class="dim">|</span> 
                   <a href="#harfbuzz-hb-ot-layout.object-hierarchy" class="shortcut">Object Hierarchy</a></span>
 </td>
 <td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
@@ -34,7 +34,7 @@
 </tr></table></div>
 <div class="refsect1">
 <a name="harfbuzz-hb-ot-layout.functions"></a><h2>Functions</h2>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="functions_return">
 <col class="functions_name">
@@ -322,7 +322,7 @@
 </div>
 <div class="refsect1">
 <a name="harfbuzz-hb-ot-layout.other"></a><h2>Types and Values</h2>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="name">
 <col class="description">
@@ -409,11 +409,11 @@
 <pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-language-t" title="hb_language_t"><span class="returnvalue">hb_language_t</span></a>
 hb_ot_tag_to_language (<em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="type">hb_tag_t</span></a> tag</code></em>);</pre>
 <div class="refsect3">
-<a name="hb-ot-tag-to-language.returns"></a><h4>Returns</h4>
+<a name="id-1.3.5.4.8.2.4"></a><h4>Returns</h4>
 <p>. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since: <a class="link" href="api-index-0-9-2.html#api-index-0.9.2">0.9.2</a></p>
+<p class="since">Since 0.9.2</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -433,8 +433,8 @@ hb_ot_tags_from_script_and_language (<em class="parameter"><code><a class="link"
                                      <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="type">hb_tag_t</span></a> *language_tags</code></em>);</pre>
 <p>Converts an <a class="link" href="harfbuzz-hb-common.html#hb-script-t" title="enum hb_script_t"><span class="type">hb_script_t</span></a> and an <a class="link" href="harfbuzz-hb-common.html#hb-language-t" title="hb_language_t"><span class="type">hb_language_t</span></a> to script and language tags.</p>
 <div class="refsect3">
-<a name="hb-ot-tags-from-script-and-language.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<a name="id-1.3.5.4.8.4.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -455,32 +455,32 @@ hb_ot_tags_from_script_and_language (<em class="parameter"><code><a class="link"
 <td class="parameter_name"><p>script_count</p></td>
 <td class="parameter_description"><p> maximum number of script tags to retrieve (IN)
 and actual number of script tags retrieved (OUT). </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>script_tags</p></td>
 <td class="parameter_description"><p> array of size at least <em class="parameter"><code>script_count</code></em>
 to store the
 script tag results. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>language_count</p></td>
 <td class="parameter_description"><p> maximum number of language tags to retrieve
 (IN) and actual number of language tags retrieved (OUT). </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>language_tags</p></td>
 <td class="parameter_description"><p> array of size at least <em class="parameter"><code>language_count</code></em>
 to store
 the language tag results. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
 </tr>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since: <a class="link" href="api-index-2-0-0.html#api-index-2.0.0">2.0.0</a></p>
+<p class="since">Since 2.0.0</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -493,8 +493,8 @@ hb_ot_tags_to_script_and_language (<em class="parameter"><code><a class="link" h
 <p>Converts a script tag and a language tag to an <a class="link" href="harfbuzz-hb-common.html#hb-script-t" title="enum hb_script_t"><span class="type">hb_script_t</span></a> and an
 <a class="link" href="harfbuzz-hb-common.html#hb-language-t" title="hb_language_t"><span class="type">hb_language_t</span></a>.</p>
 <div class="refsect3">
-<a name="hb-ot-tags-to-script-and-language.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<a name="id-1.3.5.4.8.5.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -515,7 +515,7 @@ hb_ot_tags_to_script_and_language (<em class="parameter"><code><a class="link" h
 <td class="parameter_name"><p>script</p></td>
 <td class="parameter_description"><p> the <a class="link" href="harfbuzz-hb-common.html#hb-script-t" title="enum hb_script_t"><span class="type">hb_script_t</span></a> corresponding to <em class="parameter"><code>script_tag</code></em>
 (OUT). </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>language</p></td>
@@ -523,12 +523,12 @@ hb_ot_tags_to_script_and_language (<em class="parameter"><code><a class="link" h
 and
 <em class="parameter"><code>language_tag</code></em>
 (OUT). </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
 </tr>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since: <a class="link" href="api-index-2-0-0.html#api-index-2.0.0">2.0.0</a></p>
+<p class="since">Since 2.0.0</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -546,8 +546,8 @@ features. If no list of scripts is provided, all scripts will be queried.
 If no list of languages is provided, all languages will be queried. If no
 list of features is provided, all features will be queried.</p>
 <div class="refsect3">
-<a name="hb-ot-layout-collect-lookups.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<a name="id-1.3.5.4.8.6.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -587,7 +587,7 @@ list of features is provided, all features will be queried.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since: <a class="link" href="api-index-0-9-8.html#api-index-0.9.8">0.9.8</a></p>
+<p class="since">Since 0.9.8</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -605,8 +605,8 @@ If no list of scripts is provided, all scripts will be queried. If no list
 of languages is provided, all languages will be queried. If no list of
 features is provided, all features will be queried.</p>
 <div class="refsect3">
-<a name="hb-ot-layout-collect-features.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<a name="id-1.3.5.4.8.7.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -646,7 +646,7 @@ features is provided, all features will be queried.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since: <a class="link" href="api-index-1-8-5.html#api-index-1.8.5">1.8.5</a></p>
+<p class="since">Since 1.8.5</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -666,8 +666,8 @@ hb_ot_layout_feature_get_characters (<em class="parameter"><code><a class="link"
       until the char_count output value is lower than its input value, or the size
       of the characters array can be increased.</div>
 <div class="refsect3">
-<a name="hb-ot-layout-feature-get-characters.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<a name="id-1.3.5.4.8.8.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -698,7 +698,7 @@ hb_ot_layout_feature_get_characters (<em class="parameter"><code><a class="link"
 <td class="parameter_name"><p>char_count</p></td>
 <td class="parameter_description"><p> Input = the maximum number of characters to return;
 Output = the actual number of characters returned (may be zero). </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>characters</p></td>
@@ -711,10 +711,11 @@ glyph variants. </p></td>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="hb-ot-layout-feature-get-characters.returns"></a><h4>Returns</h4>
+<a name="id-1.3.5.4.8.8.7"></a><h4>Returns</h4>
 <p> Number of total sample characters in the cvXX feature.</p>
+<p></p>
 </div>
-<p class="since">Since: <a class="link" href="api-index-2-0-0.html#api-index-2.0.0">2.0.0</a></p>
+<p class="since">Since 2.0.0</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -730,8 +731,8 @@ hb_ot_layout_feature_get_lookups (<em class="parameter"><code><a class="link" hr
 the specified face's GSUB table or GPOS table. The list returned will
 begin at the offset provided.</p>
 <div class="refsect3">
-<a name="hb-ot-layout-feature-get-lookups.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<a name="id-1.3.5.4.8.9.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -762,7 +763,7 @@ begin at the offset provided.</p>
 <td class="parameter_name"><p>lookup_count</p></td>
 <td class="parameter_description"><p> Input = the maximum number of lookups to return;
 Output = the actual number of lookups returned (may be zero). </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>lookup_indexes</p></td>
@@ -772,7 +773,7 @@ Output = the actual number of lookups returned (may be zero). </p></td>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since: <a class="link" href="api-index-0-9-7.html#api-index-0.9.7">0.9.7</a></p>
+<p class="since">Since 0.9.7</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -789,8 +790,8 @@ hb_ot_layout_feature_get_name_ids (<em class="parameter"><code><a class="link" h
 <p>Fetches name indices from feature parameters for "Stylistic Set" ('ssXX') or
 "Character Variant" ('cvXX') features.</p>
 <div class="refsect3">
-<a name="hb-ot-layout-feature-get-name-ids.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<a name="id-1.3.5.4.8.10.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -816,41 +817,42 @@ hb_ot_layout_feature_get_name_ids (<em class="parameter"><code><a class="link" h
 <td class="parameter_name"><p>label_id</p></td>
 <td class="parameter_description"><p> The ‘name’ table name ID that specifies a string
 for a user-interface label for this feature. (May be NULL.). </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>tooltip_id</p></td>
 <td class="parameter_description"><p> The ‘name’ table name ID that specifies a string
 that an application can use for tooltip text for this
 feature. (May be NULL.). </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>sample_id</p></td>
 <td class="parameter_description"><p> The ‘name’ table name ID that specifies sample text
 that illustrates the effect of this feature. (May be NULL.). </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>num_named_parameters</p></td>
 <td class="parameter_description"><p>  Number of named parameters. (May be zero.). </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>first_param_id</p></td>
 <td class="parameter_description"><p> The first ‘name’ table name ID used to specify
 strings for user-interface labels for the feature
 parameters. (Must be zero if numParameters is zero.). </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
 </tr>
 </tbody>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="hb-ot-layout-feature-get-name-ids.returns"></a><h4>Returns</h4>
+<a name="id-1.3.5.4.8.10.6"></a><h4>Returns</h4>
 <p> true if data found, false otherwise</p>
+<p></p>
 </div>
-<p class="since">Since: <a class="link" href="api-index-2-0-0.html#api-index-2.0.0">2.0.0</a></p>
+<p class="since">Since 2.0.0</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -868,8 +870,8 @@ hb_ot_layout_feature_with_variations_get_lookups
 the specified face's GSUB table or GPOS table, enabled at the specified
 variations index. The list returned will begin at the offset provided.</p>
 <div class="refsect3">
-<a name="hb-ot-layout-feature-with-variations-get-lookups.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<a name="id-1.3.5.4.8.11.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -905,7 +907,7 @@ variations index. The list returned will begin at the offset provided.</p>
 <td class="parameter_name"><p>lookup_count</p></td>
 <td class="parameter_description"><p> Input = the maximum number of lookups to return;
 Output = the actual number of lookups returned (may be zero). </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>lookup_indexes</p></td>
@@ -929,8 +931,8 @@ hb_ot_layout_get_attach_points (<em class="parameter"><code><a class="link" href
 table of the face. The list returned will begin at the offset provided. </p>
 <p>Useful if the client program wishes to cache the list.</p>
 <div class="refsect3">
-<a name="hb-ot-layout-get-attach-points.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<a name="id-1.3.5.4.8.12.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -956,7 +958,7 @@ table of the face. The list returned will begin at the offset provided. </p>
 <td class="parameter_name"><p>point_count</p></td>
 <td class="parameter_description"><p> Input = the maximum number of attachment points to return;
 Output = the actual number of attachment points returned (may be zero). </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>point_array</p></td>
@@ -975,8 +977,8 @@ hb_ot_layout_get_glyph_class (<em class="parameter"><code><a class="link" href="
                               <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> glyph</code></em>);</pre>
 <p>Fetches the GDEF class of the requested glyph in the specified face.</p>
 <div class="refsect3">
-<a name="hb-ot-layout-get-glyph-class.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<a name="id-1.3.5.4.8.13.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -997,11 +999,12 @@ hb_ot_layout_get_glyph_class (<em class="parameter"><code><a class="link" href="
 </table></div>
 </div>
 <div class="refsect3">
-<a name="hb-ot-layout-get-glyph-class.returns"></a><h4>Returns</h4>
+<a name="id-1.3.5.4.8.13.6"></a><h4>Returns</h4>
 <p> The <a class="link" href="harfbuzz-hb-ot-layout.html#hb-ot-layout-glyph-class-t" title="enum hb_ot_layout_glyph_class_t"><span class="type">hb_ot_layout_glyph_class_t</span></a> glyph class of the given code
 point in the GDEF table of the face.</p>
+<p></p>
 </div>
-<p class="since">Since: <a class="link" href="api-index-0-9-7.html#api-index-0.9.7">0.9.7</a></p>
+<p class="since">Since 0.9.7</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1013,8 +1016,8 @@ hb_ot_layout_get_glyphs_in_class (<em class="parameter"><code><a class="link" hr
 <p>Retrieves the set of all glyphs from the face that belong to the requested
 glyph class in the face's GDEF table.</p>
 <div class="refsect3">
-<a name="hb-ot-layout-get-glyphs-in-class.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<a name="id-1.3.5.4.8.14.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -1040,7 +1043,7 @@ class. </p></td>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since: <a class="link" href="api-index-0-9-7.html#api-index-0.9.7">0.9.7</a></p>
+<p class="since">Since 0.9.7</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1055,8 +1058,8 @@ hb_ot_layout_get_ligature_carets (<em class="parameter"><code><a class="link" hr
 <p>Fetches a list of the caret positions defined for a ligature glyph in the GDEF
 table of the font. The list returned will begin at the offset provided.</p>
 <div class="refsect3">
-<a name="hb-ot-layout-get-ligature-carets.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<a name="id-1.3.5.4.8.15.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -1087,7 +1090,7 @@ table of the font. The list returned will begin at the offset provided.</p>
 <td class="parameter_name"><p>caret_count</p></td>
 <td class="parameter_description"><p> Input = the maximum number of caret positions to return;
 Output = the actual number of caret positions returned (may be zero). </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>caret_array</p></td>
@@ -1116,8 +1119,8 @@ a subfamily are not covered by the <code class="literal">size</code> feature.</p
 <p>For more information on this distinction, see the <code class="literal">size</code> documentation at
 https://docs.microsoft.com/en-us/typography/opentype/spec/features_pt<span class="type">tag-39size39</span></p>
 <div class="refsect3">
-<a name="hb-ot-layout-get-size-params.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<a name="id-1.3.5.4.8.16.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -1158,10 +1161,11 @@ https://docs.microsoft.com/en-us/typography/opentype/spec/features_pt<span class
 </table></div>
 </div>
 <div class="refsect3">
-<a name="hb-ot-layout-get-size-params.returns"></a><h4>Returns</h4>
+<a name="id-1.3.5.4.8.16.7"></a><h4>Returns</h4>
 <p> true if data found, false otherwise</p>
+<p></p>
 </div>
-<p class="since">Since: <a class="link" href="api-index-0-9-10.html#api-index-0.9.10">0.9.10</a></p>
+<p class="since">Since 0.9.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1180,8 +1184,8 @@ https://docs.microsoft.com/en-us/typography/opentype/spec/features_pt<span class
 hb_ot_layout_has_glyph_classes (<em class="parameter"><code><a class="link" href="harfbuzz-hb-face.html#hb-face-t"><span class="type">hb_face_t</span></a> *face</code></em>);</pre>
 <p>Tests whether a face has any glyph classes defined in its GDEF table.</p>
 <div class="refsect3">
-<a name="hb-ot-layout-has-glyph-classes.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<a name="id-1.3.5.4.8.18.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -1195,8 +1199,9 @@ hb_ot_layout_has_glyph_classes (<em class="parameter"><code><a class="link" href
 </table></div>
 </div>
 <div class="refsect3">
-<a name="hb-ot-layout-has-glyph-classes.returns"></a><h4>Returns</h4>
+<a name="id-1.3.5.4.8.18.6"></a><h4>Returns</h4>
 <p> true if data found, false otherwise</p>
+<p></p>
 </div>
 </div>
 <hr>
@@ -1205,8 +1210,8 @@ hb_ot_layout_has_glyph_classes (<em class="parameter"><code><a class="link" href
 <pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
 hb_ot_layout_has_positioning (<em class="parameter"><code><a class="link" href="harfbuzz-hb-face.html#hb-face-t"><span class="type">hb_face_t</span></a> *face</code></em>);</pre>
 <div class="refsect3">
-<a name="hb-ot-layout-has-positioning.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<a name="id-1.3.5.4.8.19.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -1220,8 +1225,9 @@ hb_ot_layout_has_positioning (<em class="parameter"><code><a class="link" href="
 </table></div>
 </div>
 <div class="refsect3">
-<a name="hb-ot-layout-has-positioning.returns"></a><h4>Returns</h4>
+<a name="id-1.3.5.4.8.19.5"></a><h4>Returns</h4>
 <p> true if the face has GPOS data, false otherwise</p>
+<p></p>
 </div>
 </div>
 <hr>
@@ -1231,8 +1237,8 @@ hb_ot_layout_has_positioning (<em class="parameter"><code><a class="link" href="
 hb_ot_layout_has_substitution (<em class="parameter"><code><a class="link" href="harfbuzz-hb-face.html#hb-face-t"><span class="type">hb_face_t</span></a> *face</code></em>);</pre>
 <p>Tests whether the specified face includes any GSUB substitutions.</p>
 <div class="refsect3">
-<a name="hb-ot-layout-has-substitution.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<a name="id-1.3.5.4.8.20.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -1246,8 +1252,9 @@ hb_ot_layout_has_substitution (<em class="parameter"><code><a class="link" href=
 </table></div>
 </div>
 <div class="refsect3">
-<a name="hb-ot-layout-has-substitution.returns"></a><h4>Returns</h4>
+<a name="id-1.3.5.4.8.20.6"></a><h4>Returns</h4>
 <p> true if data found, false otherwise</p>
+<p></p>
 </div>
 </div>
 <hr>
@@ -1263,8 +1270,8 @@ hb_ot_layout_language_find_feature (<em class="parameter"><code><a class="link" 
 <p>Fetches the index of a given feature tag in the specified face's GSUB table
 or GPOS table, underneath the specified script and language.</p>
 <div class="refsect3">
-<a name="hb-ot-layout-language-find-feature.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<a name="id-1.3.5.4.8.21.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -1305,8 +1312,9 @@ or GPOS table, underneath the specified script and language.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="hb-ot-layout-language-find-feature.returns"></a><h4>Returns</h4>
+<a name="id-1.3.5.4.8.21.6"></a><h4>Returns</h4>
 <p> true if the feature is found, false otherwise</p>
+<p></p>
 </div>
 </div>
 <hr>
@@ -1325,8 +1333,8 @@ hb_ot_layout_language_get_feature_indexes
 or GPOS table, underneath the specified script and language. The list
 returned will begin at the offset provided.</p>
 <div class="refsect3">
-<a name="hb-ot-layout-language-get-feature-indexes.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<a name="id-1.3.5.4.8.22.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -1362,7 +1370,7 @@ returned will begin at the offset provided.</p>
 <td class="parameter_name"><p>feature_count</p></td>
 <td class="parameter_description"><p> Input = the maximum number of feature tags to return;
 Output: the actual number of feature tags returned (may be zero). </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>feature_indexes</p></td>
@@ -1389,8 +1397,8 @@ hb_ot_layout_language_get_feature_tags
 or GPOS table, underneath the specified script and language. The list
 returned will begin at the offset provided.</p>
 <div class="refsect3">
-<a name="hb-ot-layout-language-get-feature-tags.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<a name="id-1.3.5.4.8.23.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -1426,7 +1434,7 @@ returned will begin at the offset provided.</p>
 <td class="parameter_name"><p>feature_count</p></td>
 <td class="parameter_description"><p> Input = the maximum number of feature tags to return;
 Output = the actual number of feature tags returned (may be zero). </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>feature_tags</p></td>
@@ -1451,8 +1459,8 @@ hb_ot_layout_language_get_required_feature
 <p>Fetches the tag of a requested feature index in the given face's GSUB or GPOS table,
 underneath the specified script and language.</p>
 <div class="refsect3">
-<a name="hb-ot-layout-language-get-required-feature.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<a name="id-1.3.5.4.8.24.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -1493,10 +1501,11 @@ underneath the specified script and language.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="hb-ot-layout-language-get-required-feature.returns"></a><h4>Returns</h4>
+<a name="id-1.3.5.4.8.24.6"></a><h4>Returns</h4>
 <p> true if the feature is found, false otherwise</p>
+<p></p>
 </div>
-<p class="since">Since: <a class="link" href="api-index-0-9-30.html#api-index-0.9.30">0.9.30</a></p>
+<p class="since">Since 0.9.30</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1512,8 +1521,8 @@ hb_ot_layout_lookup_collect_glyphs (<em class="parameter"><code><a class="link" 
 <p>Fetches a list of all glyphs affected by the specified lookup in the
 specified face's GSUB table of GPOS table.</p>
 <div class="refsect3">
-<a name="hb-ot-layout-lookup-collect-glyphs.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<a name="id-1.3.5.4.8.25.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -1558,7 +1567,7 @@ specified face's GSUB table of GPOS table.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since: <a class="link" href="api-index-0-9-7.html#api-index-0.9.7">0.9.7</a></p>
+<p class="since">Since 0.9.7</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1571,8 +1580,8 @@ hb_ot_layout_lookup_substitute_closure
 <p>Compute the transitive closure of glyphs needed for a
 specified lookup.</p>
 <div class="refsect3">
-<a name="hb-ot-layout-lookup-substitute-closure.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<a name="id-1.3.5.4.8.26.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -1597,7 +1606,7 @@ specified lookup.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since: <a class="link" href="api-index-0-9-7.html#api-index-0.9.7">0.9.7</a></p>
+<p class="since">Since 0.9.7</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1610,8 +1619,8 @@ hb_ot_layout_lookups_substitute_closure
 <p>Compute the transitive closure of glyphs needed for all of the
 provided lookups.</p>
 <div class="refsect3">
-<a name="hb-ot-layout-lookups-substitute-closure.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<a name="id-1.3.5.4.8.27.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -1636,7 +1645,7 @@ provided lookups.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since: <a class="link" href="api-index-1-8-1.html#api-index-1.8.1">1.8.1</a></p>
+<p class="since">Since 1.8.1</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1650,8 +1659,8 @@ hb_ot_layout_lookup_would_substitute (<em class="parameter"><code><a class="link
 <p>Tests whether a specified lookup in the specified face would
 trigger a substitution on the given glyph sequence.</p>
 <div class="refsect3">
-<a name="hb-ot-layout-lookup-would-substitute.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<a name="id-1.3.5.4.8.28.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -1687,10 +1696,11 @@ trigger a substitution on the given glyph sequence.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="hb-ot-layout-lookup-would-substitute.returns"></a><h4>Returns</h4>
+<a name="id-1.3.5.4.8.28.6"></a><h4>Returns</h4>
 <p> true if a substitution would be triggered, false otherwise</p>
+<p></p>
 </div>
-<p class="since">Since: <a class="link" href="api-index-0-9-7.html#api-index-0.9.7">0.9.7</a></p>
+<p class="since">Since 0.9.7</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1705,8 +1715,8 @@ hb_ot_layout_script_get_language_tags (<em class="parameter"><code><a class="lin
 <p>Fetches a list of language tags in the given face's GSUB or GPOS table, underneath
 the specified script index. The list returned will begin at the offset provided.</p>
 <div class="refsect3">
-<a name="hb-ot-layout-script-get-language-tags.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<a name="id-1.3.5.4.8.29.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -1737,7 +1747,7 @@ the specified script index. The list returned will begin at the offset provided.
 <td class="parameter_name"><p>language_count</p></td>
 <td class="parameter_description"><p> Input = the maximum number of language tags to return;
 Output = the actual number of language tags returned (may be zero). </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>language_tags</p></td>
@@ -1761,8 +1771,8 @@ hb_ot_layout_script_select_language (<em class="parameter"><code><a class="link"
 <p>Fetches the index of a given language tag in the specified face's GSUB table
 or GPOS table, underneath the specified script index.</p>
 <div class="refsect3">
-<a name="hb-ot-layout-script-select-language.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<a name="id-1.3.5.4.8.30.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -1803,10 +1813,11 @@ or GPOS table, underneath the specified script index.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="hb-ot-layout-script-select-language.returns"></a><h4>Returns</h4>
+<a name="id-1.3.5.4.8.30.6"></a><h4>Returns</h4>
 <p> true if the language tag is found, false otherwise</p>
+<p></p>
 </div>
-<p class="since">Since: <a class="link" href="api-index-2-0-0.html#api-index-2.0.0">2.0.0</a></p>
+<p class="since">Since 2.0.0</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1821,8 +1832,8 @@ hb_ot_layout_table_find_feature_variations
 <p>Fetches a list of feature variations in the specified face's GSUB table
 or GPOS table, at the specified variation coordinates.</p>
 <div class="refsect3">
-<a name="hb-ot-layout-table-find-feature-variations.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<a name="id-1.3.5.4.8.31.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -1869,8 +1880,8 @@ hb_ot_layout_table_get_feature_tags (<em class="parameter"><code><a class="link"
                                      <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="type">hb_tag_t</span></a> *feature_tags</code></em>);</pre>
 <p>Fetches a list of all feature tags in the given face's GSUB or GPOS table.</p>
 <div class="refsect3">
-<a name="hb-ot-layout-table-get-feature-tags.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<a name="id-1.3.5.4.8.32.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -1896,7 +1907,7 @@ hb_ot_layout_table_get_feature_tags (<em class="parameter"><code><a class="link"
 <td class="parameter_name"><p>feature_count</p></td>
 <td class="parameter_description"><p> Input = the maximum number of feature tags to return;
 Output = the actual number of feature tags returned (may be zero). </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>feature_tags</p></td>
@@ -1919,8 +1930,8 @@ hb_ot_layout_table_get_script_tags (<em class="parameter"><code><a class="link" 
 <p>Fetches a list of all scripts enumerated in the specified face's GSUB table
 or GPOS table. The list returned will begin at the offset provided.</p>
 <div class="refsect3">
-<a name="hb-ot-layout-table-get-script-tags.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<a name="id-1.3.5.4.8.33.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -1946,7 +1957,7 @@ or GPOS table. The list returned will begin at the offset provided.</p>
 <td class="parameter_name"><p>script_count</p></td>
 <td class="parameter_description"><p> Input = the maximum number of script tags to return;
 Output = the actual number of script tags returned (may be zero). </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>script_tags</p></td>
@@ -1966,8 +1977,8 @@ hb_ot_layout_table_get_lookup_count (<em class="parameter"><code><a class="link"
 <p>Fetches the total number of lookups enumerated in the specified 
 face's GSUB table or GPOS table.</p>
 <div class="refsect3">
-<a name="hb-ot-layout-table-get-lookup-count.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<a name="id-1.3.5.4.8.34.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -1987,7 +1998,7 @@ face's GSUB table or GPOS table.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since: <a class="link" href="api-index-0-9-22.html#api-index-0.9.22">0.9.22</a></p>
+<p class="since">Since 0.9.22</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2000,8 +2011,8 @@ hb_ot_layout_table_select_script (<em class="parameter"><code><a class="link" hr
                                   <em class="parameter"><code>unsigned <span class="type">int</span> *script_index</code></em>,
                                   <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="type">hb_tag_t</span></a> *chosen_script</code></em>);</pre>
 <div class="refsect3">
-<a name="hb-ot-layout-table-select-script.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<a name="id-1.3.5.4.8.35.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -2041,7 +2052,7 @@ hb_ot_layout_table_select_script (<em class="parameter"><code><a class="link" hr
 </tbody>
 </table></div>
 </div>
-<p class="since">Since: <a class="link" href="api-index-2-0-0.html#api-index-2.0.0">2.0.0</a></p>
+<p class="since">Since 2.0.0</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2050,7 +2061,7 @@ hb_ot_layout_table_select_script (<em class="parameter"><code><a class="link" hr
 hb_ot_shape_plan_collect_lookups (<em class="parameter"><code><a class="link" href="harfbuzz-hb-shape-plan.html#hb-shape-plan-t"><span class="type">hb_shape_plan_t</span></a> *shape_plan</code></em>,
                                   <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="type">hb_tag_t</span></a> table_tag</code></em>,
                                   <em class="parameter"><code><a class="link" href="harfbuzz-hb-set.html#hb-set-t"><span class="type">hb_set_t</span></a> *lookup_indexes</code></em>);</pre>
-<p class="since">Since: <a class="link" href="api-index-0-9-7.html#api-index-0.9.7">0.9.7</a></p>
+<p class="since">Since 0.9.7</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2065,8 +2076,8 @@ hb_ot_layout_language_get_required_feature_index
 <p>Fetches the index of a requested feature in the given face's GSUB or GPOS table,
 underneath the specified script and language.</p>
 <div class="refsect3">
-<a name="hb-ot-layout-language-get-required-feature-index.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<a name="id-1.3.5.4.8.37.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -2102,8 +2113,9 @@ underneath the specified script and language.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="hb-ot-layout-language-get-required-feature-index.returns"></a><h4>Returns</h4>
+<a name="id-1.3.5.4.8.37.6"></a><h4>Returns</h4>
 <p> true if the feature is found, false otherwise</p>
+<p></p>
 </div>
 </div>
 </div>
@@ -2113,14 +2125,14 @@ underneath the specified script and language.</p>
 <a name="HB-OT-MAX-TAGS-PER-LANGUAGE:CAPS"></a><h3>HB_OT_MAX_TAGS_PER_LANGUAGE</h3>
 <pre class="programlisting">#define HB_OT_MAX_TAGS_PER_LANGUAGE 3u
 </pre>
-<p class="since">Since: <a class="link" href="api-index-2-0-0.html#api-index-2.0.0">2.0.0</a></p>
+<p class="since">Since 2.0.0</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="HB-OT-MAX-TAGS-PER-SCRIPT:CAPS"></a><h3>HB_OT_MAX_TAGS_PER_SCRIPT</h3>
 <pre class="programlisting">#define HB_OT_MAX_TAGS_PER_SCRIPT 3u
 </pre>
-<p class="since">Since: <a class="link" href="api-index-2-0-0.html#api-index-2.0.0">2.0.0</a></p>
+<p class="since">Since 2.0.0</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2193,8 +2205,8 @@ underneath the specified script and language.</p>
 <a name="hb-ot-layout-glyph-class-t"></a><h3>enum hb_ot_layout_glyph_class_t</h3>
 <p>The GDEF classes defined for glyphs.</p>
 <div class="refsect3">
-<a name="hb-ot-layout-glyph-class-t.members"></a><h4>Members</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<a name="id-1.3.5.4.9.15.4"></a><h4>Members</h4>
+<div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="300px" class="enum_members_name">
 <col class="enum_members_description">
@@ -2243,6 +2255,7 @@ underneath the specified script and language.</p>
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.25</div>
+<hr>
+          Generated by GTK-Doc V1.20</div>
 </body>
 </html>

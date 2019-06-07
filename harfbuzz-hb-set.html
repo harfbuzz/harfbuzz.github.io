@@ -2,20 +2,20 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>hb-set: HarfBuzz Manual</title>
-<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<title>HarfBuzz Manual: hb-set</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
 <link rel="home" href="index.html" title="HarfBuzz Manual">
 <link rel="up" href="ch11.html" title="Core API">
 <link rel="prev" href="harfbuzz-hb-map.html" title="hb-map">
 <link rel="next" href="harfbuzz-hb-shape-plan.html" title="hb-shape-plan">
-<meta name="generator" content="GTK-Doc V1.25 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.20 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
-<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="10"><tr valign="middle">
 <td width="100%" align="left" class="shortcuts">
-<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
-                  <a href="#harfbuzz-hb-set.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+<a href="#" class="shortcut">Top</a><span id="nav_description"> <span class="dim">|</span> 
+                  <a href="#harfbuzz-hb-set.description" class="shortcut">Description</a></span><span id="nav_hierarchy"> <span class="dim">|</span> 
                   <a href="#harfbuzz-hb-set.object-hierarchy" class="shortcut">Object Hierarchy</a></span>
 </td>
 <td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
@@ -34,12 +34,16 @@
 </tr></table></div>
 <div class="refsect1">
 <a name="harfbuzz-hb-set.functions"></a><h2>Functions</h2>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="functions_return">
 <col class="functions_name">
 </colgroup>
 <tbody>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="harfbuzz-hb-set.html#HB-SET-VALUE-INVALID:CAPS" title="HB_SET_VALUE_INVALID">HB_SET_VALUE_INVALID</a></td>
+</tr>
 <tr>
 <td class="function_type">
 <span class="returnvalue">void</span>
@@ -268,21 +272,15 @@
 </div>
 <a name="hb-set-t"></a><div class="refsect1">
 <a name="harfbuzz-hb-set.other"></a><h2>Types and Values</h2>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="name">
 <col class="description">
 </colgroup>
-<tbody>
-<tr>
-<td class="define_keyword">#define</td>
-<td class="function_name"><a class="link" href="harfbuzz-hb-set.html#HB-SET-VALUE-INVALID:CAPS" title="HB_SET_VALUE_INVALID">HB_SET_VALUE_INVALID</a></td>
-</tr>
-<tr>
+<tbody><tr>
 <td class="typedef_keyword">typedef</td>
 <td class="function_name"><a class="link" href="harfbuzz-hb-set.html#hb-set-t">hb_set_t</a></td>
-</tr>
-</tbody>
+</tr></tbody>
 </table></div>
 </div>
 <div class="refsect1">
@@ -305,13 +303,19 @@ or other integer values.</p>
 <div class="refsect1">
 <a name="harfbuzz-hb-set.functions_details"></a><h2>Functions</h2>
 <div class="refsect2">
+<a name="HB-SET-VALUE-INVALID:CAPS"></a><h3>HB_SET_VALUE_INVALID</h3>
+<pre class="programlisting">#define HB_SET_VALUE_INVALID ((hb_codepoint_t) -1)
+</pre>
+</div>
+<hr>
+<div class="refsect2">
 <a name="hb-set-add"></a><h3>hb_set_add ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 hb_set_add (<em class="parameter"><code><a class="link" href="harfbuzz-hb-set.html#hb-set-t"><span class="type">hb_set_t</span></a> *set</code></em>,
             <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> codepoint</code></em>);</pre>
 <div class="refsect3">
-<a name="hb-set-add.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<a name="id-1.3.4.9.9.3.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -324,7 +328,7 @@ hb_set_add (<em class="parameter"><code><a class="link" href="harfbuzz-hb-set.ht
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since: <a class="link" href="api-index-0-9-2.html#api-index-0.9.2">0.9.2</a></p>
+<p class="since">Since 0.9.2</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -334,8 +338,8 @@ hb_set_add_range (<em class="parameter"><code><a class="link" href="harfbuzz-hb-
                   <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> first</code></em>,
                   <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> last</code></em>);</pre>
 <div class="refsect3">
-<a name="hb-set-add-range.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<a name="id-1.3.4.9.9.4.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -348,7 +352,7 @@ hb_set_add_range (<em class="parameter"><code><a class="link" href="harfbuzz-hb-
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since: <a class="link" href="api-index-0-9-7.html#api-index-0.9.7">0.9.7</a></p>
+<p class="since">Since 0.9.7</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -356,8 +360,8 @@ hb_set_add_range (<em class="parameter"><code><a class="link" href="harfbuzz-hb-
 <pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
 hb_set_allocation_successful (<em class="parameter"><code>const <a class="link" href="harfbuzz-hb-set.html#hb-set-t"><span class="type">hb_set_t</span></a> *set</code></em>);</pre>
 <div class="refsect3">
-<a name="hb-set-allocation-successful.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<a name="id-1.3.4.9.9.5.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -370,7 +374,11 @@ hb_set_allocation_successful (<em class="parameter"><code>const <a class="link" 
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since: <a class="link" href="api-index-0-9-2.html#api-index-0.9.2">0.9.2</a></p>
+<div class="refsect3">
+<a name="id-1.3.4.9.9.5.5"></a><h4>Returns</h4>
+<p></p>
+</div>
+<p class="since">Since 0.9.2</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -378,8 +386,8 @@ hb_set_allocation_successful (<em class="parameter"><code>const <a class="link" 
 <pre class="programlisting"><span class="returnvalue">void</span>
 hb_set_clear (<em class="parameter"><code><a class="link" href="harfbuzz-hb-set.html#hb-set-t"><span class="type">hb_set_t</span></a> *set</code></em>);</pre>
 <div class="refsect3">
-<a name="hb-set-clear.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<a name="id-1.3.4.9.9.6.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -392,20 +400,13 @@ hb_set_clear (<em class="parameter"><code><a class="link" href="harfbuzz-hb-set.
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since: <a class="link" href="api-index-0-9-2.html#api-index-0.9.2">0.9.2</a></p>
+<p class="since">Since 0.9.2</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="hb-set-create"></a><h3>hb_set_create ()</h3>
 <pre class="programlisting"><a class="link" href="harfbuzz-hb-set.html#hb-set-t"><span class="returnvalue">hb_set_t</span></a> *
 hb_set_create (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
-<p><span class="annotation">[Xconstructor]</span></p>
-<div class="refsect3">
-<a name="hb-set-create.returns"></a><h4>Returns</h4>
-<p>. </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
-</div>
-<p class="since">Since: <a class="link" href="api-index-0-9-2.html#api-index-0.9.2">0.9.2</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -414,8 +415,8 @@ hb_set_create (<em class="parameter"><code><span class="type">void</span></code>
 hb_set_del (<em class="parameter"><code><a class="link" href="harfbuzz-hb-set.html#hb-set-t"><span class="type">hb_set_t</span></a> *set</code></em>,
             <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> codepoint</code></em>);</pre>
 <div class="refsect3">
-<a name="hb-set-del.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<a name="id-1.3.4.9.9.8.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -428,7 +429,7 @@ hb_set_del (<em class="parameter"><code><a class="link" href="harfbuzz-hb-set.ht
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since: <a class="link" href="api-index-0-9-2.html#api-index-0.9.2">0.9.2</a></p>
+<p class="since">Since 0.9.2</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -438,8 +439,8 @@ hb_set_del_range (<em class="parameter"><code><a class="link" href="harfbuzz-hb-
                   <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> first</code></em>,
                   <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> last</code></em>);</pre>
 <div class="refsect3">
-<a name="hb-set-del-range.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<a name="id-1.3.4.9.9.9.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -452,17 +453,16 @@ hb_set_del_range (<em class="parameter"><code><a class="link" href="harfbuzz-hb-
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since: <a class="link" href="api-index-0-9-7.html#api-index-0.9.7">0.9.7</a></p>
+<p class="since">Since 0.9.7</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="hb-set-destroy"></a><h3>hb_set_destroy ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 hb_set_destroy (<em class="parameter"><code><a class="link" href="harfbuzz-hb-set.html#hb-set-t"><span class="type">hb_set_t</span></a> *set</code></em>);</pre>
-<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="hb-set-destroy.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<a name="id-1.3.4.9.9.10.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -475,7 +475,7 @@ hb_set_destroy (<em class="parameter"><code><a class="link" href="harfbuzz-hb-se
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since: <a class="link" href="api-index-0-9-2.html#api-index-0.9.2">0.9.2</a></p>
+<p class="since">Since 0.9.2</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -483,11 +483,11 @@ hb_set_destroy (<em class="parameter"><code><a class="link" href="harfbuzz-hb-se
 <pre class="programlisting"><a class="link" href="harfbuzz-hb-set.html#hb-set-t"><span class="returnvalue">hb_set_t</span></a> *
 hb_set_get_empty (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
 <div class="refsect3">
-<a name="hb-set-get-empty.returns"></a><h4>Returns</h4>
+<a name="id-1.3.4.9.9.11.4"></a><h4>Returns</h4>
 <p>. </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
-<p class="since">Since: <a class="link" href="api-index-0-9-2.html#api-index-0.9.2">0.9.2</a></p>
+<p class="since">Since 0.9.2</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -496,8 +496,8 @@ hb_set_get_empty (<em class="parameter"><code><span class="type">void</span></co
 hb_set_get_max (<em class="parameter"><code>const <a class="link" href="harfbuzz-hb-set.html#hb-set-t"><span class="type">hb_set_t</span></a> *set</code></em>);</pre>
 <p>Finds the maximum number in the set.</p>
 <div class="refsect3">
-<a name="hb-set-get-max.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<a name="id-1.3.4.9.9.12.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -511,10 +511,11 @@ hb_set_get_max (<em class="parameter"><code>const <a class="link" href="harfbuzz
 </table></div>
 </div>
 <div class="refsect3">
-<a name="hb-set-get-max.returns"></a><h4>Returns</h4>
+<a name="id-1.3.4.9.9.12.6"></a><h4>Returns</h4>
 <p> minimum of the set, or <a class="link" href="harfbuzz-hb-set.html#HB-SET-VALUE-INVALID:CAPS" title="HB_SET_VALUE_INVALID"><code class="literal">HB_SET_VALUE_INVALID</code></a> if set is empty.</p>
+<p></p>
 </div>
-<p class="since">Since: <a class="link" href="api-index-0-9-7.html#api-index-0.9.7">0.9.7</a></p>
+<p class="since">Since 0.9.7</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -523,8 +524,8 @@ hb_set_get_max (<em class="parameter"><code>const <a class="link" href="harfbuzz
 hb_set_get_min (<em class="parameter"><code>const <a class="link" href="harfbuzz-hb-set.html#hb-set-t"><span class="type">hb_set_t</span></a> *set</code></em>);</pre>
 <p>Finds the minimum number in the set.</p>
 <div class="refsect3">
-<a name="hb-set-get-min.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<a name="id-1.3.4.9.9.13.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -538,10 +539,11 @@ hb_set_get_min (<em class="parameter"><code>const <a class="link" href="harfbuzz
 </table></div>
 </div>
 <div class="refsect3">
-<a name="hb-set-get-min.returns"></a><h4>Returns</h4>
+<a name="id-1.3.4.9.9.13.6"></a><h4>Returns</h4>
 <p> minimum of the set, or <a class="link" href="harfbuzz-hb-set.html#HB-SET-VALUE-INVALID:CAPS" title="HB_SET_VALUE_INVALID"><code class="literal">HB_SET_VALUE_INVALID</code></a> if set is empty.</p>
+<p></p>
 </div>
-<p class="since">Since: <a class="link" href="api-index-0-9-7.html#api-index-0.9.7">0.9.7</a></p>
+<p class="since">Since 0.9.7</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -550,8 +552,8 @@ hb_set_get_min (<em class="parameter"><code>const <a class="link" href="harfbuzz
 hb_set_get_population (<em class="parameter"><code>const <a class="link" href="harfbuzz-hb-set.html#hb-set-t"><span class="type">hb_set_t</span></a> *set</code></em>);</pre>
 <p>Returns the number of numbers in the set.</p>
 <div class="refsect3">
-<a name="hb-set-get-population.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<a name="id-1.3.4.9.9.14.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -565,10 +567,11 @@ hb_set_get_population (<em class="parameter"><code>const <a class="link" href="h
 </table></div>
 </div>
 <div class="refsect3">
-<a name="hb-set-get-population.returns"></a><h4>Returns</h4>
+<a name="id-1.3.4.9.9.14.6"></a><h4>Returns</h4>
 <p> set population.</p>
+<p></p>
 </div>
-<p class="since">Since: <a class="link" href="api-index-0-9-7.html#api-index-0.9.7">0.9.7</a></p>
+<p class="since">Since 0.9.7</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -576,10 +579,9 @@ hb_set_get_population (<em class="parameter"><code>const <a class="link" href="h
 <pre class="programlisting"><span class="returnvalue">void</span> *
 hb_set_get_user_data (<em class="parameter"><code><a class="link" href="harfbuzz-hb-set.html#hb-set-t"><span class="type">hb_set_t</span></a> *set</code></em>,
                       <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-user-data-key-t"><span class="type">hb_user_data_key_t</span></a> *key</code></em>);</pre>
-<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="hb-set-get-user-data.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<a name="id-1.3.4.9.9.15.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -593,11 +595,11 @@ hb_set_get_user_data (<em class="parameter"><code><a class="link" href="harfbuzz
 </table></div>
 </div>
 <div class="refsect3">
-<a name="hb-set-get-user-data.returns"></a><h4>Returns</h4>
+<a name="id-1.3.4.9.9.15.5"></a><h4>Returns</h4>
 <p>. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since: <a class="link" href="api-index-0-9-2.html#api-index-0.9.2">0.9.2</a></p>
+<p class="since">Since 0.9.2</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -606,8 +608,8 @@ hb_set_get_user_data (<em class="parameter"><code><a class="link" href="harfbuzz
 hb_set_has (<em class="parameter"><code>const <a class="link" href="harfbuzz-hb-set.html#hb-set-t"><span class="type">hb_set_t</span></a> *set</code></em>,
             <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> codepoint</code></em>);</pre>
 <div class="refsect3">
-<a name="hb-set-has.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<a name="id-1.3.4.9.9.16.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -620,7 +622,11 @@ hb_set_has (<em class="parameter"><code>const <a class="link" href="harfbuzz-hb-
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since: <a class="link" href="api-index-0-9-2.html#api-index-0.9.2">0.9.2</a></p>
+<div class="refsect3">
+<a name="id-1.3.4.9.9.16.5"></a><h4>Returns</h4>
+<p></p>
+</div>
+<p class="since">Since 0.9.2</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -629,8 +635,8 @@ hb_set_has (<em class="parameter"><code>const <a class="link" href="harfbuzz-hb-
 hb_set_intersect (<em class="parameter"><code><a class="link" href="harfbuzz-hb-set.html#hb-set-t"><span class="type">hb_set_t</span></a> *set</code></em>,
                   <em class="parameter"><code>const <a class="link" href="harfbuzz-hb-set.html#hb-set-t"><span class="type">hb_set_t</span></a> *other</code></em>);</pre>
 <div class="refsect3">
-<a name="hb-set-intersect.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<a name="id-1.3.4.9.9.17.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -643,7 +649,7 @@ hb_set_intersect (<em class="parameter"><code><a class="link" href="harfbuzz-hb-
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since: <a class="link" href="api-index-0-9-2.html#api-index-0.9.2">0.9.2</a></p>
+<p class="since">Since 0.9.2</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -651,8 +657,8 @@ hb_set_intersect (<em class="parameter"><code><a class="link" href="harfbuzz-hb-
 <pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
 hb_set_is_empty (<em class="parameter"><code>const <a class="link" href="harfbuzz-hb-set.html#hb-set-t"><span class="type">hb_set_t</span></a> *set</code></em>);</pre>
 <div class="refsect3">
-<a name="hb-set-is-empty.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<a name="id-1.3.4.9.9.18.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -665,7 +671,11 @@ hb_set_is_empty (<em class="parameter"><code>const <a class="link" href="harfbuz
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since: <a class="link" href="api-index-0-9-7.html#api-index-0.9.7">0.9.7</a></p>
+<div class="refsect3">
+<a name="id-1.3.4.9.9.18.5"></a><h4>Returns</h4>
+<p></p>
+</div>
+<p class="since">Since 0.9.7</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -674,8 +684,8 @@ hb_set_is_empty (<em class="parameter"><code>const <a class="link" href="harfbuz
 hb_set_is_equal (<em class="parameter"><code>const <a class="link" href="harfbuzz-hb-set.html#hb-set-t"><span class="type">hb_set_t</span></a> *set</code></em>,
                  <em class="parameter"><code>const <a class="link" href="harfbuzz-hb-set.html#hb-set-t"><span class="type">hb_set_t</span></a> *other</code></em>);</pre>
 <div class="refsect3">
-<a name="hb-set-is-equal.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<a name="id-1.3.4.9.9.19.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -696,10 +706,11 @@ hb_set_is_equal (<em class="parameter"><code>const <a class="link" href="harfbuz
 </table></div>
 </div>
 <div class="refsect3">
-<a name="hb-set-is-equal.returns"></a><h4>Returns</h4>
+<a name="id-1.3.4.9.9.19.5"></a><h4>Returns</h4>
 <p> <code class="literal">TRUE</code> if the two sets are equal, <code class="literal">FALSE</code> otherwise.</p>
+<p></p>
 </div>
-<p class="since">Since: <a class="link" href="api-index-0-9-7.html#api-index-0.9.7">0.9.7</a></p>
+<p class="since">Since 0.9.7</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -708,8 +719,8 @@ hb_set_is_equal (<em class="parameter"><code>const <a class="link" href="harfbuz
 hb_set_is_subset (<em class="parameter"><code>const <a class="link" href="harfbuzz-hb-set.html#hb-set-t"><span class="type">hb_set_t</span></a> *set</code></em>,
                   <em class="parameter"><code>const <a class="link" href="harfbuzz-hb-set.html#hb-set-t"><span class="type">hb_set_t</span></a> *larger_set</code></em>);</pre>
 <div class="refsect3">
-<a name="hb-set-is-subset.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<a name="id-1.3.4.9.9.20.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -730,12 +741,13 @@ hb_set_is_subset (<em class="parameter"><code>const <a class="link" href="harfbu
 </table></div>
 </div>
 <div class="refsect3">
-<a name="hb-set-is-subset.returns"></a><h4>Returns</h4>
+<a name="id-1.3.4.9.9.20.5"></a><h4>Returns</h4>
 <p> <code class="literal">TRUE</code> if the <em class="parameter"><code>set</code></em>
 is a subset of (or equal to) <em class="parameter"><code>larger_set</code></em>
 , <code class="literal">FALSE</code> otherwise.</p>
+<p></p>
 </div>
-<p class="since">Since: <a class="link" href="api-index-1-8-1.html#api-index-1.8.1">1.8.1</a></p>
+<p class="since">Since 1.8.1</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -749,8 +761,8 @@ hb_set_next (<em class="parameter"><code>const <a class="link" href="harfbuzz-hb
 <p>Set <em class="parameter"><code>codepoint</code></em>
  to <a class="link" href="harfbuzz-hb-set.html#HB-SET-VALUE-INVALID:CAPS" title="HB_SET_VALUE_INVALID"><code class="literal">HB_SET_VALUE_INVALID</code></a> to get started.</p>
 <div class="refsect3">
-<a name="hb-set-next.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<a name="id-1.3.4.9.9.21.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -771,10 +783,11 @@ hb_set_next (<em class="parameter"><code>const <a class="link" href="harfbuzz-hb
 </table></div>
 </div>
 <div class="refsect3">
-<a name="hb-set-next.returns"></a><h4>Returns</h4>
+<a name="id-1.3.4.9.9.21.7"></a><h4>Returns</h4>
 <p> whether there was a next value.</p>
+<p></p>
 </div>
-<p class="since">Since: <a class="link" href="api-index-0-9-2.html#api-index-0.9.2">0.9.2</a></p>
+<p class="since">Since 0.9.2</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -790,8 +803,8 @@ are greater than current value of <em class="parameter"><code>last</code></em>
 <p>Set <em class="parameter"><code>last</code></em>
  to <a class="link" href="harfbuzz-hb-set.html#HB-SET-VALUE-INVALID:CAPS" title="HB_SET_VALUE_INVALID"><code class="literal">HB_SET_VALUE_INVALID</code></a> to get started.</p>
 <div class="refsect3">
-<a name="hb-set-next-range.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<a name="id-1.3.4.9.9.22.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -817,10 +830,11 @@ are greater than current value of <em class="parameter"><code>last</code></em>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="hb-set-next-range.returns"></a><h4>Returns</h4>
+<a name="id-1.3.4.9.9.22.7"></a><h4>Returns</h4>
 <p> whether there was a next range.</p>
+<p></p>
 </div>
-<p class="since">Since: <a class="link" href="api-index-0-9-7.html#api-index-0.9.7">0.9.7</a></p>
+<p class="since">Since 0.9.7</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -834,8 +848,8 @@ hb_set_previous (<em class="parameter"><code>const <a class="link" href="harfbuz
 <p>Set <em class="parameter"><code>codepoint</code></em>
  to <a class="link" href="harfbuzz-hb-set.html#HB-SET-VALUE-INVALID:CAPS" title="HB_SET_VALUE_INVALID"><code class="literal">HB_SET_VALUE_INVALID</code></a> to get started.</p>
 <div class="refsect3">
-<a name="hb-set-previous.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<a name="id-1.3.4.9.9.23.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -856,10 +870,11 @@ hb_set_previous (<em class="parameter"><code>const <a class="link" href="harfbuz
 </table></div>
 </div>
 <div class="refsect3">
-<a name="hb-set-previous.returns"></a><h4>Returns</h4>
+<a name="id-1.3.4.9.9.23.7"></a><h4>Returns</h4>
 <p> whether there was a previous value.</p>
+<p></p>
 </div>
-<p class="since">Since: <a class="link" href="api-index-1-8-0.html#api-index-1.8.0">1.8.0</a></p>
+<p class="since">Since 1.8.0</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -875,8 +890,8 @@ are greater than current value of <em class="parameter"><code>last</code></em>
 <p>Set <em class="parameter"><code>first</code></em>
  to <a class="link" href="harfbuzz-hb-set.html#HB-SET-VALUE-INVALID:CAPS" title="HB_SET_VALUE_INVALID"><code class="literal">HB_SET_VALUE_INVALID</code></a> to get started.</p>
 <div class="refsect3">
-<a name="hb-set-previous-range.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<a name="id-1.3.4.9.9.24.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -902,20 +917,20 @@ are greater than current value of <em class="parameter"><code>last</code></em>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="hb-set-previous-range.returns"></a><h4>Returns</h4>
+<a name="id-1.3.4.9.9.24.7"></a><h4>Returns</h4>
 <p> whether there was a previous range.</p>
+<p></p>
 </div>
-<p class="since">Since: <a class="link" href="api-index-1-8-0.html#api-index-1.8.0">1.8.0</a></p>
+<p class="since">Since 1.8.0</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="hb-set-reference"></a><h3>hb_set_reference ()</h3>
 <pre class="programlisting"><a class="link" href="harfbuzz-hb-set.html#hb-set-t"><span class="returnvalue">hb_set_t</span></a> *
 hb_set_reference (<em class="parameter"><code><a class="link" href="harfbuzz-hb-set.html#hb-set-t"><span class="type">hb_set_t</span></a> *set</code></em>);</pre>
-<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="hb-set-reference.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<a name="id-1.3.4.9.9.25.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -929,11 +944,11 @@ hb_set_reference (<em class="parameter"><code><a class="link" href="harfbuzz-hb-
 </table></div>
 </div>
 <div class="refsect3">
-<a name="hb-set-reference.returns"></a><h4>Returns</h4>
+<a name="id-1.3.4.9.9.25.5"></a><h4>Returns</h4>
 <p>. </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
-<p class="since">Since: <a class="link" href="api-index-0-9-2.html#api-index-0.9.2">0.9.2</a></p>
+<p class="since">Since 0.9.2</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -942,8 +957,8 @@ hb_set_reference (<em class="parameter"><code><a class="link" href="harfbuzz-hb-
 hb_set_set (<em class="parameter"><code><a class="link" href="harfbuzz-hb-set.html#hb-set-t"><span class="type">hb_set_t</span></a> *set</code></em>,
             <em class="parameter"><code>const <a class="link" href="harfbuzz-hb-set.html#hb-set-t"><span class="type">hb_set_t</span></a> *other</code></em>);</pre>
 <div class="refsect3">
-<a name="hb-set-set.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<a name="id-1.3.4.9.9.26.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -956,7 +971,7 @@ hb_set_set (<em class="parameter"><code><a class="link" href="harfbuzz-hb-set.ht
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since: <a class="link" href="api-index-0-9-2.html#api-index-0.9.2">0.9.2</a></p>
+<p class="since">Since 0.9.2</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -967,10 +982,9 @@ hb_set_set_user_data (<em class="parameter"><code><a class="link" href="harfbuzz
                       <em class="parameter"><code><span class="type">void</span> *data</code></em>,
                       <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-destroy-func-t" title="hb_destroy_func_t ()"><span class="type">hb_destroy_func_t</span></a> destroy</code></em>,
                       <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="type">hb_bool_t</span></a> replace</code></em>);</pre>
-<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="hb-set-set-user-data.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<a name="id-1.3.4.9.9.27.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -983,7 +997,11 @@ hb_set_set_user_data (<em class="parameter"><code><a class="link" href="harfbuzz
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since: <a class="link" href="api-index-0-9-2.html#api-index-0.9.2">0.9.2</a></p>
+<div class="refsect3">
+<a name="id-1.3.4.9.9.27.5"></a><h4>Returns</h4>
+<p></p>
+</div>
+<p class="since">Since 0.9.2</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -992,8 +1010,8 @@ hb_set_set_user_data (<em class="parameter"><code><a class="link" href="harfbuzz
 hb_set_subtract (<em class="parameter"><code><a class="link" href="harfbuzz-hb-set.html#hb-set-t"><span class="type">hb_set_t</span></a> *set</code></em>,
                  <em class="parameter"><code>const <a class="link" href="harfbuzz-hb-set.html#hb-set-t"><span class="type">hb_set_t</span></a> *other</code></em>);</pre>
 <div class="refsect3">
-<a name="hb-set-subtract.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<a name="id-1.3.4.9.9.28.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -1006,7 +1024,7 @@ hb_set_subtract (<em class="parameter"><code><a class="link" href="harfbuzz-hb-s
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since: <a class="link" href="api-index-0-9-2.html#api-index-0.9.2">0.9.2</a></p>
+<p class="since">Since 0.9.2</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1015,8 +1033,8 @@ hb_set_subtract (<em class="parameter"><code><a class="link" href="harfbuzz-hb-s
 hb_set_symmetric_difference (<em class="parameter"><code><a class="link" href="harfbuzz-hb-set.html#hb-set-t"><span class="type">hb_set_t</span></a> *set</code></em>,
                              <em class="parameter"><code>const <a class="link" href="harfbuzz-hb-set.html#hb-set-t"><span class="type">hb_set_t</span></a> *other</code></em>);</pre>
 <div class="refsect3">
-<a name="hb-set-symmetric-difference.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<a name="id-1.3.4.9.9.29.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -1029,7 +1047,7 @@ hb_set_symmetric_difference (<em class="parameter"><code><a class="link" href="h
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since: <a class="link" href="api-index-0-9-2.html#api-index-0.9.2">0.9.2</a></p>
+<p class="since">Since 0.9.2</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1038,8 +1056,8 @@ hb_set_symmetric_difference (<em class="parameter"><code><a class="link" href="h
 hb_set_union (<em class="parameter"><code><a class="link" href="harfbuzz-hb-set.html#hb-set-t"><span class="type">hb_set_t</span></a> *set</code></em>,
               <em class="parameter"><code>const <a class="link" href="harfbuzz-hb-set.html#hb-set-t"><span class="type">hb_set_t</span></a> *other</code></em>);</pre>
 <div class="refsect3">
-<a name="hb-set-union.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<a name="id-1.3.4.9.9.30.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -1052,17 +1070,11 @@ hb_set_union (<em class="parameter"><code><a class="link" href="harfbuzz-hb-set.
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since: <a class="link" href="api-index-0-9-2.html#api-index-0.9.2">0.9.2</a></p>
+<p class="since">Since 0.9.2</p>
 </div>
 </div>
 <div class="refsect1">
 <a name="harfbuzz-hb-set.other_details"></a><h2>Types and Values</h2>
-<div class="refsect2">
-<a name="HB-SET-VALUE-INVALID:CAPS"></a><h3>HB_SET_VALUE_INVALID</h3>
-<pre class="programlisting">#define HB_SET_VALUE_INVALID ((hb_codepoint_t) -1)
-</pre>
-</div>
-<hr>
 <div class="refsect2">
 <a name="hb-set-t"></a><h3>hb_set_t</h3>
 <pre class="programlisting">typedef struct hb_set_t hb_set_t;
@@ -1071,6 +1083,7 @@ hb_set_union (<em class="parameter"><code><a class="link" href="harfbuzz-hb-set.
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.25</div>
+<hr>
+          Generated by GTK-Doc V1.20</div>
 </body>
 </html>
