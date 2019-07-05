@@ -843,7 +843,7 @@ are greater than current value of <em class="parameter"><code>last</code></em>
 hb_set_previous (<em class="parameter"><code>const <a class="link" href="harfbuzz-hb-set.html#hb-set-t"><span class="type">hb_set_t</span></a> *set</code></em>,
                  <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> *codepoint</code></em>);</pre>
 <p>Gets the previous number in <em class="parameter"><code>set</code></em>
- that is slower than current value of <em class="parameter"><code>codepoint</code></em>
+ that is lower than current value of <em class="parameter"><code>codepoint</code></em>
 .</p>
 <p>Set <em class="parameter"><code>codepoint</code></em>
  to <a class="link" href="harfbuzz-hb-set.html#HB-SET-VALUE-INVALID:CAPS" title="HB_SET_VALUE_INVALID"><code class="literal">HB_SET_VALUE_INVALID</code></a> to get started.</p>
@@ -885,7 +885,7 @@ hb_set_previous_range (<em class="parameter"><code>const <a class="link" href="h
                        <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> *last</code></em>);</pre>
 <p>Gets the previous consecutive range of numbers in <em class="parameter"><code>set</code></em>
  that
-are greater than current value of <em class="parameter"><code>last</code></em>
+are less than current value of <em class="parameter"><code>first</code></em>
 .</p>
 <p>Set <em class="parameter"><code>first</code></em>
  to <a class="link" href="harfbuzz-hb-set.html#HB-SET-VALUE-INVALID:CAPS" title="HB_SET_VALUE_INVALID"><code class="literal">HB_SET_VALUE_INVALID</code></a> to get started.</p>
