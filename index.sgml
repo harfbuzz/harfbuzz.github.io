@@ -171,6 +171,7 @@
 <ANCHOR id="HB-BUFFER-FLAGS-DEFAULT:CAPS" href="harfbuzz/harfbuzz-hb-deprecated.html#HB-BUFFER-FLAGS-DEFAULT:CAPS">
 <ANCHOR id="HB-BUFFER-SERIALIZE-FLAGS-DEFAULT:CAPS" href="harfbuzz/harfbuzz-hb-deprecated.html#HB-BUFFER-SERIALIZE-FLAGS-DEFAULT:CAPS">
 <ANCHOR id="HB-SCRIPT-CANADIAN-ABORIGINAL:CAPS" href="harfbuzz/harfbuzz-hb-deprecated.html#HB-SCRIPT-CANADIAN-ABORIGINAL:CAPS">
+<ANCHOR id="HB-MATH-GLYPH-PART-FLAG-EXTENDER:CAPS" href="harfbuzz/harfbuzz-hb-deprecated.html#HB-MATH-GLYPH-PART-FLAG-EXTENDER:CAPS">
 <ANCHOR id="HB-OT-VAR-NO-AXIS-INDEX:CAPS" href="harfbuzz/harfbuzz-hb-deprecated.html#HB-OT-VAR-NO-AXIS-INDEX:CAPS">
 <ANCHOR id="hb-font-get-glyph-v-kerning-func-t" href="harfbuzz/harfbuzz-hb-deprecated.html#hb-font-get-glyph-v-kerning-func-t">
 <ANCHOR id="harfbuzz-hb-face" href="harfbuzz/harfbuzz-hb-face.html">

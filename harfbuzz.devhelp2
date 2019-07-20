@@ -292,6 +292,7 @@
     <keyword type="macro" name="HB_BUFFER_FLAGS_DEFAULT" link="harfbuzz-hb-deprecated.html#HB-BUFFER-FLAGS-DEFAULT:CAPS" deprecated=""/>
     <keyword type="macro" name="HB_BUFFER_SERIALIZE_FLAGS_DEFAULT" link="harfbuzz-hb-deprecated.html#HB-BUFFER-SERIALIZE-FLAGS-DEFAULT:CAPS" deprecated=""/>
     <keyword type="macro" name="HB_SCRIPT_CANADIAN_ABORIGINAL" link="harfbuzz-hb-deprecated.html#HB-SCRIPT-CANADIAN-ABORIGINAL:CAPS" deprecated=""/>
+    <keyword type="macro" name="HB_MATH_GLYPH_PART_FLAG_EXTENDER" link="harfbuzz-hb-deprecated.html#HB-MATH-GLYPH-PART-FLAG-EXTENDER:CAPS" deprecated=""/>
     <keyword type="macro" name="HB_OT_VAR_NO_AXIS_INDEX" link="harfbuzz-hb-deprecated.html#HB-OT-VAR-NO-AXIS-INDEX:CAPS" deprecated="2.2.0" since="1.4.2"/>
     <keyword type="typedef" name="hb_font_get_glyph_v_kerning_func_t" link="harfbuzz-hb-deprecated.html#hb-font-get-glyph-v-kerning-func-t" deprecated=""/>
     <keyword type="function" name="hb_face_count ()" link="harfbuzz-hb-face.html#hb-face-count" since="1.7.7"/>
