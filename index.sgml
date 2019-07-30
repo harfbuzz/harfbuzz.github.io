@@ -523,6 +523,7 @@
 <ANCHOR id="hb-ot-layout-feature-get-name-ids" href="harfbuzz/harfbuzz-hb-ot-layout.html#hb-ot-layout-feature-get-name-ids">
 <ANCHOR id="hb-ot-layout-feature-with-variations-get-lookups" href="harfbuzz/harfbuzz-hb-ot-layout.html#hb-ot-layout-feature-with-variations-get-lookups">
 <ANCHOR id="hb-ot-layout-get-attach-points" href="harfbuzz/harfbuzz-hb-ot-layout.html#hb-ot-layout-get-attach-points">
+<ANCHOR id="hb-ot-layout-get-baseline" href="harfbuzz/harfbuzz-hb-ot-layout.html#hb-ot-layout-get-baseline">
 <ANCHOR id="hb-ot-layout-get-glyph-class" href="harfbuzz/harfbuzz-hb-ot-layout.html#hb-ot-layout-get-glyph-class">
 <ANCHOR id="hb-ot-layout-get-glyphs-in-class" href="harfbuzz/harfbuzz-hb-ot-layout.html#hb-ot-layout-get-glyphs-in-class">
 <ANCHOR id="hb-ot-layout-get-ligature-carets" href="harfbuzz/harfbuzz-hb-ot-layout.html#hb-ot-layout-get-ligature-carets">
@@ -562,6 +563,7 @@
 <ANCHOR id="HB-OT-TAG-GPOS:CAPS" href="harfbuzz/harfbuzz-hb-ot-layout.html#HB-OT-TAG-GPOS:CAPS">
 <ANCHOR id="HB-OT-TAG-GSUB:CAPS" href="harfbuzz/harfbuzz-hb-ot-layout.html#HB-OT-TAG-GSUB:CAPS">
 <ANCHOR id="HB-OT-TAG-JSTF:CAPS" href="harfbuzz/harfbuzz-hb-ot-layout.html#HB-OT-TAG-JSTF:CAPS">
+<ANCHOR id="hb-ot-layout-baseline-tag-t" href="harfbuzz/harfbuzz-hb-ot-layout.html#hb-ot-layout-baseline-tag-t">
 <ANCHOR id="hb-ot-layout-glyph-class-t" href="harfbuzz/harfbuzz-hb-ot-layout.html#hb-ot-layout-glyph-class-t">
 <ANCHOR id="harfbuzz-hb-ot-math" href="harfbuzz/harfbuzz-hb-ot-math.html">
 <ANCHOR id="harfbuzz-hb-ot-math.functions" href="harfbuzz/harfbuzz-hb-ot-math.html#harfbuzz-hb-ot-math.functions">
