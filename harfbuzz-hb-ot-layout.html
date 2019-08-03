@@ -2275,7 +2275,7 @@ underneath the specified script and language.</p>
 <hr>
 <div class="refsect2">
 <a name="hb-ot-layout-baseline-tag-t"></a><h3>enum hb_ot_layout_baseline_tag_t</h3>
-<p>https://docs.microsoft.com/en-us/typography/opentype/spec/baselinetags</p>
+<p>Baseline tags from https://docs.microsoft.com/en-us/typography/opentype/spec/baselinetags</p>
 <div class="refsect3">
 <a name="id-1.3.5.4.9.15.4"></a><h4>Members</h4>
 <div class="informaltable"><table width="100%" border="0">
@@ -2287,38 +2287,62 @@ underneath the specified script and language.</p>
 <tbody>
 <tr>
 <td class="enum_member_name"><p><a name="HB-OT-LAYOUT-BASELINE-TAG-ROMAN:CAPS"></a>HB_OT_LAYOUT_BASELINE_TAG_ROMAN</p></td>
-<td> </td>
-<td> </td>
+<td class="enum_member_description">
+<p>The baseline used by alphabetic scripts such as Latin, Cyrillic and Greek.
+In vertical writing mode, the alphabetic baseline for characters rotated 90 degrees clockwise.
+(This would not apply to alphabetic characters that remain upright in vertical writing mode, since these
+characters are not rotated.)</p>
+</td>
+<td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="HB-OT-LAYOUT-BASELINE-TAG-HANGING:CAPS"></a>HB_OT_LAYOUT_BASELINE_TAG_HANGING</p></td>
-<td> </td>
-<td> </td>
+<td class="enum_member_description">
+<p>The hanging baseline. In horizontal direction, this is the horizontal
+line from which syllables seem, to hang in Tibetan and other similar scripts. In vertical writing mode,
+for Tibetan (or some other similar script) characters rotated 90 degrees clockwise.</p>
+</td>
+<td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="HB-OT-LAYOUT-BASELINE-TAG-IDEO-FACE-BOTTOM-OR-LEFT:CAPS"></a>HB_OT_LAYOUT_BASELINE_TAG_IDEO_FACE_BOTTOM_OR_LEFT</p></td>
-<td> </td>
-<td> </td>
+<td class="enum_member_description">
+<p>Ideographic character face bottom or left edge,
+if the direction is horizontal or vertical, respectively.</p>
+</td>
+<td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="HB-OT-LAYOUT-BASELINE-TAG-IDEO-FACE-TOP-OR-RIGHT:CAPS"></a>HB_OT_LAYOUT_BASELINE_TAG_IDEO_FACE_TOP_OR_RIGHT</p></td>
-<td> </td>
-<td> </td>
+<td class="enum_member_description">
+<p>Ideographic character face top or right edge,
+if the direction is horizontal or vertical, respectively.</p>
+</td>
+<td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="HB-OT-LAYOUT-BASELINE-TAG-IDEO-EMBOX-BOTTOM-OR-LEFT:CAPS"></a>HB_OT_LAYOUT_BASELINE_TAG_IDEO_EMBOX_BOTTOM_OR_LEFT</p></td>
-<td> </td>
-<td> </td>
+<td class="enum_member_description">
+<p>Ideographic em-box bottom or left edge,
+if the direction is horizontal or vertical, respectively.</p>
+</td>
+<td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="HB-OT-LAYOUT-BASELINE-TAG-IDEO-EMBOX-TOP-OR-RIGHT:CAPS"></a>HB_OT_LAYOUT_BASELINE_TAG_IDEO_EMBOX_TOP_OR_RIGHT</p></td>
-<td> </td>
-<td> </td>
+<td class="enum_member_description">
+<p>Ideographic em-box top or right edge baseline,
+if the direction is horizontal or vertical, respectively.</p>
+</td>
+<td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="HB-OT-LAYOUT-BASELINE-TAG-MATH:CAPS"></a>HB_OT_LAYOUT_BASELINE_TAG_MATH</p></td>
-<td> </td>
-<td> </td>
+<td class="enum_member_description">
+<p>The baseline about which mathematical characters are centered.
+In vertical writing mode when mathematical characters rotated 90 degrees clockwise, are centered.</p>
+</td>
+<td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="HB-OT-LAYOUT-BASELINE-TAG-MAX-VALUE:CAPS"></a>_HB_OT_LAYOUT_BASELINE_TAG_MAX_VALUE</p></td>
