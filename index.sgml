@@ -273,6 +273,7 @@
 <ANCHOR id="hb-font-get-glyph-v-origin" href="harfbuzz/harfbuzz-hb-font.html#hb-font-get-glyph-v-origin">
 <ANCHOR id="hb-font-get-nominal-glyph" href="harfbuzz/harfbuzz-hb-font.html#hb-font-get-nominal-glyph">
 <ANCHOR id="hb-font-get-nominal-glyph-func-t" href="harfbuzz/harfbuzz-hb-font.html#hb-font-get-nominal-glyph-func-t">
+<ANCHOR id="hb-font-get-nominal-glyphs" href="harfbuzz/harfbuzz-hb-font.html#hb-font-get-nominal-glyphs">
 <ANCHOR id="hb-font-get-parent" href="harfbuzz/harfbuzz-hb-font.html#hb-font-get-parent">
 <ANCHOR id="hb-font-get-ppem" href="harfbuzz/harfbuzz-hb-font.html#hb-font-get-ppem">
 <ANCHOR id="hb-font-get-ptem" href="harfbuzz/harfbuzz-hb-font.html#hb-font-get-ptem">
