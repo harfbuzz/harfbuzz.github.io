@@ -40,7 +40,7 @@
       <code class="function">malloc()</code>, you would create the blob using
     </p>
 <pre class="programlisting">
-      hb_blob_create (data, length, HB_MEMORY_MODE_WRITABLE, NULL, free)
+      hb_blob_create (data, length, HB_MEMORY_MODE_WRITABLE, data, free)
     </pre>
 <p>
       That way, HarfBuzz will call <code class="function">free()</code> on the
