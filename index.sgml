@@ -518,6 +518,7 @@
 <ANCHOR id="hb-ot-tags-from-script-and-language" href="harfbuzz/harfbuzz-hb-ot-layout.html#hb-ot-tags-from-script-and-language">
 <ANCHOR id="hb-ot-tags-to-script-and-language" href="harfbuzz/harfbuzz-hb-ot-layout.html#hb-ot-tags-to-script-and-language">
 <ANCHOR id="hb-ot-layout-closure-lookups" href="harfbuzz/harfbuzz-hb-ot-layout.html#hb-ot-layout-closure-lookups">
+<ANCHOR id="hb-ot-layout-closure-features" href="harfbuzz/harfbuzz-hb-ot-layout.html#hb-ot-layout-closure-features">
 <ANCHOR id="hb-ot-layout-collect-lookups" href="harfbuzz/harfbuzz-hb-ot-layout.html#hb-ot-layout-collect-lookups">
 <ANCHOR id="hb-ot-layout-collect-features" href="harfbuzz/harfbuzz-hb-ot-layout.html#hb-ot-layout-collect-features">
 <ANCHOR id="hb-ot-layout-feature-get-characters" href="harfbuzz/harfbuzz-hb-ot-layout.html#hb-ot-layout-feature-get-characters">
@@ -807,6 +808,7 @@
 <ANCHOR id="annotation-glossterm-closure" href="harfbuzz/annotation-glossary.html#annotation-glossterm-closure">
 <ANCHOR id="annotation-glossterm-destroy" href="harfbuzz/annotation-glossary.html#annotation-glossterm-destroy">
 <ANCHOR id="annotation-glossterm-element-type" href="harfbuzz/annotation-glossary.html#annotation-glossterm-element-type">
+<ANCHOR id="annotation-glossterm-in" href="harfbuzz/annotation-glossary.html#annotation-glossterm-in">
 <ANCHOR id="annotation-glossterm-inout" href="harfbuzz/annotation-glossary.html#annotation-glossterm-inout">
 <ANCHOR id="annotation-glossterm-out" href="harfbuzz/annotation-glossary.html#annotation-glossterm-out">
 <ANCHOR id="annotation-glossterm-out caller-allocates" href="harfbuzz/annotation-glossary.html#annotation-glossterm-out caller-allocates">

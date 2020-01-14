@@ -85,6 +85,14 @@
 <span class="returnvalue">void</span>
 </td>
 <td class="function_name">
+<a class="link" href="harfbuzz-hb-ot-layout.html#hb-ot-layout-closure-features" title="hb_ot_layout_closure_features ()">hb_ot_layout_closure_features</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
 <a class="link" href="harfbuzz-hb-ot-layout.html#hb-ot-layout-collect-lookups" title="hb_ot_layout_collect_lookups ()">hb_ot_layout_collect_lookups</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
@@ -596,6 +604,53 @@ list. </p></td>
 </div>
 <hr>
 <div class="refsect2">
+<a name="hb-ot-layout-closure-features"></a><h3>hb_ot_layout_closure_features ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_ot_layout_closure_features (<em class="parameter"><code><a class="link" href="harfbuzz-hb-face.html#hb-face-t"><span class="type">hb_face_t</span></a> *face</code></em>,
+                               <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="type">hb_tag_t</span></a> table_tag</code></em>,
+                               <em class="parameter"><code>const <a class="link" href="harfbuzz-hb-map.html#hb-map-t"><span class="type">hb_map_t</span></a> *lookup_indexes</code></em>,
+                               <em class="parameter"><code><a class="link" href="harfbuzz-hb-set.html#hb-set-t"><span class="type">hb_set_t</span></a> *feature_indexes</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.3.5.4.8.7.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>face</p></td>
+<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-face.html#hb-face-t"><span class="type">hb_face_t</span></a> to work upon</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>table_tag</p></td>
+<td class="parameter_description"><p>HB_OT_TAG_GSUB or HB_OT_TAG_GPOS</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>lookup_indexes</p></td>
+<td class="parameter_description"><p> collected active lookup_indices. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>feature_indexes</p></td>
+<td class="parameter_description"><p> all active feature indexes collected. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.5.4.8.7.5"></a><h4>Returns</h4>
+<p>all active feature indexes</p>
+<p></p>
+</div>
+<p class="since">Since REPLACEME</p>
+</div>
+<hr>
+<div class="refsect2">
 <a name="hb-ot-layout-collect-lookups"></a><h3>hb_ot_layout_collect_lookups ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 hb_ot_layout_collect_lookups (<em class="parameter"><code><a class="link" href="harfbuzz-hb-face.html#hb-face-t"><span class="type">hb_face_t</span></a> *face</code></em>,
@@ -610,7 +665,7 @@ features. If no list of scripts is provided, all scripts will be queried.
 If no list of languages is provided, all languages will be queried. If no
 list of features is provided, all features will be queried.</p>
 <div class="refsect3">
-<a name="id-1.3.5.4.8.7.5"></a><h4>Parameters</h4>
+<a name="id-1.3.5.4.8.8.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -669,7 +724,7 @@ If no list of scripts is provided, all scripts will be queried. If no list
 of languages is provided, all languages will be queried. If no list of
 features is provided, all features will be queried.</p>
 <div class="refsect3">
-<a name="id-1.3.5.4.8.8.5"></a><h4>Parameters</h4>
+<a name="id-1.3.5.4.8.9.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -730,7 +785,7 @@ hb_ot_layout_feature_get_characters (<em class="parameter"><code><a class="link"
       until the char_count output value is lower than its input value, or the size
       of the characters array can be increased.</div>
 <div class="refsect3">
-<a name="id-1.3.5.4.8.9.6"></a><h4>Parameters</h4>
+<a name="id-1.3.5.4.8.10.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -775,7 +830,7 @@ glyph variants. </p></td>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.5.4.8.9.7"></a><h4>Returns</h4>
+<a name="id-1.3.5.4.8.10.7"></a><h4>Returns</h4>
 <p> Number of total sample characters in the cvXX feature.</p>
 <p></p>
 </div>
@@ -795,7 +850,7 @@ hb_ot_layout_feature_get_lookups (<em class="parameter"><code><a class="link" hr
 the specified face's GSUB table or GPOS table. The list returned will
 begin at the offset provided.</p>
 <div class="refsect3">
-<a name="id-1.3.5.4.8.10.5"></a><h4>Parameters</h4>
+<a name="id-1.3.5.4.8.11.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -854,7 +909,7 @@ hb_ot_layout_feature_get_name_ids (<em class="parameter"><code><a class="link" h
 <p>Fetches name indices from feature parameters for "Stylistic Set" ('ssXX') or
 "Character Variant" ('cvXX') features.</p>
 <div class="refsect3">
-<a name="id-1.3.5.4.8.11.5"></a><h4>Parameters</h4>
+<a name="id-1.3.5.4.8.12.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -912,7 +967,7 @@ parameters. (Must be zero if numParameters is zero.). </p></td>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.5.4.8.11.6"></a><h4>Returns</h4>
+<a name="id-1.3.5.4.8.12.6"></a><h4>Returns</h4>
 <p> true if data found, false otherwise</p>
 <p></p>
 </div>
@@ -934,7 +989,7 @@ hb_ot_layout_feature_with_variations_get_lookups
 the specified face's GSUB table or GPOS table, enabled at the specified
 variations index. The list returned will begin at the offset provided.</p>
 <div class="refsect3">
-<a name="id-1.3.5.4.8.12.5"></a><h4>Parameters</h4>
+<a name="id-1.3.5.4.8.13.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -995,7 +1050,7 @@ hb_ot_layout_get_attach_points (<em class="parameter"><code><a class="link" href
 table of the face. The list returned will begin at the offset provided.</p>
 <p>Useful if the client program wishes to cache the list.</p>
 <div class="refsect3">
-<a name="id-1.3.5.4.8.13.6"></a><h4>Parameters</h4>
+<a name="id-1.3.5.4.8.14.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1045,7 +1100,7 @@ hb_ot_layout_get_baseline (<em class="parameter"><code><a class="link" href="har
                            <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-position-t" title="hb_position_t"><span class="type">hb_position_t</span></a> *coord</code></em>);</pre>
 <p>Fetches a baseline value from the face.</p>
 <div class="refsect3">
-<a name="id-1.3.5.4.8.14.5"></a><h4>Parameters</h4>
+<a name="id-1.3.5.4.8.15.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1087,7 +1142,7 @@ hb_ot_layout_get_baseline (<em class="parameter"><code><a class="link" href="har
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.5.4.8.14.6"></a><h4>Returns</h4>
+<a name="id-1.3.5.4.8.15.6"></a><h4>Returns</h4>
 <p> if found baseline value in the font.</p>
 <p></p>
 </div>
@@ -1101,7 +1156,7 @@ hb_ot_layout_get_glyph_class (<em class="parameter"><code><a class="link" href="
                               <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> glyph</code></em>);</pre>
 <p>Fetches the GDEF class of the requested glyph in the specified face.</p>
 <div class="refsect3">
-<a name="id-1.3.5.4.8.15.5"></a><h4>Parameters</h4>
+<a name="id-1.3.5.4.8.16.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1123,7 +1178,7 @@ hb_ot_layout_get_glyph_class (<em class="parameter"><code><a class="link" href="
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.5.4.8.15.6"></a><h4>Returns</h4>
+<a name="id-1.3.5.4.8.16.6"></a><h4>Returns</h4>
 <p> The <a class="link" href="harfbuzz-hb-ot-layout.html#hb-ot-layout-glyph-class-t" title="enum hb_ot_layout_glyph_class_t"><span class="type">hb_ot_layout_glyph_class_t</span></a> glyph class of the given code
 point in the GDEF table of the face.</p>
 <p></p>
@@ -1140,7 +1195,7 @@ hb_ot_layout_get_glyphs_in_class (<em class="parameter"><code><a class="link" hr
 <p>Retrieves the set of all glyphs from the face that belong to the requested
 glyph class in the face's GDEF table.</p>
 <div class="refsect3">
-<a name="id-1.3.5.4.8.16.5"></a><h4>Parameters</h4>
+<a name="id-1.3.5.4.8.17.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1182,7 +1237,7 @@ hb_ot_layout_get_ligature_carets (<em class="parameter"><code><a class="link" hr
 <p>Fetches a list of the caret positions defined for a ligature glyph in the GDEF
 table of the font. The list returned will begin at the offset provided.</p>
 <div class="refsect3">
-<a name="id-1.3.5.4.8.17.5"></a><h4>Parameters</h4>
+<a name="id-1.3.5.4.8.18.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1243,7 +1298,7 @@ a subfamily are not covered by the <code class="literal">size</code> feature.</p
 <p>For more information on this distinction, see the <code class="literal">size</code> documentation at
 https://docs.microsoft.com/en-us/typography/opentype/spec/features_pt<span class="type">tag-39size39</span></p>
 <div class="refsect3">
-<a name="id-1.3.5.4.8.18.6"></a><h4>Parameters</h4>
+<a name="id-1.3.5.4.8.19.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1285,7 +1340,7 @@ https://docs.microsoft.com/en-us/typography/opentype/spec/features_pt<span class
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.5.4.8.18.7"></a><h4>Returns</h4>
+<a name="id-1.3.5.4.8.19.7"></a><h4>Returns</h4>
 <p> true if data found, false otherwise</p>
 <p></p>
 </div>
@@ -1308,7 +1363,7 @@ https://docs.microsoft.com/en-us/typography/opentype/spec/features_pt<span class
 hb_ot_layout_has_glyph_classes (<em class="parameter"><code><a class="link" href="harfbuzz-hb-face.html#hb-face-t"><span class="type">hb_face_t</span></a> *face</code></em>);</pre>
 <p>Tests whether a face has any glyph classes defined in its GDEF table.</p>
 <div class="refsect3">
-<a name="id-1.3.5.4.8.20.5"></a><h4>Parameters</h4>
+<a name="id-1.3.5.4.8.21.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1323,7 +1378,7 @@ hb_ot_layout_has_glyph_classes (<em class="parameter"><code><a class="link" href
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.5.4.8.20.6"></a><h4>Returns</h4>
+<a name="id-1.3.5.4.8.21.6"></a><h4>Returns</h4>
 <p> true if data found, false otherwise</p>
 <p></p>
 </div>
@@ -1334,7 +1389,7 @@ hb_ot_layout_has_glyph_classes (<em class="parameter"><code><a class="link" href
 <pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
 hb_ot_layout_has_positioning (<em class="parameter"><code><a class="link" href="harfbuzz-hb-face.html#hb-face-t"><span class="type">hb_face_t</span></a> *face</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.5.4.8.21.4"></a><h4>Parameters</h4>
+<a name="id-1.3.5.4.8.22.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1349,7 +1404,7 @@ hb_ot_layout_has_positioning (<em class="parameter"><code><a class="link" href="
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.5.4.8.21.5"></a><h4>Returns</h4>
+<a name="id-1.3.5.4.8.22.5"></a><h4>Returns</h4>
 <p> true if the face has GPOS data, false otherwise</p>
 <p></p>
 </div>
@@ -1361,7 +1416,7 @@ hb_ot_layout_has_positioning (<em class="parameter"><code><a class="link" href="
 hb_ot_layout_has_substitution (<em class="parameter"><code><a class="link" href="harfbuzz-hb-face.html#hb-face-t"><span class="type">hb_face_t</span></a> *face</code></em>);</pre>
 <p>Tests whether the specified face includes any GSUB substitutions.</p>
 <div class="refsect3">
-<a name="id-1.3.5.4.8.22.5"></a><h4>Parameters</h4>
+<a name="id-1.3.5.4.8.23.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1376,7 +1431,7 @@ hb_ot_layout_has_substitution (<em class="parameter"><code><a class="link" href=
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.5.4.8.22.6"></a><h4>Returns</h4>
+<a name="id-1.3.5.4.8.23.6"></a><h4>Returns</h4>
 <p> true if data found, false otherwise</p>
 <p></p>
 </div>
@@ -1394,7 +1449,7 @@ hb_ot_layout_language_find_feature (<em class="parameter"><code><a class="link" 
 <p>Fetches the index of a given feature tag in the specified face's GSUB table
 or GPOS table, underneath the specified script and language.</p>
 <div class="refsect3">
-<a name="id-1.3.5.4.8.23.5"></a><h4>Parameters</h4>
+<a name="id-1.3.5.4.8.24.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1436,7 +1491,7 @@ or GPOS table, underneath the specified script and language.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.5.4.8.23.6"></a><h4>Returns</h4>
+<a name="id-1.3.5.4.8.24.6"></a><h4>Returns</h4>
 <p> true if the feature is found, false otherwise</p>
 <p></p>
 </div>
@@ -1457,7 +1512,7 @@ hb_ot_layout_language_get_feature_indexes
 or GPOS table, underneath the specified script and language. The list
 returned will begin at the offset provided.</p>
 <div class="refsect3">
-<a name="id-1.3.5.4.8.24.5"></a><h4>Parameters</h4>
+<a name="id-1.3.5.4.8.25.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1521,7 +1576,7 @@ hb_ot_layout_language_get_feature_tags
 or GPOS table, underneath the specified script and language. The list
 returned will begin at the offset provided.</p>
 <div class="refsect3">
-<a name="id-1.3.5.4.8.25.5"></a><h4>Parameters</h4>
+<a name="id-1.3.5.4.8.26.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1583,7 +1638,7 @@ hb_ot_layout_language_get_required_feature
 <p>Fetches the tag of a requested feature index in the given face's GSUB or GPOS table,
 underneath the specified script and language.</p>
 <div class="refsect3">
-<a name="id-1.3.5.4.8.26.5"></a><h4>Parameters</h4>
+<a name="id-1.3.5.4.8.27.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1625,7 +1680,7 @@ underneath the specified script and language.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.5.4.8.26.6"></a><h4>Returns</h4>
+<a name="id-1.3.5.4.8.27.6"></a><h4>Returns</h4>
 <p> true if the feature is found, false otherwise</p>
 <p></p>
 </div>
@@ -1645,7 +1700,7 @@ hb_ot_layout_lookup_collect_glyphs (<em class="parameter"><code><a class="link" 
 <p>Fetches a list of all glyphs affected by the specified lookup in the
 specified face's GSUB table or GPOS table.</p>
 <div class="refsect3">
-<a name="id-1.3.5.4.8.27.5"></a><h4>Parameters</h4>
+<a name="id-1.3.5.4.8.28.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1704,7 +1759,7 @@ hb_ot_layout_lookup_substitute_closure
 <p>Compute the transitive closure of glyphs needed for a
 specified lookup.</p>
 <div class="refsect3">
-<a name="id-1.3.5.4.8.28.5"></a><h4>Parameters</h4>
+<a name="id-1.3.5.4.8.29.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1743,7 +1798,7 @@ hb_ot_layout_lookups_substitute_closure
 <p>Compute the transitive closure of glyphs needed for all of the
 provided lookups.</p>
 <div class="refsect3">
-<a name="id-1.3.5.4.8.29.5"></a><h4>Parameters</h4>
+<a name="id-1.3.5.4.8.30.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1783,7 +1838,7 @@ hb_ot_layout_lookup_would_substitute (<em class="parameter"><code><a class="link
 <p>Tests whether a specified lookup in the specified face would
 trigger a substitution on the given glyph sequence.</p>
 <div class="refsect3">
-<a name="id-1.3.5.4.8.30.5"></a><h4>Parameters</h4>
+<a name="id-1.3.5.4.8.31.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1820,7 +1875,7 @@ trigger a substitution on the given glyph sequence.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.5.4.8.30.6"></a><h4>Returns</h4>
+<a name="id-1.3.5.4.8.31.6"></a><h4>Returns</h4>
 <p> true if a substitution would be triggered, false otherwise</p>
 <p></p>
 </div>
@@ -1839,7 +1894,7 @@ hb_ot_layout_script_get_language_tags (<em class="parameter"><code><a class="lin
 <p>Fetches a list of language tags in the given face's GSUB or GPOS table, underneath
 the specified script index. The list returned will begin at the offset provided.</p>
 <div class="refsect3">
-<a name="id-1.3.5.4.8.31.5"></a><h4>Parameters</h4>
+<a name="id-1.3.5.4.8.32.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1895,7 +1950,7 @@ hb_ot_layout_script_select_language (<em class="parameter"><code><a class="link"
 <p>Fetches the index of a given language tag in the specified face's GSUB table
 or GPOS table, underneath the specified script index.</p>
 <div class="refsect3">
-<a name="id-1.3.5.4.8.32.5"></a><h4>Parameters</h4>
+<a name="id-1.3.5.4.8.33.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1937,7 +1992,7 @@ or GPOS table, underneath the specified script index.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.5.4.8.32.6"></a><h4>Returns</h4>
+<a name="id-1.3.5.4.8.33.6"></a><h4>Returns</h4>
 <p> true if the language tag is found, false otherwise</p>
 <p></p>
 </div>
@@ -1956,7 +2011,7 @@ hb_ot_layout_table_find_feature_variations
 <p>Fetches a list of feature variations in the specified face's GSUB table
 or GPOS table, at the specified variation coordinates.</p>
 <div class="refsect3">
-<a name="id-1.3.5.4.8.33.5"></a><h4>Parameters</h4>
+<a name="id-1.3.5.4.8.34.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2004,7 +2059,7 @@ hb_ot_layout_table_get_feature_tags (<em class="parameter"><code><a class="link"
                                      <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="type">hb_tag_t</span></a> *feature_tags</code></em>);</pre>
 <p>Fetches a list of all feature tags in the given face's GSUB or GPOS table.</p>
 <div class="refsect3">
-<a name="id-1.3.5.4.8.34.5"></a><h4>Parameters</h4>
+<a name="id-1.3.5.4.8.35.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2054,7 +2109,7 @@ hb_ot_layout_table_get_script_tags (<em class="parameter"><code><a class="link" 
 <p>Fetches a list of all scripts enumerated in the specified face's GSUB table
 or GPOS table. The list returned will begin at the offset provided.</p>
 <div class="refsect3">
-<a name="id-1.3.5.4.8.35.5"></a><h4>Parameters</h4>
+<a name="id-1.3.5.4.8.36.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2101,7 +2156,7 @@ hb_ot_layout_table_get_lookup_count (<em class="parameter"><code><a class="link"
 <p>Fetches the total number of lookups enumerated in the specified
 face's GSUB table or GPOS table.</p>
 <div class="refsect3">
-<a name="id-1.3.5.4.8.36.5"></a><h4>Parameters</h4>
+<a name="id-1.3.5.4.8.37.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2135,7 +2190,7 @@ hb_ot_layout_table_select_script (<em class="parameter"><code><a class="link" hr
                                   <em class="parameter"><code>unsigned <span class="type">int</span> *script_index</code></em>,
                                   <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="type">hb_tag_t</span></a> *chosen_script</code></em>);</pre>
 <div class="refsect3">
-<a name="id-1.3.5.4.8.37.4"></a><h4>Parameters</h4>
+<a name="id-1.3.5.4.8.38.4"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2200,7 +2255,7 @@ hb_ot_layout_language_get_required_feature_index
 <p>Fetches the index of a requested feature in the given face's GSUB or GPOS table,
 underneath the specified script and language.</p>
 <div class="refsect3">
-<a name="id-1.3.5.4.8.39.5"></a><h4>Parameters</h4>
+<a name="id-1.3.5.4.8.40.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2237,7 +2292,7 @@ underneath the specified script and language.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.5.4.8.39.6"></a><h4>Returns</h4>
+<a name="id-1.3.5.4.8.40.6"></a><h4>Returns</h4>
 <p> true if the feature is found, false otherwise</p>
 <p></p>
 </div>
