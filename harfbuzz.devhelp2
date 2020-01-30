@@ -328,7 +328,7 @@
     <keyword type="function" name="hb_font_create ()" link="harfbuzz-hb-font.html#hb-font-create"/>
     <keyword type="function" name="hb_font_create_sub_font ()" link="harfbuzz-hb-font.html#hb-font-create-sub-font" since="0.9.2"/>
     <keyword type="function" name="hb_font_destroy ()" link="harfbuzz-hb-font.html#hb-font-destroy" since="0.9.2"/>
-    <keyword type="function" name="hb_font_draw_glyph ()" link="harfbuzz-hb-font.html#hb-font-draw-glyph"/>
+    <keyword type="function" name="hb_font_draw_glyph ()" link="harfbuzz-hb-font.html#hb-font-draw-glyph" since="REPLACEME"/>
     <keyword type="function" name="hb_font_funcs_create ()" link="harfbuzz-hb-font.html#hb-font-funcs-create"/>
     <keyword type="function" name="hb_font_funcs_destroy ()" link="harfbuzz-hb-font.html#hb-font-funcs-destroy" since="0.9.2"/>
     <keyword type="function" name="hb_font_funcs_get_empty ()" link="harfbuzz-hb-font.html#hb-font-funcs-get-empty" since="0.9.2"/>
