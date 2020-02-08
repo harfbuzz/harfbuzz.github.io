@@ -282,6 +282,7 @@
 <ANCHOR id="hb-font-get-user-data" href="harfbuzz/harfbuzz-hb-font.html#hb-font-get-user-data">
 <ANCHOR id="hb-font-get-variation-glyph" href="harfbuzz/harfbuzz-hb-font.html#hb-font-get-variation-glyph">
 <ANCHOR id="hb-font-get-variation-glyph-func-t" href="harfbuzz/harfbuzz-hb-font.html#hb-font-get-variation-glyph-func-t">
+<ANCHOR id="hb-font-get-var-coords-design" href="harfbuzz/harfbuzz-hb-font.html#hb-font-get-var-coords-design">
 <ANCHOR id="hb-font-get-var-coords-normalized" href="harfbuzz/harfbuzz-hb-font.html#hb-font-get-var-coords-normalized">
 <ANCHOR id="hb-font-glyph-from-string" href="harfbuzz/harfbuzz-hb-font.html#hb-font-glyph-from-string">
 <ANCHOR id="hb-font-glyph-to-string" href="harfbuzz/harfbuzz-hb-font.html#hb-font-glyph-to-string">
