@@ -221,7 +221,6 @@
 <ANCHOR id="hb-font-create" href="harfbuzz/harfbuzz-hb-font.html#hb-font-create">
 <ANCHOR id="hb-font-create-sub-font" href="harfbuzz/harfbuzz-hb-font.html#hb-font-create-sub-font">
 <ANCHOR id="hb-font-destroy" href="harfbuzz/harfbuzz-hb-font.html#hb-font-destroy">
-<ANCHOR id="hb-font-draw-glyph" href="harfbuzz/harfbuzz-hb-font.html#hb-font-draw-glyph">
 <ANCHOR id="hb-font-funcs-create" href="harfbuzz/harfbuzz-hb-font.html#hb-font-funcs-create">
 <ANCHOR id="hb-font-funcs-destroy" href="harfbuzz/harfbuzz-hb-font.html#hb-font-funcs-destroy">
 <ANCHOR id="hb-font-funcs-get-empty" href="harfbuzz/harfbuzz-hb-font.html#hb-font-funcs-get-empty">
