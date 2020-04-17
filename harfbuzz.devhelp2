@@ -388,7 +388,7 @@
     <keyword type="function" name="hb_font_get_user_data ()" link="harfbuzz-hb-font.html#hb-font-get-user-data" since="0.9.2"/>
     <keyword type="function" name="hb_font_get_variation_glyph ()" link="harfbuzz-hb-font.html#hb-font-get-variation-glyph" since="1.2.3"/>
     <keyword type="function" name="hb_font_get_variation_glyph_func_t ()" link="harfbuzz-hb-font.html#hb-font-get-variation-glyph-func-t"/>
-    <keyword type="function" name="hb_font_get_var_coords_design ()" link="harfbuzz-hb-font.html#hb-font-get-var-coords-design" since="REPLACEME"/>
+    <keyword type="function" name="hb_font_get_var_coords_design ()" link="harfbuzz-hb-font.html#hb-font-get-var-coords-design" since="EXPERIMENTAL"/>
     <keyword type="function" name="hb_font_get_var_coords_normalized ()" link="harfbuzz-hb-font.html#hb-font-get-var-coords-normalized" since="1.4.2"/>
     <keyword type="function" name="hb_font_glyph_from_string ()" link="harfbuzz-hb-font.html#hb-font-glyph-from-string" since="0.9.2"/>
     <keyword type="function" name="hb_font_glyph_to_string ()" link="harfbuzz-hb-font.html#hb-font-glyph-to-string" since="0.9.2"/>
