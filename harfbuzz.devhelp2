@@ -551,8 +551,8 @@
     <keyword type="function" name="hb_ot_tag_to_script ()" link="harfbuzz-hb-ot-layout.html#hb-ot-tag-to-script"/>
     <keyword type="function" name="hb_ot_tags_from_script_and_language ()" link="harfbuzz-hb-ot-layout.html#hb-ot-tags-from-script-and-language" since="2.0.0"/>
     <keyword type="function" name="hb_ot_tags_to_script_and_language ()" link="harfbuzz-hb-ot-layout.html#hb-ot-tags-to-script-and-language" since="2.0.0"/>
-    <keyword type="function" name="hb_ot_layout_closure_lookups ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-closure-lookups" since="REPLACEME"/>
-    <keyword type="function" name="hb_ot_layout_closure_features ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-closure-features" since="REPLACEME"/>
+    <keyword type="function" name="hb_ot_layout_closure_lookups ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-closure-lookups" since="EXPERIMENTAL"/>
+    <keyword type="function" name="hb_ot_layout_closure_features ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-closure-features" since="EXPERIMENTAL"/>
     <keyword type="function" name="hb_ot_layout_collect_lookups ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-collect-lookups" since="0.9.8"/>
     <keyword type="function" name="hb_ot_layout_collect_features ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-collect-features" since="1.8.5"/>
     <keyword type="function" name="hb_ot_layout_feature_get_characters ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-feature-get-characters" since="2.0.0"/>
