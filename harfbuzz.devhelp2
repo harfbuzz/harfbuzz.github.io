@@ -662,8 +662,8 @@
     <keyword type="function" name="hb_ft_font_create_referenced ()" link="harfbuzz-hb-ft.html#hb-ft-font-create-referenced" since="0.9.38"/>
     <keyword type="function" name="hb_ft_font_changed ()" link="harfbuzz-hb-ft.html#hb-ft-font-changed"/>
     <keyword type="function" name="hb_ft_font_get_face ()" link="harfbuzz-hb-ft.html#hb-ft-font-get-face" since="0.9.2"/>
-    <keyword type="function" name="hb_ft_font_lock_face ()" link="harfbuzz-hb-ft.html#hb-ft-font-lock-face" since="REPLACEME"/>
-    <keyword type="function" name="hb_ft_font_unlock_face ()" link="harfbuzz-hb-ft.html#hb-ft-font-unlock-face" since="REPLACEME"/>
+    <keyword type="function" name="hb_ft_font_lock_face ()" link="harfbuzz-hb-ft.html#hb-ft-font-lock-face" since="2.6.5"/>
+    <keyword type="function" name="hb_ft_font_unlock_face ()" link="harfbuzz-hb-ft.html#hb-ft-font-unlock-face" since="2.6.5"/>
     <keyword type="function" name="hb_ft_font_set_load_flags ()" link="harfbuzz-hb-ft.html#hb-ft-font-set-load-flags" since="1.0.5"/>
     <keyword type="function" name="hb_ft_font_get_load_flags ()" link="harfbuzz-hb-ft.html#hb-ft-font-get-load-flags" since="1.0.5"/>
     <keyword type="function" name="hb_ft_font_set_funcs ()" link="harfbuzz-hb-ft.html#hb-ft-font-set-funcs"/>
