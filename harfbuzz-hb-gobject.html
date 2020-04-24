@@ -5,7 +5,7 @@
 <title>HarfBuzz Manual: hb-gobject</title>
 <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
 <link rel="home" href="index.html" title="HarfBuzz Manual">
-<link rel="up" href="ch14.html" title="Integration API">
+<link rel="up" href="ch15.html" title="Integration API">
 <link rel="prev" href="harfbuzz-hb-glib.html" title="hb-glib">
 <link rel="next" href="harfbuzz-hb-graphite2.html" title="hb-graphite2">
 <meta name="generator" content="GTK-Doc V1.20 (XML mode)">
@@ -19,7 +19,7 @@
                   <a href="#harfbuzz-hb-gobject.object-hierarchy" class="shortcut">Object Hierarchy</a></span>
 </td>
 <td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
-<td><a accesskey="u" href="ch14.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="u" href="ch15.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
 <td><a accesskey="p" href="harfbuzz-hb-glib.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
 <td><a accesskey="n" href="harfbuzz-hb-graphite2.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
 </tr></table>
@@ -28,7 +28,7 @@
 <div class="refnamediv"><table width="100%"><tr>
 <td valign="top">
 <h2><span class="refentrytitle"><a name="harfbuzz-hb-gobject.top_of_page"></a>hb-gobject</span></h2>
-<p>hb-gobject — GObject integration</p>
+<p>hb-gobject — GObject integration support</p>
 </td>
 <td class="gallery_image" valign="top" align="right"></td>
 </tr></table></div>
@@ -451,8 +451,15 @@
 </div>
 <div class="refsect1">
 <a name="harfbuzz-hb-gobject.description"></a><h2>Description</h2>
-<p>Functions for using HarfBuzz with the GObject library to provide
+<p>Support for using HarfBuzz with the GObject library to provide
 type data.</p>
+<p>The types and functions listed here are solely a linkage between
+HarfBuzz's public data types and the GTypes used by the GObject framework.
+HarfBuzz uses GObject introspection to generate its Python bindings 
+(and potentially other language bindings); client programs should never need
+to access the GObject-integration mechanics.</p>
+<p>For client programs using the GNOME and GTK software stack, please see the
+GLib and FreeType integration pages.</p>
 </div>
 <div class="refsect1">
 <a name="harfbuzz-hb-gobject.functions_details"></a><h2>Functions</h2>
