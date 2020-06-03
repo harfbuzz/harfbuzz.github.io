@@ -2,21 +2,20 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>HarfBuzz Manual: hb-icu</title>
-<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<title>hb-icu: HarfBuzz Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
 <link rel="home" href="index.html" title="HarfBuzz Manual">
 <link rel="up" href="ch15.html" title="Integration API">
 <link rel="prev" href="harfbuzz-hb-graphite2.html" title="hb-graphite2">
 <link rel="next" href="harfbuzz-hb-uniscribe.html" title="hb-uniscribe">
-<meta name="generator" content="GTK-Doc V1.20 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.27 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
-<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="10"><tr valign="middle">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
 <td width="100%" align="left" class="shortcuts">
-<a href="#" class="shortcut">Top</a><span id="nav_description"> <span class="dim">|</span> 
-                  <a href="#harfbuzz-hb-icu.description" class="shortcut">Description</a></span><span id="nav_hierarchy"> <span class="dim">|</span> 
-                  <a href="#harfbuzz-hb-icu.object-hierarchy" class="shortcut">Object Hierarchy</a></span>
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#harfbuzz-hb-icu.description" class="shortcut">Description</a></span>
 </td>
 <td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
 <td><a accesskey="u" href="ch15.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
@@ -34,7 +33,7 @@
 </tr></table></div>
 <div class="refsect1">
 <a name="harfbuzz-hb-icu.functions"></a><h2>Functions</h2>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="functions_return">
 <col class="functions_name">
@@ -42,7 +41,7 @@
 <tbody>
 <tr>
 <td class="function_type">
-<a class="link" href="harfbuzz-hb-unicode.html#hb-unicode-funcs-t"><span class="returnvalue">hb_unicode_funcs_t</span></a> *
+<a class="link" href="harfbuzz-hb-unicode.html#hb-unicode-funcs-t" title="hb_unicode_funcs_t"><span class="returnvalue">hb_unicode_funcs_t</span></a> *
 </td>
 <td class="function_name">
 <a class="link" href="harfbuzz-hb-icu.html#hb-icu-get-unicode-funcs" title="hb_icu_get_unicode_funcs ()">hb_icu_get_unicode_funcs</a> <span class="c_punctuation">()</span>
@@ -68,11 +67,6 @@
 </table></div>
 </div>
 <div class="refsect1">
-<a name="harfbuzz-hb-icu.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">
-</pre>
-</div>
-<div class="refsect1">
 <a name="harfbuzz-hb-icu.includes"></a><h2>Includes</h2>
 <pre class="synopsis">#include &lt;hb-icu.h&gt;
 </pre>
@@ -81,23 +75,23 @@
 <a name="harfbuzz-hb-icu.description"></a><h2>Description</h2>
 <p>Functions for using HarfBuzz with the International Components for Unicode
 (ICU) library. HarfBuzz supports using ICU to provide Unicode data, by attaching
-ICU functions to the virtual methods in a <a class="link" href="harfbuzz-hb-unicode.html#hb-unicode-funcs-t"><span class="type">hb_unicode_funcs_t</span></a> function
+ICU functions to the virtual methods in a <a class="link" href="harfbuzz-hb-unicode.html#hb-unicode-funcs-t" title="hb_unicode_funcs_t"><span class="type">hb_unicode_funcs_t</span></a> function
 structure.</p>
 </div>
 <div class="refsect1">
 <a name="harfbuzz-hb-icu.functions_details"></a><h2>Functions</h2>
 <div class="refsect2">
 <a name="hb-icu-get-unicode-funcs"></a><h3>hb_icu_get_unicode_funcs ()</h3>
-<pre class="programlisting"><a class="link" href="harfbuzz-hb-unicode.html#hb-unicode-funcs-t"><span class="returnvalue">hb_unicode_funcs_t</span></a> *
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-unicode.html#hb-unicode-funcs-t" title="hb_unicode_funcs_t"><span class="returnvalue">hb_unicode_funcs_t</span></a> *
 hb_icu_get_unicode_funcs (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
 <p>Fetches a Unicode-functions structure that is populated
 with the appropriate ICU function for each method.</p>
 <div class="refsect3">
-<a name="id-1.3.7.7.7.2.5"></a><h4>Returns</h4>
-<p> a pointer to the <a class="link" href="harfbuzz-hb-unicode.html#hb-unicode-funcs-t"><span class="type">hb_unicode_funcs_t</span></a> Unicode-functions structure. </p>
+<a name="hb-icu-get-unicode-funcs.returns"></a><h4>Returns</h4>
+<p>a pointer to the <a class="link" href="harfbuzz-hb-unicode.html#hb-unicode-funcs-t" title="hb_unicode_funcs_t"><span class="type">hb_unicode_funcs_t</span></a> Unicode-functions structure. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since 0.9.38</p>
+<p class="since">Since: <a class="link" href="api-index-0-9-38.html#api-index-0.9.38">0.9.38</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -107,8 +101,8 @@ hb_icu_script_from_script (<em class="parameter"><code><a class="link" href="har
 <p>Fetches the UScriptCode identifier that corresponds to the
 specified <a class="link" href="harfbuzz-hb-common.html#hb-script-t" title="enum hb_script_t"><span class="type">hb_script_t</span></a> script.</p>
 <div class="refsect3">
-<a name="id-1.3.7.7.7.3.5"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<a name="hb-icu-script-from-script.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -122,9 +116,8 @@ specified <a class="link" href="harfbuzz-hb-common.html#hb-script-t" title="enum
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.7.7.7.3.6"></a><h4>Returns</h4>
+<a name="hb-icu-script-from-script.returns"></a><h4>Returns</h4>
 <p> the UScriptCode identifier found</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -135,8 +128,8 @@ hb_icu_script_to_script (<em class="parameter"><code><span class="type">UScriptC
 <p>Fetches the <a class="link" href="harfbuzz-hb-common.html#hb-script-t" title="enum hb_script_t"><span class="type">hb_script_t</span></a> script that corresponds to the
 specified UScriptCode identifier.</p>
 <div class="refsect3">
-<a name="id-1.3.7.7.7.4.5"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<a name="hb-icu-script-to-script.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -150,9 +143,8 @@ specified UScriptCode identifier.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.7.7.7.4.6"></a><h4>Returns</h4>
+<a name="hb-icu-script-to-script.returns"></a><h4>Returns</h4>
 <p> the <a class="link" href="harfbuzz-hb-common.html#hb-script-t" title="enum hb_script_t"><span class="type">hb_script_t</span></a> script found</p>
-<p></p>
 </div>
 </div>
 </div>
@@ -161,7 +153,6 @@ specified UScriptCode identifier.</p>
 </div>
 </div>
 <div class="footer">
-<hr>
-          Generated by GTK-Doc V1.20</div>
+<hr>Generated by GTK-Doc V1.27</div>
 </body>
 </html>

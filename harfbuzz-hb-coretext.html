@@ -2,21 +2,20 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>HarfBuzz Manual: hb-coretext</title>
-<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<title>hb-coretext: HarfBuzz Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
 <link rel="home" href="index.html" title="HarfBuzz Manual">
 <link rel="up" href="ch15.html" title="Integration API">
 <link rel="prev" href="ch15.html" title="Integration API">
 <link rel="next" href="harfbuzz-hb-ft.html" title="hb-ft">
-<meta name="generator" content="GTK-Doc V1.20 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.27 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
-<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="10"><tr valign="middle">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
 <td width="100%" align="left" class="shortcuts">
-<a href="#" class="shortcut">Top</a><span id="nav_description"> <span class="dim">|</span> 
-                  <a href="#harfbuzz-hb-coretext.description" class="shortcut">Description</a></span><span id="nav_hierarchy"> <span class="dim">|</span> 
-                  <a href="#harfbuzz-hb-coretext.object-hierarchy" class="shortcut">Object Hierarchy</a></span>
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#harfbuzz-hb-coretext.description" class="shortcut">Description</a></span>
 </td>
 <td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
 <td><a accesskey="u" href="ch15.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
@@ -34,7 +33,7 @@
 </tr></table></div>
 <div class="refsect1">
 <a name="harfbuzz-hb-coretext.functions"></a><h2>Functions</h2>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="functions_return">
 <col class="functions_name">
@@ -42,7 +41,7 @@
 <tbody>
 <tr>
 <td class="function_type">
-<a class="link" href="harfbuzz-hb-face.html#hb-face-t"><span class="returnvalue">hb_face_t</span></a> *
+<a class="link" href="harfbuzz-hb-face.html#hb-face-t" title="hb_face_t"><span class="returnvalue">hb_face_t</span></a> *
 </td>
 <td class="function_name">
 <a class="link" href="harfbuzz-hb-coretext.html#hb-coretext-face-create" title="hb_coretext_face_create ()">hb_coretext_face_create</a> <span class="c_punctuation">()</span>
@@ -50,7 +49,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<a class="link" href="harfbuzz-hb-font.html#hb-font-t"><span class="returnvalue">hb_font_t</span></a> *
+<a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="returnvalue">hb_font_t</span></a> *
 </td>
 <td class="function_name">
 <a class="link" href="harfbuzz-hb-coretext.html#hb-coretext-font-create" title="hb_coretext_font_create ()">hb_coretext_font_create</a> <span class="c_punctuation">()</span>
@@ -77,7 +76,7 @@
 </div>
 <div class="refsect1">
 <a name="harfbuzz-hb-coretext.other"></a><h2>Types and Values</h2>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="name">
 <col class="description">
@@ -99,11 +98,6 @@
 </table></div>
 </div>
 <div class="refsect1">
-<a name="harfbuzz-hb-coretext.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">
-</pre>
-</div>
-<div class="refsect1">
 <a name="harfbuzz-hb-coretext.includes"></a><h2>Includes</h2>
 <pre class="synopsis">#include &lt;hb-coretext.h&gt;
 </pre>
@@ -116,13 +110,13 @@
 <a name="harfbuzz-hb-coretext.functions_details"></a><h2>Functions</h2>
 <div class="refsect2">
 <a name="hb-coretext-face-create"></a><h3>hb_coretext_face_create ()</h3>
-<pre class="programlisting"><a class="link" href="harfbuzz-hb-face.html#hb-face-t"><span class="returnvalue">hb_face_t</span></a> *
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-face.html#hb-face-t" title="hb_face_t"><span class="returnvalue">hb_face_t</span></a> *
 hb_coretext_face_create (<em class="parameter"><code><span class="type">CGFontRef</span> cg_font</code></em>);</pre>
-<p>Creates an <a class="link" href="harfbuzz-hb-face.html#hb-face-t"><span class="type">hb_face_t</span></a> face object from the specified
+<p>Creates an <a class="link" href="harfbuzz-hb-face.html#hb-face-t" title="hb_face_t"><span class="type">hb_face_t</span></a> face object from the specified
 CGFontRef.</p>
 <div class="refsect3">
-<a name="id-1.3.7.2.8.2.5"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<a name="hb-coretext-face-create.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -136,22 +130,21 @@ CGFontRef.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.7.2.8.2.6"></a><h4>Returns</h4>
-<p> the new <a class="link" href="harfbuzz-hb-face.html#hb-face-t"><span class="type">hb_face_t</span></a> face object</p>
-<p></p>
+<a name="hb-coretext-face-create.returns"></a><h4>Returns</h4>
+<p> the new <a class="link" href="harfbuzz-hb-face.html#hb-face-t" title="hb_face_t"><span class="type">hb_face_t</span></a> face object</p>
 </div>
-<p class="since">Since 0.9.10</p>
+<p class="since">Since: <a class="link" href="api-index-0-9-10.html#api-index-0.9.10">0.9.10</a></p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="hb-coretext-font-create"></a><h3>hb_coretext_font_create ()</h3>
-<pre class="programlisting"><a class="link" href="harfbuzz-hb-font.html#hb-font-t"><span class="returnvalue">hb_font_t</span></a> *
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="returnvalue">hb_font_t</span></a> *
 hb_coretext_font_create (<em class="parameter"><code><span class="type">CTFontRef</span> ct_font</code></em>);</pre>
-<p>Creates an <a class="link" href="harfbuzz-hb-font.html#hb-font-t"><span class="type">hb_font_t</span></a> font object from the specified
+<p>Creates an <a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> font object from the specified
 CTFontRef.</p>
 <div class="refsect3">
-<a name="id-1.3.7.2.8.3.5"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<a name="hb-coretext-font-create.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -165,22 +158,21 @@ CTFontRef.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.7.2.8.3.6"></a><h4>Returns</h4>
-<p> the new <a class="link" href="harfbuzz-hb-font.html#hb-font-t"><span class="type">hb_font_t</span></a> font object</p>
-<p></p>
+<a name="hb-coretext-font-create.returns"></a><h4>Returns</h4>
+<p> the new <a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> font object</p>
 </div>
-<p class="since">Since 1.7.2</p>
+<p class="since">Since: 1.7.2</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="hb-coretext-face-get-cg-font"></a><h3>hb_coretext_face_get_cg_font ()</h3>
 <pre class="programlisting"><span class="returnvalue">CGFontRef</span>
-hb_coretext_face_get_cg_font (<em class="parameter"><code><a class="link" href="harfbuzz-hb-face.html#hb-face-t"><span class="type">hb_face_t</span></a> *face</code></em>);</pre>
-<p>Fetches the CGFontRef associated with an <a class="link" href="harfbuzz-hb-face.html#hb-face-t"><span class="type">hb_face_t</span></a>
+hb_coretext_face_get_cg_font (<em class="parameter"><code><a class="link" href="harfbuzz-hb-face.html#hb-face-t" title="hb_face_t"><span class="type">hb_face_t</span></a> *face</code></em>);</pre>
+<p>Fetches the CGFontRef associated with an <a class="link" href="harfbuzz-hb-face.html#hb-face-t" title="hb_face_t"><span class="type">hb_face_t</span></a>
 face object</p>
 <div class="refsect3">
-<a name="id-1.3.7.2.8.4.5"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<a name="hb-coretext-face-get-cg-font.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -188,23 +180,22 @@ face object</p>
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>face</p></td>
-<td class="parameter_description"><p>The <a class="link" href="harfbuzz-hb-face.html#hb-face-t"><span class="type">hb_face_t</span></a> to work upon</p></td>
+<td class="parameter_description"><p>The <a class="link" href="harfbuzz-hb-face.html#hb-face-t" title="hb_face_t"><span class="type">hb_face_t</span></a> to work upon</p></td>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.7.2.8.4.6"></a><h4>Returns</h4>
+<a name="hb-coretext-face-get-cg-font.returns"></a><h4>Returns</h4>
 <p> the CGFontRef found</p>
-<p></p>
 </div>
-<p class="since">Since 0.9.10</p>
+<p class="since">Since: <a class="link" href="api-index-0-9-10.html#api-index-0.9.10">0.9.10</a></p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="hb-coretext-font-get-ct-font"></a><h3>hb_coretext_font_get_ct_font ()</h3>
 <pre class="programlisting"><span class="returnvalue">CTFontRef</span>
-hb_coretext_font_get_ct_font (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t"><span class="type">hb_font_t</span></a> *font</code></em>);</pre>
+hb_coretext_font_get_ct_font (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> *font</code></em>);</pre>
 </div>
 </div>
 <div class="refsect1">
@@ -241,7 +232,6 @@ https://developer.apple.com/fonts/TrueType-Reference-Manual/RM06/Chap6morx.html<
 </div>
 </div>
 <div class="footer">
-<hr>
-          Generated by GTK-Doc V1.20</div>
+<hr>Generated by GTK-Doc V1.27</div>
 </body>
 </html>
