@@ -76,22 +76,6 @@
 <span class="returnvalue">void</span>
 </td>
 <td class="function_name">
-<a class="link" href="harfbuzz-hb-ot-layout.html#hb-ot-layout-closure-lookups" title="hb_ot_layout_closure_lookups ()">hb_ot_layout_closure_lookups</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<span class="returnvalue">void</span>
-</td>
-<td class="function_name">
-<a class="link" href="harfbuzz-hb-ot-layout.html#hb-ot-layout-closure-features" title="hb_ot_layout_closure_features ()">hb_ot_layout_closure_features</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<span class="returnvalue">void</span>
-</td>
-<td class="function_name">
 <a class="link" href="harfbuzz-hb-ot-layout.html#hb-ot-layout-collect-lookups" title="hb_ot_layout_collect_lookups ()">hb_ot_layout_collect_lookups</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
@@ -550,88 +534,6 @@ and
 </table></div>
 </div>
 <p class="since">Since: <a class="link" href="api-index-2-0-0.html#api-index-2.0.0">2.0.0</a></p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="hb-ot-layout-closure-lookups"></a><h3>hb_ot_layout_closure_lookups ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>
-hb_ot_layout_closure_lookups (<em class="parameter"><code><a class="link" href="harfbuzz-hb-face.html#hb-face-t" title="hb_face_t"><span class="type">hb_face_t</span></a> *face</code></em>,
-                              <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="type">hb_tag_t</span></a> table_tag</code></em>,
-                              <em class="parameter"><code>const <a class="link" href="harfbuzz-hb-set.html#hb-set-t" title="hb_set_t"><span class="type">hb_set_t</span></a> *glyphs</code></em>,
-                              <em class="parameter"><code><a class="link" href="harfbuzz-hb-set.html#hb-set-t" title="hb_set_t"><span class="type">hb_set_t</span></a> *lookup_indexes</code></em>);</pre>
-<p>Returns all inactive lookups reachable from lookup_indices</p>
-<div class="refsect3">
-<a name="hb-ot-layout-closure-lookups.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>face</p></td>
-<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-face.html#hb-face-t" title="hb_face_t"><span class="type">hb_face_t</span></a> to work upon</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>table_tag</p></td>
-<td class="parameter_description"><p>HB_OT_TAG_GSUB or HB_OT_TAG_GPOS</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>lookup_indexes</p></td>
-<td class="parameter_description"><p>lookup_indices collected from feature
-list. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>]</span></td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<p class="since">Since: EXPERIMENTAL</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="hb-ot-layout-closure-features"></a><h3>hb_ot_layout_closure_features ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>
-hb_ot_layout_closure_features (<em class="parameter"><code><a class="link" href="harfbuzz-hb-face.html#hb-face-t" title="hb_face_t"><span class="type">hb_face_t</span></a> *face</code></em>,
-                               <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="type">hb_tag_t</span></a> table_tag</code></em>,
-                               <em class="parameter"><code>const <a class="link" href="harfbuzz-hb-map.html#hb-map-t" title="hb_map_t"><span class="type">hb_map_t</span></a> *lookup_indexes</code></em>,
-                               <em class="parameter"><code><a class="link" href="harfbuzz-hb-set.html#hb-set-t" title="hb_set_t"><span class="type">hb_set_t</span></a> *feature_indexes</code></em>);</pre>
-<p>Returns all active feature indexes</p>
-<div class="refsect3">
-<a name="hb-ot-layout-closure-features.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>face</p></td>
-<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-face.html#hb-face-t" title="hb_face_t"><span class="type">hb_face_t</span></a> to work upon</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>table_tag</p></td>
-<td class="parameter_description"><p>HB_OT_TAG_GSUB or HB_OT_TAG_GPOS</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>lookup_indexes</p></td>
-<td class="parameter_description"><p>collected active lookup_indices. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
-</tr>
-<tr>
-<td class="parameter_name"><p>feature_indexes</p></td>
-<td class="parameter_description"><p>all active feature indexes collected. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<p class="since">Since: EXPERIMENTAL</p>
 </div>
 <hr>
 <div class="refsect2">
