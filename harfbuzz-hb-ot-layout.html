@@ -673,11 +673,6 @@ hb_ot_layout_feature_get_characters (<em class="parameter"><code><a class="link"
                                      <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> *characters</code></em>);</pre>
 <p>Fetches a list of the characters defined as having a variant under the specified
 "Character Variant" ("cvXX") feature tag.</p>
-<div class="note">Note: If the char_count output value is equal to its input value, then there
-      is a chance there were more characters defined under the feature tag than were
-      returned. This function can be called with incrementally larger start_offset
-      until the char_count output value is lower than its input value, or the size
-      of the characters array can be increased.</div>
 <div class="refsect3">
 <a name="hb-ot-layout-feature-get-characters.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
