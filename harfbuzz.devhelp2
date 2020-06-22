@@ -579,7 +579,7 @@
     <keyword type="function" name="hb_ot_layout_language_get_feature_tags ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-language-get-feature-tags"/>
     <keyword type="function" name="hb_ot_layout_language_get_required_feature ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-language-get-required-feature" since="0.9.30"/>
     <keyword type="function" name="hb_ot_layout_lookup_collect_glyphs ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-lookup-collect-glyphs" since="0.9.7"/>
-    <keyword type="function" name="hb_ot_layout_lookup_get_glyph_alternates ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-lookup-get-glyph-alternates" since="REPLACEME"/>
+    <keyword type="function" name="hb_ot_layout_lookup_get_glyph_alternates ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-lookup-get-glyph-alternates" since="2.6.8"/>
     <keyword type="function" name="hb_ot_layout_lookup_substitute_closure ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-lookup-substitute-closure" since="0.9.7"/>
     <keyword type="function" name="hb_ot_layout_lookups_substitute_closure ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-lookups-substitute-closure" since="1.8.1"/>
     <keyword type="function" name="hb_ot_layout_lookup_would_substitute ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-lookup-would-substitute" since="0.9.7"/>
