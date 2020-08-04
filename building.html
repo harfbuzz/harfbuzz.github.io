@@ -57,8 +57,8 @@
     </p>
 <p>
       From a shell in the top-level directory of the extracted source
-      code, you can run <span class="command"><strong>./configure</strong></span> followed by
-      <span class="command"><strong>make</strong></span> as with any other standard package.
+      code, you can run <span class="command"><strong>meson build</strong></span> followed by
+      <span class="command"><strong>meson compile -C build</strong></span> as with any other standard package.
     </p>
 <p>
       This should leave you with a shared
@@ -71,45 +71,35 @@
       <span class="emphasis"><em>(2)(b)</em></span> If you are building from the source in the HarfBuzz git
       repository, rather than installing from a downloaded tarball
       release, then you must install two more auxiliary tools before you 
-      can build for the first time: <span class="package">pkg-config</span> and
-      <a class="ulink" href="http://www.complang.org/ragel/" target="_top">ragel</a>.
+      can build for the first time: <span class="package">pkg-config</span>.
     </p>
 <p>
       On Ubuntu or Debian, run:
       </p>
 <pre class="programlisting">
-	<span class="command"><strong>sudo apt-get install</strong></span> <span class="package">autoconf automake libtool pkg-config ragel gtk-doc-tools</span>
+	<span class="command"><strong>sudo apt-get install</strong></span> <span class="package">meson pkg-config gtk-doc-tools</span>
       </pre>
 <p>
       On Fedora, RHEL, CentOS, run:
       </p>
 <pre class="programlisting">
-	<span class="command"><strong>sudo yum install</strong></span> <span class="package">autoconf automake libtool pkgconfig ragel gtk-doc</span>
+	<span class="command"><strong>sudo yum install</strong></span> <span class="package">meson pkgconfig gtk-doc</span>
       </pre>
 <p>
       
     </p>
 <p>
-      With <span class="package">pkg-config</span> and <span class="package">ragel</span>
-      installed, you can now run <span class="command"><strong>./autogen.sh</strong></span>,
-      followed by <span class="command"><strong>./configure</strong></span> and
-      <span class="command"><strong>make</strong></span> to build HarfBuzz.
+      With <span class="package">pkg-config</span> installed, you can now run
+      <span class="command"><strong>meson build</strong></span> then
+      <span class="command"><strong>meson compile -C build</strong></span> to build HarfBuzz.
     </p>
 </div>
 <div class="section">
 <div class="titlepage"><div><div><h3 class="title">
 <a name="building.windows"></a>Building on Windows</h3></div></div></div>
 <p>
-	On Windows, consider using Microsoft's free <a class="ulink" href="https://github.com/Microsoft/vcpkg" target="_top">vcpkg</a> utility
-	to build HarfBuzz, its dependencies, and other open-source
-	libraries. 
-      </p>
-<p>
-	If you need to build HarfBuzz from source, first put the
-	<span class="package">ragel</span> binary on your
-	<code class="literal">PATH</code>, then follow the appveyor CI cmake
-	<a class="ulink" href="https://github.com/harfbuzz/harfbuzz/blob/master/appveyor.yml" target="_top">build
-	instructions</a>. 
+	Install meson and use it like `meson build --wrap-mode=default`
+	or use vcpkg.
       </p>
 </div>
 <div class="section">
@@ -149,13 +139,13 @@
 	open a Terminal in the extracted source-code directory. Run:
 	</p>
 <pre class="programlisting">
-	  <span class="command"><strong>./configure</strong></span>
+	  <span class="command"><strong>meson build</strong></span>
 	</pre>
 <p>
 	followed by:
 	</p>
 <pre class="programlisting">	
-	  <span class="command"><strong>make</strong></span>
+	  <span class="command"><strong>meson compile -C build</strong></span>
 	</pre>
 <p>
 	to build HarfBuzz.
@@ -170,7 +160,7 @@
 	using MacPorts, you should run:
       </p>
 <pre class="programlisting">
-	<span class="command"><strong>sudo port install</strong></span> <span class="package">autoconf automake libtool pkgconfig ragel gtk-doc</span> 
+	<span class="command"><strong>sudo port install</strong></span> <span class="package">meson pkgconfig gtk-doc</span> 
       </pre>
 <p>
       to install the build dependencies.
@@ -178,13 +168,13 @@
 <p>If you are using Homebrew, you should run:
 	</p>
 <pre class="programlisting">	
-	  <span class="command"><strong>brew install</strong></span> <span class="package">autoconf automake libtool pkgconfig ragel gtk-doc</span>
+	  <span class="command"><strong>brew install</strong></span> <span class="package">meson pkgconfig gtk-doc</span>
 	</pre>
 <p>
       	Finally, you can run:
 	</p>
 <pre class="programlisting">
-	  <span class="command"><strong>./autogen.sh</strong></span>
+	  <span class="command"><strong>meson build</strong></span>
 	</pre>
 <p>
       </p>
@@ -193,13 +183,13 @@
 	a MacPorts or a Homebrew system) by running:
 	</p>
 <pre class="programlisting">
-	  <span class="command"><strong>./configure</strong></span>
+	  <span class="command"><strong>meson build</strong></span>
 	</pre>
 <p>
 	followed by:
 	</p>
 <pre class="programlisting">
-	  <span class="command"><strong>make</strong></span>
+	  <span class="command"><strong>meson compile -C build</strong></span>
 	</pre>
 <p>
       </p>
@@ -226,19 +216,7 @@
 </colgroup>
 <tbody>
 <tr>
-<td><p><span class="term"><span class="command"><strong>--with-libstdc++</strong></span></span></p></td>
-<td>
-<p>
-	      Allow linking with libstdc++. <span class="emphasis"><em>(Default = no)</em></span>
-	    </p>
-<p>
-	      This option enables or disables linking HarfBuzz to the
-	      system's libstdc++ library.
-	    </p>
-</td>
-</tr>
-<tr>
-<td><p><span class="term"><span class="command"><strong>--with-glib</strong></span></span></p></td>
+<td><p><span class="term"><span class="command"><strong>-Dglib=enabled</strong></span></span></p></td>
 <td>
 <p>
 	     Use <a class="ulink" href="https://developer.gnome.org/glib/" target="_top">GLib</a>. <span class="emphasis"><em>(Default = auto)</em></span>
@@ -253,7 +231,7 @@
 </td>
 </tr>
 <tr>
-<td><p><span class="term"><span class="command"><strong>--with-gobject</strong></span></span></p></td>
+<td><p><span class="term"><span class="command"><strong>-Dgobject=enabled</strong></span></span></p></td>
 <td>
 <p>
 	      Use <a class="ulink" href="https://developer.gnome.org/gobject/stable/" target="_top">GObject</a>. <span class="emphasis"><em>(Default = no)</em></span>
@@ -268,7 +246,7 @@
 </td>
 </tr>
 <tr>
-<td><p><span class="term"><span class="command"><strong>--with-cairo</strong></span></span></p></td>
+<td><p><span class="term"><span class="command"><strong>-Dcairo=enabled</strong></span></span></p></td>
 <td>
 <p>
 	      Use <a class="ulink" href="https://cairographics.org/" target="_top">Cairo</a>. <span class="emphasis"><em>(Default = auto)</em></span>
@@ -286,7 +264,7 @@
 </td>
 </tr>
 <tr>
-<td><p><span class="term"><span class="command"><strong>--with-fontconfig</strong></span></span></p></td>
+<td><p><span class="term"><span class="command"><strong>-Dfontconfig=enabled</strong></span></span></p></td>
 <td>
 <p>
 	      Use <a class="ulink" href="https://www.freedesktop.org/wiki/Software/fontconfig/" target="_top">Fontconfig</a>. <span class="emphasis"><em>(Default = auto)</em></span>
@@ -305,7 +283,7 @@
 </td>
 </tr>
 <tr>
-<td><p><span class="term"><span class="command"><strong>--with-icu</strong></span></span></p></td>
+<td><p><span class="term"><span class="command"><strong>-Dicu=enabled</strong></span></span></p></td>
 <td>
 <p>
 	      Use the <a class="ulink" href="http://site.icu-project.org/home" target="_top">ICU</a> library. <span class="emphasis"><em>(Default = auto)</em></span>
@@ -322,7 +300,7 @@
 </td>
 </tr>
 <tr>
-<td><p><span class="term"><span class="command"><strong>--with-graphite2</strong></span></span></p></td>
+<td><p><span class="term"><span class="command"><strong>-Dgraphite=enabled</strong></span></span></p></td>
 <td>
 <p>
 	      Use the <a class="ulink" href="http://graphite.sil.org/" target="_top">Graphite2</a> library. <span class="emphasis"><em>(Default = no)</em></span>
@@ -335,7 +313,7 @@
 </td>
 </tr>
 <tr>
-<td><p><span class="term"><span class="command"><strong>--with-freetype</strong></span></span></p></td>
+<td><p><span class="term"><span class="command"><strong>-Dfreetype=enabled</strong></span></span></p></td>
 <td>
 <p>
 	      Use the <a class="ulink" href="https://www.freetype.org/" target="_top">FreeType</a> library. <span class="emphasis"><em>(Default = auto)</em></span>
@@ -349,7 +327,7 @@
 </td>
 </tr>
 <tr>
-<td><p><span class="term"><span class="command"><strong>--with-uniscribe</strong></span></span></p></td>
+<td><p><span class="term"><span class="command"><strong>-Dgdi=enabled</strong></span></span></p></td>
 <td>
 <p>
 	      Use the <a class="ulink" href="https://docs.microsoft.com/en-us/windows/desktop/intl/uniscribe" target="_top">Uniscribe</a>
@@ -365,7 +343,7 @@
 </td>
 </tr>
 <tr>
-<td><p><span class="term"><span class="command"><strong>--with-directwrite</strong></span></span></p></td>
+<td><p><span class="term"><span class="command"><strong>-Ddirectwrite=enabled</strong></span></span></p></td>
 <td>
 <p>
 	      Use the <a class="ulink" href="https://docs.microsoft.com/en-us/windows/desktop/directwrite/direct-write-portal" target="_top">DirectWrite</a> library (experimental). <span class="emphasis"><em>(Default = no)</em></span>
@@ -380,7 +358,7 @@
 </td>
 </tr>
 <tr>
-<td><p><span class="term"><span class="command"><strong>--with-coretext</strong></span></span></p></td>
+<td><p><span class="term"><span class="command"><strong>-Dcoretext=enabled</strong></span></span></p></td>
 <td>
 <p>
 	      Use the <a class="ulink" href="https://developer.apple.com/documentation/coretext" target="_top">CoreText</a> library. <span class="emphasis"><em>(Default = no)</em></span>
@@ -392,7 +370,7 @@
 </td>
 </tr>
 <tr>
-<td><p><span class="term"><span class="command"><strong>--enable-gtk-doc</strong></span></span></p></td>
+<td><p><span class="term"><span class="command"><strong>-Ddocs=enabled</strong></span></span></p></td>
 <td>
 <p>
 	      Use <a class="ulink" href="https://www.gtk.org/gtk-doc/" target="_top">GTK-Doc</a>. <span class="emphasis"><em>(Default = no)</em></span>
