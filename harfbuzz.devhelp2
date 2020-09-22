@@ -1008,7 +1008,6 @@
     <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_TYPE_UPPER_CASE" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-TYPE-UPPER-CASE:CAPS"/>
     <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_TYPE_LANGUAGE_TAG_TYPE" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-TYPE-LANGUAGE-TAG-TYPE:CAPS"/>
     <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_TYPE_CJK_ROMAN_SPACING_TYPE" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-TYPE-CJK-ROMAN-SPACING-TYPE:CAPS"/>
-    <keyword type="constant" name="_HB_AAT_LAYOUT_FEATURE_TYPE_MAX_VALUE" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-TYPE-MAX-VALUE:CAPS"/>
     <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_INVALID" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-INVALID:CAPS"/>
     <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_ALL_TYPE_FEATURES_ON" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-ALL-TYPE-FEATURES-ON:CAPS"/>
     <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_ALL_TYPE_FEATURES_OFF" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-ALL-TYPE-FEATURES-OFF:CAPS"/>
@@ -1260,7 +1259,6 @@
     <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_PROPORTIONAL_CJK_ROMAN" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-PROPORTIONAL-CJK-ROMAN:CAPS"/>
     <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_DEFAULT_CJK_ROMAN" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-DEFAULT-CJK-ROMAN:CAPS"/>
     <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_FULL_WIDTH_CJK_ROMAN" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-FULL-WIDTH-CJK-ROMAN:CAPS"/>
-    <keyword type="constant" name="_HB_AAT_LAYOUT_FEATURE_SELECTOR_MAX_VALUE" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-MAX-VALUE:CAPS"/>
     <keyword type="member" name="hb-glyph-position-t.x-advance" link="harfbuzz-hb-buffer.html#hb-glyph-position-t.x-advance"/>
     <keyword type="member" name="hb-glyph-position-t.y-advance" link="harfbuzz-hb-buffer.html#hb-glyph-position-t.y-advance"/>
     <keyword type="member" name="hb-glyph-position-t.x-offset" link="harfbuzz-hb-buffer.html#hb-glyph-position-t.x-offset"/>
