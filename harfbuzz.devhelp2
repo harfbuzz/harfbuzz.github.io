@@ -633,10 +633,10 @@
     <keyword type="function" name="hb_ot_var_find_axis_info ()" link="harfbuzz-hb-ot-var.html#hb-ot-var-find-axis-info" since="2.2.0"/>
     <keyword type="function" name="hb_ot_var_get_axis_count ()" link="harfbuzz-hb-ot-var.html#hb-ot-var-get-axis-count" since="1.4.2"/>
     <keyword type="function" name="hb_ot_var_get_axis_infos ()" link="harfbuzz-hb-ot-var.html#hb-ot-var-get-axis-infos" since="2.2.0"/>
-    <keyword type="function" name="hb_ot_var_get_named_instance_count ()" link="harfbuzz-hb-ot-var.html#hb-ot-var-get-named-instance-count"/>
-    <keyword type="function" name="hb_ot_var_named_instance_get_subfamily_name_id ()" link="harfbuzz-hb-ot-var.html#hb-ot-var-named-instance-get-subfamily-name-id"/>
-    <keyword type="function" name="hb_ot_var_named_instance_get_postscript_name_id ()" link="harfbuzz-hb-ot-var.html#hb-ot-var-named-instance-get-postscript-name-id"/>
-    <keyword type="function" name="hb_ot_var_named_instance_get_design_coords ()" link="harfbuzz-hb-ot-var.html#hb-ot-var-named-instance-get-design-coords"/>
+    <keyword type="function" name="hb_ot_var_get_named_instance_count ()" link="harfbuzz-hb-ot-var.html#hb-ot-var-get-named-instance-count" since="2.2.0"/>
+    <keyword type="function" name="hb_ot_var_named_instance_get_subfamily_name_id ()" link="harfbuzz-hb-ot-var.html#hb-ot-var-named-instance-get-subfamily-name-id" since="2.2.0"/>
+    <keyword type="function" name="hb_ot_var_named_instance_get_postscript_name_id ()" link="harfbuzz-hb-ot-var.html#hb-ot-var-named-instance-get-postscript-name-id" since="2.2.0"/>
+    <keyword type="function" name="hb_ot_var_named_instance_get_design_coords ()" link="harfbuzz-hb-ot-var.html#hb-ot-var-named-instance-get-design-coords" since="2.2.0"/>
     <keyword type="function" name="hb_ot_var_normalize_variations ()" link="harfbuzz-hb-ot-var.html#hb-ot-var-normalize-variations" since="1.4.2"/>
     <keyword type="function" name="hb_ot_var_normalize_coords ()" link="harfbuzz-hb-ot-var.html#hb-ot-var-normalize-coords" since="1.4.2"/>
     <keyword type="macro" name="HB_OT_TAG_VAR_AXIS_ITALIC" link="harfbuzz-hb-ot-var.html#HB-OT-TAG-VAR-AXIS-ITALIC:CAPS"/>
