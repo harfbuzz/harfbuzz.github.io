@@ -481,8 +481,8 @@
     <keyword type="typedef" name="hb_set_t" link="harfbuzz-hb-set.html#hb-set-t"/>
     <keyword type="function" name="hb_shape_plan_create ()" link="harfbuzz-hb-shape-plan.html#hb-shape-plan-create" since="0.9.7"/>
     <keyword type="function" name="hb_shape_plan_create_cached ()" link="harfbuzz-hb-shape-plan.html#hb-shape-plan-create-cached" since="0.9.7"/>
-    <keyword type="function" name="hb_shape_plan_create2 ()" link="harfbuzz-hb-shape-plan.html#hb-shape-plan-create2" since="1.4.0"/>
-    <keyword type="function" name="hb_shape_plan_create_cached2 ()" link="harfbuzz-hb-shape-plan.html#hb-shape-plan-create-cached2" since="1.4.0"/>
+    <keyword type="function" name="hb_shape_plan_create2 ()" link="harfbuzz-hb-shape-plan.html#hb-shape-plan-create2"/>
+    <keyword type="function" name="hb_shape_plan_create_cached2 ()" link="harfbuzz-hb-shape-plan.html#hb-shape-plan-create-cached2"/>
     <keyword type="function" name="hb_shape_plan_destroy ()" link="harfbuzz-hb-shape-plan.html#hb-shape-plan-destroy" since="0.9.7"/>
     <keyword type="function" name="hb_shape_plan_execute ()" link="harfbuzz-hb-shape-plan.html#hb-shape-plan-execute" since="0.9.7"/>
     <keyword type="function" name="hb_shape_plan_get_empty ()" link="harfbuzz-hb-shape-plan.html#hb-shape-plan-get-empty" since="0.9.7"/>
@@ -502,7 +502,7 @@
     <keyword type="function" name="hb_unicode_decompose_func_t ()" link="harfbuzz-hb-unicode.html#hb-unicode-decompose-func-t"/>
     <keyword type="function" name="hb_unicode_funcs_create ()" link="harfbuzz-hb-unicode.html#hb-unicode-funcs-create" since="0.9.2"/>
     <keyword type="function" name="hb_unicode_funcs_destroy ()" link="harfbuzz-hb-unicode.html#hb-unicode-funcs-destroy" since="0.9.2"/>
-    <keyword type="function" name="hb_unicode_funcs_get_default ()" link="harfbuzz-hb-unicode.html#hb-unicode-funcs-get-default" since="0.9.2"/>
+    <keyword type="function" name="hb_unicode_funcs_get_default ()" link="harfbuzz-hb-unicode.html#hb-unicode-funcs-get-default"/>
     <keyword type="function" name="hb_unicode_funcs_get_empty ()" link="harfbuzz-hb-unicode.html#hb-unicode-funcs-get-empty" since="0.9.2"/>
     <keyword type="function" name="hb_unicode_funcs_get_parent ()" link="harfbuzz-hb-unicode.html#hb-unicode-funcs-get-parent" since="0.9.2"/>
     <keyword type="function" name="hb_unicode_funcs_get_user_data ()" link="harfbuzz-hb-unicode.html#hb-unicode-funcs-get-user-data" since="0.9.2"/>
