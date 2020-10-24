@@ -85,10 +85,12 @@
       determine which glyph to return.
     </p>
 <p>
-      The safest approach is to add all of the text available, then
-      use <em class="parameter"><code>item_offset</code></em> and
+      The safest approach is to add all of the text available (even
+      if your text contains a mix of scripts, directions, languages
+      and fonts), then use <em class="parameter"><code>item_offset</code></em> and
       <em class="parameter"><code>item_length</code></em> to indicate which characters you
-      want shaped, so that HarfBuzz has access to any context.
+      want shaped (which must all have the same script, direction,
+      language and font), so that HarfBuzz has access to any context.
     </p>
 <p>
       You can also add Unicode code points directly with
