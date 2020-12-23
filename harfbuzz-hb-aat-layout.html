@@ -108,6 +108,10 @@
 <td class="datatype_keyword">enum</td>
 <td class="function_name"><a class="link" href="harfbuzz-hb-aat-layout.html#hb-aat-layout-feature-selector-t" title="enum hb_aat_layout_feature_selector_t">hb_aat_layout_feature_selector_t</a></td>
 </tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="harfbuzz-hb-aat-layout.html#hb-aat-layout-feature-selector-info-t" title="hb_aat_layout_feature_selector_info_t">hb_aat_layout_feature_selector_info_t</a></td>
+</tr>
 </tbody>
 </table></div>
 </div>
@@ -168,7 +172,7 @@ hb_aat_layout_feature_type_get_selector_infos
                                 <em class="parameter"><code><a class="link" href="harfbuzz-hb-aat-layout.html#hb-aat-layout-feature-type-t" title="enum hb_aat_layout_feature_type_t"><span class="type">hb_aat_layout_feature_type_t</span></a> feature_type</code></em>,
                                 <em class="parameter"><code>unsigned <span class="type">int</span> start_offset</code></em>,
                                 <em class="parameter"><code>unsigned <span class="type">int</span> *selector_count</code></em>,
-                                <em class="parameter"><code><span class="type">hb_aat_layout_feature_selector_info_t</span> *selectors</code></em>,
+                                <em class="parameter"><code><a class="link" href="harfbuzz-hb-aat-layout.html#hb-aat-layout-feature-selector-info-t" title="hb_aat_layout_feature_selector_info_t"><span class="type">hb_aat_layout_feature_selector_info_t</span></a> *selectors</code></em>,
                                 <em class="parameter"><code>unsigned <span class="type">int</span> *default_index</code></em>);</pre>
 </div>
 <hr>
@@ -224,18 +228,86 @@ Output = the actual number of feature types returned (may be zero). </p></td>
 <a name="hb-aat-layout-has-positioning"></a><h3>hb_aat_layout_has_positioning ()</h3>
 <pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
 hb_aat_layout_has_positioning (<em class="parameter"><code><a class="link" href="harfbuzz-hb-face.html#hb-face-t" title="hb_face_t"><span class="type">hb_face_t</span></a> *face</code></em>);</pre>
+<p>Tests whether the specified face includes any positioning information
+in the <code class="literal">kerx</code> table.</p>
+<div class="note">Note: does not examine the `GPOS` table.</div>
+<div class="refsect3">
+<a name="hb-aat-layout-has-positioning.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>face</p></td>
+<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-face.html#hb-face-t" title="hb_face_t"><span class="type">hb_face_t</span></a> to work upon</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-aat-layout-has-positioning.returns"></a><h4>Returns</h4>
+<p> true if data found, false otherwise</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-3-0.html#api-index-2.3.0">2.3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="hb-aat-layout-has-substitution"></a><h3>hb_aat_layout_has_substitution ()</h3>
 <pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
 hb_aat_layout_has_substitution (<em class="parameter"><code><a class="link" href="harfbuzz-hb-face.html#hb-face-t" title="hb_face_t"><span class="type">hb_face_t</span></a> *face</code></em>);</pre>
+<p>Tests whether the specified face includes any substitutions in the
+<code class="literal">morx</code> or <code class="literal">mort</code> tables.</p>
+<div class="note">Note: does not examine the `GSUB` table.</div>
+<div class="refsect3">
+<a name="hb-aat-layout-has-substitution.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>face</p></td>
+<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-face.html#hb-face-t" title="hb_face_t"><span class="type">hb_face_t</span></a> to work upon</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-aat-layout-has-substitution.returns"></a><h4>Returns</h4>
+<p> true if data found, false otherwise</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-3-0.html#api-index-2.3.0">2.3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="hb-aat-layout-has-tracking"></a><h3>hb_aat_layout_has_tracking ()</h3>
 <pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
 hb_aat_layout_has_tracking (<em class="parameter"><code><a class="link" href="harfbuzz-hb-face.html#hb-face-t" title="hb_face_t"><span class="type">hb_face_t</span></a> *face</code></em>);</pre>
+<p>Tests whether the specified face includes any tracking information
+in the <code class="literal">trak</code> table.</p>
+<div class="refsect3">
+<a name="hb-aat-layout-has-tracking.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>face</p></td>
+<td class="parameter_description"><p>: <a class="link" href="harfbuzz-hb-face.html#hb-face-t" title="hb_face_t"><span class="type">hb_face_t</span></a> to work upon</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-aat-layout-has-tracking.returns"></a><h4>Returns</h4>
+<p> true if data found, false otherwise</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-3-0.html#api-index-2.3.0">2.3.0</a></p>
 </div>
 </div>
 <div class="refsect1">
@@ -2241,6 +2313,16 @@ there is no selector index corresponding to the selector of interest.</p>
 </table></div>
 </div>
 <p class="since">Since: <a class="link" href="api-index-2-2-0.html#api-index-2.2.0">2.2.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-aat-layout-feature-selector-info-t"></a><h3>hb_aat_layout_feature_selector_info_t</h3>
+<pre class="programlisting">typedef struct {
+  hb_ot_name_id_t			name_id;
+  hb_aat_layout_feature_selector_t enable;
+  hb_aat_layout_feature_selector_t disable;
+} hb_aat_layout_feature_selector_info_t;
+</pre>
 </div>
 </div>
 </div>

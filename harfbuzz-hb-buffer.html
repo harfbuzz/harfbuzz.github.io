@@ -328,7 +328,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<span class="returnvalue">hb_glyph_info_t</span> *
+<a class="link" href="harfbuzz-hb-buffer.html#hb-glyph-info-t" title="hb_glyph_info_t"><span class="returnvalue">hb_glyph_info_t</span></a> *
 </td>
 <td class="function_name">
 <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-get-glyph-infos" title="hb_buffer_get_glyph_infos ()">hb_buffer_get_glyph_infos</a> <span class="c_punctuation">()</span>
@@ -418,6 +418,13 @@
 <td class="function_type">unsigned <span class="returnvalue">int</span>
 </td>
 <td class="function_name">
+<a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-serialize" title="hb_buffer_serialize ()">hb_buffer_serialize</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">unsigned <span class="returnvalue">int</span>
+</td>
+<td class="function_name">
 <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-serialize-glyphs" title="hb_buffer_serialize_glyphs ()">hb_buffer_serialize_glyphs</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
@@ -427,6 +434,21 @@
 </td>
 <td class="function_name">
 <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-deserialize-glyphs" title="hb_buffer_deserialize_glyphs ()">hb_buffer_deserialize_glyphs</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">unsigned <span class="returnvalue">int</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-serialize-unicode" title="hb_buffer_serialize_unicode ()">hb_buffer_serialize_unicode</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-deserialize-unicode" title="hb_buffer_deserialize_unicode ()">hb_buffer_deserialize_unicode</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 <tr>
@@ -520,6 +542,10 @@
 <tr>
 <td class="typedef_keyword">typedef</td>
 <td class="function_name"><a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t">hb_buffer_t</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="harfbuzz-hb-buffer.html#hb-glyph-info-t" title="hb_glyph_info_t">hb_glyph_info_t</a></td>
 </tr>
 <tr>
 <td class="datatype_keyword">enum</td>
@@ -790,7 +816,7 @@ gives it the initial cluster value of <em class="parameter"><code>cluster</code>
 . Clusters can be any thing
 the client wants, they are usually used to refer to the index of the
 character in the input text stream and are output in
-<span class="type">hb_glyph_info_t.cluster</span> field.</p>
+<a class="link" href="harfbuzz-hb-buffer.html#hb-glyph-info-t.cluster"><span class="type">hb_glyph_info_t.cluster</span></a> field.</p>
 <p>This function does not check the validity of <em class="parameter"><code>codepoint</code></em>
 , it is up to the
 caller to ensure it is a valid Unicode code point.</p>
@@ -1809,7 +1835,7 @@ hb_buffer_get_user_data (<em class="parameter"><code><a class="link" href="harfb
 <hr>
 <div class="refsect2">
 <a name="hb-buffer-get-glyph-infos"></a><h3>hb_buffer_get_glyph_infos ()</h3>
-<pre class="programlisting"><span class="returnvalue">hb_glyph_info_t</span> *
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-buffer.html#hb-glyph-info-t" title="hb_glyph_info_t"><span class="returnvalue">hb_glyph_info_t</span></a> *
 hb_buffer_get_glyph_infos (<em class="parameter"><code><a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a> *buffer</code></em>,
                            <em class="parameter"><code>unsigned <span class="type">int</span> *length</code></em>);</pre>
 <p>Returns <em class="parameter"><code>buffer</code></em>
@@ -2155,6 +2181,95 @@ same cluster number) are reversed again.</p>
 </div>
 <hr>
 <div class="refsect2">
+<a name="hb-buffer-serialize"></a><h3>hb_buffer_serialize ()</h3>
+<pre class="programlisting">unsigned <span class="returnvalue">int</span>
+hb_buffer_serialize (<em class="parameter"><code><a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a> *buffer</code></em>,
+                     <em class="parameter"><code>unsigned <span class="type">int</span> start</code></em>,
+                     <em class="parameter"><code>unsigned <span class="type">int</span> end</code></em>,
+                     <em class="parameter"><code><span class="type">char</span> *buf</code></em>,
+                     <em class="parameter"><code>unsigned <span class="type">int</span> buf_size</code></em>,
+                     <em class="parameter"><code>unsigned <span class="type">int</span> *buf_consumed</code></em>,
+                     <em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> *font</code></em>,
+                     <em class="parameter"><code><a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-serialize-format-t" title="enum hb_buffer_serialize_format_t"><span class="type">hb_buffer_serialize_format_t</span></a> format</code></em>,
+                     <em class="parameter"><code><a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-serialize-flags-t" title="enum hb_buffer_serialize_flags_t"><span class="type">hb_buffer_serialize_flags_t</span></a> flags</code></em>);</pre>
+<p>Serializes <em class="parameter"><code>buffer</code></em>
+ into a textual representation of its content, whether
+Unicode codepoints or glyph identifiers and positioning information. This is
+useful for showing the contents of the buffer, for example during debugging.
+See the documentation of <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-serialize-unicode" title="hb_buffer_serialize_unicode ()"><code class="function">hb_buffer_serialize_unicode()</code></a> and
+<a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-serialize-glyphs" title="hb_buffer_serialize_glyphs ()"><code class="function">hb_buffer_serialize_glyphs()</code></a> for a description of the output format.</p>
+<div class="refsect3">
+<a name="hb-buffer-serialize.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>buffer</p></td>
+<td class="parameter_description"><p>an <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a> buffer.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>start</p></td>
+<td class="parameter_description"><p>the first item in <em class="parameter"><code>buffer</code></em>
+to serialize.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>end</p></td>
+<td class="parameter_description"><p>the last item in <em class="parameter"><code>buffer</code></em>
+to serialize.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>buf</p></td>
+<td class="parameter_description"><p>output string to
+write serialized buffer into. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=buf_size][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> uint8_t]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>buf_size</p></td>
+<td class="parameter_description"><p>the size of <em class="parameter"><code>buf</code></em>
+.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>buf_consumed</p></td>
+<td class="parameter_description"><p>if not <code class="literal">NULL</code>, will be set to the number of byes written into <em class="parameter"><code>buf</code></em>
+. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>font</p></td>
+<td class="parameter_description"><p>the <a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> used to shape this buffer, needed to
+read glyph names and extents. If <code class="literal">NULL</code>, and empty font will be used. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>format</p></td>
+<td class="parameter_description"><p>the <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-serialize-format-t" title="enum hb_buffer_serialize_format_t"><span class="type">hb_buffer_serialize_format_t</span></a> to use for formatting the output.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>flags</p></td>
+<td class="parameter_description"><p>the <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-serialize-flags-t" title="enum hb_buffer_serialize_flags_t"><span class="type">hb_buffer_serialize_flags_t</span></a> that control what glyph properties
+to serialize.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-buffer-serialize.returns"></a><h4>Returns</h4>
+<p>The number of serialized items.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-7-3.html#api-index-2.7.3">2.7.3</a></p>
+</div>
+<hr>
+<div class="refsect2">
 <a name="hb-buffer-serialize-glyphs"></a><h3>hb_buffer_serialize_glyphs ()</h3>
 <pre class="programlisting">unsigned <span class="returnvalue">int</span>
 hb_buffer_serialize_glyphs (<em class="parameter"><code><a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a> *buffer</code></em>,
@@ -2171,7 +2286,7 @@ hb_buffer_serialize_glyphs (<em class="parameter"><code><a class="link" href="ha
 useful for showing the contents of the buffer, for example during debugging.
 There are currently two supported serialization formats:</p>
 <div class="refsect3">
-<a name="id-1.3.4.3.7.49.5"></a><h4>text</h4>
+<a name="id-1.3.4.3.7.50.5"></a><h4>text</h4>
 <p>A human-readable, plain text format.
 The serialized glyphs will look something like:</p>
 <p><code class="literal">
@@ -2184,7 +2299,7 @@ The serialized glyphs will look something like:</p>
 <p>Each glyph starts with glyph name, or glyph index if
 <a class="link" href="harfbuzz-hb-buffer.html#HB-BUFFER-SERIALIZE-FLAG-NO-GLYPH-NAMES:CAPS"><span class="type">HB_BUFFER_SERIALIZE_FLAG_NO_GLYPH_NAMES</span></a> flag is set. Then,</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; ">
-<li class="listitem"><p>If <a class="link" href="harfbuzz-hb-buffer.html#HB-BUFFER-SERIALIZE-FLAG-NO-CLUSTERS:CAPS"><span class="type">HB_BUFFER_SERIALIZE_FLAG_NO_CLUSTERS</span></a> is not set, <code class="literal">=</code> then <span class="type">hb_glyph_info_t.cluster</span>.</p></li>
+<li class="listitem"><p>If <a class="link" href="harfbuzz-hb-buffer.html#HB-BUFFER-SERIALIZE-FLAG-NO-CLUSTERS:CAPS"><span class="type">HB_BUFFER_SERIALIZE_FLAG_NO_CLUSTERS</span></a> is not set, <code class="literal">=</code> then <a class="link" href="harfbuzz-hb-buffer.html#hb-glyph-info-t.cluster"><span class="type">hb_glyph_info_t.cluster</span></a>.</p></li>
 <li class="listitem">
 <p>If <a class="link" href="harfbuzz-hb-buffer.html#HB-BUFFER-SERIALIZE-FLAG-NO-POSITIONS:CAPS"><span class="type">HB_BUFFER_SERIALIZE_FLAG_NO_POSITIONS</span></a> is not set, the <a class="link" href="harfbuzz-hb-buffer.html#hb-glyph-position-t" title="hb_glyph_position_t"><span class="type">hb_glyph_position_t</span></a> in the format:</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: square; ">
@@ -2192,26 +2307,24 @@ The serialized glyphs will look something like:</p>
 <li class="listitem"><p><code class="literal">+x_advance</code>, then <code class="literal">,y_advance</code> if <a class="link" href="harfbuzz-hb-buffer.html#hb-glyph-position-t.y-advance"><span class="type">hb_glyph_position_t.y_advance</span></a> is not 0. Then,</p></li>
 </ul></div>
 </li>
-<li class="listitem"><p>If <a class="link" href="harfbuzz-hb-buffer.html#HB-BUFFER-SERIALIZE-FLAG-GLYPH-EXTENTS:CAPS"><span class="type">HB_BUFFER_SERIALIZE_FLAG_GLYPH_EXTENTS</span></a> is set, the
-<span class="type">hb_glyph_extents_t</span> in the format
-<code class="literal">&amp;lt;x_bearing,y_bearing,width,height&amp;gt;</code></p></li>
+<li class="listitem"><p>If <a class="link" href="harfbuzz-hb-buffer.html#HB-BUFFER-SERIALIZE-FLAG-GLYPH-EXTENTS:CAPS"><span class="type">HB_BUFFER_SERIALIZE_FLAG_GLYPH_EXTENTS</span></a> is set, the <span class="type">hb_glyph_extents_t</span> in the format <code class="literal">&lt;x_bearing,y_bearing,width,height&gt;</code></p></li>
 </ul></div>
 </li>
 </ul></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.4.3.7.49.6"></a><h4>json</h4>
+<a name="id-1.3.4.3.7.50.6"></a><h4>json</h4>
 <p>A machine-readable, structured format.
 The serialized glyphs will look something like:</p>
 <p><code class="literal">
 [{"g":"uni0651","cl":0,"dx":518,"dy":0,"ax":0,"ay":0},
 {"g":"uni0628","cl":0,"dx":0,"dy":0,"ax":1897,"ay":0}]
-</code>
-Each glyph is a JSON object, with the following properties:</p>
+</code></p>
+<p>Each glyph is a JSON object, with the following properties:</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem"><p><code class="literal">g</code>: the glyph name or glyph index if
 <a class="link" href="harfbuzz-hb-buffer.html#HB-BUFFER-SERIALIZE-FLAG-NO-GLYPH-NAMES:CAPS"><span class="type">HB_BUFFER_SERIALIZE_FLAG_NO_GLYPH_NAMES</span></a> flag is set.</p></li>
-<li class="listitem"><p><code class="literal">cl</code>: <span class="type">hb_glyph_info_t.cluster</span> if
+<li class="listitem"><p><code class="literal">cl</code>: <a class="link" href="harfbuzz-hb-buffer.html#hb-glyph-info-t.cluster"><span class="type">hb_glyph_info_t.cluster</span></a> if
 <a class="link" href="harfbuzz-hb-buffer.html#HB-BUFFER-SERIALIZE-FLAG-NO-CLUSTERS:CAPS"><span class="type">HB_BUFFER_SERIALIZE_FLAG_NO_CLUSTERS</span></a> is not set.</p></li>
 <li class="listitem"><p><code class="literal">dx</code>,<code class="literal">dy</code>,<code class="literal">ax</code>,<code class="literal">ay</code>: <a class="link" href="harfbuzz-hb-buffer.html#hb-glyph-position-t.x-offset"><span class="type">hb_glyph_position_t.x_offset</span></a>, <a class="link" href="harfbuzz-hb-buffer.html#hb-glyph-position-t.y-offset"><span class="type">hb_glyph_position_t.y_offset</span></a>,
 <a class="link" href="harfbuzz-hb-buffer.html#hb-glyph-position-t.x-advance"><span class="type">hb_glyph_position_t.x_advance</span></a> and <a class="link" href="harfbuzz-hb-buffer.html#hb-glyph-position-t.y-advance"><span class="type">hb_glyph_position_t.y_advance</span></a>
@@ -2329,6 +2442,149 @@ hb_buffer_deserialize_glyphs (<em class="parameter"><code><a class="link" href="
 </table></div>
 </div>
 <p class="since">Since: <a class="link" href="api-index-0-9-7.html#api-index-0.9.7">0.9.7</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-buffer-serialize-unicode"></a><h3>hb_buffer_serialize_unicode ()</h3>
+<pre class="programlisting">unsigned <span class="returnvalue">int</span>
+hb_buffer_serialize_unicode (<em class="parameter"><code><a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a> *buffer</code></em>,
+                             <em class="parameter"><code>unsigned <span class="type">int</span> start</code></em>,
+                             <em class="parameter"><code>unsigned <span class="type">int</span> end</code></em>,
+                             <em class="parameter"><code><span class="type">char</span> *buf</code></em>,
+                             <em class="parameter"><code>unsigned <span class="type">int</span> buf_size</code></em>,
+                             <em class="parameter"><code>unsigned <span class="type">int</span> *buf_consumed</code></em>,
+                             <em class="parameter"><code><a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-serialize-format-t" title="enum hb_buffer_serialize_format_t"><span class="type">hb_buffer_serialize_format_t</span></a> format</code></em>,
+                             <em class="parameter"><code><a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-serialize-flags-t" title="enum hb_buffer_serialize_flags_t"><span class="type">hb_buffer_serialize_flags_t</span></a> flags</code></em>);</pre>
+<p>Serializes <em class="parameter"><code>buffer</code></em>
+ into a textual representation of its content,
+when the buffer contains Unicode codepoints (i.e., before shaping). This is
+useful for showing the contents of the buffer, for example during debugging.
+There are currently two supported serialization formats:</p>
+<div class="refsect3">
+<a name="id-1.3.4.3.7.52.5"></a><h4>text</h4>
+<p>A human-readable, plain text format.
+The serialized codepoints will look something like:</p>
+<p><code class="literal">
+ &lt;U+0651=0|U+0628=1&gt;
+</code></p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Glyphs are separated with <code class="literal">|</code></p></li>
+<li class="listitem"><p>Unicode codepoints are expressed as zero-padded four (or more)
+digit hexadecimal numbers preceded by <code class="literal">U+</code></p></li>
+<li class="listitem"><p>If <a class="link" href="harfbuzz-hb-buffer.html#HB-BUFFER-SERIALIZE-FLAG-NO-CLUSTERS:CAPS"><span class="type">HB_BUFFER_SERIALIZE_FLAG_NO_CLUSTERS</span></a> is not set, the cluster
+will be indicated with a <code class="literal">=</code> then <a class="link" href="harfbuzz-hb-buffer.html#hb-glyph-info-t.cluster"><span class="type">hb_glyph_info_t.cluster</span></a>.</p></li>
+</ul></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.4.3.7.52.6"></a><h4>json</h4>
+<p>A machine-readable, structured format.
+The serialized codepoints will be a list of objects with the following
+properties:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p><code class="literal">u</code>: the Unicode codepoint as a decimal integer</p></li>
+<li class="listitem"><p><code class="literal">cl</code>: <a class="link" href="harfbuzz-hb-buffer.html#hb-glyph-info-t.cluster"><span class="type">hb_glyph_info_t.cluster</span></a> if
+<a class="link" href="harfbuzz-hb-buffer.html#HB-BUFFER-SERIALIZE-FLAG-NO-CLUSTERS:CAPS"><span class="type">HB_BUFFER_SERIALIZE_FLAG_NO_CLUSTERS</span></a> is not set.</p></li>
+</ul></div>
+<p>For example:</p>
+<p><code class="literal">
+[{u:1617,cl:0},{u:1576,cl:1}]
+</code></p>
+</div>
+<div class="refsect3">
+<a name="hb-buffer-serialize-unicode.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>buffer</p></td>
+<td class="parameter_description"><p>an <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a> buffer.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>start</p></td>
+<td class="parameter_description"><p>the first item in <em class="parameter"><code>buffer</code></em>
+to serialize.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>end</p></td>
+<td class="parameter_description"><p>the last item in <em class="parameter"><code>buffer</code></em>
+to serialize.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>buf</p></td>
+<td class="parameter_description"><p>output string to
+write serialized buffer into. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=buf_size][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> uint8_t]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>buf_size</p></td>
+<td class="parameter_description"><p>the size of <em class="parameter"><code>buf</code></em>
+.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>buf_consumed</p></td>
+<td class="parameter_description"><p>if not <code class="literal">NULL</code>, will be set to the number of byes written into <em class="parameter"><code>buf</code></em>
+. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>format</p></td>
+<td class="parameter_description"><p>the <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-serialize-format-t" title="enum hb_buffer_serialize_format_t"><span class="type">hb_buffer_serialize_format_t</span></a> to use for formatting the output.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-buffer-serialize-unicode.returns"></a><h4>Returns</h4>
+<p>The number of serialized items.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-7-3.html#api-index-2.7.3">2.7.3</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-buffer-deserialize-unicode"></a><h3>hb_buffer_deserialize_unicode ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+hb_buffer_deserialize_unicode (<em class="parameter"><code><a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a> *buffer</code></em>,
+                               <em class="parameter"><code>const <span class="type">char</span> *buf</code></em>,
+                               <em class="parameter"><code><span class="type">int</span> buf_len</code></em>,
+                               <em class="parameter"><code>const <span class="type">char</span> **end_ptr</code></em>,
+                               <em class="parameter"><code><a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-serialize-format-t" title="enum hb_buffer_serialize_format_t"><span class="type">hb_buffer_serialize_format_t</span></a> format</code></em>);</pre>
+<div class="refsect3">
+<a name="hb-buffer-deserialize-unicode.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>buffer</p></td>
+<td class="parameter_description"><p>an <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a> buffer.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>buf</p></td>
+<td class="parameter_description"><p>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=buf_len]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>end_ptr</p></td>
+<td class="parameter_description"><p>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-7-3.html#api-index-2.7.3">2.7.3</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2561,8 +2817,8 @@ hb_buffer_set_message_func (<em class="parameter"><code><a class="link" href="ha
 <div class="refsect2">
 <a name="hb-glyph-info-get-glyph-flags"></a><h3>hb_glyph_info_get_glyph_flags ()</h3>
 <pre class="programlisting"><a class="link" href="harfbuzz-hb-buffer.html#hb-glyph-flags-t" title="enum hb_glyph_flags_t"><span class="returnvalue">hb_glyph_flags_t</span></a>
-hb_glyph_info_get_glyph_flags (<em class="parameter"><code>const <span class="type">hb_glyph_info_t</span> *info</code></em>);</pre>
-<p>Returns glyph flags encoded within a <span class="type">hb_glyph_info_t</span>.</p>
+hb_glyph_info_get_glyph_flags (<em class="parameter"><code>const <a class="link" href="harfbuzz-hb-buffer.html#hb-glyph-info-t" title="hb_glyph_info_t"><span class="type">hb_glyph_info_t</span></a> *info</code></em>);</pre>
+<p>Returns glyph flags encoded within a <a class="link" href="harfbuzz-hb-buffer.html#hb-glyph-info-t" title="hb_glyph_info_t"><span class="type">hb_glyph_info_t</span></a>.</p>
 <div class="refsect3">
 <a name="hb-glyph-info-get-glyph-flags.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -2573,7 +2829,7 @@ hb_glyph_info_get_glyph_flags (<em class="parameter"><code>const <span class="ty
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>info</p></td>
-<td class="parameter_description"><p>a <span class="type">hb_glyph_info_t</span>.</p></td>
+<td class="parameter_description"><p>a <a class="link" href="harfbuzz-hb-buffer.html#hb-glyph-info-t" title="hb_glyph_info_t"><span class="type">hb_glyph_info_t</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
@@ -2617,6 +2873,51 @@ Set to U+FFFD REPLACEMENT CHARACTER.</p>
 </pre>
 <p>The main structure holding the input text and its properties before shaping,
 and output glyphs and their information after shaping.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-glyph-info-t"></a><h3>hb_glyph_info_t</h3>
+<pre class="programlisting">typedef struct {
+  hb_codepoint_t codepoint;
+  uint32_t       cluster;
+} hb_glyph_info_t;
+</pre>
+<p>The <a class="link" href="harfbuzz-hb-buffer.html#hb-glyph-info-t" title="hb_glyph_info_t"><span class="type">hb_glyph_info_t</span></a> is the structure that holds information about the
+glyphs and their relation to input text.</p>
+<div class="refsect3">
+<a name="hb-glyph-info-t.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> <em class="structfield"><code><a name="hb-glyph-info-t.codepoint"></a>codepoint</code></em>;</p></td>
+<td class="struct_member_description"><p>either a Unicode code point (before shaping) or a glyph index
+(after shaping).</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">uint32_t</span> <em class="structfield"><code><a name="hb-glyph-info-t.cluster"></a>cluster</code></em>;</p></td>
+<td class="struct_member_description"><p>the index of the character in the original text that corresponds
+to this <a class="link" href="harfbuzz-hb-buffer.html#hb-glyph-info-t" title="hb_glyph_info_t"><span class="type">hb_glyph_info_t</span></a>, or whatever the client passes to
+<a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-add" title="hb_buffer_add ()"><code class="function">hb_buffer_add()</code></a>. More than one <a class="link" href="harfbuzz-hb-buffer.html#hb-glyph-info-t" title="hb_glyph_info_t"><span class="type">hb_glyph_info_t</span></a> can have the same
+<em class="parameter"><code>cluster</code></em>
+value, if they resulted from the same character (e.g. one
+to many glyph substitution), and when more than one character gets
+merged in the same glyph (e.g. many to one glyph substitution) the
+<a class="link" href="harfbuzz-hb-buffer.html#hb-glyph-info-t" title="hb_glyph_info_t"><span class="type">hb_glyph_info_t</span></a> will have the smallest cluster value of them.
+By default some characters are merged into the same cluster
+(e.g. combining marks have the same cluster as their bases)
+even if they are separate glyphs, <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-set-cluster-level" title="hb_buffer_set_cluster_level ()"><code class="function">hb_buffer_set_cluster_level()</code></a>
+allow selecting more fine-grained cluster handling.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
 </div>
 <hr>
 <div class="refsect2">

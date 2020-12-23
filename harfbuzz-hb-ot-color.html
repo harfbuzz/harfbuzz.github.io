@@ -186,6 +186,10 @@
 <td class="function_name"><a class="link" href="harfbuzz-hb-ot-color.html#hb-color-t" title="hb_color_t">hb_color_t</a></td>
 </tr>
 <tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="harfbuzz-hb-ot-color.html#hb-ot-color-layer-t" title="hb_ot_color_layer_t">hb_ot_color_layer_t</a></td>
+</tr>
+<tr>
 <td class="datatype_keyword">enum</td>
 <td class="function_name"><a class="link" href="harfbuzz-hb-ot-color.html#hb-ot-color-palette-flags-t" title="enum hb_ot_color_palette_flags_t">hb_ot_color_palette_flags_t</a></td>
 </tr>
@@ -261,7 +265,7 @@ hb_ot_color_glyph_get_layers (<em class="parameter"><code><a class="link" href="
                               <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> glyph</code></em>,
                               <em class="parameter"><code>unsigned <span class="type">int</span> start_offset</code></em>,
                               <em class="parameter"><code>unsigned <span class="type">int</span> *layer_count</code></em>,
-                              <em class="parameter"><code><span class="type">hb_ot_color_layer_t</span> *layers</code></em>);</pre>
+                              <em class="parameter"><code><a class="link" href="harfbuzz-hb-ot-color.html#hb-ot-color-layer-t" title="hb_ot_color_layer_t"><span class="type">hb_ot_color_layer_t</span></a> *layers</code></em>);</pre>
 <p>Fetches a list of all color layers for the specified glyph index in the specified
 face. The list returned will begin at the offset provided.</p>
 <div class="refsect3">
@@ -699,6 +703,17 @@ If the requested palette has no name the result is <span class="type">HB_OT_NAME
 <pre class="programlisting">typedef uint32_t hb_color_t;
 </pre>
 <p>Data type for holding color values.</p>
+<p class="since">Since: <a class="link" href="api-index-2-1-0.html#api-index-2.1.0">2.1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-ot-color-layer-t"></a><h3>hb_ot_color_layer_t</h3>
+<pre class="programlisting">typedef struct {
+  hb_codepoint_t glyph;
+  unsigned int   color_index;
+} hb_ot_color_layer_t;
+</pre>
+<p>Pairs of glyph and color index.</p>
 <p class="since">Since: <a class="link" href="api-index-2-1-0.html#api-index-2.1.0">2.1.0</a></p>
 </div>
 <hr>

@@ -103,6 +103,10 @@
 <td class="function_name"><a class="link" href="harfbuzz-hb-deprecated.html#HB-OT-VAR-NO-AXIS-INDEX:CAPS" title="HB_OT_VAR_NO_AXIS_INDEX">HB_OT_VAR_NO_AXIS_INDEX</a></td>
 </tr>
 <tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="harfbuzz-hb-deprecated.html#hb-ot-var-axis-t" title="hb_ot_var_axis_t">hb_ot_var_axis_t</a></td>
+</tr>
+<tr>
 <td class="define_keyword">#define</td>
 <td class="function_name"><a class="link" href="harfbuzz-hb-deprecated.html#HB-UNICODE-MAX-DECOMPOSITION-LEN:CAPS" title="HB_UNICODE_MAX_DECOMPOSITION_LEN">HB_UNICODE_MAX_DECOMPOSITION_LEN</a></td>
 </tr>
@@ -278,6 +282,20 @@ hb_font_get_glyph_v_kerning (<em class="parameter"><code><a class="link" href="h
 <pre class="programlisting">#define HB_OT_VAR_NO_AXIS_INDEX		0xFFFFFFFFu
 </pre>
 <div class="warning"><p><code class="literal">HB_OT_VAR_NO_AXIS_INDEX</code> has been deprecated since version 2.2.0 and should not be used in newly-written code.</p></div>
+<p class="since">Since: <a class="link" href="api-index-1-4-2.html#api-index-1.4.2">1.4.2</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-ot-var-axis-t"></a><h3>hb_ot_var_axis_t</h3>
+<pre class="programlisting">typedef struct {
+  hb_tag_t tag;
+  hb_ot_name_id_t name_id;
+  float min_value;
+  float default_value;
+  float max_value;
+} hb_ot_var_axis_t;
+</pre>
+<div class="warning"><p><code class="literal">hb_ot_var_axis_t</code> has been deprecated since version 2.2.0 and should not be used in newly-written code.</p></div>
 <p class="since">Since: <a class="link" href="api-index-1-4-2.html#api-index-1.4.2">1.4.2</a></p>
 </div>
 <hr>

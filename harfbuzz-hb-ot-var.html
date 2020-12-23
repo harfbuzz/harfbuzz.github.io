@@ -150,6 +150,10 @@
 <td class="datatype_keyword">enum</td>
 <td class="function_name"><a class="link" href="harfbuzz-hb-ot-var.html#hb-ot-var-axis-flags-t" title="enum hb_ot_var_axis_flags_t">hb_ot_var_axis_flags_t</a></td>
 </tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="harfbuzz-hb-ot-var.html#hb-ot-var-axis-info-t" title="hb_ot_var_axis_info_t">hb_ot_var_axis_info_t</a></td>
+</tr>
 </tbody>
 </table></div>
 </div>
@@ -196,7 +200,7 @@ hb_ot_var_has_data (<em class="parameter"><code><a class="link" href="harfbuzz-h
 <pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
 hb_ot_var_find_axis_info (<em class="parameter"><code><a class="link" href="harfbuzz-hb-face.html#hb-face-t" title="hb_face_t"><span class="type">hb_face_t</span></a> *face</code></em>,
                           <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="type">hb_tag_t</span></a> axis_tag</code></em>,
-                          <em class="parameter"><code><span class="type">hb_ot_var_axis_info_t</span> *axis_info</code></em>);</pre>
+                          <em class="parameter"><code><a class="link" href="harfbuzz-hb-ot-var.html#hb-ot-var-axis-info-t" title="hb_ot_var_axis_info_t"><span class="type">hb_ot_var_axis_info_t</span></a> *axis_info</code></em>);</pre>
 <p>Fetches the variation-axis information corresponding to the specified axis tag
 in the specified face.</p>
 <div class="refsect3">
@@ -220,7 +224,7 @@ in the specified face.</p>
 </tr>
 <tr>
 <td class="parameter_name"><p>axis_info</p></td>
-<td class="parameter_description"><p>The <span class="type">hb_ot_var_axis_info_t</span> of the axis tag queried. </p></td>
+<td class="parameter_description"><p>The <a class="link" href="harfbuzz-hb-ot-var.html#hb-ot-var-axis-info-t" title="hb_ot_var_axis_info_t"><span class="type">hb_ot_var_axis_info_t</span></a> of the axis tag queried. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
 </tr>
 </tbody>
@@ -266,7 +270,7 @@ hb_ot_var_get_axis_count (<em class="parameter"><code><a class="link" href="harf
 hb_ot_var_get_axis_infos (<em class="parameter"><code><a class="link" href="harfbuzz-hb-face.html#hb-face-t" title="hb_face_t"><span class="type">hb_face_t</span></a> *face</code></em>,
                           <em class="parameter"><code>unsigned <span class="type">int</span> start_offset</code></em>,
                           <em class="parameter"><code>unsigned <span class="type">int</span> *axes_count</code></em>,
-                          <em class="parameter"><code><span class="type">hb_ot_var_axis_info_t</span> *axes_array</code></em>);</pre>
+                          <em class="parameter"><code><a class="link" href="harfbuzz-hb-ot-var.html#hb-ot-var-axis-info-t" title="hb_ot_var_axis_info_t"><span class="type">hb_ot_var_axis_info_t</span></a> *axes_array</code></em>);</pre>
 <p>Fetches a list of all variation axes in the specified face. The list returned will begin
 at the offset provided.</p>
 <div class="refsect3">
@@ -610,6 +614,72 @@ applied, as described at https://docs.microsoft.com/en-us/typography/opentype/sp
 <td class="enum_member_name"><p><a name="HB-OT-VAR-AXIS-FLAG-MAX-VALUE:CAPS"></a>_HB_OT_VAR_AXIS_FLAG_MAX_VALUE</p></td>
 <td> </td>
 <td> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-2-0.html#api-index-2.2.0">2.2.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-ot-var-axis-info-t"></a><h3>hb_ot_var_axis_info_t</h3>
+<pre class="programlisting">typedef struct {
+  unsigned int			axis_index;
+  hb_tag_t			tag;
+  hb_ot_name_id_t		name_id;
+  hb_ot_var_axis_flags_t flags;
+  float				min_value;
+  float				default_value;
+  float				max_value;
+} hb_ot_var_axis_info_t;
+</pre>
+<p>Data type for holding variation-axis values.</p>
+<p>The minimum, default, and maximum values are in un-normalized, user scales.</p>
+<div class="note">Note: at present, the only flag defined for <em class="parameter"><code>flags</code></em> is
+<a class="link" href="harfbuzz-hb-ot-var.html#HB-OT-VAR-AXIS-FLAG-HIDDEN:CAPS"><span class="type">HB_OT_VAR_AXIS_FLAG_HIDDEN</span></a>.</div>
+<div class="refsect3">
+<a name="hb-ot-var-axis-info-t.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="struct_member_name"><p>unsigned <span class="type">int</span> <em class="structfield"><code><a name="hb-ot-var-axis-info-t.axis-index"></a>axis_index</code></em>;</p></td>
+<td class="struct_member_description"><p>Index of the axis in the variation-axis array</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="type">hb_tag_t</span></a> <em class="structfield"><code><a name="hb-ot-var-axis-info-t.tag"></a>tag</code></em>;</p></td>
+<td class="struct_member_description"><p>The <a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="type">hb_tag_t</span></a> tag identifying the design variation of the axis</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="harfbuzz-hb-ot-name.html#hb-ot-name-id-t" title="hb_ot_name_id_t"><span class="type">hb_ot_name_id_t</span></a> <em class="structfield"><code><a name="hb-ot-var-axis-info-t.name-id"></a>name_id</code></em>;</p></td>
+<td class="struct_member_description"><p>The <code class="literal">name</code> table Name ID that provides display names for the axis</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="harfbuzz-hb-ot-var.html#hb-ot-var-axis-flags-t" title="enum hb_ot_var_axis_flags_t"><span class="type">hb_ot_var_axis_flags_t</span></a> <em class="structfield"><code><a name="hb-ot-var-axis-info-t.flags"></a>flags</code></em>;</p></td>
+<td class="struct_member_description"><p>The <a class="link" href="harfbuzz-hb-ot-var.html#hb-ot-var-axis-flags-t" title="enum hb_ot_var_axis_flags_t"><span class="type">hb_ot_var_axis_flags_t</span></a> flags for the axis</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">float</span> <em class="structfield"><code><a name="hb-ot-var-axis-info-t.min-value"></a>min_value</code></em>;</p></td>
+<td class="struct_member_description"><p>The mininum value on the variation axis that the font covers</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">float</span> <em class="structfield"><code><a name="hb-ot-var-axis-info-t.default-value"></a>default_value</code></em>;</p></td>
+<td class="struct_member_description"><p>The position on the variation axis corresponding to the font's defaults</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">float</span> <em class="structfield"><code><a name="hb-ot-var-axis-info-t.max-value"></a>max_value</code></em>;</p></td>
+<td class="struct_member_description"><p>The maximum value on the variation axis that the font covers</p></td>
+<td class="struct_member_annotations"> </td>
 </tr>
 </tbody>
 </table></div>
