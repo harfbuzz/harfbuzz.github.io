@@ -445,6 +445,8 @@
     <keyword type="typedef" name="hb_font_t" link="harfbuzz-hb-font.html#hb-font-t"/>
     <keyword type="typedef" name="hb_font_get_font_h_extents_func_t" link="harfbuzz-hb-font.html#hb-font-get-font-h-extents-func-t"/>
     <keyword type="typedef" name="hb_font_get_font_v_extents_func_t" link="harfbuzz-hb-font.html#hb-font-get-font-v-extents-func-t"/>
+    <keyword type="struct" name="hb_font_extents_t" link="harfbuzz-hb-font.html#hb-font-extents-t"/>
+    <keyword type="struct" name="hb_glyph_extents_t" link="harfbuzz-hb-font.html#hb-glyph-extents-t"/>
     <keyword type="function" name="hb_map_allocation_successful ()" link="harfbuzz-hb-map.html#hb-map-allocation-successful" since="1.7.7"/>
     <keyword type="function" name="hb_map_clear ()" link="harfbuzz-hb-map.html#hb-map-clear" since="1.7.7"/>
     <keyword type="function" name="hb_map_create ()" link="harfbuzz-hb-map.html#hb-map-create" since="1.7.7"/>
@@ -1331,6 +1333,15 @@
     <keyword type="member" name="hb-feature-t.value" link="harfbuzz-hb-common.html#hb-feature-t.value"/>
     <keyword type="member" name="hb-feature-t.start" link="harfbuzz-hb-common.html#hb-feature-t.start"/>
     <keyword type="member" name="hb-feature-t.end" link="harfbuzz-hb-common.html#hb-feature-t.end"/>
+    <keyword type="member" name="hb-variation-t.tag" link="harfbuzz-hb-common.html#hb-variation-t.tag"/>
+    <keyword type="member" name="hb-variation-t.value" link="harfbuzz-hb-common.html#hb-variation-t.value"/>
+    <keyword type="member" name="hb-font-extents-t.ascender" link="harfbuzz-hb-font.html#hb-font-extents-t.ascender"/>
+    <keyword type="member" name="hb-font-extents-t.descender" link="harfbuzz-hb-font.html#hb-font-extents-t.descender"/>
+    <keyword type="member" name="hb-font-extents-t.line-gap" link="harfbuzz-hb-font.html#hb-font-extents-t.line-gap"/>
+    <keyword type="member" name="hb-glyph-extents-t.x-bearing" link="harfbuzz-hb-font.html#hb-glyph-extents-t.x-bearing"/>
+    <keyword type="member" name="hb-glyph-extents-t.y-bearing" link="harfbuzz-hb-font.html#hb-glyph-extents-t.y-bearing"/>
+    <keyword type="member" name="hb-glyph-extents-t.width" link="harfbuzz-hb-font.html#hb-glyph-extents-t.width"/>
+    <keyword type="member" name="hb-glyph-extents-t.height" link="harfbuzz-hb-font.html#hb-glyph-extents-t.height"/>
     <keyword type="member" name="hb-ot-math-glyph-variant-t.glyph" link="harfbuzz-hb-ot-math.html#hb-ot-math-glyph-variant-t.glyph"/>
     <keyword type="member" name="hb-ot-math-glyph-variant-t.advance" link="harfbuzz-hb-ot-math.html#hb-ot-math-glyph-variant-t.advance"/>
     <keyword type="member" name="hb-ot-math-glyph-part-t.glyph" link="harfbuzz-hb-ot-math.html#hb-ot-math-glyph-part-t.glyph"/>
