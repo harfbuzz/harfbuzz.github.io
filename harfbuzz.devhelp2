@@ -308,6 +308,11 @@
     <keyword type="macro" name="HB_FEATURE_GLOBAL_START" link="harfbuzz-hb-common.html#HB-FEATURE-GLOBAL-START:CAPS" since="2.0.0"/>
     <keyword type="function" name="hb_font_get_glyph_func_t ()" link="harfbuzz-hb-deprecated.html#hb-font-get-glyph-func-t" deprecated=""/>
     <keyword type="function" name="hb_ot_layout_table_find_script ()" link="harfbuzz-hb-deprecated.html#hb-ot-layout-table-find-script"/>
+    <keyword type="function" name="hb_set_invert ()" link="harfbuzz-hb-deprecated.html#hb-set-invert" deprecated="1.6.1" since="0.9.10"/>
+    <keyword type="function" name="hb_unicode_eastasian_width ()" link="harfbuzz-hb-deprecated.html#hb-unicode-eastasian-width" deprecated="2.0.0" since="0.9.2"/>
+    <keyword type="function" name="hb_unicode_funcs_set_eastasian_width_func ()" link="harfbuzz-hb-deprecated.html#hb-unicode-funcs-set-eastasian-width-func" deprecated="2.0.0" since="0.9.2"/>
+    <keyword type="function" name="hb_unicode_decompose_compatibility ()" link="harfbuzz-hb-deprecated.html#hb-unicode-decompose-compatibility" deprecated="2.0.0" since="0.9.2"/>
+    <keyword type="function" name="hb_unicode_funcs_set_decompose_compatibility_func ()" link="harfbuzz-hb-deprecated.html#hb-unicode-funcs-set-decompose-compatibility-func" deprecated="2.0.0" since="0.9.2"/>
     <keyword type="function" name="hb_font_funcs_set_glyph_v_kerning_func ()" link="harfbuzz-hb-deprecated.html#hb-font-funcs-set-glyph-v-kerning-func" deprecated="2.0.0" since="0.9.2"/>
     <keyword type="function" name="hb_font_get_glyph_v_kerning ()" link="harfbuzz-hb-deprecated.html#hb-font-get-glyph-v-kerning" deprecated="2.0.0" since="0.9.2"/>
     <keyword type="macro" name="HB_BUFFER_FLAGS_DEFAULT" link="harfbuzz-hb-deprecated.html#HB-BUFFER-FLAGS-DEFAULT:CAPS" deprecated=""/>
