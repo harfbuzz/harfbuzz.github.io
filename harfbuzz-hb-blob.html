@@ -285,7 +285,7 @@ hb_blob_create_sub_blob (<em class="parameter"><code><a class="link" href="harfb
                          <em class="parameter"><code>unsigned <span class="type">int</span> length</code></em>);</pre>
 <p>Returns a blob that represents a range of bytes in <em class="parameter"><code>parent</code></em>
 .  The new
-blob is always created with <a class="link" href="harfbuzz-hb-blob.html#HB-MEMORY-MODE-READONLY:CAPS"><code class="literal">HB_MEMORY_MODE_READONLY</code></a>, meaning that it
+blob is always created with <a class="link" href="harfbuzz-hb-blob.html#HB-MEMORY-MODE-READONLY:CAPS"><span class="type">HB_MEMORY_MODE_READONLY</span></a>, meaning that it
 will never modify data in the parent blob.  The parent data is not
 expected to be modified, and will result in undefined behavior if it
 is.</p>
@@ -568,7 +568,7 @@ hb_blob_is_immutable (<em class="parameter"><code><a class="link" href="harfbuzz
 <div class="refsect3">
 <a name="hb-blob-is-immutable.returns"></a><h4>Returns</h4>
 <p> <code class="literal">true</code> if <em class="parameter"><code>blob</code></em>
-is immutable, false otherwise</p>
+is immutable, <code class="literal">false</code> otherwise</p>
 </div>
 <p class="since">Since: <a class="link" href="api-index-0-9-2.html#api-index-0.9.2">0.9.2</a></p>
 </div>
