@@ -933,7 +933,6 @@
     <keyword type="constant" name="HB_OT_LAYOUT_BASELINE_TAG_IDEO_EMBOX_BOTTOM_OR_LEFT" link="harfbuzz-hb-ot-layout.html#HB-OT-LAYOUT-BASELINE-TAG-IDEO-EMBOX-BOTTOM-OR-LEFT:CAPS"/>
     <keyword type="constant" name="HB_OT_LAYOUT_BASELINE_TAG_IDEO_EMBOX_TOP_OR_RIGHT" link="harfbuzz-hb-ot-layout.html#HB-OT-LAYOUT-BASELINE-TAG-IDEO-EMBOX-TOP-OR-RIGHT:CAPS"/>
     <keyword type="constant" name="HB_OT_LAYOUT_BASELINE_TAG_MATH" link="harfbuzz-hb-ot-layout.html#HB-OT-LAYOUT-BASELINE-TAG-MATH:CAPS"/>
-    <keyword type="constant" name="_HB_OT_LAYOUT_BASELINE_TAG_MAX_VALUE" link="harfbuzz-hb-ot-layout.html#HB-OT-LAYOUT-BASELINE-TAG-MAX-VALUE:CAPS"/>
     <keyword type="constant" name="HB_OT_LAYOUT_GLYPH_CLASS_UNCLASSIFIED" link="harfbuzz-hb-ot-layout.html#HB-OT-LAYOUT-GLYPH-CLASS-UNCLASSIFIED:CAPS"/>
     <keyword type="constant" name="HB_OT_LAYOUT_GLYPH_CLASS_BASE_GLYPH" link="harfbuzz-hb-ot-layout.html#HB-OT-LAYOUT-GLYPH-CLASS-BASE-GLYPH:CAPS"/>
     <keyword type="constant" name="HB_OT_LAYOUT_GLYPH_CLASS_LIGATURE" link="harfbuzz-hb-ot-layout.html#HB-OT-LAYOUT-GLYPH-CLASS-LIGATURE:CAPS"/>
@@ -1002,7 +1001,6 @@
     <keyword type="constant" name="HB_OT_MATH_GLYPH_PART_FLAG_EXTENDER" link="harfbuzz-hb-ot-math.html#HB-OT-MATH-GLYPH-PART-FLAG-EXTENDER:CAPS"/>
     <keyword type="constant" name="HB_OT_META_TAG_DESIGN_LANGUAGES" link="harfbuzz-hb-ot-meta.html#HB-OT-META-TAG-DESIGN-LANGUAGES:CAPS"/>
     <keyword type="constant" name="HB_OT_META_TAG_SUPPORTED_LANGUAGES" link="harfbuzz-hb-ot-meta.html#HB-OT-META-TAG-SUPPORTED-LANGUAGES:CAPS"/>
-    <keyword type="constant" name="_HB_OT_META_TAG_MAX_VALUE" link="harfbuzz-hb-ot-meta.html#HB-OT-META-TAG-MAX-VALUE:CAPS"/>
     <keyword type="constant" name="HB_OT_METRICS_TAG_HORIZONTAL_ASCENDER" link="harfbuzz-hb-ot-metrics.html#HB-OT-METRICS-TAG-HORIZONTAL-ASCENDER:CAPS"/>
     <keyword type="constant" name="HB_OT_METRICS_TAG_HORIZONTAL_DESCENDER" link="harfbuzz-hb-ot-metrics.html#HB-OT-METRICS-TAG-HORIZONTAL-DESCENDER:CAPS"/>
     <keyword type="constant" name="HB_OT_METRICS_TAG_HORIZONTAL_LINE_GAP" link="harfbuzz-hb-ot-metrics.html#HB-OT-METRICS-TAG-HORIZONTAL-LINE-GAP:CAPS"/>
@@ -1031,9 +1029,7 @@
     <keyword type="constant" name="HB_OT_METRICS_TAG_STRIKEOUT_OFFSET" link="harfbuzz-hb-ot-metrics.html#HB-OT-METRICS-TAG-STRIKEOUT-OFFSET:CAPS"/>
     <keyword type="constant" name="HB_OT_METRICS_TAG_UNDERLINE_SIZE" link="harfbuzz-hb-ot-metrics.html#HB-OT-METRICS-TAG-UNDERLINE-SIZE:CAPS"/>
     <keyword type="constant" name="HB_OT_METRICS_TAG_UNDERLINE_OFFSET" link="harfbuzz-hb-ot-metrics.html#HB-OT-METRICS-TAG-UNDERLINE-OFFSET:CAPS"/>
-    <keyword type="constant" name="_HB_OT_METRICS_TAG_MAX_VALUE" link="harfbuzz-hb-ot-metrics.html#HB-OT-METRICS-TAG-MAX-VALUE:CAPS"/>
     <keyword type="constant" name="HB_OT_VAR_AXIS_FLAG_HIDDEN" link="harfbuzz-hb-ot-var.html#HB-OT-VAR-AXIS-FLAG-HIDDEN:CAPS"/>
-    <keyword type="constant" name="_HB_OT_VAR_AXIS_FLAG_MAX_VALUE" link="harfbuzz-hb-ot-var.html#HB-OT-VAR-AXIS-FLAG-MAX-VALUE:CAPS"/>
     <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_TYPE_INVALID" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-TYPE-INVALID:CAPS"/>
     <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_TYPE_ALL_TYPOGRAPHIC" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-TYPE-ALL-TYPOGRAPHIC:CAPS"/>
     <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_TYPE_LIGATURES" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-TYPE-LIGATURES:CAPS"/>
