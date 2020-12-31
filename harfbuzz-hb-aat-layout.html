@@ -134,7 +134,7 @@ AAT tables and their associated features are not supported.</p>
 hb_aat_layout_feature_type_get_name_id
                                (<em class="parameter"><code><a class="link" href="harfbuzz-hb-face.html#hb-face-t" title="hb_face_t"><span class="type">hb_face_t</span></a> *face</code></em>,
                                 <em class="parameter"><code><a class="link" href="harfbuzz-hb-aat-layout.html#hb-aat-layout-feature-type-t" title="enum hb_aat_layout_feature_type_t"><span class="type">hb_aat_layout_feature_type_t</span></a> feature_type</code></em>);</pre>
-<p>Fetches the name ID of the specified feature type in the face's <code class="literal">name</code> table.</p>
+<p>Fetches the name identifier of the specified feature type in the face's <code class="literal">name</code> table.</p>
 <div class="refsect3">
 <a name="hb-aat-layout-feature-type-get-name-id.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -159,7 +159,7 @@ hb_aat_layout_feature_type_get_name_id
 </div>
 <div class="refsect3">
 <a name="hb-aat-layout-feature-type-get-name-id.returns"></a><h4>Returns</h4>
-<p> Name ID of the requested feature type</p>
+<p> Name identifier of the requested feature type</p>
 </div>
 <p class="since">Since: <a class="link" href="api-index-2-2-0.html#api-index-2.2.0">2.2.0</a></p>
 </div>
@@ -174,6 +174,60 @@ hb_aat_layout_feature_type_get_selector_infos
                                 <em class="parameter"><code>unsigned <span class="type">int</span> *selector_count</code></em>,
                                 <em class="parameter"><code><a class="link" href="harfbuzz-hb-aat-layout.html#hb-aat-layout-feature-selector-info-t" title="hb_aat_layout_feature_selector_info_t"><span class="type">hb_aat_layout_feature_selector_info_t</span></a> *selectors</code></em>,
                                 <em class="parameter"><code>unsigned <span class="type">int</span> *default_index</code></em>);</pre>
+<p>Fetches a list of the selectors available for the specified feature in the given face.</p>
+<p>If upon return, <em class="parameter"><code>default_index</code></em>
+ is set to <a class="link" href="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-NO-SELECTOR-INDEX:CAPS" title="HB_AAT_LAYOUT_NO_SELECTOR_INDEX"><span class="type">HB_AAT_LAYOUT_NO_SELECTOR_INDEX</span></a>, then
+the feature type is non-exclusive.  Otherwise, <em class="parameter"><code>default_index</code></em>
+ is the index of
+the selector that is selected by default.</p>
+<div class="refsect3">
+<a name="hb-aat-layout-feature-type-get-selector-infos.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>face</p></td>
+<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-face.html#hb-face-t" title="hb_face_t"><span class="type">hb_face_t</span></a> to work upon</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>feature_type</p></td>
+<td class="parameter_description"><p>The <a class="link" href="harfbuzz-hb-aat-layout.html#hb-aat-layout-feature-type-t" title="enum hb_aat_layout_feature_type_t"><span class="type">hb_aat_layout_feature_type_t</span></a> of the requested feature type</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>start_offset</p></td>
+<td class="parameter_description"><p>offset of the first feature type to retrieve</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>selector_count</p></td>
+<td class="parameter_description"><p>Input = the maximum number of selectors to return;
+Output = the actual number of selectors returned (may be zero). </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>selectors</p></td>
+<td class="parameter_description"><p>A buffer pointer. The selectors available for the feature type queries. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Out parameter, where caller must allocate storage."><span class="acronym">out caller-allocates</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=selector_count][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>default_index</p></td>
+<td class="parameter_description"><p>The index of the feature's default selector, if any. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-aat-layout-feature-type-get-selector-infos.returns"></a><h4>Returns</h4>
+<p> Number of all available feature selectors</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-2-0.html#api-index-2.2.0">2.2.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -207,7 +261,7 @@ hb_aat_layout_get_feature_types (<em class="parameter"><code><a class="link" hre
 <td class="parameter_name"><p>feature_count</p></td>
 <td class="parameter_description"><p>Input = the maximum number of feature types to return;
 Output = the actual number of feature types returned (may be zero). </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>features</p></td>
@@ -322,7 +376,7 @@ there is no selector index corresponding to the selector of interest.</p>
 <hr>
 <div class="refsect2">
 <a name="hb-aat-layout-feature-type-t"></a><h3>enum hb_aat_layout_feature_type_t</h3>
-<p>The possible feature types defined for AAT shaping.</p>
+<p>The possible feature types defined for AAT shaping, from Apple <a class="ulink" href="https://developer.apple.com/fonts/TrueType-Reference-Manual/RM09/AppendixF.html" target="_top">Font Feature Registry</a>.</p>
 <div class="refsect3">
 <a name="hb-aat-layout-feature-type-t.members"></a><h4>Members</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -341,198 +395,276 @@ there is no selector index corresponding to the selector of interest.</p>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="HB-AAT-LAYOUT-FEATURE-TYPE-ALL-TYPOGRAPHIC:CAPS"></a>HB_AAT_LAYOUT_FEATURE_TYPE_ALL_TYPOGRAPHIC</p></td>
-<td> </td>
-<td> </td>
+<td class="enum_member_description">
+<p><a class="ulink" href="https://developer.apple.com/fonts/TrueType-Reference-Manual/RM09/AppendixF.html#Type0" target="_top">All Typographic Features</a></p>
+</td>
+<td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="HB-AAT-LAYOUT-FEATURE-TYPE-LIGATURES:CAPS"></a>HB_AAT_LAYOUT_FEATURE_TYPE_LIGATURES</p></td>
-<td> </td>
-<td> </td>
+<td class="enum_member_description">
+<p><a class="ulink" href="https://developer.apple.com/fonts/TrueType-Reference-Manual/RM09/AppendixF.html#Type1" target="_top">Ligatures</a></p>
+</td>
+<td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="HB-AAT-LAYOUT-FEATURE-TYPE-CURISVE-CONNECTION:CAPS"></a>HB_AAT_LAYOUT_FEATURE_TYPE_CURISVE_CONNECTION</p></td>
-<td> </td>
-<td> </td>
+<td class="enum_member_description">
+<p><a class="ulink" href="https://developer.apple.com/fonts/TrueType-Reference-Manual/RM09/AppendixF.html#Type2" target="_top">Cursive Connection</a></p>
+</td>
+<td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="HB-AAT-LAYOUT-FEATURE-TYPE-LETTER-CASE:CAPS"></a>HB_AAT_LAYOUT_FEATURE_TYPE_LETTER_CASE</p></td>
-<td> </td>
-<td> </td>
+<td class="enum_member_description">
+<p><a class="ulink" href="https://developer.apple.com/fonts/TrueType-Reference-Manual/RM09/AppendixF.html#Type3" target="_top">Letter Case</a></p>
+</td>
+<td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="HB-AAT-LAYOUT-FEATURE-TYPE-VERTICAL-SUBSTITUTION:CAPS"></a>HB_AAT_LAYOUT_FEATURE_TYPE_VERTICAL_SUBSTITUTION</p></td>
-<td> </td>
-<td> </td>
+<td class="enum_member_description">
+<p><a class="ulink" href="https://developer.apple.com/fonts/TrueType-Reference-Manual/RM09/AppendixF.html#Type4" target="_top">Vertical Substitution</a></p>
+</td>
+<td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="HB-AAT-LAYOUT-FEATURE-TYPE-LINGUISTIC-REARRANGEMENT:CAPS"></a>HB_AAT_LAYOUT_FEATURE_TYPE_LINGUISTIC_REARRANGEMENT</p></td>
-<td> </td>
-<td> </td>
+<td class="enum_member_description">
+<p><a class="ulink" href="https://developer.apple.com/fonts/TrueType-Reference-Manual/RM09/AppendixF.html#Type5" target="_top">Linguistic Rearrangement</a></p>
+</td>
+<td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="HB-AAT-LAYOUT-FEATURE-TYPE-NUMBER-SPACING:CAPS"></a>HB_AAT_LAYOUT_FEATURE_TYPE_NUMBER_SPACING</p></td>
-<td> </td>
-<td> </td>
+<td class="enum_member_description">
+<p><a class="ulink" href="https://developer.apple.com/fonts/TrueType-Reference-Manual/RM09/AppendixF.html#Type6" target="_top">Number Spacing</a></p>
+</td>
+<td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="HB-AAT-LAYOUT-FEATURE-TYPE-SMART-SWASH-TYPE:CAPS"></a>HB_AAT_LAYOUT_FEATURE_TYPE_SMART_SWASH_TYPE</p></td>
-<td> </td>
-<td> </td>
+<td class="enum_member_description">
+<p><a class="ulink" href="https://developer.apple.com/fonts/TrueType-Reference-Manual/RM09/AppendixF.html#Type8" target="_top">Smart Swash</a></p>
+</td>
+<td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="HB-AAT-LAYOUT-FEATURE-TYPE-DIACRITICS-TYPE:CAPS"></a>HB_AAT_LAYOUT_FEATURE_TYPE_DIACRITICS_TYPE</p></td>
-<td> </td>
-<td> </td>
+<td class="enum_member_description">
+<p><a class="ulink" href="https://developer.apple.com/fonts/TrueType-Reference-Manual/RM09/AppendixF.html#Type9" target="_top">Diacritics</a></p>
+</td>
+<td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="HB-AAT-LAYOUT-FEATURE-TYPE-VERTICAL-POSITION:CAPS"></a>HB_AAT_LAYOUT_FEATURE_TYPE_VERTICAL_POSITION</p></td>
-<td> </td>
-<td> </td>
+<td class="enum_member_description">
+<p><a class="ulink" href="https://developer.apple.com/fonts/TrueType-Reference-Manual/RM09/AppendixF.html#Type10" target="_top">Vertical Position</a></p>
+</td>
+<td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="HB-AAT-LAYOUT-FEATURE-TYPE-FRACTIONS:CAPS"></a>HB_AAT_LAYOUT_FEATURE_TYPE_FRACTIONS</p></td>
-<td> </td>
-<td> </td>
+<td class="enum_member_description">
+<p><a class="ulink" href="https://developer.apple.com/fonts/TrueType-Reference-Manual/RM09/AppendixF.html#Type11" target="_top">Fractions</a></p>
+</td>
+<td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="HB-AAT-LAYOUT-FEATURE-TYPE-OVERLAPPING-CHARACTERS-TYPE:CAPS"></a>HB_AAT_LAYOUT_FEATURE_TYPE_OVERLAPPING_CHARACTERS_TYPE</p></td>
-<td> </td>
-<td> </td>
+<td class="enum_member_description">
+<p><a class="ulink" href="https://developer.apple.com/fonts/TrueType-Reference-Manual/RM09/AppendixF.html#Type13" target="_top">Overlapping Characters</a></p>
+</td>
+<td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="HB-AAT-LAYOUT-FEATURE-TYPE-TYPOGRAPHIC-EXTRAS:CAPS"></a>HB_AAT_LAYOUT_FEATURE_TYPE_TYPOGRAPHIC_EXTRAS</p></td>
-<td> </td>
-<td> </td>
+<td class="enum_member_description">
+<p><a class="ulink" href="https://developer.apple.com/fonts/TrueType-Reference-Manual/RM09/AppendixF.html#Type14" target="_top">Typographic Extras</a></p>
+</td>
+<td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="HB-AAT-LAYOUT-FEATURE-TYPE-MATHEMATICAL-EXTRAS:CAPS"></a>HB_AAT_LAYOUT_FEATURE_TYPE_MATHEMATICAL_EXTRAS</p></td>
-<td> </td>
-<td> </td>
+<td class="enum_member_description">
+<p><a class="ulink" href="https://developer.apple.com/fonts/TrueType-Reference-Manual/RM09/AppendixF.html#Type15" target="_top">Mathematical Extras</a></p>
+</td>
+<td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="HB-AAT-LAYOUT-FEATURE-TYPE-ORNAMENT-SETS-TYPE:CAPS"></a>HB_AAT_LAYOUT_FEATURE_TYPE_ORNAMENT_SETS_TYPE</p></td>
-<td> </td>
-<td> </td>
+<td class="enum_member_description">
+<p><a class="ulink" href="https://developer.apple.com/fonts/TrueType-Reference-Manual/RM09/AppendixF.html#Type16" target="_top">Ornament Sets</a></p>
+</td>
+<td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="HB-AAT-LAYOUT-FEATURE-TYPE-CHARACTER-ALTERNATIVES:CAPS"></a>HB_AAT_LAYOUT_FEATURE_TYPE_CHARACTER_ALTERNATIVES</p></td>
-<td> </td>
-<td> </td>
+<td class="enum_member_description">
+<p><a class="ulink" href="https://developer.apple.com/fonts/TrueType-Reference-Manual/RM09/AppendixF.html#Type17" target="_top">Character Alternatives</a></p>
+</td>
+<td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="HB-AAT-LAYOUT-FEATURE-TYPE-DESIGN-COMPLEXITY-TYPE:CAPS"></a>HB_AAT_LAYOUT_FEATURE_TYPE_DESIGN_COMPLEXITY_TYPE</p></td>
-<td> </td>
-<td> </td>
+<td class="enum_member_description">
+<p><a class="ulink" href="https://developer.apple.com/fonts/TrueType-Reference-Manual/RM09/AppendixF.html#Type18" target="_top">Design Complexity</a></p>
+</td>
+<td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="HB-AAT-LAYOUT-FEATURE-TYPE-STYLE-OPTIONS:CAPS"></a>HB_AAT_LAYOUT_FEATURE_TYPE_STYLE_OPTIONS</p></td>
-<td> </td>
-<td> </td>
+<td class="enum_member_description">
+<p><a class="ulink" href="https://developer.apple.com/fonts/TrueType-Reference-Manual/RM09/AppendixF.html#Type19" target="_top">Style Options</a></p>
+</td>
+<td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="HB-AAT-LAYOUT-FEATURE-TYPE-CHARACTER-SHAPE:CAPS"></a>HB_AAT_LAYOUT_FEATURE_TYPE_CHARACTER_SHAPE</p></td>
-<td> </td>
-<td> </td>
+<td class="enum_member_description">
+<p><a class="ulink" href="https://developer.apple.com/fonts/TrueType-Reference-Manual/RM09/AppendixF.html#Type20" target="_top">Character Shape</a></p>
+</td>
+<td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="HB-AAT-LAYOUT-FEATURE-TYPE-NUMBER-CASE:CAPS"></a>HB_AAT_LAYOUT_FEATURE_TYPE_NUMBER_CASE</p></td>
-<td> </td>
-<td> </td>
+<td class="enum_member_description">
+<p><a class="ulink" href="https://developer.apple.com/fonts/TrueType-Reference-Manual/RM09/AppendixF.html#Type21" target="_top">Number Case</a></p>
+</td>
+<td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="HB-AAT-LAYOUT-FEATURE-TYPE-TEXT-SPACING:CAPS"></a>HB_AAT_LAYOUT_FEATURE_TYPE_TEXT_SPACING</p></td>
-<td> </td>
-<td> </td>
+<td class="enum_member_description">
+<p><a class="ulink" href="https://developer.apple.com/fonts/TrueType-Reference-Manual/RM09/AppendixF.html#Type22" target="_top">Text Spacing</a></p>
+</td>
+<td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="HB-AAT-LAYOUT-FEATURE-TYPE-TRANSLITERATION:CAPS"></a>HB_AAT_LAYOUT_FEATURE_TYPE_TRANSLITERATION</p></td>
-<td> </td>
-<td> </td>
+<td class="enum_member_description">
+<p><a class="ulink" href="https://developer.apple.com/fonts/TrueType-Reference-Manual/RM09/AppendixF.html#Type23" target="_top">Transliteration</a></p>
+</td>
+<td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="HB-AAT-LAYOUT-FEATURE-TYPE-ANNOTATION-TYPE:CAPS"></a>HB_AAT_LAYOUT_FEATURE_TYPE_ANNOTATION_TYPE</p></td>
-<td> </td>
-<td> </td>
+<td class="enum_member_description">
+<p><a class="ulink" href="https://developer.apple.com/fonts/TrueType-Reference-Manual/RM09/AppendixF.html#Type24" target="_top">Annotation</a></p>
+</td>
+<td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="HB-AAT-LAYOUT-FEATURE-TYPE-KANA-SPACING-TYPE:CAPS"></a>HB_AAT_LAYOUT_FEATURE_TYPE_KANA_SPACING_TYPE</p></td>
-<td> </td>
-<td> </td>
+<td class="enum_member_description">
+<p><a class="ulink" href="https://developer.apple.com/fonts/TrueType-Reference-Manual/RM09/AppendixF.html#Type25" target="_top">Kana Spacing</a></p>
+</td>
+<td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="HB-AAT-LAYOUT-FEATURE-TYPE-IDEOGRAPHIC-SPACING-TYPE:CAPS"></a>HB_AAT_LAYOUT_FEATURE_TYPE_IDEOGRAPHIC_SPACING_TYPE</p></td>
-<td> </td>
-<td> </td>
+<td class="enum_member_description">
+<p><a class="ulink" href="https://developer.apple.com/fonts/TrueType-Reference-Manual/RM09/AppendixF.html#Type26" target="_top">Ideographic Spacing</a></p>
+</td>
+<td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="HB-AAT-LAYOUT-FEATURE-TYPE-UNICODE-DECOMPOSITION-TYPE:CAPS"></a>HB_AAT_LAYOUT_FEATURE_TYPE_UNICODE_DECOMPOSITION_TYPE</p></td>
-<td> </td>
-<td> </td>
+<td class="enum_member_description">
+<p><a class="ulink" href="https://developer.apple.com/fonts/TrueType-Reference-Manual/RM09/AppendixF.html#Type27" target="_top">Unicode Decomposition</a></p>
+</td>
+<td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="HB-AAT-LAYOUT-FEATURE-TYPE-RUBY-KANA:CAPS"></a>HB_AAT_LAYOUT_FEATURE_TYPE_RUBY_KANA</p></td>
-<td> </td>
-<td> </td>
+<td class="enum_member_description">
+<p><a class="ulink" href="https://developer.apple.com/fonts/TrueType-Reference-Manual/RM09/AppendixF.html#Type28" target="_top">Ruby Kana</a></p>
+</td>
+<td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="HB-AAT-LAYOUT-FEATURE-TYPE-CJK-SYMBOL-ALTERNATIVES-TYPE:CAPS"></a>HB_AAT_LAYOUT_FEATURE_TYPE_CJK_SYMBOL_ALTERNATIVES_TYPE</p></td>
-<td> </td>
-<td> </td>
+<td class="enum_member_description">
+<p><a class="ulink" href="https://developer.apple.com/fonts/TrueType-Reference-Manual/RM09/AppendixF.html#Type29" target="_top">CJK Symbol Alternatives</a></p>
+</td>
+<td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="HB-AAT-LAYOUT-FEATURE-TYPE-IDEOGRAPHIC-ALTERNATIVES-TYPE:CAPS"></a>HB_AAT_LAYOUT_FEATURE_TYPE_IDEOGRAPHIC_ALTERNATIVES_TYPE</p></td>
-<td> </td>
-<td> </td>
+<td class="enum_member_description">
+<p><a class="ulink" href="https://developer.apple.com/fonts/TrueType-Reference-Manual/RM09/AppendixF.html#Type30" target="_top">Ideographic Alternatives</a></p>
+</td>
+<td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="HB-AAT-LAYOUT-FEATURE-TYPE-CJK-VERTICAL-ROMAN-PLACEMENT-TYPE:CAPS"></a>HB_AAT_LAYOUT_FEATURE_TYPE_CJK_VERTICAL_ROMAN_PLACEMENT_TYPE</p></td>
-<td> </td>
-<td> </td>
+<td class="enum_member_description">
+<p><a class="ulink" href="https://developer.apple.com/fonts/TrueType-Reference-Manual/RM09/AppendixF.html#Type31" target="_top">CJK Vertical Roman Placement</a></p>
+</td>
+<td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="HB-AAT-LAYOUT-FEATURE-TYPE-ITALIC-CJK-ROMAN:CAPS"></a>HB_AAT_LAYOUT_FEATURE_TYPE_ITALIC_CJK_ROMAN</p></td>
-<td> </td>
-<td> </td>
+<td class="enum_member_description">
+<p><a class="ulink" href="https://developer.apple.com/fonts/TrueType-Reference-Manual/RM09/AppendixF.html#Type32" target="_top">Italic CJK Roman</a></p>
+</td>
+<td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="HB-AAT-LAYOUT-FEATURE-TYPE-CASE-SENSITIVE-LAYOUT:CAPS"></a>HB_AAT_LAYOUT_FEATURE_TYPE_CASE_SENSITIVE_LAYOUT</p></td>
-<td> </td>
-<td> </td>
+<td class="enum_member_description">
+<p><a class="ulink" href="https://developer.apple.com/fonts/TrueType-Reference-Manual/RM09/AppendixF.html#Type33" target="_top">Case Sensitive Layout</a></p>
+</td>
+<td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="HB-AAT-LAYOUT-FEATURE-TYPE-ALTERNATE-KANA:CAPS"></a>HB_AAT_LAYOUT_FEATURE_TYPE_ALTERNATE_KANA</p></td>
-<td> </td>
-<td> </td>
+<td class="enum_member_description">
+<p><a class="ulink" href="https://developer.apple.com/fonts/TrueType-Reference-Manual/RM09/AppendixF.html#Type34" target="_top">Alternate Kana</a></p>
+</td>
+<td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="HB-AAT-LAYOUT-FEATURE-TYPE-STYLISTIC-ALTERNATIVES:CAPS"></a>HB_AAT_LAYOUT_FEATURE_TYPE_STYLISTIC_ALTERNATIVES</p></td>
-<td> </td>
-<td> </td>
+<td class="enum_member_description">
+<p><a class="ulink" href="https://developer.apple.com/fonts/TrueType-Reference-Manual/RM09/AppendixF.html#Type35" target="_top">Stylistic Alternatives</a></p>
+</td>
+<td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="HB-AAT-LAYOUT-FEATURE-TYPE-CONTEXTUAL-ALTERNATIVES:CAPS"></a>HB_AAT_LAYOUT_FEATURE_TYPE_CONTEXTUAL_ALTERNATIVES</p></td>
-<td> </td>
-<td> </td>
+<td class="enum_member_description">
+<p><a class="ulink" href="https://developer.apple.com/fonts/TrueType-Reference-Manual/RM09/AppendixF.html#Type36" target="_top">Contextual Alternatives</a></p>
+</td>
+<td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="HB-AAT-LAYOUT-FEATURE-TYPE-LOWER-CASE:CAPS"></a>HB_AAT_LAYOUT_FEATURE_TYPE_LOWER_CASE</p></td>
-<td> </td>
-<td> </td>
+<td class="enum_member_description">
+<p><a class="ulink" href="https://developer.apple.com/fonts/TrueType-Reference-Manual/RM09/AppendixF.html#Type37" target="_top">Lower Case</a></p>
+</td>
+<td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="HB-AAT-LAYOUT-FEATURE-TYPE-UPPER-CASE:CAPS"></a>HB_AAT_LAYOUT_FEATURE_TYPE_UPPER_CASE</p></td>
-<td> </td>
-<td> </td>
+<td class="enum_member_description">
+<p><a class="ulink" href="https://developer.apple.com/fonts/TrueType-Reference-Manual/RM09/AppendixF.html#Type38" target="_top">Upper Case</a></p>
+</td>
+<td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="HB-AAT-LAYOUT-FEATURE-TYPE-LANGUAGE-TAG-TYPE:CAPS"></a>HB_AAT_LAYOUT_FEATURE_TYPE_LANGUAGE_TAG_TYPE</p></td>
-<td> </td>
-<td> </td>
+<td class="enum_member_description">
+<p><a class="ulink" href="https://developer.apple.com/fonts/TrueType-Reference-Manual/RM09/AppendixF.html#Type39" target="_top">Language Tag</a></p>
+</td>
+<td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="HB-AAT-LAYOUT-FEATURE-TYPE-CJK-ROMAN-SPACING-TYPE:CAPS"></a>HB_AAT_LAYOUT_FEATURE_TYPE_CJK_ROMAN_SPACING_TYPE</p></td>
-<td> </td>
-<td> </td>
+<td class="enum_member_description">
+<p><a class="ulink" href="https://developer.apple.com/fonts/TrueType-Reference-Manual/RM09/AppendixF.html#Type103" target="_top">CJK Roman Spacing</a></p>
+</td>
+<td class="enum_member_annotations"> </td>
 </tr>
 </tbody>
 </table></div>
@@ -2323,6 +2455,34 @@ there is no selector index corresponding to the selector of interest.</p>
   hb_aat_layout_feature_selector_t disable;
 } hb_aat_layout_feature_selector_info_t;
 </pre>
+<p>Structure representing a setting for an <a class="link" href="harfbuzz-hb-aat-layout.html#hb-aat-layout-feature-type-t" title="enum hb_aat_layout_feature_type_t"><span class="type">hb_aat_layout_feature_type_t</span></a>.</p>
+<div class="refsect3">
+<a name="hb-aat-layout-feature-selector-info-t.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="harfbuzz-hb-ot-name.html#hb-ot-name-id-t" title="hb_ot_name_id_t"><span class="type">hb_ot_name_id_t</span></a> <em class="structfield"><code><a name="hb-aat-layout-feature-selector-info-t.name-id"></a>name_id</code></em>;</p></td>
+<td class="struct_member_description"><p>The selector's name identifier</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="harfbuzz-hb-aat-layout.html#hb-aat-layout-feature-selector-t" title="enum hb_aat_layout_feature_selector_t"><span class="type">hb_aat_layout_feature_selector_t</span></a> <em class="structfield"><code><a name="hb-aat-layout-feature-selector-info-t.enable"></a>enable</code></em>;</p></td>
+<td class="struct_member_description"><p>The value to turn the selector on</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="harfbuzz-hb-aat-layout.html#hb-aat-layout-feature-selector-t" title="enum hb_aat_layout_feature_selector_t"><span class="type">hb_aat_layout_feature_selector_t</span></a> <em class="structfield"><code><a name="hb-aat-layout-feature-selector-info-t.disable"></a>disable</code></em>;</p></td>
+<td class="struct_member_description"><p>The value to turn the selector off</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
 </div>
 </div>
 </div>

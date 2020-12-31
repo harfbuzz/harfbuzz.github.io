@@ -88,6 +88,7 @@ hb_ot_meta_get_entry_tags (<em class="parameter"><code><a class="link" href="har
                            <em class="parameter"><code>unsigned <span class="type">int</span> start_offset</code></em>,
                            <em class="parameter"><code>unsigned <span class="type">int</span> *entries_count</code></em>,
                            <em class="parameter"><code><a class="link" href="harfbuzz-hb-ot-meta.html#hb-ot-meta-tag-t" title="enum hb_ot_meta_tag_t"><span class="type">hb_ot_meta_tag_t</span></a> *entries</code></em>);</pre>
+<p>Fetches all available feature types.</p>
 <div class="refsect3">
 <a name="hb-ot-meta-get-entry-tags.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -110,7 +111,7 @@ hb_ot_meta_get_entry_tags (<em class="parameter"><code><a class="link" href="har
 <tr>
 <td class="parameter_name"><p>entries_count</p></td>
 <td class="parameter_description"><p>buffer size as input, filled size as output. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>entries</p></td>

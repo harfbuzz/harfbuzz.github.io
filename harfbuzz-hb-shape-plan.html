@@ -503,6 +503,10 @@ the given <em class="parameter"><code>font</code></em>
 </tbody>
 </table></div>
 </div>
+<div class="refsect3">
+<a name="hb-shape-plan-execute.returns"></a><h4>Returns</h4>
+<p> <code class="literal">true</code> if success, <code class="literal">false</code> otherwise.</p>
+</div>
 <p class="since">Since: <a class="link" href="api-index-0-9-7.html#api-index-0.9.7">0.9.7</a></p>
 </div>
 <hr>
@@ -653,7 +657,7 @@ hb_shape_plan_set_user_data (<em class="parameter"><code><a class="link" href="h
 <td class="parameter_name"><p>destroy</p></td>
 <td class="parameter_description"><p>A callback to call when <em class="parameter"><code>data</code></em>
 is not needed anymore. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>replace</p></td>
@@ -662,6 +666,10 @@ is not needed anymore. </p></td>
 </tr>
 </tbody>
 </table></div>
+</div>
+<div class="refsect3">
+<a name="hb-shape-plan-set-user-data.returns"></a><h4>Returns</h4>
+<p> <code class="literal">true</code> if success, <code class="literal">false</code> otherwise.</p>
 </div>
 <p class="since">Since: <a class="link" href="api-index-0-9-7.html#api-index-0.9.7">0.9.7</a></p>
 </div>

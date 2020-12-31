@@ -296,7 +296,7 @@ at the offset provided.</p>
 <td class="parameter_name"><p>axes_count</p></td>
 <td class="parameter_description"><p>Input = the maximum number of variation axes to return;
 Output = the actual number of variation axes returned (may be zero). </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>axes_array</p></td>
@@ -447,7 +447,7 @@ named instance in the face.</p>
 <td class="parameter_name"><p>coords_length</p></td>
 <td class="parameter_description"><p>Input = the maximum number of coordinates to return;
 Output = the actual number of coordinates returned (may be zero). </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>coords</p></td>
@@ -566,34 +566,41 @@ applied, as described at https://docs.microsoft.com/en-us/typography/opentype/sp
 <a name="HB-OT-TAG-VAR-AXIS-ITALIC:CAPS"></a><h3>HB_OT_TAG_VAR_AXIS_ITALIC</h3>
 <pre class="programlisting">#define HB_OT_TAG_VAR_AXIS_ITALIC HB_TAG('i','t','a','l')
 </pre>
+<p>Registered tag for the roman/italic axis.</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="HB-OT-TAG-VAR-AXIS-OPTICAL-SIZE:CAPS"></a><h3>HB_OT_TAG_VAR_AXIS_OPTICAL_SIZE</h3>
 <pre class="programlisting">#define HB_OT_TAG_VAR_AXIS_OPTICAL_SIZE HB_TAG('o','p','s','z')
 </pre>
+<p>Registered tag for the optical-size axis.</p>
+<div class="note">Note: The optical-size axis supersedes the OpenType `size` feature.</div>
 </div>
 <hr>
 <div class="refsect2">
 <a name="HB-OT-TAG-VAR-AXIS-SLANT:CAPS"></a><h3>HB_OT_TAG_VAR_AXIS_SLANT</h3>
 <pre class="programlisting">#define HB_OT_TAG_VAR_AXIS_SLANT HB_TAG('s','l','n','t')
 </pre>
+<p>Registered tag for the slant axis</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="HB-OT-TAG-VAR-AXIS-WEIGHT:CAPS"></a><h3>HB_OT_TAG_VAR_AXIS_WEIGHT</h3>
 <pre class="programlisting">#define HB_OT_TAG_VAR_AXIS_WEIGHT HB_TAG('w','g','h','t')
 </pre>
+<p>Registered tag for the weight axis.</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="HB-OT-TAG-VAR-AXIS-WIDTH:CAPS"></a><h3>HB_OT_TAG_VAR_AXIS_WIDTH</h3>
 <pre class="programlisting">#define HB_OT_TAG_VAR_AXIS_WIDTH HB_TAG('w','d','t','h')
 </pre>
+<p>Registered tag for the width axis.</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="hb-ot-var-axis-flags-t"></a><h3>enum hb_ot_var_axis_flags_t</h3>
+<p>Flags for <a class="link" href="harfbuzz-hb-ot-var.html#hb-ot-var-axis-info-t" title="hb_ot_var_axis_info_t"><span class="type">hb_ot_var_axis_info_t</span></a>.</p>
 <div class="refsect3">
 <a name="hb-ot-var-axis-flags-t.members"></a><h4>Members</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">

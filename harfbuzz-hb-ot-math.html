@@ -589,12 +589,17 @@ Output = actual number of parts returned. </p></td>
 <a name="HB-OT-TAG-MATH:CAPS"></a><h3>HB_OT_TAG_MATH</h3>
 <pre class="programlisting">#define HB_OT_TAG_MATH HB_TAG('M','A','T','H')
 </pre>
+<p>OpenType <a class="ulink" href="https://docs.microsoft.com/en-us/typography/opentype/spec/math" target="_top">Mathematical Typesetting Table</a>.</p>
+<p class="since">Since: <a class="link" href="api-index-1-3-3.html#api-index-1.3.3">1.3.3</a></p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="HB-OT-MATH-SCRIPT:CAPS"></a><h3>HB_OT_MATH_SCRIPT</h3>
 <pre class="programlisting">#define HB_OT_MATH_SCRIPT HB_TAG('m','a','t','h')
 </pre>
+<p>OpenType script tag for math shaping, for use with
+Use with <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-set-script" title="hb_buffer_set_script ()"><code class="function">hb_buffer_set_script()</code></a>.</p>
+<p class="since">Since: <a class="link" href="api-index-1-3-3.html#api-index-1.3.3">1.3.3</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -911,23 +916,31 @@ of a glyph.</p>
 <tbody>
 <tr>
 <td class="enum_member_name"><p><a name="HB-OT-MATH-KERN-TOP-RIGHT:CAPS"></a>HB_OT_MATH_KERN_TOP_RIGHT</p></td>
-<td> </td>
-<td> </td>
+<td class="enum_member_description">
+<p>The top right corner of the glyph.</p>
+</td>
+<td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="HB-OT-MATH-KERN-TOP-LEFT:CAPS"></a>HB_OT_MATH_KERN_TOP_LEFT</p></td>
-<td> </td>
-<td> </td>
+<td class="enum_member_description">
+<p>The top left corner of the glyph.</p>
+</td>
+<td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="HB-OT-MATH-KERN-BOTTOM-RIGHT:CAPS"></a>HB_OT_MATH_KERN_BOTTOM_RIGHT</p></td>
-<td> </td>
-<td> </td>
+<td class="enum_member_description">
+<p>The bottom right corner of the glyph.</p>
+</td>
+<td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="HB-OT-MATH-KERN-BOTTOM-LEFT:CAPS"></a>HB_OT_MATH_KERN_BOTTOM_LEFT</p></td>
-<td> </td>
-<td> </td>
+<td class="enum_member_description">
+<p>The bottom left corner of the glyph.</p>
+</td>
+<td class="enum_member_annotations"> </td>
 </tr>
 </tbody>
 </table></div>
@@ -981,8 +994,11 @@ of a glyph.</p>
 </colgroup>
 <tbody><tr>
 <td class="enum_member_name"><p><a name="HB-OT-MATH-GLYPH-PART-FLAG-EXTENDER:CAPS"></a>HB_OT_MATH_GLYPH_PART_FLAG_EXTENDER</p></td>
-<td> </td>
-<td> </td>
+<td class="enum_member_description">
+<p>This is an extender glyph part that
+can be repeated to reach the desired length.</p>
+</td>
+<td class="enum_member_annotations"> </td>
 </tr></tbody>
 </table></div>
 </div>

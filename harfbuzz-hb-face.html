@@ -364,7 +364,7 @@ with the <em class="parameter"><code>destroy</code></em>
 <td class="parameter_name"><p>destroy</p></td>
 <td class="parameter_description"><p>A callback to call when <em class="parameter"><code>data</code></em>
 is not needed anymore. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 </tbody>
 </table></div>
@@ -410,7 +410,8 @@ hb_face_get_empty (<em class="parameter"><code><span class="type">void</span></c
 <p>Fetches the singleton empty face object.</p>
 <div class="refsect3">
 <a name="hb-face-get-empty.returns"></a><h4>Returns</h4>
-<p> (transfer full) The empty face object</p>
+<p>The empty face object. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 <p class="since">Since: <a class="link" href="api-index-0-9-2.html#api-index-0.9.2">0.9.2</a></p>
 </div>
@@ -871,7 +872,7 @@ hb_face_set_user_data (<em class="parameter"><code><a class="link" href="harfbuz
 <td class="parameter_name"><p>destroy</p></td>
 <td class="parameter_description"><p>A callback to call when <em class="parameter"><code>data</code></em>
 is not needed anymore. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>replace</p></td>

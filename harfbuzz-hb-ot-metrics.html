@@ -104,7 +104,9 @@
 hb_ot_metrics_get_position (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> *font</code></em>,
                             <em class="parameter"><code><a class="link" href="harfbuzz-hb-ot-metrics.html#hb-ot-metrics-tag-t" title="enum hb_ot_metrics_tag_t"><span class="type">hb_ot_metrics_tag_t</span></a> metrics_tag</code></em>,
                             <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-position-t" title="hb_position_t"><span class="type">hb_position_t</span></a> *position</code></em>);</pre>
-<p>It fetches metrics value corresponding to a given tag from a font.</p>
+<p>Fetches metrics value corresponding to <em class="parameter"><code>metrics_tag</code></em>
+ from <em class="parameter"><code>font</code></em>
+.</p>
 <div class="refsect3">
 <a name="hb-ot-metrics-get-position.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -116,7 +118,7 @@ hb_ot_metrics_get_position (<em class="parameter"><code><a class="link" href="ha
 <tbody>
 <tr>
 <td class="parameter_name"><p>font</p></td>
-<td class="parameter_description"><p>a <a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> object.</p></td>
+<td class="parameter_description"><p>an <a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> object.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -144,6 +146,36 @@ hb_ot_metrics_get_position (<em class="parameter"><code><a class="link" href="ha
 <pre class="programlisting"><span class="returnvalue">float</span>
 hb_ot_metrics_get_variation (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> *font</code></em>,
                              <em class="parameter"><code><a class="link" href="harfbuzz-hb-ot-metrics.html#hb-ot-metrics-tag-t" title="enum hb_ot_metrics_tag_t"><span class="type">hb_ot_metrics_tag_t</span></a> metrics_tag</code></em>);</pre>
+<p>Fetches metrics value corresponding to <em class="parameter"><code>metrics_tag</code></em>
+ from <em class="parameter"><code>font</code></em>
+ with the
+current font variation settings applied.</p>
+<div class="refsect3">
+<a name="hb-ot-metrics-get-variation.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>font</p></td>
+<td class="parameter_description"><p>an <a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> object.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>metrics_tag</p></td>
+<td class="parameter_description"><p>tag of metrics value you like to fetch.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-ot-metrics-get-variation.returns"></a><h4>Returns</h4>
+<p> The requested metric value.</p>
+</div>
 <p class="since">Since: <a class="link" href="api-index-2-6-0.html#api-index-2.6.0">2.6.0</a></p>
 </div>
 <hr>
@@ -152,6 +184,36 @@ hb_ot_metrics_get_variation (<em class="parameter"><code><a class="link" href="h
 <pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-position-t" title="hb_position_t"><span class="returnvalue">hb_position_t</span></a>
 hb_ot_metrics_get_x_variation (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> *font</code></em>,
                                <em class="parameter"><code><a class="link" href="harfbuzz-hb-ot-metrics.html#hb-ot-metrics-tag-t" title="enum hb_ot_metrics_tag_t"><span class="type">hb_ot_metrics_tag_t</span></a> metrics_tag</code></em>);</pre>
+<p>Fetches horizontal metrics value corresponding to <em class="parameter"><code>metrics_tag</code></em>
+ from <em class="parameter"><code>font</code></em>
+
+with the current font variation settings applied.</p>
+<div class="refsect3">
+<a name="hb-ot-metrics-get-x-variation.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>font</p></td>
+<td class="parameter_description"><p>an <a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> object.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>metrics_tag</p></td>
+<td class="parameter_description"><p>tag of metrics value you like to fetch.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-ot-metrics-get-x-variation.returns"></a><h4>Returns</h4>
+<p> The requested metric value.</p>
+</div>
 <p class="since">Since: <a class="link" href="api-index-2-6-0.html#api-index-2.6.0">2.6.0</a></p>
 </div>
 <hr>
@@ -160,6 +222,36 @@ hb_ot_metrics_get_x_variation (<em class="parameter"><code><a class="link" href=
 <pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-position-t" title="hb_position_t"><span class="returnvalue">hb_position_t</span></a>
 hb_ot_metrics_get_y_variation (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> *font</code></em>,
                                <em class="parameter"><code><a class="link" href="harfbuzz-hb-ot-metrics.html#hb-ot-metrics-tag-t" title="enum hb_ot_metrics_tag_t"><span class="type">hb_ot_metrics_tag_t</span></a> metrics_tag</code></em>);</pre>
+<p>Fetches vertical metrics value corresponding to <em class="parameter"><code>metrics_tag</code></em>
+ from <em class="parameter"><code>font</code></em>
+ with
+the current font variation settings applied.</p>
+<div class="refsect3">
+<a name="hb-ot-metrics-get-y-variation.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>font</p></td>
+<td class="parameter_description"><p>an <a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> object.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>metrics_tag</p></td>
+<td class="parameter_description"><p>tag of metrics value you like to fetch.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-ot-metrics-get-y-variation.returns"></a><h4>Returns</h4>
+<p> The requested metric value.</p>
+</div>
 <p class="since">Since: <a class="link" href="api-index-2-6-0.html#api-index-2.6.0">2.6.0</a></p>
 </div>
 </div>
@@ -167,7 +259,8 @@ hb_ot_metrics_get_y_variation (<em class="parameter"><code><a class="link" href=
 <a name="harfbuzz-hb-ot-metrics.other_details"></a><h2>Types and Values</h2>
 <div class="refsect2">
 <a name="hb-ot-metrics-tag-t"></a><h3>enum hb_ot_metrics_tag_t</h3>
-<p>From https://docs.microsoft.com/en-us/typography/opentype/spec/mvar<span class="type">value-tags</span></p>
+<p>Metric tags corresponding to <a class="ulink" href="https://docs.microsoft.com/en-us/typography/opentype/spec/mvar#value-tags" target="_top">MVAR Value
+Tags</a></p>
 <div class="refsect3">
 <a name="hb-ot-metrics-tag-t.members"></a><h4>Members</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">

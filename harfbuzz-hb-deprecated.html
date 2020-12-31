@@ -176,7 +176,57 @@ were deemed unnecessary.</p>
                              <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> variation_selector</code></em>,
                              <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> *glyph</code></em>,
                              <em class="parameter"><code><span class="type">void</span> *user_data</code></em>);</pre>
-<div class="warning"><p><code class="literal">hb_font_get_glyph_func_t</code> is deprecated and should not be used in newly-written code.</p></div>
+<div class="warning"><p><code class="literal">hb_font_get_glyph_func_t</code> has been deprecated since version 1.2.3 and should not be used in newly-written code.</p></div>
+<p>A virtual method for the <a class="link" href="harfbuzz-hb-font.html#hb-font-funcs-t" title="hb_font_funcs_t"><span class="type">hb_font_funcs_t</span></a> of an <a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> object.</p>
+<p>This method should retrieve the glyph ID for a specified Unicode code point
+font, with an optional variation selector.</p>
+<div class="refsect3">
+<a name="hb-font-get-glyph-func-t.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>font</p></td>
+<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> to work upon</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>font_data</p></td>
+<td class="parameter_description"><p><em class="parameter"><code>font</code></em>
+user data pointer</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>unicode</p></td>
+<td class="parameter_description"><p>The Unicode code point to query</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>variation_selector</p></td>
+<td class="parameter_description"><p>The  variation-selector code point to query</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>glyph</p></td>
+<td class="parameter_description"><p>The glyph ID retrieved. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>User data pointer passed by the caller</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-font-get-glyph-func-t.returns"></a><h4>Returns</h4>
+<p> <code class="literal">true</code> if data found, <code class="literal">false</code> otherwise</p>
+</div>
 </div>
 <hr>
 <div class="refsect2">
@@ -204,7 +254,7 @@ or GPOS table.</p>
 </tr>
 <tr>
 <td class="parameter_name"><p>table_tag</p></td>
-<td class="parameter_description"><p>HB_OT_TAG_GSUB or HB_OT_TAG_GPOS</p></td>
+<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-ot-layout.html#HB-OT-TAG-GSUB:CAPS" title="HB_OT_TAG_GSUB"><span class="type">HB_OT_TAG_GSUB</span></a> or <a class="link" href="harfbuzz-hb-ot-layout.html#HB-OT-TAG-GPOS:CAPS" title="HB_OT_TAG_GPOS"><span class="type">HB_OT_TAG_GPOS</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -257,6 +307,29 @@ hb_set_invert (<em class="parameter"><code><a class="link" href="harfbuzz-hb-set
 hb_unicode_eastasian_width (<em class="parameter"><code><a class="link" href="harfbuzz-hb-unicode.html#hb-unicode-funcs-t" title="hb_unicode_funcs_t"><span class="type">hb_unicode_funcs_t</span></a> *ufuncs</code></em>,
                             <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> unicode</code></em>);</pre>
 <div class="warning"><p><code class="literal">hb_unicode_eastasian_width</code> has been deprecated since version 2.0.0 and should not be used in newly-written code.</p></div>
+<p>Don't use. Not used by HarfBuzz.</p>
+<div class="refsect3">
+<a name="hb-unicode-eastasian-width.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>ufuncs</p></td>
+<td class="parameter_description"><p>a Unicode-function structure</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>unicode</p></td>
+<td class="parameter_description"><p>The code point to query</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
 <p class="since">Since: <a class="link" href="api-index-0-9-2.html#api-index-0.9.2">0.9.2</a></p>
 </div>
 <hr>
@@ -269,6 +342,7 @@ hb_unicode_funcs_set_eastasian_width_func
                                 <em class="parameter"><code><span class="type">void</span> *user_data</code></em>,
                                 <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-destroy-func-t" title="hb_destroy_func_t ()"><span class="type">hb_destroy_func_t</span></a> destroy</code></em>);</pre>
 <div class="warning"><p><code class="literal">hb_unicode_funcs_set_eastasian_width_func</code> has been deprecated since version 2.0.0 and should not be used in newly-written code.</p></div>
+<p>Sets the implementation function for <span class="type">hb_unicode_eastasian_width_func_t</span>.</p>
 <div class="refsect3">
 <a name="hb-unicode-funcs-set-eastasian-width-func.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -280,13 +354,25 @@ hb_unicode_funcs_set_eastasian_width_func
 <tbody>
 <tr>
 <td class="parameter_name"><p>ufuncs</p></td>
-<td class="parameter_description"><p>a Unicode function structure</p></td>
+<td class="parameter_description"><p>a Unicode-function structure</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>func</p></td>
-<td class="parameter_description"><p>. </p></td>
+<td class="parameter_description"><p>The callback function to assign. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym> user_data][<acronym title="This parameter is a 'destroy_data', for callbacks."><span class="acronym">destroy</span></acronym> destroy][<acronym title="The callback is valid until the GDestroyNotify argument is called."><span class="acronym">scope notified</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>Data to pass to <em class="parameter"><code>func</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>destroy</p></td>
+<td class="parameter_description"><p>The function to call when <em class="parameter"><code>user_data</code></em>
+is not needed anymore. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 </tbody>
 </table></div>
@@ -331,6 +417,11 @@ code point. Deprecated.</p>
 </tbody>
 </table></div>
 </div>
+<div class="refsect3">
+<a name="hb-unicode-decompose-compatibility.returns"></a><h4>Returns</h4>
+<p> length of <em class="parameter"><code>decomposed</code></em>
+.</p>
+</div>
 <p class="since">Since: <a class="link" href="api-index-0-9-2.html#api-index-0.9.2">0.9.2</a></p>
 </div>
 <hr>
@@ -343,6 +434,7 @@ hb_unicode_funcs_set_decompose_compatibility_func
                                 <em class="parameter"><code><span class="type">void</span> *user_data</code></em>,
                                 <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-destroy-func-t" title="hb_destroy_func_t ()"><span class="type">hb_destroy_func_t</span></a> destroy</code></em>);</pre>
 <div class="warning"><p><code class="literal">hb_unicode_funcs_set_decompose_compatibility_func</code> has been deprecated since version 2.0.0 and should not be used in newly-written code.</p></div>
+<p>Sets the implementation function for <span class="type">hb_unicode_decompose_compatibility_func_t</span>.</p>
 <div class="refsect3">
 <a name="hb-unicode-funcs-set-decompose-compatibility-func.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -354,13 +446,25 @@ hb_unicode_funcs_set_decompose_compatibility_func
 <tbody>
 <tr>
 <td class="parameter_name"><p>ufuncs</p></td>
-<td class="parameter_description"><p>a Unicode function structure</p></td>
+<td class="parameter_description"><p>A Unicode-functions structure</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>func</p></td>
-<td class="parameter_description"><p>. </p></td>
+<td class="parameter_description"><p>The callback function to assign. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym> user_data][<acronym title="This parameter is a 'destroy_data', for callbacks."><span class="acronym">destroy</span></acronym> destroy][<acronym title="The callback is valid until the GDestroyNotify argument is called."><span class="acronym">scope notified</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>Data to pass to <em class="parameter"><code>func</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>destroy</p></td>
+<td class="parameter_description"><p>The function to call when <em class="parameter"><code>user_data</code></em>
+is not needed anymore. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 </tbody>
 </table></div>
@@ -377,6 +481,7 @@ hb_font_funcs_set_glyph_v_kerning_func
                                 <em class="parameter"><code><span class="type">void</span> *user_data</code></em>,
                                 <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-destroy-func-t" title="hb_destroy_func_t ()"><span class="type">hb_destroy_func_t</span></a> destroy</code></em>);</pre>
 <div class="warning"><p><code class="literal">hb_font_funcs_set_glyph_v_kerning_func</code> has been deprecated since version 2.0.0 and should not be used in newly-written code.</p></div>
+<p>Sets the implementation function for <a class="link" href="harfbuzz-hb-deprecated.html#hb-font-get-glyph-v-kerning-func-t" title="hb_font_get_glyph_v_kerning_func_t"><span class="type">hb_font_get_glyph_v_kerning_func_t</span></a>.</p>
 <div class="refsect3">
 <a name="hb-font-funcs-set-glyph-v-kerning-func.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -388,13 +493,25 @@ hb_font_funcs_set_glyph_v_kerning_func
 <tbody>
 <tr>
 <td class="parameter_name"><p>ffuncs</p></td>
-<td class="parameter_description"><p>font functions.</p></td>
+<td class="parameter_description"><p>A font-function structure</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>func</p></td>
-<td class="parameter_description"><p>. </p></td>
+<td class="parameter_description"><p>The callback function to assign. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym> user_data][<acronym title="This parameter is a 'destroy_data', for callbacks."><span class="acronym">destroy</span></acronym> destroy][<acronym title="The callback is valid until the GDestroyNotify argument is called."><span class="acronym">scope notified</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>Data to pass to <em class="parameter"><code>func</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>destroy</p></td>
+<td class="parameter_description"><p>The function to call when <em class="parameter"><code>user_data</code></em>
+is not needed anymore. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 </tbody>
 </table></div>
@@ -410,7 +527,7 @@ hb_font_get_glyph_v_kerning (<em class="parameter"><code><a class="link" href="h
                              <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> bottom_glyph</code></em>);</pre>
 <div class="warning"><p><code class="literal">hb_font_get_glyph_v_kerning</code> has been deprecated since version 2.0.0 and should not be used in newly-written code.</p></div>
 <p>Fetches the kerning-adjustment value for a glyph-pair in
-the specified font, in vertical text segments.</p>
+the specified font, for vertical text segments.</p>
 <div class="note">It handles legacy kerning only (as returned by the corresponding
 <a class="link" href="harfbuzz-hb-font.html#hb-font-funcs-t" title="hb_font_funcs_t"><span class="type">hb_font_funcs_t</span></a> function).</div>
 <div class="refsect3">
@@ -454,6 +571,7 @@ the specified font, in vertical text segments.</p>
 <pre class="programlisting">#define HB_BUFFER_FLAGS_DEFAULT			HB_BUFFER_FLAG_DEFAULT
 </pre>
 <div class="warning"><p><code class="literal">HB_BUFFER_FLAGS_DEFAULT</code> is deprecated and should not be used in newly-written code.</p></div>
+<p>Use <a class="link" href="harfbuzz-hb-buffer.html#HB-BUFFER-FLAG-DEFAULT:CAPS"><span class="type">HB_BUFFER_FLAG_DEFAULT</span></a> instead.</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -461,6 +579,7 @@ the specified font, in vertical text segments.</p>
 <pre class="programlisting">#define HB_BUFFER_SERIALIZE_FLAGS_DEFAULT HB_BUFFER_SERIALIZE_FLAG_DEFAULT
 </pre>
 <div class="warning"><p><code class="literal">HB_BUFFER_SERIALIZE_FLAGS_DEFAULT</code> is deprecated and should not be used in newly-written code.</p></div>
+<p>Use HB_BUFFER_SERIALIZE_FLAG_DEFAULT instead.</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -474,7 +593,8 @@ the specified font, in vertical text segments.</p>
 <a name="HB-MATH-GLYPH-PART-FLAG-EXTENDER:CAPS"></a><h3>HB_MATH_GLYPH_PART_FLAG_EXTENDER</h3>
 <pre class="programlisting">#define HB_MATH_GLYPH_PART_FLAG_EXTENDER HB_OT_MATH_GLYPH_PART_FLAG_EXTENDER
 </pre>
-<div class="warning"><p><code class="literal">HB_MATH_GLYPH_PART_FLAG_EXTENDER</code> is deprecated and should not be used in newly-written code.</p></div>
+<div class="warning"><p><code class="literal">HB_MATH_GLYPH_PART_FLAG_EXTENDER</code> has been deprecated since version 2.5.1 and should not be used in newly-written code.</p></div>
+<p>Use <a class="link" href="harfbuzz-hb-ot-math.html#HB-OT-MATH-GLYPH-PART-FLAG-EXTENDER:CAPS"><span class="type">HB_OT_MATH_GLYPH_PART_FLAG_EXTENDER</span></a> instead.</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -496,6 +616,44 @@ the specified font, in vertical text segments.</p>
 } hb_ot_var_axis_t;
 </pre>
 <div class="warning"><p><code class="literal">hb_ot_var_axis_t</code> has been deprecated since version 2.2.0 and should not be used in newly-written code.</p></div>
+<p>Use <a class="link" href="harfbuzz-hb-ot-var.html#hb-ot-var-axis-info-t" title="hb_ot_var_axis_info_t"><span class="type">hb_ot_var_axis_info_t</span></a> instead.</p>
+<div class="refsect3">
+<a name="hb-ot-var-axis-t.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="type">hb_tag_t</span></a> <em class="structfield"><code><a name="hb-ot-var-axis-t.tag"></a>tag</code></em>;</p></td>
+<td class="struct_member_description"><p>axis tag</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="harfbuzz-hb-ot-name.html#hb-ot-name-id-t" title="hb_ot_name_id_t"><span class="type">hb_ot_name_id_t</span></a> <em class="structfield"><code><a name="hb-ot-var-axis-t.name-id"></a>name_id</code></em>;</p></td>
+<td class="struct_member_description"><p>axis name identifier</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">float</span> <em class="structfield"><code><a name="hb-ot-var-axis-t.min-value"></a>min_value</code></em>;</p></td>
+<td class="struct_member_description"><p>minimum value of the axis</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">float</span> <em class="structfield"><code><a name="hb-ot-var-axis-t.default-value"></a>default_value</code></em>;</p></td>
+<td class="struct_member_description"><p>default value of the axis</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">float</span> <em class="structfield"><code><a name="hb-ot-var-axis-t.max-value"></a>max_value</code></em>;</p></td>
+<td class="struct_member_description"><p>maximum value of the axis</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
 <p class="since">Since: <a class="link" href="api-index-1-4-2.html#api-index-1.4.2">1.4.2</a></p>
 </div>
 <hr>
@@ -512,6 +670,9 @@ the specified font, in vertical text segments.</p>
 <pre class="programlisting">typedef hb_font_get_glyph_kerning_func_t hb_font_get_glyph_v_kerning_func_t;
 </pre>
 <div class="warning"><p><code class="literal">hb_font_get_glyph_v_kerning_func_t</code> is deprecated and should not be used in newly-written code.</p></div>
+<p>A virtual method for the <a class="link" href="harfbuzz-hb-font.html#hb-font-funcs-t" title="hb_font_funcs_t"><span class="type">hb_font_funcs_t</span></a> of an <a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> object.</p>
+<p>This method should retrieve the kerning-adjustment value for a glyph-pair in
+the specified font, for vertical text segments.</p>
 </div>
 </div>
 </div>

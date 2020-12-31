@@ -167,14 +167,6 @@
 <a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
 </td>
 <td class="function_name">
-<span class="c_punctuation">(</span><a class="link" href="harfbuzz-hb-ot-layout.html#hb-ot-layout-glyph-sequence-func-t" title="hb_ot_layout_glyph_sequence_func_t ()">*hb_ot_layout_glyph_sequence_func_t</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
-</td>
-<td class="function_name">
 <a class="link" href="harfbuzz-hb-ot-layout.html#hb-ot-layout-has-glyph-classes" title="hb_ot_layout_has_glyph_classes ()">hb_ot_layout_has_glyph_classes</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
@@ -421,10 +413,27 @@
 <a name="hb-ot-tag-to-language"></a><h3>hb_ot_tag_to_language ()</h3>
 <pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-language-t" title="hb_language_t"><span class="returnvalue">hb_language_t</span></a>
 hb_ot_tag_to_language (<em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="type">hb_tag_t</span></a> tag</code></em>);</pre>
+<p>Converts a language tag to an <a class="link" href="harfbuzz-hb-common.html#hb-language-t" title="hb_language_t"><span class="type">hb_language_t</span></a>.</p>
+<div class="refsect3">
+<a name="hb-ot-tag-to-language.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>tag</p></td>
+<td class="parameter_description"><p>an language tag</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
 <div class="refsect3">
 <a name="hb-ot-tag-to-language.returns"></a><h4>Returns</h4>
-<p>. </p>
-<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+<p>The <a class="link" href="harfbuzz-hb-common.html#hb-language-t" title="hb_language_t"><span class="type">hb_language_t</span></a> corresponding to <em class="parameter"><code>tag</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></p>
 </div>
 <p class="since">Since: <a class="link" href="api-index-0-9-2.html#api-index-0.9.2">0.9.2</a></p>
 </div>
@@ -433,6 +442,27 @@ hb_ot_tag_to_language (<em class="parameter"><code><a class="link" href="harfbuz
 <a name="hb-ot-tag-to-script"></a><h3>hb_ot_tag_to_script ()</h3>
 <pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-script-t" title="enum hb_script_t"><span class="returnvalue">hb_script_t</span></a>
 hb_ot_tag_to_script (<em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="type">hb_tag_t</span></a> tag</code></em>);</pre>
+<p>Converts a script tag to an <a class="link" href="harfbuzz-hb-common.html#hb-script-t" title="enum hb_script_t"><span class="type">hb_script_t</span></a>.</p>
+<div class="refsect3">
+<a name="hb-ot-tag-to-script.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>tag</p></td>
+<td class="parameter_description"><p>a script tag</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-ot-tag-to-script.returns"></a><h4>Returns</h4>
+<p> The <a class="link" href="harfbuzz-hb-common.html#hb-script-t" title="enum hb_script_t"><span class="type">hb_script_t</span></a> corresponding to <em class="parameter"><code>tag</code></em>
+.</p>
+</div>
 </div>
 <hr>
 <div class="refsect2">
@@ -468,27 +498,27 @@ hb_ot_tags_from_script_and_language (<em class="parameter"><code><a class="link"
 <td class="parameter_name"><p>script_count</p></td>
 <td class="parameter_description"><p>maximum number of script tags to retrieve (IN)
 and actual number of script tags retrieved (OUT). </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>script_tags</p></td>
 <td class="parameter_description"><p>array of size at least <em class="parameter"><code>script_count</code></em>
 to store the
 script tag results. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>language_count</p></td>
 <td class="parameter_description"><p>maximum number of language tags to retrieve
 (IN) and actual number of language tags retrieved (OUT). </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>language_tags</p></td>
 <td class="parameter_description"><p>array of size at least <em class="parameter"><code>language_count</code></em>
 to store
 the language tag results. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
 </tr>
 </tbody>
 </table></div>
@@ -527,16 +557,16 @@ hb_ot_tags_to_script_and_language (<em class="parameter"><code><a class="link" h
 <tr>
 <td class="parameter_name"><p>script</p></td>
 <td class="parameter_description"><p>the <a class="link" href="harfbuzz-hb-common.html#hb-script-t" title="enum hb_script_t"><span class="type">hb_script_t</span></a> corresponding to <em class="parameter"><code>script_tag</code></em>
-(OUT). </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>language</p></td>
 <td class="parameter_description"><p>the <a class="link" href="harfbuzz-hb-common.html#hb-language-t" title="hb_language_t"><span class="type">hb_language_t</span></a> corresponding to <em class="parameter"><code>script_tag</code></em>
 and
 <em class="parameter"><code>language_tag</code></em>
-(OUT). </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
 </tr>
 </tbody>
 </table></div>
@@ -574,7 +604,7 @@ list of features is provided, all features will be queried.</p>
 </tr>
 <tr>
 <td class="parameter_name"><p>table_tag</p></td>
-<td class="parameter_description"><p>HB_OT_TAG_GSUB or HB_OT_TAG_GPOS</p></td>
+<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-ot-layout.html#HB-OT-TAG-GSUB:CAPS" title="HB_OT_TAG_GSUB"><span class="type">HB_OT_TAG_GSUB</span></a> or <a class="link" href="harfbuzz-hb-ot-layout.html#HB-OT-TAG-GPOS:CAPS" title="HB_OT_TAG_GPOS"><span class="type">HB_OT_TAG_GPOS</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -633,7 +663,7 @@ features is provided, all features will be queried.</p>
 </tr>
 <tr>
 <td class="parameter_name"><p>table_tag</p></td>
-<td class="parameter_description"><p>HB_OT_TAG_GSUB or HB_OT_TAG_GPOS</p></td>
+<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-ot-layout.html#HB-OT-TAG-GSUB:CAPS" title="HB_OT_TAG_GSUB"><span class="type">HB_OT_TAG_GSUB</span></a> or <a class="link" href="harfbuzz-hb-ot-layout.html#HB-OT-TAG-GPOS:CAPS" title="HB_OT_TAG_GPOS"><span class="type">HB_OT_TAG_GPOS</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -706,7 +736,7 @@ hb_ot_layout_feature_get_characters (<em class="parameter"><code><a class="link"
 <td class="parameter_name"><p>char_count</p></td>
 <td class="parameter_description"><p>Input = the maximum number of characters to return;
 Output = the actual number of characters returned (may be zero). </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>characters</p></td>
@@ -753,7 +783,7 @@ begin at the offset provided.</p>
 </tr>
 <tr>
 <td class="parameter_name"><p>table_tag</p></td>
-<td class="parameter_description"><p>HB_OT_TAG_GSUB or HB_OT_TAG_GPOS</p></td>
+<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-ot-layout.html#HB-OT-TAG-GSUB:CAPS" title="HB_OT_TAG_GSUB"><span class="type">HB_OT_TAG_GSUB</span></a> or <a class="link" href="harfbuzz-hb-ot-layout.html#HB-OT-TAG-GPOS:CAPS" title="HB_OT_TAG_GPOS"><span class="type">HB_OT_TAG_GPOS</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -770,7 +800,7 @@ begin at the offset provided.</p>
 <td class="parameter_name"><p>lookup_count</p></td>
 <td class="parameter_description"><p>Input = the maximum number of lookups to return;
 Output = the actual number of lookups returned (may be zero). </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>lookup_indexes</p></td>
@@ -824,32 +854,32 @@ hb_ot_layout_feature_get_name_ids (<em class="parameter"><code><a class="link" h
 <td class="parameter_name"><p>label_id</p></td>
 <td class="parameter_description"><p>The ‘name’ table name ID that specifies a string
 for a user-interface label for this feature. (May be NULL.). </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>tooltip_id</p></td>
 <td class="parameter_description"><p>The ‘name’ table name ID that specifies a string
 that an application can use for tooltip text for this
 feature. (May be NULL.). </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>sample_id</p></td>
 <td class="parameter_description"><p>The ‘name’ table name ID that specifies sample text
 that illustrates the effect of this feature. (May be NULL.). </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>num_named_parameters</p></td>
 <td class="parameter_description"><p>Number of named parameters. (May be zero.). </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>first_param_id</p></td>
 <td class="parameter_description"><p>The first ‘name’ table name ID used to specify
 strings for user-interface labels for the feature
 parameters. (Must be zero if numParameters is zero.). </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
 </tr>
 </tbody>
 </table></div>
@@ -891,7 +921,7 @@ variations index. The list returned will begin at the offset provided.</p>
 </tr>
 <tr>
 <td class="parameter_name"><p>table_tag</p></td>
-<td class="parameter_description"><p>HB_OT_TAG_GSUB or HB_OT_TAG_GPOS</p></td>
+<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-ot-layout.html#HB-OT-TAG-GSUB:CAPS" title="HB_OT_TAG_GSUB"><span class="type">HB_OT_TAG_GSUB</span></a> or <a class="link" href="harfbuzz-hb-ot-layout.html#HB-OT-TAG-GPOS:CAPS" title="HB_OT_TAG_GPOS"><span class="type">HB_OT_TAG_GPOS</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -913,7 +943,7 @@ variations index. The list returned will begin at the offset provided.</p>
 <td class="parameter_name"><p>lookup_count</p></td>
 <td class="parameter_description"><p>Input = the maximum number of lookups to return;
 Output = the actual number of lookups returned (may be zero). </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>lookup_indexes</p></td>
@@ -964,7 +994,7 @@ table of the face. The list returned will begin at the offset provided.</p>
 <td class="parameter_name"><p>point_count</p></td>
 <td class="parameter_description"><p>Input = the maximum number of attachment points to return;
 Output = the actual number of attachment points returned (may be zero). </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>point_array</p></td>
@@ -1154,7 +1184,7 @@ table of the font. The list returned will begin at the offset provided.</p>
 <td class="parameter_name"><p>caret_count</p></td>
 <td class="parameter_description"><p>Input = the maximum number of caret positions to return;
 Output = the actual number of caret positions returned (may be zero). </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>caret_array</p></td>
@@ -1231,16 +1261,6 @@ a subfamily are not covered by the <code class="literal">size</code> feature.</p
 </div>
 <hr>
 <div class="refsect2">
-<a name="hb-ot-layout-glyph-sequence-func-t"></a><h3>hb_ot_layout_glyph_sequence_func_t ()</h3>
-<pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
-<span class="c_punctuation">(</span>*hb_ot_layout_glyph_sequence_func_t<span class="c_punctuation">)</span> (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> *font</code></em>,
-                                       <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="type">hb_tag_t</span></a> table_tag</code></em>,
-                                       <em class="parameter"><code>unsigned <span class="type">int</span> lookup_index</code></em>,
-                                       <em class="parameter"><code>const <span class="type">hb_ot_layout_glyph_sequence_t</span> *sequence</code></em>,
-                                       <em class="parameter"><code><span class="type">void</span> *user_data</code></em>);</pre>
-</div>
-<hr>
-<div class="refsect2">
 <a name="hb-ot-layout-has-glyph-classes"></a><h3>hb_ot_layout_has_glyph_classes ()</h3>
 <pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
 hb_ot_layout_has_glyph_classes (<em class="parameter"><code><a class="link" href="harfbuzz-hb-face.html#hb-face-t" title="hb_face_t"><span class="type">hb_face_t</span></a> *face</code></em>);</pre>
@@ -1270,6 +1290,7 @@ hb_ot_layout_has_glyph_classes (<em class="parameter"><code><a class="link" href
 <a name="hb-ot-layout-has-positioning"></a><h3>hb_ot_layout_has_positioning ()</h3>
 <pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
 hb_ot_layout_has_positioning (<em class="parameter"><code><a class="link" href="harfbuzz-hb-face.html#hb-face-t" title="hb_face_t"><span class="type">hb_face_t</span></a> *face</code></em>);</pre>
+<p>Tests whether the specified face includes any GPOS positioning.</p>
 <div class="refsect3">
 <a name="hb-ot-layout-has-positioning.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -1344,7 +1365,7 @@ or GPOS table, underneath the specified script and language.</p>
 </tr>
 <tr>
 <td class="parameter_name"><p>table_tag</p></td>
-<td class="parameter_description"><p>HB_OT_TAG_GSUB or HB_OT_TAG_GPOS</p></td>
+<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-ot-layout.html#HB-OT-TAG-GSUB:CAPS" title="HB_OT_TAG_GSUB"><span class="type">HB_OT_TAG_GSUB</span></a> or <a class="link" href="harfbuzz-hb-ot-layout.html#HB-OT-TAG-GPOS:CAPS" title="HB_OT_TAG_GPOS"><span class="type">HB_OT_TAG_GPOS</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -1406,7 +1427,7 @@ returned will begin at the offset provided.</p>
 </tr>
 <tr>
 <td class="parameter_name"><p>table_tag</p></td>
-<td class="parameter_description"><p>HB_OT_TAG_GSUB or HB_OT_TAG_GPOS</p></td>
+<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-ot-layout.html#HB-OT-TAG-GSUB:CAPS" title="HB_OT_TAG_GSUB"><span class="type">HB_OT_TAG_GSUB</span></a> or <a class="link" href="harfbuzz-hb-ot-layout.html#HB-OT-TAG-GPOS:CAPS" title="HB_OT_TAG_GPOS"><span class="type">HB_OT_TAG_GPOS</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -1428,7 +1449,7 @@ returned will begin at the offset provided.</p>
 <td class="parameter_name"><p>feature_count</p></td>
 <td class="parameter_description"><p>Input = the maximum number of feature tags to return;
 Output: the actual number of feature tags returned (may be zero). </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>feature_indexes</p></td>
@@ -1470,7 +1491,7 @@ returned will begin at the offset provided.</p>
 </tr>
 <tr>
 <td class="parameter_name"><p>table_tag</p></td>
-<td class="parameter_description"><p>HB_OT_TAG_GSUB or HB_OT_TAG_GPOS</p></td>
+<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-ot-layout.html#HB-OT-TAG-GSUB:CAPS" title="HB_OT_TAG_GSUB"><span class="type">HB_OT_TAG_GSUB</span></a> or <a class="link" href="harfbuzz-hb-ot-layout.html#HB-OT-TAG-GPOS:CAPS" title="HB_OT_TAG_GPOS"><span class="type">HB_OT_TAG_GPOS</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -1492,7 +1513,7 @@ returned will begin at the offset provided.</p>
 <td class="parameter_name"><p>feature_count</p></td>
 <td class="parameter_description"><p>Input = the maximum number of feature tags to return;
 Output = the actual number of feature tags returned (may be zero). </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>feature_tags</p></td>
@@ -1532,7 +1553,7 @@ underneath the specified script and language.</p>
 </tr>
 <tr>
 <td class="parameter_name"><p>table_tag</p></td>
-<td class="parameter_description"><p>HB_OT_TAG_GSUB or HB_OT_TAG_GPOS</p></td>
+<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-ot-layout.html#HB-OT-TAG-GSUB:CAPS" title="HB_OT_TAG_GSUB"><span class="type">HB_OT_TAG_GSUB</span></a> or <a class="link" href="harfbuzz-hb-ot-layout.html#HB-OT-TAG-GPOS:CAPS" title="HB_OT_TAG_GPOS"><span class="type">HB_OT_TAG_GPOS</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -1593,7 +1614,7 @@ specified face's GSUB table or GPOS table.</p>
 </tr>
 <tr>
 <td class="parameter_name"><p>table_tag</p></td>
-<td class="parameter_description"><p>HB_OT_TAG_GSUB or HB_OT_TAG_GPOS</p></td>
+<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-ot-layout.html#HB-OT-TAG-GSUB:CAPS" title="HB_OT_TAG_GSUB"><span class="type">HB_OT_TAG_GSUB</span></a> or <a class="link" href="harfbuzz-hb-ot-layout.html#HB-OT-TAG-GPOS:CAPS" title="HB_OT_TAG_GPOS"><span class="type">HB_OT_TAG_GPOS</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -1671,7 +1692,7 @@ hb_ot_layout_lookup_get_glyph_alternates
 <td class="parameter_name"><p>alternate_count</p></td>
 <td class="parameter_description"><p>Input = the maximum number of alternate glyphs to return;
 Output = the actual number of alternate glyphs returned (may be zero). </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>alternate_glyphs</p></td>
@@ -1848,7 +1869,7 @@ the specified script index. The list returned will begin at the offset provided.
 </tr>
 <tr>
 <td class="parameter_name"><p>table_tag</p></td>
-<td class="parameter_description"><p>HB_OT_TAG_GSUB or HB_OT_TAG_GPOS</p></td>
+<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-ot-layout.html#HB-OT-TAG-GSUB:CAPS" title="HB_OT_TAG_GSUB"><span class="type">HB_OT_TAG_GSUB</span></a> or <a class="link" href="harfbuzz-hb-ot-layout.html#HB-OT-TAG-GPOS:CAPS" title="HB_OT_TAG_GPOS"><span class="type">HB_OT_TAG_GPOS</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -1865,7 +1886,7 @@ the specified script index. The list returned will begin at the offset provided.
 <td class="parameter_name"><p>language_count</p></td>
 <td class="parameter_description"><p>Input = the maximum number of language tags to return;
 Output = the actual number of language tags returned (may be zero). </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>language_tags</p></td>
@@ -1904,7 +1925,7 @@ or GPOS table, underneath the specified script index.</p>
 </tr>
 <tr>
 <td class="parameter_name"><p>table_tag</p></td>
-<td class="parameter_description"><p>HB_OT_TAG_GSUB or HB_OT_TAG_GPOS</p></td>
+<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-ot-layout.html#HB-OT-TAG-GSUB:CAPS" title="HB_OT_TAG_GSUB"><span class="type">HB_OT_TAG_GSUB</span></a> or <a class="link" href="harfbuzz-hb-ot-layout.html#HB-OT-TAG-GPOS:CAPS" title="HB_OT_TAG_GPOS"><span class="type">HB_OT_TAG_GPOS</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -1964,7 +1985,7 @@ or GPOS table, at the specified variation coordinates.</p>
 </tr>
 <tr>
 <td class="parameter_name"><p>table_tag</p></td>
-<td class="parameter_description"><p>HB_OT_TAG_GSUB or HB_OT_TAG_GPOS</p></td>
+<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-ot-layout.html#HB-OT-TAG-GSUB:CAPS" title="HB_OT_TAG_GSUB"><span class="type">HB_OT_TAG_GSUB</span></a> or <a class="link" href="harfbuzz-hb-ot-layout.html#HB-OT-TAG-GPOS:CAPS" title="HB_OT_TAG_GPOS"><span class="type">HB_OT_TAG_GPOS</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -2012,7 +2033,7 @@ hb_ot_layout_table_get_feature_tags (<em class="parameter"><code><a class="link"
 </tr>
 <tr>
 <td class="parameter_name"><p>table_tag</p></td>
-<td class="parameter_description"><p>HB_OT_TAG_GSUB or HB_OT_TAG_GPOS</p></td>
+<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-ot-layout.html#HB-OT-TAG-GSUB:CAPS" title="HB_OT_TAG_GSUB"><span class="type">HB_OT_TAG_GSUB</span></a> or <a class="link" href="harfbuzz-hb-ot-layout.html#HB-OT-TAG-GPOS:CAPS" title="HB_OT_TAG_GPOS"><span class="type">HB_OT_TAG_GPOS</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -2024,7 +2045,7 @@ hb_ot_layout_table_get_feature_tags (<em class="parameter"><code><a class="link"
 <td class="parameter_name"><p>feature_count</p></td>
 <td class="parameter_description"><p>Input = the maximum number of feature tags to return;
 Output = the actual number of feature tags returned (may be zero). </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>feature_tags</p></td>
@@ -2062,7 +2083,7 @@ or GPOS table. The list returned will begin at the offset provided.</p>
 </tr>
 <tr>
 <td class="parameter_name"><p>table_tag</p></td>
-<td class="parameter_description"><p>HB_OT_TAG_GSUB or HB_OT_TAG_GPOS</p></td>
+<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-ot-layout.html#HB-OT-TAG-GSUB:CAPS" title="HB_OT_TAG_GSUB"><span class="type">HB_OT_TAG_GSUB</span></a> or <a class="link" href="harfbuzz-hb-ot-layout.html#HB-OT-TAG-GPOS:CAPS" title="HB_OT_TAG_GPOS"><span class="type">HB_OT_TAG_GPOS</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -2074,7 +2095,7 @@ or GPOS table. The list returned will begin at the offset provided.</p>
 <td class="parameter_name"><p>script_count</p></td>
 <td class="parameter_description"><p>Input = the maximum number of script tags to return;
 Output = the actual number of script tags returned (may be zero). </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>script_tags</p></td>
@@ -2109,7 +2130,7 @@ face's GSUB table or GPOS table.</p>
 </tr>
 <tr>
 <td class="parameter_name"><p>table_tag</p></td>
-<td class="parameter_description"><p>HB_OT_TAG_GSUB or HB_OT_TAG_GPOS</p></td>
+<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-ot-layout.html#HB-OT-TAG-GSUB:CAPS" title="HB_OT_TAG_GSUB"><span class="type">HB_OT_TAG_GSUB</span></a> or <a class="link" href="harfbuzz-hb-ot-layout.html#HB-OT-TAG-GPOS:CAPS" title="HB_OT_TAG_GPOS"><span class="type">HB_OT_TAG_GPOS</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -2127,6 +2148,15 @@ hb_ot_layout_table_select_script (<em class="parameter"><code><a class="link" hr
                                   <em class="parameter"><code>const <a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="type">hb_tag_t</span></a> *script_tags</code></em>,
                                   <em class="parameter"><code>unsigned <span class="type">int</span> *script_index</code></em>,
                                   <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="type">hb_tag_t</span></a> *chosen_script</code></em>);</pre>
+<p>Selects an OpenType script for <em class="parameter"><code>table_tag</code></em>
+ from the <em class="parameter"><code>script_tags</code></em>
+ array.</p>
+<p>If the table does not have any of the requested scripts, then <code class="literal">DFLT</code>,
+<code class="literal">dflt</code>, and <code class="literal">latn</code> tags are tried in that order. If the table still does not
+have any of these scripts, <em class="parameter"><code>script_index</code></em>
+ and <em class="parameter"><code>chosen_script</code></em>
+ are set to
+<a class="link" href="harfbuzz-hb-ot-layout.html#HB-OT-LAYOUT-NO-SCRIPT-INDEX:CAPS" title="HB_OT_LAYOUT_NO_SCRIPT_INDEX"><span class="type">HB_OT_LAYOUT_NO_SCRIPT_INDEX</span></a>.</p>
 <div class="refsect3">
 <a name="hb-ot-layout-table-select-script.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -2143,7 +2173,7 @@ hb_ot_layout_table_select_script (<em class="parameter"><code><a class="link" hr
 </tr>
 <tr>
 <td class="parameter_name"><p>table_tag</p></td>
-<td class="parameter_description"><p>HB_OT_TAG_GSUB or HB_OT_TAG_GPOS</p></td>
+<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-ot-layout.html#HB-OT-TAG-GSUB:CAPS" title="HB_OT_TAG_GSUB"><span class="type">HB_OT_TAG_GSUB</span></a> or <a class="link" href="harfbuzz-hb-ot-layout.html#HB-OT-TAG-GPOS:CAPS" title="HB_OT_TAG_GPOS"><span class="type">HB_OT_TAG_GPOS</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -2159,15 +2189,20 @@ hb_ot_layout_table_select_script (<em class="parameter"><code><a class="link" hr
 <tr>
 <td class="parameter_name"><p>script_index</p></td>
 <td class="parameter_description"><p>The index of the requested script. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>chosen_script</p></td>
 <td class="parameter_description"><p><a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="type">hb_tag_t</span></a> of the requested script. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
 </tr>
 </tbody>
 </table></div>
+</div>
+<div class="refsect3">
+<a name="hb-ot-layout-table-select-script.returns"></a><h4>Returns</h4>
+<p><code class="literal">true</code> if one of the requested scripts is selected, <code class="literal">false</code> if a fallback
+script is selected or if no scripts are selected.</p>
 </div>
 <p class="since">Since: <a class="link" href="api-index-2-0-0.html#api-index-2.0.0">2.0.0</a></p>
 </div>
@@ -2238,7 +2273,7 @@ underneath the specified script and language.</p>
 </tr>
 <tr>
 <td class="parameter_name"><p>table_tag</p></td>
-<td class="parameter_description"><p>HB_OT_TAG_GSUB or HB_OT_TAG_GPOS</p></td>
+<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-ot-layout.html#HB-OT-TAG-GSUB:CAPS" title="HB_OT_TAG_GSUB"><span class="type">HB_OT_TAG_GSUB</span></a> or <a class="link" href="harfbuzz-hb-ot-layout.html#HB-OT-TAG-GPOS:CAPS" title="HB_OT_TAG_GPOS"><span class="type">HB_OT_TAG_GPOS</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -2271,6 +2306,7 @@ underneath the specified script and language.</p>
 <a name="HB-OT-MAX-TAGS-PER-LANGUAGE:CAPS"></a><h3>HB_OT_MAX_TAGS_PER_LANGUAGE</h3>
 <pre class="programlisting">#define HB_OT_MAX_TAGS_PER_LANGUAGE 3u
 </pre>
+<p>Maximum number of OpenType tags that can correspond to a give <a class="link" href="harfbuzz-hb-common.html#hb-language-t" title="hb_language_t"><span class="type">hb_language_t</span></a>.</p>
 <p class="since">Since: <a class="link" href="api-index-2-0-0.html#api-index-2.0.0">2.0.0</a></p>
 </div>
 <hr>
@@ -2278,6 +2314,7 @@ underneath the specified script and language.</p>
 <a name="HB-OT-MAX-TAGS-PER-SCRIPT:CAPS"></a><h3>HB_OT_MAX_TAGS_PER_SCRIPT</h3>
 <pre class="programlisting">#define HB_OT_MAX_TAGS_PER_SCRIPT 3u
 </pre>
+<p>Maximum number of OpenType tags that can correspond to a give <a class="link" href="harfbuzz-hb-common.html#hb-script-t" title="enum hb_script_t"><span class="type">hb_script_t</span></a>.</p>
 <p class="since">Since: <a class="link" href="api-index-2-0-0.html#api-index-2.0.0">2.0.0</a></p>
 </div>
 <hr>
@@ -2297,59 +2334,68 @@ underneath the specified script and language.</p>
 <a name="HB-OT-LAYOUT-DEFAULT-LANGUAGE-INDEX:CAPS"></a><h3>HB_OT_LAYOUT_DEFAULT_LANGUAGE_INDEX</h3>
 <pre class="programlisting">#define HB_OT_LAYOUT_DEFAULT_LANGUAGE_INDEX 0xFFFFu
 </pre>
+<p>Special value for language index indicating default or unsupported language.</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="HB-OT-LAYOUT-NO-FEATURE-INDEX:CAPS"></a><h3>HB_OT_LAYOUT_NO_FEATURE_INDEX</h3>
 <pre class="programlisting">#define HB_OT_LAYOUT_NO_FEATURE_INDEX		0xFFFFu
 </pre>
+<p>Special value for feature index indicating unsupported feature.</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="HB-OT-LAYOUT-NO-SCRIPT-INDEX:CAPS"></a><h3>HB_OT_LAYOUT_NO_SCRIPT_INDEX</h3>
 <pre class="programlisting">#define HB_OT_LAYOUT_NO_SCRIPT_INDEX		0xFFFFu
 </pre>
+<p>Special value for script index indicating unsupported script.</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="HB-OT-LAYOUT-NO-VARIATIONS-INDEX:CAPS"></a><h3>HB_OT_LAYOUT_NO_VARIATIONS_INDEX</h3>
 <pre class="programlisting">#define HB_OT_LAYOUT_NO_VARIATIONS_INDEX 0xFFFFFFFFu
 </pre>
+<p>Special value for variations index indicating unsupported variation.</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="HB-OT-TAG-BASE:CAPS"></a><h3>HB_OT_TAG_BASE</h3>
 <pre class="programlisting">#define HB_OT_TAG_BASE HB_TAG('B','A','S','E')
 </pre>
+<p>OpenType <a class="ulink" href="https://docs.microsoft.com/en-us/typography/opentype/spec/base" target="_top">Baseline Table</a>.</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="HB-OT-TAG-GDEF:CAPS"></a><h3>HB_OT_TAG_GDEF</h3>
 <pre class="programlisting">#define HB_OT_TAG_GDEF HB_TAG('G','D','E','F')
 </pre>
+<p>OpenType <a class="ulink" href="https://docs.microsoft.com/en-us/typography/opentype/spec/gdef" target="_top">Glyph Definition Table</a>.</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="HB-OT-TAG-GPOS:CAPS"></a><h3>HB_OT_TAG_GPOS</h3>
 <pre class="programlisting">#define HB_OT_TAG_GPOS HB_TAG('G','P','O','S')
 </pre>
+<p>OpenType <a class="ulink" href="https://docs.microsoft.com/en-us/typography/opentype/spec/gpos" target="_top">Glyph Positioning Table</a>.</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="HB-OT-TAG-GSUB:CAPS"></a><h3>HB_OT_TAG_GSUB</h3>
 <pre class="programlisting">#define HB_OT_TAG_GSUB HB_TAG('G','S','U','B')
 </pre>
+<p>OpenType <a class="ulink" href="https://docs.microsoft.com/en-us/typography/opentype/spec/gsub" target="_top">Glyph Substitution Table</a>.</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="HB-OT-TAG-JSTF:CAPS"></a><h3>HB_OT_TAG_JSTF</h3>
 <pre class="programlisting">#define HB_OT_TAG_JSTF HB_TAG('J','S','T','F')
 </pre>
+<p>OpenType <a class="ulink" href="https://docs.microsoft.com/en-us/typography/opentype/spec/jstf" target="_top">Justification Table</a>.</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="hb-ot-layout-baseline-tag-t"></a><h3>enum hb_ot_layout_baseline_tag_t</h3>
-<p>Baseline tags from https://docs.microsoft.com/en-us/typography/opentype/spec/baselinetags</p>
+<p>Baseline tags from <a class="ulink" href="https://docs.microsoft.com/en-us/typography/opentype/spec/baselinetags" target="_top">Baseline Tags</a> registry.</p>
 <div class="refsect3">
 <a name="hb-ot-layout-baseline-tag-t.members"></a><h4>Members</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">

@@ -114,6 +114,35 @@ conditionally based on those versions, again, at compile- or run-time.</p>
 <div class="refsect2">
 <a name="HB-VERSION-ATLEAST:CAPS"></a><h3>HB_VERSION_ATLEAST()</h3>
 <pre class="programlisting">#define             HB_VERSION_ATLEAST(major,minor,micro)</pre>
+<p>Tests the library version at compile-time against a minimum value,
+as three integer components.</p>
+<div class="refsect3">
+<a name="HB-VERSION-ATLEAST.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>major</p></td>
+<td class="parameter_description"><p>the major component of the version number</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>minor</p></td>
+<td class="parameter_description"><p>the minor component of the version number</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>micro</p></td>
+<td class="parameter_description"><p>the micro component of the version number</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
 </div>
 <hr>
 <div class="refsect2">
@@ -213,21 +242,25 @@ hb_version_string (<em class="parameter"><code><span class="type">void</span></c
 <div class="refsect2">
 <a name="HB-VERSION-MAJOR:CAPS"></a><h3>HB_VERSION_MAJOR</h3>
 <pre class="programlisting">#define             HB_VERSION_MAJOR</pre>
+<p>The major component of the library version available at compile-time.</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="HB-VERSION-MICRO:CAPS"></a><h3>HB_VERSION_MICRO</h3>
 <pre class="programlisting">#define             HB_VERSION_MICRO</pre>
+<p>The micro component of the library version available at compile-time.</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="HB-VERSION-MINOR:CAPS"></a><h3>HB_VERSION_MINOR</h3>
 <pre class="programlisting">#define             HB_VERSION_MINOR</pre>
+<p>The minor component of the library version available at compile-time.</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="HB-VERSION-STRING:CAPS"></a><h3>HB_VERSION_STRING</h3>
 <pre class="programlisting">#define             HB_VERSION_STRING</pre>
+<p>A string literal containing the library version available at compile-time.</p>
 </div>
 </div>
 </div>

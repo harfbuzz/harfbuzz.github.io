@@ -235,7 +235,7 @@ in bytes.</p></td>
 <td class="parameter_name"><p>destroy</p></td>
 <td class="parameter_description"><p>Callback to call when <em class="parameter"><code>data</code></em>
 is not needed anymore. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 </tbody>
 </table></div>
@@ -665,7 +665,7 @@ hb_blob_set_user_data (<em class="parameter"><code><a class="link" href="harfbuz
 <td class="parameter_name"><p>destroy</p></td>
 <td class="parameter_description"><p>A callback to call when <em class="parameter"><code>data</code></em>
 is not needed anymore. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>replace</p></td>
@@ -728,23 +728,33 @@ correctly is very tricky.  Use <em class="parameter"><code>HB_MEMORY_MODE_READON
 <tbody>
 <tr>
 <td class="enum_member_name"><p><a name="HB-MEMORY-MODE-DUPLICATE:CAPS"></a>HB_MEMORY_MODE_DUPLICATE</p></td>
-<td> </td>
-<td> </td>
+<td class="enum_member_description">
+<p>HarfBuzz immediately makes a copy of the data.</p>
+</td>
+<td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="HB-MEMORY-MODE-READONLY:CAPS"></a>HB_MEMORY_MODE_READONLY</p></td>
-<td> </td>
-<td> </td>
+<td class="enum_member_description">
+<p>HarfBuzz client will never modify the data,
+    and HarfBuzz will never modify the data.</p>
+</td>
+<td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="HB-MEMORY-MODE-WRITABLE:CAPS"></a>HB_MEMORY_MODE_WRITABLE</p></td>
-<td> </td>
-<td> </td>
+<td class="enum_member_description">
+<p>HarfBuzz client made a copy of the data solely
+    for HarfBuzz, so HarfBuzz may modify the data.</p>
+</td>
+<td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="HB-MEMORY-MODE-READONLY-MAY-MAKE-WRITABLE:CAPS"></a>HB_MEMORY_MODE_READONLY_MAY_MAKE_WRITABLE</p></td>
-<td> </td>
-<td> </td>
+<td class="enum_member_description">
+<p>See above</p>
+</td>
+<td class="enum_member_annotations"> </td>
 </tr>
 </tbody>
 </table></div>
