@@ -322,9 +322,9 @@
     <keyword type="function" name="hb_unicode_funcs_set_decompose_compatibility_func ()" link="harfbuzz-hb-deprecated.html#hb-unicode-funcs-set-decompose-compatibility-func" deprecated="2.0.0" since="0.9.2"/>
     <keyword type="function" name="hb_font_funcs_set_glyph_v_kerning_func ()" link="harfbuzz-hb-deprecated.html#hb-font-funcs-set-glyph-v-kerning-func" deprecated="2.0.0" since="0.9.2"/>
     <keyword type="function" name="hb_font_get_glyph_v_kerning ()" link="harfbuzz-hb-deprecated.html#hb-font-get-glyph-v-kerning" deprecated="2.0.0" since="0.9.2"/>
-    <keyword type="macro" name="HB_BUFFER_FLAGS_DEFAULT" link="harfbuzz-hb-deprecated.html#HB-BUFFER-FLAGS-DEFAULT:CAPS" deprecated=""/>
-    <keyword type="macro" name="HB_BUFFER_SERIALIZE_FLAGS_DEFAULT" link="harfbuzz-hb-deprecated.html#HB-BUFFER-SERIALIZE-FLAGS-DEFAULT:CAPS" deprecated=""/>
-    <keyword type="macro" name="HB_SCRIPT_CANADIAN_ABORIGINAL" link="harfbuzz-hb-deprecated.html#HB-SCRIPT-CANADIAN-ABORIGINAL:CAPS" deprecated=""/>
+    <keyword type="macro" name="HB_BUFFER_FLAGS_DEFAULT" link="harfbuzz-hb-deprecated.html#HB-BUFFER-FLAGS-DEFAULT:CAPS" deprecated="0.9.20"/>
+    <keyword type="macro" name="HB_BUFFER_SERIALIZE_FLAGS_DEFAULT" link="harfbuzz-hb-deprecated.html#HB-BUFFER-SERIALIZE-FLAGS-DEFAULT:CAPS" deprecated="0.9.20"/>
+    <keyword type="macro" name="HB_SCRIPT_CANADIAN_ABORIGINAL" link="harfbuzz-hb-deprecated.html#HB-SCRIPT-CANADIAN-ABORIGINAL:CAPS" deprecated="0.9.20"/>
     <keyword type="macro" name="HB_MATH_GLYPH_PART_FLAG_EXTENDER" link="harfbuzz-hb-deprecated.html#HB-MATH-GLYPH-PART-FLAG-EXTENDER:CAPS" deprecated="2.5.1"/>
     <keyword type="macro" name="HB_OT_VAR_NO_AXIS_INDEX" link="harfbuzz-hb-deprecated.html#HB-OT-VAR-NO-AXIS-INDEX:CAPS" deprecated="2.2.0" since="1.4.2"/>
     <keyword type="struct" name="hb_ot_var_axis_t" link="harfbuzz-hb-deprecated.html#hb-ot-var-axis-t" deprecated="2.2.0" since="1.4.2"/>
