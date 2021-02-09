@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://www.devhelp.net/book" title="HarfBuzz Manual" link="index.html" author="" name="harfbuzz" version="2" language="c">
   <chapters>
-    <sub name="User's manual" link="pt01.html">
+    <sub name="User's manual" link="user-manual.html">
       <sub name="What is HarfBuzz?" link="what-is-harfbuzz.html">
         <sub name="What is text shaping?" link="what-is-harfbuzz.html#what-is-text-shaping"/>
         <sub name="Why do I need a shaping engine?" link="why-do-i-need-a-shaping-engine.html"/>
-        <sub name="What does HarfBuzz do?" link="ch01s03.html"/>
+        <sub name="What does HarfBuzz do?" link="what-does-harfbuzz-do.html"/>
         <sub name="What HarfBuzz doesn't do" link="what-harfbuzz-doesnt-do.html"/>
         <sub name="Why is it called HarfBuzz?" link="why-is-it-called-harfbuzz.html"/>
       </sub>
@@ -19,9 +19,9 @@
         </sub>
       </sub>
       <sub name="Getting started with HarfBuzz" link="getting-started.html">
-        <sub name="An overview of the HarfBuzz shaping API" link="getting-started.html#id-1.2.4.2"/>
-        <sub name="Terminology" link="ch03s02.html"/>
-        <sub name="A simple shaping example" link="ch03s03.html"/>
+        <sub name="An overview of the HarfBuzz shaping API" link="getting-started.html#an-overview-of-the-harfbuzz-shaping-api"/>
+        <sub name="Terminology" link="terminology.html"/>
+        <sub name="A simple shaping example" link="a-simple-shaping-example.html"/>
       </sub>
       <sub name="Shaping concepts" link="shaping-concepts.html">
         <sub name="Text shaping" link="shaping-concepts.html#text-shaping-concepts"/>
@@ -77,7 +77,6 @@
           <sub name="hb-subset" link="utilities.html#utilities-command-line-hbsubset"/>
         </sub>
         <sub name="Common data types and APIs" link="utilities-common-types-apis.html"/>
-        <sub name="UCDN" link="utilities-ucdn.html"/>
       </sub>
       <sub name="Platform Integration Guide" link="integration.html">
         <sub name="GNOME integration, GLib, and GObject" link="integration.html#integration-glib"/>
@@ -88,8 +87,8 @@
         <sub name="Python bindings" link="integration-python.html"/>
       </sub>
     </sub>
-    <sub name="Reference manual" link="pt02.html">
-      <sub name="Core API" link="ch12.html">
+    <sub name="Reference manual" link="reference-manual.html">
+      <sub name="Core API" link="core-api.html">
         <sub name="hb-blob" link="harfbuzz-hb-blob.html"/>
         <sub name="hb-buffer" link="harfbuzz-hb-buffer.html"/>
         <sub name="hb-common" link="harfbuzz-hb-common.html"/>
@@ -103,7 +102,7 @@
         <sub name="hb-unicode" link="harfbuzz-hb-unicode.html"/>
         <sub name="hb-version" link="harfbuzz-hb-version.html"/>
       </sub>
-      <sub name="OpenType API" link="ch13.html">
+      <sub name="OpenType API" link="opentype-api.html">
         <sub name="hb-ot-color" link="harfbuzz-hb-ot-color.html"/>
         <sub name="hb-ot-font" link="harfbuzz-hb-ot-font.html"/>
         <sub name="hb-ot-layout" link="harfbuzz-hb-ot-layout.html"/>
@@ -114,10 +113,10 @@
         <sub name="hb-ot-shape" link="harfbuzz-hb-ot-shape.html"/>
         <sub name="hb-ot-var" link="harfbuzz-hb-ot-var.html"/>
       </sub>
-      <sub name="Apple Advanced Typography API" link="ch14.html">
+      <sub name="Apple Advanced Typography API" link="apple-advanced-typography-api.html">
         <sub name="hb-aat-layout" link="harfbuzz-hb-aat-layout.html"/>
       </sub>
-      <sub name="Integration API" link="ch15.html">
+      <sub name="Integration API" link="integration-api.html">
         <sub name="hb-coretext" link="harfbuzz-hb-coretext.html"/>
         <sub name="hb-ft" link="harfbuzz-hb-ft.html"/>
         <sub name="hb-glib" link="harfbuzz-hb-glib.html"/>
