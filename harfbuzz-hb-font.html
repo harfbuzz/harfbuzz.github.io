@@ -8,7 +8,7 @@
 <link rel="up" href="core-api.html" title="Core API">
 <link rel="prev" href="harfbuzz-hb-face.html" title="hb-face">
 <link rel="next" href="harfbuzz-hb-map.html" title="hb-map">
-<meta name="generator" content="GTK-Doc V1.27 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.32 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -35,8 +35,8 @@
 <a name="harfbuzz-hb-font.functions"></a><h2>Functions</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="functions_return">
-<col class="functions_name">
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
 </colgroup>
 <tbody>
 <tr>
@@ -495,6 +495,13 @@
 </td>
 </tr>
 <tr>
+<td class="function_type">unsigned <span class="returnvalue">int</span>
+</td>
+<td class="function_name">
+<span class="c_punctuation">(</span><a class="link" href="harfbuzz-hb-font.html#hb-font-get-nominal-glyphs-func-t" title="hb_font_get_nominal_glyphs_func_t ()">*hb_font_get_nominal_glyphs_func_t</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
 <td class="function_type">
 <a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="returnvalue">hb_font_t</span></a> *
 </td>
@@ -764,8 +771,8 @@
 <a name="harfbuzz-hb-font.other"></a><h2>Types and Values</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="name">
-<col class="description">
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
 </colgroup>
 <tbody>
 <tr>
@@ -1706,10 +1713,10 @@ is not needed anymore. </p></td>
 <a name="hb-font-funcs-set-nominal-glyphs-func"></a><h3>hb_font_funcs_set_nominal_glyphs_func ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 hb_font_funcs_set_nominal_glyphs_func (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-funcs-t" title="hb_font_funcs_t"><span class="type">hb_font_funcs_t</span></a> *ffuncs</code></em>,
-                                       <em class="parameter"><code><span class="type">hb_font_get_nominal_glyphs_func_t</span> func</code></em>,
+                                       <em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-get-nominal-glyphs-func-t" title="hb_font_get_nominal_glyphs_func_t ()"><span class="type">hb_font_get_nominal_glyphs_func_t</span></a> func</code></em>,
                                        <em class="parameter"><code><span class="type">void</span> *user_data</code></em>,
                                        <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-destroy-func-t" title="hb_destroy_func_t ()"><span class="type">hb_destroy_func_t</span></a> destroy</code></em>);</pre>
-<p>Sets the implementation function for <span class="type">hb_font_get_nominal_glyphs_func_t</span>.</p>
+<p>Sets the implementation function for <a class="link" href="harfbuzz-hb-font.html#hb-font-get-nominal-glyphs-func-t" title="hb_font_get_nominal_glyphs_func_t ()"><span class="type">hb_font_get_nominal_glyphs_func_t</span></a>.</p>
 <div class="refsect3">
 <a name="hb-font-funcs-set-nominal-glyphs-func.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -2571,7 +2578,9 @@ hb_font_get_glyph_from_name (<em class="parameter"><code><a class="link" href="h
 <span class="c_punctuation">(</span>*hb_font_get_glyph_from_name_func_t<span class="c_punctuation">)</span> (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> *font</code></em>,
                                        <em class="parameter"><code><span class="type">void</span> *font_data</code></em>,
                                        <em class="parameter"><code>const <span class="type">char</span> *name</code></em>,
-                                       <em class="parameter"><code><span class="type">int</span> len</code></em>);</pre>
+                                       <em class="parameter"><code><span class="type">int</span> len</code></em>,
+                                       <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> *glyph</code></em>,
+                                       <em class="parameter"><code><span class="type">void</span> *user_data</code></em>);</pre>
 <p>A virtual method for the <a class="link" href="harfbuzz-hb-font.html#hb-font-funcs-t" title="hb_font_funcs_t"><span class="type">hb_font_funcs_t</span></a> of an <a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> object.</p>
 <p>This method should retrieve the glyph ID that corresponds to a glyph-name
 string.</p>
@@ -3444,6 +3453,80 @@ IDs must be returned in a <a class="link" href="harfbuzz-hb-common.html#hb-codep
 <p> the number of code points processed</p>
 </div>
 <p class="since">Since: <a class="link" href="api-index-2-6-3.html#api-index-2.6.3">2.6.3</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-font-get-nominal-glyphs-func-t"></a><h3>hb_font_get_nominal_glyphs_func_t ()</h3>
+<pre class="programlisting">unsigned <span class="returnvalue">int</span>
+<span class="c_punctuation">(</span>*hb_font_get_nominal_glyphs_func_t<span class="c_punctuation">)</span> (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> *font</code></em>,
+                                      <em class="parameter"><code><span class="type">void</span> *font_data</code></em>,
+                                      <em class="parameter"><code>unsigned <span class="type">int</span> count</code></em>,
+                                      <em class="parameter"><code>const <a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> *first_unicode</code></em>,
+                                      <em class="parameter"><code>unsigned <span class="type">int</span> unicode_stride</code></em>,
+                                      <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> *first_glyph</code></em>,
+                                      <em class="parameter"><code>unsigned <span class="type">int</span> glyph_stride</code></em>,
+                                      <em class="parameter"><code><span class="type">void</span> *user_data</code></em>);</pre>
+<p>A virtual method for the <a class="link" href="harfbuzz-hb-font.html#hb-font-funcs-t" title="hb_font_funcs_t"><span class="type">hb_font_funcs_t</span></a> of an <a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> object.</p>
+<p>This method should retrieve the nominal glyph IDs for a sequence of
+Unicode code points. Glyph IDs must be returned in a <a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a>
+output parameter.</p>
+<div class="refsect3">
+<a name="hb-font-get-nominal-glyphs-func-t.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>font</p></td>
+<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> to work upon</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>font_data</p></td>
+<td class="parameter_description"><p><em class="parameter"><code>font</code></em>
+user data pointer</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>count</p></td>
+<td class="parameter_description"><p>number of code points to query</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>first_unicode</p></td>
+<td class="parameter_description"><p>The first Unicode code point to query</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>unicode_stride</p></td>
+<td class="parameter_description"><p>The stride between successive code points</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>first_glyph</p></td>
+<td class="parameter_description"><p>The first glyph ID retrieved. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>glyph_stride</p></td>
+<td class="parameter_description"><p>The stride between successive glyph IDs</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>User data pointer passed by the caller</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-font-get-nominal-glyphs-func-t.returns"></a><h4>Returns</h4>
+<p> the number of code points processed</p>
+</div>
 </div>
 <hr>
 <div class="refsect2">
@@ -4758,7 +4841,8 @@ text segments.</p>
 </pre>
 <p>Data type containing a set of virtual methods used for
 working on <a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> font objects.</p>
-<p>HarfBuzz provides a lightweight default function for each of 
+<p>HarfBuzz provides a lightweight default function for each of
+
 the methods in <a class="link" href="harfbuzz-hb-font.html#hb-font-funcs-t" title="hb_font_funcs_t"><span class="type">hb_font_funcs_t</span></a>. Client programs can implement
 their own replacements for the individual font functions, as
 needed, and replace the default by calling the setter for a
@@ -4949,6 +5033,6 @@ negative, in coordinate systems that grow up.</p>
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.27</div>
+<hr>Generated by GTK-Doc V1.32</div>
 </body>
 </html>
