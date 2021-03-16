@@ -8,7 +8,7 @@
 <link rel="up" href="core-api.html" title="Core API">
 <link rel="prev" href="harfbuzz-hb-blob.html" title="hb-blob">
 <link rel="next" href="harfbuzz-hb-common.html" title="hb-common">
-<meta name="generator" content="GTK-Doc V1.32 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.27 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -35,8 +35,8 @@
 <a name="harfbuzz-hb-buffer.functions"></a><h2>Functions</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="functions_proto_type">
-<col class="functions_proto_name">
+<col width="150px" class="functions_return">
+<col class="functions_name">
 </colgroup>
 <tbody>
 <tr>
@@ -527,8 +527,8 @@
 <a name="harfbuzz-hb-buffer.other"></a><h2>Types and Values</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="other_proto_type">
-<col class="other_proto_name">
+<col width="150px" class="name">
+<col class="description">
 </colgroup>
 <tbody>
 <tr>
@@ -3272,9 +3272,9 @@ should not affect how much the line advances.</p></td>
 <td class="enum_member_name"><p><a name="HB-BUFFER-FLAG-BOT:CAPS"></a>HB_BUFFER_FLAG_BOT</p></td>
 <td class="enum_member_description">
 <p>flag indicating that special handling of the beginning
-of text paragraph can be applied to this buffer. Should usually
-be set, unless you are passing to the buffer only part
-of the text without the full context.</p>
+                     of text paragraph can be applied to this buffer. Should usually
+                     be set, unless you are passing to the buffer only part
+                     of the text without the full context.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -3282,8 +3282,8 @@ of the text without the full context.</p>
 <td class="enum_member_name"><p><a name="HB-BUFFER-FLAG-EOT:CAPS"></a>HB_BUFFER_FLAG_EOT</p></td>
 <td class="enum_member_description">
 <p>flag indicating that special handling of the end of text
-paragraph can be applied to this buffer, similar to
-<em class="parameter"><code>HB_BUFFER_FLAG_BOT</code></em>
+                     paragraph can be applied to this buffer, similar to
+                     <em class="parameter"><code>HB_BUFFER_FLAG_BOT</code></em>
 .</p>
 </td>
 <td class="enum_member_annotations"> </td>
@@ -3291,12 +3291,12 @@ paragraph can be applied to this buffer, similar to
 <tr>
 <td class="enum_member_name"><p><a name="HB-BUFFER-FLAG-PRESERVE-DEFAULT-IGNORABLES:CAPS"></a>HB_BUFFER_FLAG_PRESERVE_DEFAULT_IGNORABLES</p></td>
 <td class="enum_member_description">
-<p>flag indication that character with Default_Ignorable
-Unicode property should use the corresponding glyph
-from the font, instead of hiding them (done by
-replacing them with the space glyph and zeroing the
-advance width.)  This flag takes precedence over
-<em class="parameter"><code>HB_BUFFER_FLAG_REMOVE_DEFAULT_IGNORABLES</code></em>
+<p>                     flag indication that character with Default_Ignorable
+                     Unicode property should use the corresponding glyph
+                     from the font, instead of hiding them (done by
+                     replacing them with the space glyph and zeroing the
+                     advance width.)  This flag takes precedence over
+                     <em class="parameter"><code>HB_BUFFER_FLAG_REMOVE_DEFAULT_IGNORABLES</code></em>
 .</p>
 </td>
 <td class="enum_member_annotations"> </td>
@@ -3304,22 +3304,22 @@ advance width.)  This flag takes precedence over
 <tr>
 <td class="enum_member_name"><p><a name="HB-BUFFER-FLAG-REMOVE-DEFAULT-IGNORABLES:CAPS"></a>HB_BUFFER_FLAG_REMOVE_DEFAULT_IGNORABLES</p></td>
 <td class="enum_member_description">
-<p>flag indication that character with Default_Ignorable
-Unicode property should be removed from glyph string
-instead of hiding them (done by replacing them with the
-space glyph and zeroing the advance width.)
-<em class="parameter"><code>HB_BUFFER_FLAG_PRESERVE_DEFAULT_IGNORABLES</code></em>
+<p>                     flag indication that character with Default_Ignorable
+                     Unicode property should be removed from glyph string
+                     instead of hiding them (done by replacing them with the
+                     space glyph and zeroing the advance width.)
+                     <em class="parameter"><code>HB_BUFFER_FLAG_PRESERVE_DEFAULT_IGNORABLES</code></em>
  takes
-precedence over this flag. Since: 1.8.0</p>
+                     precedence over this flag. Since: 1.8.0</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="HB-BUFFER-FLAG-DO-NOT-INSERT-DOTTED-CIRCLE:CAPS"></a>HB_BUFFER_FLAG_DO_NOT_INSERT_DOTTED_CIRCLE</p></td>
 <td class="enum_member_description">
-<p>flag indicating that a dotted circle should
-not be inserted in the rendering of incorrect
-character sequences (such at &lt;0905 093E&gt;). Since: 2.4</p>
+<p>                     flag indicating that a dotted circle should
+                     not be inserted in the rendering of incorrect
+                     character sequences (such at &lt;0905 093E&gt;). Since: 2.4</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -3332,8 +3332,7 @@ character sequences (such at &lt;0905 093E&gt;). Since: 2.4</p>
 <div class="refsect2">
 <a name="hb-buffer-cluster-level-t"></a><h3>enum hb_buffer_cluster_level_t</h3>
 <p>Data type for holding HarfBuzz's clustering behavior options. The cluster level
-dictates one aspect of how HarfBuzz will treat non-base characters
-
+dictates one aspect of how HarfBuzz will treat non-base characters 
 during shaping.</p>
 <p>In <em class="parameter"><code>HB_BUFFER_CLUSTER_LEVEL_MONOTONE_GRAPHEMES</code></em>
 , non-base
@@ -3362,7 +3361,7 @@ do not need to maintain such backward compatibility are recommended to use
 <td class="enum_member_name"><p><a name="HB-BUFFER-CLUSTER-LEVEL-MONOTONE-GRAPHEMES:CAPS"></a>HB_BUFFER_CLUSTER_LEVEL_MONOTONE_GRAPHEMES</p></td>
 <td class="enum_member_description">
 <p>Return cluster values grouped by graphemes into
-monotone order.</p>
+  monotone order.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -3384,7 +3383,7 @@ monotone order.</p>
 <td class="enum_member_name"><p><a name="HB-BUFFER-CLUSTER-LEVEL-DEFAULT:CAPS"></a>HB_BUFFER_CLUSTER_LEVEL_DEFAULT</p></td>
 <td class="enum_member_description">
 <p>Default cluster level,
-equal to <em class="parameter"><code>HB_BUFFER_CLUSTER_LEVEL_MONOTONE_GRAPHEMES</code></em>
+  equal to <em class="parameter"><code>HB_BUFFER_CLUSTER_LEVEL_MONOTONE_GRAPHEMES</code></em>
 .</p>
 </td>
 <td class="enum_member_annotations"> </td>
@@ -3533,7 +3532,7 @@ set and retrieved using <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-
 <td class="enum_member_name"><p><a name="HB-BUFFER-SERIALIZE-FLAG-NO-ADVANCES:CAPS"></a>HB_BUFFER_SERIALIZE_FLAG_NO_ADVANCES</p></td>
 <td class="enum_member_description">
 <p>do not serialize glyph advances,
-glyph offsets will reflect absolute glyph positions. Since: 1.8.0</p>
+ glyph offsets will reflect absolute glyph positions. Since: 1.8.0</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -3573,7 +3572,7 @@ report which aspect(s) of the glyph info/position are different.</p>
 <td class="enum_member_name"><p><a name="HB-BUFFER-DIFF-FLAG-CONTENT-TYPE-MISMATCH:CAPS"></a>HB_BUFFER_DIFF_FLAG_CONTENT_TYPE_MISMATCH</p></td>
 <td class="enum_member_description">
 <p>buffers with different
-<a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-content-type-t" title="enum hb_buffer_content_type_t"><span class="type">hb_buffer_content_type_t</span></a>.</p>
+    <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-content-type-t" title="enum hb_buffer_content_type_t"><span class="type">hb_buffer_content_type_t</span></a>.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -3588,7 +3587,7 @@ report which aspect(s) of the glyph info/position are different.</p>
 <td class="enum_member_name"><p><a name="HB-BUFFER-DIFF-FLAG-NOTDEF-PRESENT:CAPS"></a>HB_BUFFER_DIFF_FLAG_NOTDEF_PRESENT</p></td>
 <td class="enum_member_description">
 <p><code class="literal">.notdef</code> glyph is present in the
-reference buffer.</p>
+    reference buffer.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -3596,7 +3595,7 @@ reference buffer.</p>
 <td class="enum_member_name"><p><a name="HB-BUFFER-DIFF-FLAG-DOTTED-CIRCLE-PRESENT:CAPS"></a>HB_BUFFER_DIFF_FLAG_DOTTED_CIRCLE_PRESENT</p></td>
 <td class="enum_member_description">
 <p>dotted circle glyph is present
-in the reference buffer.</p>
+    in the reference buffer.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -3636,6 +3635,6 @@ in the reference buffer.</p>
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.32</div>
+<hr>Generated by GTK-Doc V1.27</div>
 </body>
 </html>
