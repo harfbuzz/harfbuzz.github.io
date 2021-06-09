@@ -475,6 +475,7 @@
     <keyword type="function" name="hb_set_add ()" link="harfbuzz-hb-set.html#hb-set-add" since="0.9.2"/>
     <keyword type="function" name="hb_set_add_range ()" link="harfbuzz-hb-set.html#hb-set-add-range" since="0.9.7"/>
     <keyword type="function" name="hb_set_allocation_successful ()" link="harfbuzz-hb-set.html#hb-set-allocation-successful" since="0.9.2"/>
+    <keyword type="function" name="hb_set_copy ()" link="harfbuzz-hb-set.html#hb-set-copy" since="REPLACEME"/>
     <keyword type="function" name="hb_set_clear ()" link="harfbuzz-hb-set.html#hb-set-clear" since="0.9.2"/>
     <keyword type="function" name="hb_set_create ()" link="harfbuzz-hb-set.html#hb-set-create" since="0.9.2"/>
     <keyword type="function" name="hb_set_del ()" link="harfbuzz-hb-set.html#hb-set-del" since="0.9.2"/>
