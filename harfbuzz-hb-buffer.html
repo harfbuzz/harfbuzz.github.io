@@ -1964,6 +1964,10 @@ hb_buffer_get_glyph_positions (<em class="parameter"><code><a class="link" href=
  glyph position array.  Returned pointer
 is valid as long as <em class="parameter"><code>buffer</code></em>
  contents are not modified.</p>
+<p>If buffer did not have positions before, the positions will be
+initialized to zeros, unless this function is called from
+within a buffer message callback (see <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-set-message-func" title="hb_buffer_set_message_func ()"><code class="function">hb_buffer_set_message_func()</code></a>),
+in which case <code class="literal">NULL</code> is returned.</p>
 <div class="refsect3">
 <a name="hb-buffer-get-glyph-positions.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
