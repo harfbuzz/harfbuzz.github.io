@@ -126,6 +126,9 @@
         <sub name="hb-gdi" link="harfbuzz-hb-gdi.html"/>
         <sub name="hb-directwrite" link="harfbuzz-hb-directwrite.html"/>
       </sub>
+      <sub name="Subset API" link="subset-api.html">
+        <sub name="hb-subset" link="harfbuzz-hb-subset.html"/>
+      </sub>
       <sub name="API Index" link="api-index-full.html"/>
       <sub name="Index of deprecated API" link="deprecated-api-index.html"/>
       <sub name="Index of new symbols in 2.8.2" link="api-index-2-8-2.html"/>
@@ -725,6 +728,24 @@
     <keyword type="function" name="hb_gdi_face_create ()" link="harfbuzz-hb-gdi.html#hb-gdi-face-create" since="2.6.0"/>
     <keyword type="function" name="hb_directwrite_face_create ()" link="harfbuzz-hb-directwrite.html#hb-directwrite-face-create" since="2.4.0"/>
     <keyword type="function" name="hb_directwrite_face_get_font_face ()" link="harfbuzz-hb-directwrite.html#hb-directwrite-face-get-font-face" since="2.5.0"/>
+    <keyword type="function" name="hb_subset_input_create_or_fail ()" link="harfbuzz-hb-subset.html#hb-subset-input-create-or-fail" since="1.8.0"/>
+    <keyword type="function" name="hb_subset_input_reference ()" link="harfbuzz-hb-subset.html#hb-subset-input-reference" since="1.8.0"/>
+    <keyword type="function" name="hb_subset_input_destroy ()" link="harfbuzz-hb-subset.html#hb-subset-input-destroy" since="1.8.0"/>
+    <keyword type="function" name="hb_subset_input_set_user_data ()" link="harfbuzz-hb-subset.html#hb-subset-input-set-user-data" since="REPLACE"/>
+    <keyword type="function" name="hb_subset_input_get_user_data ()" link="harfbuzz-hb-subset.html#hb-subset-input-get-user-data" since="REPLACE"/>
+    <keyword type="function" name="hb_subset_input_unicode_set ()" link="harfbuzz-hb-subset.html#hb-subset-input-unicode-set" since="1.8.0"/>
+    <keyword type="function" name="hb_subset_input_glyph_set ()" link="harfbuzz-hb-subset.html#hb-subset-input-glyph-set" since="1.8.0"/>
+    <keyword type="function" name="hb_subset_input_nameid_set ()" link="harfbuzz-hb-subset.html#hb-subset-input-nameid-set" since="REPLACE"/>
+    <keyword type="function" name="hb_subset_input_namelangid_set ()" link="harfbuzz-hb-subset.html#hb-subset-input-namelangid-set" since="REPLACE"/>
+    <keyword type="function" name="hb_subset_input_layout_features_set ()" link="harfbuzz-hb-subset.html#hb-subset-input-layout-features-set" since="REPLACE"/>
+    <keyword type="function" name="hb_subset_input_set_retain_all_features ()" link="harfbuzz-hb-subset.html#hb-subset-input-set-retain-all-features"/>
+    <keyword type="function" name="hb_subset_input_get_retain_all_features ()" link="harfbuzz-hb-subset.html#hb-subset-input-get-retain-all-features"/>
+    <keyword type="function" name="hb_subset_input_no_subset_tables_set ()" link="harfbuzz-hb-subset.html#hb-subset-input-no-subset-tables-set"/>
+    <keyword type="function" name="hb_subset_input_drop_tables_set ()" link="harfbuzz-hb-subset.html#hb-subset-input-drop-tables-set"/>
+    <keyword type="function" name="hb_subset_input_get_flag ()" link="harfbuzz-hb-subset.html#hb-subset-input-get-flag" since="REPLACE"/>
+    <keyword type="function" name="hb_subset_input_set_flag ()" link="harfbuzz-hb-subset.html#hb-subset-input-set-flag" since="REPLACE"/>
+    <keyword type="function" name="hb_subset_or_fail ()" link="harfbuzz-hb-subset.html#hb-subset-or-fail" since="REPLACE"/>
+    <keyword type="enum" name="enum hb_subset_flag_t" link="harfbuzz-hb-subset.html#hb-subset-flag-t" since="REPLACE"/>
     <keyword type="constant" name="HB_MEMORY_MODE_DUPLICATE" link="harfbuzz-hb-blob.html#HB-MEMORY-MODE-DUPLICATE:CAPS"/>
     <keyword type="constant" name="HB_MEMORY_MODE_READONLY" link="harfbuzz-hb-blob.html#HB-MEMORY-MODE-READONLY:CAPS"/>
     <keyword type="constant" name="HB_MEMORY_MODE_WRITABLE" link="harfbuzz-hb-blob.html#HB-MEMORY-MODE-WRITABLE:CAPS"/>
@@ -1411,6 +1432,14 @@
     <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_PROPORTIONAL_CJK_ROMAN" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-PROPORTIONAL-CJK-ROMAN:CAPS"/>
     <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_DEFAULT_CJK_ROMAN" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-DEFAULT-CJK-ROMAN:CAPS"/>
     <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_FULL_WIDTH_CJK_ROMAN" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-FULL-WIDTH-CJK-ROMAN:CAPS"/>
+    <keyword type="constant" name="HB_SUBSET_FLAG_HINTING" link="harfbuzz-hb-subset.html#HB-SUBSET-FLAG-HINTING:CAPS"/>
+    <keyword type="constant" name="HB_SUBSET_FLAG_RETAIN_GIDS" link="harfbuzz-hb-subset.html#HB-SUBSET-FLAG-RETAIN-GIDS:CAPS"/>
+    <keyword type="constant" name="HB_SUBSET_FLAG_DESUBROUTINIZE" link="harfbuzz-hb-subset.html#HB-SUBSET-FLAG-DESUBROUTINIZE:CAPS"/>
+    <keyword type="constant" name="HB_SUBSET_FLAG_NAME_LEGACY" link="harfbuzz-hb-subset.html#HB-SUBSET-FLAG-NAME-LEGACY:CAPS"/>
+    <keyword type="constant" name="HB_SUBSET_FLAG_SET_OVERLAPS_FLAG" link="harfbuzz-hb-subset.html#HB-SUBSET-FLAG-SET-OVERLAPS-FLAG:CAPS"/>
+    <keyword type="constant" name="HB_SUBSET_FLAG_PASSTHROUGH_UNRECOGNIZED" link="harfbuzz-hb-subset.html#HB-SUBSET-FLAG-PASSTHROUGH-UNRECOGNIZED:CAPS"/>
+    <keyword type="constant" name="HB_SUBSET_FLAG_NOTDEF_OUTLINE" link="harfbuzz-hb-subset.html#HB-SUBSET-FLAG-NOTDEF-OUTLINE:CAPS"/>
+    <keyword type="constant" name="HB_SUBSET_FLAG_NO_PRUNE_UNICODE_RANGES" link="harfbuzz-hb-subset.html#HB-SUBSET-FLAG-NO-PRUNE-UNICODE-RANGES:CAPS"/>
     <keyword type="member" name="hb-glyph-info-t.codepoint" link="harfbuzz-hb-buffer.html#hb-glyph-info-t.codepoint"/>
     <keyword type="member" name="hb-glyph-info-t.cluster" link="harfbuzz-hb-buffer.html#hb-glyph-info-t.cluster"/>
     <keyword type="member" name="hb-glyph-position-t.x-advance" link="harfbuzz-hb-buffer.html#hb-glyph-position-t.x-advance"/>

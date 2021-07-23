@@ -6,7 +6,7 @@
 <meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
 <link rel="home" href="index.html" title="HarfBuzz Manual">
 <link rel="up" href="reference-manual.html" title="Part II. Reference manual">
-<link rel="prev" href="harfbuzz-hb-directwrite.html" title="hb-directwrite">
+<link rel="prev" href="harfbuzz-hb-subset.html" title="hb-subset">
 <link rel="next" href="deprecated-api-index.html" title="Index of deprecated API">
 <meta name="generator" content="GTK-Doc V1.27 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
@@ -46,7 +46,7 @@
                   <a class="shortcut" href="#idxV">V</a></span></td>
 <td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
 <td><a accesskey="u" href="reference-manual.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
-<td><a accesskey="p" href="harfbuzz-hb-directwrite.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="p" href="harfbuzz-hb-subset.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
 <td><a accesskey="n" href="deprecated-api-index.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
 </tr></table>
 <div class="index">
@@ -2003,6 +2003,78 @@
 <dd></dd>
 <dt>
 <a class="link" href="harfbuzz-hb-shape-plan.html#hb-shape-plan-t" title="hb_shape_plan_t">hb_shape_plan_t</a>, typedef in <a class="link" href="harfbuzz-hb-shape-plan.html" title="hb-shape-plan">hb-shape-plan</a>
+</dt>
+<dd></dd>
+<dt>
+<a class="link" href="harfbuzz-hb-subset.html#hb-subset-flag-t" title="enum hb_subset_flag_t">hb_subset_flag_t</a>, enum in <a class="link" href="harfbuzz-hb-subset.html" title="hb-subset">hb-subset</a>
+</dt>
+<dd></dd>
+<dt>
+<a class="link" href="harfbuzz-hb-subset.html#hb-subset-input-create-or-fail" title="hb_subset_input_create_or_fail ()">hb_subset_input_create_or_fail</a>, function in <a class="link" href="harfbuzz-hb-subset.html" title="hb-subset">hb-subset</a>
+</dt>
+<dd></dd>
+<dt>
+<a class="link" href="harfbuzz-hb-subset.html#hb-subset-input-destroy" title="hb_subset_input_destroy ()">hb_subset_input_destroy</a>, function in <a class="link" href="harfbuzz-hb-subset.html" title="hb-subset">hb-subset</a>
+</dt>
+<dd></dd>
+<dt>
+<a class="link" href="harfbuzz-hb-subset.html#hb-subset-input-drop-tables-set" title="hb_subset_input_drop_tables_set ()">hb_subset_input_drop_tables_set</a>, function in <a class="link" href="harfbuzz-hb-subset.html" title="hb-subset">hb-subset</a>
+</dt>
+<dd></dd>
+<dt>
+<a class="link" href="harfbuzz-hb-subset.html#hb-subset-input-get-flag" title="hb_subset_input_get_flag ()">hb_subset_input_get_flag</a>, function in <a class="link" href="harfbuzz-hb-subset.html" title="hb-subset">hb-subset</a>
+</dt>
+<dd></dd>
+<dt>
+<a class="link" href="harfbuzz-hb-subset.html#hb-subset-input-get-retain-all-features" title="hb_subset_input_get_retain_all_features ()">hb_subset_input_get_retain_all_features</a>, function in <a class="link" href="harfbuzz-hb-subset.html" title="hb-subset">hb-subset</a>
+</dt>
+<dd></dd>
+<dt>
+<a class="link" href="harfbuzz-hb-subset.html#hb-subset-input-get-user-data" title="hb_subset_input_get_user_data ()">hb_subset_input_get_user_data</a>, function in <a class="link" href="harfbuzz-hb-subset.html" title="hb-subset">hb-subset</a>
+</dt>
+<dd></dd>
+<dt>
+<a class="link" href="harfbuzz-hb-subset.html#hb-subset-input-glyph-set" title="hb_subset_input_glyph_set ()">hb_subset_input_glyph_set</a>, function in <a class="link" href="harfbuzz-hb-subset.html" title="hb-subset">hb-subset</a>
+</dt>
+<dd></dd>
+<dt>
+<a class="link" href="harfbuzz-hb-subset.html#hb-subset-input-layout-features-set" title="hb_subset_input_layout_features_set ()">hb_subset_input_layout_features_set</a>, function in <a class="link" href="harfbuzz-hb-subset.html" title="hb-subset">hb-subset</a>
+</dt>
+<dd></dd>
+<dt>
+<a class="link" href="harfbuzz-hb-subset.html#hb-subset-input-nameid-set" title="hb_subset_input_nameid_set ()">hb_subset_input_nameid_set</a>, function in <a class="link" href="harfbuzz-hb-subset.html" title="hb-subset">hb-subset</a>
+</dt>
+<dd></dd>
+<dt>
+<a class="link" href="harfbuzz-hb-subset.html#hb-subset-input-namelangid-set" title="hb_subset_input_namelangid_set ()">hb_subset_input_namelangid_set</a>, function in <a class="link" href="harfbuzz-hb-subset.html" title="hb-subset">hb-subset</a>
+</dt>
+<dd></dd>
+<dt>
+<a class="link" href="harfbuzz-hb-subset.html#hb-subset-input-no-subset-tables-set" title="hb_subset_input_no_subset_tables_set ()">hb_subset_input_no_subset_tables_set</a>, function in <a class="link" href="harfbuzz-hb-subset.html" title="hb-subset">hb-subset</a>
+</dt>
+<dd></dd>
+<dt>
+<a class="link" href="harfbuzz-hb-subset.html#hb-subset-input-reference" title="hb_subset_input_reference ()">hb_subset_input_reference</a>, function in <a class="link" href="harfbuzz-hb-subset.html" title="hb-subset">hb-subset</a>
+</dt>
+<dd></dd>
+<dt>
+<a class="link" href="harfbuzz-hb-subset.html#hb-subset-input-set-flag" title="hb_subset_input_set_flag ()">hb_subset_input_set_flag</a>, function in <a class="link" href="harfbuzz-hb-subset.html" title="hb-subset">hb-subset</a>
+</dt>
+<dd></dd>
+<dt>
+<a class="link" href="harfbuzz-hb-subset.html#hb-subset-input-set-retain-all-features" title="hb_subset_input_set_retain_all_features ()">hb_subset_input_set_retain_all_features</a>, function in <a class="link" href="harfbuzz-hb-subset.html" title="hb-subset">hb-subset</a>
+</dt>
+<dd></dd>
+<dt>
+<a class="link" href="harfbuzz-hb-subset.html#hb-subset-input-set-user-data" title="hb_subset_input_set_user_data ()">hb_subset_input_set_user_data</a>, function in <a class="link" href="harfbuzz-hb-subset.html" title="hb-subset">hb-subset</a>
+</dt>
+<dd></dd>
+<dt>
+<a class="link" href="harfbuzz-hb-subset.html#hb-subset-input-unicode-set" title="hb_subset_input_unicode_set ()">hb_subset_input_unicode_set</a>, function in <a class="link" href="harfbuzz-hb-subset.html" title="hb-subset">hb-subset</a>
+</dt>
+<dd></dd>
+<dt>
+<a class="link" href="harfbuzz-hb-subset.html#hb-subset-or-fail" title="hb_subset_or_fail ()">hb_subset_or_fail</a>, function in <a class="link" href="harfbuzz-hb-subset.html" title="hb-subset">hb-subset</a>
 </dt>
 <dd></dd>
 <a name="idxT"></a><h3 class="title">T</h3>
