@@ -738,8 +738,6 @@
     <keyword type="function" name="hb_subset_input_nameid_set ()" link="harfbuzz-hb-subset.html#hb-subset-input-nameid-set" since="REPLACE"/>
     <keyword type="function" name="hb_subset_input_namelangid_set ()" link="harfbuzz-hb-subset.html#hb-subset-input-namelangid-set" since="REPLACE"/>
     <keyword type="function" name="hb_subset_input_layout_features_set ()" link="harfbuzz-hb-subset.html#hb-subset-input-layout-features-set" since="REPLACE"/>
-    <keyword type="function" name="hb_subset_input_set_retain_all_features ()" link="harfbuzz-hb-subset.html#hb-subset-input-set-retain-all-features"/>
-    <keyword type="function" name="hb_subset_input_get_retain_all_features ()" link="harfbuzz-hb-subset.html#hb-subset-input-get-retain-all-features"/>
     <keyword type="function" name="hb_subset_input_no_subset_tables_set ()" link="harfbuzz-hb-subset.html#hb-subset-input-no-subset-tables-set" since="REPLACE"/>
     <keyword type="function" name="hb_subset_input_drop_tables_set ()" link="harfbuzz-hb-subset.html#hb-subset-input-drop-tables-set" since="REPLACE"/>
     <keyword type="function" name="hb_subset_input_get_flag ()" link="harfbuzz-hb-subset.html#hb-subset-input-get-flag" since="REPLACE"/>
@@ -1440,7 +1438,9 @@
     <keyword type="constant" name="HB_SUBSET_FLAG_SET_OVERLAPS_FLAG" link="harfbuzz-hb-subset.html#HB-SUBSET-FLAG-SET-OVERLAPS-FLAG:CAPS"/>
     <keyword type="constant" name="HB_SUBSET_FLAG_PASSTHROUGH_UNRECOGNIZED" link="harfbuzz-hb-subset.html#HB-SUBSET-FLAG-PASSTHROUGH-UNRECOGNIZED:CAPS"/>
     <keyword type="constant" name="HB_SUBSET_FLAG_NOTDEF_OUTLINE" link="harfbuzz-hb-subset.html#HB-SUBSET-FLAG-NOTDEF-OUTLINE:CAPS"/>
+    <keyword type="constant" name="HB_SUBSET_FLAG_GLYPH_NAMES" link="harfbuzz-hb-subset.html#HB-SUBSET-FLAG-GLYPH-NAMES:CAPS"/>
     <keyword type="constant" name="HB_SUBSET_FLAG_NO_PRUNE_UNICODE_RANGES" link="harfbuzz-hb-subset.html#HB-SUBSET-FLAG-NO-PRUNE-UNICODE-RANGES:CAPS"/>
+    <keyword type="constant" name="HB_SUBSET_FLAG_RETAIN_ALL_FEATURES" link="harfbuzz-hb-subset.html#HB-SUBSET-FLAG-RETAIN-ALL-FEATURES:CAPS"/>
     <keyword type="member" name="hb-glyph-info-t.codepoint" link="harfbuzz-hb-buffer.html#hb-glyph-info-t.codepoint"/>
     <keyword type="member" name="hb-glyph-info-t.cluster" link="harfbuzz-hb-buffer.html#hb-glyph-info-t.cluster"/>
     <keyword type="member" name="hb-glyph-position-t.x-advance" link="harfbuzz-hb-buffer.html#hb-glyph-position-t.x-advance"/>

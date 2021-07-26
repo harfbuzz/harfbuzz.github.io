@@ -121,22 +121,6 @@
 </tr>
 <tr>
 <td class="function_type">
-<span class="returnvalue">void</span>
-</td>
-<td class="function_name">
-<a class="link" href="harfbuzz-hb-subset.html#hb-subset-input-set-retain-all-features" title="hb_subset_input_set_retain_all_features ()">hb_subset_input_set_retain_all_features</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
-</td>
-<td class="function_name">
-<a class="link" href="harfbuzz-hb-subset.html#hb-subset-input-get-retain-all-features" title="hb_subset_input_get_retain_all_features ()">hb_subset_input_get_retain_all_features</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
 <a class="link" href="harfbuzz-hb-set.html#hb-set-t" title="hb_set_t"><span class="returnvalue">hb_set_t</span></a> *
 </td>
 <td class="function_name">
@@ -521,21 +505,6 @@ set as needed.</p>
 </div>
 <hr>
 <div class="refsect2">
-<a name="hb-subset-input-set-retain-all-features"></a><h3>hb_subset_input_set_retain_all_features ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>
-hb_subset_input_set_retain_all_features
-                               (<em class="parameter"><code><a class="link" href="harfbuzz-hb-subset.html#hb-subset-input-t" title="hb_subset_input_t"><span class="type">hb_subset_input_t</span></a> *input</code></em>,
-                                <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="type">hb_bool_t</span></a> value</code></em>);</pre>
-</div>
-<hr>
-<div class="refsect2">
-<a name="hb-subset-input-get-retain-all-features"></a><h3>hb_subset_input_get_retain_all_features ()</h3>
-<pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
-hb_subset_input_get_retain_all_features
-                               (<em class="parameter"><code><a class="link" href="harfbuzz-hb-subset.html#hb-subset-input-t" title="hb_subset_input_t"><span class="type">hb_subset_input_t</span></a> *input</code></em>);</pre>
-</div>
-<hr>
-<div class="refsect2">
 <a name="hb-subset-input-no-subset-tables-set"></a><h3>hb_subset_input_no_subset_tables_set ()</h3>
 <pre class="programlisting"><a class="link" href="harfbuzz-hb-set.html#hb-set-t" title="hb_set_t"><span class="returnvalue">hb_set_t</span></a> *
 hb_subset_input_no_subset_tables_set (<em class="parameter"><code><a class="link" href="harfbuzz-hb-subset.html#hb-subset-input-t" title="hb_subset_input_t"><span class="type">hb_subset_input_t</span></a> *input</code></em>);</pre>
@@ -773,10 +742,28 @@ retained in the final subset. Defaults to false.</p>
 <td class="enum_member_annotations"> </td>
 </tr>
 <tr>
+<td class="enum_member_name"><p><a name="HB-SUBSET-FLAG-GLYPH-NAMES:CAPS"></a>HB_SUBSET_FLAG_GLYPH_NAMES</p></td>
+<td class="enum_member_description">
+<p>If set the PS glyph names will be retained
+in the final subset. Defaults to false.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
 <td class="enum_member_name"><p><a name="HB-SUBSET-FLAG-NO-PRUNE-UNICODE-RANGES:CAPS"></a>HB_SUBSET_FLAG_NO_PRUNE_UNICODE_RANGES</p></td>
 <td class="enum_member_description">
 <p>If set then the unicode ranges in
 OS/2 will not be recalculated.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HB-SUBSET-FLAG-RETAIN-ALL-FEATURES:CAPS"></a>HB_SUBSET_FLAG_RETAIN_ALL_FEATURES</p></td>
+<td class="enum_member_description">
+<p>If set all layout features will be
+retained. If unset then the set accessed by
+<a class="link" href="harfbuzz-hb-subset.html#hb-subset-input-layout-features-set" title="hb_subset_input_layout_features_set ()"><code class="function">hb_subset_input_layout_features_set()</code></a> will be used to determine the features
+to be retained.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
