@@ -740,12 +740,13 @@
     <keyword type="function" name="hb_subset_input_layout_features_set ()" link="harfbuzz-hb-subset.html#hb-subset-input-layout-features-set" since="REPLACE"/>
     <keyword type="function" name="hb_subset_input_set_retain_all_features ()" link="harfbuzz-hb-subset.html#hb-subset-input-set-retain-all-features"/>
     <keyword type="function" name="hb_subset_input_get_retain_all_features ()" link="harfbuzz-hb-subset.html#hb-subset-input-get-retain-all-features"/>
-    <keyword type="function" name="hb_subset_input_no_subset_tables_set ()" link="harfbuzz-hb-subset.html#hb-subset-input-no-subset-tables-set"/>
-    <keyword type="function" name="hb_subset_input_drop_tables_set ()" link="harfbuzz-hb-subset.html#hb-subset-input-drop-tables-set"/>
+    <keyword type="function" name="hb_subset_input_no_subset_tables_set ()" link="harfbuzz-hb-subset.html#hb-subset-input-no-subset-tables-set" since="REPLACE"/>
+    <keyword type="function" name="hb_subset_input_drop_tables_set ()" link="harfbuzz-hb-subset.html#hb-subset-input-drop-tables-set" since="REPLACE"/>
     <keyword type="function" name="hb_subset_input_get_flag ()" link="harfbuzz-hb-subset.html#hb-subset-input-get-flag" since="REPLACE"/>
     <keyword type="function" name="hb_subset_input_set_flag ()" link="harfbuzz-hb-subset.html#hb-subset-input-set-flag" since="REPLACE"/>
     <keyword type="function" name="hb_subset_or_fail ()" link="harfbuzz-hb-subset.html#hb-subset-or-fail" since="REPLACE"/>
     <keyword type="enum" name="enum hb_subset_flag_t" link="harfbuzz-hb-subset.html#hb-subset-flag-t" since="REPLACE"/>
+    <keyword type="typedef" name="hb_subset_input_t" link="harfbuzz-hb-subset.html#hb-subset-input-t"/>
     <keyword type="constant" name="HB_MEMORY_MODE_DUPLICATE" link="harfbuzz-hb-blob.html#HB-MEMORY-MODE-DUPLICATE:CAPS"/>
     <keyword type="constant" name="HB_MEMORY_MODE_READONLY" link="harfbuzz-hb-blob.html#HB-MEMORY-MODE-READONLY:CAPS"/>
     <keyword type="constant" name="HB_MEMORY_MODE_WRITABLE" link="harfbuzz-hb-blob.html#HB-MEMORY-MODE-WRITABLE:CAPS"/>
