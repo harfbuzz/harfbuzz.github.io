@@ -131,6 +131,7 @@
       </sub>
       <sub name="API Index" link="api-index-full.html"/>
       <sub name="Index of deprecated API" link="deprecated-api-index.html"/>
+      <sub name="Index of new symbols in 2.9.0" link="api-index-2-9-0.html"/>
       <sub name="Index of new symbols in 2.8.2" link="api-index-2-8-2.html"/>
       <sub name="Index of new symbols in 2.7.3" link="api-index-2-7-3.html"/>
       <sub name="Index of new symbols in 2.6.8" link="api-index-2-6-8.html"/>
@@ -740,7 +741,10 @@
     <keyword type="function" name="hb_subset_input_layout_features_set ()" link="harfbuzz-hb-subset.html#hb-subset-input-layout-features-set" since="2.9.0"/>
     <keyword type="function" name="hb_subset_input_no_subset_tables_set ()" link="harfbuzz-hb-subset.html#hb-subset-input-no-subset-tables-set" since="2.9.0"/>
     <keyword type="function" name="hb_subset_input_drop_tables_set ()" link="harfbuzz-hb-subset.html#hb-subset-input-drop-tables-set" since="2.9.0"/>
+    <keyword type="function" name="hb_subset_input_get_flags ()" link="harfbuzz-hb-subset.html#hb-subset-input-get-flags" since="2.9.0"/>
+    <keyword type="function" name="hb_subset_input_set_flags ()" link="harfbuzz-hb-subset.html#hb-subset-input-set-flags" since="2.9.0"/>
     <keyword type="function" name="hb_subset_or_fail ()" link="harfbuzz-hb-subset.html#hb-subset-or-fail" since="2.9.0"/>
+    <keyword type="enum" name="enum hb_subset_flags_t" link="harfbuzz-hb-subset.html#hb-subset-flags-t" since="2.9.0"/>
     <keyword type="typedef" name="hb_subset_input_t" link="harfbuzz-hb-subset.html#hb-subset-input-t"/>
     <keyword type="constant" name="HB_MEMORY_MODE_DUPLICATE" link="harfbuzz-hb-blob.html#HB-MEMORY-MODE-DUPLICATE:CAPS"/>
     <keyword type="constant" name="HB_MEMORY_MODE_READONLY" link="harfbuzz-hb-blob.html#HB-MEMORY-MODE-READONLY:CAPS"/>
@@ -1428,6 +1432,17 @@
     <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_PROPORTIONAL_CJK_ROMAN" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-PROPORTIONAL-CJK-ROMAN:CAPS"/>
     <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_DEFAULT_CJK_ROMAN" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-DEFAULT-CJK-ROMAN:CAPS"/>
     <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_FULL_WIDTH_CJK_ROMAN" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-FULL-WIDTH-CJK-ROMAN:CAPS"/>
+    <keyword type="constant" name="HB_SUBSET_FLAGS_DEFAULT" link="harfbuzz-hb-subset.html#HB-SUBSET-FLAGS-DEFAULT:CAPS"/>
+    <keyword type="constant" name="HB_SUBSET_FLAGS_NO_HINTING" link="harfbuzz-hb-subset.html#HB-SUBSET-FLAGS-NO-HINTING:CAPS"/>
+    <keyword type="constant" name="HB_SUBSET_FLAGS_RETAIN_GIDS" link="harfbuzz-hb-subset.html#HB-SUBSET-FLAGS-RETAIN-GIDS:CAPS"/>
+    <keyword type="constant" name="HB_SUBSET_FLAGS_DESUBROUTINIZE" link="harfbuzz-hb-subset.html#HB-SUBSET-FLAGS-DESUBROUTINIZE:CAPS"/>
+    <keyword type="constant" name="HB_SUBSET_FLAGS_NAME_LEGACY" link="harfbuzz-hb-subset.html#HB-SUBSET-FLAGS-NAME-LEGACY:CAPS"/>
+    <keyword type="constant" name="HB_SUBSET_FLAGS_SET_OVERLAPS_FLAG" link="harfbuzz-hb-subset.html#HB-SUBSET-FLAGS-SET-OVERLAPS-FLAG:CAPS"/>
+    <keyword type="constant" name="HB_SUBSET_FLAGS_PASSTHROUGH_UNRECOGNIZED" link="harfbuzz-hb-subset.html#HB-SUBSET-FLAGS-PASSTHROUGH-UNRECOGNIZED:CAPS"/>
+    <keyword type="constant" name="HB_SUBSET_FLAGS_NOTDEF_OUTLINE" link="harfbuzz-hb-subset.html#HB-SUBSET-FLAGS-NOTDEF-OUTLINE:CAPS"/>
+    <keyword type="constant" name="HB_SUBSET_FLAGS_GLYPH_NAMES" link="harfbuzz-hb-subset.html#HB-SUBSET-FLAGS-GLYPH-NAMES:CAPS"/>
+    <keyword type="constant" name="HB_SUBSET_FLAGS_NO_PRUNE_UNICODE_RANGES" link="harfbuzz-hb-subset.html#HB-SUBSET-FLAGS-NO-PRUNE-UNICODE-RANGES:CAPS"/>
+    <keyword type="constant" name="HB_SUBSET_FLAGS_RETAIN_ALL_FEATURES" link="harfbuzz-hb-subset.html#HB-SUBSET-FLAGS-RETAIN-ALL-FEATURES:CAPS"/>
     <keyword type="member" name="hb-glyph-info-t.codepoint" link="harfbuzz-hb-buffer.html#hb-glyph-info-t.codepoint"/>
     <keyword type="member" name="hb-glyph-info-t.cluster" link="harfbuzz-hb-buffer.html#hb-glyph-info-t.cluster"/>
     <keyword type="member" name="hb-glyph-position-t.x-advance" link="harfbuzz-hb-buffer.html#hb-glyph-position-t.x-advance"/>

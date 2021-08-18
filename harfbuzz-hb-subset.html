@@ -137,6 +137,22 @@
 </tr>
 <tr>
 <td class="function_type">
+<a class="link" href="harfbuzz-hb-subset.html#hb-subset-flags-t" title="enum hb_subset_flags_t"><span class="returnvalue">hb_subset_flags_t</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-subset.html#hb-subset-input-get-flags" title="hb_subset_input_get_flags ()">hb_subset_input_get_flags</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-subset.html#hb-subset-input-set-flags" title="hb_subset_input_set_flags ()">hb_subset_input_set_flags</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
 <a class="link" href="harfbuzz-hb-face.html#hb-face-t" title="hb_face_t"><span class="returnvalue">hb_face_t</span></a> *
 </td>
 <td class="function_name">
@@ -153,10 +169,16 @@
 <col width="150px" class="name">
 <col class="description">
 </colgroup>
-<tbody><tr>
+<tbody>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="harfbuzz-hb-subset.html#hb-subset-flags-t" title="enum hb_subset_flags_t">hb_subset_flags_t</a></td>
+</tr>
+<tr>
 <td class="typedef_keyword">typedef</td>
 <td class="function_name"><a class="link" href="harfbuzz-hb-subset.html#hb-subset-input-t" title="hb_subset_input_t">hb_subset_input_t</a></td>
-</tr></tbody>
+</tr>
+</tbody>
 </table></div>
 </div>
 <div class="refsect1">
@@ -302,7 +324,7 @@ is not needed anymore. </p></td>
 <a name="hb-subset-input-set-user-data.returns"></a><h4>Returns</h4>
 <p> <code class="literal">true</code> if success, <code class="literal">false</code> otherwise</p>
 </div>
-<p class="since">Since: 2.9.0</p>
+<p class="since">Since: <a class="link" href="api-index-2-9-0.html#api-index-2.9.0">2.9.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -340,7 +362,7 @@ attached to the specified subset input object.</p>
 <p>A pointer to the user data. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since: 2.9.0</p>
+<p class="since">Since: <a class="link" href="api-index-2-9-0.html#api-index-2.9.0">2.9.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -428,7 +450,7 @@ set as needed.</p>
 <p>pointer to the <a class="link" href="harfbuzz-hb-set.html#hb-set-t" title="hb_set_t"><span class="type">hb_set_t</span></a> of name IDs. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since: 2.9.0</p>
+<p class="since">Since: <a class="link" href="api-index-2-9-0.html#api-index-2.9.0">2.9.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -457,7 +479,7 @@ the set as needed.</p>
 <p>pointer to the <a class="link" href="harfbuzz-hb-set.html#hb-set-t" title="hb_set_t"><span class="type">hb_set_t</span></a> of language IDs. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since: 2.9.0</p>
+<p class="since">Since: <a class="link" href="api-index-2-9-0.html#api-index-2.9.0">2.9.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -486,7 +508,7 @@ set as needed.</p>
 <p>pointer to the <a class="link" href="harfbuzz-hb-set.html#hb-set-t" title="hb_set_t"><span class="type">hb_set_t</span></a> of feature tags. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since: 2.9.0</p>
+<p class="since">Since: <a class="link" href="api-index-2-9-0.html#api-index-2.9.0">2.9.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -515,7 +537,7 @@ subsetted, the caller should modify the set as needed.</p>
 <p>pointer to the <a class="link" href="harfbuzz-hb-set.html#hb-set-t" title="hb_set_t"><span class="type">hb_set_t</span></a> of table tags. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since: 2.9.0</p>
+<p class="since">Since: <a class="link" href="api-index-2-9-0.html#api-index-2.9.0">2.9.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -544,7 +566,66 @@ needed.</p>
 <p>pointer to the <a class="link" href="harfbuzz-hb-set.html#hb-set-t" title="hb_set_t"><span class="type">hb_set_t</span></a> of table tags. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since: 2.9.0</p>
+<p class="since">Since: <a class="link" href="api-index-2-9-0.html#api-index-2.9.0">2.9.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-subset-input-get-flags"></a><h3>hb_subset_input_get_flags ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-subset.html#hb-subset-flags-t" title="enum hb_subset_flags_t"><span class="returnvalue">hb_subset_flags_t</span></a>
+hb_subset_input_get_flags (<em class="parameter"><code><a class="link" href="harfbuzz-hb-subset.html#hb-subset-input-t" title="hb_subset_input_t"><span class="type">hb_subset_input_t</span></a> *input</code></em>);</pre>
+<p>Gets all of the subsetting flags in the input object.</p>
+<div class="refsect3">
+<a name="hb-subset-input-get-flags.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>input</p></td>
+<td class="parameter_description"><p>a <a class="link" href="harfbuzz-hb-subset.html#hb-subset-input-t" title="hb_subset_input_t"><span class="type">hb_subset_input_t</span></a> object.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-subset-input-get-flags.returns"></a><h4>Returns</h4>
+<p> the subsetting flags bit field.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-9-0.html#api-index-2.9.0">2.9.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-subset-input-set-flags"></a><h3>hb_subset_input_set_flags ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_subset_input_set_flags (<em class="parameter"><code><a class="link" href="harfbuzz-hb-subset.html#hb-subset-input-t" title="hb_subset_input_t"><span class="type">hb_subset_input_t</span></a> *input</code></em>,
+                           <em class="parameter"><code><span class="type">unsigned </span> value</code></em>);</pre>
+<p>Sets all of the flags in the input object to the values specified by the bit
+field.</p>
+<div class="refsect3">
+<a name="hb-subset-input-set-flags.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>input</p></td>
+<td class="parameter_description"><p>a <a class="link" href="harfbuzz-hb-subset.html#hb-subset-input-t" title="hb_subset_input_t"><span class="type">hb_subset_input_t</span></a> object.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value</p></td>
+<td class="parameter_description"><p>bit field of flags</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-9-0.html#api-index-2.9.0">2.9.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -576,11 +657,119 @@ if the subset operation fails.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since: 2.9.0</p>
+<p class="since">Since: <a class="link" href="api-index-2-9-0.html#api-index-2.9.0">2.9.0</a></p>
 </div>
 </div>
 <div class="refsect1">
 <a name="harfbuzz-hb-subset.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="hb-subset-flags-t"></a><h3>enum hb_subset_flags_t</h3>
+<p>List of boolean properties that can be configured on the subset input.</p>
+<div class="refsect3">
+<a name="hb-subset-flags-t.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="HB-SUBSET-FLAGS-DEFAULT:CAPS"></a>HB_SUBSET_FLAGS_DEFAULT</p></td>
+<td class="enum_member_description">
+<p>all flags at their default value of false.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HB-SUBSET-FLAGS-NO-HINTING:CAPS"></a>HB_SUBSET_FLAGS_NO_HINTING</p></td>
+<td class="enum_member_description">
+<p>If set hinting instructions will be dropped in
+the produced subset. Otherwise hinting instructions will be retained.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HB-SUBSET-FLAGS-RETAIN-GIDS:CAPS"></a>HB_SUBSET_FLAGS_RETAIN_GIDS</p></td>
+<td class="enum_member_description">
+<p>If set glyph indices will not be modified in
+the produced subset. If glyphs are dropped their indices will be retained
+as an empty glyph.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HB-SUBSET-FLAGS-DESUBROUTINIZE:CAPS"></a>HB_SUBSET_FLAGS_DESUBROUTINIZE</p></td>
+<td class="enum_member_description">
+<p>If set and subsetting a CFF font the
+subsetter will attempt to remove subroutines from the CFF glyphs.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HB-SUBSET-FLAGS-NAME-LEGACY:CAPS"></a>HB_SUBSET_FLAGS_NAME_LEGACY</p></td>
+<td class="enum_member_description">
+<p>If set non-unicode name records will be
+retained in the subset.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HB-SUBSET-FLAGS-SET-OVERLAPS-FLAG:CAPS"></a>HB_SUBSET_FLAGS_SET_OVERLAPS_FLAG</p></td>
+<td class="enum_member_description">
+<p>If set the subsetter will set the
+OVERLAP_SIMPLE flag on each simple glyph.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HB-SUBSET-FLAGS-PASSTHROUGH-UNRECOGNIZED:CAPS"></a>HB_SUBSET_FLAGS_PASSTHROUGH_UNRECOGNIZED</p></td>
+<td class="enum_member_description">
+<p>If set the subsetter will not
+drop unrecognized tables and instead pass them through untouched.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HB-SUBSET-FLAGS-NOTDEF-OUTLINE:CAPS"></a>HB_SUBSET_FLAGS_NOTDEF_OUTLINE</p></td>
+<td class="enum_member_description">
+<p>If set the notdef glyph outline will be
+retained in the final subset.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HB-SUBSET-FLAGS-GLYPH-NAMES:CAPS"></a>HB_SUBSET_FLAGS_GLYPH_NAMES</p></td>
+<td class="enum_member_description">
+<p>If set the PS glyph names will be retained
+in the final subset.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HB-SUBSET-FLAGS-NO-PRUNE-UNICODE-RANGES:CAPS"></a>HB_SUBSET_FLAGS_NO_PRUNE_UNICODE_RANGES</p></td>
+<td class="enum_member_description">
+<p>If set then the unicode ranges in
+OS/2 will not be recalculated.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HB-SUBSET-FLAGS-RETAIN-ALL-FEATURES:CAPS"></a>HB_SUBSET_FLAGS_RETAIN_ALL_FEATURES</p></td>
+<td class="enum_member_description">
+<p>If set all layout features will be
+retained. If unset then the set accessed by
+<a class="link" href="harfbuzz-hb-subset.html#hb-subset-input-layout-features-set" title="hb_subset_input_layout_features_set ()"><code class="function">hb_subset_input_layout_features_set()</code></a> will be used to determine the features
+to be retained.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-9-0.html#api-index-2.9.0">2.9.0</a></p>
+</div>
+<hr>
 <div class="refsect2">
 <a name="hb-subset-input-t"></a><h3>hb_subset_input_t</h3>
 <pre class="programlisting">typedef struct hb_subset_input_t hb_subset_input_t;
