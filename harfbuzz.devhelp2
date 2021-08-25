@@ -1442,7 +1442,6 @@
     <keyword type="constant" name="HB_SUBSET_FLAGS_NOTDEF_OUTLINE" link="harfbuzz-hb-subset.html#HB-SUBSET-FLAGS-NOTDEF-OUTLINE:CAPS"/>
     <keyword type="constant" name="HB_SUBSET_FLAGS_GLYPH_NAMES" link="harfbuzz-hb-subset.html#HB-SUBSET-FLAGS-GLYPH-NAMES:CAPS"/>
     <keyword type="constant" name="HB_SUBSET_FLAGS_NO_PRUNE_UNICODE_RANGES" link="harfbuzz-hb-subset.html#HB-SUBSET-FLAGS-NO-PRUNE-UNICODE-RANGES:CAPS"/>
-    <keyword type="constant" name="HB_SUBSET_FLAGS_RETAIN_ALL_FEATURES" link="harfbuzz-hb-subset.html#HB-SUBSET-FLAGS-RETAIN-ALL-FEATURES:CAPS"/>
     <keyword type="member" name="hb-glyph-info-t.codepoint" link="harfbuzz-hb-buffer.html#hb-glyph-info-t.codepoint"/>
     <keyword type="member" name="hb-glyph-info-t.cluster" link="harfbuzz-hb-buffer.html#hb-glyph-info-t.cluster"/>
     <keyword type="member" name="hb-glyph-position-t.x-advance" link="harfbuzz-hb-buffer.html#hb-glyph-position-t.x-advance"/>
