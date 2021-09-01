@@ -151,7 +151,9 @@ hb_ot_name_get_utf16 (<em class="parameter"><code><a class="link" href="harfbuzz
 <p>Fetches a font name from the OpenType 'name' table.
 If <em class="parameter"><code>language</code></em>
  is <a class="link" href="harfbuzz-hb-common.html#HB-LANGUAGE-INVALID:CAPS" title="HB_LANGUAGE_INVALID"><span class="type">HB_LANGUAGE_INVALID</span></a>, English ("en") is assumed.
-Returns string in UTF-16 encoding.</p>
+Returns string in UTF-16 encoding. A NUL terminator is always written
+for convenience, and isn't included in the output <em class="parameter"><code>text_size</code></em>
+.</p>
 <div class="refsect3">
 <a name="hb-ot-name-get-utf16.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -209,7 +211,9 @@ hb_ot_name_get_utf32 (<em class="parameter"><code><a class="link" href="harfbuzz
 <p>Fetches a font name from the OpenType 'name' table.
 If <em class="parameter"><code>language</code></em>
  is <a class="link" href="harfbuzz-hb-common.html#HB-LANGUAGE-INVALID:CAPS" title="HB_LANGUAGE_INVALID"><span class="type">HB_LANGUAGE_INVALID</span></a>, English ("en") is assumed.
-Returns string in UTF-32 encoding.</p>
+Returns string in UTF-32 encoding. A NUL terminator is always written
+for convenience, and isn't included in the output <em class="parameter"><code>text_size</code></em>
+.</p>
 <div class="refsect3">
 <a name="hb-ot-name-get-utf32.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -267,7 +271,9 @@ hb_ot_name_get_utf8 (<em class="parameter"><code><a class="link" href="harfbuzz-
 <p>Fetches a font name from the OpenType 'name' table.
 If <em class="parameter"><code>language</code></em>
  is <a class="link" href="harfbuzz-hb-common.html#HB-LANGUAGE-INVALID:CAPS" title="HB_LANGUAGE_INVALID"><span class="type">HB_LANGUAGE_INVALID</span></a>, English ("en") is assumed.
-Returns string in UTF-8 encoding.</p>
+Returns string in UTF-8 encoding. A NUL terminator is always written
+for convenience, and isn't included in the output <em class="parameter"><code>text_size</code></em>
+.</p>
 <div class="refsect3">
 <a name="hb-ot-name-get-utf8.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
