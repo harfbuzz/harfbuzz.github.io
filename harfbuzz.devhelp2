@@ -131,6 +131,7 @@
       </sub>
       <sub name="API Index" link="api-index-full.html"/>
       <sub name="Index of deprecated API" link="deprecated-api-index.html"/>
+      <sub name="Index of new symbols in 2.9.1" link="api-index-2-9-1.html"/>
       <sub name="Index of new symbols in 2.9.0" link="api-index-2-9-0.html"/>
       <sub name="Index of new symbols in 2.8.2" link="api-index-2-8-2.html"/>
       <sub name="Index of new symbols in 2.7.3" link="api-index-2-7-3.html"/>
