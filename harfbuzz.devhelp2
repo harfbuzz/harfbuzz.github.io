@@ -126,6 +126,9 @@
         <sub name="hb-gdi" link="harfbuzz-hb-gdi.html"/>
         <sub name="hb-directwrite" link="harfbuzz-hb-directwrite.html"/>
       </sub>
+      <sub name="Style API" link="style-api.html">
+        <sub name="hb-style" link="harfbuzz-hb-style.html"/>
+      </sub>
       <sub name="Subset API" link="subset-api.html">
         <sub name="hb-subset" link="harfbuzz-hb-subset.html"/>
       </sub>
@@ -730,6 +733,8 @@
     <keyword type="function" name="hb_gdi_face_create ()" link="harfbuzz-hb-gdi.html#hb-gdi-face-create" since="2.6.0"/>
     <keyword type="function" name="hb_directwrite_face_create ()" link="harfbuzz-hb-directwrite.html#hb-directwrite-face-create" since="2.4.0"/>
     <keyword type="function" name="hb_directwrite_face_get_font_face ()" link="harfbuzz-hb-directwrite.html#hb-directwrite-face-get-font-face" since="2.5.0"/>
+    <keyword type="function" name="hb_style_get_value ()" link="harfbuzz-hb-style.html#hb-style-get-value" since="REPLACEME"/>
+    <keyword type="enum" name="enum hb_style_tag_t" link="harfbuzz-hb-style.html#hb-style-tag-t" since="REPLACEME"/>
     <keyword type="function" name="hb_subset_input_create_or_fail ()" link="harfbuzz-hb-subset.html#hb-subset-input-create-or-fail" since="1.8.0"/>
     <keyword type="function" name="hb_subset_input_reference ()" link="harfbuzz-hb-subset.html#hb-subset-input-reference" since="1.8.0"/>
     <keyword type="function" name="hb_subset_input_destroy ()" link="harfbuzz-hb-subset.html#hb-subset-input-destroy" since="1.8.0"/>
@@ -1428,6 +1433,12 @@
     <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_PROPORTIONAL_CJK_ROMAN" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-PROPORTIONAL-CJK-ROMAN:CAPS"/>
     <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_DEFAULT_CJK_ROMAN" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-DEFAULT-CJK-ROMAN:CAPS"/>
     <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_FULL_WIDTH_CJK_ROMAN" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-FULL-WIDTH-CJK-ROMAN:CAPS"/>
+    <keyword type="constant" name="HB_STYLE_TAG_ITALIC" link="harfbuzz-hb-style.html#HB-STYLE-TAG-ITALIC:CAPS"/>
+    <keyword type="constant" name="HB_STYLE_TAG_OPTICAL_SIZE" link="harfbuzz-hb-style.html#HB-STYLE-TAG-OPTICAL-SIZE:CAPS"/>
+    <keyword type="constant" name="HB_STYLE_TAG_SLANT_ANGLE" link="harfbuzz-hb-style.html#HB-STYLE-TAG-SLANT-ANGLE:CAPS"/>
+    <keyword type="constant" name="HB_STYLE_TAG_SLANT_RATIO" link="harfbuzz-hb-style.html#HB-STYLE-TAG-SLANT-RATIO:CAPS"/>
+    <keyword type="constant" name="HB_STYLE_TAG_WIDTH" link="harfbuzz-hb-style.html#HB-STYLE-TAG-WIDTH:CAPS"/>
+    <keyword type="constant" name="HB_STYLE_TAG_WEIGHT" link="harfbuzz-hb-style.html#HB-STYLE-TAG-WEIGHT:CAPS"/>
     <keyword type="constant" name="HB_SUBSET_FLAGS_DEFAULT" link="harfbuzz-hb-subset.html#HB-SUBSET-FLAGS-DEFAULT:CAPS"/>
     <keyword type="constant" name="HB_SUBSET_FLAGS_NO_HINTING" link="harfbuzz-hb-subset.html#HB-SUBSET-FLAGS-NO-HINTING:CAPS"/>
     <keyword type="constant" name="HB_SUBSET_FLAGS_RETAIN_GIDS" link="harfbuzz-hb-subset.html#HB-SUBSET-FLAGS-RETAIN-GIDS:CAPS"/>
