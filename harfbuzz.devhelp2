@@ -947,6 +947,11 @@
     <keyword type="constant" name="HB_SCRIPT_DIVES_AKURU" link="harfbuzz-hb-common.html#HB-SCRIPT-DIVES-AKURU:CAPS"/>
     <keyword type="constant" name="HB_SCRIPT_KHITAN_SMALL_SCRIPT" link="harfbuzz-hb-common.html#HB-SCRIPT-KHITAN-SMALL-SCRIPT:CAPS"/>
     <keyword type="constant" name="HB_SCRIPT_YEZIDI" link="harfbuzz-hb-common.html#HB-SCRIPT-YEZIDI:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_CYPRO_MINOAN" link="harfbuzz-hb-common.html#HB-SCRIPT-CYPRO-MINOAN:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_OLD_UYGHUR" link="harfbuzz-hb-common.html#HB-SCRIPT-OLD-UYGHUR:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_TANGSA" link="harfbuzz-hb-common.html#HB-SCRIPT-TANGSA:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_TOTO" link="harfbuzz-hb-common.html#HB-SCRIPT-TOTO:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_VITHKUQI" link="harfbuzz-hb-common.html#HB-SCRIPT-VITHKUQI:CAPS"/>
     <keyword type="constant" name="HB_SCRIPT_INVALID" link="harfbuzz-hb-common.html#HB-SCRIPT-INVALID:CAPS"/>
     <keyword type="constant" name="HB_UNICODE_COMBINING_CLASS_NOT_REORDERED" link="harfbuzz-hb-unicode.html#HB-UNICODE-COMBINING-CLASS-NOT-REORDERED:CAPS"/>
     <keyword type="constant" name="HB_UNICODE_COMBINING_CLASS_OVERLAY" link="harfbuzz-hb-unicode.html#HB-UNICODE-COMBINING-CLASS-OVERLAY:CAPS"/>
