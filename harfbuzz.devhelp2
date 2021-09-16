@@ -742,6 +742,8 @@
     <keyword type="function" name="hb_subset_input_get_user_data ()" link="harfbuzz-hb-subset.html#hb-subset-input-get-user-data" since="2.9.0"/>
     <keyword type="function" name="hb_subset_input_get_flags ()" link="harfbuzz-hb-subset.html#hb-subset-input-get-flags" since="2.9.0"/>
     <keyword type="function" name="hb_subset_input_set_flags ()" link="harfbuzz-hb-subset.html#hb-subset-input-set-flags" since="2.9.0"/>
+    <keyword type="function" name="hb_subset_input_unicode_set ()" link="harfbuzz-hb-subset.html#hb-subset-input-unicode-set" since="1.8.0"/>
+    <keyword type="function" name="hb_subset_input_glyph_set ()" link="harfbuzz-hb-subset.html#hb-subset-input-glyph-set" since="1.8.0"/>
     <keyword type="function" name="hb_subset_input_set ()" link="harfbuzz-hb-subset.html#hb-subset-input-set" since="2.9.1"/>
     <keyword type="function" name="hb_subset_or_fail ()" link="harfbuzz-hb-subset.html#hb-subset-or-fail" since="2.9.0"/>
     <keyword type="enum" name="enum hb_subset_flags_t" link="harfbuzz-hb-subset.html#hb-subset-flags-t" since="2.9.0"/>
