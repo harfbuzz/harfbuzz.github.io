@@ -134,6 +134,7 @@
       </sub>
       <sub name="API Index" link="api-index-full.html"/>
       <sub name="Index of deprecated API" link="deprecated-api-index.html"/>
+      <sub name="Index of new symbols in 3.0.0" link="api-index-3-0-0.html"/>
       <sub name="Index of new symbols in 2.9.1" link="api-index-2-9-1.html"/>
       <sub name="Index of new symbols in 2.9.0" link="api-index-2-9-0.html"/>
       <sub name="Index of new symbols in 2.8.2" link="api-index-2-8-2.html"/>
@@ -733,8 +734,8 @@
     <keyword type="function" name="hb_gdi_face_create ()" link="harfbuzz-hb-gdi.html#hb-gdi-face-create" since="2.6.0"/>
     <keyword type="function" name="hb_directwrite_face_create ()" link="harfbuzz-hb-directwrite.html#hb-directwrite-face-create" since="2.4.0"/>
     <keyword type="function" name="hb_directwrite_face_get_font_face ()" link="harfbuzz-hb-directwrite.html#hb-directwrite-face-get-font-face" since="2.5.0"/>
-    <keyword type="function" name="hb_style_get_value ()" link="harfbuzz-hb-style.html#hb-style-get-value" since="REPLACEME"/>
-    <keyword type="enum" name="enum hb_style_tag_t" link="harfbuzz-hb-style.html#hb-style-tag-t" since="REPLACEME"/>
+    <keyword type="function" name="hb_style_get_value ()" link="harfbuzz-hb-style.html#hb-style-get-value" since="3.0.0"/>
+    <keyword type="enum" name="enum hb_style_tag_t" link="harfbuzz-hb-style.html#hb-style-tag-t" since="3.0.0"/>
     <keyword type="function" name="hb_subset_input_create_or_fail ()" link="harfbuzz-hb-subset.html#hb-subset-input-create-or-fail" since="1.8.0"/>
     <keyword type="function" name="hb_subset_input_reference ()" link="harfbuzz-hb-subset.html#hb-subset-input-reference" since="1.8.0"/>
     <keyword type="function" name="hb_subset_input_destroy ()" link="harfbuzz-hb-subset.html#hb-subset-input-destroy" since="1.8.0"/>
