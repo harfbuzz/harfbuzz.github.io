@@ -249,6 +249,8 @@
     <keyword type="function" name="hb_buffer_has_positions ()" link="harfbuzz-hb-buffer.html#hb-buffer-has-positions" since="2.7.3"/>
     <keyword type="function" name="hb_buffer_get_invisible_glyph ()" link="harfbuzz-hb-buffer.html#hb-buffer-get-invisible-glyph" since="2.0.0"/>
     <keyword type="function" name="hb_buffer_set_invisible_glyph ()" link="harfbuzz-hb-buffer.html#hb-buffer-set-invisible-glyph" since="2.0.0"/>
+    <keyword type="function" name="hb_buffer_get_not_found_glyph ()" link="harfbuzz-hb-buffer.html#hb-buffer-get-not-found-glyph" since="REPLACEME"/>
+    <keyword type="function" name="hb_buffer_set_not_found_glyph ()" link="harfbuzz-hb-buffer.html#hb-buffer-set-not-found-glyph" since="REPLACEME"/>
     <keyword type="function" name="hb_buffer_set_replacement_codepoint ()" link="harfbuzz-hb-buffer.html#hb-buffer-set-replacement-codepoint" since="0.9.31"/>
     <keyword type="function" name="hb_buffer_get_replacement_codepoint ()" link="harfbuzz-hb-buffer.html#hb-buffer-get-replacement-codepoint" since="0.9.31"/>
     <keyword type="function" name="hb_buffer_normalize_glyphs ()" link="harfbuzz-hb-buffer.html#hb-buffer-normalize-glyphs" since="0.9.2"/>
