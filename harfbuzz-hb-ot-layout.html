@@ -1938,8 +1938,13 @@ hb_ot_layout_script_select_language (<em class="parameter"><code><a class="link"
                                      <em class="parameter"><code>unsigned <span class="type">int</span> language_count</code></em>,
                                      <em class="parameter"><code>const <a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="type">hb_tag_t</span></a> *language_tags</code></em>,
                                      <em class="parameter"><code>unsigned <span class="type">int</span> *language_index</code></em>);</pre>
-<p>Fetches the index of a given language tag in the specified face's GSUB table
-or GPOS table, underneath the specified script index.</p>
+<p>Fetches the index of the first language tag fom <em class="parameter"><code>language_tags</code></em>
+ that is present
+in the specified face's GSUB or GPOS table, underneath the specified script
+index.</p>
+<p>If none of the given language tags is found, <code class="literal">false</code> is returned and
+<em class="parameter"><code>language_index</code></em>
+ is set to the default language index.</p>
 <div class="refsect3">
 <a name="hb-ot-layout-script-select-language.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -1984,7 +1989,7 @@ or GPOS table, underneath the specified script index.</p>
 </div>
 <div class="refsect3">
 <a name="hb-ot-layout-script-select-language.returns"></a><h4>Returns</h4>
-<p> <code class="literal">true</code> if the language tag is found, <code class="literal">false</code> otherwise</p>
+<p> <code class="literal">true</code> if one of the given language tags is found, <code class="literal">false</code> otherwise</p>
 </div>
 <p class="since">Since: <a class="link" href="api-index-2-0-0.html#api-index-2.0.0">2.0.0</a></p>
 </div>
