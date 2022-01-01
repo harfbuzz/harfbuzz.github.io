@@ -291,9 +291,13 @@ hb_face_count (<em class="parameter"><code><a class="link" href="harfbuzz-hb-blo
 hb_face_create (<em class="parameter"><code><a class="link" href="harfbuzz-hb-blob.html#hb-blob-t" title="hb_blob_t"><span class="type">hb_blob_t</span></a> *blob</code></em>,
                 <em class="parameter"><code>unsigned <span class="type">int</span> index</code></em>);</pre>
 <p>Constructs a new face object from the specified blob and
-a face index into that blob. This is used for blobs of
-file formats such as Dfont and TTC that can contain more
-than one face.</p>
+a face index into that blob.</p>
+<p>The face index is used for blobs of file formats such as TTC and
+and DFont that can contain more than one face.  Face indices within
+such collections are zero-based.</p>
+<div class="note">Note: If the blob font format is not a collection, <em class="parameter"><code>index</code></em>
+is ignored.  Otherwise, only the lower 16-bits of <em class="parameter"><code>index</code></em> are used.
+The unmodified <em class="parameter"><code>index</code></em> can be accessed via <a class="link" href="harfbuzz-hb-face.html#hb-face-get-index" title="hb_face_get_index ()"><code class="function">hb_face_get_index()</code></a>.</div>
 <p><span class="annotation">[Xconstructor]</span></p>
 <div class="refsect3">
 <a name="hb-face-create.parameters"></a><h4>Parameters</h4>
@@ -777,7 +781,8 @@ hb_face_set_index (<em class="parameter"><code><a class="link" href="harfbuzz-hb
 <p>Assigns the specified face-index to <em class="parameter"><code>face</code></em>
 . Fails if the
 face is immutable.</p>
-<div class="note">Note: face indices within a collection are zero-based.</div>
+<div class="note">Note: changing the index has no effect on the face itself
+This only changes the value returned by <a class="link" href="harfbuzz-hb-face.html#hb-face-get-index" title="hb_face_get_index ()"><code class="function">hb_face_get_index()</code></a>.</div>
 <div class="refsect3">
 <a name="hb-face-set-index.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
