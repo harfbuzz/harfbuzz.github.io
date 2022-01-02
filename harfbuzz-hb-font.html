@@ -905,6 +905,12 @@ Output = The Y coordinate plus the Y-coordinate of the origin. </p></td>
 <pre class="programlisting"><a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="returnvalue">hb_font_t</span></a> *
 hb_font_create (<em class="parameter"><code><a class="link" href="harfbuzz-hb-face.html#hb-face-t" title="hb_face_t"><span class="type">hb_face_t</span></a> *face</code></em>);</pre>
 <p>Constructs a new font object from the specified face.</p>
+<div class="note">Note: If <em class="parameter"><code>face</code></em>'s index value (as passed to <a class="link" href="harfbuzz-hb-face.html#hb-face-create" title="hb_face_create ()"><code class="function">hb_face_create()</code></a>
+has non-zero top 16-bits, those bits minus one are passed to
+<a class="link" href="harfbuzz-hb-font.html#hb-font-set-var-named-instance" title="hb_font_set_var_named_instance ()"><code class="function">hb_font_set_var_named_instance()</code></a>, effectively loading a named-instance
+of a variable font, instead of the default-instance.  This allows
+specifying which named-instance to load by default when creating the
+face.</div>
 <p><span class="annotation">[Xconstructor]</span></p>
 <div class="refsect3">
 <a name="hb-font-create.parameters"></a><h4>Parameters</h4>

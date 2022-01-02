@@ -298,6 +298,9 @@ such collections are zero-based.</p>
 <div class="note">Note: If the blob font format is not a collection, <em class="parameter"><code>index</code></em>
 is ignored.  Otherwise, only the lower 16-bits of <em class="parameter"><code>index</code></em> are used.
 The unmodified <em class="parameter"><code>index</code></em> can be accessed via <a class="link" href="harfbuzz-hb-face.html#hb-face-get-index" title="hb_face_get_index ()"><code class="function">hb_face_get_index()</code></a>.</div>
+<div class="note">Note: The high 16-bits of <em class="parameter"><code>index</code></em>, if non-zero, are used by
+<a class="link" href="harfbuzz-hb-font.html#hb-font-create" title="hb_font_create ()"><code class="function">hb_font_create()</code></a> to load named-instances in variable fonts.  See
+<a class="link" href="harfbuzz-hb-font.html#hb-font-create" title="hb_font_create ()"><code class="function">hb_font_create()</code></a> for details.</div>
 <p><span class="annotation">[Xconstructor]</span></p>
 <div class="refsect3">
 <a name="hb-face-create.parameters"></a><h4>Parameters</h4>
