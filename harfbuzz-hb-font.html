@@ -551,11 +551,10 @@
 </td>
 </tr>
 <tr>
-<td class="function_type">
-<span class="returnvalue">void</span>
+<td class="function_type">const <span class="returnvalue">float</span> *
 </td>
 <td class="function_name">
-<a class="link" href="harfbuzz-hb-font.html#hb-font-set-var-coords-design" title="hb_font_set_var_coords_design ()">hb_font_set_var_coords_design</a> <span class="c_punctuation">()</span>
+<a class="link" href="harfbuzz-hb-font.html#hb-font-get-var-coords-design" title="hb_font_get_var_coords_design ()">hb_font_get_var_coords_design</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 <tr>
@@ -675,6 +674,14 @@
 </td>
 <td class="function_name">
 <a class="link" href="harfbuzz-hb-font.html#hb-font-set-variations" title="hb_font_set_variations ()">hb_font_set_variations</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-font.html#hb-font-set-var-coords-design" title="hb_font_set_var_coords_design ()">hb_font_set_var_coords_design</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 <tr>
@@ -3733,15 +3740,14 @@ user data pointer</p></td>
 </div>
 <hr>
 <div class="refsect2">
-<a name="hb-font-set-var-coords-design"></a><h3>hb_font_set_var_coords_design ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>
-hb_font_set_var_coords_design (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> *font</code></em>,
-                               <em class="parameter"><code>const <span class="type">float</span> *coords</code></em>,
-                               <em class="parameter"><code>unsigned <span class="type">int</span> coords_length</code></em>);</pre>
-<p>Applies a list of variation coordinates (in design-space units)
-to a font.</p>
+<a name="hb-font-get-var-coords-design"></a><h3>hb_font_get_var_coords_design ()</h3>
+<pre class="programlisting">const <span class="returnvalue">float</span> *
+hb_font_get_var_coords_design (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> *font</code></em>,
+                               <em class="parameter"><code>unsigned <span class="type">int</span> *length</code></em>);</pre>
+<p>Return value is valid as long as variation coordinates of the font
+are not modified.</p>
 <div class="refsect3">
-<a name="hb-font-set-var-coords-design.parameters"></a><h4>Parameters</h4>
+<a name="hb-font-get-var-coords-design.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -3755,19 +3761,18 @@ to a font.</p>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
-<td class="parameter_name"><p>coords</p></td>
-<td class="parameter_description"><p>Array of variation coordinates to apply. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=coords_length]</span></td>
-</tr>
-<tr>
-<td class="parameter_name"><p>coords_length</p></td>
-<td class="parameter_description"><p>Number of coordinates to apply</p></td>
-<td class="parameter_annotations"> </td>
+<td class="parameter_name"><p>length</p></td>
+<td class="parameter_description"><p>number of coordinates. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
 </tr>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since: <a class="link" href="api-index-1-4-2.html#api-index-1.4.2">1.4.2</a></p>
+<div class="refsect3">
+<a name="hb-font-get-var-coords-design.returns"></a><h4>Returns</h4>
+<p> coordinates array</p>
+</div>
+<p class="since">Since: REPLACEME</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -4332,6 +4337,44 @@ hb_font_set_variations (<em class="parameter"><code><a class="link" href="harfbu
 <tr>
 <td class="parameter_name"><p>variations_length</p></td>
 <td class="parameter_description"><p>Number of variations to apply</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-4-2.html#api-index-1.4.2">1.4.2</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-font-set-var-coords-design"></a><h3>hb_font_set_var_coords_design ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_font_set_var_coords_design (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> *font</code></em>,
+                               <em class="parameter"><code>const <span class="type">float</span> *coords</code></em>,
+                               <em class="parameter"><code>unsigned <span class="type">int</span> coords_length</code></em>);</pre>
+<p>Applies a list of variation coordinates (in design-space units)
+to a font.</p>
+<div class="refsect3">
+<a name="hb-font-set-var-coords-design.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>font</p></td>
+<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> to work upon</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>coords</p></td>
+<td class="parameter_description"><p>Array of variation coordinates to apply. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=coords_length]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>coords_length</p></td>
+<td class="parameter_description"><p>Number of coordinates to apply</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
