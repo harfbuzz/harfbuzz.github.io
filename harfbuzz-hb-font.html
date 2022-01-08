@@ -3322,7 +3322,7 @@ hb_font_get_nominal_glyph (<em class="parameter"><code><a class="link" href="har
                            <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> unicode</code></em>,
                            <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> *glyph</code></em>);</pre>
 <p>Fetches the nominal glyph ID for a Unicode code point in the
-specified font. </p>
+specified font.</p>
 <p>This version of the function should not be used to fetch glyph IDs
 for code points modified by variation selectors. For variation-selector
 support, user <a class="link" href="harfbuzz-hb-font.html#hb-font-get-variation-glyph" title="hb_font_get_variation_glyph ()"><code class="function">hb_font_get_variation_glyph()</code></a> or use <a class="link" href="harfbuzz-hb-font.html#hb-font-get-glyph" title="hb_font_get_glyph ()"><code class="function">hb_font_get_glyph()</code></a>.</p>
@@ -3789,6 +3789,9 @@ hb_font_get_var_coords_design (<em class="parameter"><code><a class="link" href=
                                <em class="parameter"><code>unsigned <span class="type">int</span> *length</code></em>);</pre>
 <p>Return value is valid as long as variation coordinates of the font
 are not modified.</p>
+<p>Note that this returned array may only contain values for some
+(or none) of the axes; omitted axes effectively have their default
+values.</p>
 <div class="refsect3">
 <a name="hb-font-get-var-coords-design.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -3825,6 +3828,8 @@ hb_font_get_var_coords_normalized (<em class="parameter"><code><a class="link" h
                                    <em class="parameter"><code>unsigned <span class="type">int</span> *length</code></em>);</pre>
 <p>Fetches the list of normalized variation coordinates currently
 set on a font.</p>
+<p>Note that this returned array may only contain values for some
+(or none) of the axes; omitted axes effectively have zero values.</p>
 <p>Return value is valid as long as variation coordinates of the font
 are not modified.</p>
 <div class="refsect3">
@@ -4122,7 +4127,7 @@ is not needed anymore. </p></td>
 hb_font_set_funcs_data (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> *font</code></em>,
                         <em class="parameter"><code><span class="type">void</span> *font_data</code></em>,
                         <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-destroy-func-t" title="hb_destroy_func_t ()"><span class="type">hb_destroy_func_t</span></a> destroy</code></em>);</pre>
-<p>Replaces the user data attached to a font, updating the font's 
+<p>Replaces the user data attached to a font, updating the font's
 <em class="parameter"><code>destroy</code></em>
  callback.</p>
 <div class="refsect3">
@@ -4359,7 +4364,7 @@ hb_font_set_user_data (<em class="parameter"><code><a class="link" href="harfbuz
 </tr>
 <tr>
 <td class="parameter_name"><p>key</p></td>
-<td class="parameter_description"><p>The user-data key </p></td>
+<td class="parameter_description"><p>The user-data key</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
