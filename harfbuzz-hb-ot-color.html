@@ -424,6 +424,7 @@ hb_ot_color_glyph_reference_png (<em class="parameter"><code><a class="link" hre
 as input. To get an optimally sized PNG blob, the UPEM value must be set on the <em class="parameter"><code>font</code></em>
 
 object. If UPEM is unset, the blob returned will be the largest PNG available.</p>
+<p>If the glyph has no PNG image, the singleton empty blob is returned.</p>
 <div class="refsect3">
 <a name="hb-ot-color-glyph-reference-png.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -460,6 +461,7 @@ object. If UPEM is unset, the blob returned will be the largest PNG available.</
 hb_ot_color_glyph_reference_svg (<em class="parameter"><code><a class="link" href="harfbuzz-hb-face.html#hb-face-t" title="hb_face_t"><span class="type">hb_face_t</span></a> *face</code></em>,
                                  <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> glyph</code></em>);</pre>
 <p>Fetches the SVG document for a glyph. The blob may be either plain text or gzip-encoded.</p>
+<p>If the glyph has no SVG document, the singleton empty blob is returned.</p>
 <div class="refsect3">
 <a name="hb-ot-color-glyph-reference-svg.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -604,7 +606,7 @@ hb_ot_color_has_svg (<em class="parameter"><code><a class="link" href="harfbuzz-
 hb_ot_color_palette_color_get_name_id (<em class="parameter"><code><a class="link" href="harfbuzz-hb-face.html#hb-face-t" title="hb_face_t"><span class="type">hb_face_t</span></a> *face</code></em>,
                                        <em class="parameter"><code>unsigned <span class="type">int</span> color_index</code></em>);</pre>
 <p>Fetches the <code class="literal">name</code> table Name ID that provides display names for
-the specificed color in a face's <code class="literal">CPAL</code> color palette. </p>
+the specificed color in a face's <code class="literal">CPAL</code> color palette.</p>
 <p>Display names can be generic (e.g., "Background") or specific
 (e.g., "Eye color").</p>
 <div class="refsect3">
@@ -765,7 +767,7 @@ hb_ot_color_palette_get_flags (<em class="parameter"><code><a class="link" href=
 hb_ot_color_palette_get_name_id (<em class="parameter"><code><a class="link" href="harfbuzz-hb-face.html#hb-face-t" title="hb_face_t"><span class="type">hb_face_t</span></a> *face</code></em>,
                                  <em class="parameter"><code>unsigned <span class="type">int</span> palette_index</code></em>);</pre>
 <p>Fetches the <code class="literal">name</code> table Name ID that provides display names for
-a <code class="literal">CPAL</code> color palette. </p>
+a <code class="literal">CPAL</code> color palette.</p>
 <p>Palette display names can be generic (e.g., "Default") or provide
 specific, themed names (e.g., "Spring", "Summer", "Fall", and "Winter").</p>
 <div class="refsect3">
@@ -784,7 +786,7 @@ specific, themed names (e.g., "Spring", "Summer", "Fall", and "Winter").</p>
 </tr>
 <tr>
 <td class="parameter_name"><p>palette_index</p></td>
-<td class="parameter_description"><p>The index of the color palette </p></td>
+<td class="parameter_description"><p>The index of the color palette</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
