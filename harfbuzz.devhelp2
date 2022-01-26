@@ -763,6 +763,7 @@
     <keyword type="constant" name="HB_MEMORY_MODE_WRITABLE" link="harfbuzz-hb-blob.html#HB-MEMORY-MODE-WRITABLE:CAPS"/>
     <keyword type="constant" name="HB_MEMORY_MODE_READONLY_MAY_MAKE_WRITABLE" link="harfbuzz-hb-blob.html#HB-MEMORY-MODE-READONLY-MAY-MAKE-WRITABLE:CAPS"/>
     <keyword type="constant" name="HB_GLYPH_FLAG_UNSAFE_TO_BREAK" link="harfbuzz-hb-buffer.html#HB-GLYPH-FLAG-UNSAFE-TO-BREAK:CAPS"/>
+    <keyword type="constant" name="HB_GLYPH_FLAG_UNSAFE_TO_CONCAT" link="harfbuzz-hb-buffer.html#HB-GLYPH-FLAG-UNSAFE-TO-CONCAT:CAPS"/>
     <keyword type="constant" name="HB_GLYPH_FLAG_DEFINED" link="harfbuzz-hb-buffer.html#HB-GLYPH-FLAG-DEFINED:CAPS"/>
     <keyword type="constant" name="HB_BUFFER_CONTENT_TYPE_INVALID" link="harfbuzz-hb-buffer.html#HB-BUFFER-CONTENT-TYPE-INVALID:CAPS"/>
     <keyword type="constant" name="HB_BUFFER_CONTENT_TYPE_UNICODE" link="harfbuzz-hb-buffer.html#HB-BUFFER-CONTENT-TYPE-UNICODE:CAPS"/>
