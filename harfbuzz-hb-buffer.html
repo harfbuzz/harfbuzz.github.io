@@ -653,8 +653,9 @@ be allocated, a special <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-
 <a name="hb-buffer-create-similar"></a><h3>hb_buffer_create_similar ()</h3>
 <pre class="programlisting"><a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="returnvalue">hb_buffer_t</span></a> *
 hb_buffer_create_similar (<em class="parameter"><code>const <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a> *src</code></em>);</pre>
-<p>Resets the buffer to its initial status, as if it was just newly created
-with <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-create" title="hb_buffer_create ()"><code class="function">hb_buffer_create()</code></a>.</p>
+<p>Creates a new <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a>, similar to <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-create" title="hb_buffer_create ()"><code class="function">hb_buffer_create()</code></a>. The only
+difference is that the buffer is configured similarly to <em class="parameter"><code>src</code></em>
+.</p>
 <div class="refsect3">
 <a name="hb-buffer-create-similar.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -672,12 +673,10 @@ with <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-create" title="hb_b
 </div>
 <div class="refsect3">
 <a name="hb-buffer-create-similar.returns"></a><h4>Returns</h4>
-<p>A newly allocated <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a>, similar to <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-create" title="hb_buffer_create ()"><code class="function">hb_buffer_create()</code></a>. The only
-difference is that the buffer is configured similarly to <em class="parameter"><code>src</code></em>
-. </p>
+<p>A newly allocated <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a>, similar to <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-create" title="hb_buffer_create ()"><code class="function">hb_buffer_create()</code></a>. </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
-<p class="since">Since: REPLACEME</p>
+<p class="since">Since: <a class="link" href="api-index-3-3-0.html#api-index-3.3.0">3.3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3050,7 +3049,7 @@ can be unset), if <em class="parameter"><code>p</code></em>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since: REPLACEME</p>
+<p class="since">Since: <a class="link" href="api-index-3-3-0.html#api-index-3.3.0">3.3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3378,7 +3377,7 @@ allow selecting more fine-grained cluster handling.</p></td>
 				   clusters.
 				   The <a class="link" href="harfbuzz-hb-buffer.html#HB-GLYPH-FLAG-UNSAFE-TO-BREAK:CAPS"><span class="type">HB_GLYPH_FLAG_UNSAFE_TO_BREAK</span></a> flag will
 				   always imply this flag.
-				   Since: REPLACEME</p>
+				   Since: 3.3.0</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>

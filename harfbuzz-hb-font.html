@@ -3630,7 +3630,7 @@ hb_font_get_synthetic_slant (<em class="parameter"><code><a class="link" href="h
 <a name="hb-font-get-synthetic-slant.returns"></a><h4>Returns</h4>
 <p> Synthetic slant.  By default is zero.</p>
 </div>
-<p class="since">Since: REPLACEME</p>
+<p class="since">Since: <a class="link" href="api-index-3-3-0.html#api-index-3.3.0">3.3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3787,11 +3787,13 @@ user data pointer</p></td>
 <pre class="programlisting">const <span class="returnvalue">float</span> *
 hb_font_get_var_coords_design (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> *font</code></em>,
                                <em class="parameter"><code>unsigned <span class="type">int</span> *length</code></em>);</pre>
-<p>Return value is valid as long as variation coordinates of the font
-are not modified.</p>
+<p>Fetches the list of variation coordinates (in design-space units) currently
+set on a font.</p>
 <p>Note that this returned array may only contain values for some
 (or none) of the axes; omitted axes effectively have their default
 values.</p>
+<p>Return value is valid as long as variation coordinates of the font
+are not modified.</p>
 <div class="refsect3">
 <a name="hb-font-get-var-coords-design.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -3808,7 +3810,7 @@ values.</p>
 </tr>
 <tr>
 <td class="parameter_name"><p>length</p></td>
-<td class="parameter_description"><p>number of coordinates. </p></td>
+<td class="parameter_description"><p>Number of coordinates retrieved. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
 </tr>
 </tbody>
@@ -3818,7 +3820,7 @@ values.</p>
 <a name="hb-font-get-var-coords-design.returns"></a><h4>Returns</h4>
 <p> coordinates array</p>
 </div>
-<p class="since">Since: REPLACEME</p>
+<p class="since">Since: <a class="link" href="api-index-3-3-0.html#api-index-3.3.0">3.3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3848,11 +3850,15 @@ are not modified.</p>
 </tr>
 <tr>
 <td class="parameter_name"><p>length</p></td>
-<td class="parameter_description"><p>Number of coordinates retrieved</p></td>
-<td class="parameter_annotations"> </td>
+<td class="parameter_description"><p>Number of coordinates retrieved. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
 </tr>
 </tbody>
 </table></div>
+</div>
+<div class="refsect3">
+<a name="hb-font-get-var-coords-normalized.returns"></a><h4>Returns</h4>
+<p> coordinates array</p>
 </div>
 <p class="since">Since: <a class="link" href="api-index-1-4-2.html#api-index-1.4.2">1.4.2</a></p>
 </div>
@@ -4335,7 +4341,7 @@ metrics, and style values to match the slanted rendering.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since: REPLACEME</p>
+<p class="since">Since: <a class="link" href="api-index-3-3-0.html#api-index-3.3.0">3.3.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
