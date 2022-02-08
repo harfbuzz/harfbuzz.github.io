@@ -130,6 +130,10 @@
 </tr>
 <tr>
 <td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="harfbuzz-hb-deprecated.html#HB-OT-MATH-SCRIPT:CAPS" title="HB_OT_MATH_SCRIPT">HB_OT_MATH_SCRIPT</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
 <td class="function_name"><a class="link" href="harfbuzz-hb-deprecated.html#HB-OT-VAR-NO-AXIS-INDEX:CAPS" title="HB_OT_VAR_NO_AXIS_INDEX">HB_OT_VAR_NO_AXIS_INDEX</a></td>
 </tr>
 <tr>
@@ -563,6 +567,21 @@ the specified font, for vertical text segments.</p>
 </pre>
 <div class="warning"><p><code class="literal">HB_MATH_GLYPH_PART_FLAG_EXTENDER</code> has been deprecated since version 2.5.1 and should not be used in newly-written code.</p></div>
 <p>Use <a class="link" href="harfbuzz-hb-ot-math.html#HB-OT-MATH-GLYPH-PART-FLAG-EXTENDER:CAPS"><span class="type">HB_OT_MATH_GLYPH_PART_FLAG_EXTENDER</span></a> instead.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="HB-OT-MATH-SCRIPT:CAPS"></a><h3>HB_OT_MATH_SCRIPT</h3>
+<pre class="programlisting">#define HB_OT_MATH_SCRIPT HB_OT_TAG_MATH_SCRIPT
+</pre>
+<div class="warning">
+<p><code class="literal">HB_OT_MATH_SCRIPT</code> is deprecated and should not be used in newly-written code.</p>
+<p>REPLACEME</p>
+</div>
+<p>Use <a class="link" href="harfbuzz-hb-common.html#HB-SCRIPT-MATH:CAPS"><span class="type">HB_SCRIPT_MATH</span></a> or <a class="link" href="harfbuzz-hb-ot-math.html#HB-OT-TAG-MATH-SCRIPT:CAPS" title="HB_OT_TAG_MATH_SCRIPT"><span class="type">HB_OT_TAG_MATH_SCRIPT</span></a> instead.</p>
+<div class="note">Previous versions of this documentation recommended passing
+<a class="link" href="harfbuzz-hb-deprecated.html#HB-OT-MATH-SCRIPT:CAPS" title="HB_OT_MATH_SCRIPT"><span class="type">HB_OT_MATH_SCRIPT</span></a> to <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-set-script" title="hb_buffer_set_script ()"><code class="function">hb_buffer_set_script()</code></a> to enable math shaping, but this
+usage is no longer supported. Use <a class="link" href="harfbuzz-hb-common.html#HB-SCRIPT-MATH:CAPS"><span class="type">HB_SCRIPT_MATH</span></a> instead.</div>
+<p class="since">Since: <a class="link" href="api-index-1-3-3.html#api-index-1.3.3">1.3.3</a></p>
 </div>
 <hr>
 <div class="refsect2">
