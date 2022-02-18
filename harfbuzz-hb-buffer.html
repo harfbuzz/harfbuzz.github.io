@@ -3377,7 +3377,12 @@ allow selecting more fine-grained cluster handling.</p></td>
 				   clusters.
 				   The <a class="link" href="harfbuzz-hb-buffer.html#HB-GLYPH-FLAG-UNSAFE-TO-BREAK:CAPS"><span class="type">HB_GLYPH_FLAG_UNSAFE_TO_BREAK</span></a> flag will
 				   always imply this flag.
-				   Since: 3.3.0</p>
+			   To use this flag, you must enable the buffer flag
+			   <em class="parameter"><code>HB_BUFFER_FLAG_PRODUCE_UNSAFE_TO_CONCAT</code></em>
+ during
+			   shaping, otherwise the buffer flag will not be
+			   reliably produced.
+				   Since: REPLACEME</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -3484,7 +3489,6 @@ should not affect how much the line advances.</p></td>
 <hr>
 <div class="refsect2">
 <a name="hb-buffer-flags-t"></a><h3>enum hb_buffer_flags_t</h3>
-<p>Flags for <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a>.</p>
 <div class="refsect3">
 <a name="hb-buffer-flags-t.members"></a><h4>Members</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -3566,6 +3570,17 @@ should not affect how much the line advances.</p></td>
                      handler is installed on the buffer, or a message is written
                      to standard error.  In either case, the shaping result might
                      be modified to show the failed output. Since: 3.4.0</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HB-BUFFER-FLAG-PRODUCE-UNSAFE-TO-CONCAT:CAPS"></a>HB_BUFFER_FLAG_PRODUCE_UNSAFE_TO_CONCAT</p></td>
+<td class="enum_member_description">
+<p>                     flag indicating that the <em class="parameter"><code>HB_GLYPH_FLAG_UNSAFE_TO_CONCAT</code></em>
+
+                     glyph-flag should be produced by the shaper. By default
+                     it will not be produced since it incurs a cost. Since: REPLACEME
+Flags for <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a>.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>

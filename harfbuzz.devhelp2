@@ -810,6 +810,7 @@
     <keyword type="constant" name="HB_BUFFER_FLAG_REMOVE_DEFAULT_IGNORABLES" link="harfbuzz-hb-buffer.html#HB-BUFFER-FLAG-REMOVE-DEFAULT-IGNORABLES:CAPS"/>
     <keyword type="constant" name="HB_BUFFER_FLAG_DO_NOT_INSERT_DOTTED_CIRCLE" link="harfbuzz-hb-buffer.html#HB-BUFFER-FLAG-DO-NOT-INSERT-DOTTED-CIRCLE:CAPS"/>
     <keyword type="constant" name="HB_BUFFER_FLAG_VERIFY" link="harfbuzz-hb-buffer.html#HB-BUFFER-FLAG-VERIFY:CAPS"/>
+    <keyword type="constant" name="HB_BUFFER_FLAG_PRODUCE_UNSAFE_TO_CONCAT" link="harfbuzz-hb-buffer.html#HB-BUFFER-FLAG-PRODUCE-UNSAFE-TO-CONCAT:CAPS"/>
     <keyword type="constant" name="HB_BUFFER_CLUSTER_LEVEL_MONOTONE_GRAPHEMES" link="harfbuzz-hb-buffer.html#HB-BUFFER-CLUSTER-LEVEL-MONOTONE-GRAPHEMES:CAPS"/>
     <keyword type="constant" name="HB_BUFFER_CLUSTER_LEVEL_MONOTONE_CHARACTERS" link="harfbuzz-hb-buffer.html#HB-BUFFER-CLUSTER-LEVEL-MONOTONE-CHARACTERS:CAPS"/>
     <keyword type="constant" name="HB_BUFFER_CLUSTER_LEVEL_CHARACTERS" link="harfbuzz-hb-buffer.html#HB-BUFFER-CLUSTER-LEVEL-CHARACTERS:CAPS"/>
