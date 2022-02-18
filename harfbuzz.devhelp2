@@ -705,6 +705,7 @@
     <keyword type="function" name="hb_ot_meta_reference_entry ()" link="harfbuzz-hb-ot-meta.html#hb-ot-meta-reference-entry" since="2.6.0"/>
     <keyword type="enum" name="enum hb_ot_meta_tag_t" link="harfbuzz-hb-ot-meta.html#hb-ot-meta-tag-t" since="2.6.0"/>
     <keyword type="function" name="hb_ot_metrics_get_position ()" link="harfbuzz-hb-ot-metrics.html#hb-ot-metrics-get-position" since="2.6.0"/>
+    <keyword type="function" name="hb_ot_metrics_get_position_with_fallback ()" link="harfbuzz-hb-ot-metrics.html#hb-ot-metrics-get-position-with-fallback" since="REPLACEME"/>
     <keyword type="function" name="hb_ot_metrics_get_variation ()" link="harfbuzz-hb-ot-metrics.html#hb-ot-metrics-get-variation" since="2.6.0"/>
     <keyword type="function" name="hb_ot_metrics_get_x_variation ()" link="harfbuzz-hb-ot-metrics.html#hb-ot-metrics-get-x-variation" since="2.6.0"/>
     <keyword type="function" name="hb_ot_metrics_get_y_variation ()" link="harfbuzz-hb-ot-metrics.html#hb-ot-metrics-get-y-variation" since="2.6.0"/>
