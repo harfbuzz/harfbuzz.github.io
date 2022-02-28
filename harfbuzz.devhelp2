@@ -159,7 +159,6 @@
       <sub name="Index of new symbols in 1.8.1" link="api-index-1-8-1.html"/>
       <sub name="Index of new symbols in 1.8.0" link="api-index-1-8-0.html"/>
       <sub name="Index of new symbols in 1.7.7" link="api-index-1-7-7.html"/>
-      <sub name="Index of new symbols in 1.7.5" link="api-index-1-7-5.html"/>
       <sub name="Index of new symbols in 1.7.2" link="api-index-1-7-2.html"/>
       <sub name="Index of new symbols in 1.6.0" link="api-index-1-6-0.html"/>
       <sub name="Index of new symbols in 1.5.0" link="api-index-1-5-0.html"/>
@@ -789,10 +788,20 @@
     <keyword type="function" name="hb_subset_input_unicode_set ()" link="harfbuzz-hb-subset.html#hb-subset-input-unicode-set" since="1.8.0"/>
     <keyword type="function" name="hb_subset_input_glyph_set ()" link="harfbuzz-hb-subset.html#hb-subset-input-glyph-set" since="1.8.0"/>
     <keyword type="function" name="hb_subset_input_set ()" link="harfbuzz-hb-subset.html#hb-subset-input-set" since="2.9.1"/>
+    <keyword type="function" name="hb_subset_plan_create_or_fail ()" link="harfbuzz-hb-subset.html#hb-subset-plan-create-or-fail" since="REPLACEME"/>
+    <keyword type="function" name="hb_subset_plan_reference ()" link="harfbuzz-hb-subset.html#hb-subset-plan-reference" since="REPLACEME"/>
+    <keyword type="function" name="hb_subset_plan_destroy ()" link="harfbuzz-hb-subset.html#hb-subset-plan-destroy" since="REPLACEME"/>
+    <keyword type="function" name="hb_subset_plan_set_user_data ()" link="harfbuzz-hb-subset.html#hb-subset-plan-set-user-data" since="REPLACEME"/>
+    <keyword type="function" name="hb_subset_plan_get_user_data ()" link="harfbuzz-hb-subset.html#hb-subset-plan-get-user-data" since="REPLACEME"/>
+    <keyword type="function" name="hb_subset_plan_execute_or_fail ()" link="harfbuzz-hb-subset.html#hb-subset-plan-execute-or-fail" since="REPLACEME"/>
+    <keyword type="function" name="hb_subset_plan_codepoint_to_old_glyph_mapping ()" link="harfbuzz-hb-subset.html#hb-subset-plan-codepoint-to-old-glyph-mapping" since="REPLACEME"/>
+    <keyword type="function" name="hb_subset_plan_new_to_old_glyph_mapping ()" link="harfbuzz-hb-subset.html#hb-subset-plan-new-to-old-glyph-mapping" since="REPLACEME"/>
+    <keyword type="function" name="hb_subset_plan_old_to_new_glyph_mapping ()" link="harfbuzz-hb-subset.html#hb-subset-plan-old-to-new-glyph-mapping" since="REPLACEME"/>
     <keyword type="function" name="hb_subset_or_fail ()" link="harfbuzz-hb-subset.html#hb-subset-or-fail" since="2.9.0"/>
     <keyword type="enum" name="enum hb_subset_flags_t" link="harfbuzz-hb-subset.html#hb-subset-flags-t" since="2.9.0"/>
     <keyword type="typedef" name="hb_subset_input_t" link="harfbuzz-hb-subset.html#hb-subset-input-t"/>
     <keyword type="enum" name="enum hb_subset_sets_t" link="harfbuzz-hb-subset.html#hb-subset-sets-t" since="2.9.1"/>
+    <keyword type="typedef" name="hb_subset_plan_t" link="harfbuzz-hb-subset.html#hb-subset-plan-t"/>
     <keyword type="constant" name="HB_MEMORY_MODE_DUPLICATE" link="harfbuzz-hb-blob.html#HB-MEMORY-MODE-DUPLICATE:CAPS"/>
     <keyword type="constant" name="HB_MEMORY_MODE_READONLY" link="harfbuzz-hb-blob.html#HB-MEMORY-MODE-READONLY:CAPS"/>
     <keyword type="constant" name="HB_MEMORY_MODE_WRITABLE" link="harfbuzz-hb-blob.html#HB-MEMORY-MODE-WRITABLE:CAPS"/>
