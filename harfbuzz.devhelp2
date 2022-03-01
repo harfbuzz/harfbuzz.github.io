@@ -794,7 +794,7 @@
     <keyword type="function" name="hb_subset_plan_set_user_data ()" link="harfbuzz-hb-subset.html#hb-subset-plan-set-user-data" since="REPLACEME"/>
     <keyword type="function" name="hb_subset_plan_get_user_data ()" link="harfbuzz-hb-subset.html#hb-subset-plan-get-user-data" since="REPLACEME"/>
     <keyword type="function" name="hb_subset_plan_execute_or_fail ()" link="harfbuzz-hb-subset.html#hb-subset-plan-execute-or-fail" since="REPLACEME"/>
-    <keyword type="function" name="hb_subset_plan_unicode_to_old_glyph_mapping ()" link="harfbuzz-hb-subset.html#hb-subset-plan-unicode-to-old-glyph-mapping"/>
+    <keyword type="function" name="hb_subset_plan_unicode_to_old_glyph_mapping ()" link="harfbuzz-hb-subset.html#hb-subset-plan-unicode-to-old-glyph-mapping" since="REPLACEME"/>
     <keyword type="function" name="hb_subset_plan_new_to_old_glyph_mapping ()" link="harfbuzz-hb-subset.html#hb-subset-plan-new-to-old-glyph-mapping" since="REPLACEME"/>
     <keyword type="function" name="hb_subset_plan_old_to_new_glyph_mapping ()" link="harfbuzz-hb-subset.html#hb-subset-plan-old-to-new-glyph-mapping" since="REPLACEME"/>
     <keyword type="function" name="hb_subset_or_fail ()" link="harfbuzz-hb-subset.html#hb-subset-or-fail" since="2.9.0"/>

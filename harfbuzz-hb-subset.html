@@ -787,6 +787,29 @@ returns nullptr.</p>
 <pre class="programlisting">const <a class="link" href="harfbuzz-hb-map.html#hb-map-t" title="hb_map_t"><span class="returnvalue">hb_map_t</span></a> *
 hb_subset_plan_unicode_to_old_glyph_mapping
                                (<em class="parameter"><code>const <a class="link" href="harfbuzz-hb-subset.html#hb-subset-plan-t" title="hb_subset_plan_t"><span class="type">hb_subset_plan_t</span></a> *plan</code></em>);</pre>
+<p>Returns the mapping between codepoints in the original font and the
+associated glyph id in the original font.</p>
+<div class="refsect3">
+<a name="hb-subset-plan-unicode-to-old-glyph-mapping.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>plan</p></td>
+<td class="parameter_description"><p>a subsetting plan.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-subset-plan-unicode-to-old-glyph-mapping.returns"></a><h4>Returns</h4>
+<p>A pointer to the <a class="link" href="harfbuzz-hb-map.html#hb-map-t" title="hb_map_t"><span class="type">hb_map_t</span></a> of the mapping. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: REPLACEME</p>
 </div>
 <hr>
 <div class="refsect2">
