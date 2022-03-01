@@ -135,6 +135,7 @@
       </sub>
       <sub name="API Index" link="api-index-full.html"/>
       <sub name="Index of deprecated API" link="deprecated-api-index.html"/>
+      <sub name="Index of new symbols in 4.0.0" link="api-index-4-0-0.html"/>
       <sub name="Index of new symbols in 3.4.0" link="api-index-3-4-0.html"/>
       <sub name="Index of new symbols in 3.3.0" link="api-index-3-3-0.html"/>
       <sub name="Index of new symbols in 3.1.0" link="api-index-3-1-0.html"/>
@@ -330,28 +331,28 @@
     <keyword type="macro" name="HB_LANGUAGE_INVALID" link="harfbuzz-hb-common.html#HB-LANGUAGE-INVALID:CAPS" since="0.6.0"/>
     <keyword type="macro" name="HB_FEATURE_GLOBAL_END" link="harfbuzz-hb-common.html#HB-FEATURE-GLOBAL-END:CAPS" since="2.0.0"/>
     <keyword type="macro" name="HB_FEATURE_GLOBAL_START" link="harfbuzz-hb-common.html#HB-FEATURE-GLOBAL-START:CAPS" since="2.0.0"/>
-    <keyword type="function" name="hb_draw_funcs_create ()" link="harfbuzz-hb-draw.html#hb-draw-funcs-create" since="REPLACEME"/>
-    <keyword type="function" name="hb_draw_funcs_destroy ()" link="harfbuzz-hb-draw.html#hb-draw-funcs-destroy" since="REPLACEME"/>
-    <keyword type="function" name="hb_draw_funcs_reference ()" link="harfbuzz-hb-draw.html#hb-draw-funcs-reference" since="REPLACEME"/>
-    <keyword type="function" name="hb_draw_funcs_is_immutable ()" link="harfbuzz-hb-draw.html#hb-draw-funcs-is-immutable" since="REPLACEME"/>
-    <keyword type="function" name="hb_draw_funcs_make_immutable ()" link="harfbuzz-hb-draw.html#hb-draw-funcs-make-immutable" since="REPLACEME"/>
-    <keyword type="function" name="hb_draw_move_to_func_t ()" link="harfbuzz-hb-draw.html#hb-draw-move-to-func-t" since="REPLACEME"/>
-    <keyword type="function" name="hb_draw_funcs_set_move_to_func ()" link="harfbuzz-hb-draw.html#hb-draw-funcs-set-move-to-func" since="REPLACEME"/>
-    <keyword type="function" name="hb_draw_line_to_func_t ()" link="harfbuzz-hb-draw.html#hb-draw-line-to-func-t" since="REPLACEME"/>
-    <keyword type="function" name="hb_draw_funcs_set_line_to_func ()" link="harfbuzz-hb-draw.html#hb-draw-funcs-set-line-to-func" since="REPLACEME"/>
-    <keyword type="function" name="hb_draw_quadratic_to_func_t ()" link="harfbuzz-hb-draw.html#hb-draw-quadratic-to-func-t" since="REPLACEME"/>
-    <keyword type="function" name="hb_draw_funcs_set_quadratic_to_func ()" link="harfbuzz-hb-draw.html#hb-draw-funcs-set-quadratic-to-func" since="REPLACEME"/>
-    <keyword type="function" name="hb_draw_cubic_to_func_t ()" link="harfbuzz-hb-draw.html#hb-draw-cubic-to-func-t" since="REPLACEME"/>
-    <keyword type="function" name="hb_draw_funcs_set_cubic_to_func ()" link="harfbuzz-hb-draw.html#hb-draw-funcs-set-cubic-to-func" since="REPLACEME"/>
-    <keyword type="function" name="hb_draw_close_path_func_t ()" link="harfbuzz-hb-draw.html#hb-draw-close-path-func-t" since="REPLACEME"/>
-    <keyword type="function" name="hb_draw_funcs_set_close_path_func ()" link="harfbuzz-hb-draw.html#hb-draw-funcs-set-close-path-func" since="REPLACEME"/>
-    <keyword type="function" name="hb_draw_move_to ()" link="harfbuzz-hb-draw.html#hb-draw-move-to" since="REPLACEME"/>
-    <keyword type="function" name="hb_draw_line_to ()" link="harfbuzz-hb-draw.html#hb-draw-line-to" since="REPLACEME"/>
-    <keyword type="function" name="hb_draw_quadratic_to ()" link="harfbuzz-hb-draw.html#hb-draw-quadratic-to" since="REPLACEME"/>
-    <keyword type="function" name="hb_draw_cubic_to ()" link="harfbuzz-hb-draw.html#hb-draw-cubic-to" since="REPLACEME"/>
-    <keyword type="function" name="hb_draw_close_path ()" link="harfbuzz-hb-draw.html#hb-draw-close-path" since="REPLACEME"/>
-    <keyword type="typedef" name="hb_draw_funcs_t" link="harfbuzz-hb-draw.html#hb-draw-funcs-t" since="REPLACEME"/>
-    <keyword type="struct" name="hb_draw_state_t" link="harfbuzz-hb-draw.html#hb-draw-state-t" since="REPLACEME"/>
+    <keyword type="function" name="hb_draw_funcs_create ()" link="harfbuzz-hb-draw.html#hb-draw-funcs-create" since="4.0.0"/>
+    <keyword type="function" name="hb_draw_funcs_destroy ()" link="harfbuzz-hb-draw.html#hb-draw-funcs-destroy" since="4.0.0"/>
+    <keyword type="function" name="hb_draw_funcs_reference ()" link="harfbuzz-hb-draw.html#hb-draw-funcs-reference" since="4.0.0"/>
+    <keyword type="function" name="hb_draw_funcs_is_immutable ()" link="harfbuzz-hb-draw.html#hb-draw-funcs-is-immutable" since="4.0.0"/>
+    <keyword type="function" name="hb_draw_funcs_make_immutable ()" link="harfbuzz-hb-draw.html#hb-draw-funcs-make-immutable" since="4.0.0"/>
+    <keyword type="function" name="hb_draw_move_to_func_t ()" link="harfbuzz-hb-draw.html#hb-draw-move-to-func-t" since="4.0.0"/>
+    <keyword type="function" name="hb_draw_funcs_set_move_to_func ()" link="harfbuzz-hb-draw.html#hb-draw-funcs-set-move-to-func" since="4.0.0"/>
+    <keyword type="function" name="hb_draw_line_to_func_t ()" link="harfbuzz-hb-draw.html#hb-draw-line-to-func-t" since="4.0.0"/>
+    <keyword type="function" name="hb_draw_funcs_set_line_to_func ()" link="harfbuzz-hb-draw.html#hb-draw-funcs-set-line-to-func" since="4.0.0"/>
+    <keyword type="function" name="hb_draw_quadratic_to_func_t ()" link="harfbuzz-hb-draw.html#hb-draw-quadratic-to-func-t" since="4.0.0"/>
+    <keyword type="function" name="hb_draw_funcs_set_quadratic_to_func ()" link="harfbuzz-hb-draw.html#hb-draw-funcs-set-quadratic-to-func" since="4.0.0"/>
+    <keyword type="function" name="hb_draw_cubic_to_func_t ()" link="harfbuzz-hb-draw.html#hb-draw-cubic-to-func-t" since="4.0.0"/>
+    <keyword type="function" name="hb_draw_funcs_set_cubic_to_func ()" link="harfbuzz-hb-draw.html#hb-draw-funcs-set-cubic-to-func" since="4.0.0"/>
+    <keyword type="function" name="hb_draw_close_path_func_t ()" link="harfbuzz-hb-draw.html#hb-draw-close-path-func-t" since="4.0.0"/>
+    <keyword type="function" name="hb_draw_funcs_set_close_path_func ()" link="harfbuzz-hb-draw.html#hb-draw-funcs-set-close-path-func" since="4.0.0"/>
+    <keyword type="function" name="hb_draw_move_to ()" link="harfbuzz-hb-draw.html#hb-draw-move-to" since="4.0.0"/>
+    <keyword type="function" name="hb_draw_line_to ()" link="harfbuzz-hb-draw.html#hb-draw-line-to" since="4.0.0"/>
+    <keyword type="function" name="hb_draw_quadratic_to ()" link="harfbuzz-hb-draw.html#hb-draw-quadratic-to" since="4.0.0"/>
+    <keyword type="function" name="hb_draw_cubic_to ()" link="harfbuzz-hb-draw.html#hb-draw-cubic-to" since="4.0.0"/>
+    <keyword type="function" name="hb_draw_close_path ()" link="harfbuzz-hb-draw.html#hb-draw-close-path" since="4.0.0"/>
+    <keyword type="typedef" name="hb_draw_funcs_t" link="harfbuzz-hb-draw.html#hb-draw-funcs-t" since="4.0.0"/>
+    <keyword type="struct" name="hb_draw_state_t" link="harfbuzz-hb-draw.html#hb-draw-state-t" since="4.0.0"/>
     <keyword type="macro" name="HB_DRAW_STATE_DEFAULT" link="harfbuzz-hb-draw.html#HB-DRAW-STATE-DEFAULT:CAPS"/>
     <keyword type="function" name="hb_font_get_glyph_func_t ()" link="harfbuzz-hb-deprecated.html#hb-font-get-glyph-func-t" deprecated="1.2.3"/>
     <keyword type="function" name="hb_ot_layout_table_find_script ()" link="harfbuzz-hb-deprecated.html#hb-ot-layout-table-find-script"/>
@@ -414,7 +415,7 @@
     <keyword type="function" name="hb_font_funcs_set_glyph_h_kerning_func ()" link="harfbuzz-hb-font.html#hb-font-funcs-set-glyph-h-kerning-func" since="0.9.2"/>
     <keyword type="function" name="hb_font_funcs_set_glyph_h_origin_func ()" link="harfbuzz-hb-font.html#hb-font-funcs-set-glyph-h-origin-func" since="0.9.2"/>
     <keyword type="function" name="hb_font_funcs_set_glyph_name_func ()" link="harfbuzz-hb-font.html#hb-font-funcs-set-glyph-name-func" since="0.9.2"/>
-    <keyword type="function" name="hb_font_funcs_set_glyph_shape_func ()" link="harfbuzz-hb-font.html#hb-font-funcs-set-glyph-shape-func" since="REPLACEME"/>
+    <keyword type="function" name="hb_font_funcs_set_glyph_shape_func ()" link="harfbuzz-hb-font.html#hb-font-funcs-set-glyph-shape-func" since="4.0.0"/>
     <keyword type="function" name="hb_font_funcs_set_glyph_v_advance_func ()" link="harfbuzz-hb-font.html#hb-font-funcs-set-glyph-v-advance-func" since="0.9.2"/>
     <keyword type="function" name="hb_font_funcs_set_glyph_v_advances_func ()" link="harfbuzz-hb-font.html#hb-font-funcs-set-glyph-v-advances-func" since="1.8.6"/>
     <keyword type="function" name="hb_font_funcs_set_glyph_v_origin_func ()" link="harfbuzz-hb-font.html#hb-font-funcs-set-glyph-v-origin-func" since="0.9.2"/>
@@ -447,8 +448,8 @@
     <keyword type="function" name="hb_font_get_glyph_name_func_t ()" link="harfbuzz-hb-font.html#hb-font-get-glyph-name-func-t"/>
     <keyword type="function" name="hb_font_get_glyph_origin_for_direction ()" link="harfbuzz-hb-font.html#hb-font-get-glyph-origin-for-direction" since="0.9.2"/>
     <keyword type="function" name="hb_font_get_glyph_origin_func_t ()" link="harfbuzz-hb-font.html#hb-font-get-glyph-origin-func-t"/>
-    <keyword type="function" name="hb_font_get_glyph_shape ()" link="harfbuzz-hb-font.html#hb-font-get-glyph-shape" since="REPLACEME"/>
-    <keyword type="function" name="hb_font_get_glyph_shape_func_t ()" link="harfbuzz-hb-font.html#hb-font-get-glyph-shape-func-t" since="REPLACEME"/>
+    <keyword type="function" name="hb_font_get_glyph_shape ()" link="harfbuzz-hb-font.html#hb-font-get-glyph-shape" since="4.0.0"/>
+    <keyword type="function" name="hb_font_get_glyph_shape_func_t ()" link="harfbuzz-hb-font.html#hb-font-get-glyph-shape-func-t" since="4.0.0"/>
     <keyword type="function" name="hb_font_get_glyph_v_advance ()" link="harfbuzz-hb-font.html#hb-font-get-glyph-v-advance" since="0.9.2"/>
     <keyword type="function" name="hb_font_get_glyph_v_advances ()" link="harfbuzz-hb-font.html#hb-font-get-glyph-v-advances" since="1.8.6"/>
     <keyword type="function" name="hb_font_get_glyph_v_origin ()" link="harfbuzz-hb-font.html#hb-font-get-glyph-v-origin" since="0.9.2"/>
@@ -639,9 +640,9 @@
     <keyword type="function" name="hb_ot_layout_feature_get_name_ids ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-feature-get-name-ids" since="2.0.0"/>
     <keyword type="function" name="hb_ot_layout_feature_with_variations_get_lookups ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-feature-with-variations-get-lookups"/>
     <keyword type="function" name="hb_ot_layout_get_attach_points ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-get-attach-points"/>
-    <keyword type="function" name="hb_ot_layout_get_horizontal_baseline_tag_for_script ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-get-horizontal-baseline-tag-for-script" since="REPLACEME"/>
+    <keyword type="function" name="hb_ot_layout_get_horizontal_baseline_tag_for_script ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-get-horizontal-baseline-tag-for-script" since="4.0.0"/>
     <keyword type="function" name="hb_ot_layout_get_baseline ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-get-baseline" since="2.6.0"/>
-    <keyword type="function" name="hb_ot_layout_get_baseline_with_fallback ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-get-baseline-with-fallback" since="REPLACEME"/>
+    <keyword type="function" name="hb_ot_layout_get_baseline_with_fallback ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-get-baseline-with-fallback" since="4.0.0"/>
     <keyword type="function" name="hb_ot_layout_get_glyph_class ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-get-glyph-class" since="0.9.7"/>
     <keyword type="function" name="hb_ot_layout_get_glyphs_in_class ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-get-glyphs-in-class" since="0.9.7"/>
     <keyword type="function" name="hb_ot_layout_get_ligature_carets ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-get-ligature-carets"/>
@@ -704,7 +705,7 @@
     <keyword type="function" name="hb_ot_meta_reference_entry ()" link="harfbuzz-hb-ot-meta.html#hb-ot-meta-reference-entry" since="2.6.0"/>
     <keyword type="enum" name="enum hb_ot_meta_tag_t" link="harfbuzz-hb-ot-meta.html#hb-ot-meta-tag-t" since="2.6.0"/>
     <keyword type="function" name="hb_ot_metrics_get_position ()" link="harfbuzz-hb-ot-metrics.html#hb-ot-metrics-get-position" since="2.6.0"/>
-    <keyword type="function" name="hb_ot_metrics_get_position_with_fallback ()" link="harfbuzz-hb-ot-metrics.html#hb-ot-metrics-get-position-with-fallback" since="REPLACEME"/>
+    <keyword type="function" name="hb_ot_metrics_get_position_with_fallback ()" link="harfbuzz-hb-ot-metrics.html#hb-ot-metrics-get-position-with-fallback" since="4.0.0"/>
     <keyword type="function" name="hb_ot_metrics_get_variation ()" link="harfbuzz-hb-ot-metrics.html#hb-ot-metrics-get-variation" since="2.6.0"/>
     <keyword type="function" name="hb_ot_metrics_get_x_variation ()" link="harfbuzz-hb-ot-metrics.html#hb-ot-metrics-get-x-variation" since="2.6.0"/>
     <keyword type="function" name="hb_ot_metrics_get_y_variation ()" link="harfbuzz-hb-ot-metrics.html#hb-ot-metrics-get-y-variation" since="2.6.0"/>
@@ -788,15 +789,15 @@
     <keyword type="function" name="hb_subset_input_unicode_set ()" link="harfbuzz-hb-subset.html#hb-subset-input-unicode-set" since="1.8.0"/>
     <keyword type="function" name="hb_subset_input_glyph_set ()" link="harfbuzz-hb-subset.html#hb-subset-input-glyph-set" since="1.8.0"/>
     <keyword type="function" name="hb_subset_input_set ()" link="harfbuzz-hb-subset.html#hb-subset-input-set" since="2.9.1"/>
-    <keyword type="function" name="hb_subset_plan_create_or_fail ()" link="harfbuzz-hb-subset.html#hb-subset-plan-create-or-fail" since="REPLACEME"/>
-    <keyword type="function" name="hb_subset_plan_reference ()" link="harfbuzz-hb-subset.html#hb-subset-plan-reference" since="REPLACEME"/>
-    <keyword type="function" name="hb_subset_plan_destroy ()" link="harfbuzz-hb-subset.html#hb-subset-plan-destroy" since="REPLACEME"/>
-    <keyword type="function" name="hb_subset_plan_set_user_data ()" link="harfbuzz-hb-subset.html#hb-subset-plan-set-user-data" since="REPLACEME"/>
-    <keyword type="function" name="hb_subset_plan_get_user_data ()" link="harfbuzz-hb-subset.html#hb-subset-plan-get-user-data" since="REPLACEME"/>
-    <keyword type="function" name="hb_subset_plan_execute_or_fail ()" link="harfbuzz-hb-subset.html#hb-subset-plan-execute-or-fail" since="REPLACEME"/>
-    <keyword type="function" name="hb_subset_plan_unicode_to_old_glyph_mapping ()" link="harfbuzz-hb-subset.html#hb-subset-plan-unicode-to-old-glyph-mapping" since="REPLACEME"/>
-    <keyword type="function" name="hb_subset_plan_new_to_old_glyph_mapping ()" link="harfbuzz-hb-subset.html#hb-subset-plan-new-to-old-glyph-mapping" since="REPLACEME"/>
-    <keyword type="function" name="hb_subset_plan_old_to_new_glyph_mapping ()" link="harfbuzz-hb-subset.html#hb-subset-plan-old-to-new-glyph-mapping" since="REPLACEME"/>
+    <keyword type="function" name="hb_subset_plan_create_or_fail ()" link="harfbuzz-hb-subset.html#hb-subset-plan-create-or-fail" since="4.0.0"/>
+    <keyword type="function" name="hb_subset_plan_reference ()" link="harfbuzz-hb-subset.html#hb-subset-plan-reference" since="4.0.0"/>
+    <keyword type="function" name="hb_subset_plan_destroy ()" link="harfbuzz-hb-subset.html#hb-subset-plan-destroy" since="4.0.0"/>
+    <keyword type="function" name="hb_subset_plan_set_user_data ()" link="harfbuzz-hb-subset.html#hb-subset-plan-set-user-data" since="4.0.0"/>
+    <keyword type="function" name="hb_subset_plan_get_user_data ()" link="harfbuzz-hb-subset.html#hb-subset-plan-get-user-data" since="4.0.0"/>
+    <keyword type="function" name="hb_subset_plan_execute_or_fail ()" link="harfbuzz-hb-subset.html#hb-subset-plan-execute-or-fail" since="4.0.0"/>
+    <keyword type="function" name="hb_subset_plan_unicode_to_old_glyph_mapping ()" link="harfbuzz-hb-subset.html#hb-subset-plan-unicode-to-old-glyph-mapping" since="4.0.0"/>
+    <keyword type="function" name="hb_subset_plan_new_to_old_glyph_mapping ()" link="harfbuzz-hb-subset.html#hb-subset-plan-new-to-old-glyph-mapping" since="4.0.0"/>
+    <keyword type="function" name="hb_subset_plan_old_to_new_glyph_mapping ()" link="harfbuzz-hb-subset.html#hb-subset-plan-old-to-new-glyph-mapping" since="4.0.0"/>
     <keyword type="function" name="hb_subset_or_fail ()" link="harfbuzz-hb-subset.html#hb-subset-or-fail" since="2.9.0"/>
     <keyword type="enum" name="enum hb_subset_flags_t" link="harfbuzz-hb-subset.html#hb-subset-flags-t" since="2.9.0"/>
     <keyword type="typedef" name="hb_subset_input_t" link="harfbuzz-hb-subset.html#hb-subset-input-t"/>
