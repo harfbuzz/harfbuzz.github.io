@@ -57,6 +57,14 @@
 </tr>
 <tr>
 <td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-set.html#hb-set-add-sorted-array" title="hb_set_add_sorted_array ()">hb_set_add_sorted_array</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
 <a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
 </td>
 <td class="function_name">
@@ -388,6 +396,48 @@ hb_set_add_range (<em class="parameter"><code><a class="link" href="harfbuzz-hb-
 </table></div>
 </div>
 <p class="since">Since: <a class="link" href="api-index-0-9-7.html#api-index-0.9.7">0.9.7</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-set-add-sorted-array"></a><h3>hb_set_add_sorted_array ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_set_add_sorted_array (<em class="parameter"><code><a class="link" href="harfbuzz-hb-set.html#hb-set-t" title="hb_set_t"><span class="type">hb_set_t</span></a> *set</code></em>,
+                         <em class="parameter"><code>const <a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> *sorted_codepoints</code></em>,
+                         <em class="parameter"><code>unsigned <span class="type">int</span> num_codepoints</code></em>);</pre>
+<p>Adds <em class="parameter"><code>num_codepoints</code></em>
+ codepoints to a set at once.
+The codepoints array must be in increasing order,
+with size at least <em class="parameter"><code>num_codepoints</code></em>
+.</p>
+<div class="refsect3">
+<a name="hb-set-add-sorted-array.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>set</p></td>
+<td class="parameter_description"><p>A set</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>sorted_codepoints</p></td>
+<td class="parameter_description"><p>Array of codepoints to add. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=num_codepoints]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>num_codepoints</p></td>
+<td class="parameter_description"><p>Length of <em class="parameter"><code>sorted_codepoints</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: REPLACEME</p>
 </div>
 <hr>
 <div class="refsect2">
