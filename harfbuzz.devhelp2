@@ -135,6 +135,7 @@
       </sub>
       <sub name="API Index" link="api-index-full.html"/>
       <sub name="Index of deprecated API" link="deprecated-api-index.html"/>
+      <sub name="Index of new symbols in 4.1.0" link="api-index-4-1-0.html"/>
       <sub name="Index of new symbols in 4.0.0" link="api-index-4-0-0.html"/>
       <sub name="Index of new symbols in 3.4.0" link="api-index-3-4-0.html"/>
       <sub name="Index of new symbols in 3.3.0" link="api-index-3-3-0.html"/>
@@ -523,7 +524,7 @@
     <keyword type="typedef" name="hb_map_t" link="harfbuzz-hb-map.html#hb-map-t"/>
     <keyword type="function" name="hb_set_add ()" link="harfbuzz-hb-set.html#hb-set-add" since="0.9.2"/>
     <keyword type="function" name="hb_set_add_range ()" link="harfbuzz-hb-set.html#hb-set-add-range" since="0.9.7"/>
-    <keyword type="function" name="hb_set_add_sorted_array ()" link="harfbuzz-hb-set.html#hb-set-add-sorted-array" since="REPLACEME"/>
+    <keyword type="function" name="hb_set_add_sorted_array ()" link="harfbuzz-hb-set.html#hb-set-add-sorted-array" since="4.1.0"/>
     <keyword type="function" name="hb_set_allocation_successful ()" link="harfbuzz-hb-set.html#hb-set-allocation-successful" since="0.9.2"/>
     <keyword type="function" name="hb_set_copy ()" link="harfbuzz-hb-set.html#hb-set-copy" since="2.8.2"/>
     <keyword type="function" name="hb_set_clear ()" link="harfbuzz-hb-set.html#hb-set-clear" since="0.9.2"/>
