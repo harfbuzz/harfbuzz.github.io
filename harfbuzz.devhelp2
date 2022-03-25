@@ -545,6 +545,7 @@
     <keyword type="function" name="hb_set_is_subset ()" link="harfbuzz-hb-set.html#hb-set-is-subset" since="1.8.1"/>
     <keyword type="function" name="hb_set_next ()" link="harfbuzz-hb-set.html#hb-set-next" since="0.9.2"/>
     <keyword type="function" name="hb_set_next_range ()" link="harfbuzz-hb-set.html#hb-set-next-range" since="0.9.7"/>
+    <keyword type="function" name="hb_set_next_many ()" link="harfbuzz-hb-set.html#hb-set-next-many" since="REPLACEME"/>
     <keyword type="function" name="hb_set_previous ()" link="harfbuzz-hb-set.html#hb-set-previous" since="1.8.0"/>
     <keyword type="function" name="hb_set_previous_range ()" link="harfbuzz-hb-set.html#hb-set-previous-range" since="1.8.0"/>
     <keyword type="function" name="hb_set_reference ()" link="harfbuzz-hb-set.html#hb-set-reference" since="0.9.2"/>
