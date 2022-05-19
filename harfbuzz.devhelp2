@@ -515,6 +515,7 @@
     <keyword type="function" name="hb_map_get ()" link="harfbuzz-hb-map.html#hb-map-get" since="1.7.7"/>
     <keyword type="function" name="hb_map_get_empty ()" link="harfbuzz-hb-map.html#hb-map-get-empty" since="1.7.7"/>
     <keyword type="function" name="hb_map_get_population ()" link="harfbuzz-hb-map.html#hb-map-get-population" since="1.7.7"/>
+    <keyword type="function" name="hb_map_is_equal ()" link="harfbuzz-hb-map.html#hb-map-is-equal" since="REPLACEME"/>
     <keyword type="function" name="hb_map_get_user_data ()" link="harfbuzz-hb-map.html#hb-map-get-user-data" since="1.7.7"/>
     <keyword type="function" name="hb_map_has ()" link="harfbuzz-hb-map.html#hb-map-has" since="1.7.7"/>
     <keyword type="function" name="hb_map_is_empty ()" link="harfbuzz-hb-map.html#hb-map-is-empty" since="1.7.7"/>
