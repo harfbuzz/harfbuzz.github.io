@@ -519,6 +519,7 @@
     <keyword type="function" name="hb_map_is_equal ()" link="harfbuzz-hb-map.html#hb-map-is-equal" since="4.3.0"/>
     <keyword type="function" name="hb_map_get_user_data ()" link="harfbuzz-hb-map.html#hb-map-get-user-data" since="1.7.7"/>
     <keyword type="function" name="hb_map_has ()" link="harfbuzz-hb-map.html#hb-map-has" since="1.7.7"/>
+    <keyword type="function" name="hb_map_hash ()" link="harfbuzz-hb-map.html#hb-map-hash" since="REPLACEME"/>
     <keyword type="function" name="hb_map_is_empty ()" link="harfbuzz-hb-map.html#hb-map-is-empty" since="1.7.7"/>
     <keyword type="function" name="hb_map_reference ()" link="harfbuzz-hb-map.html#hb-map-reference" since="1.7.7"/>
     <keyword type="function" name="hb_map_set ()" link="harfbuzz-hb-map.html#hb-map-set" since="1.7.7"/>
@@ -541,6 +542,7 @@
     <keyword type="function" name="hb_set_get_population ()" link="harfbuzz-hb-set.html#hb-set-get-population" since="0.9.7"/>
     <keyword type="function" name="hb_set_get_user_data ()" link="harfbuzz-hb-set.html#hb-set-get-user-data" since="0.9.2"/>
     <keyword type="function" name="hb_set_has ()" link="harfbuzz-hb-set.html#hb-set-has" since="0.9.2"/>
+    <keyword type="function" name="hb_set_hash ()" link="harfbuzz-hb-set.html#hb-set-hash" since="REPLACEME"/>
     <keyword type="function" name="hb_set_intersect ()" link="harfbuzz-hb-set.html#hb-set-intersect" since="0.9.2"/>
     <keyword type="function" name="hb_set_invert ()" link="harfbuzz-hb-set.html#hb-set-invert" since="3.0.0"/>
     <keyword type="function" name="hb_set_is_empty ()" link="harfbuzz-hb-set.html#hb-set-is-empty" since="0.9.7"/>
