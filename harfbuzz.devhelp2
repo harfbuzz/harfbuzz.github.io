@@ -510,6 +510,7 @@
     <keyword type="struct" name="hb_glyph_extents_t" link="harfbuzz-hb-font.html#hb-glyph-extents-t"/>
     <keyword type="function" name="hb_map_allocation_successful ()" link="harfbuzz-hb-map.html#hb-map-allocation-successful" since="1.7.7"/>
     <keyword type="function" name="hb_map_clear ()" link="harfbuzz-hb-map.html#hb-map-clear" since="1.7.7"/>
+    <keyword type="function" name="hb_map_copy ()" link="harfbuzz-hb-map.html#hb-map-copy" since="REPLACEME"/>
     <keyword type="function" name="hb_map_create ()" link="harfbuzz-hb-map.html#hb-map-create" since="1.7.7"/>
     <keyword type="function" name="hb_map_del ()" link="harfbuzz-hb-map.html#hb-map-del" since="1.7.7"/>
     <keyword type="function" name="hb_map_destroy ()" link="harfbuzz-hb-map.html#hb-map-destroy" since="1.7.7"/>
