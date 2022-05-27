@@ -473,6 +473,8 @@
     <keyword type="function" name="hb_font_glyph_to_string ()" link="harfbuzz-hb-font.html#hb-font-glyph-to-string" since="0.9.2"/>
     <keyword type="function" name="hb_font_is_immutable ()" link="harfbuzz-hb-font.html#hb-font-is-immutable" since="0.9.2"/>
     <keyword type="function" name="hb_font_make_immutable ()" link="harfbuzz-hb-font.html#hb-font-make-immutable" since="0.9.2"/>
+    <keyword type="function" name="hb_font_get_serial ()" link="harfbuzz-hb-font.html#hb-font-get-serial" since="REPLACEME."/>
+    <keyword type="function" name="hb_font_changed ()" link="harfbuzz-hb-font.html#hb-font-changed" since="REPLACEME."/>
     <keyword type="function" name="hb_font_reference ()" link="harfbuzz-hb-font.html#hb-font-reference" since="0.9.2"/>
     <keyword type="function" name="hb_font_set_face ()" link="harfbuzz-hb-font.html#hb-font-set-face" since="1.4.3"/>
     <keyword type="function" name="hb_font_set_funcs ()" link="harfbuzz-hb-font.html#hb-font-set-funcs" since="0.9.2"/>
