@@ -1296,7 +1296,7 @@ characters (before shaping), or contain glyphs (the result of shaping).</p>
 <div class="refsect2">
 <a name="hb-buffer-get-content-type"></a><h3>hb_buffer_get_content_type ()</h3>
 <pre class="programlisting"><a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-content-type-t" title="enum hb_buffer_content_type_t"><span class="returnvalue">hb_buffer_content_type_t</span></a>
-hb_buffer_get_content_type (<em class="parameter"><code><a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a> *buffer</code></em>);</pre>
+hb_buffer_get_content_type (<em class="parameter"><code>const <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a> *buffer</code></em>);</pre>
 <p>Fetches the type of <em class="parameter"><code>buffer</code></em>
  contents. Buffers are either empty, contain
 characters (before shaping), or contain glyphs (the result of shaping).</p>
@@ -1365,7 +1365,7 @@ direction.</p>
 <div class="refsect2">
 <a name="hb-buffer-get-direction"></a><h3>hb_buffer_get_direction ()</h3>
 <pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-direction-t" title="enum hb_direction_t"><span class="returnvalue">hb_direction_t</span></a>
-hb_buffer_get_direction (<em class="parameter"><code><a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a> *buffer</code></em>);</pre>
+hb_buffer_get_direction (<em class="parameter"><code>const <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a> *buffer</code></em>);</pre>
 <p>See <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-set-direction" title="hb_buffer_set_direction ()"><code class="function">hb_buffer_set_direction()</code></a></p>
 <div class="refsect3">
 <a name="hb-buffer-get-direction.parameters"></a><h4>Parameters</h4>
@@ -1432,7 +1432,7 @@ corresponding script from an ISO 15924 script tag.</p>
 <div class="refsect2">
 <a name="hb-buffer-get-script"></a><h3>hb_buffer_get_script ()</h3>
 <pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-script-t" title="enum hb_script_t"><span class="returnvalue">hb_script_t</span></a>
-hb_buffer_get_script (<em class="parameter"><code><a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a> *buffer</code></em>);</pre>
+hb_buffer_get_script (<em class="parameter"><code>const <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a> *buffer</code></em>);</pre>
 <p>Fetches the script of <em class="parameter"><code>buffer</code></em>
 .</p>
 <div class="refsect3">
@@ -1500,7 +1500,7 @@ different concepts and should not be confused with each other.</p>
 <div class="refsect2">
 <a name="hb-buffer-get-language"></a><h3>hb_buffer_get_language ()</h3>
 <pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-language-t" title="hb_language_t"><span class="returnvalue">hb_language_t</span></a>
-hb_buffer_get_language (<em class="parameter"><code><a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a> *buffer</code></em>);</pre>
+hb_buffer_get_language (<em class="parameter"><code>const <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a> *buffer</code></em>);</pre>
 <p>See <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-set-language" title="hb_buffer_set_language ()"><code class="function">hb_buffer_set_language()</code></a>.</p>
 <div class="refsect3">
 <a name="hb-buffer-get-language.parameters"></a><h4>Parameters</h4>
@@ -1561,7 +1561,7 @@ hb_buffer_set_flags (<em class="parameter"><code><a class="link" href="harfbuzz-
 <div class="refsect2">
 <a name="hb-buffer-get-flags"></a><h3>hb_buffer_get_flags ()</h3>
 <pre class="programlisting"><a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-flags-t" title="enum hb_buffer_flags_t"><span class="returnvalue">hb_buffer_flags_t</span></a>
-hb_buffer_get_flags (<em class="parameter"><code><a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a> *buffer</code></em>);</pre>
+hb_buffer_get_flags (<em class="parameter"><code>const <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a> *buffer</code></em>);</pre>
 <p>Fetches the <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-flags-t" title="enum hb_buffer_flags_t"><span class="type">hb_buffer_flags_t</span></a> of <em class="parameter"><code>buffer</code></em>
 .</p>
 <div class="refsect3">
@@ -1623,7 +1623,7 @@ during shaping.</p>
 <div class="refsect2">
 <a name="hb-buffer-get-cluster-level"></a><h3>hb_buffer_get_cluster_level ()</h3>
 <pre class="programlisting"><a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-cluster-level-t" title="enum hb_buffer_cluster_level_t"><span class="returnvalue">hb_buffer_cluster_level_t</span></a>
-hb_buffer_get_cluster_level (<em class="parameter"><code><a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a> *buffer</code></em>);</pre>
+hb_buffer_get_cluster_level (<em class="parameter"><code>const <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a> *buffer</code></em>);</pre>
 <p>Fetches the cluster level of a buffer. The <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-cluster-level-t" title="enum hb_buffer_cluster_level_t"><span class="type">hb_buffer_cluster_level_t</span></a>
 dictates one aspect of how HarfBuzz will treat non-base characters 
 during shaping.</p>
@@ -1691,7 +1691,7 @@ memory allocation succeeded, <code class="literal">false</code> otherwise.</p>
 <div class="refsect2">
 <a name="hb-buffer-get-length"></a><h3>hb_buffer_get_length ()</h3>
 <pre class="programlisting">unsigned <span class="returnvalue">int</span>
-hb_buffer_get_length (<em class="parameter"><code><a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a> *buffer</code></em>);</pre>
+hb_buffer_get_length (<em class="parameter"><code>const <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a> *buffer</code></em>);</pre>
 <p>Returns the number of items in the buffer.</p>
 <div class="refsect3">
 <a name="hb-buffer-get-length.parameters"></a><h4>Parameters</h4>
@@ -1753,7 +1753,7 @@ hb_buffer_set_segment_properties (<em class="parameter"><code><a class="link" hr
 <div class="refsect2">
 <a name="hb-buffer-get-segment-properties"></a><h3>hb_buffer_get_segment_properties ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
-hb_buffer_get_segment_properties (<em class="parameter"><code><a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a> *buffer</code></em>,
+hb_buffer_get_segment_properties (<em class="parameter"><code>const <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a> *buffer</code></em>,
                                   <em class="parameter"><code><a class="link" href="harfbuzz-hb-buffer.html#hb-segment-properties-t" title="hb_segment_properties_t"><span class="type">hb_segment_properties_t</span></a> *props</code></em>);</pre>
 <p>Sets <em class="parameter"><code>props</code></em>
  to the <a class="link" href="harfbuzz-hb-buffer.html#hb-segment-properties-t" title="hb_segment_properties_t"><span class="type">hb_segment_properties_t</span></a> of <em class="parameter"><code>buffer</code></em>
@@ -1859,7 +1859,7 @@ hb_buffer_set_unicode_funcs (<em class="parameter"><code><a class="link" href="h
 <div class="refsect2">
 <a name="hb-buffer-get-unicode-funcs"></a><h3>hb_buffer_get_unicode_funcs ()</h3>
 <pre class="programlisting"><a class="link" href="harfbuzz-hb-unicode.html#hb-unicode-funcs-t" title="hb_unicode_funcs_t"><span class="returnvalue">hb_unicode_funcs_t</span></a> *
-hb_buffer_get_unicode_funcs (<em class="parameter"><code><a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a> *buffer</code></em>);</pre>
+hb_buffer_get_unicode_funcs (<em class="parameter"><code>const <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a> *buffer</code></em>);</pre>
 <p>Fetches the Unicode-functions structure of a buffer.</p>
 <div class="refsect3">
 <a name="hb-buffer-get-unicode-funcs.parameters"></a><h4>Parameters</h4>
@@ -2096,7 +2096,7 @@ has position array, <code class="literal">false</code> otherwise.</p>
 <div class="refsect2">
 <a name="hb-buffer-get-invisible-glyph"></a><h3>hb_buffer_get_invisible_glyph ()</h3>
 <pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="returnvalue">hb_codepoint_t</span></a>
-hb_buffer_get_invisible_glyph (<em class="parameter"><code><a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a> *buffer</code></em>);</pre>
+hb_buffer_get_invisible_glyph (<em class="parameter"><code>const <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a> *buffer</code></em>);</pre>
 <p>See <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-set-invisible-glyph" title="hb_buffer_set_invisible_glyph ()"><code class="function">hb_buffer_set_invisible_glyph()</code></a>.</p>
 <div class="refsect3">
 <a name="hb-buffer-get-invisible-glyph.parameters"></a><h4>Parameters</h4>
@@ -2158,7 +2158,7 @@ verbatim.</p>
 <div class="refsect2">
 <a name="hb-buffer-get-not-found-glyph"></a><h3>hb_buffer_get_not_found_glyph ()</h3>
 <pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="returnvalue">hb_codepoint_t</span></a>
-hb_buffer_get_not_found_glyph (<em class="parameter"><code><a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a> *buffer</code></em>);</pre>
+hb_buffer_get_not_found_glyph (<em class="parameter"><code>const <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a> *buffer</code></em>);</pre>
 <p>See <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-set-not-found-glyph" title="hb_buffer_set_not_found_glyph ()"><code class="function">hb_buffer_set_not_found_glyph()</code></a>.</p>
 <div class="refsect3">
 <a name="hb-buffer-get-not-found-glyph.parameters"></a><h4>Parameters</h4>
@@ -2254,7 +2254,7 @@ when adding text to <em class="parameter"><code>buffer</code></em>
 <div class="refsect2">
 <a name="hb-buffer-get-replacement-codepoint"></a><h3>hb_buffer_get_replacement_codepoint ()</h3>
 <pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="returnvalue">hb_codepoint_t</span></a>
-hb_buffer_get_replacement_codepoint (<em class="parameter"><code><a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a> *buffer</code></em>);</pre>
+hb_buffer_get_replacement_codepoint (<em class="parameter"><code>const <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a> *buffer</code></em>);</pre>
 <p>Fetches the <a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> that replaces invalid entries for a given encoding
 when adding text to <em class="parameter"><code>buffer</code></em>
 .</p>
