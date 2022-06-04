@@ -25,7 +25,7 @@
       </sub>
       <sub name="Shaping concepts" link="shaping-concepts.html">
         <sub name="Text shaping" link="shaping-concepts.html#text-shaping-concepts"/>
-        <sub name="Complex scripts" link="complex-scripts.html"/>
+        <sub name="Script-specific shaping" link="script-specific-shaping.html"/>
         <sub name="Shaping operations" link="shaping-operations.html"/>
         <sub name="Unicode character categories" link="unicode-character-categories.html"/>
         <sub name="Text runs" link="text-runs.html"/>

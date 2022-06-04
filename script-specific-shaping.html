@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Complex scripts: HarfBuzz Manual</title>
+<title>Script-specific shaping: HarfBuzz Manual</title>
 <meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
 <link rel="home" href="index.html" title="HarfBuzz Manual">
 <link rel="up" href="shaping-concepts.html" title="Shaping concepts">
@@ -21,34 +21,27 @@
 </tr></table>
 <div class="section">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="complex-scripts"></a>Complex scripts</h2></div></div></div>
+<a name="script-specific-shaping"></a>Script-specific shaping</h2></div></div></div>
 <p>
-      In text-shaping terminology, scripts are generally classified as
-      either <span class="emphasis"><em>complex</em></span> or <span class="emphasis"><em>non-complex</em></span>.
-    </p>
-<p>
-      Complex scripts are those for which transforming the input
-      sequence into the final layout requires some combination of
+      In many scripts, transforming the input
+      sequence into the final layout often requires some combination of
       operations—such as context-dependent substitutions,
       context-dependent mark positioning, glyph-to-glyph joining,
       glyph reordering, or glyph stacking.
     </p>
 <p>
-      In some complex scripts, the shaping rules require that a text
+      In some scripts, the shaping rules require that a text
       run be divided into syllables before the operations can be
-      applied. Other complex scripts may apply shaping operations over
+      applied. Other scripts may apply shaping operations over
       entire words or over the entire text run, with no subdivision
       required.
     </p>
 <p>
-      Non-complex scripts, by definition, do not require these
-      operations. However, correctly shaping a text run in a
-      non-complex script may still involve Unicode normalization,
+      Other scripts, do not require these
+      operations. However, correctly shaping a text run in
+      any script may still involve Unicode normalization,
       ligature substitutions, mark positioning, kerning, and applying
-      other font features. The key difference is that a text run in a
-      non-complex script can be processed sequentially and in the same
-      order as the input sequence of Unicode codepoints, without
-      requiring an analysis stage.
+      other font features.
     </p>
 </div>
 <div class="footer">
