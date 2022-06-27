@@ -473,8 +473,8 @@
     <keyword type="function" name="hb_font_glyph_to_string ()" link="harfbuzz-hb-font.html#hb-font-glyph-to-string" since="0.9.2"/>
     <keyword type="function" name="hb_font_is_immutable ()" link="harfbuzz-hb-font.html#hb-font-is-immutable" since="0.9.2"/>
     <keyword type="function" name="hb_font_make_immutable ()" link="harfbuzz-hb-font.html#hb-font-make-immutable" since="0.9.2"/>
-    <keyword type="function" name="hb_font_get_serial ()" link="harfbuzz-hb-font.html#hb-font-get-serial" since="REPLACEME."/>
-    <keyword type="function" name="hb_font_changed ()" link="harfbuzz-hb-font.html#hb-font-changed" since="REPLACEME."/>
+    <keyword type="function" name="hb_font_get_serial ()" link="harfbuzz-hb-font.html#hb-font-get-serial" since="4.4.0."/>
+    <keyword type="function" name="hb_font_changed ()" link="harfbuzz-hb-font.html#hb-font-changed" since="4.4.0."/>
     <keyword type="function" name="hb_font_reference ()" link="harfbuzz-hb-font.html#hb-font-reference" since="0.9.2"/>
     <keyword type="function" name="hb_font_set_face ()" link="harfbuzz-hb-font.html#hb-font-set-face" since="1.4.3"/>
     <keyword type="function" name="hb_font_set_funcs ()" link="harfbuzz-hb-font.html#hb-font-set-funcs" since="0.9.2"/>
@@ -512,7 +512,7 @@
     <keyword type="struct" name="hb_glyph_extents_t" link="harfbuzz-hb-font.html#hb-glyph-extents-t"/>
     <keyword type="function" name="hb_map_allocation_successful ()" link="harfbuzz-hb-map.html#hb-map-allocation-successful" since="1.7.7"/>
     <keyword type="function" name="hb_map_clear ()" link="harfbuzz-hb-map.html#hb-map-clear" since="1.7.7"/>
-    <keyword type="function" name="hb_map_copy ()" link="harfbuzz-hb-map.html#hb-map-copy" since="REPLACEME"/>
+    <keyword type="function" name="hb_map_copy ()" link="harfbuzz-hb-map.html#hb-map-copy" since="4.4.0"/>
     <keyword type="function" name="hb_map_create ()" link="harfbuzz-hb-map.html#hb-map-create" since="1.7.7"/>
     <keyword type="function" name="hb_map_del ()" link="harfbuzz-hb-map.html#hb-map-del" since="1.7.7"/>
     <keyword type="function" name="hb_map_destroy ()" link="harfbuzz-hb-map.html#hb-map-destroy" since="1.7.7"/>
@@ -522,7 +522,7 @@
     <keyword type="function" name="hb_map_is_equal ()" link="harfbuzz-hb-map.html#hb-map-is-equal" since="4.3.0"/>
     <keyword type="function" name="hb_map_get_user_data ()" link="harfbuzz-hb-map.html#hb-map-get-user-data" since="1.7.7"/>
     <keyword type="function" name="hb_map_has ()" link="harfbuzz-hb-map.html#hb-map-has" since="1.7.7"/>
-    <keyword type="function" name="hb_map_hash ()" link="harfbuzz-hb-map.html#hb-map-hash" since="REPLACEME"/>
+    <keyword type="function" name="hb_map_hash ()" link="harfbuzz-hb-map.html#hb-map-hash" since="4.4.0"/>
     <keyword type="function" name="hb_map_is_empty ()" link="harfbuzz-hb-map.html#hb-map-is-empty" since="1.7.7"/>
     <keyword type="function" name="hb_map_reference ()" link="harfbuzz-hb-map.html#hb-map-reference" since="1.7.7"/>
     <keyword type="function" name="hb_map_set ()" link="harfbuzz-hb-map.html#hb-map-set" since="1.7.7"/>
@@ -545,7 +545,7 @@
     <keyword type="function" name="hb_set_get_population ()" link="harfbuzz-hb-set.html#hb-set-get-population" since="0.9.7"/>
     <keyword type="function" name="hb_set_get_user_data ()" link="harfbuzz-hb-set.html#hb-set-get-user-data" since="0.9.2"/>
     <keyword type="function" name="hb_set_has ()" link="harfbuzz-hb-set.html#hb-set-has" since="0.9.2"/>
-    <keyword type="function" name="hb_set_hash ()" link="harfbuzz-hb-set.html#hb-set-hash" since="REPLACEME"/>
+    <keyword type="function" name="hb_set_hash ()" link="harfbuzz-hb-set.html#hb-set-hash" since="4.4.0"/>
     <keyword type="function" name="hb_set_intersect ()" link="harfbuzz-hb-set.html#hb-set-intersect" since="0.9.2"/>
     <keyword type="function" name="hb_set_invert ()" link="harfbuzz-hb-set.html#hb-set-invert" since="3.0.0"/>
     <keyword type="function" name="hb_set_is_empty ()" link="harfbuzz-hb-set.html#hb-set-is-empty" since="0.9.7"/>
