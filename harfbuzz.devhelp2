@@ -1538,6 +1538,7 @@
     <keyword type="constant" name="HB_SUBSET_SETS_NAME_ID" link="harfbuzz-hb-subset.html#HB-SUBSET-SETS-NAME-ID:CAPS"/>
     <keyword type="constant" name="HB_SUBSET_SETS_NAME_LANG_ID" link="harfbuzz-hb-subset.html#HB-SUBSET-SETS-NAME-LANG-ID:CAPS"/>
     <keyword type="constant" name="HB_SUBSET_SETS_LAYOUT_FEATURE_TAG" link="harfbuzz-hb-subset.html#HB-SUBSET-SETS-LAYOUT-FEATURE-TAG:CAPS"/>
+    <keyword type="constant" name="HB_SUBSET_SETS_LAYOUT_SCRIPT_TAG" link="harfbuzz-hb-subset.html#HB-SUBSET-SETS-LAYOUT-SCRIPT-TAG:CAPS"/>
     <keyword type="member" name="hb-glyph-info-t.codepoint" link="harfbuzz-hb-buffer.html#hb-glyph-info-t.codepoint"/>
     <keyword type="member" name="hb-glyph-info-t.cluster" link="harfbuzz-hb-buffer.html#hb-glyph-info-t.cluster"/>
     <keyword type="member" name="hb-glyph-position-t.x-advance" link="harfbuzz-hb-buffer.html#hb-glyph-position-t.x-advance"/>
