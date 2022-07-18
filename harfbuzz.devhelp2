@@ -305,6 +305,7 @@
     <keyword type="function" name="hb_language_from_string ()" link="harfbuzz-hb-common.html#hb-language-from-string" since="0.9.2"/>
     <keyword type="function" name="hb_language_to_string ()" link="harfbuzz-hb-common.html#hb-language-to-string" since="0.9.2"/>
     <keyword type="function" name="hb_language_get_default ()" link="harfbuzz-hb-common.html#hb-language-get-default" since="0.9.2"/>
+    <keyword type="function" name="hb_language_matches ()" link="harfbuzz-hb-common.html#hb-language-matches" since="REPLACEME"/>
     <keyword type="function" name="hb_feature_from_string ()" link="harfbuzz-hb-common.html#hb-feature-from-string" since="0.9.5"/>
     <keyword type="function" name="hb_feature_to_string ()" link="harfbuzz-hb-common.html#hb-feature-to-string" since="0.9.5"/>
     <keyword type="function" name="hb_variation_from_string ()" link="harfbuzz-hb-common.html#hb-variation-from-string" since="1.4.2"/>
