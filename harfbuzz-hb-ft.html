@@ -455,7 +455,7 @@ you call <a class="link" href="harfbuzz-hb-ft.html#hb-ft-font-unlock-face" title
 <a name="hb-ft-font-lock-face.returns"></a><h4>Returns</h4>
 <p>the FT_Face associated with <em class="parameter"><code>font</code></em>
 or <code class="literal">NULL</code>. </p>
-<p><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>][<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
 <p class="since">Since: <a class="link" href="api-index-2-6-5.html#api-index-2.6.5">2.6.5</a></p>
 </div>
@@ -465,6 +465,7 @@ or <code class="literal">NULL</code>. </p>
 <pre class="programlisting"><span class="returnvalue">void</span>
 hb_ft_font_unlock_face (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> *font</code></em>);</pre>
 <p>Releases an FT_Face previously obtained with <a class="link" href="harfbuzz-hb-ft.html#hb-ft-font-lock-face" title="hb_ft_font_lock_face ()"><code class="function">hb_ft_font_lock_face()</code></a>.</p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
 <a name="hb-ft-font-unlock-face.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
