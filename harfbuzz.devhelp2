@@ -135,6 +135,7 @@
       </sub>
       <sub name="API Index" link="api-index-full.html"/>
       <sub name="Index of deprecated API" link="deprecated-api-index.html"/>
+      <sub name="Index of new symbols in 5.0.0" link="api-index-5-0-0.html"/>
       <sub name="Index of new symbols in 4.4.0" link="api-index-4-4-0.html"/>
       <sub name="Index of new symbols in 4.3.0" link="api-index-4-3-0.html"/>
       <sub name="Index of new symbols in 4.2.0" link="api-index-4-2-0.html"/>
@@ -305,7 +306,7 @@
     <keyword type="function" name="hb_language_from_string ()" link="harfbuzz-hb-common.html#hb-language-from-string" since="0.9.2"/>
     <keyword type="function" name="hb_language_to_string ()" link="harfbuzz-hb-common.html#hb-language-to-string" since="0.9.2"/>
     <keyword type="function" name="hb_language_get_default ()" link="harfbuzz-hb-common.html#hb-language-get-default" since="0.9.2"/>
-    <keyword type="function" name="hb_language_matches ()" link="harfbuzz-hb-common.html#hb-language-matches" since="REPLACEME"/>
+    <keyword type="function" name="hb_language_matches ()" link="harfbuzz-hb-common.html#hb-language-matches" since="5.0.0"/>
     <keyword type="function" name="hb_feature_from_string ()" link="harfbuzz-hb-common.html#hb-feature-from-string" since="0.9.5"/>
     <keyword type="function" name="hb_feature_to_string ()" link="harfbuzz-hb-common.html#hb-feature-to-string" since="0.9.5"/>
     <keyword type="function" name="hb_variation_from_string ()" link="harfbuzz-hb-common.html#hb-variation-from-string" since="1.4.2"/>
