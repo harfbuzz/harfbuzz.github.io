@@ -824,6 +824,7 @@
     <keyword type="constant" name="HB_MEMORY_MODE_READONLY_MAY_MAKE_WRITABLE" link="harfbuzz-hb-blob.html#HB-MEMORY-MODE-READONLY-MAY-MAKE-WRITABLE:CAPS"/>
     <keyword type="constant" name="HB_GLYPH_FLAG_UNSAFE_TO_BREAK" link="harfbuzz-hb-buffer.html#HB-GLYPH-FLAG-UNSAFE-TO-BREAK:CAPS"/>
     <keyword type="constant" name="HB_GLYPH_FLAG_UNSAFE_TO_CONCAT" link="harfbuzz-hb-buffer.html#HB-GLYPH-FLAG-UNSAFE-TO-CONCAT:CAPS"/>
+    <keyword type="constant" name="HB_GLYPH_FLAG_SAFE_TO_INSERT_TATWEEL" link="harfbuzz-hb-buffer.html#HB-GLYPH-FLAG-SAFE-TO-INSERT-TATWEEL:CAPS"/>
     <keyword type="constant" name="HB_GLYPH_FLAG_DEFINED" link="harfbuzz-hb-buffer.html#HB-GLYPH-FLAG-DEFINED:CAPS"/>
     <keyword type="constant" name="HB_BUFFER_CONTENT_TYPE_INVALID" link="harfbuzz-hb-buffer.html#HB-BUFFER-CONTENT-TYPE-INVALID:CAPS"/>
     <keyword type="constant" name="HB_BUFFER_CONTENT_TYPE_UNICODE" link="harfbuzz-hb-buffer.html#HB-BUFFER-CONTENT-TYPE-UNICODE:CAPS"/>
@@ -836,6 +837,7 @@
     <keyword type="constant" name="HB_BUFFER_FLAG_DO_NOT_INSERT_DOTTED_CIRCLE" link="harfbuzz-hb-buffer.html#HB-BUFFER-FLAG-DO-NOT-INSERT-DOTTED-CIRCLE:CAPS"/>
     <keyword type="constant" name="HB_BUFFER_FLAG_VERIFY" link="harfbuzz-hb-buffer.html#HB-BUFFER-FLAG-VERIFY:CAPS"/>
     <keyword type="constant" name="HB_BUFFER_FLAG_PRODUCE_UNSAFE_TO_CONCAT" link="harfbuzz-hb-buffer.html#HB-BUFFER-FLAG-PRODUCE-UNSAFE-TO-CONCAT:CAPS"/>
+    <keyword type="constant" name="HB_BUFFER_FLAG_PRODUCE_SAFE_TO_INSERT_TATWEEL" link="harfbuzz-hb-buffer.html#HB-BUFFER-FLAG-PRODUCE-SAFE-TO-INSERT-TATWEEL:CAPS"/>
     <keyword type="constant" name="HB_BUFFER_FLAG_DEFINED" link="harfbuzz-hb-buffer.html#HB-BUFFER-FLAG-DEFINED:CAPS"/>
     <keyword type="constant" name="HB_BUFFER_CLUSTER_LEVEL_MONOTONE_GRAPHEMES" link="harfbuzz-hb-buffer.html#HB-BUFFER-CLUSTER-LEVEL-MONOTONE-GRAPHEMES:CAPS"/>
     <keyword type="constant" name="HB_BUFFER_CLUSTER_LEVEL_MONOTONE_CHARACTERS" link="harfbuzz-hb-buffer.html#HB-BUFFER-CLUSTER-LEVEL-MONOTONE-CHARACTERS:CAPS"/>

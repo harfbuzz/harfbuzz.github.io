@@ -1107,7 +1107,7 @@ hb_font_funcs_get_empty (<em class="parameter"><code><span class="type">void</sp
 <div class="refsect2">
 <a name="hb-font-funcs-get-user-data"></a><h3>hb_font_funcs_get_user_data ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span> *
-hb_font_funcs_get_user_data (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-funcs-t" title="hb_font_funcs_t"><span class="type">hb_font_funcs_t</span></a> *ffuncs</code></em>,
+hb_font_funcs_get_user_data (<em class="parameter"><code>const <a class="link" href="harfbuzz-hb-font.html#hb-font-funcs-t" title="hb_font_funcs_t"><span class="type">hb_font_funcs_t</span></a> *ffuncs</code></em>,
                              <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-user-data-key-t" title="hb_user_data_key_t"><span class="type">hb_user_data_key_t</span></a> *key</code></em>);</pre>
 <p>Fetches the user data associated with the specified key,
 attached to the specified font-functions structure.</p>
@@ -3822,7 +3822,7 @@ hb_font_get_synthetic_slant (<em class="parameter"><code><a class="link" href="h
 <div class="refsect2">
 <a name="hb-font-get-user-data"></a><h3>hb_font_get_user_data ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span> *
-hb_font_get_user_data (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> *font</code></em>,
+hb_font_get_user_data (<em class="parameter"><code>const <a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> *font</code></em>,
                        <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-user-data-key-t" title="hb_user_data_key_t"><span class="type">hb_user_data_key_t</span></a> *key</code></em>);</pre>
 <p>Fetches the user-data object associated with the specified key,
 attached to the specified font object.</p>

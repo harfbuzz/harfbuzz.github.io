@@ -1940,7 +1940,7 @@ is not needed anymore. </p></td>
 <div class="refsect2">
 <a name="hb-buffer-get-user-data"></a><h3>hb_buffer_get_user_data ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span> *
-hb_buffer_get_user_data (<em class="parameter"><code><a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a> *buffer</code></em>,
+hb_buffer_get_user_data (<em class="parameter"><code>const <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a> *buffer</code></em>,
                          <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-user-data-key-t" title="hb_user_data_key_t"><span class="type">hb_user_data_key_t</span></a> *key</code></em>);</pre>
 <p>Fetches the user data associated with the specified key,
 attached to the specified buffer.</p>
@@ -3386,6 +3386,21 @@ allow selecting more fine-grained cluster handling.</p></td>
 <td class="enum_member_annotations"> </td>
 </tr>
 <tr>
+<td class="enum_member_name"><p><a name="HB-GLYPH-FLAG-SAFE-TO-INSERT-TATWEEL:CAPS"></a>HB_GLYPH_FLAG_SAFE_TO_INSERT_TATWEEL</p></td>
+<td class="enum_member_description">
+<p>In scripts that use elongation (Arabic,
+				   Mongolian, Syriac, etc.), this flag signifies
+				   that it is safe to insert a U+0640 TATWEEL
+				   character *before* this cluster for elongation.
+				   This flag does not determine the
+				   script-specific elongation places, but only
+				   when it is safe to do the elongation without
+				   interrupting text shaping.
+				   Since: 5.1.0</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
 <td class="enum_member_name"><p><a name="HB-GLYPH-FLAG-DEFINED:CAPS"></a>HB_GLYPH_FLAG_DEFINED</p></td>
 <td class="enum_member_description">
 <p>All the currently defined flags.</p>
@@ -3580,6 +3595,16 @@ should not affect how much the line advances.</p></td>
 
                      glyph-flag should be produced by the shaper. By default
                      it will not be produced since it incurs a cost. Since: 4.0.0</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HB-BUFFER-FLAG-PRODUCE-SAFE-TO-INSERT-TATWEEL:CAPS"></a>HB_BUFFER_FLAG_PRODUCE_SAFE_TO_INSERT_TATWEEL</p></td>
+<td class="enum_member_description">
+<p>                     flag indicating that the <em class="parameter"><code>HB_GLYPH_FLAG_SAFE_TO_INSERT_TATWEEL</code></em>
+
+                     glyph-flag should be produced by the shaper. By default
+                     it will not be produced. Since: 5.1.0</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
