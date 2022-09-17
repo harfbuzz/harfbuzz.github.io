@@ -652,7 +652,7 @@
     <keyword type="function" name="hb_ot_layout_feature_get_characters ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-feature-get-characters" since="2.0.0"/>
     <keyword type="function" name="hb_ot_layout_feature_get_lookups ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-feature-get-lookups" since="0.9.7"/>
     <keyword type="function" name="hb_ot_layout_feature_get_name_ids ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-feature-get-name-ids" since="2.0.0"/>
-    <keyword type="function" name="hb_ot_layout_feature_with_variations_get_lookups ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-feature-with-variations-get-lookups"/>
+    <keyword type="function" name="hb_ot_layout_feature_with_variations_get_lookups ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-feature-with-variations-get-lookups" since="1.4.0"/>
     <keyword type="function" name="hb_ot_layout_get_attach_points ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-get-attach-points"/>
     <keyword type="function" name="hb_ot_layout_get_horizontal_baseline_tag_for_script ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-get-horizontal-baseline-tag-for-script" since="4.0.0"/>
     <keyword type="function" name="hb_ot_layout_get_baseline ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-get-baseline" since="2.6.0"/>
@@ -663,25 +663,25 @@
     <keyword type="function" name="hb_ot_layout_get_size_params ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-get-size-params" since="0.9.10"/>
     <keyword type="function" name="hb_ot_layout_has_glyph_classes ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-has-glyph-classes"/>
     <keyword type="function" name="hb_ot_layout_has_positioning ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-has-positioning"/>
-    <keyword type="function" name="hb_ot_layout_has_substitution ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-has-substitution"/>
-    <keyword type="function" name="hb_ot_layout_language_find_feature ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-language-find-feature"/>
-    <keyword type="function" name="hb_ot_layout_language_get_feature_indexes ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-language-get-feature-indexes"/>
-    <keyword type="function" name="hb_ot_layout_language_get_feature_tags ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-language-get-feature-tags"/>
+    <keyword type="function" name="hb_ot_layout_has_substitution ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-has-substitution" since="0.6.0"/>
+    <keyword type="function" name="hb_ot_layout_language_find_feature ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-language-find-feature" since="0.6.0"/>
+    <keyword type="function" name="hb_ot_layout_language_get_feature_indexes ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-language-get-feature-indexes" since="0.6.0"/>
+    <keyword type="function" name="hb_ot_layout_language_get_feature_tags ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-language-get-feature-tags" since="0.6.0"/>
     <keyword type="function" name="hb_ot_layout_language_get_required_feature ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-language-get-required-feature" since="0.9.30"/>
     <keyword type="function" name="hb_ot_layout_lookup_collect_glyphs ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-lookup-collect-glyphs" since="0.9.7"/>
     <keyword type="function" name="hb_ot_layout_lookup_get_glyph_alternates ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-lookup-get-glyph-alternates" since="2.6.8"/>
     <keyword type="function" name="hb_ot_layout_lookup_substitute_closure ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-lookup-substitute-closure" since="0.9.7"/>
     <keyword type="function" name="hb_ot_layout_lookups_substitute_closure ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-lookups-substitute-closure" since="1.8.1"/>
     <keyword type="function" name="hb_ot_layout_lookup_would_substitute ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-lookup-would-substitute" since="0.9.7"/>
-    <keyword type="function" name="hb_ot_layout_script_get_language_tags ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-script-get-language-tags"/>
+    <keyword type="function" name="hb_ot_layout_script_get_language_tags ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-script-get-language-tags" since="0.6.0"/>
     <keyword type="function" name="hb_ot_layout_script_select_language ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-script-select-language" since="2.0.0"/>
-    <keyword type="function" name="hb_ot_layout_table_find_feature_variations ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-table-find-feature-variations"/>
-    <keyword type="function" name="hb_ot_layout_table_get_feature_tags ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-table-get-feature-tags"/>
+    <keyword type="function" name="hb_ot_layout_table_find_feature_variations ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-table-find-feature-variations" since="1.4.0"/>
+    <keyword type="function" name="hb_ot_layout_table_get_feature_tags ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-table-get-feature-tags" since="0.6.0"/>
     <keyword type="function" name="hb_ot_layout_table_get_script_tags ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-table-get-script-tags"/>
     <keyword type="function" name="hb_ot_layout_table_get_lookup_count ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-table-get-lookup-count" since="0.9.22"/>
     <keyword type="function" name="hb_ot_layout_table_select_script ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-table-select-script" since="2.0.0"/>
     <keyword type="function" name="hb_ot_shape_plan_collect_lookups ()" link="harfbuzz-hb-ot-layout.html#hb-ot-shape-plan-collect-lookups" since="0.9.7"/>
-    <keyword type="function" name="hb_ot_layout_language_get_required_feature_index ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-language-get-required-feature-index"/>
+    <keyword type="function" name="hb_ot_layout_language_get_required_feature_index ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-language-get-required-feature-index" since="0.6.0"/>
     <keyword type="macro" name="HB_OT_MAX_TAGS_PER_LANGUAGE" link="harfbuzz-hb-ot-layout.html#HB-OT-MAX-TAGS-PER-LANGUAGE:CAPS" since="2.0.0"/>
     <keyword type="macro" name="HB_OT_MAX_TAGS_PER_SCRIPT" link="harfbuzz-hb-ot-layout.html#HB-OT-MAX-TAGS-PER-SCRIPT:CAPS" since="2.0.0"/>
     <keyword type="macro" name="HB_OT_TAG_DEFAULT_LANGUAGE" link="harfbuzz-hb-ot-layout.html#HB-OT-TAG-DEFAULT-LANGUAGE:CAPS"/>
@@ -1031,6 +1031,8 @@
     <keyword type="constant" name="HB_SCRIPT_TOTO" link="harfbuzz-hb-common.html#HB-SCRIPT-TOTO:CAPS"/>
     <keyword type="constant" name="HB_SCRIPT_VITHKUQI" link="harfbuzz-hb-common.html#HB-SCRIPT-VITHKUQI:CAPS"/>
     <keyword type="constant" name="HB_SCRIPT_MATH" link="harfbuzz-hb-common.html#HB-SCRIPT-MATH:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_KAWI" link="harfbuzz-hb-common.html#HB-SCRIPT-KAWI:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_NAG_MUNDARI" link="harfbuzz-hb-common.html#HB-SCRIPT-NAG-MUNDARI:CAPS"/>
     <keyword type="constant" name="HB_SCRIPT_INVALID" link="harfbuzz-hb-common.html#HB-SCRIPT-INVALID:CAPS"/>
     <keyword type="constant" name="HB_UNICODE_COMBINING_CLASS_NOT_REORDERED" link="harfbuzz-hb-unicode.html#HB-UNICODE-COMBINING-CLASS-NOT-REORDERED:CAPS"/>
     <keyword type="constant" name="HB_UNICODE_COMBINING_CLASS_OVERLAY" link="harfbuzz-hb-unicode.html#HB-UNICODE-COMBINING-CLASS-OVERLAY:CAPS"/>

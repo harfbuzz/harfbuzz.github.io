@@ -625,18 +625,21 @@ list of features is provided, all features will be queried.</p>
 </tr>
 <tr>
 <td class="parameter_name"><p>scripts</p></td>
-<td class="parameter_description"><p>The array of scripts to collect lookups for</p></td>
-<td class="parameter_annotations"> </td>
+<td class="parameter_description"><p>The array of scripts to collect lookups for,
+terminated by <a class="link" href="harfbuzz-hb-common.html#HB-TAG-NONE:CAPS" title="HB_TAG_NONE"><code class="literal">HB_TAG_NONE</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> zero-terminated=1]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>languages</p></td>
-<td class="parameter_description"><p>The array of languages to collect lookups for</p></td>
-<td class="parameter_annotations"> </td>
+<td class="parameter_description"><p>The array of languages to collect lookups for,
+terminated by <a class="link" href="harfbuzz-hb-common.html#HB-TAG-NONE:CAPS" title="HB_TAG_NONE"><code class="literal">HB_TAG_NONE</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> zero-terminated=1]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>features</p></td>
-<td class="parameter_description"><p>The array of features to collect lookups for</p></td>
-<td class="parameter_annotations"> </td>
+<td class="parameter_description"><p>The array of features to collect lookups for,
+terminated by <a class="link" href="harfbuzz-hb-common.html#HB-TAG-NONE:CAPS" title="HB_TAG_NONE"><code class="literal">HB_TAG_NONE</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> zero-terminated=1]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>lookup_indexes</p></td>
@@ -684,18 +687,21 @@ features is provided, all features will be queried.</p>
 </tr>
 <tr>
 <td class="parameter_name"><p>scripts</p></td>
-<td class="parameter_description"><p>The array of scripts to collect features for</p></td>
-<td class="parameter_annotations"> </td>
+<td class="parameter_description"><p>The array of scripts to collect features for,
+terminated by <a class="link" href="harfbuzz-hb-common.html#HB-TAG-NONE:CAPS" title="HB_TAG_NONE"><code class="literal">HB_TAG_NONE</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> zero-terminated=1]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>languages</p></td>
-<td class="parameter_description"><p>The array of languages to collect features for</p></td>
-<td class="parameter_annotations"> </td>
+<td class="parameter_description"><p>The array of languages to collect features for,
+terminated by <a class="link" href="harfbuzz-hb-common.html#HB-TAG-NONE:CAPS" title="HB_TAG_NONE"><code class="literal">HB_TAG_NONE</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> zero-terminated=1]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>features</p></td>
-<td class="parameter_description"><p>The array of features to collect</p></td>
-<td class="parameter_annotations"> </td>
+<td class="parameter_description"><p>The array of features to collect,
+terminated by <a class="link" href="harfbuzz-hb-common.html#HB-TAG-NONE:CAPS" title="HB_TAG_NONE"><code class="literal">HB_TAG_NONE</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> zero-terminated=1]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>feature_indexes</p></td>
@@ -977,6 +983,7 @@ Output = the actual number of lookups returned (may be zero). </p></td>
 <a name="hb-ot-layout-feature-with-variations-get-lookups.returns"></a><h4>Returns</h4>
 <p> Total number of lookups.</p>
 </div>
+<p class="since">Since: <a class="link" href="api-index-1-4-0.html#api-index-1.4.0">1.4.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1462,6 +1469,7 @@ hb_ot_layout_has_substitution (<em class="parameter"><code><a class="link" href=
 <a name="hb-ot-layout-has-substitution.returns"></a><h4>Returns</h4>
 <p> <code class="literal">true</code> if data found, <code class="literal">false</code> otherwise</p>
 </div>
+<p class="since">Since: <a class="link" href="api-index-0-6-0.html#api-index-0.6.0">0.6.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1521,6 +1529,7 @@ or GPOS table, underneath the specified script and language.</p>
 <a name="hb-ot-layout-language-find-feature.returns"></a><h4>Returns</h4>
 <p> <code class="literal">true</code> if the feature is found, <code class="literal">false</code> otherwise</p>
 </div>
+<p class="since">Since: <a class="link" href="api-index-0-6-0.html#api-index-0.6.0">0.6.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1589,6 +1598,7 @@ Output: the actual number of feature tags returned (may be zero). </p></td>
 <a name="hb-ot-layout-language-get-feature-indexes.returns"></a><h4>Returns</h4>
 <p> Total number of features.</p>
 </div>
+<p class="since">Since: <a class="link" href="api-index-0-6-0.html#api-index-0.6.0">0.6.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1657,6 +1667,7 @@ Output = the actual number of feature tags returned (may be zero). </p></td>
 <a name="hb-ot-layout-language-get-feature-tags.returns"></a><h4>Returns</h4>
 <p> Total number of feature tags.</p>
 </div>
+<p class="since">Since: <a class="link" href="api-index-0-6-0.html#api-index-0.6.0">0.6.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2035,6 +2046,7 @@ Output = the actual number of language tags returned (may be zero). </p></td>
 <a name="hb-ot-layout-script-get-language-tags.returns"></a><h4>Returns</h4>
 <p> Total number of language tags.</p>
 </div>
+<p class="since">Since: <a class="link" href="api-index-0-6-0.html#api-index-0.6.0">0.6.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2154,6 +2166,7 @@ or GPOS table, at the specified variation coordinates.</p>
 <a name="hb-ot-layout-table-find-feature-variations.returns"></a><h4>Returns</h4>
 <p> <code class="literal">true</code> if feature variations were found, <code class="literal">false</code> otherwise.</p>
 </div>
+<p class="since">Since: <a class="link" href="api-index-1-4-0.html#api-index-1.4.0">1.4.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2164,7 +2177,9 @@ hb_ot_layout_table_get_feature_tags (<em class="parameter"><code><a class="link"
                                      <em class="parameter"><code>unsigned <span class="type">int</span> start_offset</code></em>,
                                      <em class="parameter"><code>unsigned <span class="type">int</span> *feature_count</code></em>,
                                      <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="type">hb_tag_t</span></a> *feature_tags</code></em>);</pre>
-<p>Fetches a list of all feature tags in the given face's GSUB or GPOS table.</p>
+<p>Fetches a list of all feature tags in the given face's GSUB or GPOS table.
+Note that there might be duplicate feature tags, belonging to different
+script/language-system pairs of the table.</p>
 <div class="refsect3">
 <a name="hb-ot-layout-table-get-feature-tags.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -2207,6 +2222,7 @@ Output = the actual number of feature tags returned (may be zero). </p></td>
 <a name="hb-ot-layout-table-get-feature-tags.returns"></a><h4>Returns</h4>
 <p> Total number of feature tags.</p>
 </div>
+<p class="since">Since: <a class="link" href="api-index-0-6-0.html#api-index-0.6.0">0.6.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2458,6 +2474,7 @@ underneath the specified script and language.</p>
 <a name="hb-ot-layout-language-get-required-feature-index.returns"></a><h4>Returns</h4>
 <p> <code class="literal">true</code> if the feature is found, <code class="literal">false</code> otherwise</p>
 </div>
+<p class="since">Since: <a class="link" href="api-index-0-6-0.html#api-index-0.6.0">0.6.0</a></p>
 </div>
 </div>
 <div class="refsect1">
