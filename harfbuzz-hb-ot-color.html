@@ -421,9 +421,9 @@ Output = the actual number of layers returned (may be zero). </p></td>
 hb_ot_color_glyph_reference_png (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> *font</code></em>,
                                  <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> glyph</code></em>);</pre>
 <p>Fetches the PNG image for a glyph. This function takes a font object, not a face object,
-as input. To get an optimally sized PNG blob, the UPEM value must be set on the <em class="parameter"><code>font</code></em>
+as input. To get an optimally sized PNG blob, the PPEM values must be set on the <em class="parameter"><code>font</code></em>
 
-object. If UPEM is unset, the blob returned will be the largest PNG available.</p>
+object. If PPEM is unset, the blob returned will be the largest PNG available.</p>
 <p>If the glyph has no PNG image, the singleton empty blob is returned.</p>
 <div class="refsect3">
 <a name="hb-ot-color-glyph-reference-png.parameters"></a><h4>Parameters</h4>
