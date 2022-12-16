@@ -8,7 +8,7 @@
 <link rel="up" href="core-api.html" title="Core API">
 <link rel="prev" href="harfbuzz-hb-buffer.html" title="hb-buffer">
 <link rel="next" href="harfbuzz-hb-draw.html" title="hb-draw">
-<meta name="generator" content="GTK-Doc V1.27 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.32 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -35,10 +35,22 @@
 <a name="harfbuzz-hb-common.functions"></a><h2>Functions</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="functions_return">
-<col class="functions_name">
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
 </colgroup>
 <tbody>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-common.html#HB-TAG:CAPS" title="HB_TAG()">HB_TAG</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-common.html#HB-UNTAG:CAPS" title="HB_UNTAG()">HB_UNTAG</a><span class="c_punctuation">()</span>
+</td>
+</tr>
 <tr>
 <td class="function_type">
 <a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="returnvalue">hb_tag_t</span></a>
@@ -71,6 +83,42 @@
 </td>
 </tr>
 <tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-common.html#HB-DIRECTION-REVERSE:CAPS" title="HB_DIRECTION_REVERSE()">HB_DIRECTION_REVERSE</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-common.html#HB-DIRECTION-IS-BACKWARD:CAPS" title="HB_DIRECTION_IS_BACKWARD()">HB_DIRECTION_IS_BACKWARD</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-common.html#HB-DIRECTION-IS-FORWARD:CAPS" title="HB_DIRECTION_IS_FORWARD()">HB_DIRECTION_IS_FORWARD</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-common.html#HB-DIRECTION-IS-HORIZONTAL:CAPS" title="HB_DIRECTION_IS_HORIZONTAL()">HB_DIRECTION_IS_HORIZONTAL</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-common.html#HB-DIRECTION-IS-VALID:CAPS" title="HB_DIRECTION_IS_VALID()">HB_DIRECTION_IS_VALID</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-common.html#HB-DIRECTION-IS-VERTICAL:CAPS" title="HB_DIRECTION_IS_VERTICAL()">HB_DIRECTION_IS_VERTICAL</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
 <td class="function_type">
 <a class="link" href="harfbuzz-hb-common.html#hb-script-t" title="enum hb_script_t"><span class="returnvalue">hb_script_t</span></a>
 </td>
@@ -80,18 +128,18 @@
 </tr>
 <tr>
 <td class="function_type">
-<a class="link" href="harfbuzz-hb-common.html#hb-script-t" title="enum hb_script_t"><span class="returnvalue">hb_script_t</span></a>
-</td>
-<td class="function_name">
-<a class="link" href="harfbuzz-hb-common.html#hb-script-from-string" title="hb_script_from_string ()">hb_script_from_string</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
 <a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="returnvalue">hb_tag_t</span></a>
 </td>
 <td class="function_name">
 <a class="link" href="harfbuzz-hb-common.html#hb-script-to-iso15924-tag" title="hb_script_to_iso15924_tag ()">hb_script_to_iso15924_tag</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="harfbuzz-hb-common.html#hb-script-t" title="enum hb_script_t"><span class="returnvalue">hb_script_t</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-common.html#hb-script-from-string" title="hb_script_from_string ()">hb_script_from_string</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 <tr>
@@ -173,54 +221,6 @@
 <span class="c_punctuation">(</span><a class="link" href="harfbuzz-hb-common.html#hb-destroy-func-t" title="hb_destroy_func_t ()">*hb_destroy_func_t</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
 </td>
 </tr>
-<tr>
-<td class="define_keyword">#define</td>
-<td class="function_name">
-<a class="link" href="harfbuzz-hb-common.html#HB-TAG:CAPS" title="HB_TAG()">HB_TAG</a><span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="define_keyword">#define</td>
-<td class="function_name">
-<a class="link" href="harfbuzz-hb-common.html#HB-UNTAG:CAPS" title="HB_UNTAG()">HB_UNTAG</a><span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="define_keyword">#define</td>
-<td class="function_name">
-<a class="link" href="harfbuzz-hb-common.html#HB-DIRECTION-REVERSE:CAPS" title="HB_DIRECTION_REVERSE()">HB_DIRECTION_REVERSE</a><span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="define_keyword">#define</td>
-<td class="function_name">
-<a class="link" href="harfbuzz-hb-common.html#HB-DIRECTION-IS-BACKWARD:CAPS" title="HB_DIRECTION_IS_BACKWARD()">HB_DIRECTION_IS_BACKWARD</a><span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="define_keyword">#define</td>
-<td class="function_name">
-<a class="link" href="harfbuzz-hb-common.html#HB-DIRECTION-IS-FORWARD:CAPS" title="HB_DIRECTION_IS_FORWARD()">HB_DIRECTION_IS_FORWARD</a><span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="define_keyword">#define</td>
-<td class="function_name">
-<a class="link" href="harfbuzz-hb-common.html#HB-DIRECTION-IS-HORIZONTAL:CAPS" title="HB_DIRECTION_IS_HORIZONTAL()">HB_DIRECTION_IS_HORIZONTAL</a><span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="define_keyword">#define</td>
-<td class="function_name">
-<a class="link" href="harfbuzz-hb-common.html#HB-DIRECTION-IS-VALID:CAPS" title="HB_DIRECTION_IS_VALID()">HB_DIRECTION_IS_VALID</a><span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="define_keyword">#define</td>
-<td class="function_name">
-<a class="link" href="harfbuzz-hb-common.html#HB-DIRECTION-IS-VERTICAL:CAPS" title="HB_DIRECTION_IS_VERTICAL()">HB_DIRECTION_IS_VERTICAL</a><span class="c_punctuation">()</span>
-</td>
-</tr>
 </tbody>
 </table></div>
 </div>
@@ -228,8 +228,8 @@
 <a name="harfbuzz-hb-common.other"></a><h2>Types and Values</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="name">
-<col class="description">
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
 </colgroup>
 <tbody>
 <tr>
@@ -300,6 +300,18 @@
 <td class="define_keyword">#define</td>
 <td class="function_name"><a class="link" href="harfbuzz-hb-common.html#HB-FEATURE-GLOBAL-START:CAPS" title="HB_FEATURE_GLOBAL_START">HB_FEATURE_GLOBAL_START</a></td>
 </tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="harfbuzz-hb-common.html#HB-HAS-FREETYPE:CAPS" title="HB_HAS_FREETYPE">HB_HAS_FREETYPE</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="harfbuzz-hb-common.html#HB-HAS-GLIB:CAPS" title="HB_HAS_GLIB">HB_HAS_GLIB</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="harfbuzz-hb-common.html#HB-HAS-GRAPHITE:CAPS" title="HB_HAS_GRAPHITE">HB_HAS_GRAPHITE</a></td>
+</tr>
 </tbody>
 </table></div>
 </div>
@@ -314,6 +326,68 @@
 </div>
 <div class="refsect1">
 <a name="harfbuzz-hb-common.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="HB-TAG:CAPS"></a><h3>HB_TAG()</h3>
+<pre class="programlisting">#define HB_TAG(c1,c2,c3,c4) ((hb_tag_t)((((uint32_t)(c1)&amp;0xFF)&lt;&lt;24)|(((uint32_t)(c2)&amp;0xFF)&lt;&lt;16)|(((uint32_t)(c3)&amp;0xFF)&lt;&lt;8)|((uint32_t)(c4)&amp;0xFF)))
+</pre>
+<p>Constructs an <a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="type">hb_tag_t</span></a> from four character literals.</p>
+<div class="refsect3">
+<a name="HB-TAG.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>c1</p></td>
+<td class="parameter_description"><p>1st character of the tag</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>c2</p></td>
+<td class="parameter_description"><p>2nd character of the tag</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>c3</p></td>
+<td class="parameter_description"><p>3rd character of the tag</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>c4</p></td>
+<td class="parameter_description"><p>4th character of the tag</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="HB-UNTAG:CAPS"></a><h3>HB_UNTAG()</h3>
+<pre class="programlisting">#define HB_UNTAG(tag)   (uint8_t)(((tag)&gt;&gt;24)&amp;0xFF), (uint8_t)(((tag)&gt;&gt;16)&amp;0xFF), (uint8_t)(((tag)&gt;&gt;8)&amp;0xFF), (uint8_t)((tag)&amp;0xFF)
+</pre>
+<p>Extracts four character literals from an <a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="type">hb_tag_t</span></a>.</p>
+<div class="refsect3">
+<a name="HB-UNTAG.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>tag</p></td>
+<td class="parameter_description"><p>an <a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="type">hb_tag_t</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-0-6-0.html#api-index-0.6.0">0.6.0</a></p>
+</div>
+<hr>
 <div class="refsect2">
 <a name="hb-tag-from-string"></a><h3>hb_tag_from_string ()</h3>
 <pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="returnvalue">hb_tag_t</span></a>
@@ -457,6 +531,143 @@ hb_direction_to_string (<em class="parameter"><code><a class="link" href="harfbu
 </div>
 <hr>
 <div class="refsect2">
+<a name="HB-DIRECTION-REVERSE:CAPS"></a><h3>HB_DIRECTION_REVERSE()</h3>
+<pre class="programlisting">#define HB_DIRECTION_REVERSE(dir) ((hb_direction_t) (((unsigned int) (dir)) ^ 1))
+</pre>
+<p>Reverses a text direction. Requires that the direction
+be valid.</p>
+<div class="refsect3">
+<a name="HB-DIRECTION-REVERSE.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>dir</p></td>
+<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-common.html#hb-direction-t" title="enum hb_direction_t"><span class="type">hb_direction_t</span></a> to reverse</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="HB-DIRECTION-IS-BACKWARD:CAPS"></a><h3>HB_DIRECTION_IS_BACKWARD()</h3>
+<pre class="programlisting">#define HB_DIRECTION_IS_BACKWARD(dir) ((((unsigned int) (dir)) &amp; ~2U) == 5)
+</pre>
+<p>Tests whether a text direction moves backward (from right to left, or from
+bottom to top). Requires that the direction be valid.</p>
+<div class="refsect3">
+<a name="HB-DIRECTION-IS-BACKWARD.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>dir</p></td>
+<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-common.html#hb-direction-t" title="enum hb_direction_t"><span class="type">hb_direction_t</span></a> to test</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="HB-DIRECTION-IS-FORWARD:CAPS"></a><h3>HB_DIRECTION_IS_FORWARD()</h3>
+<pre class="programlisting">#define HB_DIRECTION_IS_FORWARD(dir) ((((unsigned int) (dir)) &amp; ~2U) == 4)
+</pre>
+<p>Tests whether a text direction moves forward (from left to right, or from
+top to bottom). Requires that the direction be valid.</p>
+<div class="refsect3">
+<a name="HB-DIRECTION-IS-FORWARD.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>dir</p></td>
+<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-common.html#hb-direction-t" title="enum hb_direction_t"><span class="type">hb_direction_t</span></a> to test</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="HB-DIRECTION-IS-HORIZONTAL:CAPS"></a><h3>HB_DIRECTION_IS_HORIZONTAL()</h3>
+<pre class="programlisting">#define HB_DIRECTION_IS_HORIZONTAL(dir) ((((unsigned int) (dir)) &amp; ~1U) == 4)
+</pre>
+<p>Tests whether a text direction is horizontal. Requires
+that the direction be valid.</p>
+<div class="refsect3">
+<a name="HB-DIRECTION-IS-HORIZONTAL.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>dir</p></td>
+<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-common.html#hb-direction-t" title="enum hb_direction_t"><span class="type">hb_direction_t</span></a> to test</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="HB-DIRECTION-IS-VALID:CAPS"></a><h3>HB_DIRECTION_IS_VALID()</h3>
+<pre class="programlisting">#define HB_DIRECTION_IS_VALID(dir) ((((unsigned int) (dir)) &amp; ~3U) == 4)
+</pre>
+<p>Tests whether a text direction is valid.</p>
+<div class="refsect3">
+<a name="HB-DIRECTION-IS-VALID.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>dir</p></td>
+<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-common.html#hb-direction-t" title="enum hb_direction_t"><span class="type">hb_direction_t</span></a> to test</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="HB-DIRECTION-IS-VERTICAL:CAPS"></a><h3>HB_DIRECTION_IS_VERTICAL()</h3>
+<pre class="programlisting">#define HB_DIRECTION_IS_VERTICAL(dir) ((((unsigned int) (dir)) &amp; ~1U) == 6)
+</pre>
+<p>Tests whether a text direction is vertical. Requires
+that the direction be valid.</p>
+<div class="refsect3">
+<a name="HB-DIRECTION-IS-VERTICAL.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>dir</p></td>
+<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-common.html#hb-direction-t" title="enum hb_direction_t"><span class="type">hb_direction_t</span></a> to test</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
 <a name="hb-script-from-iso15924-tag"></a><h3>hb_script_from_iso15924_tag ()</h3>
 <pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-script-t" title="enum hb_script_t"><span class="returnvalue">hb_script_t</span></a>
 hb_script_from_iso15924_tag (<em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="type">hb_tag_t</span></a> tag</code></em>);</pre>
@@ -479,6 +690,33 @@ hb_script_from_iso15924_tag (<em class="parameter"><code><a class="link" href="h
 <div class="refsect3">
 <a name="hb-script-from-iso15924-tag.returns"></a><h4>Returns</h4>
 <p>An <a class="link" href="harfbuzz-hb-common.html#hb-script-t" title="enum hb_script_t"><span class="type">hb_script_t</span></a> corresponding to the ISO 15924 tag.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-0-9-2.html#api-index-0.9.2">0.9.2</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-script-to-iso15924-tag"></a><h3>hb_script_to_iso15924_tag ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="returnvalue">hb_tag_t</span></a>
+hb_script_to_iso15924_tag (<em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-script-t" title="enum hb_script_t"><span class="type">hb_script_t</span></a> script</code></em>);</pre>
+<p>Converts an <a class="link" href="harfbuzz-hb-common.html#hb-script-t" title="enum hb_script_t"><span class="type">hb_script_t</span></a> to a corresponding ISO 15924 script tag.</p>
+<div class="refsect3">
+<a name="hb-script-to-iso15924-tag.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>script</p></td>
+<td class="parameter_description"><p>an <a class="link" href="harfbuzz-hb-common.html#hb-script-t" title="enum hb_script_t"><span class="type">hb_script_t</span></a> to convert.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-script-to-iso15924-tag.returns"></a><h4>Returns</h4>
+<p>An <a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="type">hb_tag_t</span></a> representing an ISO 15924 script tag.</p>
 </div>
 <p class="since">Since: <a class="link" href="api-index-0-9-2.html#api-index-0.9.2">0.9.2</a></p>
 </div>
@@ -519,33 +757,6 @@ ISO 15924 tag. </p></td>
 <div class="refsect3">
 <a name="hb-script-from-string.returns"></a><h4>Returns</h4>
 <p>An <a class="link" href="harfbuzz-hb-common.html#hb-script-t" title="enum hb_script_t"><span class="type">hb_script_t</span></a> corresponding to the ISO 15924 tag.</p>
-</div>
-<p class="since">Since: <a class="link" href="api-index-0-9-2.html#api-index-0.9.2">0.9.2</a></p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="hb-script-to-iso15924-tag"></a><h3>hb_script_to_iso15924_tag ()</h3>
-<pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="returnvalue">hb_tag_t</span></a>
-hb_script_to_iso15924_tag (<em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-script-t" title="enum hb_script_t"><span class="type">hb_script_t</span></a> script</code></em>);</pre>
-<p>Converts an <a class="link" href="harfbuzz-hb-common.html#hb-script-t" title="enum hb_script_t"><span class="type">hb_script_t</span></a> to a corresponding ISO 15924 script tag.</p>
-<div class="refsect3">
-<a name="hb-script-to-iso15924-tag.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody><tr>
-<td class="parameter_name"><p>script</p></td>
-<td class="parameter_description"><p>an <a class="link" href="harfbuzz-hb-common.html#hb-script-t" title="enum hb_script_t"><span class="type">hb_script_t</span></a> to convert.</p></td>
-<td class="parameter_annotations"> </td>
-</tr></tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="hb-script-to-iso15924-tag.returns"></a><h4>Returns</h4>
-<p>An <a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="type">hb_tag_t</span></a> representing an ISO 15924 script tag.</p>
 </div>
 <p class="since">Since: <a class="link" href="api-index-0-9-2.html#api-index-0.9.2">0.9.2</a></p>
 </div>
@@ -1006,7 +1217,7 @@ allocating big enough size for <em class="parameter"><code>buf</code></em>
 <tr>
 <td class="parameter_name"><p>buf</p></td>
 <td class="parameter_description"><p>output string. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=size][<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=size][<acronym title="Out parameter, where caller must allocate storage."><span class="acronym">out caller-allocates</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>size</p></td>
@@ -1041,205 +1252,6 @@ allocating big enough size for <em class="parameter"><code>buf</code></em>
 </table></div>
 </div>
 </div>
-<hr>
-<div class="refsect2">
-<a name="HB-TAG:CAPS"></a><h3>HB_TAG()</h3>
-<pre class="programlisting">#define HB_TAG(c1,c2,c3,c4) ((hb_tag_t)((((uint32_t)(c1)&amp;0xFF)&lt;&lt;24)|(((uint32_t)(c2)&amp;0xFF)&lt;&lt;16)|(((uint32_t)(c3)&amp;0xFF)&lt;&lt;8)|((uint32_t)(c4)&amp;0xFF)))
-</pre>
-<p>Constructs an <a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="type">hb_tag_t</span></a> from four character literals.</p>
-<div class="refsect3">
-<a name="HB-TAG.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>c1</p></td>
-<td class="parameter_description"><p>1st character of the tag</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>c2</p></td>
-<td class="parameter_description"><p>2nd character of the tag</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>c3</p></td>
-<td class="parameter_description"><p>3rd character of the tag</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>c4</p></td>
-<td class="parameter_description"><p>4th character of the tag</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-</div>
-<hr>
-<div class="refsect2">
-<a name="HB-UNTAG:CAPS"></a><h3>HB_UNTAG()</h3>
-<pre class="programlisting">#define HB_UNTAG(tag)   (uint8_t)(((tag)&gt;&gt;24)&amp;0xFF), (uint8_t)(((tag)&gt;&gt;16)&amp;0xFF), (uint8_t)(((tag)&gt;&gt;8)&amp;0xFF), (uint8_t)((tag)&amp;0xFF)
-</pre>
-<p>Extracts four character literals from an <a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="type">hb_tag_t</span></a>.</p>
-<div class="refsect3">
-<a name="HB-UNTAG.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody><tr>
-<td class="parameter_name"><p>tag</p></td>
-<td class="parameter_description"><p>an <a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="type">hb_tag_t</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr></tbody>
-</table></div>
-</div>
-<p class="since">Since: <a class="link" href="api-index-0-6-0.html#api-index-0.6.0">0.6.0</a></p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="HB-DIRECTION-REVERSE:CAPS"></a><h3>HB_DIRECTION_REVERSE()</h3>
-<pre class="programlisting">#define HB_DIRECTION_REVERSE(dir) ((hb_direction_t) (((unsigned int) (dir)) ^ 1))
-</pre>
-<p>Reverses a text direction. Requires that the direction
-be valid.</p>
-<div class="refsect3">
-<a name="HB-DIRECTION-REVERSE.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody><tr>
-<td class="parameter_name"><p>dir</p></td>
-<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-common.html#hb-direction-t" title="enum hb_direction_t"><span class="type">hb_direction_t</span></a> to reverse</p></td>
-<td class="parameter_annotations"> </td>
-</tr></tbody>
-</table></div>
-</div>
-</div>
-<hr>
-<div class="refsect2">
-<a name="HB-DIRECTION-IS-BACKWARD:CAPS"></a><h3>HB_DIRECTION_IS_BACKWARD()</h3>
-<pre class="programlisting">#define HB_DIRECTION_IS_BACKWARD(dir) ((((unsigned int) (dir)) &amp; ~2U) == 5)
-</pre>
-<p>Tests whether a text direction moves backward (from right to left, or from
-bottom to top). Requires that the direction be valid.</p>
-<div class="refsect3">
-<a name="HB-DIRECTION-IS-BACKWARD.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody><tr>
-<td class="parameter_name"><p>dir</p></td>
-<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-common.html#hb-direction-t" title="enum hb_direction_t"><span class="type">hb_direction_t</span></a> to test</p></td>
-<td class="parameter_annotations"> </td>
-</tr></tbody>
-</table></div>
-</div>
-</div>
-<hr>
-<div class="refsect2">
-<a name="HB-DIRECTION-IS-FORWARD:CAPS"></a><h3>HB_DIRECTION_IS_FORWARD()</h3>
-<pre class="programlisting">#define HB_DIRECTION_IS_FORWARD(dir) ((((unsigned int) (dir)) &amp; ~2U) == 4)
-</pre>
-<p>Tests whether a text direction moves forward (from left to right, or from
-top to bottom). Requires that the direction be valid.</p>
-<div class="refsect3">
-<a name="HB-DIRECTION-IS-FORWARD.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody><tr>
-<td class="parameter_name"><p>dir</p></td>
-<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-common.html#hb-direction-t" title="enum hb_direction_t"><span class="type">hb_direction_t</span></a> to test</p></td>
-<td class="parameter_annotations"> </td>
-</tr></tbody>
-</table></div>
-</div>
-</div>
-<hr>
-<div class="refsect2">
-<a name="HB-DIRECTION-IS-HORIZONTAL:CAPS"></a><h3>HB_DIRECTION_IS_HORIZONTAL()</h3>
-<pre class="programlisting">#define HB_DIRECTION_IS_HORIZONTAL(dir) ((((unsigned int) (dir)) &amp; ~1U) == 4)
-</pre>
-<p>Tests whether a text direction is horizontal. Requires
-that the direction be valid.</p>
-<div class="refsect3">
-<a name="HB-DIRECTION-IS-HORIZONTAL.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody><tr>
-<td class="parameter_name"><p>dir</p></td>
-<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-common.html#hb-direction-t" title="enum hb_direction_t"><span class="type">hb_direction_t</span></a> to test</p></td>
-<td class="parameter_annotations"> </td>
-</tr></tbody>
-</table></div>
-</div>
-</div>
-<hr>
-<div class="refsect2">
-<a name="HB-DIRECTION-IS-VALID:CAPS"></a><h3>HB_DIRECTION_IS_VALID()</h3>
-<pre class="programlisting">#define HB_DIRECTION_IS_VALID(dir) ((((unsigned int) (dir)) &amp; ~3U) == 4)
-</pre>
-<p>Tests whether a text direction is valid.</p>
-<div class="refsect3">
-<a name="HB-DIRECTION-IS-VALID.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody><tr>
-<td class="parameter_name"><p>dir</p></td>
-<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-common.html#hb-direction-t" title="enum hb_direction_t"><span class="type">hb_direction_t</span></a> to test</p></td>
-<td class="parameter_annotations"> </td>
-</tr></tbody>
-</table></div>
-</div>
-</div>
-<hr>
-<div class="refsect2">
-<a name="HB-DIRECTION-IS-VERTICAL:CAPS"></a><h3>HB_DIRECTION_IS_VERTICAL()</h3>
-<pre class="programlisting">#define HB_DIRECTION_IS_VERTICAL(dir) ((((unsigned int) (dir)) &amp; ~1U) == 6)
-</pre>
-<p>Tests whether a text direction is vertical. Requires
-that the direction be valid.</p>
-<div class="refsect3">
-<a name="HB-DIRECTION-IS-VERTICAL.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody><tr>
-<td class="parameter_name"><p>dir</p></td>
-<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-common.html#hb-direction-t" title="enum hb_direction_t"><span class="type">hb_direction_t</span></a> to test</p></td>
-<td class="parameter_annotations"> </td>
-</tr></tbody>
-</table></div>
-</div>
-</div>
 </div>
 <div class="refsect1">
 <a name="harfbuzz-hb-common.other_details"></a><h2>Types and Values</h2>
@@ -1262,7 +1274,8 @@ used to hold glyph IDs.</p>
 <a name="hb-direction-t"></a><h3>enum hb_direction_t</h3>
 <p>The direction of a text segment or buffer.</p>
 <p>A segment can also be tested for horizontal or vertical
-orientation (irrespective of specific direction) with 
+orientation (irrespective of specific direction) with
+
 <a class="link" href="harfbuzz-hb-common.html#HB-DIRECTION-IS-HORIZONTAL:CAPS" title="HB_DIRECTION_IS_HORIZONTAL()"><code class="function">HB_DIRECTION_IS_HORIZONTAL()</code></a> or <a class="link" href="harfbuzz-hb-common.html#HB-DIRECTION-IS-VERTICAL:CAPS" title="HB_DIRECTION_IS_VERTICAL()"><code class="function">HB_DIRECTION_IS_VERTICAL()</code></a>.</p>
 <div class="refsect3">
 <a name="hb-direction-t.members"></a><h4>Members</h4>
@@ -2673,9 +2686,30 @@ of the buffer.</p>
 of the buffer.</p>
 <p class="since">Since: <a class="link" href="api-index-2-0-0.html#api-index-2.0.0">2.0.0</a></p>
 </div>
+<hr>
+<div class="refsect2">
+<a name="HB-HAS-FREETYPE:CAPS"></a><h3>HB_HAS_FREETYPE</h3>
+<pre class="programlisting">#define HB_HAS_FREETYPE 1
+</pre>
+<p>Defined if Harfbuzz has been built with Freetype support.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="HB-HAS-GLIB:CAPS"></a><h3>HB_HAS_GLIB</h3>
+<pre class="programlisting">#define HB_HAS_GLIB 1
+</pre>
+<p>Defined if Harfbuzz has been built with GLib support.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="HB-HAS-GRAPHITE:CAPS"></a><h3>HB_HAS_GRAPHITE</h3>
+<pre class="programlisting">#define HB_HAS_GRAPHITE 1
+</pre>
+<p>Defined if Harfbuzz has been built with Graphite support.</p>
+</div>
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.27</div>
+<hr>Generated by GTK-Doc V1.32</div>
 </body>
 </html>

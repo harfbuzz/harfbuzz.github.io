@@ -8,7 +8,7 @@
 <link rel="up" href="core-api.html" title="Core API">
 <link rel="prev" href="harfbuzz-hb-blob.html" title="hb-blob">
 <link rel="next" href="harfbuzz-hb-common.html" title="hb-common">
-<meta name="generator" content="GTK-Doc V1.27 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.32 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -35,8 +35,8 @@
 <a name="harfbuzz-hb-buffer.functions"></a><h2>Functions</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="functions_return">
-<col class="functions_name">
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
 </colgroup>
 <tbody>
 <tr>
@@ -45,6 +45,14 @@
 </td>
 <td class="function_name">
 <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-create" title="hb_buffer_create ()">hb_buffer_create</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-allocation-successful" title="hb_buffer_allocation_successful ()">hb_buffer_allocation_successful</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 <tr>
@@ -60,7 +68,7 @@
 <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="returnvalue">hb_buffer_t</span></a> *
 </td>
 <td class="function_name">
-<a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-reference" title="hb_buffer_reference ()">hb_buffer_reference</a> <span class="c_punctuation">()</span>
+<a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-get-empty" title="hb_buffer_get_empty ()">hb_buffer_get_empty</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 <tr>
@@ -68,7 +76,7 @@
 <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="returnvalue">hb_buffer_t</span></a> *
 </td>
 <td class="function_name">
-<a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-get-empty" title="hb_buffer_get_empty ()">hb_buffer_get_empty</a> <span class="c_punctuation">()</span>
+<a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-reference" title="hb_buffer_reference ()">hb_buffer_reference</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 <tr>
@@ -77,6 +85,22 @@
 </td>
 <td class="function_name">
 <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-destroy" title="hb_buffer_destroy ()">hb_buffer_destroy</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-set-user-data" title="hb_buffer_set_user_data ()">hb_buffer_set_user_data</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span> *
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-get-user-data" title="hb_buffer_get_user_data ()">hb_buffer_get_user_data</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 <tr>
@@ -101,14 +125,6 @@
 </td>
 <td class="function_name">
 <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-pre-allocate" title="hb_buffer_pre_allocate ()">hb_buffer_pre_allocate</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
-</td>
-<td class="function_name">
-<a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-allocation-successful" title="hb_buffer_allocation_successful ()">hb_buffer_allocation_successful</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 <tr>
@@ -320,26 +336,18 @@
 </tr>
 <tr>
 <td class="function_type">
-<a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
-</td>
-<td class="function_name">
-<a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-set-user-data" title="hb_buffer_set_user_data ()">hb_buffer_set_user_data</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<span class="returnvalue">void</span> *
-</td>
-<td class="function_name">
-<a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-get-user-data" title="hb_buffer_get_user_data ()">hb_buffer_get_user_data</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
 <a class="link" href="harfbuzz-hb-buffer.html#hb-glyph-info-t" title="hb_glyph_info_t"><span class="returnvalue">hb_glyph_info_t</span></a> *
 </td>
 <td class="function_name">
 <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-get-glyph-infos" title="hb_buffer_get_glyph_infos ()">hb_buffer_get_glyph_infos</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="harfbuzz-hb-buffer.html#hb-glyph-flags-t" title="enum hb_glyph_flags_t"><span class="returnvalue">hb_glyph_flags_t</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-buffer.html#hb-glyph-info-get-glyph-flags" title="hb_glyph_info_get_glyph_flags ()">hb_glyph_info_get_glyph_flags</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 <tr>
@@ -360,14 +368,6 @@
 </tr>
 <tr>
 <td class="function_type">
-<a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="returnvalue">hb_codepoint_t</span></a>
-</td>
-<td class="function_name">
-<a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-get-invisible-glyph" title="hb_buffer_get_invisible_glyph ()">hb_buffer_get_invisible_glyph</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
 <span class="returnvalue">void</span>
 </td>
 <td class="function_name">
@@ -379,7 +379,7 @@
 <a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="returnvalue">hb_codepoint_t</span></a>
 </td>
 <td class="function_name">
-<a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-get-not-found-glyph" title="hb_buffer_get_not_found_glyph ()">hb_buffer_get_not_found_glyph</a> <span class="c_punctuation">()</span>
+<a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-get-invisible-glyph" title="hb_buffer_get_invisible_glyph ()">hb_buffer_get_invisible_glyph</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 <tr>
@@ -388,6 +388,14 @@
 </td>
 <td class="function_name">
 <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-set-not-found-glyph" title="hb_buffer_set_not_found_glyph ()">hb_buffer_set_not_found_glyph</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="returnvalue">hb_codepoint_t</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-get-not-found-glyph" title="hb_buffer_get_not_found_glyph ()">hb_buffer_get_not_found_glyph</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 <tr>
@@ -530,26 +538,18 @@
 </tr>
 <tr>
 <td class="function_type">
-<span class="returnvalue">void</span>
-</td>
-<td class="function_name">
-<a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-set-message-func" title="hb_buffer_set_message_func ()">hb_buffer_set_message_func</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<a class="link" href="harfbuzz-hb-buffer.html#hb-glyph-flags-t" title="enum hb_glyph_flags_t"><span class="returnvalue">hb_glyph_flags_t</span></a>
-</td>
-<td class="function_name">
-<a class="link" href="harfbuzz-hb-buffer.html#hb-glyph-info-get-glyph-flags" title="hb_glyph_info_get_glyph_flags ()">hb_glyph_info_get_glyph_flags</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
 <a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
 </td>
 <td class="function_name">
 <span class="c_punctuation">(</span><a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-message-func-t" title="hb_buffer_message_func_t ()">*hb_buffer_message_func_t</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-set-message-func" title="hb_buffer_set_message_func ()">hb_buffer_set_message_func</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 </tbody>
@@ -559,8 +559,8 @@
 <a name="harfbuzz-hb-buffer.other"></a><h2>Types and Values</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="name">
-<col class="description">
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
 </colgroup>
 <tbody>
 <tr>
@@ -649,6 +649,34 @@ be allocated, a special <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-
 </div>
 <hr>
 <div class="refsect2">
+<a name="hb-buffer-allocation-successful"></a><h3>hb_buffer_allocation_successful ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+hb_buffer_allocation_successful (<em class="parameter"><code><a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a> *buffer</code></em>);</pre>
+<p>Check if allocating memory for the buffer succeeded.</p>
+<div class="refsect3">
+<a name="hb-buffer-allocation-successful.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>buffer</p></td>
+<td class="parameter_description"><p>An <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-buffer-allocation-successful.returns"></a><h4>Returns</h4>
+<p><code class="literal">true</code> if <em class="parameter"><code>buffer</code></em>
+memory allocation succeeded, <code class="literal">false</code> otherwise.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-0-9-2.html#api-index-0.9.2">0.9.2</a></p>
+</div>
+<hr>
+<div class="refsect2">
 <a name="hb-buffer-create-similar"></a><h3>hb_buffer_create_similar ()</h3>
 <pre class="programlisting"><a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="returnvalue">hb_buffer_t</span></a> *
 hb_buffer_create_similar (<em class="parameter"><code>const <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a> *src</code></em>);</pre>
@@ -676,6 +704,19 @@ difference is that the buffer is configured similarly to <em class="parameter"><
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 <p class="since">Since: <a class="link" href="api-index-3-3-0.html#api-index-3.3.0">3.3.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-buffer-get-empty"></a><h3>hb_buffer_get_empty ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="returnvalue">hb_buffer_t</span></a> *
+hb_buffer_get_empty (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Fetches an empty <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a>.</p>
+<div class="refsect3">
+<a name="hb-buffer-get-empty.returns"></a><h4>Returns</h4>
+<p>The empty buffer. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-0-9-2.html#api-index-0.9.2">0.9.2</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -711,19 +752,6 @@ being destroyed until a matching call to <a class="link" href="harfbuzz-hb-buffe
 </div>
 <hr>
 <div class="refsect2">
-<a name="hb-buffer-get-empty"></a><h3>hb_buffer_get_empty ()</h3>
-<pre class="programlisting"><a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="returnvalue">hb_buffer_t</span></a> *
-hb_buffer_get_empty (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
-<p>Fetches an empty <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a>.</p>
-<div class="refsect3">
-<a name="hb-buffer-get-empty.returns"></a><h4>Returns</h4>
-<p>The empty buffer. </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
-</div>
-<p class="since">Since: <a class="link" href="api-index-0-9-2.html#api-index-0.9.2">0.9.2</a></p>
-</div>
-<hr>
-<div class="refsect2">
 <a name="hb-buffer-destroy"></a><h3>hb_buffer_destroy ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 hb_buffer_destroy (<em class="parameter"><code><a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a> *buffer</code></em>);</pre>
@@ -748,6 +776,99 @@ Decreases the reference count on <em class="parameter"><code>buffer</code></em>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-0-9-2.html#api-index-0.9.2">0.9.2</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-buffer-set-user-data"></a><h3>hb_buffer_set_user_data ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+hb_buffer_set_user_data (<em class="parameter"><code><a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a> *buffer</code></em>,
+                         <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-user-data-key-t" title="hb_user_data_key_t"><span class="type">hb_user_data_key_t</span></a> *key</code></em>,
+                         <em class="parameter"><code><span class="type">void</span> *data</code></em>,
+                         <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-destroy-func-t" title="hb_destroy_func_t ()"><span class="type">hb_destroy_func_t</span></a> destroy</code></em>,
+                         <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="type">hb_bool_t</span></a> replace</code></em>);</pre>
+<p>Attaches a user-data key/data pair to the specified buffer.</p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+<div class="refsect3">
+<a name="hb-buffer-set-user-data.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>buffer</p></td>
+<td class="parameter_description"><p>An <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>The user-data key</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>A pointer to the user data</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>destroy</p></td>
+<td class="parameter_description"><p>A callback to call when <em class="parameter"><code>data</code></em>
+is not needed anymore. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>replace</p></td>
+<td class="parameter_description"><p>Whether to replace an existing data with the same key</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-buffer-set-user-data.returns"></a><h4>Returns</h4>
+<p> <code class="literal">true</code> if success, <code class="literal">false</code> otherwise</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-0-9-2.html#api-index-0.9.2">0.9.2</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-buffer-get-user-data"></a><h3>hb_buffer_get_user_data ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span> *
+hb_buffer_get_user_data (<em class="parameter"><code>const <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a> *buffer</code></em>,
+                         <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-user-data-key-t" title="hb_user_data_key_t"><span class="type">hb_user_data_key_t</span></a> *key</code></em>);</pre>
+<p>Fetches the user data associated with the specified key,
+attached to the specified buffer.</p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+<div class="refsect3">
+<a name="hb-buffer-get-user-data.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>buffer</p></td>
+<td class="parameter_description"><p>An <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>The user-data key to query</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-buffer-get-user-data.returns"></a><h4>Returns</h4>
+<p>A pointer to the user data. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
 <p class="since">Since: <a class="link" href="api-index-0-9-2.html#api-index-0.9.2">0.9.2</a></p>
 </div>
@@ -839,34 +960,6 @@ memory allocation succeeded, <code class="literal">false</code> otherwise</p>
 </div>
 <hr>
 <div class="refsect2">
-<a name="hb-buffer-allocation-successful"></a><h3>hb_buffer_allocation_successful ()</h3>
-<pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
-hb_buffer_allocation_successful (<em class="parameter"><code><a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a> *buffer</code></em>);</pre>
-<p>Check if allocating memory for the buffer succeeded.</p>
-<div class="refsect3">
-<a name="hb-buffer-allocation-successful.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody><tr>
-<td class="parameter_name"><p>buffer</p></td>
-<td class="parameter_description"><p>An <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr></tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="hb-buffer-allocation-successful.returns"></a><h4>Returns</h4>
-<p><code class="literal">true</code> if <em class="parameter"><code>buffer</code></em>
-memory allocation succeeded, <code class="literal">false</code> otherwise.</p>
-</div>
-<p class="since">Since: <a class="link" href="api-index-0-9-2.html#api-index-0.9.2">0.9.2</a></p>
-</div>
-<hr>
-<div class="refsect2">
 <a name="hb-buffer-add"></a><h3>hb_buffer_add ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 hb_buffer_add (<em class="parameter"><code><a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a> *buffer</code></em>,
@@ -940,7 +1033,9 @@ for example, to do cross-run Arabic shaping or properly handle combining
 marks at stat of run.</p>
 <p>This function does not check the validity of <em class="parameter"><code>text</code></em>
 , it is up to the caller
-to ensure it contains a valid Unicode code points.</p>
+to ensure it contains a valid Unicode scalar values.  In contrast,
+<a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-add-utf32" title="hb_buffer_add_utf32 ()"><code class="function">hb_buffer_add_utf32()</code></a> can be used that takes similar input but performs
+sanity-check on the input.</p>
 <div class="refsect3">
 <a name="hb-buffer-add-codepoints.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -1883,99 +1978,6 @@ hb_buffer_get_unicode_funcs (<em class="parameter"><code>const <a class="link" h
 </div>
 <hr>
 <div class="refsect2">
-<a name="hb-buffer-set-user-data"></a><h3>hb_buffer_set_user_data ()</h3>
-<pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
-hb_buffer_set_user_data (<em class="parameter"><code><a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a> *buffer</code></em>,
-                         <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-user-data-key-t" title="hb_user_data_key_t"><span class="type">hb_user_data_key_t</span></a> *key</code></em>,
-                         <em class="parameter"><code><span class="type">void</span> *data</code></em>,
-                         <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-destroy-func-t" title="hb_destroy_func_t ()"><span class="type">hb_destroy_func_t</span></a> destroy</code></em>,
-                         <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="type">hb_bool_t</span></a> replace</code></em>);</pre>
-<p>Attaches a user-data key/data pair to the specified buffer.</p>
-<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
-<div class="refsect3">
-<a name="hb-buffer-set-user-data.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>buffer</p></td>
-<td class="parameter_description"><p>An <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>key</p></td>
-<td class="parameter_description"><p>The user-data key</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>data</p></td>
-<td class="parameter_description"><p>A pointer to the user data</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>destroy</p></td>
-<td class="parameter_description"><p>A callback to call when <em class="parameter"><code>data</code></em>
-is not needed anymore. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
-</tr>
-<tr>
-<td class="parameter_name"><p>replace</p></td>
-<td class="parameter_description"><p>Whether to replace an existing data with the same key</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="hb-buffer-set-user-data.returns"></a><h4>Returns</h4>
-<p> <code class="literal">true</code> if success, <code class="literal">false</code> otherwise</p>
-</div>
-<p class="since">Since: <a class="link" href="api-index-0-9-2.html#api-index-0.9.2">0.9.2</a></p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="hb-buffer-get-user-data"></a><h3>hb_buffer_get_user_data ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span> *
-hb_buffer_get_user_data (<em class="parameter"><code>const <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a> *buffer</code></em>,
-                         <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-user-data-key-t" title="hb_user_data_key_t"><span class="type">hb_user_data_key_t</span></a> *key</code></em>);</pre>
-<p>Fetches the user data associated with the specified key,
-attached to the specified buffer.</p>
-<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
-<div class="refsect3">
-<a name="hb-buffer-get-user-data.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>buffer</p></td>
-<td class="parameter_description"><p>An <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>key</p></td>
-<td class="parameter_description"><p>The user-data key to query</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="hb-buffer-get-user-data.returns"></a><h4>Returns</h4>
-<p>A pointer to the user data. </p>
-<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
-</div>
-<p class="since">Since: <a class="link" href="api-index-0-9-2.html#api-index-0.9.2">0.9.2</a></p>
-</div>
-<hr>
-<div class="refsect2">
 <a name="hb-buffer-get-glyph-infos"></a><h3>hb_buffer_get_glyph_infos ()</h3>
 <pre class="programlisting"><a class="link" href="harfbuzz-hb-buffer.html#hb-glyph-info-t" title="hb_glyph_info_t"><span class="returnvalue">hb_glyph_info_t</span></a> *
 hb_buffer_get_glyph_infos (<em class="parameter"><code><a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a> *buffer</code></em>,
@@ -2014,6 +2016,34 @@ The value valid as long as buffer has not been modified. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=length]</span></p>
 </div>
 <p class="since">Since: <a class="link" href="api-index-0-9-2.html#api-index-0.9.2">0.9.2</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-glyph-info-get-glyph-flags"></a><h3>hb_glyph_info_get_glyph_flags ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-buffer.html#hb-glyph-flags-t" title="enum hb_glyph_flags_t"><span class="returnvalue">hb_glyph_flags_t</span></a>
+hb_glyph_info_get_glyph_flags (<em class="parameter"><code>const <a class="link" href="harfbuzz-hb-buffer.html#hb-glyph-info-t" title="hb_glyph_info_t"><span class="type">hb_glyph_info_t</span></a> *info</code></em>);</pre>
+<p>Returns glyph flags encoded within a <a class="link" href="harfbuzz-hb-buffer.html#hb-glyph-info-t" title="hb_glyph_info_t"><span class="type">hb_glyph_info_t</span></a>.</p>
+<div class="refsect3">
+<a name="hb-glyph-info-get-glyph-flags.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>info</p></td>
+<td class="parameter_description"><p>a <a class="link" href="harfbuzz-hb-buffer.html#hb-glyph-info-t" title="hb_glyph_info_t"><span class="type">hb_glyph_info_t</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-glyph-info-get-glyph-flags.returns"></a><h4>Returns</h4>
+<p>The <a class="link" href="harfbuzz-hb-buffer.html#hb-glyph-flags-t" title="enum hb_glyph_flags_t"><span class="type">hb_glyph_flags_t</span></a> encoded within <em class="parameter"><code>info</code></em>
+</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-5-0.html#api-index-1.5.0">1.5.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2093,34 +2123,6 @@ has position array, <code class="literal">false</code> otherwise.</p>
 </div>
 <hr>
 <div class="refsect2">
-<a name="hb-buffer-get-invisible-glyph"></a><h3>hb_buffer_get_invisible_glyph ()</h3>
-<pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="returnvalue">hb_codepoint_t</span></a>
-hb_buffer_get_invisible_glyph (<em class="parameter"><code>const <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a> *buffer</code></em>);</pre>
-<p>See <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-set-invisible-glyph" title="hb_buffer_set_invisible_glyph ()"><code class="function">hb_buffer_set_invisible_glyph()</code></a>.</p>
-<div class="refsect3">
-<a name="hb-buffer-get-invisible-glyph.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody><tr>
-<td class="parameter_name"><p>buffer</p></td>
-<td class="parameter_description"><p>An <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr></tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="hb-buffer-get-invisible-glyph.returns"></a><h4>Returns</h4>
-<p>The <em class="parameter"><code>buffer</code></em>
-invisible <a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a></p>
-</div>
-<p class="since">Since: <a class="link" href="api-index-2-0-0.html#api-index-2.0.0">2.0.0</a></p>
-</div>
-<hr>
-<div class="refsect2">
 <a name="hb-buffer-set-invisible-glyph"></a><h3>hb_buffer_set_invisible_glyph ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 hb_buffer_set_invisible_glyph (<em class="parameter"><code><a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a> *buffer</code></em>,
@@ -2155,12 +2157,12 @@ verbatim.</p>
 </div>
 <hr>
 <div class="refsect2">
-<a name="hb-buffer-get-not-found-glyph"></a><h3>hb_buffer_get_not_found_glyph ()</h3>
+<a name="hb-buffer-get-invisible-glyph"></a><h3>hb_buffer_get_invisible_glyph ()</h3>
 <pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="returnvalue">hb_codepoint_t</span></a>
-hb_buffer_get_not_found_glyph (<em class="parameter"><code>const <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a> *buffer</code></em>);</pre>
-<p>See <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-set-not-found-glyph" title="hb_buffer_set_not_found_glyph ()"><code class="function">hb_buffer_set_not_found_glyph()</code></a>.</p>
+hb_buffer_get_invisible_glyph (<em class="parameter"><code>const <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a> *buffer</code></em>);</pre>
+<p>See <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-set-invisible-glyph" title="hb_buffer_set_invisible_glyph ()"><code class="function">hb_buffer_set_invisible_glyph()</code></a>.</p>
 <div class="refsect3">
-<a name="hb-buffer-get-not-found-glyph.parameters"></a><h4>Parameters</h4>
+<a name="hb-buffer-get-invisible-glyph.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -2175,11 +2177,11 @@ hb_buffer_get_not_found_glyph (<em class="parameter"><code>const <a class="link"
 </table></div>
 </div>
 <div class="refsect3">
-<a name="hb-buffer-get-not-found-glyph.returns"></a><h4>Returns</h4>
+<a name="hb-buffer-get-invisible-glyph.returns"></a><h4>Returns</h4>
 <p>The <em class="parameter"><code>buffer</code></em>
-not-found <a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a></p>
+invisible <a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a></p>
 </div>
-<p class="since">Since: <a class="link" href="api-index-3-1-0.html#api-index-3.1.0">3.1.0</a></p>
+<p class="since">Since: <a class="link" href="api-index-2-0-0.html#api-index-2.0.0">2.0.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2212,6 +2214,34 @@ the font during shaping.</p>
 </tr>
 </tbody>
 </table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-3-1-0.html#api-index-3.1.0">3.1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-buffer-get-not-found-glyph"></a><h3>hb_buffer_get_not_found_glyph ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="returnvalue">hb_codepoint_t</span></a>
+hb_buffer_get_not_found_glyph (<em class="parameter"><code>const <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a> *buffer</code></em>);</pre>
+<p>See <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-set-not-found-glyph" title="hb_buffer_set_not_found_glyph ()"><code class="function">hb_buffer_set_not_found_glyph()</code></a>.</p>
+<div class="refsect3">
+<a name="hb-buffer-get-not-found-glyph.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>buffer</p></td>
+<td class="parameter_description"><p>An <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-buffer-get-not-found-glyph.returns"></a><h4>Returns</h4>
+<p>The <em class="parameter"><code>buffer</code></em>
+not-found <a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a></p>
 </div>
 <p class="since">Since: <a class="link" href="api-index-3-1-0.html#api-index-3.1.0">3.1.0</a></p>
 </div>
@@ -2498,7 +2528,7 @@ hb_buffer_serialize_glyphs (<em class="parameter"><code><a class="link" href="ha
 useful for showing the contents of the buffer, for example during debugging.
 There are currently two supported serialization formats:</p>
 <div class="refsect3">
-<a name="id-1.3.3.3.7.53.5"></a><h4>text</h4>
+<a name="id-1.3.3.3.7.54.5"></a><h4>text</h4>
 <p>A human-readable, plain text format.
 The serialized glyphs will look something like:</p>
 <p><code class="literal">
@@ -2525,7 +2555,7 @@ The serialized glyphs will look something like:</p>
 </ul></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.3.3.7.53.6"></a><h4>json</h4>
+<a name="id-1.3.3.3.7.54.6"></a><h4>json</h4>
 <p>A machine-readable, structured format.
 The serialized glyphs will look something like:</p>
 <p><code class="literal">
@@ -2699,7 +2729,7 @@ when the buffer contains Unicode codepoints (i.e., before shaping). This is
 useful for showing the contents of the buffer, for example during debugging.
 There are currently two supported serialization formats:</p>
 <div class="refsect3">
-<a name="id-1.3.3.3.7.55.5"></a><h4>text</h4>
+<a name="id-1.3.3.3.7.56.5"></a><h4>text</h4>
 <p>A human-readable, plain text format.
 The serialized codepoints will look something like:</p>
 <p><code class="literal">
@@ -2714,7 +2744,7 @@ will be indicated with a <code class="literal">=</code> then <a class="link" hre
 </ul></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.3.3.7.55.6"></a><h4>json</h4>
+<a name="id-1.3.3.3.7.56.6"></a><h4>json</h4>
 <p>A machine-readable, structured format.
 The serialized codepoints will be a list of objects with the following
 properties:</p>
@@ -3097,79 +3127,6 @@ callers if just comparing two buffers is needed.</p>
 </div>
 <hr>
 <div class="refsect2">
-<a name="hb-buffer-set-message-func"></a><h3>hb_buffer_set_message_func ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>
-hb_buffer_set_message_func (<em class="parameter"><code><a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a> *buffer</code></em>,
-                            <em class="parameter"><code><a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-message-func-t" title="hb_buffer_message_func_t ()"><span class="type">hb_buffer_message_func_t</span></a> func</code></em>,
-                            <em class="parameter"><code><span class="type">void</span> *user_data</code></em>,
-                            <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-destroy-func-t" title="hb_destroy_func_t ()"><span class="type">hb_destroy_func_t</span></a> destroy</code></em>);</pre>
-<p>Sets the implementation function for <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-message-func-t" title="hb_buffer_message_func_t ()"><span class="type">hb_buffer_message_func_t</span></a>.</p>
-<div class="refsect3">
-<a name="hb-buffer-set-message-func.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>buffer</p></td>
-<td class="parameter_description"><p>An <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>func</p></td>
-<td class="parameter_description"><p>Callback function. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym> user_data][<acronym title="This parameter is a 'destroy_data', for callbacks."><span class="acronym">destroy</span></acronym> destroy][<acronym title="The callback is valid until the GDestroyNotify argument is called."><span class="acronym">scope notified</span></acronym>]</span></td>
-</tr>
-<tr>
-<td class="parameter_name"><p>user_data</p></td>
-<td class="parameter_description"><p>Data to pass to <em class="parameter"><code>func</code></em>
-. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
-</tr>
-<tr>
-<td class="parameter_name"><p>destroy</p></td>
-<td class="parameter_description"><p>The function to call when <em class="parameter"><code>user_data</code></em>
-is not needed anymore. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<p class="since">Since: <a class="link" href="api-index-1-1-3.html#api-index-1.1.3">1.1.3</a></p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="hb-glyph-info-get-glyph-flags"></a><h3>hb_glyph_info_get_glyph_flags ()</h3>
-<pre class="programlisting"><a class="link" href="harfbuzz-hb-buffer.html#hb-glyph-flags-t" title="enum hb_glyph_flags_t"><span class="returnvalue">hb_glyph_flags_t</span></a>
-hb_glyph_info_get_glyph_flags (<em class="parameter"><code>const <a class="link" href="harfbuzz-hb-buffer.html#hb-glyph-info-t" title="hb_glyph_info_t"><span class="type">hb_glyph_info_t</span></a> *info</code></em>);</pre>
-<p>Returns glyph flags encoded within a <a class="link" href="harfbuzz-hb-buffer.html#hb-glyph-info-t" title="hb_glyph_info_t"><span class="type">hb_glyph_info_t</span></a>.</p>
-<div class="refsect3">
-<a name="hb-glyph-info-get-glyph-flags.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody><tr>
-<td class="parameter_name"><p>info</p></td>
-<td class="parameter_description"><p>a <a class="link" href="harfbuzz-hb-buffer.html#hb-glyph-info-t" title="hb_glyph_info_t"><span class="type">hb_glyph_info_t</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr></tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="hb-glyph-info-get-glyph-flags.returns"></a><h4>Returns</h4>
-<p>The <a class="link" href="harfbuzz-hb-buffer.html#hb-glyph-flags-t" title="enum hb_glyph_flags_t"><span class="type">hb_glyph_flags_t</span></a> encoded within <em class="parameter"><code>info</code></em>
-</p>
-</div>
-<p class="since">Since: <a class="link" href="api-index-1-5-0.html#api-index-1.5.0">1.5.0</a></p>
-</div>
-<hr>
-<div class="refsect2">
 <a name="hb-buffer-message-func-t"></a><h3>hb_buffer_message_func_t ()</h3>
 <pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
 <span class="c_punctuation">(</span>*hb_buffer_message_func_t<span class="c_punctuation">)</span> (<em class="parameter"><code><a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a> *buffer</code></em>,
@@ -3217,6 +3174,51 @@ is shaped with</p></td>
 <div class="refsect3">
 <a name="hb-buffer-message-func-t.returns"></a><h4>Returns</h4>
 <p> <code class="literal">true</code> to perform the shaping step, <code class="literal">false</code> to skip it.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-1-1-3.html#api-index-1.1.3">1.1.3</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-buffer-set-message-func"></a><h3>hb_buffer_set_message_func ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_buffer_set_message_func (<em class="parameter"><code><a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a> *buffer</code></em>,
+                            <em class="parameter"><code><a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-message-func-t" title="hb_buffer_message_func_t ()"><span class="type">hb_buffer_message_func_t</span></a> func</code></em>,
+                            <em class="parameter"><code><span class="type">void</span> *user_data</code></em>,
+                            <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-destroy-func-t" title="hb_destroy_func_t ()"><span class="type">hb_destroy_func_t</span></a> destroy</code></em>);</pre>
+<p>Sets the implementation function for <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-message-func-t" title="hb_buffer_message_func_t ()"><span class="type">hb_buffer_message_func_t</span></a>.</p>
+<div class="refsect3">
+<a name="hb-buffer-set-message-func.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>buffer</p></td>
+<td class="parameter_description"><p>An <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>func</p></td>
+<td class="parameter_description"><p>Callback function. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym> user_data][<acronym title="This parameter is a 'destroy_data', for callbacks."><span class="acronym">destroy</span></acronym> destroy][<acronym title="The callback is valid until the GDestroyNotify argument is called."><span class="acronym">scope notified</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>Data to pass to <em class="parameter"><code>func</code></em>
+. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>destroy</p></td>
+<td class="parameter_description"><p>The function to call when <em class="parameter"><code>user_data</code></em>
+is not needed anymore. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
 </div>
 <p class="since">Since: <a class="link" href="api-index-1-1-3.html#api-index-1.1.3">1.1.3</a></p>
 </div>
@@ -3524,9 +3526,9 @@ should not affect how much the line advances.</p></td>
 <td class="enum_member_name"><p><a name="HB-BUFFER-FLAG-BOT:CAPS"></a>HB_BUFFER_FLAG_BOT</p></td>
 <td class="enum_member_description">
 <p>flag indicating that special handling of the beginning
-                     of text paragraph can be applied to this buffer. Should usually
-                     be set, unless you are passing to the buffer only part
-                     of the text without the full context.</p>
+of text paragraph can be applied to this buffer. Should usually
+be set, unless you are passing to the buffer only part
+of the text without the full context.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -3534,8 +3536,8 @@ should not affect how much the line advances.</p></td>
 <td class="enum_member_name"><p><a name="HB-BUFFER-FLAG-EOT:CAPS"></a>HB_BUFFER_FLAG_EOT</p></td>
 <td class="enum_member_description">
 <p>flag indicating that special handling of the end of text
-                     paragraph can be applied to this buffer, similar to
-                     <em class="parameter"><code>HB_BUFFER_FLAG_BOT</code></em>
+paragraph can be applied to this buffer, similar to
+<em class="parameter"><code>HB_BUFFER_FLAG_BOT</code></em>
 .</p>
 </td>
 <td class="enum_member_annotations"> </td>
@@ -3543,12 +3545,12 @@ should not affect how much the line advances.</p></td>
 <tr>
 <td class="enum_member_name"><p><a name="HB-BUFFER-FLAG-PRESERVE-DEFAULT-IGNORABLES:CAPS"></a>HB_BUFFER_FLAG_PRESERVE_DEFAULT_IGNORABLES</p></td>
 <td class="enum_member_description">
-<p>                     flag indication that character with Default_Ignorable
-                     Unicode property should use the corresponding glyph
-                     from the font, instead of hiding them (done by
-                     replacing them with the space glyph and zeroing the
-                     advance width.)  This flag takes precedence over
-                     <em class="parameter"><code>HB_BUFFER_FLAG_REMOVE_DEFAULT_IGNORABLES</code></em>
+<p>flag indication that character with Default_Ignorable
+Unicode property should use the corresponding glyph
+from the font, instead of hiding them (done by
+replacing them with the space glyph and zeroing the
+advance width.)  This flag takes precedence over
+<em class="parameter"><code>HB_BUFFER_FLAG_REMOVE_DEFAULT_IGNORABLES</code></em>
 .</p>
 </td>
 <td class="enum_member_annotations"> </td>
@@ -3556,55 +3558,55 @@ should not affect how much the line advances.</p></td>
 <tr>
 <td class="enum_member_name"><p><a name="HB-BUFFER-FLAG-REMOVE-DEFAULT-IGNORABLES:CAPS"></a>HB_BUFFER_FLAG_REMOVE_DEFAULT_IGNORABLES</p></td>
 <td class="enum_member_description">
-<p>                     flag indication that character with Default_Ignorable
-                     Unicode property should be removed from glyph string
-                     instead of hiding them (done by replacing them with the
-                     space glyph and zeroing the advance width.)
-                     <em class="parameter"><code>HB_BUFFER_FLAG_PRESERVE_DEFAULT_IGNORABLES</code></em>
+<p>flag indication that character with Default_Ignorable
+Unicode property should be removed from glyph string
+instead of hiding them (done by replacing them with the
+space glyph and zeroing the advance width.)
+<em class="parameter"><code>HB_BUFFER_FLAG_PRESERVE_DEFAULT_IGNORABLES</code></em>
  takes
-                     precedence over this flag. Since: 1.8.0</p>
+precedence over this flag. Since: 1.8.0</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="HB-BUFFER-FLAG-DO-NOT-INSERT-DOTTED-CIRCLE:CAPS"></a>HB_BUFFER_FLAG_DO_NOT_INSERT_DOTTED_CIRCLE</p></td>
 <td class="enum_member_description">
-<p>                     flag indicating that a dotted circle should
-                     not be inserted in the rendering of incorrect
-                     character sequences (such at &lt;0905 093E&gt;). Since: 2.4.0</p>
+<p>flag indicating that a dotted circle should
+not be inserted in the rendering of incorrect
+character sequences (such at &lt;0905 093E&gt;). Since: 2.4.0</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="HB-BUFFER-FLAG-VERIFY:CAPS"></a>HB_BUFFER_FLAG_VERIFY</p></td>
 <td class="enum_member_description">
-<p>                     flag indicating that the <a class="link" href="harfbuzz-hb-shape.html#hb-shape" title="hb_shape ()"><code class="function">hb_shape()</code></a> call and its variants
-                     should perform various verification processes on the results
-                     of the shaping operation on the buffer.  If the verification
-                     fails, then either a buffer message is sent, if a message
-                     handler is installed on the buffer, or a message is written
-                     to standard error.  In either case, the shaping result might
-                     be modified to show the failed output. Since: 3.4.0</p>
+<p>flag indicating that the <a class="link" href="harfbuzz-hb-shape.html#hb-shape" title="hb_shape ()"><code class="function">hb_shape()</code></a> call and its variants
+should perform various verification processes on the results
+of the shaping operation on the buffer.  If the verification
+fails, then either a buffer message is sent, if a message
+handler is installed on the buffer, or a message is written
+to standard error.  In either case, the shaping result might
+be modified to show the failed output. Since: 3.4.0</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="HB-BUFFER-FLAG-PRODUCE-UNSAFE-TO-CONCAT:CAPS"></a>HB_BUFFER_FLAG_PRODUCE_UNSAFE_TO_CONCAT</p></td>
 <td class="enum_member_description">
-<p>                     flag indicating that the <em class="parameter"><code>HB_GLYPH_FLAG_UNSAFE_TO_CONCAT</code></em>
+<p>flag indicating that the <em class="parameter"><code>HB_GLYPH_FLAG_UNSAFE_TO_CONCAT</code></em>
 
-                     glyph-flag should be produced by the shaper. By default
-                     it will not be produced since it incurs a cost. Since: 4.0.0</p>
+glyph-flag should be produced by the shaper. By default
+it will not be produced since it incurs a cost. Since: 4.0.0</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="HB-BUFFER-FLAG-PRODUCE-SAFE-TO-INSERT-TATWEEL:CAPS"></a>HB_BUFFER_FLAG_PRODUCE_SAFE_TO_INSERT_TATWEEL</p></td>
 <td class="enum_member_description">
-<p>                     flag indicating that the <em class="parameter"><code>HB_GLYPH_FLAG_SAFE_TO_INSERT_TATWEEL</code></em>
+<p>flag indicating that the <em class="parameter"><code>HB_GLYPH_FLAG_SAFE_TO_INSERT_TATWEEL</code></em>
 
-                     glyph-flag should be produced by the shaper. By default
-                     it will not be produced. Since: 5.1.0</p>
+glyph-flag should be produced by the shaper. By default
+it will not be produced. Since: 5.1.0</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -3624,7 +3626,8 @@ should not affect how much the line advances.</p></td>
 <div class="refsect2">
 <a name="hb-buffer-cluster-level-t"></a><h3>enum hb_buffer_cluster_level_t</h3>
 <p>Data type for holding HarfBuzz's clustering behavior options. The cluster level
-dictates one aspect of how HarfBuzz will treat non-base characters 
+dictates one aspect of how HarfBuzz will treat non-base characters
+
 during shaping.</p>
 <p>In <em class="parameter"><code>HB_BUFFER_CLUSTER_LEVEL_MONOTONE_GRAPHEMES</code></em>
 , non-base
@@ -3653,7 +3656,7 @@ do not need to maintain such backward compatibility are recommended to use
 <td class="enum_member_name"><p><a name="HB-BUFFER-CLUSTER-LEVEL-MONOTONE-GRAPHEMES:CAPS"></a>HB_BUFFER_CLUSTER_LEVEL_MONOTONE_GRAPHEMES</p></td>
 <td class="enum_member_description">
 <p>Return cluster values grouped by graphemes into
-  monotone order.</p>
+monotone order.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -3675,7 +3678,7 @@ do not need to maintain such backward compatibility are recommended to use
 <td class="enum_member_name"><p><a name="HB-BUFFER-CLUSTER-LEVEL-DEFAULT:CAPS"></a>HB_BUFFER_CLUSTER_LEVEL_DEFAULT</p></td>
 <td class="enum_member_description">
 <p>Default cluster level,
-  equal to <em class="parameter"><code>HB_BUFFER_CLUSTER_LEVEL_MONOTONE_GRAPHEMES</code></em>
+equal to <em class="parameter"><code>HB_BUFFER_CLUSTER_LEVEL_MONOTONE_GRAPHEMES</code></em>
 .</p>
 </td>
 <td class="enum_member_annotations"> </td>
@@ -3824,7 +3827,7 @@ set and retrieved using <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-
 <td class="enum_member_name"><p><a name="HB-BUFFER-SERIALIZE-FLAG-NO-ADVANCES:CAPS"></a>HB_BUFFER_SERIALIZE_FLAG_NO_ADVANCES</p></td>
 <td class="enum_member_description">
 <p>do not serialize glyph advances,
- glyph offsets will reflect absolute glyph positions. Since: 1.8.0</p>
+glyph offsets will reflect absolute glyph positions. Since: 1.8.0</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -3871,7 +3874,7 @@ report which aspect(s) of the glyph info/position are different.</p>
 <td class="enum_member_name"><p><a name="HB-BUFFER-DIFF-FLAG-CONTENT-TYPE-MISMATCH:CAPS"></a>HB_BUFFER_DIFF_FLAG_CONTENT_TYPE_MISMATCH</p></td>
 <td class="enum_member_description">
 <p>buffers with different
-    <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-content-type-t" title="enum hb_buffer_content_type_t"><span class="type">hb_buffer_content_type_t</span></a>.</p>
+<a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-content-type-t" title="enum hb_buffer_content_type_t"><span class="type">hb_buffer_content_type_t</span></a>.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -3886,7 +3889,7 @@ report which aspect(s) of the glyph info/position are different.</p>
 <td class="enum_member_name"><p><a name="HB-BUFFER-DIFF-FLAG-NOTDEF-PRESENT:CAPS"></a>HB_BUFFER_DIFF_FLAG_NOTDEF_PRESENT</p></td>
 <td class="enum_member_description">
 <p><code class="literal">.notdef</code> glyph is present in the
-    reference buffer.</p>
+reference buffer.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -3894,7 +3897,7 @@ report which aspect(s) of the glyph info/position are different.</p>
 <td class="enum_member_name"><p><a name="HB-BUFFER-DIFF-FLAG-DOTTED-CIRCLE-PRESENT:CAPS"></a>HB_BUFFER_DIFF_FLAG_DOTTED_CIRCLE_PRESENT</p></td>
 <td class="enum_member_description">
 <p>dotted circle glyph is present
-    in the reference buffer.</p>
+in the reference buffer.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -3934,6 +3937,6 @@ report which aspect(s) of the glyph info/position are different.</p>
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.27</div>
+<hr>Generated by GTK-Doc V1.32</div>
 </body>
 </html>
