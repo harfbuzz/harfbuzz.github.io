@@ -289,6 +289,22 @@
 </tr>
 <tr>
 <td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-font.html#hb-font-draw-glyph" title="hb_font_draw_glyph ()">hb_font_draw_glyph</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-font.html#hb-font-paint-glyph" title="hb_font_paint_glyph ()">hb_font_paint_glyph</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
 <a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
 </td>
 <td class="function_name">
@@ -379,6 +395,22 @@
 <span class="returnvalue">void</span>
 </td>
 <td class="function_name">
+<a class="link" href="harfbuzz-hb-font.html#hb-font-get-synthetic-bold" title="hb_font_get_synthetic_bold ()">hb_font_get_synthetic_bold</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-font.html#hb-font-set-synthetic-bold" title="hb_font_set_synthetic_bold ()">hb_font_set_synthetic_bold</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
 <a class="link" href="harfbuzz-hb-font.html#hb-font-set-synthetic-slant" title="hb_font_set_synthetic_slant ()">hb_font_set_synthetic_slant</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
@@ -404,6 +436,13 @@
 </td>
 <td class="function_name">
 <a class="link" href="harfbuzz-hb-font.html#hb-font-set-var-named-instance" title="hb_font_set_var_named_instance ()">hb_font_set_var_named_instance</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">unsigned <span class="returnvalue">int</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-font.html#hb-font-get-var-named-instance" title="hb_font_get_var_named_instance ()">hb_font_get_var_named_instance</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 <tr>
@@ -725,6 +764,38 @@
 </tr>
 <tr>
 <td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<span class="c_punctuation">(</span><a class="link" href="harfbuzz-hb-font.html#hb-font-draw-glyph-func-t" title="hb_font_draw_glyph_func_t ()">*hb_font_draw_glyph_func_t</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-font.html#hb-font-funcs-set-draw-glyph-func" title="hb_font_funcs_set_draw_glyph_func ()">hb_font_funcs_set_draw_glyph_func</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<span class="c_punctuation">(</span><a class="link" href="harfbuzz-hb-font.html#hb-font-paint-glyph-func-t" title="hb_font_paint_glyph_func_t ()">*hb_font_paint_glyph_func_t</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-font.html#hb-font-funcs-set-paint-glyph-func" title="hb_font_funcs_set_paint_glyph_func ()">hb_font_funcs_set_paint_glyph_func</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
 <a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
 </td>
 <td class="function_name">
@@ -837,6 +908,10 @@
 <col class="other_proto_name">
 </colgroup>
 <tbody>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="harfbuzz-hb-font.html#HB-FONT-NO-VAR-NAMED-INSTANCE:CAPS" title="HB_FONT_NO_VAR_NAMED_INSTANCE">HB_FONT_NO_VAR_NAMED_INSTANCE</a></td>
+</tr>
 <tr>
 <td class="typedef_keyword">typedef</td>
 <td class="function_name"><a class="link" href="harfbuzz-hb-font.html#hb-font-get-glyph-h-advance-func-t" title="hb_font_get_glyph_h_advance_func_t">hb_font_get_glyph_h_advance_func_t</a></td>
@@ -2191,6 +2266,8 @@ hb_font_get_glyph_name (<em class="parameter"><code><a class="link" href="harfbu
                         <em class="parameter"><code>unsigned <span class="type">int</span> size</code></em>);</pre>
 <p>Fetches the glyph-name string for a glyph ID in the specified <em class="parameter"><code>font</code></em>
 .</p>
+<p>According to the OpenType specification, glyph names are limited to 63
+characters and can only contain (a subset of) ASCII.</p>
 <div class="refsect3">
 <a name="hb-font-get-glyph-name.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -2237,6 +2314,10 @@ hb_font_get_glyph_shape (<em class="parameter"><code><a class="link" href="harfb
                          <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> glyph</code></em>,
                          <em class="parameter"><code><a class="link" href="harfbuzz-hb-draw.html#hb-draw-funcs-t" title="hb_draw_funcs_t"><span class="type">hb_draw_funcs_t</span></a> *dfuncs</code></em>,
                          <em class="parameter"><code><span class="type">void</span> *draw_data</code></em>);</pre>
+<div class="warning">
+<p><code class="literal">hb_font_get_glyph_shape</code> has been deprecated since version 7.0.0 and should not be used in newly-written code.</p>
+<p>Use <a class="link" href="harfbuzz-hb-font.html#hb-font-draw-glyph" title="hb_font_draw_glyph ()"><code class="function">hb_font_draw_glyph()</code></a> instead</p>
+</div>
 <p>Fetches the glyph shape that corresponds to a glyph in the specified <em class="parameter"><code>font</code></em>
 .
 The shape is returned by way of calls to the callbacks of the <em class="parameter"><code>dfuncs</code></em>
@@ -2276,6 +2357,118 @@ objects, with <em class="parameter"><code>draw_data</code></em>
 </table></div>
 </div>
 <p class="since">Since: <a class="link" href="api-index-4-0-0.html#api-index-4.0.0">4.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-font-draw-glyph"></a><h3>hb_font_draw_glyph ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_font_draw_glyph (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> *font</code></em>,
+                    <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> glyph</code></em>,
+                    <em class="parameter"><code><a class="link" href="harfbuzz-hb-draw.html#hb-draw-funcs-t" title="hb_draw_funcs_t"><span class="type">hb_draw_funcs_t</span></a> *dfuncs</code></em>,
+                    <em class="parameter"><code><span class="type">void</span> *draw_data</code></em>);</pre>
+<p>Draws the outline that corresponds to a glyph in the specified <em class="parameter"><code>font</code></em>
+.</p>
+<p>The outline is returned by way of calls to the callbacks of the <em class="parameter"><code>dfuncs</code></em>
+
+objects, with <em class="parameter"><code>draw_data</code></em>
+ passed to them.</p>
+<div class="refsect3">
+<a name="hb-font-draw-glyph.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>font</p></td>
+<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> to work upon</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>glyph</p></td>
+<td class="parameter_description"><p>: The glyph ID</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>dfuncs</p></td>
+<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-draw.html#hb-draw-funcs-t" title="hb_draw_funcs_t"><span class="type">hb_draw_funcs_t</span></a> to draw to</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>draw_data</p></td>
+<td class="parameter_description"><p>User data to pass to draw callbacks</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-7-0-0.html#api-index-7.0.0">7.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-font-paint-glyph"></a><h3>hb_font_paint_glyph ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_font_paint_glyph (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> *font</code></em>,
+                     <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> glyph</code></em>,
+                     <em class="parameter"><code><a class="link" href="harfbuzz-hb-paint.html#hb-paint-funcs-t" title="hb_paint_funcs_t"><span class="type">hb_paint_funcs_t</span></a> *pfuncs</code></em>,
+                     <em class="parameter"><code><span class="type">void</span> *paint_data</code></em>,
+                     <em class="parameter"><code>unsigned <span class="type">int</span> palette_index</code></em>,
+                     <em class="parameter"><code><a class="link" href="harfbuzz-hb-ot-color.html#hb-color-t" title="hb_color_t"><span class="type">hb_color_t</span></a> foreground</code></em>);</pre>
+<p>Paints the glyph.</p>
+<p>The painting instructions are returned by way of calls to
+the callbacks of the <em class="parameter"><code>funcs</code></em>
+ object, with <em class="parameter"><code>paint_data</code></em>
+ passed
+to them.</p>
+<p>If the font has color palettes (see <a class="link" href="harfbuzz-hb-ot-color.html#hb-ot-color-has-palettes" title="hb_ot_color_has_palettes ()"><code class="function">hb_ot_color_has_palettes()</code></a>),
+then <em class="parameter"><code>palette_index</code></em>
+ selects the palette to use. If the font only
+has one palette, this will be 0.</p>
+<div class="refsect3">
+<a name="hb-font-paint-glyph.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>font</p></td>
+<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> to work upon</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>glyph</p></td>
+<td class="parameter_description"><p>The glyph ID</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pfuncs</p></td>
+<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-paint.html#hb-paint-funcs-t" title="hb_paint_funcs_t"><span class="type">hb_paint_funcs_t</span></a> to paint with</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>paint_data</p></td>
+<td class="parameter_description"><p>User data to pass to paint callbacks</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>palette_index</p></td>
+<td class="parameter_description"><p>The index of the font's color palette to use</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>foreground</p></td>
+<td class="parameter_description"><p>The foreground color, unpremultipled</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-7-0-0.html#api-index-7.0.0">7.0.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -2333,7 +2526,8 @@ hb_font_get_nominal_glyphs (<em class="parameter"><code><a class="link" href="ha
                             <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> *first_glyph</code></em>,
                             <em class="parameter"><code>unsigned <span class="type">int</span> glyph_stride</code></em>);</pre>
 <p>Fetches the nominal glyph IDs for a sequence of Unicode code points. Glyph
-IDs must be returned in a <a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> output parameter.</p>
+IDs must be returned in a <a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> output parameter. Stopes at the
+first unsupported glyph ID.</p>
 <div class="refsect3">
 <a name="hb-font-get-nominal-glyphs.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -2499,7 +2693,10 @@ hb_font_get_parent (<em class="parameter"><code><a class="link" href="harfbuzz-h
 hb_font_set_ppem (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> *font</code></em>,
                   <em class="parameter"><code>unsigned <span class="type">int</span> x_ppem</code></em>,
                   <em class="parameter"><code>unsigned <span class="type">int</span> y_ppem</code></em>);</pre>
-<p>Sets the horizontal and vertical pixels-per-em (ppem) of a font.</p>
+<p>Sets the horizontal and vertical pixels-per-em (PPEM) of a font.</p>
+<p>These values are used for pixel-size-specific adjustment to
+shaping and draw results, though for the most part they are
+unused and can be left unset.</p>
 <div class="refsect3">
 <a name="hb-font-set-ppem.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -2635,6 +2832,26 @@ hb_font_set_scale (<em class="parameter"><code><a class="link" href="harfbuzz-hb
                    <em class="parameter"><code><span class="type">int</span> x_scale</code></em>,
                    <em class="parameter"><code><span class="type">int</span> y_scale</code></em>);</pre>
 <p>Sets the horizontal and vertical scale of a font.</p>
+<p>The font scale is a number related to, but not the same as,
+font size. Typically the client establishes a scale factor
+to be used between the two. For example, 64, or 256, which
+would be the fractional-precision part of the font scale.
+This is necessary because <a class="link" href="harfbuzz-hb-common.html#hb-position-t" title="hb_position_t"><span class="type">hb_position_t</span></a> values are integer
+types and you need to leave room for fractional values
+in there.</p>
+<p>For example, to set the font size to 20, with 64
+levels of fractional precision you would call
+<code class="literal">hb_font_set_scale(font, 20 * 64, 20 * 64)</code>.</p>
+<p>In the example above, even what font size 20 means is up to
+you. It might be 20 pixels, or 20 points, or 20 millimeters.
+HarfBuzz does not care about that.  You can set the point
+size of the font using <a class="link" href="harfbuzz-hb-font.html#hb-font-set-ptem" title="hb_font_set_ptem ()"><code class="function">hb_font_set_ptem()</code></a>, and the pixel
+size using <a class="link" href="harfbuzz-hb-font.html#hb-font-set-ppem" title="hb_font_set_ppem ()"><code class="function">hb_font_set_ppem()</code></a>.</p>
+<p>The choice of scale is yours but needs to be consistent between
+what you set here, and what you expect out of <a class="link" href="harfbuzz-hb-common.html#hb-position-t" title="hb_position_t"><span class="type">hb_position_t</span></a>
+as well has draw / paint API output values.</p>
+<p>Fonts default to a scale equal to the UPEM value of their face.
+A font with this setting is sometimes called an "unscaled" font.</p>
 <div class="refsect3">
 <a name="hb-font-set-scale.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -2703,6 +2920,105 @@ hb_font_get_scale (<em class="parameter"><code><a class="link" href="harfbuzz-hb
 </div>
 <hr>
 <div class="refsect2">
+<a name="hb-font-get-synthetic-bold"></a><h3>hb_font_get_synthetic_bold ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_font_get_synthetic_bold (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> *font</code></em>,
+                            <em class="parameter"><code><span class="type">float</span> *x_embolden</code></em>,
+                            <em class="parameter"><code><span class="type">float</span> *y_embolden</code></em>,
+                            <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="type">hb_bool_t</span></a> *in_place</code></em>);</pre>
+<p>Fetches the "synthetic boldness" parameters of a font.</p>
+<div class="refsect3">
+<a name="hb-font-get-synthetic-bold.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>font</p></td>
+<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> to work upon</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>x_embolden</p></td>
+<td class="parameter_description"><p>return location for horizontal value. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>y_embolden</p></td>
+<td class="parameter_description"><p>return location for vertical value. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>in_place</p></td>
+<td class="parameter_description"><p>return location for in-place value. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-7-0-0.html#api-index-7.0.0">7.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-font-set-synthetic-bold"></a><h3>hb_font_set_synthetic_bold ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_font_set_synthetic_bold (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> *font</code></em>,
+                            <em class="parameter"><code><span class="type">float</span> x_embolden</code></em>,
+                            <em class="parameter"><code><span class="type">float</span> y_embolden</code></em>,
+                            <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="type">hb_bool_t</span></a> in_place</code></em>);</pre>
+<p>Sets the "synthetic boldness" of a font.</p>
+<p>Positive values for <em class="parameter"><code>x_embolden</code></em>
+ / <em class="parameter"><code>y_embolden</code></em>
+ make a font
+bolder, negative values thinner. Typical values are in the
+0.01 to 0.05 range. The default value is zero.</p>
+<p>Synthetic boldness is applied by offsetting the contour
+points of the glyph shape.</p>
+<p>Synthetic boldness is applied when rendering a glyph via
+<a class="link" href="harfbuzz-hb-font.html#hb-font-draw-glyph" title="hb_font_draw_glyph ()"><code class="function">hb_font_draw_glyph()</code></a>.</p>
+<p>If <em class="parameter"><code>in_place</code></em>
+ is <code class="literal">false</code>, then glyph advance-widths are also
+adjusted, otherwise they are not.  The in-place mode is
+useful for simulating <a class="ulink" href="https://fonts.google.com/knowledge/glossary/grade" target="_top">font grading</a>.</p>
+<div class="refsect3">
+<a name="hb-font-set-synthetic-bold.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>font</p></td>
+<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> to work upon</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>x_embolden</p></td>
+<td class="parameter_description"><p>the amount to embolden horizontally</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>y_embolden</p></td>
+<td class="parameter_description"><p>the amount to embolden vertically</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>in_place</p></td>
+<td class="parameter_description"><p>whether to embolden glyphs in-place</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-7-0-0.html#api-index-7.0.0">7.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
 <a name="hb-font-set-synthetic-slant"></a><h3>hb_font_set_synthetic_slant ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 hb_font_set_synthetic_slant (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> *font</code></em>,
@@ -2712,9 +3028,8 @@ Synthetic slant is the graphical skew applied to the font
 at rendering time.</p>
 <p>HarfBuzz needs to know this value to adjust shaping results,
 metrics, and style values to match the slanted rendering.</p>
-<div class="note">Note: The glyph shape fetched via the
-<a class="link" href="harfbuzz-hb-font.html#hb-font-get-glyph-shape" title="hb_font_get_glyph_shape ()"><code class="function">hb_font_get_glyph_shape()</code></a> is slanted to reflect this value
-as well.</div>
+<div class="note">Note: The glyph shape fetched via the <a class="link" href="harfbuzz-hb-font.html#hb-font-draw-glyph" title="hb_font_draw_glyph ()"><code class="function">hb_font_draw_glyph()</code></a>
+function is slanted to reflect this value as well.</div>
 <div class="note">Note: The slant value is a ratio.  For example, a
 20% slant would be represented as a 0.2 value.</div>
 <div class="refsect3">
@@ -2815,8 +3130,8 @@ default values.</p>
 <a name="hb-font-set-var-named-instance"></a><h3>hb_font_set_var_named_instance ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 hb_font_set_var_named_instance (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> *font</code></em>,
-                                <em class="parameter"><code><span class="type">unsigned </span> instance_index</code></em>);</pre>
-<p>Sets design coords of a font from a named instance index.</p>
+                                <em class="parameter"><code>unsigned <span class="type">int</span> instance_index</code></em>);</pre>
+<p>Sets design coords of a font from a named-instance index.</p>
 <div class="refsect3">
 <a name="hb-font-set-var-named-instance.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -2840,6 +3155,33 @@ hb_font_set_var_named_instance (<em class="parameter"><code><a class="link" href
 </table></div>
 </div>
 <p class="since">Since: <a class="link" href="api-index-2-6-0.html#api-index-2.6.0">2.6.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-font-get-var-named-instance"></a><h3>hb_font_get_var_named_instance ()</h3>
+<pre class="programlisting">unsigned <span class="returnvalue">int</span>
+hb_font_get_var_named_instance (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> *font</code></em>);</pre>
+<p>Returns the currently-set named-instance index of the font.</p>
+<div class="refsect3">
+<a name="hb-font-get-var-named-instance.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>font</p></td>
+<td class="parameter_description"><p>a font.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-font-get-var-named-instance.returns"></a><h4>Returns</h4>
+<p> Named-instance index or <a class="link" href="harfbuzz-hb-font.html#HB-FONT-NO-VAR-NAMED-INSTANCE:CAPS" title="HB_FONT_NO_VAR_NAMED_INSTANCE"><code class="literal">HB_FONT_NO_VAR_NAMED_INSTANCE</code></a>.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-7-0-0.html#api-index-7.0.0">7.0.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -3075,6 +3417,8 @@ it in string <em class="parameter"><code>s</code></em>
 <p>If the glyph ID has no name in <em class="parameter"><code>font</code></em>
 , a string of the form <code class="literal">gidDDD</code> is
 generated, with <code class="literal">DDD</code> being the glyph ID.</p>
+<p>According to the OpenType specification, glyph names are limited to 63
+characters and can only contain (a subset of) ASCII.</p>
 <div class="refsect3">
 <a name="hb-font-glyph-to-string.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -4523,6 +4867,10 @@ is not needed anymore. </p></td>
                                    <em class="parameter"><code><a class="link" href="harfbuzz-hb-draw.html#hb-draw-funcs-t" title="hb_draw_funcs_t"><span class="type">hb_draw_funcs_t</span></a> *draw_funcs</code></em>,
                                    <em class="parameter"><code><span class="type">void</span> *draw_data</code></em>,
                                    <em class="parameter"><code><span class="type">void</span> *user_data</code></em>);</pre>
+<div class="warning">
+<p><code class="literal">hb_font_get_glyph_shape_func_t</code> has been deprecated since version 7.0.0 and should not be used in newly-written code.</p>
+<p>Use <a class="link" href="harfbuzz-hb-font.html#hb-font-draw-glyph-func-t" title="hb_font_draw_glyph_func_t ()"><span class="type">hb_font_draw_glyph_func_t</span></a> instead</p>
+</div>
 <p>A virtual method for the <a class="link" href="harfbuzz-hb-font.html#hb-font-funcs-t" title="hb_font_funcs_t"><span class="type">hb_font_funcs_t</span></a> of an <a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> object.</p>
 <div class="refsect3">
 <a name="hb-font-get-glyph-shape-func-t.parameters"></a><h4>Parameters</h4>
@@ -4577,7 +4925,12 @@ hb_font_funcs_set_glyph_shape_func (<em class="parameter"><code><a class="link" 
                                     <em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-get-glyph-shape-func-t" title="hb_font_get_glyph_shape_func_t ()"><span class="type">hb_font_get_glyph_shape_func_t</span></a> func</code></em>,
                                     <em class="parameter"><code><span class="type">void</span> *user_data</code></em>,
                                     <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-destroy-func-t" title="hb_destroy_func_t ()"><span class="type">hb_destroy_func_t</span></a> destroy</code></em>);</pre>
-<p>Sets the implementation function for <a class="link" href="harfbuzz-hb-font.html#hb-font-get-glyph-shape-func-t" title="hb_font_get_glyph_shape_func_t ()"><span class="type">hb_font_get_glyph_shape_func_t</span></a>.</p>
+<div class="warning">
+<p><code class="literal">hb_font_funcs_set_glyph_shape_func</code> has been deprecated since version 7.0.0 and should not be used in newly-written code.</p>
+<p>Use <a class="link" href="harfbuzz-hb-font.html#hb-font-funcs-set-draw-glyph-func" title="hb_font_funcs_set_draw_glyph_func ()"><code class="function">hb_font_funcs_set_draw_glyph_func()</code></a> instead</p>
+</div>
+<p>Sets the implementation function for <a class="link" href="harfbuzz-hb-font.html#hb-font-get-glyph-shape-func-t" title="hb_font_get_glyph_shape_func_t ()"><span class="type">hb_font_get_glyph_shape_func_t</span></a>,
+which is the same as <a class="link" href="harfbuzz-hb-font.html#hb-font-draw-glyph-func-t" title="hb_font_draw_glyph_func_t ()"><span class="type">hb_font_draw_glyph_func_t</span></a>.</p>
 <div class="refsect3">
 <a name="hb-font-funcs-set-glyph-shape-func.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -4613,6 +4966,221 @@ is not needed anymore. </p></td>
 </table></div>
 </div>
 <p class="since">Since: <a class="link" href="api-index-4-0-0.html#api-index-4.0.0">4.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-font-draw-glyph-func-t"></a><h3>hb_font_draw_glyph_func_t ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+<span class="c_punctuation">(</span>*hb_font_draw_glyph_func_t<span class="c_punctuation">)</span> (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> *font</code></em>,
+                              <em class="parameter"><code><span class="type">void</span> *font_data</code></em>,
+                              <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> glyph</code></em>,
+                              <em class="parameter"><code><a class="link" href="harfbuzz-hb-draw.html#hb-draw-funcs-t" title="hb_draw_funcs_t"><span class="type">hb_draw_funcs_t</span></a> *draw_funcs</code></em>,
+                              <em class="parameter"><code><span class="type">void</span> *draw_data</code></em>,
+                              <em class="parameter"><code><span class="type">void</span> *user_data</code></em>);</pre>
+<p>A virtual method for the <a class="link" href="harfbuzz-hb-font.html#hb-font-funcs-t" title="hb_font_funcs_t"><span class="type">hb_font_funcs_t</span></a> of an <a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> object.</p>
+<div class="refsect3">
+<a name="hb-font-draw-glyph-func-t.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>font</p></td>
+<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> to work upon</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>font_data</p></td>
+<td class="parameter_description"><p><em class="parameter"><code>font</code></em>
+user data pointer</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>glyph</p></td>
+<td class="parameter_description"><p>The glyph ID to query</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>draw_funcs</p></td>
+<td class="parameter_description"><p>The draw functions to send the shape data to</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>draw_data</p></td>
+<td class="parameter_description"><p>The data accompanying the draw functions</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>User data pointer passed by the caller</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-7-0-0.html#api-index-7.0.0">7.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-font-funcs-set-draw-glyph-func"></a><h3>hb_font_funcs_set_draw_glyph_func ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_font_funcs_set_draw_glyph_func (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-funcs-t" title="hb_font_funcs_t"><span class="type">hb_font_funcs_t</span></a> *ffuncs</code></em>,
+                                   <em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-draw-glyph-func-t" title="hb_font_draw_glyph_func_t ()"><span class="type">hb_font_draw_glyph_func_t</span></a> func</code></em>,
+                                   <em class="parameter"><code><span class="type">void</span> *user_data</code></em>,
+                                   <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-destroy-func-t" title="hb_destroy_func_t ()"><span class="type">hb_destroy_func_t</span></a> destroy</code></em>);</pre>
+<p>Sets the implementation function for <a class="link" href="harfbuzz-hb-font.html#hb-font-draw-glyph-func-t" title="hb_font_draw_glyph_func_t ()"><span class="type">hb_font_draw_glyph_func_t</span></a>,
+which is the same as <a class="link" href="harfbuzz-hb-font.html#hb-font-get-glyph-shape-func-t" title="hb_font_get_glyph_shape_func_t ()"><span class="type">hb_font_get_glyph_shape_func_t</span></a>.</p>
+<div class="refsect3">
+<a name="hb-font-funcs-set-draw-glyph-func.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>ffuncs</p></td>
+<td class="parameter_description"><p>A font-function structure</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>func</p></td>
+<td class="parameter_description"><p>The callback function to assign. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym> user_data][<acronym title="This parameter is a 'destroy_data', for callbacks."><span class="acronym">destroy</span></acronym> destroy][<acronym title="The callback is valid until the GDestroyNotify argument is called."><span class="acronym">scope notified</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>Data to pass to <em class="parameter"><code>func</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>destroy</p></td>
+<td class="parameter_description"><p>The function to call when <em class="parameter"><code>user_data</code></em>
+is not needed anymore. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-7-0-0.html#api-index-7.0.0">7.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-font-paint-glyph-func-t"></a><h3>hb_font_paint_glyph_func_t ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+<span class="c_punctuation">(</span>*hb_font_paint_glyph_func_t<span class="c_punctuation">)</span> (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> *font</code></em>,
+                               <em class="parameter"><code><span class="type">void</span> *font_data</code></em>,
+                               <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> glyph</code></em>,
+                               <em class="parameter"><code><a class="link" href="harfbuzz-hb-paint.html#hb-paint-funcs-t" title="hb_paint_funcs_t"><span class="type">hb_paint_funcs_t</span></a> *paint_funcs</code></em>,
+                               <em class="parameter"><code><span class="type">void</span> *paint_data</code></em>,
+                               <em class="parameter"><code>unsigned <span class="type">int</span> palette_index</code></em>,
+                               <em class="parameter"><code><a class="link" href="harfbuzz-hb-ot-color.html#hb-color-t" title="hb_color_t"><span class="type">hb_color_t</span></a> foreground</code></em>,
+                               <em class="parameter"><code><span class="type">void</span> *user_data</code></em>);</pre>
+<p>A virtual method for the <a class="link" href="harfbuzz-hb-font.html#hb-font-funcs-t" title="hb_font_funcs_t"><span class="type">hb_font_funcs_t</span></a> of an <a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> object.</p>
+<div class="refsect3">
+<a name="hb-font-paint-glyph-func-t.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>font</p></td>
+<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> to work upon</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>font_data</p></td>
+<td class="parameter_description"><p><em class="parameter"><code>font</code></em>
+user data pointer</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>glyph</p></td>
+<td class="parameter_description"><p>The glyph ID to query</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>paint_funcs</p></td>
+<td class="parameter_description"><p>The paint functions to use</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>paint_data</p></td>
+<td class="parameter_description"><p>The data accompanying the paint functions</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>palette_index</p></td>
+<td class="parameter_description"><p>The color palette to use</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>foreground</p></td>
+<td class="parameter_description"><p>The foreground color</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>User data pointer passed by the caller</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-7-0-0.html#api-index-7.0.0">7.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-font-funcs-set-paint-glyph-func"></a><h3>hb_font_funcs_set_paint_glyph_func ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_font_funcs_set_paint_glyph_func (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-funcs-t" title="hb_font_funcs_t"><span class="type">hb_font_funcs_t</span></a> *ffuncs</code></em>,
+                                    <em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-paint-glyph-func-t" title="hb_font_paint_glyph_func_t ()"><span class="type">hb_font_paint_glyph_func_t</span></a> func</code></em>,
+                                    <em class="parameter"><code><span class="type">void</span> *user_data</code></em>,
+                                    <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-destroy-func-t" title="hb_destroy_func_t ()"><span class="type">hb_destroy_func_t</span></a> destroy</code></em>);</pre>
+<p>Sets the implementation function for <a class="link" href="harfbuzz-hb-font.html#hb-font-paint-glyph-func-t" title="hb_font_paint_glyph_func_t ()"><span class="type">hb_font_paint_glyph_func_t</span></a>.</p>
+<div class="refsect3">
+<a name="hb-font-funcs-set-paint-glyph-func.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>ffuncs</p></td>
+<td class="parameter_description"><p>A font-function structure</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>func</p></td>
+<td class="parameter_description"><p>The callback function to assign. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym> user_data][<acronym title="This parameter is a 'destroy_data', for callbacks."><span class="acronym">destroy</span></acronym> destroy][<acronym title="The callback is valid until the GDestroyNotify argument is called."><span class="acronym">scope notified</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>Data to pass to <em class="parameter"><code>func</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>destroy</p></td>
+<td class="parameter_description"><p>The function to call when <em class="parameter"><code>user_data</code></em>
+is no longer needed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-7-0-0.html#api-index-7.0.0">7.0.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -5234,6 +5802,16 @@ or vertical) depending on the value of <em class="parameter"><code>direction</co
 </div>
 <div class="refsect1">
 <a name="harfbuzz-hb-font.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="HB-FONT-NO-VAR-NAMED-INSTANCE:CAPS"></a><h3>HB_FONT_NO_VAR_NAMED_INSTANCE</h3>
+<pre class="programlisting">#define HB_FONT_NO_VAR_NAMED_INSTANCE 0xFFFFFFFF
+</pre>
+<p>Constant signifying that a font does not have any
+named-instance index set.  This is the default of
+a font.</p>
+<p class="since">Since: <a class="link" href="api-index-7-0-0.html#api-index-7.0.0">7.0.0</a></p>
+</div>
+<hr>
 <div class="refsect2">
 <a name="hb-font-get-glyph-h-advance-func-t"></a><h3>hb_font_get_glyph_h_advance_func_t</h3>
 <pre class="programlisting">typedef hb_font_get_glyph_advance_func_t hb_font_get_glyph_h_advance_func_t;

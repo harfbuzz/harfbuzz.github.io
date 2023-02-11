@@ -1362,6 +1362,29 @@ hb_buffer_set_content_type (<em class="parameter"><code><a class="link" href="ha
 <p>Sets the type of <em class="parameter"><code>buffer</code></em>
  contents. Buffers are either empty, contain
 characters (before shaping), or contain glyphs (the result of shaping).</p>
+<p>You rarely need to call this function, since a number of other
+functions transition the content type for you. Namely:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>A newly created buffer starts with content type
+<a class="link" href="harfbuzz-hb-buffer.html#HB-BUFFER-CONTENT-TYPE-INVALID:CAPS"><code class="literal">HB_BUFFER_CONTENT_TYPE_INVALID</code></a>. Calling <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-reset" title="hb_buffer_reset ()"><code class="function">hb_buffer_reset()</code></a>,
+<a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-clear-contents" title="hb_buffer_clear_contents ()"><code class="function">hb_buffer_clear_contents()</code></a>, as well as calling <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-set-length" title="hb_buffer_set_length ()"><code class="function">hb_buffer_set_length()</code></a>
+with an argument of zero all set the buffer content type to invalid
+as well.</p></li>
+<li class="listitem"><p>Calling <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-add-utf8" title="hb_buffer_add_utf8 ()"><code class="function">hb_buffer_add_utf8()</code></a>, <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-add-utf16" title="hb_buffer_add_utf16 ()"><code class="function">hb_buffer_add_utf16()</code></a>,
+<a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-add-utf32" title="hb_buffer_add_utf32 ()"><code class="function">hb_buffer_add_utf32()</code></a>, <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-add-codepoints" title="hb_buffer_add_codepoints ()"><code class="function">hb_buffer_add_codepoints()</code></a> and
+<a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-add-latin1" title="hb_buffer_add_latin1 ()"><code class="function">hb_buffer_add_latin1()</code></a> expect that buffer is either empty and
+have a content type of invalid, or that buffer content type is
+<a class="link" href="harfbuzz-hb-buffer.html#HB-BUFFER-CONTENT-TYPE-UNICODE:CAPS"><code class="literal">HB_BUFFER_CONTENT_TYPE_UNICODE</code></a>, and they also set the content
+type to Unicode if they added anything to an empty buffer.</p></li>
+<li class="listitem"><p>Finally <a class="link" href="harfbuzz-hb-shape.html#hb-shape" title="hb_shape ()"><code class="function">hb_shape()</code></a> and <a class="link" href="harfbuzz-hb-shape.html#hb-shape-full" title="hb_shape_full ()"><code class="function">hb_shape_full()</code></a> expect that the buffer
+is either empty and have content type of invalid, or that buffer
+content type is <a class="link" href="harfbuzz-hb-buffer.html#HB-BUFFER-CONTENT-TYPE-UNICODE:CAPS"><code class="literal">HB_BUFFER_CONTENT_TYPE_UNICODE</code></a>, and upon
+success they set the buffer content type to
+<a class="link" href="harfbuzz-hb-buffer.html#HB-BUFFER-CONTENT-TYPE-GLYPHS:CAPS"><code class="literal">HB_BUFFER_CONTENT_TYPE_GLYPHS</code></a>.</p></li>
+</ul></div>
+<p>The above transitions are designed such that one can use a buffer
+in a loop of "reset : add-text : shape" without needing to ever
+modify the content type manually.</p>
 <div class="refsect3">
 <a name="hb-buffer-set-content-type.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -2706,8 +2729,8 @@ consumed one. </p></td>
 </div>
 <div class="refsect3">
 <a name="hb-buffer-deserialize-glyphs.returns"></a><h4>Returns</h4>
-<p> <code class="literal">true</code> if <em class="parameter"><code>buf</code></em>
-is not fully consumed, <code class="literal">false</code> otherwise.</p>
+<p> <code class="literal">true</code> if parse was successful, <code class="literal">false</code> if an error
+occurred.</p>
 </div>
 <p class="since">Since: <a class="link" href="api-index-0-9-7.html#api-index-0.9.7">0.9.7</a></p>
 </div>
@@ -2876,8 +2899,8 @@ consumed one. </p></td>
 </div>
 <div class="refsect3">
 <a name="hb-buffer-deserialize-unicode.returns"></a><h4>Returns</h4>
-<p> <code class="literal">true</code> if <em class="parameter"><code>buf</code></em>
-is not fully consumed, <code class="literal">false</code> otherwise.</p>
+<p> <code class="literal">true</code> if parse was successful, <code class="literal">false</code> if an error
+occurred.</p>
 </div>
 <p class="since">Since: <a class="link" href="api-index-2-7-3.html#api-index-2.7.3">2.7.3</a></p>
 </div>
