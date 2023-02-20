@@ -51,7 +51,7 @@
         <sub name="Customizing font functions" link="fonts-and-faces-custom-functions.html"/>
         <sub name="Font objects and HarfBuzz's native OpenType implementation" link="fonts-and-faces-native-opentype.html"/>
         <sub name="Working with OpenType Variable Fonts" link="fonts-and-faces-variable.html"/>
-        <sub name="Glyphs and rendering" link="ch07s05.html"/>
+        <sub name="Glyphs and rendering" link="glyphs-and-rendering.html"/>
       </sub>
       <sub name="Shaping and shape plans" link="shaping-and-shape-plans.html">
         <sub name="Shaping and buffer output" link="shaping-and-shape-plans.html#shaping-buffer-output"/>
