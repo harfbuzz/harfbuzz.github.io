@@ -825,7 +825,7 @@ really know what you are doing,</p></li>
 copy of data solely for the purpose of passing to
 HarfBuzz and doing that just once (no reuse!),</p></li>
 <li class="listitem"><p>If the font is <code class="function">mmap()</code>ed, it's okay to use
-<em class="parameter"><code>HB_MEMORY_READONLY_MAY_MAKE_WRITABLE</code></em>
+<em class="parameter"><code>HB_MEMORY_MODE_READONLY_MAY_MAKE_WRITABLE</code></em>
 , however, using that mode
 correctly is very tricky.  Use <em class="parameter"><code>HB_MEMORY_MODE_READONLY</code></em>
  instead.</p></li>
