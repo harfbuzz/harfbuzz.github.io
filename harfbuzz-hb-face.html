@@ -270,6 +270,11 @@ font family.</p>
 <p>More precisely, a font face represents a single face in a binary font file.
 Font faces are typically built from a binary blob and a face index.
 Font faces are used to create fonts.</p>
+<p>A font face can be created from a binary blob using <a class="link" href="harfbuzz-hb-face.html#hb-face-create" title="hb_face_create ()"><code class="function">hb_face_create()</code></a>.
+The face index is used to select a face from a binary blob that contains
+multiple faces.  For example, a binary blob that contains both a regular
+and a bold face can be used to create two font faces, one for each face
+index.</p>
 </div>
 <div class="refsect1">
 <a name="harfbuzz-hb-face.functions_details"></a><h2>Functions</h2>
@@ -309,7 +314,7 @@ hb_face_create (<em class="parameter"><code><a class="link" href="harfbuzz-hb-bl
 <p>Constructs a new face object from the specified blob and
 a face index into that blob.</p>
 <p>The face index is used for blobs of file formats such as TTC and
-and DFont that can contain more than one face.  Face indices within
+DFont that can contain more than one face.  Face indices within
 such collections are zero-based.</p>
 <div class="note">Note: If the blob font format is not a collection, <em class="parameter"><code>index</code></em>
 is ignored.  Otherwise, only the lower 16-bits of <em class="parameter"><code>index</code></em> are used.

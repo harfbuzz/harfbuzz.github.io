@@ -628,6 +628,10 @@
 <p>Buffers serve a dual role in HarfBuzz; before shaping, they hold
 the input characters that are passed to <a class="link" href="harfbuzz-hb-shape.html#hb-shape" title="hb_shape ()"><code class="function">hb_shape()</code></a>, and after
 shaping they hold the output glyphs.</p>
+<p>The input buffer is a sequence of Unicode codepoints, with
+associated attributes such as direction and script.  The output
+buffer is a sequence of glyphs, with associated attributes such
+as position and cluster.</p>
 </div>
 <div class="refsect1">
 <a name="harfbuzz-hb-buffer.functions_details"></a><h2>Functions</h2>
