@@ -140,6 +140,7 @@
       </sub>
       <sub name="API Index" link="api-index-full.html"/>
       <sub name="Index of deprecated API" link="deprecated-api-index.html"/>
+      <sub name="Index of new symbols in 7.3.0" link="api-index-7-3-0.html"/>
       <sub name="Index of new symbols in 7.1.0" link="api-index-7-1-0.html"/>
       <sub name="Index of new symbols in 7.0.0" link="api-index-7-0-0.html"/>
       <sub name="Index of new symbols in 6.0.0" link="api-index-6-0-0.html"/>
@@ -932,6 +933,7 @@
     <keyword type="function" name="hb_subset_input_unicode_set ()" link="harfbuzz-hb-subset.html#hb-subset-input-unicode-set" since="1.8.0"/>
     <keyword type="function" name="hb_subset_input_glyph_set ()" link="harfbuzz-hb-subset.html#hb-subset-input-glyph-set" since="1.8.0"/>
     <keyword type="function" name="hb_subset_input_set ()" link="harfbuzz-hb-subset.html#hb-subset-input-set" since="2.9.1"/>
+    <keyword type="function" name="hb_subset_input_old_to_new_glyph_mapping ()" link="harfbuzz-hb-subset.html#hb-subset-input-old-to-new-glyph-mapping" since="7.3.0"/>
     <keyword type="function" name="hb_subset_input_pin_axis_location ()" link="harfbuzz-hb-subset.html#hb-subset-input-pin-axis-location" since="6.0.0"/>
     <keyword type="function" name="hb_subset_input_pin_axis_to_default ()" link="harfbuzz-hb-subset.html#hb-subset-input-pin-axis-to-default" since="6.0.0"/>
     <keyword type="function" name="hb_subset_or_fail ()" link="harfbuzz-hb-subset.html#hb-subset-or-fail" since="2.9.0"/>
