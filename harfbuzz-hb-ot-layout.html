@@ -125,6 +125,22 @@
 </tr>
 <tr>
 <td class="function_type">
+<a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-ot-layout.html#hb-ot-layout-get-font-extents" title="hb_ot_layout_get_font_extents ()">hb_ot_layout_get_font_extents</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-ot-layout.html#hb-ot-layout-get-font-extents2" title="hb_ot_layout_get_font_extents2 ()">hb_ot_layout_get_font_extents2</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
 <a class="link" href="harfbuzz-hb-ot-layout.html#hb-ot-layout-baseline-tag-t" title="enum hb_ot_layout_baseline_tag_t"><span class="returnvalue">hb_ot_layout_baseline_tag_t</span></a>
 </td>
 <td class="function_name">
@@ -141,10 +157,26 @@
 </tr>
 <tr>
 <td class="function_type">
+<a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-ot-layout.html#hb-ot-layout-get-baseline2" title="hb_ot_layout_get_baseline2 ()">hb_ot_layout_get_baseline2</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
 <span class="returnvalue">void</span>
 </td>
 <td class="function_name">
 <a class="link" href="harfbuzz-hb-ot-layout.html#hb-ot-layout-get-baseline-with-fallback" title="hb_ot_layout_get_baseline_with_fallback ()">hb_ot_layout_get_baseline_with_fallback</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-ot-layout.html#hb-ot-layout-get-baseline-with-fallback2" title="hb_ot_layout_get_baseline_with_fallback2 ()">hb_ot_layout_get_baseline_with_fallback2</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 <tr>
@@ -533,8 +565,8 @@ hb_ot_tags_from_script_and_language (<em class="parameter"><code><a class="link"
 </tr>
 <tr>
 <td class="parameter_name"><p>language</p></td>
-<td class="parameter_description"><p>an <a class="link" href="harfbuzz-hb-common.html#hb-language-t" title="hb_language_t"><span class="type">hb_language_t</span></a> to convert.</p></td>
-<td class="parameter_annotations"> </td>
+<td class="parameter_description"><p>an <a class="link" href="harfbuzz-hb-common.html#hb-language-t" title="hb_language_t"><span class="type">hb_language_t</span></a> to convert. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>script_count</p></td>
@@ -1069,6 +1101,126 @@ Output = the actual number of attachment points returned (may be zero). </p></td
 </div>
 <hr>
 <div class="refsect2">
+<a name="hb-ot-layout-get-font-extents"></a><h3>hb_ot_layout_get_font_extents ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+hb_ot_layout_get_font_extents (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> *font</code></em>,
+                               <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-direction-t" title="enum hb_direction_t"><span class="type">hb_direction_t</span></a> direction</code></em>,
+                               <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="type">hb_tag_t</span></a> script_tag</code></em>,
+                               <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="type">hb_tag_t</span></a> language_tag</code></em>,
+                               <em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-extents-t" title="hb_font_extents_t"><span class="type">hb_font_extents_t</span></a> *extents</code></em>);</pre>
+<p>Fetches script/language-specific font extents.  These values are
+looked up in the <code class="literal">BASE</code> table's <code class="literal">MinMax</code> records.</p>
+<p>If no such extents are found, the default extents for the font are
+fetched. As such, the return value of this function can for the
+most part be ignored.  Note that the per-script/language extents
+do not have a line-gap value, and the line-gap is set to zero in
+that case.</p>
+<div class="refsect3">
+<a name="hb-ot-layout-get-font-extents.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>font</p></td>
+<td class="parameter_description"><p>a font</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>direction</p></td>
+<td class="parameter_description"><p>text direction.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>script_tag</p></td>
+<td class="parameter_description"><p>script tag.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>language_tag</p></td>
+<td class="parameter_description"><p>language tag.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>extents</p></td>
+<td class="parameter_description"><p>font extents if found. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-ot-layout-get-font-extents.returns"></a><h4>Returns</h4>
+<p> <code class="literal">true</code> if found script/language-specific font extents.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-8-0-0.html#api-index-8.0.0">8.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-ot-layout-get-font-extents2"></a><h3>hb_ot_layout_get_font_extents2 ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+hb_ot_layout_get_font_extents2 (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> *font</code></em>,
+                                <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-direction-t" title="enum hb_direction_t"><span class="type">hb_direction_t</span></a> direction</code></em>,
+                                <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-script-t" title="enum hb_script_t"><span class="type">hb_script_t</span></a> script</code></em>,
+                                <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-language-t" title="hb_language_t"><span class="type">hb_language_t</span></a> language</code></em>,
+                                <em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-extents-t" title="hb_font_extents_t"><span class="type">hb_font_extents_t</span></a> *extents</code></em>);</pre>
+<p>Fetches script/language-specific font extents.  These values are
+looked up in the <code class="literal">BASE</code> table's <code class="literal">MinMax</code> records.</p>
+<p>If no such extents are found, the default extents for the font are
+fetched. As such, the return value of this function can for the
+most part be ignored.  Note that the per-script/language extents
+do not have a line-gap value, and the line-gap is set to zero in
+that case.</p>
+<p>This function is like <a class="link" href="harfbuzz-hb-ot-layout.html#hb-ot-layout-get-font-extents" title="hb_ot_layout_get_font_extents ()"><code class="function">hb_ot_layout_get_font_extents()</code></a> but takes
+<a class="link" href="harfbuzz-hb-common.html#hb-script-t" title="enum hb_script_t"><span class="type">hb_script_t</span></a> and <a class="link" href="harfbuzz-hb-common.html#hb-language-t" title="hb_language_t"><span class="type">hb_language_t</span></a> instead of OpenType <a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="type">hb_tag_t</span></a>.</p>
+<div class="refsect3">
+<a name="hb-ot-layout-get-font-extents2.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>font</p></td>
+<td class="parameter_description"><p>a font</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>direction</p></td>
+<td class="parameter_description"><p>text direction.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>script</p></td>
+<td class="parameter_description"><p>script.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>language</p></td>
+<td class="parameter_description"><p>language. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>extents</p></td>
+<td class="parameter_description"><p>font extents if found. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-ot-layout-get-font-extents2.returns"></a><h4>Returns</h4>
+<p> <code class="literal">true</code> if found script/language-specific font extents.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-8-0-0.html#api-index-8.0.0">8.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
 <a name="hb-ot-layout-get-horizontal-baseline-tag-for-script"></a><h3>hb_ot_layout_get_horizontal_baseline_tag_for_script ()</h3>
 <pre class="programlisting"><a class="link" href="harfbuzz-hb-ot-layout.html#hb-ot-layout-baseline-tag-t" title="enum hb_ot_layout_baseline_tag_t"><span class="returnvalue">hb_ot_layout_baseline_tag_t</span></a>
 hb_ot_layout_get_horizontal_baseline_tag_for_script
@@ -1158,6 +1310,67 @@ hb_ot_layout_get_baseline (<em class="parameter"><code><a class="link" href="har
 </div>
 <hr>
 <div class="refsect2">
+<a name="hb-ot-layout-get-baseline2"></a><h3>hb_ot_layout_get_baseline2 ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+hb_ot_layout_get_baseline2 (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> *font</code></em>,
+                            <em class="parameter"><code><a class="link" href="harfbuzz-hb-ot-layout.html#hb-ot-layout-baseline-tag-t" title="enum hb_ot_layout_baseline_tag_t"><span class="type">hb_ot_layout_baseline_tag_t</span></a> baseline_tag</code></em>,
+                            <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-direction-t" title="enum hb_direction_t"><span class="type">hb_direction_t</span></a> direction</code></em>,
+                            <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-script-t" title="enum hb_script_t"><span class="type">hb_script_t</span></a> script</code></em>,
+                            <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-language-t" title="hb_language_t"><span class="type">hb_language_t</span></a> language</code></em>,
+                            <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-position-t" title="hb_position_t"><span class="type">hb_position_t</span></a> *coord</code></em>);</pre>
+<p>Fetches a baseline value from the face.</p>
+<p>This function is like <a class="link" href="harfbuzz-hb-ot-layout.html#hb-ot-layout-get-baseline" title="hb_ot_layout_get_baseline ()"><code class="function">hb_ot_layout_get_baseline()</code></a> but takes
+<a class="link" href="harfbuzz-hb-common.html#hb-script-t" title="enum hb_script_t"><span class="type">hb_script_t</span></a> and <a class="link" href="harfbuzz-hb-common.html#hb-language-t" title="hb_language_t"><span class="type">hb_language_t</span></a> instead of OpenType <a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="type">hb_tag_t</span></a>.</p>
+<div class="refsect3">
+<a name="hb-ot-layout-get-baseline2.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>font</p></td>
+<td class="parameter_description"><p>a font</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>baseline_tag</p></td>
+<td class="parameter_description"><p>a baseline tag</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>direction</p></td>
+<td class="parameter_description"><p>text direction.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>script</p></td>
+<td class="parameter_description"><p>script.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>language</p></td>
+<td class="parameter_description"><p>language, currently unused. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>coord</p></td>
+<td class="parameter_description"><p>baseline value if found. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-ot-layout-get-baseline2.returns"></a><h4>Returns</h4>
+<p> <code class="literal">true</code> if found baseline value in the font.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-8-0-0.html#api-index-8.0.0">8.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
 <a name="hb-ot-layout-get-baseline-with-fallback"></a><h3>hb_ot_layout_get_baseline_with_fallback ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 hb_ot_layout_get_baseline_with_fallback
@@ -1212,6 +1425,65 @@ it if the font does not have it.</p>
 </table></div>
 </div>
 <p class="since">Since: <a class="link" href="api-index-4-0-0.html#api-index-4.0.0">4.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-ot-layout-get-baseline-with-fallback2"></a><h3>hb_ot_layout_get_baseline_with_fallback2 ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_ot_layout_get_baseline_with_fallback2
+                               (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> *font</code></em>,
+                                <em class="parameter"><code><a class="link" href="harfbuzz-hb-ot-layout.html#hb-ot-layout-baseline-tag-t" title="enum hb_ot_layout_baseline_tag_t"><span class="type">hb_ot_layout_baseline_tag_t</span></a> baseline_tag</code></em>,
+                                <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-direction-t" title="enum hb_direction_t"><span class="type">hb_direction_t</span></a> direction</code></em>,
+                                <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-script-t" title="enum hb_script_t"><span class="type">hb_script_t</span></a> script</code></em>,
+                                <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-language-t" title="hb_language_t"><span class="type">hb_language_t</span></a> language</code></em>,
+                                <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-position-t" title="hb_position_t"><span class="type">hb_position_t</span></a> *coord</code></em>);</pre>
+<p>Fetches a baseline value from the face, and synthesizes
+it if the font does not have it.</p>
+<p>This function is like <a class="link" href="harfbuzz-hb-ot-layout.html#hb-ot-layout-get-baseline-with-fallback" title="hb_ot_layout_get_baseline_with_fallback ()"><code class="function">hb_ot_layout_get_baseline_with_fallback()</code></a> but takes
+<a class="link" href="harfbuzz-hb-common.html#hb-script-t" title="enum hb_script_t"><span class="type">hb_script_t</span></a> and <a class="link" href="harfbuzz-hb-common.html#hb-language-t" title="hb_language_t"><span class="type">hb_language_t</span></a> instead of OpenType <a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="type">hb_tag_t</span></a>.</p>
+<div class="refsect3">
+<a name="hb-ot-layout-get-baseline-with-fallback2.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>font</p></td>
+<td class="parameter_description"><p>a font</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>baseline_tag</p></td>
+<td class="parameter_description"><p>a baseline tag</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>direction</p></td>
+<td class="parameter_description"><p>text direction.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>script</p></td>
+<td class="parameter_description"><p>script.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>language</p></td>
+<td class="parameter_description"><p>language, currently unused. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>coord</p></td>
+<td class="parameter_description"><p>baseline value if found. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-8-0-0.html#api-index-8.0.0">8.0.0</a></p>
 </div>
 <hr>
 <div class="refsect2">

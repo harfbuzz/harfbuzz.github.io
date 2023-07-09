@@ -140,6 +140,7 @@
       </sub>
       <sub name="API Index" link="api-index-full.html"/>
       <sub name="Index of deprecated API" link="deprecated-api-index.html"/>
+      <sub name="Index of new symbols in 8.0.0" link="api-index-8-0-0.html"/>
       <sub name="Index of new symbols in 7.3.0" link="api-index-7-3-0.html"/>
       <sub name="Index of new symbols in 7.1.0" link="api-index-7-1-0.html"/>
       <sub name="Index of new symbols in 7.0.0" link="api-index-7-0-0.html"/>
@@ -332,6 +333,7 @@
     <keyword type="function" name="hb_destroy_func_t ()" link="harfbuzz-hb-common.html#hb-destroy-func-t"/>
     <keyword type="typedef" name="hb_bool_t" link="harfbuzz-hb-common.html#hb-bool-t"/>
     <keyword type="typedef" name="hb_codepoint_t" link="harfbuzz-hb-common.html#hb-codepoint-t"/>
+    <keyword type="macro" name="HB_CODEPOINT_INVALID" link="harfbuzz-hb-common.html#HB-CODEPOINT-INVALID:CAPS" since="8.0.0"/>
     <keyword type="enum" name="enum hb_direction_t" link="harfbuzz-hb-common.html#hb-direction-t"/>
     <keyword type="typedef" name="hb_language_t" link="harfbuzz-hb-common.html#hb-language-t"/>
     <keyword type="struct" name="hb_feature_t" link="harfbuzz-hb-common.html#hb-feature-t"/>
@@ -357,6 +359,7 @@
     <keyword type="macro" name="HB_HAS_GRAPHITE" link="harfbuzz-hb-features.html#HB-HAS-GRAPHITE:CAPS"/>
     <keyword type="macro" name="HB_HAS_ICU" link="harfbuzz-hb-features.html#HB-HAS-ICU:CAPS"/>
     <keyword type="macro" name="HB_HAS_UNISCRIBE" link="harfbuzz-hb-features.html#HB-HAS-UNISCRIBE:CAPS"/>
+    <keyword type="macro" name="HB_HAS_WASM" link="harfbuzz-hb-features.html#HB-HAS-WASM:CAPS"/>
     <keyword type="function" name="hb_draw_funcs_create ()" link="harfbuzz-hb-draw.html#hb-draw-funcs-create" since="4.0.0"/>
     <keyword type="function" name="hb_draw_funcs_get_empty ()" link="harfbuzz-hb-draw.html#hb-draw-funcs-get-empty" since="7.0.0"/>
     <keyword type="function" name="hb_draw_funcs_reference ()" link="harfbuzz-hb-draw.html#hb-draw-funcs-reference" since="4.0.0"/>
@@ -457,6 +460,9 @@
     <keyword type="function" name="hb_unicode_decompose_compatibility ()" link="harfbuzz-hb-deprecated.html#hb-unicode-decompose-compatibility" deprecated="2.0.0" since="0.9.2"/>
     <keyword type="function" name="hb_unicode_funcs_set_decompose_compatibility_func ()" link="harfbuzz-hb-deprecated.html#hb-unicode-funcs-set-decompose-compatibility-func" deprecated="2.0.0" since="0.9.2"/>
     <keyword type="function" name="hb_font_funcs_set_glyph_v_kerning_func ()" link="harfbuzz-hb-deprecated.html#hb-font-funcs-set-glyph-v-kerning-func" deprecated="2.0.0" since="0.9.2"/>
+    <keyword type="function" name="hb_font_get_glyph_shape ()" link="harfbuzz-hb-deprecated.html#hb-font-get-glyph-shape" deprecated="7.0.0: Use hb_font_draw_glyph() instead" since="4.0.0"/>
+    <keyword type="function" name="hb_font_get_glyph_shape_func_t ()" link="harfbuzz-hb-deprecated.html#hb-font-get-glyph-shape-func-t" deprecated="7.0.0: Use #hb_font_draw_glyph_func_t instead" since="4.0.0"/>
+    <keyword type="function" name="hb_font_funcs_set_glyph_shape_func ()" link="harfbuzz-hb-deprecated.html#hb-font-funcs-set-glyph-shape-func" deprecated="7.0.0: Use hb_font_funcs_set_draw_glyph_func() instead" since="4.0.0"/>
     <keyword type="function" name="hb_font_get_glyph_v_kerning ()" link="harfbuzz-hb-deprecated.html#hb-font-get-glyph-v-kerning" deprecated="2.0.0" since="0.9.2"/>
     <keyword type="macro" name="HB_BUFFER_FLAGS_DEFAULT" link="harfbuzz-hb-deprecated.html#HB-BUFFER-FLAGS-DEFAULT:CAPS" deprecated="0.9.20"/>
     <keyword type="macro" name="HB_BUFFER_SERIALIZE_FLAGS_DEFAULT" link="harfbuzz-hb-deprecated.html#HB-BUFFER-SERIALIZE-FLAGS-DEFAULT:CAPS" deprecated="0.9.20"/>
@@ -525,7 +531,6 @@
     <keyword type="function" name="hb_font_get_glyph_v_origin ()" link="harfbuzz-hb-font.html#hb-font-get-glyph-v-origin" since="0.9.2"/>
     <keyword type="function" name="hb_font_get_glyph_origin_for_direction ()" link="harfbuzz-hb-font.html#hb-font-get-glyph-origin-for-direction" since="0.9.2"/>
     <keyword type="function" name="hb_font_get_glyph_name ()" link="harfbuzz-hb-font.html#hb-font-get-glyph-name" since="0.9.2"/>
-    <keyword type="function" name="hb_font_get_glyph_shape ()" link="harfbuzz-hb-font.html#hb-font-get-glyph-shape" deprecated="7.0.0: Use hb_font_draw_glyph() instead" since="4.0.0"/>
     <keyword type="function" name="hb_font_draw_glyph ()" link="harfbuzz-hb-font.html#hb-font-draw-glyph" since="7.0.0"/>
     <keyword type="function" name="hb_font_paint_glyph ()" link="harfbuzz-hb-font.html#hb-font-paint-glyph" since="7.0.0"/>
     <keyword type="function" name="hb_font_get_nominal_glyph ()" link="harfbuzz-hb-font.html#hb-font-get-nominal-glyph" since="1.2.3"/>
@@ -585,8 +590,6 @@
     <keyword type="function" name="hb_font_funcs_set_glyph_v_origin_func ()" link="harfbuzz-hb-font.html#hb-font-funcs-set-glyph-v-origin-func" since="0.9.2"/>
     <keyword type="function" name="hb_font_get_glyph_name_func_t ()" link="harfbuzz-hb-font.html#hb-font-get-glyph-name-func-t"/>
     <keyword type="function" name="hb_font_funcs_set_glyph_name_func ()" link="harfbuzz-hb-font.html#hb-font-funcs-set-glyph-name-func" since="0.9.2"/>
-    <keyword type="function" name="hb_font_get_glyph_shape_func_t ()" link="harfbuzz-hb-font.html#hb-font-get-glyph-shape-func-t" deprecated="7.0.0: Use #hb_font_draw_glyph_func_t instead" since="4.0.0"/>
-    <keyword type="function" name="hb_font_funcs_set_glyph_shape_func ()" link="harfbuzz-hb-font.html#hb-font-funcs-set-glyph-shape-func" deprecated="7.0.0: Use hb_font_funcs_set_draw_glyph_func() instead" since="4.0.0"/>
     <keyword type="function" name="hb_font_draw_glyph_func_t ()" link="harfbuzz-hb-font.html#hb-font-draw-glyph-func-t" since="7.0.0"/>
     <keyword type="function" name="hb_font_funcs_set_draw_glyph_func ()" link="harfbuzz-hb-font.html#hb-font-funcs-set-draw-glyph-func" since="7.0.0"/>
     <keyword type="function" name="hb_font_paint_glyph_func_t ()" link="harfbuzz-hb-font.html#hb-font-paint-glyph-func-t" since="7.0.0"/>
@@ -767,9 +770,13 @@
     <keyword type="function" name="hb_ot_layout_feature_get_name_ids ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-feature-get-name-ids" since="2.0.0"/>
     <keyword type="function" name="hb_ot_layout_feature_with_variations_get_lookups ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-feature-with-variations-get-lookups" since="1.4.0"/>
     <keyword type="function" name="hb_ot_layout_get_attach_points ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-get-attach-points"/>
+    <keyword type="function" name="hb_ot_layout_get_font_extents ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-get-font-extents" since="8.0.0"/>
+    <keyword type="function" name="hb_ot_layout_get_font_extents2 ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-get-font-extents2" since="8.0.0"/>
     <keyword type="function" name="hb_ot_layout_get_horizontal_baseline_tag_for_script ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-get-horizontal-baseline-tag-for-script" since="4.0.0"/>
     <keyword type="function" name="hb_ot_layout_get_baseline ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-get-baseline" since="2.6.0"/>
+    <keyword type="function" name="hb_ot_layout_get_baseline2 ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-get-baseline2" since="8.0.0"/>
     <keyword type="function" name="hb_ot_layout_get_baseline_with_fallback ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-get-baseline-with-fallback" since="4.0.0"/>
+    <keyword type="function" name="hb_ot_layout_get_baseline_with_fallback2 ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-get-baseline-with-fallback2" since="8.0.0"/>
     <keyword type="function" name="hb_ot_layout_get_glyph_class ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-get-glyph-class" since="0.9.7"/>
     <keyword type="function" name="hb_ot_layout_get_glyphs_in_class ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-get-glyphs-in-class" since="0.9.7"/>
     <keyword type="function" name="hb_ot_layout_get_ligature_carets ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-get-ligature-carets"/>
