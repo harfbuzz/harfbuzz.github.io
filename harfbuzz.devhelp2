@@ -140,6 +140,7 @@
       </sub>
       <sub name="API Index" link="api-index-full.html"/>
       <sub name="Index of deprecated API" link="deprecated-api-index.html"/>
+      <sub name="Index of new symbols in 8.1.0" link="api-index-8-1-0.html"/>
       <sub name="Index of new symbols in 8.0.0" link="api-index-8-0-0.html"/>
       <sub name="Index of new symbols in 7.3.0" link="api-index-7-3-0.html"/>
       <sub name="Index of new symbols in 7.1.0" link="api-index-7-1-0.html"/>
@@ -765,6 +766,7 @@
     <keyword type="function" name="hb_ot_tags_to_script_and_language ()" link="harfbuzz-hb-ot-layout.html#hb-ot-tags-to-script-and-language" since="2.0.0"/>
     <keyword type="function" name="hb_ot_layout_collect_lookups ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-collect-lookups" since="0.9.8"/>
     <keyword type="function" name="hb_ot_layout_collect_features ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-collect-features" since="1.8.5"/>
+    <keyword type="function" name="hb_ot_layout_collect_features_map ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-collect-features-map" since="8.1.0"/>
     <keyword type="function" name="hb_ot_layout_feature_get_characters ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-feature-get-characters" since="2.0.0"/>
     <keyword type="function" name="hb_ot_layout_feature_get_lookups ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-feature-get-lookups" since="0.9.7"/>
     <keyword type="function" name="hb_ot_layout_feature_get_name_ids ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-feature-get-name-ids" since="2.0.0"/>
