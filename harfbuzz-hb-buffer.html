@@ -2218,7 +2218,7 @@ hb_buffer_set_not_found_glyph (<em class="parameter"><code><a class="link" href=
                                <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> not_found</code></em>);</pre>
 <p>Sets the <a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> that replaces characters not found in
 the font during shaping.</p>
-<p>The not-found glyph defaults to zero, sometimes knows as the
+<p>The not-found glyph defaults to zero, sometimes known as the
 ".notdef" glyph.  This API allows for differentiating the two.</p>
 <div class="refsect3">
 <a name="hb-buffer-set-not-found-glyph.parameters"></a><h4>Parameters</h4>
@@ -3139,7 +3139,7 @@ callers if just comparing two buffers is needed.</p>
 </tr>
 <tr>
 <td class="parameter_name"><p>dottedcircle_glyph</p></td>
-<td class="parameter_description"><p>glyph id of U+25CC DOTTED CIRCLE, or (hb_codepont_t) -1.</p></td>
+<td class="parameter_description"><p>glyph id of U+25CC DOTTED CIRCLE, or (hb_codepoint_t) -1.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -3367,7 +3367,7 @@ allow selecting more fine-grained cluster handling.</p></td>
 				   layout, by avoiding re-shaping of each line
 				   after line-breaking, by limiting the
 				   reshaping to a small piece around the
-				   breaking positin only, even if the breaking
+				   breaking position only, even if the breaking
 				   position carries the
 				   <a class="link" href="harfbuzz-hb-buffer.html#HB-GLYPH-FLAG-UNSAFE-TO-BREAK:CAPS"><span class="type">HB_GLYPH_FLAG_UNSAFE_TO_BREAK</span></a> or when
 				   hyphenation or other text transformation

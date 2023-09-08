@@ -140,6 +140,7 @@
       </sub>
       <sub name="API Index" link="api-index-full.html"/>
       <sub name="Index of deprecated API" link="deprecated-api-index.html"/>
+      <sub name="Index of new symbols in 8.2.0" link="api-index-8-2-0.html"/>
       <sub name="Index of new symbols in 8.1.0" link="api-index-8-1-0.html"/>
       <sub name="Index of new symbols in 8.0.0" link="api-index-8-0-0.html"/>
       <sub name="Index of new symbols in 7.3.0" link="api-index-7-3-0.html"/>
@@ -399,6 +400,8 @@
     <keyword type="function" name="hb_paint_funcs_set_push_transform_func ()" link="harfbuzz-hb-paint.html#hb-paint-funcs-set-push-transform-func" since="7.0.0"/>
     <keyword type="function" name="hb_paint_pop_transform_func_t ()" link="harfbuzz-hb-paint.html#hb-paint-pop-transform-func-t" since="7.0.0"/>
     <keyword type="function" name="hb_paint_funcs_set_pop_transform_func ()" link="harfbuzz-hb-paint.html#hb-paint-funcs-set-pop-transform-func" since="7.0.0"/>
+    <keyword type="function" name="hb_paint_color_glyph_func_t ()" link="harfbuzz-hb-paint.html#hb-paint-color-glyph-func-t" since="8.2.0"/>
+    <keyword type="function" name="hb_paint_funcs_set_color_glyph_func ()" link="harfbuzz-hb-paint.html#hb-paint-funcs-set-color-glyph-func" since="8.2.0"/>
     <keyword type="function" name="hb_paint_push_clip_glyph_func_t ()" link="harfbuzz-hb-paint.html#hb-paint-push-clip-glyph-func-t" since="7.0.0"/>
     <keyword type="function" name="hb_paint_funcs_set_push_clip_glyph_func ()" link="harfbuzz-hb-paint.html#hb-paint-funcs-set-push-clip-glyph-func" since="7.0.0"/>
     <keyword type="function" name="hb_paint_push_clip_rectangle_func_t ()" link="harfbuzz-hb-paint.html#hb-paint-push-clip-rectangle-func-t" since="7.0.0"/>
@@ -427,6 +430,7 @@
     <keyword type="function" name="hb_paint_funcs_set_custom_palette_color_func ()" link="harfbuzz-hb-paint.html#hb-paint-funcs-set-custom-palette-color-func" since="7.0.0"/>
     <keyword type="function" name="hb_paint_push_transform ()" link="harfbuzz-hb-paint.html#hb-paint-push-transform" since="7.0.0"/>
     <keyword type="function" name="hb_paint_pop_transform ()" link="harfbuzz-hb-paint.html#hb-paint-pop-transform" since="7.0.0"/>
+    <keyword type="function" name="hb_paint_color_glyph ()" link="harfbuzz-hb-paint.html#hb-paint-color-glyph" since="8.2.0"/>
     <keyword type="function" name="hb_paint_push_clip_glyph ()" link="harfbuzz-hb-paint.html#hb-paint-push-clip-glyph" since="7.0.0"/>
     <keyword type="function" name="hb_paint_push_clip_rectangle ()" link="harfbuzz-hb-paint.html#hb-paint-push-clip-rectangle" since="7.0.0"/>
     <keyword type="function" name="hb_paint_pop_clip ()" link="harfbuzz-hb-paint.html#hb-paint-pop-clip" since="7.0.0"/>
