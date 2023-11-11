@@ -237,6 +237,10 @@
 <td class="typedef_keyword">typedef</td>
 <td class="function_name"><a class="link" href="harfbuzz-hb-deprecated.html#hb-font-get-glyph-v-kerning-func-t" title="hb_font_get_glyph_v_kerning_func_t">hb_font_get_glyph_v_kerning_func_t</a></td>
 </tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="harfbuzz-hb-deprecated.html#HB-AAT-LAYOUT-FEATURE-TYPE-CURISVE-CONNECTION:CAPS" title="HB_AAT_LAYOUT_FEATURE_TYPE_CURISVE_CONNECTION">HB_AAT_LAYOUT_FEATURE_TYPE_CURISVE_CONNECTION</a></td>
+</tr>
 </tbody>
 </table></div>
 </div>
@@ -1165,7 +1169,7 @@ the specified font, for vertical text segments.</p>
 <pre class="programlisting">#define HB_SCRIPT_CANADIAN_ABORIGINAL		HB_SCRIPT_CANADIAN_SYLLABICS
 </pre>
 <div class="warning"><p><code class="literal">HB_SCRIPT_CANADIAN_ABORIGINAL</code> has been deprecated since version 0.9.20 and should not be used in newly-written code.</p></div>
-<p>Use <a class="link" href="harfbuzz-hb-common.html#HB-SCRIPT-CANADIAN-SYLLABICS:CAPS"><span class="type">HB_SCRIPT_CANADIAN_SYLLABICS</span></a> instead:</p>
+<p>Use <a class="link" href="harfbuzz-hb-common.html#HB-SCRIPT-CANADIAN-SYLLABICS:CAPS"><span class="type">HB_SCRIPT_CANADIAN_SYLLABICS</span></a> instead.</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1273,6 +1277,14 @@ usage is no longer supported. Use <a class="link" href="harfbuzz-hb-common.html#
 <p>A virtual method for the <a class="link" href="harfbuzz-hb-font.html#hb-font-funcs-t" title="hb_font_funcs_t"><span class="type">hb_font_funcs_t</span></a> of an <a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> object.</p>
 <p>This method should retrieve the kerning-adjustment value for a glyph-pair in
 the specified font, for vertical text segments.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="HB-AAT-LAYOUT-FEATURE-TYPE-CURISVE-CONNECTION:CAPS"></a><h3>HB_AAT_LAYOUT_FEATURE_TYPE_CURISVE_CONNECTION</h3>
+<pre class="programlisting">#define HB_AAT_LAYOUT_FEATURE_TYPE_CURISVE_CONNECTION HB_AAT_LAYOUT_FEATURE_TYPE_CURSIVE_CONNECTION
+</pre>
+<div class="warning"><p><code class="literal">HB_AAT_LAYOUT_FEATURE_TYPE_CURISVE_CONNECTION</code> has been deprecated since version 8.3.0 and should not be used in newly-written code.</p></div>
+<p>Use <a class="link" href="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-TYPE-CURSIVE-CONNECTION:CAPS"><span class="type">HB_AAT_LAYOUT_FEATURE_TYPE_CURSIVE_CONNECTION</span></a> instead.</p>
 </div>
 </div>
 </div>
