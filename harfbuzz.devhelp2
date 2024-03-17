@@ -140,6 +140,7 @@
       </sub>
       <sub name="API Index" link="api-index-full.html"/>
       <sub name="Index of deprecated API" link="deprecated-api-index.html"/>
+      <sub name="Index of new symbols in 8.3.1" link="api-index-8-3-1.html"/>
       <sub name="Index of new symbols in 8.2.0" link="api-index-8-2-0.html"/>
       <sub name="Index of new symbols in 8.1.0" link="api-index-8-1-0.html"/>
       <sub name="Index of new symbols in 8.0.0" link="api-index-8-0-0.html"/>
@@ -747,20 +748,20 @@
     <keyword type="function" name="hb_color_get_blue ()" link="harfbuzz-hb-ot-color.html#hb-color-get-blue" since="2.1.0"/>
     <keyword type="function" name="hb_color_get_green ()" link="harfbuzz-hb-ot-color.html#hb-color-get-green" since="2.1.0"/>
     <keyword type="function" name="hb_color_get_red ()" link="harfbuzz-hb-ot-color.html#hb-color-get-red" since="2.1.0"/>
-    <keyword type="function" name="hb_ot_color_glyph_get_layers ()" link="harfbuzz-hb-ot-color.html#hb-ot-color-glyph-get-layers" since="2.1.0"/>
-    <keyword type="function" name="hb_ot_color_glyph_reference_png ()" link="harfbuzz-hb-ot-color.html#hb-ot-color-glyph-reference-png" since="2.1.0"/>
-    <keyword type="function" name="hb_ot_color_glyph_reference_svg ()" link="harfbuzz-hb-ot-color.html#hb-ot-color-glyph-reference-svg" since="2.1.0"/>
     <keyword type="function" name="hb_ot_color_has_layers ()" link="harfbuzz-hb-ot-color.html#hb-ot-color-has-layers" since="2.1.0"/>
-    <keyword type="function" name="hb_ot_color_has_paint ()" link="harfbuzz-hb-ot-color.html#hb-ot-color-has-paint" since="7.0.0"/>
-    <keyword type="function" name="hb_ot_color_glyph_has_paint ()" link="harfbuzz-hb-ot-color.html#hb-ot-color-glyph-has-paint" since="7.0.0"/>
+    <keyword type="function" name="hb_ot_color_glyph_get_layers ()" link="harfbuzz-hb-ot-color.html#hb-ot-color-glyph-get-layers" since="2.1.0"/>
     <keyword type="function" name="hb_ot_color_has_palettes ()" link="harfbuzz-hb-ot-color.html#hb-ot-color-has-palettes" since="2.1.0"/>
-    <keyword type="function" name="hb_ot_color_has_png ()" link="harfbuzz-hb-ot-color.html#hb-ot-color-has-png" since="2.1.0"/>
-    <keyword type="function" name="hb_ot_color_has_svg ()" link="harfbuzz-hb-ot-color.html#hb-ot-color-has-svg" since="2.1.0"/>
-    <keyword type="function" name="hb_ot_color_palette_color_get_name_id ()" link="harfbuzz-hb-ot-color.html#hb-ot-color-palette-color-get-name-id" since="2.1.0"/>
-    <keyword type="function" name="hb_ot_color_palette_get_colors ()" link="harfbuzz-hb-ot-color.html#hb-ot-color-palette-get-colors" since="2.1.0"/>
     <keyword type="function" name="hb_ot_color_palette_get_count ()" link="harfbuzz-hb-ot-color.html#hb-ot-color-palette-get-count" since="2.1.0"/>
+    <keyword type="function" name="hb_ot_color_palette_get_colors ()" link="harfbuzz-hb-ot-color.html#hb-ot-color-palette-get-colors" since="2.1.0"/>
     <keyword type="function" name="hb_ot_color_palette_get_flags ()" link="harfbuzz-hb-ot-color.html#hb-ot-color-palette-get-flags" since="2.1.0"/>
     <keyword type="function" name="hb_ot_color_palette_get_name_id ()" link="harfbuzz-hb-ot-color.html#hb-ot-color-palette-get-name-id" since="2.1.0"/>
+    <keyword type="function" name="hb_ot_color_palette_color_get_name_id ()" link="harfbuzz-hb-ot-color.html#hb-ot-color-palette-color-get-name-id" since="2.1.0"/>
+    <keyword type="function" name="hb_ot_color_has_paint ()" link="harfbuzz-hb-ot-color.html#hb-ot-color-has-paint" since="7.0.0"/>
+    <keyword type="function" name="hb_ot_color_glyph_has_paint ()" link="harfbuzz-hb-ot-color.html#hb-ot-color-glyph-has-paint" since="7.0.0"/>
+    <keyword type="function" name="hb_ot_color_has_png ()" link="harfbuzz-hb-ot-color.html#hb-ot-color-has-png" since="2.1.0"/>
+    <keyword type="function" name="hb_ot_color_glyph_reference_png ()" link="harfbuzz-hb-ot-color.html#hb-ot-color-glyph-reference-png" since="2.1.0"/>
+    <keyword type="function" name="hb_ot_color_has_svg ()" link="harfbuzz-hb-ot-color.html#hb-ot-color-has-svg" since="2.1.0"/>
+    <keyword type="function" name="hb_ot_color_glyph_reference_svg ()" link="harfbuzz-hb-ot-color.html#hb-ot-color-glyph-reference-svg" since="2.1.0"/>
     <keyword type="typedef" name="hb_color_t" link="harfbuzz-hb-ot-color.html#hb-color-t" since="2.1.0"/>
     <keyword type="struct" name="hb_ot_color_layer_t" link="harfbuzz-hb-ot-color.html#hb-ot-color-layer-t" since="2.1.0"/>
     <keyword type="enum" name="enum hb_ot_color_palette_flags_t" link="harfbuzz-hb-ot-color.html#hb-ot-color-palette-flags-t" since="2.1.0"/>
@@ -948,6 +949,7 @@
     <keyword type="function" name="hb_subset_input_glyph_set ()" link="harfbuzz-hb-subset.html#hb-subset-input-glyph-set" since="1.8.0"/>
     <keyword type="function" name="hb_subset_input_set ()" link="harfbuzz-hb-subset.html#hb-subset-input-set" since="2.9.1"/>
     <keyword type="function" name="hb_subset_input_old_to_new_glyph_mapping ()" link="harfbuzz-hb-subset.html#hb-subset-input-old-to-new-glyph-mapping" since="7.3.0"/>
+    <keyword type="function" name="hb_subset_input_pin_all_axes_to_default ()" link="harfbuzz-hb-subset.html#hb-subset-input-pin-all-axes-to-default" since="8.3.1"/>
     <keyword type="function" name="hb_subset_input_pin_axis_location ()" link="harfbuzz-hb-subset.html#hb-subset-input-pin-axis-location" since="6.0.0"/>
     <keyword type="function" name="hb_subset_input_pin_axis_to_default ()" link="harfbuzz-hb-subset.html#hb-subset-input-pin-axis-to-default" since="6.0.0"/>
     <keyword type="function" name="hb_subset_or_fail ()" link="harfbuzz-hb-subset.html#hb-subset-or-fail" since="2.9.0"/>
@@ -1743,6 +1745,7 @@
     <keyword type="constant" name="HB_SUBSET_FLAGS_NO_PRUNE_UNICODE_RANGES" link="harfbuzz-hb-subset.html#HB-SUBSET-FLAGS-NO-PRUNE-UNICODE-RANGES:CAPS"/>
     <keyword type="constant" name="HB_SUBSET_FLAGS_NO_LAYOUT_CLOSURE" link="harfbuzz-hb-subset.html#HB-SUBSET-FLAGS-NO-LAYOUT-CLOSURE:CAPS"/>
     <keyword type="constant" name="HB_SUBSET_FLAGS_IFTB_REQUIREMENTS" link="harfbuzz-hb-subset.html#HB-SUBSET-FLAGS-IFTB-REQUIREMENTS:CAPS"/>
+    <keyword type="constant" name="HB_SUBSET_FLAGS_OPTIMIZE_IUP_DELTAS" link="harfbuzz-hb-subset.html#HB-SUBSET-FLAGS-OPTIMIZE-IUP-DELTAS:CAPS"/>
     <keyword type="constant" name="HB_SUBSET_SETS_GLYPH_INDEX" link="harfbuzz-hb-subset.html#HB-SUBSET-SETS-GLYPH-INDEX:CAPS"/>
     <keyword type="constant" name="HB_SUBSET_SETS_UNICODE" link="harfbuzz-hb-subset.html#HB-SUBSET-SETS-UNICODE:CAPS"/>
     <keyword type="constant" name="HB_SUBSET_SETS_NO_SUBSET_TABLE_TAG" link="harfbuzz-hb-subset.html#HB-SUBSET-SETS-NO-SUBSET-TABLE-TAG:CAPS"/>

@@ -172,10 +172,10 @@ font data, and fonts created from the returned <a class="link" href="harfbuzz-hb
 HarfBuzz font implementation, unless you call <a class="link" href="harfbuzz-hb-ft.html#hb-ft-font-set-funcs" title="hb_ft_font_set_funcs ()"><code class="function">hb_ft_font_set_funcs()</code></a> on them.</p>
 <p>This variant of the function does not provide any life-cycle management.</p>
 <p>Most client programs should use <a class="link" href="harfbuzz-hb-ft.html#hb-ft-face-create-referenced" title="hb_ft_face_create_referenced ()"><code class="function">hb_ft_face_create_referenced()</code></a>
-(or, perhaps, <a class="link" href="harfbuzz-hb-ft.html#hb-ft-face-create-cached" title="hb_ft_face_create_cached ()"><code class="function">hb_ft_face_create_cached()</code></a>) instead. </p>
+(or, perhaps, <a class="link" href="harfbuzz-hb-ft.html#hb-ft-face-create-cached" title="hb_ft_face_create_cached ()"><code class="function">hb_ft_face_create_cached()</code></a>) instead.</p>
 <p>If you know you have valid reasons not to use <a class="link" href="harfbuzz-hb-ft.html#hb-ft-face-create-referenced" title="hb_ft_face_create_referenced ()"><code class="function">hb_ft_face_create_referenced()</code></a>,
 then it is the client program's responsibility to destroy <em class="parameter"><code>ft_face</code></em>
- 
+
 after the <a class="link" href="harfbuzz-hb-face.html#hb-face-t" title="hb_face_t"><span class="type">hb_face_t</span></a> face object has been destroyed.</p>
 <div class="refsect3">
 <a name="hb-ft-face-create.parameters"></a><h4>Parameters</h4>
@@ -299,13 +299,13 @@ hb_ft_font_create (<em class="parameter"><code><span class="type">FT_Face</span>
 access `size` member of FT_Face unconditionally.</div>
 <p>This variant of the function does not provide any life-cycle management.</p>
 <p>Most client programs should use <a class="link" href="harfbuzz-hb-ft.html#hb-ft-font-create-referenced" title="hb_ft_font_create_referenced ()"><code class="function">hb_ft_font_create_referenced()</code></a>
-instead. </p>
+instead.</p>
 <p>If you know you have valid reasons not to use <a class="link" href="harfbuzz-hb-ft.html#hb-ft-font-create-referenced" title="hb_ft_font_create_referenced ()"><code class="function">hb_ft_font_create_referenced()</code></a>,
 then it is the client program's responsibility to destroy <em class="parameter"><code>ft_face</code></em>
- 
+
 after the <a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> font object has been destroyed.</p>
 <p>HarfBuzz will use the <em class="parameter"><code>destroy</code></em>
- callback on the <a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> font object 
+ callback on the <a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> font object
 if it is supplied when you use this function. However, even if <em class="parameter"><code>destroy</code></em>
 
 is provided, it is the client program's responsibility to destroy <em class="parameter"><code>ft_face</code></em>
@@ -504,7 +504,7 @@ hb_ft_font_unlock_face (<em class="parameter"><code><a class="link" href="harfbu
 hb_ft_font_set_load_flags (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> *font</code></em>,
                            <em class="parameter"><code><span class="type">int</span> load_flags</code></em>);</pre>
 <p>Sets the FT_Load_Glyph load flags for the specified <a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a>.</p>
-<p>For more information, see 
+<p>For more information, see
 <a class="ulink" href="https://freetype.org/freetype2/docs/reference/ft2-glyph_retrieval.html#ft_load_xxx" target="_top">https://freetype.org/freetype2/docs/reference/ft2-glyph_retrieval.html#ft_load_xxx</a></p>
 <p>This function works with <a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> objects created by
 <a class="link" href="harfbuzz-hb-ft.html#hb-ft-font-create" title="hb_ft_font_create ()"><code class="function">hb_ft_font_create()</code></a> or <a class="link" href="harfbuzz-hb-ft.html#hb-ft-font-create-referenced" title="hb_ft_font_create_referenced ()"><code class="function">hb_ft_font_create_referenced()</code></a>.</p>
@@ -538,7 +538,7 @@ hb_ft_font_set_load_flags (<em class="parameter"><code><a class="link" href="har
 <pre class="programlisting"><span class="returnvalue">int</span>
 hb_ft_font_get_load_flags (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> *font</code></em>);</pre>
 <p>Fetches the FT_Load_Glyph load flags of the specified <a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a>.</p>
-<p>For more information, see 
+<p>For more information, see
 <a class="ulink" href="https://freetype.org/freetype2/docs/reference/ft2-glyph_retrieval.html#ft_load_xxx" target="_top">https://freetype.org/freetype2/docs/reference/ft2-glyph_retrieval.html#ft_load_xxx</a></p>
 <p>This function works with <a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> objects created by
 <a class="link" href="harfbuzz-hb-ft.html#hb-ft-font-create" title="hb_ft_font_create ()"><code class="function">hb_ft_font_create()</code></a> or <a class="link" href="harfbuzz-hb-ft.html#hb-ft-font-create-referenced" title="hb_ft_font_create_referenced ()"><code class="function">hb_ft_font_create_referenced()</code></a>.</p>
