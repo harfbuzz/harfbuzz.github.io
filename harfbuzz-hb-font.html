@@ -827,14 +827,6 @@
 </tr>
 <tr>
 <td class="function_type">
-<a class="link" href="harfbuzz-hb-blob.html#hb-blob-t" title="hb_blob_t"><span class="returnvalue">hb_blob_t</span></a> *
-</td>
-<td class="function_name">
-<span class="c_punctuation">(</span><a class="link" href="harfbuzz-hb-font.html#hb-reference-table-func-t" title="hb_reference_table_func_t ()">*hb_reference_table_func_t</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
 <a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
 </td>
 <td class="function_name">
@@ -5373,50 +5365,6 @@ is not needed anymore. </p></td>
 </table></div>
 </div>
 <p class="since">Since: <a class="link" href="api-index-1-2-3.html#api-index-1.2.3">1.2.3</a></p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="hb-reference-table-func-t"></a><h3>hb_reference_table_func_t ()</h3>
-<pre class="programlisting"><a class="link" href="harfbuzz-hb-blob.html#hb-blob-t" title="hb_blob_t"><span class="returnvalue">hb_blob_t</span></a> *
-<span class="c_punctuation">(</span>*hb_reference_table_func_t<span class="c_punctuation">)</span> (<em class="parameter"><code><a class="link" href="harfbuzz-hb-face.html#hb-face-t" title="hb_face_t"><span class="type">hb_face_t</span></a> *face</code></em>,
-                              <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="type">hb_tag_t</span></a> tag</code></em>,
-                              <em class="parameter"><code><span class="type">void</span> *user_data</code></em>);</pre>
-<p>Callback function for <a class="link" href="harfbuzz-hb-face.html#hb-face-create-for-tables" title="hb_face_create_for_tables ()"><code class="function">hb_face_create_for_tables()</code></a>.</p>
-<div class="refsect3">
-<a name="hb-reference-table-func-t.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>face</p></td>
-<td class="parameter_description"><p>an <a class="link" href="harfbuzz-hb-face.html#hb-face-t" title="hb_face_t"><span class="type">hb_face_t</span></a> to reference table for</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>tag</p></td>
-<td class="parameter_description"><p>the tag of the table to reference</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>user_data</p></td>
-<td class="parameter_description"><p>User data pointer passed by the caller</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="hb-reference-table-func-t.returns"></a><h4>Returns</h4>
-<p>A pointer to the <em class="parameter"><code>tag</code></em>
-table within <em class="parameter"><code>face</code></em>
-. </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
-</div>
-<p class="since">Since: <a class="link" href="api-index-0-9-2.html#api-index-0.9.2">0.9.2</a></p>
 </div>
 <hr>
 <div class="refsect2">

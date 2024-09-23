@@ -56,6 +56,14 @@
 </tr>
 <tr>
 <td class="function_type">
+<a class="link" href="harfbuzz-hb-blob.html#hb-blob-t" title="hb_blob_t"><span class="returnvalue">hb_blob_t</span></a> *
+</td>
+<td class="function_name">
+<span class="c_punctuation">(</span><a class="link" href="harfbuzz-hb-face.html#hb-reference-table-func-t" title="hb_reference_table_func_t ()">*hb_reference_table_func_t</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
 <a class="link" href="harfbuzz-hb-face.html#hb-face-t" title="hb_face_t"><span class="returnvalue">hb_face_t</span></a> *
 </td>
 <td class="function_name">
@@ -116,6 +124,21 @@
 </td>
 <td class="function_name">
 <a class="link" href="harfbuzz-hb-face.html#hb-face-is-immutable" title="hb_face_is_immutable ()">hb_face_is_immutable</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">unsigned <span class="returnvalue">int</span>
+</td>
+<td class="function_name">
+<span class="c_punctuation">(</span><a class="link" href="harfbuzz-hb-face.html#hb-get-table-tags-func-t" title="hb_get_table_tags_func_t ()">*hb_get_table_tags_func_t</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-face.html#hb-face-set-get-table-tags-func" title="hb_face_set_get_table_tags_func ()">hb_face_set_get_table_tags_func</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 <tr>
@@ -354,15 +377,60 @@ The unmodified <em class="parameter"><code>index</code></em> can be accessed via
 </div>
 <hr>
 <div class="refsect2">
+<a name="hb-reference-table-func-t"></a><h3>hb_reference_table_func_t ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-blob.html#hb-blob-t" title="hb_blob_t"><span class="returnvalue">hb_blob_t</span></a> *
+<span class="c_punctuation">(</span>*hb_reference_table_func_t<span class="c_punctuation">)</span> (<em class="parameter"><code><a class="link" href="harfbuzz-hb-face.html#hb-face-t" title="hb_face_t"><span class="type">hb_face_t</span></a> *face</code></em>,
+                              <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="type">hb_tag_t</span></a> tag</code></em>,
+                              <em class="parameter"><code><span class="type">void</span> *user_data</code></em>);</pre>
+<p>Callback function for <a class="link" href="harfbuzz-hb-face.html#hb-face-create-for-tables" title="hb_face_create_for_tables ()"><code class="function">hb_face_create_for_tables()</code></a>.</p>
+<div class="refsect3">
+<a name="hb-reference-table-func-t.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>face</p></td>
+<td class="parameter_description"><p>an <a class="link" href="harfbuzz-hb-face.html#hb-face-t" title="hb_face_t"><span class="type">hb_face_t</span></a> to reference table for</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tag</p></td>
+<td class="parameter_description"><p>the tag of the table to reference</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>User data pointer passed by the caller</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-reference-table-func-t.returns"></a><h4>Returns</h4>
+<p>A pointer to the <em class="parameter"><code>tag</code></em>
+table within <em class="parameter"><code>face</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-0-9-2.html#api-index-0.9.2">0.9.2</a></p>
+</div>
+<hr>
+<div class="refsect2">
 <a name="hb-face-create-for-tables"></a><h3>hb_face_create_for_tables ()</h3>
 <pre class="programlisting"><a class="link" href="harfbuzz-hb-face.html#hb-face-t" title="hb_face_t"><span class="returnvalue">hb_face_t</span></a> *
-hb_face_create_for_tables (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-reference-table-func-t" title="hb_reference_table_func_t ()"><span class="type">hb_reference_table_func_t</span></a> reference_table_func</code></em>,
+hb_face_create_for_tables (<em class="parameter"><code><a class="link" href="harfbuzz-hb-face.html#hb-reference-table-func-t" title="hb_reference_table_func_t ()"><span class="type">hb_reference_table_func_t</span></a> reference_table_func</code></em>,
                            <em class="parameter"><code><span class="type">void</span> *user_data</code></em>,
                            <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-destroy-func-t" title="hb_destroy_func_t ()"><span class="type">hb_destroy_func_t</span></a> destroy</code></em>);</pre>
 <p>Variant of <a class="link" href="harfbuzz-hb-face.html#hb-face-create" title="hb_face_create ()"><code class="function">hb_face_create()</code></a>, built for those cases where it is more
 convenient to provide data for individual tables instead of the whole font
-data. With the caveat that <a class="link" href="harfbuzz-hb-face.html#hb-face-get-table-tags" title="hb_face_get_table_tags ()"><code class="function">hb_face_get_table_tags()</code></a> does not currently work
-with faces created this way.</p>
+data. With the caveat that <a class="link" href="harfbuzz-hb-face.html#hb-face-get-table-tags" title="hb_face_get_table_tags ()"><code class="function">hb_face_get_table_tags()</code></a> would not work
+with faces created this way. You can address that by calling the
+<a class="link" href="harfbuzz-hb-face.html#hb-face-set-get-table-tags-func" title="hb_face_set_get_table_tags_func ()"><code class="function">hb_face_set_get_table_tags_func()</code></a> function and setting the appropriate callback.</p>
 <p>Creates a new face object from the specified <em class="parameter"><code>user_data</code></em>
  and <em class="parameter"><code>reference_table_func</code></em>
 ,
@@ -614,6 +682,105 @@ hb_face_is_immutable (<em class="parameter"><code>const <a class="link" href="ha
 is immutable, <code class="literal">false</code> otherwise</p>
 </div>
 <p class="since">Since: <a class="link" href="api-index-0-9-2.html#api-index-0.9.2">0.9.2</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-get-table-tags-func-t"></a><h3>hb_get_table_tags_func_t ()</h3>
+<pre class="programlisting">unsigned <span class="returnvalue">int</span>
+<span class="c_punctuation">(</span>*hb_get_table_tags_func_t<span class="c_punctuation">)</span> (<em class="parameter"><code>const <a class="link" href="harfbuzz-hb-face.html#hb-face-t" title="hb_face_t"><span class="type">hb_face_t</span></a> *face</code></em>,
+                             <em class="parameter"><code>unsigned <span class="type">int</span> start_offset</code></em>,
+                             <em class="parameter"><code>unsigned <span class="type">int</span> *table_count</code></em>,
+                             <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="type">hb_tag_t</span></a> *table_tags</code></em>,
+                             <em class="parameter"><code><span class="type">void</span> *user_data</code></em>);</pre>
+<p>Callback function for <a class="link" href="harfbuzz-hb-face.html#hb-face-get-table-tags" title="hb_face_get_table_tags ()"><code class="function">hb_face_get_table_tags()</code></a>.</p>
+<div class="refsect3">
+<a name="hb-get-table-tags-func-t.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>face</p></td>
+<td class="parameter_description"><p>A face object</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>start_offset</p></td>
+<td class="parameter_description"><p>The index of first table tag to retrieve</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>table_count</p></td>
+<td class="parameter_description"><p>Input = the maximum number of table tags to return;
+Output = the actual number of table tags returned (may be zero). </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>table_tags</p></td>
+<td class="parameter_description"><p>The array of table tags found. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=table_count]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>User data pointer passed by the caller</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-get-table-tags-func-t.returns"></a><h4>Returns</h4>
+<p> Total number of tables, or zero if it is not possible to list</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-10-0-0.html#api-index-10.0.0">10.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-face-set-get-table-tags-func"></a><h3>hb_face_set_get_table_tags_func ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_face_set_get_table_tags_func (<em class="parameter"><code><a class="link" href="harfbuzz-hb-face.html#hb-face-t" title="hb_face_t"><span class="type">hb_face_t</span></a> *face</code></em>,
+                                 <em class="parameter"><code><a class="link" href="harfbuzz-hb-face.html#hb-get-table-tags-func-t" title="hb_get_table_tags_func_t ()"><span class="type">hb_get_table_tags_func_t</span></a> func</code></em>,
+                                 <em class="parameter"><code><span class="type">void</span> *user_data</code></em>,
+                                 <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-destroy-func-t" title="hb_destroy_func_t ()"><span class="type">hb_destroy_func_t</span></a> destroy</code></em>);</pre>
+<p>Sets the table-tag-fetching function for the specified face object.</p>
+<div class="refsect3">
+<a name="hb-face-set-get-table-tags-func.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>face</p></td>
+<td class="parameter_description"><p>A face object</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>func</p></td>
+<td class="parameter_description"><p>The table-tag-fetching function. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym> user_data][<acronym title="This parameter is a 'destroy_data', for callbacks."><span class="acronym">destroy</span></acronym> destroy][<acronym title="The callback is valid until the GDestroyNotify argument is called."><span class="acronym">scope notified</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>A pointer to the user data, to be destroyed by <em class="parameter"><code>destroy</code></em>
+when not needed anymore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>destroy</p></td>
+<td class="parameter_description"><p>A callback to call when <em class="parameter"><code>func</code></em>
+is not needed anymore. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-10-0-0.html#api-index-10.0.0">10.0.0</a></p>
 </div>
 <hr>
 <div class="refsect2">

@@ -959,7 +959,7 @@ Note: currently it supports gvar and cvar tables only.</p>
 hb_subset_or_fail (<em class="parameter"><code><a class="link" href="harfbuzz-hb-face.html#hb-face-t" title="hb_face_t"><span class="type">hb_face_t</span></a> *source</code></em>,
                    <em class="parameter"><code>const <a class="link" href="harfbuzz-hb-subset.html#hb-subset-input-t" title="hb_subset_input_t"><span class="type">hb_subset_input_t</span></a> *input</code></em>);</pre>
 <p>Subsets a font according to provided input. Returns nullptr
-if the subset operation fails.</p>
+if the subset operation fails or the face has no glyphs.</p>
 <div class="refsect3">
 <a name="hb-subset-or-fail.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
