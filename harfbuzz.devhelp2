@@ -140,6 +140,7 @@
       </sub>
       <sub name="API Index" link="api-index-full.html"/>
       <sub name="Index of deprecated API" link="deprecated-api-index.html"/>
+      <sub name="Index of new symbols in 10.2.0" link="api-index-10-2-0.html"/>
       <sub name="Index of new symbols in 10.1.0" link="api-index-10-1-0.html"/>
       <sub name="Index of new symbols in 10.0.0" link="api-index-10-0-0.html"/>
       <sub name="Index of new symbols in 8.5.0" link="api-index-8-5-0.html"/>
@@ -713,7 +714,6 @@
     <keyword type="typedef" name="hb_shape_plan_t" link="harfbuzz-hb-shape-plan.html#hb-shape-plan-t"/>
     <keyword type="function" name="hb_shape ()" link="harfbuzz-hb-shape.html#hb-shape" since="0.9.2"/>
     <keyword type="function" name="hb_shape_full ()" link="harfbuzz-hb-shape.html#hb-shape-full" since="0.9.2"/>
-    <keyword type="function" name="hb_shape_justify ()" link="harfbuzz-hb-shape.html#hb-shape-justify"/>
     <keyword type="function" name="hb_shape_list_shapers ()" link="harfbuzz-hb-shape.html#hb-shape-list-shapers" since="0.9.2"/>
     <keyword type="function" name="hb_unicode_general_category ()" link="harfbuzz-hb-unicode.html#hb-unicode-general-category" since="0.9.2"/>
     <keyword type="function" name="hb_unicode_combining_class ()" link="harfbuzz-hb-unicode.html#hb-unicode-combining-class" since="0.9.2"/>
@@ -969,6 +969,8 @@
     <keyword type="function" name="hb_subset_input_pin_axis_to_default ()" link="harfbuzz-hb-subset.html#hb-subset-input-pin-axis-to-default" since="6.0.0"/>
     <keyword type="function" name="hb_subset_input_get_axis_range ()" link="harfbuzz-hb-subset.html#hb-subset-input-get-axis-range" since="8.5.0"/>
     <keyword type="function" name="hb_subset_input_set_axis_range ()" link="harfbuzz-hb-subset.html#hb-subset-input-set-axis-range" since="8.5.0"/>
+    <keyword type="function" name="hb_subset_axis_range_from_string ()" link="harfbuzz-hb-subset.html#hb-subset-axis-range-from-string" since="10.2.0"/>
+    <keyword type="function" name="hb_subset_axis_range_to_string ()" link="harfbuzz-hb-subset.html#hb-subset-axis-range-to-string" since="10.2.0"/>
     <keyword type="function" name="hb_subset_or_fail ()" link="harfbuzz-hb-subset.html#hb-subset-or-fail" since="2.9.0"/>
     <keyword type="function" name="hb_subset_plan_create_or_fail ()" link="harfbuzz-hb-subset.html#hb-subset-plan-create-or-fail" since="4.0.0"/>
     <keyword type="function" name="hb_subset_plan_reference ()" link="harfbuzz-hb-subset.html#hb-subset-plan-reference" since="4.0.0"/>
@@ -980,10 +982,13 @@
     <keyword type="function" name="hb_subset_plan_new_to_old_glyph_mapping ()" link="harfbuzz-hb-subset.html#hb-subset-plan-new-to-old-glyph-mapping" since="4.0.0"/>
     <keyword type="function" name="hb_subset_plan_old_to_new_glyph_mapping ()" link="harfbuzz-hb-subset.html#hb-subset-plan-old-to-new-glyph-mapping" since="4.0.0"/>
     <keyword type="function" name="hb_subset_preprocess ()" link="harfbuzz-hb-subset.html#hb-subset-preprocess" since="6.0.0"/>
+    <keyword type="function" name="hb_subset_serialize_or_fail ()" link="harfbuzz-hb-subset.html#hb-subset-serialize-or-fail" since="10.2.0"/>
     <keyword type="enum" name="enum hb_subset_flags_t" link="harfbuzz-hb-subset.html#hb-subset-flags-t" since="2.9.0"/>
     <keyword type="typedef" name="hb_subset_input_t" link="harfbuzz-hb-subset.html#hb-subset-input-t"/>
     <keyword type="enum" name="enum hb_subset_sets_t" link="harfbuzz-hb-subset.html#hb-subset-sets-t" since="2.9.1"/>
     <keyword type="typedef" name="hb_subset_plan_t" link="harfbuzz-hb-subset.html#hb-subset-plan-t"/>
+    <keyword type="struct" name="hb_subset_serialize_link_t" link="harfbuzz-hb-subset.html#hb-subset-serialize-link-t" since="10.2.0"/>
+    <keyword type="struct" name="hb_subset_serialize_object_t" link="harfbuzz-hb-subset.html#hb-subset-serialize-object-t" since="10.2.0"/>
     <keyword type="constant" name="HB_MEMORY_MODE_DUPLICATE" link="harfbuzz-hb-blob.html#HB-MEMORY-MODE-DUPLICATE:CAPS"/>
     <keyword type="constant" name="HB_MEMORY_MODE_READONLY" link="harfbuzz-hb-blob.html#HB-MEMORY-MODE-READONLY:CAPS"/>
     <keyword type="constant" name="HB_MEMORY_MODE_WRITABLE" link="harfbuzz-hb-blob.html#HB-MEMORY-MODE-WRITABLE:CAPS"/>
@@ -1836,5 +1841,14 @@
     <keyword type="member" name="hb-aat-layout-feature-selector-info-t.name-id" link="harfbuzz-hb-aat-layout.html#hb-aat-layout-feature-selector-info-t.name-id"/>
     <keyword type="member" name="hb-aat-layout-feature-selector-info-t.enable" link="harfbuzz-hb-aat-layout.html#hb-aat-layout-feature-selector-info-t.enable"/>
     <keyword type="member" name="hb-aat-layout-feature-selector-info-t.disable" link="harfbuzz-hb-aat-layout.html#hb-aat-layout-feature-selector-info-t.disable"/>
+    <keyword type="member" name="hb-subset-serialize-link-t.width" link="harfbuzz-hb-subset.html#hb-subset-serialize-link-t.width"/>
+    <keyword type="member" name="hb-subset-serialize-link-t.position" link="harfbuzz-hb-subset.html#hb-subset-serialize-link-t.position"/>
+    <keyword type="member" name="hb-subset-serialize-link-t.objidx" link="harfbuzz-hb-subset.html#hb-subset-serialize-link-t.objidx"/>
+    <keyword type="member" name="hb-subset-serialize-object-t.head" link="harfbuzz-hb-subset.html#hb-subset-serialize-object-t.head"/>
+    <keyword type="member" name="hb-subset-serialize-object-t.tail" link="harfbuzz-hb-subset.html#hb-subset-serialize-object-t.tail"/>
+    <keyword type="member" name="hb-subset-serialize-object-t.num-real-links" link="harfbuzz-hb-subset.html#hb-subset-serialize-object-t.num-real-links"/>
+    <keyword type="member" name="hb-subset-serialize-object-t.real-links" link="harfbuzz-hb-subset.html#hb-subset-serialize-object-t.real-links"/>
+    <keyword type="member" name="hb-subset-serialize-object-t.num-virtual-links" link="harfbuzz-hb-subset.html#hb-subset-serialize-object-t.num-virtual-links"/>
+    <keyword type="member" name="hb-subset-serialize-object-t.virtual-links" link="harfbuzz-hb-subset.html#hb-subset-serialize-object-t.virtual-links"/>
   </functions>
 </book>

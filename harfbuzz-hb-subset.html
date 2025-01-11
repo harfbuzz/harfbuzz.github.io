@@ -177,6 +177,22 @@
 </tr>
 <tr>
 <td class="function_type">
+<a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-subset.html#hb-subset-axis-range-from-string" title="hb_subset_axis_range_from_string ()">hb_subset_axis_range_from_string</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-subset.html#hb-subset-axis-range-to-string" title="hb_subset_axis_range_to_string ()">hb_subset_axis_range_to_string</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
 <a class="link" href="harfbuzz-hb-face.html#hb-face-t" title="hb_face_t"><span class="returnvalue">hb_face_t</span></a> *
 </td>
 <td class="function_name">
@@ -263,6 +279,14 @@
 <a class="link" href="harfbuzz-hb-subset.html#hb-subset-preprocess" title="hb_subset_preprocess ()">hb_subset_preprocess</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
+<tr>
+<td class="function_type">
+<a class="link" href="harfbuzz-hb-blob.html#hb-blob-t" title="hb_blob_t"><span class="returnvalue">hb_blob_t</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-subset.html#hb-subset-serialize-or-fail" title="hb_subset_serialize_or_fail ()">hb_subset_serialize_or_fail</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
 </tbody>
 </table></div>
 </div>
@@ -289,6 +313,14 @@
 <tr>
 <td class="typedef_keyword">typedef</td>
 <td class="function_name"><a class="link" href="harfbuzz-hb-subset.html#hb-subset-plan-t" title="hb_subset_plan_t">hb_subset_plan_t</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="harfbuzz-hb-subset.html#hb-subset-serialize-link-t" title="hb_subset_serialize_link_t">hb_subset_serialize_link_t</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="harfbuzz-hb-subset.html#hb-subset-serialize-object-t" title="hb_subset_serialize_object_t">hb_subset_serialize_object_t</a></td>
 </tr>
 </tbody>
 </table></div>
@@ -901,8 +933,7 @@ New min/default/max values will be clamped if they're not within the fvar axis r
 value will be changed to the new min or max value, whichever is closer to the fvar
 axis default.</p>
 <p>Note: input min value can not be bigger than input max value. If the input
-default value is not within the new min/max range, it'll be clamped.
-Note: currently it supports gvar and cvar tables only.</p>
+default value is not within the new min/max range, it'll be clamped.</p>
 <p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
 <a name="hb-subset-input-set-axis-range.parameters"></a><h4>Parameters</h4>
@@ -951,6 +982,115 @@ Note: currently it supports gvar and cvar tables only.</p>
 <p> <code class="literal">true</code> if success, <code class="literal">false</code> otherwise</p>
 </div>
 <p class="since">Since: <a class="link" href="api-index-8-5-0.html#api-index-8.5.0">8.5.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-subset-axis-range-from-string"></a><h3>hb_subset_axis_range_from_string ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+hb_subset_axis_range_from_string (<em class="parameter"><code>const <span class="type">char</span> *str</code></em>,
+                                  <em class="parameter"><code><span class="type">int</span> len</code></em>,
+                                  <em class="parameter"><code><span class="type">float</span> *axis_min_value</code></em>,
+                                  <em class="parameter"><code><span class="type">float</span> *axis_max_value</code></em>,
+                                  <em class="parameter"><code><span class="type">float</span> *axis_def_value</code></em>);</pre>
+<p>Parses a string into a subset axis range(min, def, max).
+Axis positions string is in the format of min:def:max or min:max
+When parsing axis positions, empty values as meaning the existing value for that part
+E.g: :300:500
+Specifies min = existing, def = 300, max = 500
+In the output axis_range, if a value should be set to it's default value,
+then it will be set to NaN</p>
+<div class="refsect3">
+<a name="hb-subset-axis-range-from-string.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>str</p></td>
+<td class="parameter_description"><p>a string to parse</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>len</p></td>
+<td class="parameter_description"><p>length of <em class="parameter"><code>str</code></em>
+, or -1 if str is NULL terminated</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>axis_min_value</p></td>
+<td class="parameter_description"><p>the axis min value to initialize with the parsed value. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>axis_max_value</p></td>
+<td class="parameter_description"><p>the axis max value to initialize with the parsed value. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>axis_def_value</p></td>
+<td class="parameter_description"><p>the axis default value to initialize with the parse
+value. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-subset-axis-range-from-string.returns"></a><h4>Returns</h4>
+<p><code class="literal">true</code> if <em class="parameter"><code>str</code></em>
+is successfully parsed, <code class="literal">false</code> otherwise</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-10-2-0.html#api-index-10.2.0">10.2.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-subset-axis-range-to-string"></a><h3>hb_subset_axis_range_to_string ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_subset_axis_range_to_string (<em class="parameter"><code><a class="link" href="harfbuzz-hb-subset.html#hb-subset-input-t" title="hb_subset_input_t"><span class="type">hb_subset_input_t</span></a> *input</code></em>,
+                                <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="type">hb_tag_t</span></a> axis_tag</code></em>,
+                                <em class="parameter"><code><span class="type">char</span> *buf</code></em>,
+                                <em class="parameter"><code><span class="type">unsigned </span> size</code></em>);</pre>
+<p>Converts an axis range into a <code class="literal">NULL</code>-terminated string in the format
+understood by <a class="link" href="harfbuzz-hb-subset.html#hb-subset-axis-range-from-string" title="hb_subset_axis_range_from_string ()"><code class="function">hb_subset_axis_range_from_string()</code></a>. The client in responsible for
+allocating big enough size for <em class="parameter"><code>buf</code></em>
+, 128 bytes is more than enough.</p>
+<div class="refsect3">
+<a name="hb-subset-axis-range-to-string.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>input</p></td>
+<td class="parameter_description"><p>a <a class="link" href="harfbuzz-hb-subset.html#hb-subset-input-t" title="hb_subset_input_t"><span class="type">hb_subset_input_t</span></a> object.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>axis_tag</p></td>
+<td class="parameter_description"><p>an axis to convert</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>buf</p></td>
+<td class="parameter_description"><p>output string. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=size][<acronym title="Out parameter, where caller must allocate storage."><span class="acronym">out caller-allocates</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>size</p></td>
+<td class="parameter_description"><p>the allocated size of <em class="parameter"><code>buf</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-10-2-0.html#api-index-10.2.0">10.2.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1329,6 +1469,47 @@ as long as the returned <a class="link" href="harfbuzz-hb-face.html#hb-face-t" t
 </div>
 <p class="since">Since: <a class="link" href="api-index-6-0-0.html#api-index-6.0.0">6.0.0</a></p>
 </div>
+<hr>
+<div class="refsect2">
+<a name="hb-subset-serialize-or-fail"></a><h3>hb_subset_serialize_or_fail ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-blob.html#hb-blob-t" title="hb_blob_t"><span class="returnvalue">hb_blob_t</span></a> *
+hb_subset_serialize_or_fail (<em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="type">hb_tag_t</span></a> table_tag</code></em>,
+                             <em class="parameter"><code><a class="link" href="harfbuzz-hb-subset.html#hb-subset-serialize-object-t" title="hb_subset_serialize_object_t"><span class="type">hb_subset_serialize_object_t</span></a> *hb_objects</code></em>,
+                             <em class="parameter"><code><span class="type">unsigned </span> num_hb_objs</code></em>);</pre>
+<p>Given the input object graph info, repack a table to eliminate offset overflows and
+serialize it into a continuous array of bytes. A nullptr is returned if the serializing attempt fails.
+Table specific optimizations (eg. extension promotion in GSUB/GPOS) may be performed.
+Passing HB_TAG_NONE will disable table specific optimizations.</p>
+<div class="refsect3">
+<a name="hb-subset-serialize-or-fail.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>table_tag</p></td>
+<td class="parameter_description"><p>tag of the table being packed, needed to allow table specific optimizations.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>hb_objects</p></td>
+<td class="parameter_description"><p>raw array of struct hb_subset_serialize_object_t, which provides
+object graph info</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>num_hb_objs</p></td>
+<td class="parameter_description"><p>number of hb_subset_serialize_object_t in the hb_objects array.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-10-2-0.html#api-index-10.2.0">10.2.0</a></p>
+</div>
 </div>
 <div class="refsect1">
 <a name="harfbuzz-hb-subset.other_details"></a><h2>Types and Values</h2>
@@ -1546,6 +1727,106 @@ in the subset. Defaults to all tags. Since: 5.0.0</p>
 </pre>
 <p>Contains information about how the subset operation will be executed.
 Such as mappings from the old glyph ids to the new ones in the subset.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-subset-serialize-link-t"></a><h3>hb_subset_serialize_link_t</h3>
+<pre class="programlisting">typedef struct {
+  unsigned int width;
+  unsigned int position;
+  unsigned int objidx;
+} hb_subset_serialize_link_t;
+</pre>
+<p>Represents a link between two objects in the object graph
+to be serialized.</p>
+<div class="refsect3">
+<a name="hb-subset-serialize-link-t.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="struct_member_name"><p>unsigned <span class="type">int</span> <em class="structfield"><code><a name="hb-subset-serialize-link-t.width"></a>width</code></em>;</p></td>
+<td class="struct_member_description"><p>offsetSize in bytes</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p>unsigned <span class="type">int</span> <em class="structfield"><code><a name="hb-subset-serialize-link-t.position"></a>position</code></em>;</p></td>
+<td class="struct_member_description"><p>position of the offset field in bytes from
+beginning of subtable</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p>unsigned <span class="type">int</span> <em class="structfield"><code><a name="hb-subset-serialize-link-t.objidx"></a>objidx</code></em>;</p></td>
+<td class="struct_member_description"><p>index of subtable</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-10-2-0.html#api-index-10.2.0">10.2.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-subset-serialize-object-t"></a><h3>hb_subset_serialize_object_t</h3>
+<pre class="programlisting">typedef struct {
+  char *head;
+  char *tail;
+  unsigned int num_real_links;
+  hb_subset_serialize_link_t *real_links;
+  unsigned int num_virtual_links;
+  hb_subset_serialize_link_t *virtual_links;
+} hb_subset_serialize_object_t;
+</pre>
+<p>Represents an object in the object graph to be serialized.</p>
+<div class="refsect3">
+<a name="hb-subset-serialize-object-t.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="struct_member_name"><p><span class="type">char</span> *<em class="structfield"><code><a name="hb-subset-serialize-object-t.head"></a>head</code></em>;</p></td>
+<td class="struct_member_description"><p>start of object data</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">char</span> *<em class="structfield"><code><a name="hb-subset-serialize-object-t.tail"></a>tail</code></em>;</p></td>
+<td class="struct_member_description"><p>end of object data</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p>unsigned <span class="type">int</span> <em class="structfield"><code><a name="hb-subset-serialize-object-t.num-real-links"></a>num_real_links</code></em>;</p></td>
+<td class="struct_member_description"><p>number of offset field in the object</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="harfbuzz-hb-subset.html#hb-subset-serialize-link-t" title="hb_subset_serialize_link_t"><span class="type">hb_subset_serialize_link_t</span></a> *<em class="structfield"><code><a name="hb-subset-serialize-object-t.real-links"></a>real_links</code></em>;</p></td>
+<td class="struct_member_description"><p>array of offset info</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p>unsigned <span class="type">int</span> <em class="structfield"><code><a name="hb-subset-serialize-object-t.num-virtual-links"></a>num_virtual_links</code></em>;</p></td>
+<td class="struct_member_description"><p>number of objects that must be packed
+after current object in the final
+serialized order</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="harfbuzz-hb-subset.html#hb-subset-serialize-link-t" title="hb_subset_serialize_link_t"><span class="type">hb_subset_serialize_link_t</span></a> *<em class="structfield"><code><a name="hb-subset-serialize-object-t.virtual-links"></a>virtual_links</code></em>;</p></td>
+<td class="struct_member_description"><p>array of virtual link info</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-10-2-0.html#api-index-10.2.0">10.2.0</a></p>
 </div>
 </div>
 </div>
