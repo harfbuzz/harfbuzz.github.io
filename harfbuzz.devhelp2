@@ -140,6 +140,7 @@
       </sub>
       <sub name="API Index" link="api-index-full.html"/>
       <sub name="Index of deprecated API" link="deprecated-api-index.html"/>
+      <sub name="Index of new symbols in 10.3.0" link="api-index-10-3-0.html"/>
       <sub name="Index of new symbols in 10.2.0" link="api-index-10-2-0.html"/>
       <sub name="Index of new symbols in 10.1.0" link="api-index-10-1-0.html"/>
       <sub name="Index of new symbols in 10.0.0" link="api-index-10-0-0.html"/>
@@ -824,6 +825,7 @@
     <keyword type="function" name="hb_ot_layout_table_get_lookup_count ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-table-get-lookup-count" since="0.9.22"/>
     <keyword type="function" name="hb_ot_layout_table_select_script ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-table-select-script" since="2.0.0"/>
     <keyword type="function" name="hb_ot_shape_plan_collect_lookups ()" link="harfbuzz-hb-ot-layout.html#hb-ot-shape-plan-collect-lookups" since="0.9.7"/>
+    <keyword type="function" name="hb_ot_shape_plan_get_feature_tags ()" link="harfbuzz-hb-ot-layout.html#hb-ot-shape-plan-get-feature-tags" since="10.3.0"/>
     <keyword type="function" name="hb_ot_layout_language_get_required_feature_index ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-language-get-required-feature-index" since="0.6.0"/>
     <keyword type="macro" name="HB_OT_MAX_TAGS_PER_LANGUAGE" link="harfbuzz-hb-ot-layout.html#HB-OT-MAX-TAGS-PER-LANGUAGE:CAPS" since="2.0.0"/>
     <keyword type="macro" name="HB_OT_MAX_TAGS_PER_SCRIPT" link="harfbuzz-hb-ot-layout.html#HB-OT-MAX-TAGS-PER-SCRIPT:CAPS" since="2.0.0"/>
@@ -940,6 +942,8 @@
     <keyword type="function" name="hb_gdi_face_create ()" link="harfbuzz-hb-gdi.html#hb-gdi-face-create" since="2.6.0"/>
     <keyword type="function" name="hb_directwrite_face_create ()" link="harfbuzz-hb-directwrite.html#hb-directwrite-face-create" since="2.4.0"/>
     <keyword type="function" name="hb_directwrite_face_get_font_face ()" link="harfbuzz-hb-directwrite.html#hb-directwrite-face-get-font-face" since="2.5.0"/>
+    <keyword type="function" name="hb_directwrite_font_create ()" link="harfbuzz-hb-directwrite.html#hb-directwrite-font-create" since="10.3.0"/>
+    <keyword type="function" name="hb_directwrite_font_get_dw_font ()" link="harfbuzz-hb-directwrite.html#hb-directwrite-font-get-dw-font" since="10.3.0"/>
     <keyword type="function" name="hb_cairo_font_face_create_for_font ()" link="harfbuzz-hb-cairo.html#hb-cairo-font-face-create-for-font" since="7.0.0"/>
     <keyword type="function" name="hb_cairo_font_face_get_font ()" link="harfbuzz-hb-cairo.html#hb-cairo-font-face-get-font" since="7.0.0"/>
     <keyword type="function" name="hb_cairo_font_face_create_for_face ()" link="harfbuzz-hb-cairo.html#hb-cairo-font-face-create-for-face" since="7.0.0"/>

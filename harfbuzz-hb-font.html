@@ -3,12 +3,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>hb-font: HarfBuzz Manual</title>
-<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
 <link rel="home" href="index.html" title="HarfBuzz Manual">
 <link rel="up" href="core-api.html" title="Core API">
 <link rel="prev" href="harfbuzz-hb-face.html" title="hb-face">
 <link rel="next" href="harfbuzz-hb-map.html" title="hb-map">
-<meta name="generator" content="GTK-Doc V1.32 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.34.0 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -1053,7 +1053,7 @@ face.</div>
 <div class="refsect3">
 <a name="hb-font-create.returns"></a><h4>Returns</h4>
 <p>The new font object. </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 <p class="since">Since: <a class="link" href="api-index-0-9-2.html#api-index-0.9.2">0.9.2</a></p>
 </div>
@@ -1083,7 +1083,7 @@ replicating the parent's properties.</p>
 <div class="refsect3">
 <a name="hb-font-create-sub-font.returns"></a><h4>Returns</h4>
 <p>The new sub-font font object. </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 <p class="since">Since: <a class="link" href="api-index-0-9-2.html#api-index-0.9.2">0.9.2</a></p>
 </div>
@@ -1096,7 +1096,7 @@ hb_font_get_empty (<em class="parameter"><code><span class="type">void</span></c
 <div class="refsect3">
 <a name="hb-font-get-empty.returns"></a><h4>Returns</h4>
 <p>The empty font object. </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 <p class="since">Since: <a class="link" href="api-index-0-9-2.html#api-index-0.9.2">0.9.2</a></p>
 </div>
@@ -1126,7 +1126,7 @@ hb_font_reference (<em class="parameter"><code><a class="link" href="harfbuzz-hb
 <a name="hb-font-reference.returns"></a><h4>Returns</h4>
 <p>The <em class="parameter"><code>font</code></em>
 object. </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 <p class="since">Since: <a class="link" href="api-index-0-9-2.html#api-index-0.9.2">0.9.2</a></p>
 </div>
@@ -1245,7 +1245,7 @@ attached to the specified font object.</p>
 <div class="refsect3">
 <a name="hb-font-get-user-data.returns"></a><h4>Returns</h4>
 <p>Pointer to the user data. </p>
-<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
 <p class="since">Since: <a class="link" href="api-index-0-9-2.html#api-index-0.9.2">0.9.2</a></p>
 </div>
@@ -1358,7 +1358,7 @@ hb_font_get_face (<em class="parameter"><code><a class="link" href="harfbuzz-hb-
 <div class="refsect3">
 <a name="hb-font-get-face.returns"></a><h4>Returns</h4>
 <p>The <a class="link" href="harfbuzz-hb-face.html#hb-face-t" title="hb_face_t"><span class="type">hb_face_t</span></a> value. </p>
-<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
 <p class="since">Since: <a class="link" href="api-index-0-9-2.html#api-index-0.9.2">0.9.2</a></p>
 </div>
@@ -2610,7 +2610,7 @@ hb_font_get_parent (<em class="parameter"><code><a class="link" href="harfbuzz-h
 <div class="refsect3">
 <a name="hb-font-get-parent.returns"></a><h4>Returns</h4>
 <p>The parent font object. </p>
-<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
 <p class="since">Since: <a class="link" href="api-index-0-9-2.html#api-index-0.9.2">0.9.2</a></p>
 </div>
@@ -3631,7 +3631,7 @@ hb_font_funcs_create (<em class="parameter"><code><span class="type">void</span>
 <div class="refsect3">
 <a name="hb-font-funcs-create.returns"></a><h4>Returns</h4>
 <p>The font-functions structure. </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 <p class="since">Since: <a class="link" href="api-index-0-9-2.html#api-index-0.9.2">0.9.2</a></p>
 </div>
@@ -3644,7 +3644,7 @@ hb_font_funcs_get_empty (<em class="parameter"><code><span class="type">void</sp
 <div class="refsect3">
 <a name="hb-font-funcs-get-empty.returns"></a><h4>Returns</h4>
 <p>The font-functions structure. </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 <p class="since">Since: <a class="link" href="api-index-0-9-2.html#api-index-0.9.2">0.9.2</a></p>
 </div>
@@ -3791,7 +3791,7 @@ attached to the specified font-functions structure.</p>
 <div class="refsect3">
 <a name="hb-font-funcs-get-user-data.returns"></a><h4>Returns</h4>
 <p>A pointer to the user data. </p>
-<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
 <p class="since">Since: <a class="link" href="api-index-0-9-2.html#api-index-0.9.2">0.9.2</a></p>
 </div>
@@ -5823,6 +5823,6 @@ negative, in coordinate systems that grow up.</p>
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.32</div>
+<hr>Generated by GTK-Doc V1.34.0</div>
 </body>
 </html>
