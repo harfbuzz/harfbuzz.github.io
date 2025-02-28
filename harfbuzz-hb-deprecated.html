@@ -186,6 +186,30 @@
 <a class="link" href="harfbuzz-hb-deprecated.html#hb-font-get-glyph-v-kerning" title="hb_font_get_glyph_v_kerning ()">hb_font_get_glyph_v_kerning</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">IDWriteFontFace</span> *
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-deprecated.html#hb-directwrite-face-get-font-face" title="hb_directwrite_face_get_font_face ()">hb_directwrite_face_get_font_face</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">FT_Face</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-deprecated.html#hb-ft-font-get-face" title="hb_ft_font_get_face ()">hb_ft_font_get_face</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gr_font</span> *
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-deprecated.html#hb-graphite2-font-get-gr-font" title="hb_graphite2_font_get_gr_font ()">hb_graphite2_font_get_gr_font</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
 </tbody>
 </table></div>
 </div>
@@ -1144,6 +1168,105 @@ the specified font, for vertical text segments.</p>
 <p> The kerning adjustment value</p>
 </div>
 <p class="since">Since: <a class="link" href="api-index-0-9-2.html#api-index-0.9.2">0.9.2</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-directwrite-face-get-font-face"></a><h3>hb_directwrite_face_get_font_face ()</h3>
+<pre class="programlisting"><span class="returnvalue">IDWriteFontFace</span> *
+hb_directwrite_face_get_font_face (<em class="parameter"><code><a class="link" href="harfbuzz-hb-face.html#hb-face-t" title="hb_face_t"><span class="type">hb_face_t</span></a> *face</code></em>);</pre>
+<div class="warning">
+<p><code class="literal">hb_directwrite_face_get_font_face</code> has been deprecated since version 10.4.0 and should not be used in newly-written code.</p>
+<p>Use <a class="link" href="harfbuzz-hb-directwrite.html#hb-directwrite-face-get-dw-font-face" title="hb_directwrite_face_get_dw_font_face ()"><code class="function">hb_directwrite_face_get_dw_font_face()</code></a> instead</p>
+</div>
+<p>Gets the DirectWrite IDWriteFontFace associated with <em class="parameter"><code>face</code></em>
+.</p>
+<div class="refsect3">
+<a name="hb-directwrite-face-get-font-face.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>face</p></td>
+<td class="parameter_description"><p>a <a class="link" href="harfbuzz-hb-face.html#hb-face-t" title="hb_face_t"><span class="type">hb_face_t</span></a> object</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-directwrite-face-get-font-face.returns"></a><h4>Returns</h4>
+<p> DirectWrite IDWriteFontFace object corresponding to the given input</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-5-0.html#api-index-2.5.0">2.5.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-ft-font-get-face"></a><h3>hb_ft_font_get_face ()</h3>
+<pre class="programlisting"><span class="returnvalue">FT_Face</span>
+hb_ft_font_get_face (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> *font</code></em>);</pre>
+<div class="warning">
+<p><code class="literal">hb_ft_font_get_face</code> has been deprecated since version 10.4.0 and should not be used in newly-written code.</p>
+<p>Use <a class="link" href="harfbuzz-hb-ft.html#hb-ft-font-get-ft-face" title="hb_ft_font_get_ft_face ()"><code class="function">hb_ft_font_get_ft_face()</code></a> instead.</p>
+</div>
+<p>Fetches the FT_Face associated with the specified <a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a>
+font object.</p>
+<p>This function works with <a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> objects created by
+<a class="link" href="harfbuzz-hb-ft.html#hb-ft-font-create" title="hb_ft_font_create ()"><code class="function">hb_ft_font_create()</code></a> or <a class="link" href="harfbuzz-hb-ft.html#hb-ft-font-create-referenced" title="hb_ft_font_create_referenced ()"><code class="function">hb_ft_font_create_referenced()</code></a>.</p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+<div class="refsect3">
+<a name="hb-ft-font-get-face.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>font</p></td>
+<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> to work upon</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-ft-font-get-face.returns"></a><h4>Returns</h4>
+<p>the FT_Face found or <code class="literal">NULL</code>. </p>
+<p><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-0-9-2.html#api-index-0.9.2">0.9.2</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-graphite2-font-get-gr-font"></a><h3>hb_graphite2_font_get_gr_font ()</h3>
+<pre class="programlisting"><span class="returnvalue">gr_font</span> *
+hb_graphite2_font_get_gr_font (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> *font</code></em>);</pre>
+<div class="warning"><p><code class="literal">hb_graphite2_font_get_gr_font</code> has been deprecated since version 1.4.2 and should not be used in newly-written code.</p></div>
+<p>Always returns <code class="literal">NULL</code>. Use <a class="link" href="harfbuzz-hb-graphite2.html#hb-graphite2-face-get-gr-face" title="hb_graphite2_face_get_gr_face ()"><code class="function">hb_graphite2_face_get_gr_face()</code></a> instead.</p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+<div class="refsect3">
+<a name="hb-graphite2-font-get-gr-font.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>font</p></td>
+<td class="parameter_description"><p>An <a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-graphite2-font-get-gr-font.returns"></a><h4>Returns</h4>
+<p>Graphite2 font associated with <em class="parameter"><code>font</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-0-9-10.html#api-index-0.9.10">0.9.10</a></p>
 </div>
 </div>
 <div class="refsect1">
