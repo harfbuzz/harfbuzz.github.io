@@ -67,7 +67,30 @@
 <a class="link" href="harfbuzz-hb-face.html#hb-face-t" title="hb_face_t"><span class="returnvalue">hb_face_t</span></a> *
 </td>
 <td class="function_name">
+<a class="link" href="harfbuzz-hb-face.html#hb-face-create-or-fail-using" title="hb_face_create_or_fail_using ()">hb_face_create_or_fail_using</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="harfbuzz-hb-face.html#hb-face-t" title="hb_face_t"><span class="returnvalue">hb_face_t</span></a> *
+</td>
+<td class="function_name">
 <a class="link" href="harfbuzz-hb-face.html#hb-face-create-from-file-or-fail" title="hb_face_create_from_file_or_fail ()">hb_face_create_from_file_or_fail</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="harfbuzz-hb-face.html#hb-face-t" title="hb_face_t"><span class="returnvalue">hb_face_t</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-face.html#hb-face-create-from-file-or-fail-using" title="hb_face_create_from_file_or_fail_using ()">hb_face_create_from_file_or_fail_using</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">char</span> **
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-face.html#hb-face-list-loaders" title="hb_face_list_loaders ()">hb_face_list_loaders</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 <tr>
@@ -432,6 +455,56 @@ no face is found at the specified index. </p>
 </div>
 <hr>
 <div class="refsect2">
+<a name="hb-face-create-or-fail-using"></a><h3>hb_face_create_or_fail_using ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-face.html#hb-face-t" title="hb_face_t"><span class="returnvalue">hb_face_t</span></a> *
+hb_face_create_or_fail_using (<em class="parameter"><code><a class="link" href="harfbuzz-hb-blob.html#hb-blob-t" title="hb_blob_t"><span class="type">hb_blob_t</span></a> *blob</code></em>,
+                              <em class="parameter"><code>unsigned <span class="type">int</span> index</code></em>,
+                              <em class="parameter"><code>const <span class="type">char</span> *loader_name</code></em>);</pre>
+<p>A thin wrapper around the face loader functions registered with HarfBuzz.
+If <em class="parameter"><code>loader_name</code></em>
+ is <code class="literal">NULL</code> or the empty string, the first available loader
+is used.</p>
+<p>For example, the FreeType ("ft") loader might be able to load
+WOFF and WOFF2 files if FreeType is built with those features,
+whereas the OpenType ("ot") loader will not.</p>
+<div class="refsect3">
+<a name="hb-face-create-or-fail-using.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>blob</p></td>
+<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-blob.html#hb-blob-t" title="hb_blob_t"><span class="type">hb_blob_t</span></a> to work upon</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>index</p></td>
+<td class="parameter_description"><p>The index of the face within <em class="parameter"><code>blob</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>loader_name</p></td>
+<td class="parameter_description"><p>The name of the loader to use, or <code class="literal">NULL</code>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-face-create-or-fail-using.returns"></a><h4>Returns</h4>
+<p>The new face object, or <code class="literal">NULL</code> if
+the loader fails to load the face. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-11-0-0.html#api-index-11.0.0">11.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
 <a name="hb-face-create-from-file-or-fail"></a><h3>hb_face_create_from_file_or_fail ()</h3>
 <pre class="programlisting"><a class="link" href="harfbuzz-hb-face.html#hb-face-t" title="hb_face_t"><span class="returnvalue">hb_face_t</span></a> *
 hb_face_create_from_file_or_fail (<em class="parameter"><code>const <span class="type">char</span> *file_name</code></em>,
@@ -467,6 +540,72 @@ no face is found at the specified index or the file cannot be read. </p>
 <p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 <p class="since">Since: <a class="link" href="api-index-10-1-0.html#api-index-10.1.0">10.1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-face-create-from-file-or-fail-using"></a><h3>hb_face_create_from_file_or_fail_using ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-face.html#hb-face-t" title="hb_face_t"><span class="returnvalue">hb_face_t</span></a> *
+hb_face_create_from_file_or_fail_using
+                               (<em class="parameter"><code>const <span class="type">char</span> *file_name</code></em>,
+                                <em class="parameter"><code>unsigned <span class="type">int</span> index</code></em>,
+                                <em class="parameter"><code>const <span class="type">char</span> *loader_name</code></em>);</pre>
+<p>A thin wrapper around the face loader functions registered with HarfBuzz.
+If <em class="parameter"><code>loader_name</code></em>
+ is <code class="literal">NULL</code> or the empty string, the first available loader
+is used.</p>
+<p>For example, the FreeType ("ft") loader might be able to load
+WOFF and WOFF2 files if FreeType is built with those features,
+whereas the OpenType ("ot") loader will not.</p>
+<div class="refsect3">
+<a name="hb-face-create-from-file-or-fail-using.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>file_name</p></td>
+<td class="parameter_description"><p>A font filename</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>index</p></td>
+<td class="parameter_description"><p>The index of the face within the file</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>loader_name</p></td>
+<td class="parameter_description"><p>The name of the loader to use, or <code class="literal">NULL</code>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-face-create-from-file-or-fail-using.returns"></a><h4>Returns</h4>
+<p>The new face object, or <code class="literal">NULL</code> if
+the file cannot be read or the loader fails to load the face. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-11-0-0.html#api-index-11.0.0">11.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-face-list-loaders"></a><h3>hb_face_list_loaders ()</h3>
+<pre class="programlisting">const <span class="returnvalue">char</span> **
+hb_face_list_loaders (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Retrieves the list of face loaders supported by HarfBuzz.</p>
+<div class="refsect3">
+<a name="hb-face-list-loaders.returns"></a><h4>Returns</h4>
+<p>a
+<code class="literal">NULL</code>-terminated array of supported face loaders
+constant strings. The returned array is owned by HarfBuzz
+and should not be modified or freed. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> zero-terminated=1]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-11-0-0.html#api-index-11.0.0">11.0.0</a></p>
 </div>
 <hr>
 <div class="refsect2">

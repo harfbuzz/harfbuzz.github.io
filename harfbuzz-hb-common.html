@@ -1103,6 +1103,8 @@ hb_feature_to_string (<em class="parameter"><code><a class="link" href="harfbuzz
 understood by <a class="link" href="harfbuzz-hb-common.html#hb-feature-from-string" title="hb_feature_from_string ()"><code class="function">hb_feature_from_string()</code></a>. The client in responsible for
 allocating big enough size for <em class="parameter"><code>buf</code></em>
 , 128 bytes is more than enough.</p>
+<p>Note that the feature value will be omitted if it is '1', but the
+string won't include any whitespace.</p>
 <div class="refsect3">
 <a name="hb-feature-to-string.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -1192,6 +1194,7 @@ hb_variation_to_string (<em class="parameter"><code><a class="link" href="harfbu
 understood by <a class="link" href="harfbuzz-hb-common.html#hb-variation-from-string" title="hb_variation_from_string ()"><code class="function">hb_variation_from_string()</code></a>. The client in responsible for
 allocating big enough size for <em class="parameter"><code>buf</code></em>
 , 128 bytes is more than enough.</p>
+<p>Note that the string won't include any whitespace.</p>
 <div class="refsect3">
 <a name="hb-variation-to-string.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">

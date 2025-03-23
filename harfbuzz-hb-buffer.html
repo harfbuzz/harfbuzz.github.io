@@ -584,6 +584,24 @@
 <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-set-message-func" title="hb_buffer_set_message_func ()">hb_buffer_set_message_func</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-buffer.html#HB-BUFFER-CLUSTER-LEVEL-IS-CHARACTERS:CAPS" title="HB_BUFFER_CLUSTER_LEVEL_IS_CHARACTERS()">HB_BUFFER_CLUSTER_LEVEL_IS_CHARACTERS</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-buffer.html#HB-BUFFER-CLUSTER-LEVEL-IS-GRAPHEMES:CAPS" title="HB_BUFFER_CLUSTER_LEVEL_IS_GRAPHEMES()">HB_BUFFER_CLUSTER_LEVEL_IS_GRAPHEMES</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-buffer.html#HB-BUFFER-CLUSTER-LEVEL-IS-MONOTONE:CAPS" title="HB_BUFFER_CLUSTER_LEVEL_IS_MONOTONE()">HB_BUFFER_CLUSTER_LEVEL_IS_MONOTONE</a><span class="c_punctuation">()</span>
+</td>
+</tr>
 </tbody>
 </table></div>
 </div>
@@ -2898,8 +2916,7 @@ consumed one. </p></td>
 </div>
 <div class="refsect3">
 <a name="hb-buffer-deserialize-glyphs.returns"></a><h4>Returns</h4>
-<p> <code class="literal">true</code> if parse was successful, <code class="literal">false</code> if an error
-occurred.</p>
+<p> <code class="literal">true</code> if the full string was parsed, <code class="literal">false</code> otherwise.</p>
 </div>
 <p class="since">Since: <a class="link" href="api-index-0-9-7.html#api-index-0.9.7">0.9.7</a></p>
 </div>
@@ -3068,8 +3085,7 @@ consumed one. </p></td>
 </div>
 <div class="refsect3">
 <a name="hb-buffer-deserialize-unicode.returns"></a><h4>Returns</h4>
-<p> <code class="literal">true</code> if parse was successful, <code class="literal">false</code> if an error
-occurred.</p>
+<p> <code class="literal">true</code> if the full string was parsed, <code class="literal">false</code> otherwise.</p>
 </div>
 <p class="since">Since: <a class="link" href="api-index-2-7-3.html#api-index-2.7.3">2.7.3</a></p>
 </div>
@@ -3413,6 +3429,75 @@ is not needed anymore. </p></td>
 </table></div>
 </div>
 <p class="since">Since: <a class="link" href="api-index-1-1-3.html#api-index-1.1.3">1.1.3</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="HB-BUFFER-CLUSTER-LEVEL-IS-CHARACTERS:CAPS"></a><h3>HB_BUFFER_CLUSTER_LEVEL_IS_CHARACTERS()</h3>
+<pre class="programlisting">#define             HB_BUFFER_CLUSTER_LEVEL_IS_CHARACTERS(level)</pre>
+<p>Tests whether a cluster level does not group cluster values by graphemes.
+Requires that the level be valid.</p>
+<div class="refsect3">
+<a name="HB-BUFFER-CLUSTER-LEVEL-IS-CHARACTERS.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>level</p></td>
+<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-cluster-level-t" title="enum hb_buffer_cluster_level_t"><span class="type">hb_buffer_cluster_level_t</span></a> to test</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-11-0-0.html#api-index-11.0.0">11.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="HB-BUFFER-CLUSTER-LEVEL-IS-GRAPHEMES:CAPS"></a><h3>HB_BUFFER_CLUSTER_LEVEL_IS_GRAPHEMES()</h3>
+<pre class="programlisting">#define             HB_BUFFER_CLUSTER_LEVEL_IS_GRAPHEMES(level)</pre>
+<p>Tests whether a cluster level groups cluster values by graphemes. Requires
+that the level be valid.</p>
+<div class="refsect3">
+<a name="HB-BUFFER-CLUSTER-LEVEL-IS-GRAPHEMES.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>level</p></td>
+<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-cluster-level-t" title="enum hb_buffer_cluster_level_t"><span class="type">hb_buffer_cluster_level_t</span></a> to test</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-11-0-0.html#api-index-11.0.0">11.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="HB-BUFFER-CLUSTER-LEVEL-IS-MONOTONE:CAPS"></a><h3>HB_BUFFER_CLUSTER_LEVEL_IS_MONOTONE()</h3>
+<pre class="programlisting">#define             HB_BUFFER_CLUSTER_LEVEL_IS_MONOTONE(level)</pre>
+<p>Tests whether a cluster level groups cluster values into monotone order.
+Requires that the level be valid.</p>
+<div class="refsect3">
+<a name="HB-BUFFER-CLUSTER-LEVEL-IS-MONOTONE.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>level</p></td>
+<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-cluster-level-t" title="enum hb_buffer_cluster_level_t"><span class="type">hb_buffer_cluster_level_t</span></a> to test</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-11-0-0.html#api-index-11.0.0">11.0.0</a></p>
 </div>
 </div>
 <div class="refsect1">
@@ -3819,16 +3904,30 @@ it will not be produced. Since: 5.1.0</p>
 <a name="hb-buffer-cluster-level-t"></a><h3>enum hb_buffer_cluster_level_t</h3>
 <p>Data type for holding HarfBuzz's clustering behavior options. The cluster level
 dictates one aspect of how HarfBuzz will treat non-base characters
-
 during shaping.</p>
 <p>In <em class="parameter"><code>HB_BUFFER_CLUSTER_LEVEL_MONOTONE_GRAPHEMES</code></em>
 , non-base
-characters are merged into the cluster of the base character that precedes them.</p>
+characters are merged into the cluster of the base character that precedes them.
+There is also cluster merging every time the clusters will otherwise become non-monotone.</p>
 <p>In <em class="parameter"><code>HB_BUFFER_CLUSTER_LEVEL_MONOTONE_CHARACTERS</code></em>
 , non-base characters are initially
 assigned their own cluster values, which are not merged into preceding base
 clusters. This allows HarfBuzz to perform additional operations like reorder
-sequences of adjacent marks.</p>
+sequences of adjacent marks. The output is still monotone, but the cluster
+values are more granular.</p>
+<p>In <em class="parameter"><code>HB_BUFFER_CLUSTER_LEVEL_CHARACTERS</code></em>
+, non-base characters are assigned their
+own cluster values, which are not merged into preceding base clusters. Moreover,
+the cluster values are not merged into monotone order. This is the most granular
+cluster level, and it is useful for clients that need to know the exact cluster
+values of each character, but is harder to use for clients, since clusters
+might appear in any order.</p>
+<p>In <em class="parameter"><code>HB_BUFFER_CLUSTER_LEVEL_GRAPHEMES</code></em>
+, non-base characters are merged into the
+cluster of the base character that precedes them. This is similar to the Unicode
+Grapheme Cluster algorithm, but it is not exactly the same. The output is
+not forced to be monotone. This is useful for clients that want to use HarfBuzz
+as a cheap implementation of the Unicode Grapheme Cluster algorithm.</p>
 <p><em class="parameter"><code>HB_BUFFER_CLUSTER_LEVEL_MONOTONE_GRAPHEMES</code></em>
  is the default, because it maintains
 backward compatibility with older versions of HarfBuzz. New client programs that
@@ -3863,6 +3962,13 @@ monotone order.</p>
 <td class="enum_member_name"><p><a name="HB-BUFFER-CLUSTER-LEVEL-CHARACTERS:CAPS"></a>HB_BUFFER_CLUSTER_LEVEL_CHARACTERS</p></td>
 <td class="enum_member_description">
 <p>Don't group cluster values.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HB-BUFFER-CLUSTER-LEVEL-GRAPHEMES:CAPS"></a>HB_BUFFER_CLUSTER_LEVEL_GRAPHEMES</p></td>
+<td class="enum_member_description">
+<p>Only group clusters, but don't enforce monotone order.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>

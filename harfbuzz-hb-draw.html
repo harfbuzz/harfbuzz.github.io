@@ -1301,7 +1301,7 @@ hb_draw_close_path (<em class="parameter"><code><a class="link" href="harfbuzz-h
 <a name="harfbuzz-hb-draw.other_details"></a><h2>Types and Values</h2>
 <div class="refsect2">
 <a name="HB-DRAW-STATE-DEFAULT:CAPS"></a><h3>HB_DRAW_STATE_DEFAULT</h3>
-<pre class="programlisting">#define HB_DRAW_STATE_DEFAULT {0, 0.f, 0.f, 0.f, 0.f, {0.}, {0.}, {0.}, {0.}, {0.}, {0.}, {0.}}
+<pre class="programlisting">#define HB_DRAW_STATE_DEFAULT {0, 0.f, 0.f, 0.f, 0.f, 0.f, {0.}, {0.}, {0.}, {0.}, {0.}, {0.}}
 </pre>
 <p>The default <a class="link" href="harfbuzz-hb-draw.html#hb-draw-state-t" title="hb_draw_state_t"><span class="type">hb_draw_state_t</span></a> at the start of glyph drawing.</p>
 </div>
@@ -1328,9 +1328,17 @@ callback isn't defined.</p>
 
   float current_x;
   float current_y;
+
+  float slant_xy;
 } hb_draw_state_t;
 </pre>
 <p>Current drawing state.</p>
+<p>The <em class="parameter"><code>slant_xy</code></em>
+ is a slanting factor for synthetic oblique. If the font's
+oblique angle is not 0, this factor is used to slant the drawing. For
+fonts with uniform x and y scales, this factor is calculated as
+tan(oblique_angle). For fonts with non-uniform scales, this factor is
+calculated as tan(oblique_angle) * x_scale / y_scale, or 0 if y_scale is 0.</p>
 <div class="refsect3">
 <a name="hb-draw-state-t.members"></a><h4>Members</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -1364,6 +1372,11 @@ callback isn't defined.</p>
 <td class="struct_member_name"><p><span class="type">float</span> <em class="structfield"><code><a name="hb-draw-state-t.current-y"></a>current_y</code></em>;</p></td>
 <td class="struct_member_description"><p>Y component of current point</p></td>
 <td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">float</span> <em class="structfield"><code><a name="hb-draw-state-t.slant-xy"></a>slant_xy</code></em>;</p></td>
+<td class="struct_member_description"><p>Slanting factor for synthetic oblique. </p></td>
+<td class="struct_member_annotations"><span class="annotation">[Since: 11.0.0]</span></td>
 </tr>
 </tbody>
 </table></div>

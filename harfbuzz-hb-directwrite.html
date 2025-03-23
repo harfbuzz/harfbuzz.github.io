@@ -6,8 +6,8 @@
 <meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
 <link rel="home" href="index.html" title="HarfBuzz Manual">
 <link rel="up" href="integration-api.html" title="Integration API">
-<link rel="prev" href="harfbuzz-hb-gdi.html" title="hb-gdi">
-<link rel="next" href="harfbuzz-hb-cairo.html" title="hb-cairo">
+<link rel="prev" href="harfbuzz-hb-coretext.html" title="hb-coretext">
+<link rel="next" href="harfbuzz-hb-ft.html" title="hb-ft">
 <meta name="generator" content="GTK-Doc V1.34.0 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
@@ -19,8 +19,8 @@
 </td>
 <td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
 <td><a accesskey="u" href="integration-api.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
-<td><a accesskey="p" href="harfbuzz-hb-gdi.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
-<td><a accesskey="n" href="harfbuzz-hb-cairo.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+<td><a accesskey="p" href="harfbuzz-hb-coretext.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="harfbuzz-hb-ft.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
 </tr></table>
 <div class="refentry">
 <a name="harfbuzz-hb-directwrite"></a><div class="titlepage"></div>
@@ -49,6 +49,22 @@
 </tr>
 <tr>
 <td class="function_type">
+<a class="link" href="harfbuzz-hb-face.html#hb-face-t" title="hb_face_t"><span class="returnvalue">hb_face_t</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-directwrite.html#hb-directwrite-face-create-from-file-or-fail" title="hb_directwrite_face_create_from_file_or_fail ()">hb_directwrite_face_create_from_file_or_fail</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="harfbuzz-hb-face.html#hb-face-t" title="hb_face_t"><span class="returnvalue">hb_face_t</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-directwrite.html#hb-directwrite-face-create-from-blob-or-fail" title="hb_directwrite_face_create_from_blob_or_fail ()">hb_directwrite_face_create_from_blob_or_fail</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
 <span class="returnvalue">IDWriteFontFace</span> *
 </td>
 <td class="function_name">
@@ -65,10 +81,18 @@
 </tr>
 <tr>
 <td class="function_type">
-<span class="returnvalue">IDWriteFont</span> *
+<span class="returnvalue">IDWriteFontFace</span> *
 </td>
 <td class="function_name">
-<a class="link" href="harfbuzz-hb-directwrite.html#hb-directwrite-font-get-dw-font" title="hb_directwrite_font_get_dw_font ()">hb_directwrite_font_get_dw_font</a> <span class="c_punctuation">()</span>
+<a class="link" href="harfbuzz-hb-directwrite.html#hb-directwrite-font-get-dw-font-face" title="hb_directwrite_font_get_dw_font_face ()">hb_directwrite_font_get_dw_font_face</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-directwrite.html#hb-directwrite-font-set-funcs" title="hb_directwrite_font_set_funcs ()">hb_directwrite_font_set_funcs</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 </tbody>
@@ -113,6 +137,88 @@ hb_directwrite_face_create (<em class="parameter"><code><span class="type">IDWri
 </div>
 <hr>
 <div class="refsect2">
+<a name="hb-directwrite-face-create-from-file-or-fail"></a><h3>hb_directwrite_face_create_from_file_or_fail ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-face.html#hb-face-t" title="hb_face_t"><span class="returnvalue">hb_face_t</span></a> *
+hb_directwrite_face_create_from_file_or_fail
+                               (<em class="parameter"><code>const <span class="type">char</span> *file_name</code></em>,
+                                <em class="parameter"><code>unsigned <span class="type">int</span> index</code></em>);</pre>
+<p>Creates an <a class="link" href="harfbuzz-hb-face.html#hb-face-t" title="hb_face_t"><span class="type">hb_face_t</span></a> face object from the specified
+font file and face index.</p>
+<p>This is similar in functionality to <a class="link" href="harfbuzz-hb-face.html#hb-face-create-from-file-or-fail" title="hb_face_create_from_file_or_fail ()"><code class="function">hb_face_create_from_file_or_fail()</code></a>,
+but uses the DirectWrite library for loading the font file.</p>
+<div class="refsect3">
+<a name="hb-directwrite-face-create-from-file-or-fail.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>file_name</p></td>
+<td class="parameter_description"><p>A font filename</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>index</p></td>
+<td class="parameter_description"><p>The index of the face within the file</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-directwrite-face-create-from-file-or-fail.returns"></a><h4>Returns</h4>
+<p>The new face object, or <code class="literal">NULL</code> if
+no face is found at the specified index or the file cannot be read. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-11-0-0.html#api-index-11.0.0">11.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-directwrite-face-create-from-blob-or-fail"></a><h3>hb_directwrite_face_create_from_blob_or_fail ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-face.html#hb-face-t" title="hb_face_t"><span class="returnvalue">hb_face_t</span></a> *
+hb_directwrite_face_create_from_blob_or_fail
+                               (<em class="parameter"><code><a class="link" href="harfbuzz-hb-blob.html#hb-blob-t" title="hb_blob_t"><span class="type">hb_blob_t</span></a> *blob</code></em>,
+                                <em class="parameter"><code>unsigned <span class="type">int</span> index</code></em>);</pre>
+<p>Creates an <a class="link" href="harfbuzz-hb-face.html#hb-face-t" title="hb_face_t"><span class="type">hb_face_t</span></a> face object from the specified
+blob and face index.</p>
+<p>This is similar in functionality to <code class="function">hb_face_create_from_blob_or_fail()</code>,
+but uses the DirectWrite library for loading the font data.</p>
+<div class="refsect3">
+<a name="hb-directwrite-face-create-from-blob-or-fail.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>blob</p></td>
+<td class="parameter_description"><p>A blob containing the font data</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>index</p></td>
+<td class="parameter_description"><p>The index of the face within the blob</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-directwrite-face-create-from-blob-or-fail.returns"></a><h4>Returns</h4>
+<p>The new face object, or <code class="literal">NULL</code> if
+no face is found at the specified index or the blob cannot be read. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-11-0-0.html#api-index-11.0.0">11.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
 <a name="hb-directwrite-face-get-dw-font-face"></a><h3>hb_directwrite_face_get_dw_font_face ()</h3>
 <pre class="programlisting"><span class="returnvalue">IDWriteFontFace</span> *
 hb_directwrite_face_get_dw_font_face (<em class="parameter"><code><a class="link" href="harfbuzz-hb-face.html#hb-face-t" title="hb_face_t"><span class="type">hb_face_t</span></a> *face</code></em>);</pre>
@@ -143,8 +249,8 @@ hb_directwrite_face_get_dw_font_face (<em class="parameter"><code><a class="link
 <div class="refsect2">
 <a name="hb-directwrite-font-create"></a><h3>hb_directwrite_font_create ()</h3>
 <pre class="programlisting"><a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="returnvalue">hb_font_t</span></a> *
-hb_directwrite_font_create (<em class="parameter"><code><span class="type">IDWriteFont</span> *dw_font</code></em>);</pre>
-<p>Constructs a new font object from the specified DirectWrite IDWriteFont.</p>
+hb_directwrite_font_create (<em class="parameter"><code><span class="type">IDWriteFontFace</span> *dw_face</code></em>);</pre>
+<p>Constructs a new font object from the specified DirectWrite IDWriteFontFace.</p>
 <div class="refsect3">
 <a name="hb-directwrite-font-create.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -154,8 +260,8 @@ hb_directwrite_font_create (<em class="parameter"><code><span class="type">IDWri
 <col width="200px" class="parameters_annotations">
 </colgroup>
 <tbody><tr>
-<td class="parameter_name"><p>dw_font</p></td>
-<td class="parameter_description"><p>a DirectWrite IDWriteFont object.</p></td>
+<td class="parameter_name"><p>dw_face</p></td>
+<td class="parameter_description"><p>a DirectWrite IDWriteFontFace object.</p></td>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
@@ -164,17 +270,17 @@ hb_directwrite_font_create (<em class="parameter"><code><span class="type">IDWri
 <a name="hb-directwrite-font-create.returns"></a><h4>Returns</h4>
 <p> <a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> object corresponding to the given input</p>
 </div>
-<p class="since">Since: <a class="link" href="api-index-10-3-0.html#api-index-10.3.0">10.3.0</a></p>
+<p class="since">Since: <a class="link" href="api-index-11-0-0.html#api-index-11.0.0">11.0.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
-<a name="hb-directwrite-font-get-dw-font"></a><h3>hb_directwrite_font_get_dw_font ()</h3>
-<pre class="programlisting"><span class="returnvalue">IDWriteFont</span> *
-hb_directwrite_font_get_dw_font (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> *font</code></em>);</pre>
-<p>Gets the DirectWrite IDWriteFont associated with <em class="parameter"><code>font</code></em>
+<a name="hb-directwrite-font-get-dw-font-face"></a><h3>hb_directwrite_font_get_dw_font_face ()</h3>
+<pre class="programlisting"><span class="returnvalue">IDWriteFontFace</span> *
+hb_directwrite_font_get_dw_font_face (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> *font</code></em>);</pre>
+<p>Gets the DirectWrite IDWriteFontFace associated with <em class="parameter"><code>font</code></em>
 .</p>
 <div class="refsect3">
-<a name="hb-directwrite-font-get-dw-font.parameters"></a><h4>Parameters</h4>
+<a name="hb-directwrite-font-get-dw-font-face.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -189,10 +295,41 @@ hb_directwrite_font_get_dw_font (<em class="parameter"><code><a class="link" hre
 </table></div>
 </div>
 <div class="refsect3">
-<a name="hb-directwrite-font-get-dw-font.returns"></a><h4>Returns</h4>
-<p> DirectWrite IDWriteFont object corresponding to the given input</p>
+<a name="hb-directwrite-font-get-dw-font-face.returns"></a><h4>Returns</h4>
+<p> DirectWrite IDWriteFontFace object corresponding to the given input</p>
 </div>
-<p class="since">Since: <a class="link" href="api-index-10-3-0.html#api-index-10.3.0">10.3.0</a></p>
+<p class="since">Since: <a class="link" href="api-index-11-0-0.html#api-index-11.0.0">11.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-directwrite-font-set-funcs"></a><h3>hb_directwrite_font_set_funcs ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_directwrite_font_set_funcs (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> *font</code></em>);</pre>
+<p>Configures the font-functions structure of the specified
+<a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> font object to use DirectWrite font functions.</p>
+<p>In particular, you can use this function to configure an
+existing <a class="link" href="harfbuzz-hb-face.html#hb-face-t" title="hb_face_t"><span class="type">hb_face_t</span></a> face object for use with DirectWrite font
+functions even if that <a class="link" href="harfbuzz-hb-face.html#hb-face-t" title="hb_face_t"><span class="type">hb_face_t</span></a> face object was initially
+created with <a class="link" href="harfbuzz-hb-face.html#hb-face-create" title="hb_face_create ()"><code class="function">hb_face_create()</code></a>, and therefore was not
+initially configured to use DirectWrite font functions.</p>
+<div class="note">Note: Internally, this function creates a DirectWrite font.
+</div>
+<div class="refsect3">
+<a name="hb-directwrite-font-set-funcs.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>font</p></td>
+<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> to work upon</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-11-0-0.html#api-index-11.0.0">11.0.0</a></p>
 </div>
 </div>
 </div>
