@@ -53,11 +53,12 @@
       access glyph data in this form.
     </p>
 <p>
-      In the general case, you have to use <code class="function">hb_font_paint_glyph()</code>
+      In the general case, you have to use <code class="function">hb_font_paint_or_fail_glyph()</code>
       and pass a <span class="type">hb_paint_funcs_t</span> struct with callbacks to obtain paint
-      graphs for glyphs that have them. The <code class="function">hb_font_paint_glyph()</code>
-      API can handle outline and image glyphs as well, so it provides a unified API for
-      access to glyph rendering information.
+      color glyphs, either graphs or image glyphs.
+      The <code class="function">hb_font_paint_glyph()</code> API is higher level and can handle
+      outline glyphs as well, so it provides a unified API for access to glyph rendering
+      information.
     </p>
 </div>
 <div class="footer">

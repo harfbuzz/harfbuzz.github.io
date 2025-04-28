@@ -1091,8 +1091,12 @@ is no longer needed. </p></td>
                                     <em class="parameter"><code><span class="type">void</span> *user_data</code></em>);</pre>
 <p>A virtual method for the <a class="link" href="harfbuzz-hb-paint.html#hb-paint-funcs-t" title="hb_paint_funcs_t"><span class="type">hb_paint_funcs_t</span></a> to clip
 subsequent paint calls to the outline of a glyph.</p>
-<p>The coordinates of the glyph outline are interpreted according
-to the current transform.</p>
+<p>The coordinates of the glyph outline are expected in the
+current <em class="parameter"><code>font</code></em>
+ scale (ie. the results of calling
+<a class="link" href="harfbuzz-hb-font.html#hb-font-draw-glyph" title="hb_font_draw_glyph ()"><code class="function">hb_font_draw_glyph()</code></a> with <em class="parameter"><code>font</code></em>
+). The outline is
+transformed by the current transform.</p>
 <p>This clip is applied in addition to the current clip,
 and remains in effect until a matching call to
 the <span class="type">hb_paint_funcs_pop_clip_func_t</span> vfunc.</p>
@@ -1537,7 +1541,7 @@ and should be used to size and position the image.</p>
 </tr>
 <tr>
 <td class="parameter_name"><p>slant</p></td>
-<td class="parameter_description"><p>the synthetic slant ratio to be applied to the image during rendering</p></td>
+<td class="parameter_description"><p>Deprecated. Always set to 0.0.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -2912,7 +2916,7 @@ hb_paint_image (<em class="parameter"><code><a class="link" href="harfbuzz-hb-pa
 </tr>
 <tr>
 <td class="parameter_name"><p>slant</p></td>
-<td class="parameter_description"><p>the synthetic slant ratio to be applied to the image during rendering</p></td>
+<td class="parameter_description"><p>Deprecated. set to 0.0</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
