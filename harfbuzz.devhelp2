@@ -141,6 +141,7 @@
       </sub>
       <sub name="API Index" link="api-index-full.html"/>
       <sub name="Index of deprecated API" link="deprecated-api-index.html"/>
+      <sub name="Index of new symbols in 11.3.0" link="api-index-11-3-0.html"/>
       <sub name="Index of new symbols in 11.2.0" link="api-index-11-2-0.html"/>
       <sub name="Index of new symbols in 11.0.0" link="api-index-11-0-0.html"/>
       <sub name="Index of new symbols in 10.4.0" link="api-index-10-4-0.html"/>
@@ -488,10 +489,10 @@
     <keyword type="function" name="hb_font_get_glyph_shape ()" link="harfbuzz-hb-deprecated.html#hb-font-get-glyph-shape" deprecated="7.0.0: Use hb_font_draw_glyph() instead" since="4.0.0"/>
     <keyword type="function" name="hb_font_get_glyph_shape_func_t ()" link="harfbuzz-hb-deprecated.html#hb-font-get-glyph-shape-func-t" deprecated="7.0.0: Use #hb_font_draw_glyph_func_t instead" since="4.0.0"/>
     <keyword type="function" name="hb_font_funcs_set_glyph_shape_func ()" link="harfbuzz-hb-deprecated.html#hb-font-funcs-set-glyph-shape-func" deprecated="7.0.0: Use hb_font_funcs_set_draw_glyph_func() instead" since="4.0.0"/>
-    <keyword type="function" name="hb_font_draw_glyph_func_t ()" link="harfbuzz-hb-deprecated.html#hb-font-draw-glyph-func-t" deprecated="" since="7.0.0"/>
-    <keyword type="function" name="hb_font_funcs_set_draw_glyph_func ()" link="harfbuzz-hb-deprecated.html#hb-font-funcs-set-draw-glyph-func" deprecated="" since="7.0.0"/>
-    <keyword type="function" name="hb_font_paint_glyph_func_t ()" link="harfbuzz-hb-deprecated.html#hb-font-paint-glyph-func-t" deprecated="" since="7.0.0"/>
-    <keyword type="function" name="hb_font_funcs_set_paint_glyph_func ()" link="harfbuzz-hb-deprecated.html#hb-font-funcs-set-paint-glyph-func" deprecated="" since="7.0.0"/>
+    <keyword type="function" name="hb_font_draw_glyph_func_t ()" link="harfbuzz-hb-deprecated.html#hb-font-draw-glyph-func-t" deprecated="11.2.0: Use hb_font_draw_glyph_func_or_fail_t instead." since="7.0.0"/>
+    <keyword type="function" name="hb_font_funcs_set_draw_glyph_func ()" link="harfbuzz-hb-deprecated.html#hb-font-funcs-set-draw-glyph-func" deprecated="11.2.0: Use hb_font_funcs_set_draw_glyph_or_fail_func instead." since="7.0.0"/>
+    <keyword type="function" name="hb_font_paint_glyph_func_t ()" link="harfbuzz-hb-deprecated.html#hb-font-paint-glyph-func-t" deprecated="11.2.0: Use hb_font_paint_glyph_or_fail_func_t instead." since="7.0.0"/>
+    <keyword type="function" name="hb_font_funcs_set_paint_glyph_func ()" link="harfbuzz-hb-deprecated.html#hb-font-funcs-set-paint-glyph-func" deprecated="11.2.0: Use hb_font_funcs_set_paint_glyph_or_fail_func() instead." since="7.0.0"/>
     <keyword type="function" name="hb_font_get_glyph_v_kerning ()" link="harfbuzz-hb-deprecated.html#hb-font-get-glyph-v-kerning" deprecated="2.0.0" since="0.9.2"/>
     <keyword type="function" name="hb_directwrite_face_get_font_face ()" link="harfbuzz-hb-deprecated.html#hb-directwrite-face-get-font-face" deprecated="10.4.0: Use hb_directwrite_face_get_dw_font_face() instead" since="2.5.0"/>
     <keyword type="function" name="hb_directwrite_font_get_dw_font ()" link="harfbuzz-hb-deprecated.html#hb-directwrite-font-get-dw-font" deprecated="11.0.0:" since="10.3.0"/>
@@ -572,13 +573,13 @@
     <keyword type="function" name="hb_font_get_glyph_h_origin ()" link="harfbuzz-hb-font.html#hb-font-get-glyph-h-origin" since="0.9.2"/>
     <keyword type="function" name="hb_font_get_glyph_v_origin ()" link="harfbuzz-hb-font.html#hb-font-get-glyph-v-origin" since="0.9.2"/>
     <keyword type="function" name="hb_font_get_glyph_origin_for_direction ()" link="harfbuzz-hb-font.html#hb-font-get-glyph-origin-for-direction" since="0.9.2"/>
-    <keyword type="function" name="hb_font_get_glyph_h_origins ()" link="harfbuzz-hb-font.html#hb-font-get-glyph-h-origins"/>
-    <keyword type="function" name="hb_font_get_glyph_v_origins ()" link="harfbuzz-hb-font.html#hb-font-get-glyph-v-origins"/>
+    <keyword type="function" name="hb_font_get_glyph_h_origins ()" link="harfbuzz-hb-font.html#hb-font-get-glyph-h-origins" since="11.3.0"/>
+    <keyword type="function" name="hb_font_get_glyph_v_origins ()" link="harfbuzz-hb-font.html#hb-font-get-glyph-v-origins" since="11.3.0"/>
     <keyword type="function" name="hb_font_get_glyph_name ()" link="harfbuzz-hb-font.html#hb-font-get-glyph-name" since="0.9.2"/>
     <keyword type="function" name="hb_font_draw_glyph ()" link="harfbuzz-hb-font.html#hb-font-draw-glyph" since="7.0.0"/>
-    <keyword type="function" name="hb_font_draw_glyph_or_fail ()" link="harfbuzz-hb-font.html#hb-font-draw-glyph-or-fail"/>
+    <keyword type="function" name="hb_font_draw_glyph_or_fail ()" link="harfbuzz-hb-font.html#hb-font-draw-glyph-or-fail" since="11.2.0"/>
     <keyword type="function" name="hb_font_paint_glyph ()" link="harfbuzz-hb-font.html#hb-font-paint-glyph" since="7.0.0"/>
-    <keyword type="function" name="hb_font_paint_glyph_or_fail ()" link="harfbuzz-hb-font.html#hb-font-paint-glyph-or-fail"/>
+    <keyword type="function" name="hb_font_paint_glyph_or_fail ()" link="harfbuzz-hb-font.html#hb-font-paint-glyph-or-fail" since="11.2.0"/>
     <keyword type="function" name="hb_font_get_nominal_glyph ()" link="harfbuzz-hb-font.html#hb-font-get-nominal-glyph" since="1.2.3"/>
     <keyword type="function" name="hb_font_get_nominal_glyphs ()" link="harfbuzz-hb-font.html#hb-font-get-nominal-glyphs" since="2.6.3"/>
     <keyword type="function" name="hb_font_get_variation_glyph ()" link="harfbuzz-hb-font.html#hb-font-get-variation-glyph" since="1.2.3"/>
@@ -590,7 +591,7 @@
     <keyword type="function" name="hb_font_get_ptem ()" link="harfbuzz-hb-font.html#hb-font-get-ptem" since="1.6.0"/>
     <keyword type="function" name="hb_font_set_scale ()" link="harfbuzz-hb-font.html#hb-font-set-scale" since="0.9.2"/>
     <keyword type="function" name="hb_font_get_scale ()" link="harfbuzz-hb-font.html#hb-font-get-scale" since="0.9.2"/>
-    <keyword type="function" name="hb_font_is_synthetic ()" link="harfbuzz-hb-font.html#hb-font-is-synthetic"/>
+    <keyword type="function" name="hb_font_is_synthetic ()" link="harfbuzz-hb-font.html#hb-font-is-synthetic" since="11.2.0"/>
     <keyword type="function" name="hb_font_get_synthetic_bold ()" link="harfbuzz-hb-font.html#hb-font-get-synthetic-bold" since="7.0.0"/>
     <keyword type="function" name="hb_font_set_synthetic_bold ()" link="harfbuzz-hb-font.html#hb-font-set-synthetic-bold" since="7.0.0"/>
     <keyword type="function" name="hb_font_set_synthetic_slant ()" link="harfbuzz-hb-font.html#hb-font-set-synthetic-slant" since="3.3.0"/>
@@ -637,15 +638,15 @@
     <keyword type="function" name="hb_font_get_glyph_origin_func_t ()" link="harfbuzz-hb-font.html#hb-font-get-glyph-origin-func-t"/>
     <keyword type="function" name="hb_font_funcs_set_glyph_h_origin_func ()" link="harfbuzz-hb-font.html#hb-font-funcs-set-glyph-h-origin-func" since="0.9.2"/>
     <keyword type="function" name="hb_font_funcs_set_glyph_v_origin_func ()" link="harfbuzz-hb-font.html#hb-font-funcs-set-glyph-v-origin-func" since="0.9.2"/>
-    <keyword type="function" name="hb_font_get_glyph_origins_func_t ()" link="harfbuzz-hb-font.html#hb-font-get-glyph-origins-func-t"/>
-    <keyword type="function" name="hb_font_funcs_set_glyph_h_origins_func ()" link="harfbuzz-hb-font.html#hb-font-funcs-set-glyph-h-origins-func"/>
-    <keyword type="function" name="hb_font_funcs_set_glyph_v_origins_func ()" link="harfbuzz-hb-font.html#hb-font-funcs-set-glyph-v-origins-func"/>
+    <keyword type="function" name="hb_font_get_glyph_origins_func_t ()" link="harfbuzz-hb-font.html#hb-font-get-glyph-origins-func-t" since="11.3.0"/>
+    <keyword type="function" name="hb_font_funcs_set_glyph_h_origins_func ()" link="harfbuzz-hb-font.html#hb-font-funcs-set-glyph-h-origins-func" since="11.3.0"/>
+    <keyword type="function" name="hb_font_funcs_set_glyph_v_origins_func ()" link="harfbuzz-hb-font.html#hb-font-funcs-set-glyph-v-origins-func" since="11.3.0"/>
     <keyword type="function" name="hb_font_get_glyph_name_func_t ()" link="harfbuzz-hb-font.html#hb-font-get-glyph-name-func-t"/>
     <keyword type="function" name="hb_font_funcs_set_glyph_name_func ()" link="harfbuzz-hb-font.html#hb-font-funcs-set-glyph-name-func" since="0.9.2"/>
-    <keyword type="function" name="hb_font_draw_glyph_or_fail_func_t ()" link="harfbuzz-hb-font.html#hb-font-draw-glyph-or-fail-func-t"/>
-    <keyword type="function" name="hb_font_funcs_set_draw_glyph_or_fail_func ()" link="harfbuzz-hb-font.html#hb-font-funcs-set-draw-glyph-or-fail-func"/>
-    <keyword type="function" name="hb_font_paint_glyph_or_fail_func_t ()" link="harfbuzz-hb-font.html#hb-font-paint-glyph-or-fail-func-t"/>
-    <keyword type="function" name="hb_font_funcs_set_paint_glyph_or_fail_func ()" link="harfbuzz-hb-font.html#hb-font-funcs-set-paint-glyph-or-fail-func"/>
+    <keyword type="function" name="hb_font_draw_glyph_or_fail_func_t ()" link="harfbuzz-hb-font.html#hb-font-draw-glyph-or-fail-func-t" since="11.2.0"/>
+    <keyword type="function" name="hb_font_funcs_set_draw_glyph_or_fail_func ()" link="harfbuzz-hb-font.html#hb-font-funcs-set-draw-glyph-or-fail-func" since="11.2.0"/>
+    <keyword type="function" name="hb_font_paint_glyph_or_fail_func_t ()" link="harfbuzz-hb-font.html#hb-font-paint-glyph-or-fail-func-t" since="11.2.0"/>
+    <keyword type="function" name="hb_font_funcs_set_paint_glyph_or_fail_func ()" link="harfbuzz-hb-font.html#hb-font-funcs-set-paint-glyph-or-fail-func" since="11.2.0"/>
     <keyword type="function" name="hb_font_get_nominal_glyph_func_t ()" link="harfbuzz-hb-font.html#hb-font-get-nominal-glyph-func-t"/>
     <keyword type="function" name="hb_font_funcs_set_nominal_glyph_func ()" link="harfbuzz-hb-font.html#hb-font-funcs-set-nominal-glyph-func" since="1.2.3"/>
     <keyword type="function" name="hb_font_get_nominal_glyphs_func_t ()" link="harfbuzz-hb-font.html#hb-font-get-nominal-glyphs-func-t"/>
@@ -666,8 +667,8 @@
     <keyword type="typedef" name="hb_font_get_glyph_h_kerning_func_t" link="harfbuzz-hb-font.html#hb-font-get-glyph-h-kerning-func-t"/>
     <keyword type="typedef" name="hb_font_get_glyph_h_origin_func_t" link="harfbuzz-hb-font.html#hb-font-get-glyph-h-origin-func-t"/>
     <keyword type="typedef" name="hb_font_get_glyph_v_origin_func_t" link="harfbuzz-hb-font.html#hb-font-get-glyph-v-origin-func-t"/>
-    <keyword type="typedef" name="hb_font_get_glyph_h_origins_func_t" link="harfbuzz-hb-font.html#hb-font-get-glyph-h-origins-func-t"/>
-    <keyword type="typedef" name="hb_font_get_glyph_v_origins_func_t" link="harfbuzz-hb-font.html#hb-font-get-glyph-v-origins-func-t"/>
+    <keyword type="typedef" name="hb_font_get_glyph_h_origins_func_t" link="harfbuzz-hb-font.html#hb-font-get-glyph-h-origins-func-t" since="11.3.0"/>
+    <keyword type="typedef" name="hb_font_get_glyph_v_origins_func_t" link="harfbuzz-hb-font.html#hb-font-get-glyph-v-origins-func-t" since="11.3.0"/>
     <keyword type="typedef" name="hb_font_funcs_t" link="harfbuzz-hb-font.html#hb-font-funcs-t"/>
     <keyword type="typedef" name="hb_font_t" link="harfbuzz-hb-font.html#hb-font-t"/>
     <keyword type="typedef" name="hb_font_get_font_h_extents_func_t" link="harfbuzz-hb-font.html#hb-font-get-font-h-extents-func-t"/>
