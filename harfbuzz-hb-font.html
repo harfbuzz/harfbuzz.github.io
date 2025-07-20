@@ -276,6 +276,22 @@
 <a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
 </td>
 <td class="function_name">
+<a class="link" href="harfbuzz-hb-font.html#hb-font-get-glyph-h-origins" title="hb_font_get_glyph_h_origins ()">hb_font_get_glyph_h_origins</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-font.html#hb-font-get-glyph-v-origins" title="hb_font_get_glyph_v_origins ()">hb_font_get_glyph_v_origins</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+</td>
+<td class="function_name">
 <a class="link" href="harfbuzz-hb-font.html#hb-font-get-glyph-name" title="hb_font_get_glyph_name ()">hb_font_get_glyph_name</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
@@ -774,6 +790,30 @@
 <a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
 </td>
 <td class="function_name">
+<span class="c_punctuation">(</span><a class="link" href="harfbuzz-hb-font.html#hb-font-get-glyph-origins-func-t" title="hb_font_get_glyph_origins_func_t ()">*hb_font_get_glyph_origins_func_t</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-font.html#hb-font-funcs-set-glyph-h-origins-func" title="hb_font_funcs_set_glyph_h_origins_func ()">hb_font_funcs_set_glyph_h_origins_func</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-font.html#hb-font-funcs-set-glyph-v-origins-func" title="hb_font_funcs_set_glyph_v_origins_func ()">hb_font_funcs_set_glyph_v_origins_func</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+</td>
+<td class="function_name">
 <span class="c_punctuation">(</span><a class="link" href="harfbuzz-hb-font.html#hb-font-get-glyph-name-func-t" title="hb_font_get_glyph_name_func_t ()">*hb_font_get_glyph_name_func_t</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
 </td>
 </tr>
@@ -954,6 +994,14 @@
 <tr>
 <td class="typedef_keyword">typedef</td>
 <td class="function_name"><a class="link" href="harfbuzz-hb-font.html#hb-font-get-glyph-v-origin-func-t" title="hb_font_get_glyph_v_origin_func_t">hb_font_get_glyph_v_origin_func_t</a></td>
+</tr>
+<tr>
+<td class="typedef_keyword">typedef</td>
+<td class="function_name"><a class="link" href="harfbuzz-hb-font.html#hb-font-get-glyph-h-origins-func-t" title="hb_font_get_glyph_h_origins_func_t">hb_font_get_glyph_h_origins_func_t</a></td>
+</tr>
+<tr>
+<td class="typedef_keyword">typedef</td>
+<td class="function_name"><a class="link" href="harfbuzz-hb-font.html#hb-font-get-glyph-v-origins-func-t" title="hb_font_get_glyph_v_origins_func_t">hb_font_get_glyph_v_origins_func_t</a></td>
 </tr>
 <tr>
 <td class="typedef_keyword">typedef</td>
@@ -2277,6 +2325,150 @@ or vertical) depending on the value of <em class="parameter"><code>direction</co
 </div>
 <hr>
 <div class="refsect2">
+<a name="hb-font-get-glyph-h-origins"></a><h3>hb_font_get_glyph_h_origins ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+hb_font_get_glyph_h_origins (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> *font</code></em>,
+                             <em class="parameter"><code>unsigned <span class="type">int</span> count</code></em>,
+                             <em class="parameter"><code>const <a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> *first_glyph</code></em>,
+                             <em class="parameter"><code><span class="type">unsigned </span> glyph_stride</code></em>,
+                             <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-position-t" title="hb_position_t"><span class="type">hb_position_t</span></a> *first_x</code></em>,
+                             <em class="parameter"><code><span class="type">unsigned </span> x_stride</code></em>,
+                             <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-position-t" title="hb_position_t"><span class="type">hb_position_t</span></a> *first_y</code></em>,
+                             <em class="parameter"><code><span class="type">unsigned </span> y_stride</code></em>);</pre>
+<p>Fetches the (X,Y) coordinates of the origin for requested glyph IDs
+in the specified font, for horizontal text segments.</p>
+<div class="refsect3">
+<a name="hb-font-get-glyph-h-origins.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>font</p></td>
+<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> to work upon</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>count</p></td>
+<td class="parameter_description"><p>The number of glyph IDs in the sequence queried</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>first_glyph</p></td>
+<td class="parameter_description"><p>The first glyph ID to query</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>glyph_stride</p></td>
+<td class="parameter_description"><p>The stride between successive glyph IDs</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>first_x</p></td>
+<td class="parameter_description"><p>The first X coordinate of the origin retrieved. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>x_stride</p></td>
+<td class="parameter_description"><p>The stride between successive X coordinates</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>first_y</p></td>
+<td class="parameter_description"><p>The first Y coordinate of the origin retrieved. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>y_stride</p></td>
+<td class="parameter_description"><p>The stride between successive Y coordinates</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-font-get-glyph-h-origins.returns"></a><h4>Returns</h4>
+<p> <code class="literal">true</code> if data found, <code class="literal">false</code> otherwise</p>
+<p>XSince: REPLACEME</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-font-get-glyph-v-origins"></a><h3>hb_font_get_glyph_v_origins ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+hb_font_get_glyph_v_origins (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> *font</code></em>,
+                             <em class="parameter"><code>unsigned <span class="type">int</span> count</code></em>,
+                             <em class="parameter"><code>const <a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> *first_glyph</code></em>,
+                             <em class="parameter"><code><span class="type">unsigned </span> glyph_stride</code></em>,
+                             <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-position-t" title="hb_position_t"><span class="type">hb_position_t</span></a> *first_x</code></em>,
+                             <em class="parameter"><code><span class="type">unsigned </span> x_stride</code></em>,
+                             <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-position-t" title="hb_position_t"><span class="type">hb_position_t</span></a> *first_y</code></em>,
+                             <em class="parameter"><code><span class="type">unsigned </span> y_stride</code></em>);</pre>
+<p>Fetches the (X,Y) coordinates of the origin for requested glyph IDs
+in the specified font, for vertical text segments.</p>
+<div class="refsect3">
+<a name="hb-font-get-glyph-v-origins.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>font</p></td>
+<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> to work upon</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>count</p></td>
+<td class="parameter_description"><p>The number of glyph IDs in the sequence queried</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>first_glyph</p></td>
+<td class="parameter_description"><p>The first glyph ID to query</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>glyph_stride</p></td>
+<td class="parameter_description"><p>The stride between successive glyph IDs</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>first_x</p></td>
+<td class="parameter_description"><p>The first X coordinate of the origin retrieved. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>x_stride</p></td>
+<td class="parameter_description"><p>The stride between successive X coordinates</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>first_y</p></td>
+<td class="parameter_description"><p>The first Y coordinate of the origin retrieved. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>y_stride</p></td>
+<td class="parameter_description"><p>The stride between successive Y coordinates</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-font-get-glyph-v-origins.returns"></a><h4>Returns</h4>
+<p> <code class="literal">true</code> if data found, <code class="literal">false</code> otherwise</p>
+<p>XSince: REPLACEME</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
 <a name="hb-font-get-glyph-name"></a><h3>hb_font_get_glyph_name ()</h3>
 <pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
 hb_font_get_glyph_name (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> *font</code></em>,
@@ -3401,9 +3593,11 @@ hb_font_get_var_coords_design (<em class="parameter"><code><a class="link" href=
                                <em class="parameter"><code>unsigned <span class="type">int</span> *length</code></em>);</pre>
 <p>Fetches the list of variation coordinates (in design-space units) currently
 set on a font.</p>
-<p>Note that this returned array may only contain values for some
-(or none) of the axes; omitted axes effectively have their default
-values.</p>
+<div class="note">Note that if no variation coordinates are set, this function may
+return <code class="literal">NULL</code>.</div>
+<div class="note">If variations have been set on the font using normalized coordinates
+(i.e. via <a class="link" href="harfbuzz-hb-font.html#hb-font-set-var-coords-normalized" title="hb_font_set_var_coords_normalized ()"><code class="function">hb_font_set_var_coords_normalized()</code></a>), the design coordinates will
+have NaN (Not a Number) values.</div>
 <p>Return value is valid as long as variation coordinates of the font
 are not modified.</p>
 <div class="refsect3">
@@ -3486,8 +3680,8 @@ hb_font_get_var_coords_normalized (<em class="parameter"><code><a class="link" h
                                    <em class="parameter"><code>unsigned <span class="type">int</span> *length</code></em>);</pre>
 <p>Fetches the list of normalized variation coordinates currently
 set on a font.</p>
-<p>Note that this returned array may only contain values for some
-(or none) of the axes; omitted axes effectively have zero values.</p>
+<div class="note">Note that if no variation coordinates are set, this function may
+return <code class="literal">NULL</code>.</div>
 <p>Return value is valid as long as variation coordinates of the font
 are not modified.</p>
 <div class="refsect3">
@@ -4114,7 +4308,7 @@ is immutable, <code class="literal">false</code> otherwise</p>
                                 <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-position-t" title="hb_position_t"><span class="type">hb_position_t</span></a> *y</code></em>,
                                 <em class="parameter"><code><span class="type">void</span> *user_data</code></em>);</pre>
 <p>A virtual method for the <a class="link" href="harfbuzz-hb-font.html#hb-font-funcs-t" title="hb_font_funcs_t"><span class="type">hb_font_funcs_t</span></a> of an <a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> object.</p>
-<p>This method should retrieve the (X,Y) coordinates (in font units) for a
+<p>This method should retrieve the (X,Y) coordinates (in scaled units) for a
 specified contour point in a glyph. Each coordinate must be returned as
 an <a class="link" href="harfbuzz-hb-common.html#hb-position-t" title="hb_position_t"><span class="type">hb_position_t</span></a> output parameter.</p>
 <div class="refsect3">
@@ -4833,7 +5027,7 @@ is not needed anymore. </p></td>
                                     <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-position-t" title="hb_position_t"><span class="type">hb_position_t</span></a> *y</code></em>,
                                     <em class="parameter"><code><span class="type">void</span> *user_data</code></em>);</pre>
 <p>A virtual method for the <a class="link" href="harfbuzz-hb-font.html#hb-font-funcs-t" title="hb_font_funcs_t"><span class="type">hb_font_funcs_t</span></a> of an <a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> object.</p>
-<p>This method should retrieve the (X,Y) coordinates (in font units) of the
+<p>This method should retrieve the (X,Y) coordinates (in scaled units) of the
 origin for a glyph. Each coordinate must be returned in an <a class="link" href="harfbuzz-hb-common.html#hb-position-t" title="hb_position_t"><span class="type">hb_position_t</span></a>
 output parameter.</p>
 <div class="refsect3">
@@ -4973,6 +5167,184 @@ is not needed anymore. </p></td>
 </table></div>
 </div>
 <p class="since">Since: <a class="link" href="api-index-0-9-2.html#api-index-0.9.2">0.9.2</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-font-get-glyph-origins-func-t"></a><h3>hb_font_get_glyph_origins_func_t ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+<span class="c_punctuation">(</span>*hb_font_get_glyph_origins_func_t<span class="c_punctuation">)</span> (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> *font</code></em>,
+                                     <em class="parameter"><code><span class="type">void</span> *font_data</code></em>,
+                                     <em class="parameter"><code>unsigned <span class="type">int</span> count</code></em>,
+                                     <em class="parameter"><code>const <a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> *first_glyph</code></em>,
+                                     <em class="parameter"><code><span class="type">unsigned </span> glyph_stride</code></em>,
+                                     <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-position-t" title="hb_position_t"><span class="type">hb_position_t</span></a> *first_x</code></em>,
+                                     <em class="parameter"><code><span class="type">unsigned </span> x_stride</code></em>,
+                                     <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-position-t" title="hb_position_t"><span class="type">hb_position_t</span></a> *first_y</code></em>,
+                                     <em class="parameter"><code><span class="type">unsigned </span> y_stride</code></em>,
+                                     <em class="parameter"><code><span class="type">void</span> *user_data</code></em>);</pre>
+<p>A virtual method for the <a class="link" href="harfbuzz-hb-font.html#hb-font-funcs-t" title="hb_font_funcs_t"><span class="type">hb_font_funcs_t</span></a> of an <a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> object.</p>
+<p>This method should retrieve the (X,Y) coordinates (in scaled units) of the
+origin for each requested glyph. Each coordinate value must be returned in
+an <a class="link" href="harfbuzz-hb-common.html#hb-position-t" title="hb_position_t"><span class="type">hb_position_t</span></a> in the two output parameters.</p>
+<div class="refsect3">
+<a name="hb-font-get-glyph-origins-func-t.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>font</p></td>
+<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> to work upon</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>font_data</p></td>
+<td class="parameter_description"><p><em class="parameter"><code>font</code></em>
+user data pointer</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>first_glyph</p></td>
+<td class="parameter_description"><p>The first glyph ID to query</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>count</p></td>
+<td class="parameter_description"><p>number of glyphs to query</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>glyph_stride</p></td>
+<td class="parameter_description"><p>The stride between successive glyph IDs</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>first_x</p></td>
+<td class="parameter_description"><p>The first origin X coordinate retrieved. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>x_stride</p></td>
+<td class="parameter_description"><p>The stride between successive origin X coordinates</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>first_y</p></td>
+<td class="parameter_description"><p>The first origin Y coordinate retrieved. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>y_stride</p></td>
+<td class="parameter_description"><p>The stride between successive origin Y coordinates</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>User data pointer passed by the caller</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-font-get-glyph-origins-func-t.returns"></a><h4>Returns</h4>
+<p> <code class="literal">true</code> if data found, <code class="literal">false</code> otherwise</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-font-funcs-set-glyph-h-origins-func"></a><h3>hb_font_funcs_set_glyph_h_origins_func ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_font_funcs_set_glyph_h_origins_func
+                               (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-funcs-t" title="hb_font_funcs_t"><span class="type">hb_font_funcs_t</span></a> *ffuncs</code></em>,
+                                <em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-get-glyph-h-origins-func-t" title="hb_font_get_glyph_h_origins_func_t"><span class="type">hb_font_get_glyph_h_origins_func_t</span></a> func</code></em>,
+                                <em class="parameter"><code><span class="type">void</span> *user_data</code></em>,
+                                <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-destroy-func-t" title="hb_destroy_func_t ()"><span class="type">hb_destroy_func_t</span></a> destroy</code></em>);</pre>
+<p>Sets the implementation function for <a class="link" href="harfbuzz-hb-font.html#hb-font-get-glyph-h-origins-func-t" title="hb_font_get_glyph_h_origins_func_t"><span class="type">hb_font_get_glyph_h_origins_func_t</span></a>.</p>
+<p>XSince: REPLACEME</p>
+<div class="refsect3">
+<a name="hb-font-funcs-set-glyph-h-origins-func.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>ffuncs</p></td>
+<td class="parameter_description"><p>A font-function structure</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>func</p></td>
+<td class="parameter_description"><p>The callback function to assign. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym> user_data][<acronym title="This parameter is a 'destroy_data', for callbacks."><span class="acronym">destroy</span></acronym> destroy][<acronym title="The callback is valid until the GDestroyNotify argument is called."><span class="acronym">scope notified</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>Data to pass to <em class="parameter"><code>func</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>destroy</p></td>
+<td class="parameter_description"><p>The function to call when <em class="parameter"><code>user_data</code></em>
+is not needed anymore. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-font-funcs-set-glyph-v-origins-func"></a><h3>hb_font_funcs_set_glyph_v_origins_func ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_font_funcs_set_glyph_v_origins_func
+                               (<em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-funcs-t" title="hb_font_funcs_t"><span class="type">hb_font_funcs_t</span></a> *ffuncs</code></em>,
+                                <em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-get-glyph-v-origins-func-t" title="hb_font_get_glyph_v_origins_func_t"><span class="type">hb_font_get_glyph_v_origins_func_t</span></a> func</code></em>,
+                                <em class="parameter"><code><span class="type">void</span> *user_data</code></em>,
+                                <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-destroy-func-t" title="hb_destroy_func_t ()"><span class="type">hb_destroy_func_t</span></a> destroy</code></em>);</pre>
+<p>Sets the implementation function for <a class="link" href="harfbuzz-hb-font.html#hb-font-get-glyph-v-origins-func-t" title="hb_font_get_glyph_v_origins_func_t"><span class="type">hb_font_get_glyph_v_origins_func_t</span></a>.</p>
+<p>XSince: REPLACEME</p>
+<div class="refsect3">
+<a name="hb-font-funcs-set-glyph-v-origins-func.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>ffuncs</p></td>
+<td class="parameter_description"><p>A font-function structure</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>func</p></td>
+<td class="parameter_description"><p>The callback function to assign. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym> user_data][<acronym title="This parameter is a 'destroy_data', for callbacks."><span class="acronym">destroy</span></acronym> destroy][<acronym title="The callback is valid until the GDestroyNotify argument is called."><span class="acronym">scope notified</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>Data to pass to <em class="parameter"><code>func</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>destroy</p></td>
+<td class="parameter_description"><p>The function to call when <em class="parameter"><code>user_data</code></em>
+is not needed anymore. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
 </div>
 <hr>
 <div class="refsect2">
@@ -5942,7 +6314,7 @@ the specified font, for horizontal text segments.</p>
 <pre class="programlisting">typedef hb_font_get_glyph_origin_func_t hb_font_get_glyph_h_origin_func_t;
 </pre>
 <p>A virtual method for the <a class="link" href="harfbuzz-hb-font.html#hb-font-funcs-t" title="hb_font_funcs_t"><span class="type">hb_font_funcs_t</span></a> of an <a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> object.</p>
-<p>This method should retrieve the (X,Y) coordinates (in font units) of the
+<p>This method should retrieve the (X,Y) coordinates (in scaled units) of the
 origin for a glyph, for horizontal-direction text segments. Each
 coordinate must be returned in an <a class="link" href="harfbuzz-hb-common.html#hb-position-t" title="hb_position_t"><span class="type">hb_position_t</span></a> output parameter.</p>
 </div>
@@ -5952,9 +6324,29 @@ coordinate must be returned in an <a class="link" href="harfbuzz-hb-common.html#
 <pre class="programlisting">typedef hb_font_get_glyph_origin_func_t hb_font_get_glyph_v_origin_func_t;
 </pre>
 <p>A virtual method for the <a class="link" href="harfbuzz-hb-font.html#hb-font-funcs-t" title="hb_font_funcs_t"><span class="type">hb_font_funcs_t</span></a> of an <a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> object.</p>
-<p>This method should retrieve the (X,Y) coordinates (in font units) of the
+<p>This method should retrieve the (X,Y) coordinates (in scaled units) of the
 origin for a glyph, for vertical-direction text segments. Each coordinate
 must be returned in an <a class="link" href="harfbuzz-hb-common.html#hb-position-t" title="hb_position_t"><span class="type">hb_position_t</span></a> output parameter.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-font-get-glyph-h-origins-func-t"></a><h3>hb_font_get_glyph_h_origins_func_t</h3>
+<pre class="programlisting">typedef hb_font_get_glyph_origins_func_t hb_font_get_glyph_h_origins_func_t;
+</pre>
+<p>A virtual method for the <a class="link" href="harfbuzz-hb-font.html#hb-font-funcs-t" title="hb_font_funcs_t"><span class="type">hb_font_funcs_t</span></a> of an <a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> object.</p>
+<p>This method should retrieve the (X,Y) coordinates (in scaled units) of the
+origin for requested glyph, for horizontal-direction text segments. Each
+coordinate must be returned in a the x/y <a class="link" href="harfbuzz-hb-common.html#hb-position-t" title="hb_position_t"><span class="type">hb_position_t</span></a> output parameters.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-font-get-glyph-v-origins-func-t"></a><h3>hb_font_get_glyph_v_origins_func_t</h3>
+<pre class="programlisting">typedef hb_font_get_glyph_origins_func_t hb_font_get_glyph_v_origins_func_t;
+</pre>
+<p>A virtual method for the <a class="link" href="harfbuzz-hb-font.html#hb-font-funcs-t" title="hb_font_funcs_t"><span class="type">hb_font_funcs_t</span></a> of an <a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> object.</p>
+<p>This method should retrieve the (X,Y) coordinates (in scaled units) of the
+origin for requested glyph, for vertical-direction text segments. Each
+coordinate must be returned in a the x/y <a class="link" href="harfbuzz-hb-common.html#hb-position-t" title="hb_position_t"><span class="type">hb_position_t</span></a> output parameters.</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -6006,7 +6398,7 @@ parameter.</p>
   hb_position_t line_gap;
 } hb_font_extents_t;
 </pre>
-<p>Font-wide extent values, measured in font units.</p>
+<p>Font-wide extent values, measured in scaled units.</p>
 <p>Note that typically <em class="parameter"><code>ascender</code></em>
  is positive and <em class="parameter"><code>descender</code></em>
 

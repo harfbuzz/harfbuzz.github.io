@@ -881,7 +881,7 @@ hb_ot_layout_feature_get_characters (<em class="parameter"><code><a class="link"
 <td class="parameter_name"><p>char_count</p></td>
 <td class="parameter_description"><p>Input = the maximum number of characters to return;
 Output = the actual number of characters returned (may be zero). </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>characters</p></td>
@@ -945,7 +945,7 @@ begin at the offset provided.</p>
 <td class="parameter_name"><p>lookup_count</p></td>
 <td class="parameter_description"><p>Input = the maximum number of lookups to return;
 Output = the actual number of lookups returned (may be zero). </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>lookup_indexes</p></td>
@@ -1002,33 +1002,33 @@ hb_ot_layout_feature_get_name_ids (<em class="parameter"><code><a class="link" h
 <tr>
 <td class="parameter_name"><p>label_id</p></td>
 <td class="parameter_description"><p>The ‘name’ table name ID that specifies a string
-for a user-interface label for this feature. (May be NULL.). </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+for a user-interface label for this feature. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>tooltip_id</p></td>
 <td class="parameter_description"><p>The ‘name’ table name ID that specifies a string
 that an application can use for tooltip text for this
-feature. (May be NULL.). </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+feature. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>sample_id</p></td>
 <td class="parameter_description"><p>The ‘name’ table name ID that specifies sample text
-that illustrates the effect of this feature. (May be NULL.). </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+that illustrates the effect of this feature. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>num_named_parameters</p></td>
-<td class="parameter_description"><p>Number of named parameters. (May be zero.). </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+<td class="parameter_description"><p>Number of named parameters. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>first_param_id</p></td>
 <td class="parameter_description"><p>The first ‘name’ table name ID used to specify
 strings for user-interface labels for the feature
 parameters. (Must be zero if numParameters is zero.). </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 </tbody>
 </table></div>
@@ -1092,7 +1092,7 @@ variations index. The list returned will begin at the offset provided.</p>
 <td class="parameter_name"><p>lookup_count</p></td>
 <td class="parameter_description"><p>Input = the maximum number of lookups to return;
 Output = the actual number of lookups returned (may be zero). </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>lookup_indexes</p></td>
@@ -1148,7 +1148,7 @@ table of the face. The list returned will begin at the offset provided.</p>
 <td class="parameter_name"><p>point_count</p></td>
 <td class="parameter_description"><p>Input = the maximum number of attachment points to return;
 Output = the actual number of attachment points returned (may be zero). </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>point_array</p></td>
@@ -1675,7 +1675,7 @@ be fixed up for kerning that may be applied to the ligature glyph.</p>
 <td class="parameter_name"><p>caret_count</p></td>
 <td class="parameter_description"><p>Input = the maximum number of caret positions to return;
 Output = the actual number of caret positions returned (may be zero). </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>caret_array</p></td>
@@ -1947,7 +1947,7 @@ returned will begin at the offset provided.</p>
 <td class="parameter_name"><p>feature_count</p></td>
 <td class="parameter_description"><p>Input = the maximum number of feature tags to return;
 Output: the actual number of feature tags returned (may be zero). </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>feature_indexes</p></td>
@@ -2016,7 +2016,7 @@ returned will begin at the offset provided.</p>
 <td class="parameter_name"><p>feature_count</p></td>
 <td class="parameter_description"><p>Input = the maximum number of feature tags to return;
 Output = the actual number of feature tags returned (may be zero). </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>feature_tags</p></td>
@@ -2133,22 +2133,22 @@ specified face's GSUB table or GPOS table.</p>
 <tr>
 <td class="parameter_name"><p>glyphs_before</p></td>
 <td class="parameter_description"><p>Array of glyphs preceding the substitution range. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>glyphs_input</p></td>
 <td class="parameter_description"><p>Array of input glyphs that would be substituted by the lookup. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>glyphs_after</p></td>
 <td class="parameter_description"><p>Array of glyphs following the substitution range. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>glyphs_output</p></td>
 <td class="parameter_description"><p>Array of glyphs that would be the substituted output of the lookup. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 </tbody>
 </table></div>
@@ -2201,7 +2201,7 @@ glyph substitutions, this function fetches the substituted glyph.</p>
 <td class="parameter_name"><p>alternate_count</p></td>
 <td class="parameter_description"><p>Input = the maximum number of alternate glyphs to return;
 Output = the actual number of alternate glyphs returned (may be zero). </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>alternate_glyphs</p></td>
@@ -2499,7 +2499,7 @@ the specified script index. The list returned will begin at the offset provided.
 <td class="parameter_name"><p>language_count</p></td>
 <td class="parameter_description"><p>Input = the maximum number of language tags to return;
 Output = the actual number of language tags returned (may be zero). </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>language_tags</p></td>
@@ -2748,7 +2748,7 @@ script/language-system pairs of the table.</p>
 <td class="parameter_name"><p>feature_count</p></td>
 <td class="parameter_description"><p>Input = the maximum number of feature tags to return;
 Output = the actual number of feature tags returned (may be zero). </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>feature_tags</p></td>
@@ -2803,7 +2803,7 @@ or GPOS table. The list returned will begin at the offset provided.</p>
 <td class="parameter_name"><p>script_count</p></td>
 <td class="parameter_description"><p>Input = the maximum number of script tags to return;
 Output = the actual number of script tags returned (may be zero). </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>script_tags</p></td>
@@ -2905,12 +2905,12 @@ have any of these scripts, <em class="parameter"><code>script_index</code></em>
 <tr>
 <td class="parameter_name"><p>script_index</p></td>
 <td class="parameter_description"><p>The index of the requested script. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>chosen_script</p></td>
 <td class="parameter_description"><p><a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="type">hb_tag_t</span></a> of the requested script. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 </tbody>
 </table></div>

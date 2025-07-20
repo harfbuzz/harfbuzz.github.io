@@ -760,9 +760,10 @@ hb_script_get_horizontal_direction (<em class="parameter"><code><a class="link" 
 <p>Fetches the <a class="link" href="harfbuzz-hb-common.html#hb-direction-t" title="enum hb_direction_t"><span class="type">hb_direction_t</span></a> of a script when it is
 set horizontally. All right-to-left scripts will return
 <a class="link" href="harfbuzz-hb-common.html#HB-DIRECTION-RTL:CAPS"><span class="type">HB_DIRECTION_RTL</span></a>. All left-to-right scripts will return
-<a class="link" href="harfbuzz-hb-common.html#HB-DIRECTION-LTR:CAPS"><span class="type">HB_DIRECTION_LTR</span></a>.  Scripts that can be written either
-horizontally or vertically will return <a class="link" href="harfbuzz-hb-common.html#HB-DIRECTION-INVALID:CAPS"><span class="type">HB_DIRECTION_INVALID</span></a>.
-Unknown scripts will return <a class="link" href="harfbuzz-hb-common.html#HB-DIRECTION-LTR:CAPS"><span class="type">HB_DIRECTION_LTR</span></a>.</p>
+<a class="link" href="harfbuzz-hb-common.html#HB-DIRECTION-LTR:CAPS"><span class="type">HB_DIRECTION_LTR</span></a>.</p>
+<p>Scripts that can be written either right-to-left or
+left-to-right will return <a class="link" href="harfbuzz-hb-common.html#HB-DIRECTION-INVALID:CAPS"><span class="type">HB_DIRECTION_INVALID</span></a>.</p>
+<p>Unknown scripts will return <a class="link" href="harfbuzz-hb-common.html#HB-DIRECTION-LTR:CAPS"><span class="type">HB_DIRECTION_LTR</span></a>.</p>
 <div class="refsect3">
 <a name="hb-script-get-horizontal-direction.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
