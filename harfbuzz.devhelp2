@@ -1254,6 +1254,10 @@
     <keyword type="constant" name="HB_SCRIPT_SUNUWAR" link="harfbuzz-hb-common.html#HB-SCRIPT-SUNUWAR:CAPS"/>
     <keyword type="constant" name="HB_SCRIPT_TODHRI" link="harfbuzz-hb-common.html#HB-SCRIPT-TODHRI:CAPS"/>
     <keyword type="constant" name="HB_SCRIPT_TULU_TIGALARI" link="harfbuzz-hb-common.html#HB-SCRIPT-TULU-TIGALARI:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_BERIA_ERFE" link="harfbuzz-hb-common.html#HB-SCRIPT-BERIA-ERFE:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_SIDETIC" link="harfbuzz-hb-common.html#HB-SCRIPT-SIDETIC:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_TAI_YO" link="harfbuzz-hb-common.html#HB-SCRIPT-TAI-YO:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_TOLONG_SIKI" link="harfbuzz-hb-common.html#HB-SCRIPT-TOLONG-SIKI:CAPS"/>
     <keyword type="constant" name="HB_SCRIPT_INVALID" link="harfbuzz-hb-common.html#HB-SCRIPT-INVALID:CAPS"/>
     <keyword type="constant" name="HB_PAINT_EXTEND_PAD" link="harfbuzz-hb-paint.html#HB-PAINT-EXTEND-PAD:CAPS"/>
     <keyword type="constant" name="HB_PAINT_EXTEND_REPEAT" link="harfbuzz-hb-paint.html#HB-PAINT-EXTEND-REPEAT:CAPS"/>
