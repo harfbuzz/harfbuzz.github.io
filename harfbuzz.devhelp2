@@ -1823,6 +1823,7 @@
     <keyword type="constant" name="HB_SUBSET_FLAGS_OPTIMIZE_IUP_DELTAS" link="harfbuzz-hb-subset.html#HB-SUBSET-FLAGS-OPTIMIZE-IUP-DELTAS:CAPS"/>
     <keyword type="constant" name="HB_SUBSET_FLAGS_NO_BIDI_CLOSURE" link="harfbuzz-hb-subset.html#HB-SUBSET-FLAGS-NO-BIDI-CLOSURE:CAPS"/>
     <keyword type="constant" name="HB_SUBSET_FLAGS_IFTB_REQUIREMENTS" link="harfbuzz-hb-subset.html#HB-SUBSET-FLAGS-IFTB-REQUIREMENTS:CAPS"/>
+    <keyword type="constant" name="HB_SUBSET_FLAGS_RETAIN_NUM_GLYPHS" link="harfbuzz-hb-subset.html#HB-SUBSET-FLAGS-RETAIN-NUM-GLYPHS:CAPS"/>
     <keyword type="constant" name="HB_SUBSET_SETS_GLYPH_INDEX" link="harfbuzz-hb-subset.html#HB-SUBSET-SETS-GLYPH-INDEX:CAPS"/>
     <keyword type="constant" name="HB_SUBSET_SETS_UNICODE" link="harfbuzz-hb-subset.html#HB-SUBSET-SETS-UNICODE:CAPS"/>
     <keyword type="constant" name="HB_SUBSET_SETS_NO_SUBSET_TABLE_TAG" link="harfbuzz-hb-subset.html#HB-SUBSET-SETS-NO-SUBSET-TABLE-TAG:CAPS"/>
