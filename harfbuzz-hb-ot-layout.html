@@ -290,6 +290,14 @@
 </tr>
 <tr>
 <td class="function_type">
+<a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-ot-layout.html#hb-ot-layout-lookup-collect-glyph-alternates" title="hb_ot_layout_lookup_collect_glyph_alternates ()">hb_ot_layout_lookup_collect_glyph_alternates</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
 <a class="link" href="harfbuzz-hb-common.html#hb-position-t" title="hb_position_t"><span class="returnvalue">hb_position_t</span></a>
 </td>
 <td class="function_name">
@@ -2217,6 +2225,66 @@ Alternate glyphs associated with the glyph id. </p></td>
 <p> Total number of alternates found in the specific lookup index for the given glyph id.</p>
 </div>
 <p class="since">Since: <a class="link" href="api-index-2-6-8.html#api-index-2.6.8">2.6.8</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-ot-layout-lookup-collect-glyph-alternates"></a><h3>hb_ot_layout_lookup_collect_glyph_alternates ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+hb_ot_layout_lookup_collect_glyph_alternates
+                               (<em class="parameter"><code><a class="link" href="harfbuzz-hb-face.html#hb-face-t" title="hb_face_t"><span class="type">hb_face_t</span></a> *face</code></em>,
+                                <em class="parameter"><code><span class="type">unsigned </span> lookup_index</code></em>,
+                                <em class="parameter"><code><a class="link" href="harfbuzz-hb-map.html#hb-map-t" title="hb_map_t"><span class="type">hb_map_t</span></a> *alternate_count</code></em>,
+                                <em class="parameter"><code><a class="link" href="harfbuzz-hb-map.html#hb-map-t" title="hb_map_t"><span class="type">hb_map_t</span></a> *alternate_glyphs</code></em>);</pre>
+<p>Collects alternates of glyphs from a given GSUB lookup index.</p>
+<p>For one-to-one GSUB glyph substitutions, this function collects the
+substituted glyph.</p>
+<p>For lookups that assign multiple alternates to a glyph, all alternate glyphs are collected.</p>
+<p>For other lookup types, nothing is performed and <code class="literal">false</code> is returned.</p>
+<p>The <code class="literal">alternate_count</code> mapping will contain the number of alternates for each glyph id.
+Upon entry, this mapping should contain the glyph ids as keys, and the number of alternates
+currently known for each glyph id as values.</p>
+<p>The <code class="literal">alternate_glyphs</code> mapping will contain the alternate glyph ids for each glyph id.
+The mapping is encoded in the following way, upon entry and after processing:
+If G is the glyph id, and A0, A1, ..., A(n-1) are the alternate glyph ids,
+the mapping will contain the following entries: (G + (i &lt;&lt; 24)) -&gt; A(i)
+for i = 0, 1, ..., n-1 where n is the number of alternates for G as per <code class="literal">alternate_count</code>.</p>
+<div class="refsect3">
+<a name="hb-ot-layout-lookup-collect-glyph-alternates.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>face</p></td>
+<td class="parameter_description"><p>a face.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>lookup_index</p></td>
+<td class="parameter_description"><p>index of the feature lookup to query.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>alternate_count</p></td>
+<td class="parameter_description"><p>mapping from glyph index to number of alternates for that glyph. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>alternate_glyphs</p></td>
+<td class="parameter_description"><p>mapping from encoded glyph index and alternate index, to alternate glyph ids. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-ot-layout-lookup-collect-glyph-alternates.returns"></a><h4>Returns</h4>
+<p> <code class="literal">true</code> if alternates were collected, <code class="literal">false</code> otherwise.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-12-1-0.html#api-index-12.1.0">12.1.0</a></p>
 </div>
 <hr>
 <div class="refsect2">

@@ -141,6 +141,7 @@
       </sub>
       <sub name="API Index" link="api-index-full.html"/>
       <sub name="Index of deprecated API" link="deprecated-api-index.html"/>
+      <sub name="Index of new symbols in 12.1.0" link="api-index-12-1-0.html"/>
       <sub name="Index of new symbols in 11.3.0" link="api-index-11-3-0.html"/>
       <sub name="Index of new symbols in 11.2.0" link="api-index-11-2-0.html"/>
       <sub name="Index of new symbols in 11.0.0" link="api-index-11-0-0.html"/>
@@ -844,6 +845,7 @@
     <keyword type="function" name="hb_ot_layout_language_get_required_feature ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-language-get-required-feature" since="0.9.30"/>
     <keyword type="function" name="hb_ot_layout_lookup_collect_glyphs ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-lookup-collect-glyphs" since="0.9.7"/>
     <keyword type="function" name="hb_ot_layout_lookup_get_glyph_alternates ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-lookup-get-glyph-alternates" since="2.6.8"/>
+    <keyword type="function" name="hb_ot_layout_lookup_collect_glyph_alternates ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-lookup-collect-glyph-alternates" since="12.1.0"/>
     <keyword type="function" name="hb_ot_layout_lookup_get_optical_bound ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-lookup-get-optical-bound" since="5.3.0"/>
     <keyword type="function" name="hb_ot_layout_lookup_substitute_closure ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-lookup-substitute-closure" since="0.9.7"/>
     <keyword type="function" name="hb_ot_layout_lookups_substitute_closure ()" link="harfbuzz-hb-ot-layout.html#hb-ot-layout-lookups-substitute-closure" since="1.8.1"/>
