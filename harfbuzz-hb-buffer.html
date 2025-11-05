@@ -2755,7 +2755,7 @@ The serialized glyphs will look something like:</p>
 <li class="listitem">
 <p>If <a class="link" href="harfbuzz-hb-buffer.html#HB-BUFFER-SERIALIZE-FLAG-NO-POSITIONS:CAPS"><span class="type">HB_BUFFER_SERIALIZE_FLAG_NO_POSITIONS</span></a> is not set, the <a class="link" href="harfbuzz-hb-buffer.html#hb-glyph-position-t" title="hb_glyph_position_t"><span class="type">hb_glyph_position_t</span></a> in the format:</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: square; ">
-<li class="listitem"><p>If both <a class="link" href="harfbuzz-hb-buffer.html#hb-glyph-position-t.x-offset"><span class="type">hb_glyph_position_t.x_offset</span></a> and <a class="link" href="harfbuzz-hb-buffer.html#hb-glyph-position-t.y-offset"><span class="type">hb_glyph_position_t.y_offset</span></a> are not 0, <code class="literal">@x_offset,y_offset</code>. Then,</p></li>
+<li class="listitem"><p>If <a class="link" href="harfbuzz-hb-buffer.html#hb-glyph-position-t.x-offset"><span class="type">hb_glyph_position_t.x_offset</span></a> and <a class="link" href="harfbuzz-hb-buffer.html#hb-glyph-position-t.y-offset"><span class="type">hb_glyph_position_t.y_offset</span></a> are not both 0, <code class="literal">@x_offset,y_offset</code>. Then,</p></li>
 <li class="listitem"><p><code class="literal">+x_advance</code>, then <code class="literal">,y_advance</code> if <a class="link" href="harfbuzz-hb-buffer.html#hb-glyph-position-t.y-advance"><span class="type">hb_glyph_position_t.y_advance</span></a> is not 0. Then,</p></li>
 </ul></div>
 </li>
