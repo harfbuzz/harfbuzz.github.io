@@ -1,0 +1,2343 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>hb-raster: HarfBuzz Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="HarfBuzz Manual">
+<link rel="up" href="integration-api.html" title="Integration API">
+<link rel="prev" href="harfbuzz-hb-icu.html" title="hb-icu">
+<link rel="next" href="harfbuzz-hb-vector.html" title="hb-vector">
+<meta name="generator" content="GTK-Doc V1.34.0 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#harfbuzz-hb-raster.description" class="shortcut">Description</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="integration-api.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="harfbuzz-hb-icu.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="harfbuzz-hb-vector.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="harfbuzz-hb-raster"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="harfbuzz-hb-raster.top_of_page"></a>hb-raster</span></h2>
+<p>hb-raster — Glyph rasterization</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="harfbuzz-hb-raster.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="harfbuzz-hb-raster.html#hb-raster-image-t" title="hb_raster_image_t"><span class="returnvalue">hb_raster_image_t</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-raster.html#hb-raster-image-create-or-fail" title="hb_raster_image_create_or_fail ()">hb_raster_image_create_or_fail</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="harfbuzz-hb-raster.html#hb-raster-image-t" title="hb_raster_image_t"><span class="returnvalue">hb_raster_image_t</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-raster.html#hb-raster-image-reference" title="hb_raster_image_reference ()">hb_raster_image_reference</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-raster.html#hb-raster-image-destroy" title="hb_raster_image_destroy ()">hb_raster_image_destroy</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-raster.html#hb-raster-image-set-user-data" title="hb_raster_image_set_user_data ()">hb_raster_image_set_user_data</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span> *
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-raster.html#hb-raster-image-get-user-data" title="hb_raster_image_get_user_data ()">hb_raster_image_get_user_data</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-raster.html#hb-raster-image-configure" title="hb_raster_image_configure ()">hb_raster_image_configure</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-raster.html#hb-raster-image-clear" title="hb_raster_image_clear ()">hb_raster_image_clear</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">uint8_t</span> *
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-raster.html#hb-raster-image-get-buffer" title="hb_raster_image_get_buffer ()">hb_raster_image_get_buffer</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-raster.html#hb-raster-image-get-extents" title="hb_raster_image_get_extents ()">hb_raster_image_get_extents</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="harfbuzz-hb-raster.html#hb-raster-format-t" title="enum hb_raster_format_t"><span class="returnvalue">hb_raster_format_t</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-raster.html#hb-raster-image-get-format" title="hb_raster_image_get_format ()">hb_raster_image_get_format</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="harfbuzz-hb-raster.html#hb-raster-draw-t" title="hb_raster_draw_t"><span class="returnvalue">hb_raster_draw_t</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-raster.html#hb-raster-draw-create-or-fail" title="hb_raster_draw_create_or_fail ()">hb_raster_draw_create_or_fail</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="harfbuzz-hb-raster.html#hb-raster-draw-t" title="hb_raster_draw_t"><span class="returnvalue">hb_raster_draw_t</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-raster.html#hb-raster-draw-reference" title="hb_raster_draw_reference ()">hb_raster_draw_reference</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-raster.html#hb-raster-draw-destroy" title="hb_raster_draw_destroy ()">hb_raster_draw_destroy</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-raster.html#hb-raster-draw-set-user-data" title="hb_raster_draw_set_user_data ()">hb_raster_draw_set_user_data</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span> *
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-raster.html#hb-raster-draw-get-user-data" title="hb_raster_draw_get_user_data ()">hb_raster_draw_get_user_data</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-raster.html#hb-raster-draw-set-transform" title="hb_raster_draw_set_transform ()">hb_raster_draw_set_transform</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-raster.html#hb-raster-draw-set-scale-factor" title="hb_raster_draw_set_scale_factor ()">hb_raster_draw_set_scale_factor</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-raster.html#hb-raster-draw-get-scale-factor" title="hb_raster_draw_get_scale_factor ()">hb_raster_draw_get_scale_factor</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-raster.html#hb-raster-draw-get-transform" title="hb_raster_draw_get_transform ()">hb_raster_draw_get_transform</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-raster.html#hb-raster-draw-set-extents" title="hb_raster_draw_set_extents ()">hb_raster_draw_set_extents</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-raster.html#hb-raster-draw-get-extents" title="hb_raster_draw_get_extents ()">hb_raster_draw_get_extents</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-raster.html#hb-raster-draw-set-glyph-extents" title="hb_raster_draw_set_glyph_extents ()">hb_raster_draw_set_glyph_extents</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-raster.html#hb-raster-draw-reset" title="hb_raster_draw_reset ()">hb_raster_draw_reset</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="harfbuzz-hb-draw.html#hb-draw-funcs-t" title="hb_draw_funcs_t"><span class="returnvalue">hb_draw_funcs_t</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-raster.html#hb-raster-draw-get-funcs" title="hb_raster_draw_get_funcs ()">hb_raster_draw_get_funcs</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-raster.html#hb-raster-draw-glyph" title="hb_raster_draw_glyph ()">hb_raster_draw_glyph</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="harfbuzz-hb-raster.html#hb-raster-image-t" title="hb_raster_image_t"><span class="returnvalue">hb_raster_image_t</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-raster.html#hb-raster-draw-render" title="hb_raster_draw_render ()">hb_raster_draw_render</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-raster.html#hb-raster-draw-recycle-image" title="hb_raster_draw_recycle_image ()">hb_raster_draw_recycle_image</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="harfbuzz-hb-raster.html#hb-raster-paint-t" title="hb_raster_paint_t"><span class="returnvalue">hb_raster_paint_t</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-raster.html#hb-raster-paint-create-or-fail" title="hb_raster_paint_create_or_fail ()">hb_raster_paint_create_or_fail</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="harfbuzz-hb-raster.html#hb-raster-paint-t" title="hb_raster_paint_t"><span class="returnvalue">hb_raster_paint_t</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-raster.html#hb-raster-paint-reference" title="hb_raster_paint_reference ()">hb_raster_paint_reference</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-raster.html#hb-raster-paint-destroy" title="hb_raster_paint_destroy ()">hb_raster_paint_destroy</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-raster.html#hb-raster-paint-set-user-data" title="hb_raster_paint_set_user_data ()">hb_raster_paint_set_user_data</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span> *
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-raster.html#hb-raster-paint-get-user-data" title="hb_raster_paint_get_user_data ()">hb_raster_paint_get_user_data</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-raster.html#hb-raster-paint-set-transform" title="hb_raster_paint_set_transform ()">hb_raster_paint_set_transform</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-raster.html#hb-raster-paint-get-transform" title="hb_raster_paint_get_transform ()">hb_raster_paint_get_transform</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-raster.html#hb-raster-paint-set-scale-factor" title="hb_raster_paint_set_scale_factor ()">hb_raster_paint_set_scale_factor</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-raster.html#hb-raster-paint-get-scale-factor" title="hb_raster_paint_get_scale_factor ()">hb_raster_paint_get_scale_factor</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-raster.html#hb-raster-paint-set-extents" title="hb_raster_paint_set_extents ()">hb_raster_paint_set_extents</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-raster.html#hb-raster-paint-get-extents" title="hb_raster_paint_get_extents ()">hb_raster_paint_get_extents</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-raster.html#hb-raster-paint-set-glyph-extents" title="hb_raster_paint_set_glyph_extents ()">hb_raster_paint_set_glyph_extents</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-raster.html#hb-raster-paint-set-foreground" title="hb_raster_paint_set_foreground ()">hb_raster_paint_set_foreground</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-raster.html#hb-raster-paint-clear-custom-palette-colors" title="hb_raster_paint_clear_custom_palette_colors ()">hb_raster_paint_clear_custom_palette_colors</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-raster.html#hb-raster-paint-set-custom-palette-color" title="hb_raster_paint_set_custom_palette_color ()">hb_raster_paint_set_custom_palette_color</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="harfbuzz-hb-paint.html#hb-paint-funcs-t" title="hb_paint_funcs_t"><span class="returnvalue">hb_paint_funcs_t</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-raster.html#hb-raster-paint-get-funcs" title="hb_raster_paint_get_funcs ()">hb_raster_paint_get_funcs</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-raster.html#hb-raster-paint-glyph" title="hb_raster_paint_glyph ()">hb_raster_paint_glyph</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="harfbuzz-hb-raster.html#hb-raster-image-t" title="hb_raster_image_t"><span class="returnvalue">hb_raster_image_t</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-raster.html#hb-raster-paint-render" title="hb_raster_paint_render ()">hb_raster_paint_render</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-raster.html#hb-raster-paint-reset" title="hb_raster_paint_reset ()">hb_raster_paint_reset</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-raster.html#hb-raster-paint-recycle-image" title="hb_raster_paint_recycle_image ()">hb_raster_paint_recycle_image</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="harfbuzz-hb-raster.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="harfbuzz-hb-raster.html#hb-raster-format-t" title="enum hb_raster_format_t">hb_raster_format_t</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="harfbuzz-hb-raster.html#hb-raster-extents-t" title="hb_raster_extents_t">hb_raster_extents_t</a></td>
+</tr>
+<tr>
+<td class="typedef_keyword">typedef</td>
+<td class="function_name"><a class="link" href="harfbuzz-hb-raster.html#hb-raster-image-t" title="hb_raster_image_t">hb_raster_image_t</a></td>
+</tr>
+<tr>
+<td class="typedef_keyword">typedef</td>
+<td class="function_name"><a class="link" href="harfbuzz-hb-raster.html#hb-raster-draw-t" title="hb_raster_draw_t">hb_raster_draw_t</a></td>
+</tr>
+<tr>
+<td class="typedef_keyword">typedef</td>
+<td class="function_name"><a class="link" href="harfbuzz-hb-raster.html#hb-raster-paint-t" title="hb_raster_paint_t">hb_raster_paint_t</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="harfbuzz-hb-raster.includes"></a><h2>Includes</h2>
+<pre class="synopsis">#include &lt;hb-raster.h&gt;
+</pre>
+</div>
+<div class="refsect1">
+<a name="harfbuzz-hb-raster.description"></a><h2>Description</h2>
+<p>Functions for rasterizing glyph outlines into pixel buffers.</p>
+<p><a class="link" href="harfbuzz-hb-raster.html#hb-raster-draw-t" title="hb_raster_draw_t"><span class="type">hb_raster_draw_t</span></a> rasterizes outline geometry and always outputs
+<em class="parameter"><code>HB_RASTER_FORMAT_A8</code></em>
+. Typical flow:
+<code class="literal">
+hb_raster_draw_t *draw = <a class="link" href="harfbuzz-hb-raster.html#hb-raster-draw-create-or-fail" title="hb_raster_draw_create_or_fail ()"><code class="function">hb_raster_draw_create_or_fail()</code></a>;
+hb_raster_draw_set_scale_factor (draw, 64.f, 64.f);
+hb_raster_draw_set_transform (draw, 1.f, 0.f, 0.f, 1.f, 0.f, 0.f);
+hb_raster_draw_set_glyph_extents (draw, &amp;amp;glyph_extents);
+hb_raster_draw_glyph (draw, font, gid, pen_x, pen_y);
+hb_raster_image_t *mask = hb_raster_draw_render (draw);
+</code></p>
+<p><a class="link" href="harfbuzz-hb-raster.html#hb-raster-paint-t" title="hb_raster_paint_t"><span class="type">hb_raster_paint_t</span></a> renders color paint graphs and always outputs
+<em class="parameter"><code>HB_RASTER_FORMAT_BGRA32</code></em>
+. Typical flow:
+<code class="literal">
+hb_raster_paint_t *paint = <a class="link" href="harfbuzz-hb-raster.html#hb-raster-paint-create-or-fail" title="hb_raster_paint_create_or_fail ()"><code class="function">hb_raster_paint_create_or_fail()</code></a>;
+hb_raster_paint_set_scale_factor (paint, 64.f, 64.f);
+hb_raster_paint_set_transform (paint, 1.f, 0.f, 0.f, 1.f, 0.f, 0.f);
+hb_raster_paint_set_foreground (paint, foreground);
+hb_glyph_extents_t glyph_extents;
+hb_font_get_glyph_extents (font, gid, &amp;amp;glyph_extents);
+hb_raster_paint_set_glyph_extents (paint, &amp;amp;glyph_extents);
+hb_raster_paint_glyph (paint, font, gid, pen_x, pen_y, 0, foreground);
+hb_raster_image_t *img = hb_raster_paint_render (paint);
+</code></p>
+<p>In both modes, set extents explicitly (or via glyph extents) before
+rendering to avoid implicit allocations and to get deterministic bounds.</p>
+</div>
+<div class="refsect1">
+<a name="harfbuzz-hb-raster.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="hb-raster-image-create-or-fail"></a><h3>hb_raster_image_create_or_fail ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-raster.html#hb-raster-image-t" title="hb_raster_image_t"><span class="returnvalue">hb_raster_image_t</span></a> *
+hb_raster_image_create_or_fail (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Creates a new raster image object.</p>
+<div class="refsect3">
+<a name="hb-raster-image-create-or-fail.returns"></a><h4>Returns</h4>
+<p>A newly allocated <a class="link" href="harfbuzz-hb-raster.html#hb-raster-image-t" title="hb_raster_image_t"><span class="type">hb_raster_image_t</span></a> with a reference count of 1,
+or <code class="literal">NULL</code> on allocation failure.</p>
+<p>The returned image can be released with <a class="link" href="harfbuzz-hb-raster.html#hb-raster-image-destroy" title="hb_raster_image_destroy ()"><code class="function">hb_raster_image_destroy()</code></a>, or
+transferred for reuse with <a class="link" href="harfbuzz-hb-raster.html#hb-raster-draw-recycle-image" title="hb_raster_draw_recycle_image ()"><code class="function">hb_raster_draw_recycle_image()</code></a> or
+<a class="link" href="harfbuzz-hb-raster.html#hb-raster-paint-recycle-image" title="hb_raster_paint_recycle_image ()"><code class="function">hb_raster_paint_recycle_image()</code></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-raster-image-reference"></a><h3>hb_raster_image_reference ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-raster.html#hb-raster-image-t" title="hb_raster_image_t"><span class="returnvalue">hb_raster_image_t</span></a> *
+hb_raster_image_reference (<em class="parameter"><code><a class="link" href="harfbuzz-hb-raster.html#hb-raster-image-t" title="hb_raster_image_t"><span class="type">hb_raster_image_t</span></a> *image</code></em>);</pre>
+<p>Increases the reference count on <em class="parameter"><code>image</code></em>
+ by one.</p>
+<p>This prevents <em class="parameter"><code>image</code></em>
+ from being destroyed until a matching
+call to <a class="link" href="harfbuzz-hb-raster.html#hb-raster-image-destroy" title="hb_raster_image_destroy ()"><code class="function">hb_raster_image_destroy()</code></a> is made.</p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+<div class="refsect3">
+<a name="hb-raster-image-reference.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>image</p></td>
+<td class="parameter_description"><p>a raster image</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-raster-image-reference.returns"></a><h4>Returns</h4>
+<p>The referenced <a class="link" href="harfbuzz-hb-raster.html#hb-raster-image-t" title="hb_raster_image_t"><span class="type">hb_raster_image_t</span></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-raster-image-destroy"></a><h3>hb_raster_image_destroy ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_raster_image_destroy (<em class="parameter"><code><a class="link" href="harfbuzz-hb-raster.html#hb-raster-image-t" title="hb_raster_image_t"><span class="type">hb_raster_image_t</span></a> *image</code></em>);</pre>
+<p>Decreases the reference count on <em class="parameter"><code>image</code></em>
+ by one. When the
+reference count reaches zero, the image and its pixel buffer
+are freed.</p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+<div class="refsect3">
+<a name="hb-raster-image-destroy.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>image</p></td>
+<td class="parameter_description"><p>a raster image</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-raster-image-set-user-data"></a><h3>hb_raster_image_set_user_data ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+hb_raster_image_set_user_data (<em class="parameter"><code><a class="link" href="harfbuzz-hb-raster.html#hb-raster-image-t" title="hb_raster_image_t"><span class="type">hb_raster_image_t</span></a> *image</code></em>,
+                               <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-user-data-key-t" title="hb_user_data_key_t"><span class="type">hb_user_data_key_t</span></a> *key</code></em>,
+                               <em class="parameter"><code><span class="type">void</span> *data</code></em>,
+                               <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-destroy-func-t" title="hb_destroy_func_t ()"><span class="type">hb_destroy_func_t</span></a> destroy</code></em>,
+                               <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="type">hb_bool_t</span></a> replace</code></em>);</pre>
+<p>Attaches a user-data key/data pair to the specified raster image.</p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+<div class="refsect3">
+<a name="hb-raster-image-set-user-data.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>image</p></td>
+<td class="parameter_description"><p>a raster image</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>the user-data key</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>a pointer to the user data</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>destroy</p></td>
+<td class="parameter_description"><p>a callback to call when <em class="parameter"><code>data</code></em>
+is not needed anymore. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>replace</p></td>
+<td class="parameter_description"><p>whether to replace an existing data with the same key</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-raster-image-set-user-data.returns"></a><h4>Returns</h4>
+<p> <code class="literal">true</code> if success, <code class="literal">false</code> otherwise</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-raster-image-get-user-data"></a><h3>hb_raster_image_get_user_data ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span> *
+hb_raster_image_get_user_data (<em class="parameter"><code><a class="link" href="harfbuzz-hb-raster.html#hb-raster-image-t" title="hb_raster_image_t"><span class="type">hb_raster_image_t</span></a> *image</code></em>,
+                               <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-user-data-key-t" title="hb_user_data_key_t"><span class="type">hb_user_data_key_t</span></a> *key</code></em>);</pre>
+<p>Fetches the user-data associated with the specified key,
+attached to the specified raster image.</p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+<div class="refsect3">
+<a name="hb-raster-image-get-user-data.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>image</p></td>
+<td class="parameter_description"><p>a raster image</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>the user-data key</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-raster-image-get-user-data.returns"></a><h4>Returns</h4>
+<p>A pointer to the user data. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-raster-image-configure"></a><h3>hb_raster_image_configure ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+hb_raster_image_configure (<em class="parameter"><code><a class="link" href="harfbuzz-hb-raster.html#hb-raster-image-t" title="hb_raster_image_t"><span class="type">hb_raster_image_t</span></a> *image</code></em>,
+                           <em class="parameter"><code><a class="link" href="harfbuzz-hb-raster.html#hb-raster-format-t" title="enum hb_raster_format_t"><span class="type">hb_raster_format_t</span></a> format</code></em>,
+                           <em class="parameter"><code>const <a class="link" href="harfbuzz-hb-raster.html#hb-raster-extents-t" title="hb_raster_extents_t"><span class="type">hb_raster_extents_t</span></a> *extents</code></em>);</pre>
+<p>Configures <em class="parameter"><code>image</code></em>
+ format and extents together, resizing backing storage
+at most once. This function does not clear pixel contents.</p>
+<p>Passing <code class="literal">NULL</code> for <em class="parameter"><code>extents</code></em>
+ clears extents and releases the backing
+allocation.</p>
+<div class="refsect3">
+<a name="hb-raster-image-configure.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>image</p></td>
+<td class="parameter_description"><p>a raster image</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>format</p></td>
+<td class="parameter_description"><p>the pixel format</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>extents</p></td>
+<td class="parameter_description"><p>desired image extents. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-raster-image-configure.returns"></a><h4>Returns</h4>
+<p> <code class="literal">true</code> if configuration succeeds, <code class="literal">false</code> on allocation
+failure</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-raster-image-clear"></a><h3>hb_raster_image_clear ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_raster_image_clear (<em class="parameter"><code><a class="link" href="harfbuzz-hb-raster.html#hb-raster-image-t" title="hb_raster_image_t"><span class="type">hb_raster_image_t</span></a> *image</code></em>);</pre>
+<p>Clears <em class="parameter"><code>image</code></em>
+ pixels to zero while keeping current extents and format.</p>
+<div class="refsect3">
+<a name="hb-raster-image-clear.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>image</p></td>
+<td class="parameter_description"><p>a raster image</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-raster-image-get-buffer"></a><h3>hb_raster_image_get_buffer ()</h3>
+<pre class="programlisting">const <span class="returnvalue">uint8_t</span> *
+hb_raster_image_get_buffer (<em class="parameter"><code><a class="link" href="harfbuzz-hb-raster.html#hb-raster-image-t" title="hb_raster_image_t"><span class="type">hb_raster_image_t</span></a> *image</code></em>);</pre>
+<p>Fetches the raw pixel buffer of <em class="parameter"><code>image</code></em>
+.  The buffer layout is
+described by the extents obtained from <a class="link" href="harfbuzz-hb-raster.html#hb-raster-image-get-extents" title="hb_raster_image_get_extents ()"><code class="function">hb_raster_image_get_extents()</code></a>
+and the format from <a class="link" href="harfbuzz-hb-raster.html#hb-raster-image-get-format" title="hb_raster_image_get_format ()"><code class="function">hb_raster_image_get_format()</code></a>.</p>
+<div class="refsect3">
+<a name="hb-raster-image-get-buffer.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>image</p></td>
+<td class="parameter_description"><p>a raster image</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-raster-image-get-buffer.returns"></a><h4>Returns</h4>
+<p>The pixel buffer, or <code class="literal">NULL</code>. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-raster-image-get-extents"></a><h3>hb_raster_image_get_extents ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_raster_image_get_extents (<em class="parameter"><code><a class="link" href="harfbuzz-hb-raster.html#hb-raster-image-t" title="hb_raster_image_t"><span class="type">hb_raster_image_t</span></a> *image</code></em>,
+                             <em class="parameter"><code><a class="link" href="harfbuzz-hb-raster.html#hb-raster-extents-t" title="hb_raster_extents_t"><span class="type">hb_raster_extents_t</span></a> *extents</code></em>);</pre>
+<p>Fetches the pixel-buffer extents of <em class="parameter"><code>image</code></em>
+.</p>
+<div class="refsect3">
+<a name="hb-raster-image-get-extents.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>image</p></td>
+<td class="parameter_description"><p>a raster image</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>extents</p></td>
+<td class="parameter_description"><p>the image extents. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-raster-image-get-format"></a><h3>hb_raster_image_get_format ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-raster.html#hb-raster-format-t" title="enum hb_raster_format_t"><span class="returnvalue">hb_raster_format_t</span></a>
+hb_raster_image_get_format (<em class="parameter"><code><a class="link" href="harfbuzz-hb-raster.html#hb-raster-image-t" title="hb_raster_image_t"><span class="type">hb_raster_image_t</span></a> *image</code></em>);</pre>
+<p>Fetches the pixel format of <em class="parameter"><code>image</code></em>
+.</p>
+<div class="refsect3">
+<a name="hb-raster-image-get-format.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>image</p></td>
+<td class="parameter_description"><p>a raster image</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-raster-image-get-format.returns"></a><h4>Returns</h4>
+<p>The <a class="link" href="harfbuzz-hb-raster.html#hb-raster-format-t" title="enum hb_raster_format_t"><span class="type">hb_raster_format_t</span></a> of the image</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-raster-draw-create-or-fail"></a><h3>hb_raster_draw_create_or_fail ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-raster.html#hb-raster-draw-t" title="hb_raster_draw_t"><span class="returnvalue">hb_raster_draw_t</span></a> *
+hb_raster_draw_create_or_fail (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Creates a new rasterizer object.</p>
+<div class="refsect3">
+<a name="hb-raster-draw-create-or-fail.returns"></a><h4>Returns</h4>
+<p>A newly allocated <a class="link" href="harfbuzz-hb-raster.html#hb-raster-draw-t" title="hb_raster_draw_t"><span class="type">hb_raster_draw_t</span></a> with a reference count of 1. The
+initial reference count should be released with <a class="link" href="harfbuzz-hb-raster.html#hb-raster-draw-destroy" title="hb_raster_draw_destroy ()"><code class="function">hb_raster_draw_destroy()</code></a>
+when you are done using the <a class="link" href="harfbuzz-hb-raster.html#hb-raster-draw-t" title="hb_raster_draw_t"><span class="type">hb_raster_draw_t</span></a>, or <code class="literal">NULL</code> on
+allocation failure. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-raster-draw-reference"></a><h3>hb_raster_draw_reference ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-raster.html#hb-raster-draw-t" title="hb_raster_draw_t"><span class="returnvalue">hb_raster_draw_t</span></a> *
+hb_raster_draw_reference (<em class="parameter"><code><a class="link" href="harfbuzz-hb-raster.html#hb-raster-draw-t" title="hb_raster_draw_t"><span class="type">hb_raster_draw_t</span></a> *draw</code></em>);</pre>
+<p>Increases the reference count on <em class="parameter"><code>draw</code></em>
+ by one.</p>
+<p>This prevents <em class="parameter"><code>draw</code></em>
+ from being destroyed until a matching
+call to <a class="link" href="harfbuzz-hb-raster.html#hb-raster-draw-destroy" title="hb_raster_draw_destroy ()"><code class="function">hb_raster_draw_destroy()</code></a> is made.</p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+<div class="refsect3">
+<a name="hb-raster-draw-reference.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>draw</p></td>
+<td class="parameter_description"><p>a rasterizer</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-raster-draw-reference.returns"></a><h4>Returns</h4>
+<p>The referenced <a class="link" href="harfbuzz-hb-raster.html#hb-raster-draw-t" title="hb_raster_draw_t"><span class="type">hb_raster_draw_t</span></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-raster-draw-destroy"></a><h3>hb_raster_draw_destroy ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_raster_draw_destroy (<em class="parameter"><code><a class="link" href="harfbuzz-hb-raster.html#hb-raster-draw-t" title="hb_raster_draw_t"><span class="type">hb_raster_draw_t</span></a> *draw</code></em>);</pre>
+<p>Decreases the reference count on <em class="parameter"><code>draw</code></em>
+ by one. When the
+reference count reaches zero, the rasterizer is freed.</p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+<div class="refsect3">
+<a name="hb-raster-draw-destroy.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>draw</p></td>
+<td class="parameter_description"><p>a rasterizer</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-raster-draw-set-user-data"></a><h3>hb_raster_draw_set_user_data ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+hb_raster_draw_set_user_data (<em class="parameter"><code><a class="link" href="harfbuzz-hb-raster.html#hb-raster-draw-t" title="hb_raster_draw_t"><span class="type">hb_raster_draw_t</span></a> *draw</code></em>,
+                              <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-user-data-key-t" title="hb_user_data_key_t"><span class="type">hb_user_data_key_t</span></a> *key</code></em>,
+                              <em class="parameter"><code><span class="type">void</span> *data</code></em>,
+                              <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-destroy-func-t" title="hb_destroy_func_t ()"><span class="type">hb_destroy_func_t</span></a> destroy</code></em>,
+                              <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="type">hb_bool_t</span></a> replace</code></em>);</pre>
+<p>Attaches a user-data key/data pair to the specified rasterizer.</p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+<div class="refsect3">
+<a name="hb-raster-draw-set-user-data.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>draw</p></td>
+<td class="parameter_description"><p>a rasterizer</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>the user-data key</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>a pointer to the user data</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>destroy</p></td>
+<td class="parameter_description"><p>a callback to call when <em class="parameter"><code>data</code></em>
+is not needed anymore. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>replace</p></td>
+<td class="parameter_description"><p>whether to replace an existing data with the same key</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-raster-draw-set-user-data.returns"></a><h4>Returns</h4>
+<p> <code class="literal">true</code> if success, <code class="literal">false</code> otherwise</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-raster-draw-get-user-data"></a><h3>hb_raster_draw_get_user_data ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span> *
+hb_raster_draw_get_user_data (<em class="parameter"><code><a class="link" href="harfbuzz-hb-raster.html#hb-raster-draw-t" title="hb_raster_draw_t"><span class="type">hb_raster_draw_t</span></a> *draw</code></em>,
+                              <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-user-data-key-t" title="hb_user_data_key_t"><span class="type">hb_user_data_key_t</span></a> *key</code></em>);</pre>
+<p>Fetches the user-data associated with the specified key,
+attached to the specified rasterizer.</p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+<div class="refsect3">
+<a name="hb-raster-draw-get-user-data.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>draw</p></td>
+<td class="parameter_description"><p>a rasterizer</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>the user-data key</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-raster-draw-get-user-data.returns"></a><h4>Returns</h4>
+<p>A pointer to the user data. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-raster-draw-set-transform"></a><h3>hb_raster_draw_set_transform ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_raster_draw_set_transform (<em class="parameter"><code><a class="link" href="harfbuzz-hb-raster.html#hb-raster-draw-t" title="hb_raster_draw_t"><span class="type">hb_raster_draw_t</span></a> *draw</code></em>,
+                              <em class="parameter"><code><span class="type">float</span> xx</code></em>,
+                              <em class="parameter"><code><span class="type">float</span> yx</code></em>,
+                              <em class="parameter"><code><span class="type">float</span> xy</code></em>,
+                              <em class="parameter"><code><span class="type">float</span> yy</code></em>,
+                              <em class="parameter"><code><span class="type">float</span> dx</code></em>,
+                              <em class="parameter"><code><span class="type">float</span> dy</code></em>);</pre>
+<p>Sets a 2×3 affine transform applied to all incoming draw
+coordinates before rasterization.  The default is the identity.</p>
+<div class="refsect3">
+<a name="hb-raster-draw-set-transform.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>draw</p></td>
+<td class="parameter_description"><p>a rasterizer</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>xx</p></td>
+<td class="parameter_description"><p>xx component of the transform matrix</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>yx</p></td>
+<td class="parameter_description"><p>yx component of the transform matrix</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>xy</p></td>
+<td class="parameter_description"><p>xy component of the transform matrix</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>yy</p></td>
+<td class="parameter_description"><p>yy component of the transform matrix</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>dx</p></td>
+<td class="parameter_description"><p>x translation</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>dy</p></td>
+<td class="parameter_description"><p>y translation</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-raster-draw-set-scale-factor"></a><h3>hb_raster_draw_set_scale_factor ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_raster_draw_set_scale_factor (<em class="parameter"><code><a class="link" href="harfbuzz-hb-raster.html#hb-raster-draw-t" title="hb_raster_draw_t"><span class="type">hb_raster_draw_t</span></a> *draw</code></em>,
+                                 <em class="parameter"><code><span class="type">float</span> x_scale_factor</code></em>,
+                                 <em class="parameter"><code><span class="type">float</span> y_scale_factor</code></em>);</pre>
+<p>Sets post-transform minification factors applied during rasterization.
+Factors larger than 1 shrink the output in pixels. The default is 1.</p>
+<div class="refsect3">
+<a name="hb-raster-draw-set-scale-factor.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>draw</p></td>
+<td class="parameter_description"><p>a rasterizer</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>x_scale_factor</p></td>
+<td class="parameter_description"><p>x-axis minification factor</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>y_scale_factor</p></td>
+<td class="parameter_description"><p>y-axis minification factor</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-raster-draw-get-scale-factor"></a><h3>hb_raster_draw_get_scale_factor ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_raster_draw_get_scale_factor (<em class="parameter"><code><a class="link" href="harfbuzz-hb-raster.html#hb-raster-draw-t" title="hb_raster_draw_t"><span class="type">hb_raster_draw_t</span></a> *draw</code></em>,
+                                 <em class="parameter"><code><span class="type">float</span> *x_scale_factor</code></em>,
+                                 <em class="parameter"><code><span class="type">float</span> *y_scale_factor</code></em>);</pre>
+<p>Fetches the current post-transform minification factors.</p>
+<div class="refsect3">
+<a name="hb-raster-draw-get-scale-factor.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>draw</p></td>
+<td class="parameter_description"><p>a rasterizer</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>x_scale_factor</p></td>
+<td class="parameter_description"><p>x-axis minification factor. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>y_scale_factor</p></td>
+<td class="parameter_description"><p>y-axis minification factor. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-raster-draw-get-transform"></a><h3>hb_raster_draw_get_transform ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_raster_draw_get_transform (<em class="parameter"><code><a class="link" href="harfbuzz-hb-raster.html#hb-raster-draw-t" title="hb_raster_draw_t"><span class="type">hb_raster_draw_t</span></a> *draw</code></em>,
+                              <em class="parameter"><code><span class="type">float</span> *xx</code></em>,
+                              <em class="parameter"><code><span class="type">float</span> *yx</code></em>,
+                              <em class="parameter"><code><span class="type">float</span> *xy</code></em>,
+                              <em class="parameter"><code><span class="type">float</span> *yy</code></em>,
+                              <em class="parameter"><code><span class="type">float</span> *dx</code></em>,
+                              <em class="parameter"><code><span class="type">float</span> *dy</code></em>);</pre>
+<p>Fetches the current affine transform of the rasterizer.</p>
+<div class="refsect3">
+<a name="hb-raster-draw-get-transform.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>draw</p></td>
+<td class="parameter_description"><p>a rasterizer</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>xx</p></td>
+<td class="parameter_description"><p>xx component of the transform matrix. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>yx</p></td>
+<td class="parameter_description"><p>yx component of the transform matrix. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>xy</p></td>
+<td class="parameter_description"><p>xy component of the transform matrix. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>yy</p></td>
+<td class="parameter_description"><p>yy component of the transform matrix. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>dx</p></td>
+<td class="parameter_description"><p>x translation. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>dy</p></td>
+<td class="parameter_description"><p>y translation. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-raster-draw-set-extents"></a><h3>hb_raster_draw_set_extents ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_raster_draw_set_extents (<em class="parameter"><code><a class="link" href="harfbuzz-hb-raster.html#hb-raster-draw-t" title="hb_raster_draw_t"><span class="type">hb_raster_draw_t</span></a> *draw</code></em>,
+                            <em class="parameter"><code>const <a class="link" href="harfbuzz-hb-raster.html#hb-raster-extents-t" title="hb_raster_extents_t"><span class="type">hb_raster_extents_t</span></a> *extents</code></em>);</pre>
+<p>Overrides the output image extents for the next render.  When set,
+<a class="link" href="harfbuzz-hb-raster.html#hb-raster-draw-render" title="hb_raster_draw_render ()"><code class="function">hb_raster_draw_render()</code></a> uses the given extents instead of
+auto-computing them from the accumulated geometry.</p>
+<div class="refsect3">
+<a name="hb-raster-draw-set-extents.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>draw</p></td>
+<td class="parameter_description"><p>a rasterizer</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>extents</p></td>
+<td class="parameter_description"><p>the desired output extents</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-raster-draw-get-extents"></a><h3>hb_raster_draw_get_extents ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+hb_raster_draw_get_extents (<em class="parameter"><code><a class="link" href="harfbuzz-hb-raster.html#hb-raster-draw-t" title="hb_raster_draw_t"><span class="type">hb_raster_draw_t</span></a> *draw</code></em>,
+                            <em class="parameter"><code><a class="link" href="harfbuzz-hb-raster.html#hb-raster-extents-t" title="hb_raster_extents_t"><span class="type">hb_raster_extents_t</span></a> *extents</code></em>);</pre>
+<p>Gets currently configured output extents.</p>
+<div class="refsect3">
+<a name="hb-raster-draw-get-extents.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>draw</p></td>
+<td class="parameter_description"><p>a rasterizer</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>extents</p></td>
+<td class="parameter_description"><p>where to write current extents. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-raster-draw-get-extents.returns"></a><h4>Returns</h4>
+<p> <code class="literal">true</code> if extents are set, <code class="literal">false</code> otherwise.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-raster-draw-set-glyph-extents"></a><h3>hb_raster_draw_set_glyph_extents ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+hb_raster_draw_set_glyph_extents (<em class="parameter"><code><a class="link" href="harfbuzz-hb-raster.html#hb-raster-draw-t" title="hb_raster_draw_t"><span class="type">hb_raster_draw_t</span></a> *draw</code></em>,
+                                  <em class="parameter"><code>const <a class="link" href="harfbuzz-hb-font.html#hb-glyph-extents-t" title="hb_glyph_extents_t"><span class="type">hb_glyph_extents_t</span></a> *glyph_extents</code></em>);</pre>
+<p>Transforms <em class="parameter"><code>glyph_extents</code></em>
+ with the rasterizer's current transform and
+sets the resulting pixel extents for the next render.</p>
+<p>This is equivalent to computing a transformed bounding box in pixel
+space and calling <a class="link" href="harfbuzz-hb-raster.html#hb-raster-draw-set-extents" title="hb_raster_draw_set_extents ()"><code class="function">hb_raster_draw_set_extents()</code></a>.</p>
+<div class="refsect3">
+<a name="hb-raster-draw-set-glyph-extents.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>draw</p></td>
+<td class="parameter_description"><p>a rasterizer</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>glyph_extents</p></td>
+<td class="parameter_description"><p>glyph extents from <a class="link" href="harfbuzz-hb-font.html#hb-font-get-glyph-extents" title="hb_font_get_glyph_extents ()"><code class="function">hb_font_get_glyph_extents()</code></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-raster-draw-set-glyph-extents.returns"></a><h4>Returns</h4>
+<p> <code class="literal">true</code> if transformed extents are non-empty and set;
+<code class="literal">false</code> otherwise.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-raster-draw-reset"></a><h3>hb_raster_draw_reset ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_raster_draw_reset (<em class="parameter"><code><a class="link" href="harfbuzz-hb-raster.html#hb-raster-draw-t" title="hb_raster_draw_t"><span class="type">hb_raster_draw_t</span></a> *draw</code></em>);</pre>
+<p>Resets the rasterizer to its initial state, clearing all accumulated
+geometry, the transform, and fixed extents.  The object can then be
+reused for a new glyph.</p>
+<p>Internal scratch buffers and recycled image cache are preserved for
+reuse across subsequent renders.</p>
+<div class="refsect3">
+<a name="hb-raster-draw-reset.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>draw</p></td>
+<td class="parameter_description"><p>a rasterizer</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-raster-draw-get-funcs"></a><h3>hb_raster_draw_get_funcs ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-draw.html#hb-draw-funcs-t" title="hb_draw_funcs_t"><span class="returnvalue">hb_draw_funcs_t</span></a> *
+hb_raster_draw_get_funcs (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Fetches the singleton <a class="link" href="harfbuzz-hb-draw.html#hb-draw-funcs-t" title="hb_draw_funcs_t"><span class="type">hb_draw_funcs_t</span></a> that feeds outline data
+into an <a class="link" href="harfbuzz-hb-raster.html#hb-raster-draw-t" title="hb_raster_draw_t"><span class="type">hb_raster_draw_t</span></a>.  Pass the <a class="link" href="harfbuzz-hb-raster.html#hb-raster-draw-t" title="hb_raster_draw_t"><span class="type">hb_raster_draw_t</span></a> as the
+<em class="parameter"><code>draw_data</code></em>
+ argument when calling the draw functions.</p>
+<div class="refsect3">
+<a name="hb-raster-draw-get-funcs.returns"></a><h4>Returns</h4>
+<p>The rasterizer draw functions. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-raster-draw-glyph"></a><h3>hb_raster_draw_glyph ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_raster_draw_glyph (<em class="parameter"><code><a class="link" href="harfbuzz-hb-raster.html#hb-raster-draw-t" title="hb_raster_draw_t"><span class="type">hb_raster_draw_t</span></a> *draw</code></em>,
+                      <em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> *font</code></em>,
+                      <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> glyph</code></em>,
+                      <em class="parameter"><code><span class="type">float</span> pen_x</code></em>,
+                      <em class="parameter"><code><span class="type">float</span> pen_y</code></em>);</pre>
+<p>Convenience wrapper to draw one glyph at (<em class="parameter"><code>pen_x</code></em>
+, <em class="parameter"><code>pen_y</code></em>
+) using the
+rasterizer's current transform. The pen coordinates are applied before
+minification and are transformed by the current affine transform.</p>
+<div class="refsect3">
+<a name="hb-raster-draw-glyph.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>draw</p></td>
+<td class="parameter_description"><p>a rasterizer</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>font</p></td>
+<td class="parameter_description"><p>font to draw from</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>glyph</p></td>
+<td class="parameter_description"><p>glyph ID to draw</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pen_x</p></td>
+<td class="parameter_description"><p>glyph origin x in font coordinates (pre-transform)</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pen_y</p></td>
+<td class="parameter_description"><p>glyph origin y in font coordinates (pre-transform)</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-raster-draw-render"></a><h3>hb_raster_draw_render ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-raster.html#hb-raster-image-t" title="hb_raster_image_t"><span class="returnvalue">hb_raster_image_t</span></a> *
+hb_raster_draw_render (<em class="parameter"><code><a class="link" href="harfbuzz-hb-raster.html#hb-raster-draw-t" title="hb_raster_draw_t"><span class="type">hb_raster_draw_t</span></a> *draw</code></em>);</pre>
+<p>Rasterizes the accumulated outline geometry into a new
+<a class="link" href="harfbuzz-hb-raster.html#hb-raster-image-t" title="hb_raster_image_t"><span class="type">hb_raster_image_t</span></a>.  After rendering, the accumulated edges are
+cleared so the rasterizer can be reused. Output format is always
+<em class="parameter"><code>HB_RASTER_FORMAT_A8</code></em>
+.</p>
+<div class="refsect3">
+<a name="hb-raster-draw-render.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>draw</p></td>
+<td class="parameter_description"><p>a rasterizer</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-raster-draw-render.returns"></a><h4>Returns</h4>
+<p>A rendered <a class="link" href="harfbuzz-hb-raster.html#hb-raster-image-t" title="hb_raster_image_t"><span class="type">hb_raster_image_t</span></a>. Returns <code class="literal">NULL</code> on allocation/configuration
+failure. If no geometry was accumulated, returns an empty image. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-raster-draw-recycle-image"></a><h3>hb_raster_draw_recycle_image ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_raster_draw_recycle_image (<em class="parameter"><code><a class="link" href="harfbuzz-hb-raster.html#hb-raster-draw-t" title="hb_raster_draw_t"><span class="type">hb_raster_draw_t</span></a> *draw</code></em>,
+                              <em class="parameter"><code><a class="link" href="harfbuzz-hb-raster.html#hb-raster-image-t" title="hb_raster_image_t"><span class="type">hb_raster_image_t</span></a> *image</code></em>);</pre>
+<p>Recycles <em class="parameter"><code>image</code></em>
+ for reuse by a subsequent <a class="link" href="harfbuzz-hb-raster.html#hb-raster-draw-render" title="hb_raster_draw_render ()"><code class="function">hb_raster_draw_render()</code></a>
+call, avoiding per-render memory allocation.  The caller transfers
+ownership of <em class="parameter"><code>image</code></em>
+ to <em class="parameter"><code>draw</code></em>
+ and must not use it afterwards.</p>
+<p>If <em class="parameter"><code>draw</code></em>
+ already holds a recycled image, the previously recycled
+image is destroyed.</p>
+<div class="refsect3">
+<a name="hb-raster-draw-recycle-image.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>draw</p></td>
+<td class="parameter_description"><p>a rasterizer</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>image</p></td>
+<td class="parameter_description"><p>a raster image to recycle</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-raster-paint-create-or-fail"></a><h3>hb_raster_paint_create_or_fail ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-raster.html#hb-raster-paint-t" title="hb_raster_paint_t"><span class="returnvalue">hb_raster_paint_t</span></a> *
+hb_raster_paint_create_or_fail (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Creates a new color-glyph paint context.</p>
+<div class="refsect3">
+<a name="hb-raster-paint-create-or-fail.returns"></a><h4>Returns</h4>
+<p>A newly allocated <a class="link" href="harfbuzz-hb-raster.html#hb-raster-paint-t" title="hb_raster_paint_t"><span class="type">hb_raster_paint_t</span></a>, or <code class="literal">NULL</code> on allocation failure. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-raster-paint-reference"></a><h3>hb_raster_paint_reference ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-raster.html#hb-raster-paint-t" title="hb_raster_paint_t"><span class="returnvalue">hb_raster_paint_t</span></a> *
+hb_raster_paint_reference (<em class="parameter"><code><a class="link" href="harfbuzz-hb-raster.html#hb-raster-paint-t" title="hb_raster_paint_t"><span class="type">hb_raster_paint_t</span></a> *paint</code></em>);</pre>
+<p>Increases the reference count on <em class="parameter"><code>paint</code></em>
+ by one.</p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+<div class="refsect3">
+<a name="hb-raster-paint-reference.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>paint</p></td>
+<td class="parameter_description"><p>a paint context</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-raster-paint-reference.returns"></a><h4>Returns</h4>
+<p>The referenced <a class="link" href="harfbuzz-hb-raster.html#hb-raster-paint-t" title="hb_raster_paint_t"><span class="type">hb_raster_paint_t</span></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-raster-paint-destroy"></a><h3>hb_raster_paint_destroy ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_raster_paint_destroy (<em class="parameter"><code><a class="link" href="harfbuzz-hb-raster.html#hb-raster-paint-t" title="hb_raster_paint_t"><span class="type">hb_raster_paint_t</span></a> *paint</code></em>);</pre>
+<p>Decreases the reference count on <em class="parameter"><code>paint</code></em>
+ by one. When the
+reference count reaches zero, the paint context is freed.</p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+<div class="refsect3">
+<a name="hb-raster-paint-destroy.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>paint</p></td>
+<td class="parameter_description"><p>a paint context</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-raster-paint-set-user-data"></a><h3>hb_raster_paint_set_user_data ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+hb_raster_paint_set_user_data (<em class="parameter"><code><a class="link" href="harfbuzz-hb-raster.html#hb-raster-paint-t" title="hb_raster_paint_t"><span class="type">hb_raster_paint_t</span></a> *paint</code></em>,
+                               <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-user-data-key-t" title="hb_user_data_key_t"><span class="type">hb_user_data_key_t</span></a> *key</code></em>,
+                               <em class="parameter"><code><span class="type">void</span> *data</code></em>,
+                               <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-destroy-func-t" title="hb_destroy_func_t ()"><span class="type">hb_destroy_func_t</span></a> destroy</code></em>,
+                               <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="type">hb_bool_t</span></a> replace</code></em>);</pre>
+<p>Attaches a user-data key/data pair to the specified paint context.</p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+<div class="refsect3">
+<a name="hb-raster-paint-set-user-data.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>paint</p></td>
+<td class="parameter_description"><p>a paint context</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>the user-data key</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>a pointer to the user data</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>destroy</p></td>
+<td class="parameter_description"><p>a callback to call when <em class="parameter"><code>data</code></em>
+is not needed anymore. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>replace</p></td>
+<td class="parameter_description"><p>whether to replace an existing data with the same key</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-raster-paint-set-user-data.returns"></a><h4>Returns</h4>
+<p> <code class="literal">true</code> if success, <code class="literal">false</code> otherwise</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-raster-paint-get-user-data"></a><h3>hb_raster_paint_get_user_data ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span> *
+hb_raster_paint_get_user_data (<em class="parameter"><code><a class="link" href="harfbuzz-hb-raster.html#hb-raster-paint-t" title="hb_raster_paint_t"><span class="type">hb_raster_paint_t</span></a> *paint</code></em>,
+                               <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-user-data-key-t" title="hb_user_data_key_t"><span class="type">hb_user_data_key_t</span></a> *key</code></em>);</pre>
+<p>Fetches the user-data associated with the specified key,
+attached to the specified paint context.</p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+<div class="refsect3">
+<a name="hb-raster-paint-get-user-data.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>paint</p></td>
+<td class="parameter_description"><p>a paint context</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>the user-data key</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-raster-paint-get-user-data.returns"></a><h4>Returns</h4>
+<p>A pointer to the user data. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-raster-paint-set-transform"></a><h3>hb_raster_paint_set_transform ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_raster_paint_set_transform (<em class="parameter"><code><a class="link" href="harfbuzz-hb-raster.html#hb-raster-paint-t" title="hb_raster_paint_t"><span class="type">hb_raster_paint_t</span></a> *paint</code></em>,
+                               <em class="parameter"><code><span class="type">float</span> xx</code></em>,
+                               <em class="parameter"><code><span class="type">float</span> yx</code></em>,
+                               <em class="parameter"><code><span class="type">float</span> xy</code></em>,
+                               <em class="parameter"><code><span class="type">float</span> yy</code></em>,
+                               <em class="parameter"><code><span class="type">float</span> dx</code></em>,
+                               <em class="parameter"><code><span class="type">float</span> dy</code></em>);</pre>
+<p>Sets the base 2×3 affine transform that maps from glyph-space
+coordinates to pixel-space coordinates.</p>
+<div class="refsect3">
+<a name="hb-raster-paint-set-transform.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>paint</p></td>
+<td class="parameter_description"><p>a paint context</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>xx</p></td>
+<td class="parameter_description"><p>xx component of the transform matrix</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>yx</p></td>
+<td class="parameter_description"><p>yx component of the transform matrix</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>xy</p></td>
+<td class="parameter_description"><p>xy component of the transform matrix</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>yy</p></td>
+<td class="parameter_description"><p>yy component of the transform matrix</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>dx</p></td>
+<td class="parameter_description"><p>x translation</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>dy</p></td>
+<td class="parameter_description"><p>y translation</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-raster-paint-get-transform"></a><h3>hb_raster_paint_get_transform ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_raster_paint_get_transform (<em class="parameter"><code><a class="link" href="harfbuzz-hb-raster.html#hb-raster-paint-t" title="hb_raster_paint_t"><span class="type">hb_raster_paint_t</span></a> *paint</code></em>,
+                               <em class="parameter"><code><span class="type">float</span> *xx</code></em>,
+                               <em class="parameter"><code><span class="type">float</span> *yx</code></em>,
+                               <em class="parameter"><code><span class="type">float</span> *xy</code></em>,
+                               <em class="parameter"><code><span class="type">float</span> *yy</code></em>,
+                               <em class="parameter"><code><span class="type">float</span> *dx</code></em>,
+                               <em class="parameter"><code><span class="type">float</span> *dy</code></em>);</pre>
+<p>Gets the current base 2x3 affine transform.</p>
+<div class="refsect3">
+<a name="hb-raster-paint-get-transform.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>paint</p></td>
+<td class="parameter_description"><p>a paint context</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>xx</p></td>
+<td class="parameter_description"><p>xx component of the transform matrix. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>yx</p></td>
+<td class="parameter_description"><p>yx component of the transform matrix. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>xy</p></td>
+<td class="parameter_description"><p>xy component of the transform matrix. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>yy</p></td>
+<td class="parameter_description"><p>yy component of the transform matrix. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>dx</p></td>
+<td class="parameter_description"><p>x translation. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>dy</p></td>
+<td class="parameter_description"><p>y translation. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-raster-paint-set-scale-factor"></a><h3>hb_raster_paint_set_scale_factor ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_raster_paint_set_scale_factor (<em class="parameter"><code><a class="link" href="harfbuzz-hb-raster.html#hb-raster-paint-t" title="hb_raster_paint_t"><span class="type">hb_raster_paint_t</span></a> *paint</code></em>,
+                                  <em class="parameter"><code><span class="type">float</span> x_scale_factor</code></em>,
+                                  <em class="parameter"><code><span class="type">float</span> y_scale_factor</code></em>);</pre>
+<p>Sets post-transform minification factors applied during painting.
+Factors larger than 1 shrink the output in pixels. The default is 1.</p>
+<div class="refsect3">
+<a name="hb-raster-paint-set-scale-factor.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>paint</p></td>
+<td class="parameter_description"><p>a paint context</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>x_scale_factor</p></td>
+<td class="parameter_description"><p>x-axis minification factor</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>y_scale_factor</p></td>
+<td class="parameter_description"><p>y-axis minification factor</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-raster-paint-get-scale-factor"></a><h3>hb_raster_paint_get_scale_factor ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_raster_paint_get_scale_factor (<em class="parameter"><code><a class="link" href="harfbuzz-hb-raster.html#hb-raster-paint-t" title="hb_raster_paint_t"><span class="type">hb_raster_paint_t</span></a> *paint</code></em>,
+                                  <em class="parameter"><code><span class="type">float</span> *x_scale_factor</code></em>,
+                                  <em class="parameter"><code><span class="type">float</span> *y_scale_factor</code></em>);</pre>
+<p>Fetches the current post-transform minification factors.</p>
+<div class="refsect3">
+<a name="hb-raster-paint-get-scale-factor.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>paint</p></td>
+<td class="parameter_description"><p>a paint context</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>x_scale_factor</p></td>
+<td class="parameter_description"><p>x-axis minification factor. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>y_scale_factor</p></td>
+<td class="parameter_description"><p>y-axis minification factor. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-raster-paint-set-extents"></a><h3>hb_raster_paint_set_extents ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_raster_paint_set_extents (<em class="parameter"><code><a class="link" href="harfbuzz-hb-raster.html#hb-raster-paint-t" title="hb_raster_paint_t"><span class="type">hb_raster_paint_t</span></a> *paint</code></em>,
+                             <em class="parameter"><code>const <a class="link" href="harfbuzz-hb-raster.html#hb-raster-extents-t" title="hb_raster_extents_t"><span class="type">hb_raster_extents_t</span></a> *extents</code></em>);</pre>
+<p>Sets the output image extents (pixel rectangle).</p>
+<p>Call this before <a class="link" href="harfbuzz-hb-font.html#hb-font-paint-glyph" title="hb_font_paint_glyph ()"><code class="function">hb_font_paint_glyph()</code></a> for each render.
+A common pattern is:
+<code class="literal">
+hb_glyph_extents_t gext;
+if (hb_font_get_glyph_extents (font, gid, &amp;amp;gext))
+  hb_raster_paint_set_glyph_extents (paint, &amp;amp;gext);
+</code></p>
+<div class="refsect3">
+<a name="hb-raster-paint-set-extents.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>paint</p></td>
+<td class="parameter_description"><p>a paint context</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>extents</p></td>
+<td class="parameter_description"><p>the desired output extents</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-raster-paint-get-extents"></a><h3>hb_raster_paint_get_extents ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+hb_raster_paint_get_extents (<em class="parameter"><code><a class="link" href="harfbuzz-hb-raster.html#hb-raster-paint-t" title="hb_raster_paint_t"><span class="type">hb_raster_paint_t</span></a> *paint</code></em>,
+                             <em class="parameter"><code><a class="link" href="harfbuzz-hb-raster.html#hb-raster-extents-t" title="hb_raster_extents_t"><span class="type">hb_raster_extents_t</span></a> *extents</code></em>);</pre>
+<p>Gets currently configured output extents.</p>
+<div class="refsect3">
+<a name="hb-raster-paint-get-extents.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>paint</p></td>
+<td class="parameter_description"><p>a paint context</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>extents</p></td>
+<td class="parameter_description"><p>where to write current extents. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-raster-paint-get-extents.returns"></a><h4>Returns</h4>
+<p> <code class="literal">true</code> if extents are set, <code class="literal">false</code> otherwise.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-raster-paint-set-glyph-extents"></a><h3>hb_raster_paint_set_glyph_extents ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+hb_raster_paint_set_glyph_extents (<em class="parameter"><code><a class="link" href="harfbuzz-hb-raster.html#hb-raster-paint-t" title="hb_raster_paint_t"><span class="type">hb_raster_paint_t</span></a> *paint</code></em>,
+                                   <em class="parameter"><code>const <a class="link" href="harfbuzz-hb-font.html#hb-glyph-extents-t" title="hb_glyph_extents_t"><span class="type">hb_glyph_extents_t</span></a> *glyph_extents</code></em>);</pre>
+<p>Transforms <em class="parameter"><code>glyph_extents</code></em>
+ with the paint context's base transform and
+sets the resulting output image extents.</p>
+<p>This is equivalent to computing a transformed bounding box in pixel
+space and calling <a class="link" href="harfbuzz-hb-raster.html#hb-raster-paint-set-extents" title="hb_raster_paint_set_extents ()"><code class="function">hb_raster_paint_set_extents()</code></a>.</p>
+<div class="refsect3">
+<a name="hb-raster-paint-set-glyph-extents.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>paint</p></td>
+<td class="parameter_description"><p>a paint context</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>glyph_extents</p></td>
+<td class="parameter_description"><p>glyph extents from <a class="link" href="harfbuzz-hb-font.html#hb-font-get-glyph-extents" title="hb_font_get_glyph_extents ()"><code class="function">hb_font_get_glyph_extents()</code></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-raster-paint-set-glyph-extents.returns"></a><h4>Returns</h4>
+<p> <code class="literal">true</code> if transformed extents are non-empty and set;
+<code class="literal">false</code> otherwise.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-raster-paint-set-foreground"></a><h3>hb_raster_paint_set_foreground ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_raster_paint_set_foreground (<em class="parameter"><code><a class="link" href="harfbuzz-hb-raster.html#hb-raster-paint-t" title="hb_raster_paint_t"><span class="type">hb_raster_paint_t</span></a> *paint</code></em>,
+                                <em class="parameter"><code><a class="link" href="harfbuzz-hb-ot-color.html#hb-color-t" title="hb_color_t"><span class="type">hb_color_t</span></a> foreground</code></em>);</pre>
+<p>Sets the foreground color used when paint callbacks request it
+(e.g. <code class="literal">is_foreground</code> in color stops or solid fills).</p>
+<div class="refsect3">
+<a name="hb-raster-paint-set-foreground.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>paint</p></td>
+<td class="parameter_description"><p>a paint context</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>foreground</p></td>
+<td class="parameter_description"><p>the foreground color</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-raster-paint-clear-custom-palette-colors"></a><h3>hb_raster_paint_clear_custom_palette_colors ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_raster_paint_clear_custom_palette_colors
+                               (<em class="parameter"><code><a class="link" href="harfbuzz-hb-raster.html#hb-raster-paint-t" title="hb_raster_paint_t"><span class="type">hb_raster_paint_t</span></a> *paint</code></em>);</pre>
+<p>Clears all custom palette color overrides previously set on <em class="parameter"><code>paint</code></em>
+.</p>
+<p>After this call, palette lookups use the selected font palette without
+custom override entries.</p>
+<div class="refsect3">
+<a name="hb-raster-paint-clear-custom-palette-colors.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>paint</p></td>
+<td class="parameter_description"><p>a paint context.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-raster-paint-set-custom-palette-color"></a><h3>hb_raster_paint_set_custom_palette_color ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+hb_raster_paint_set_custom_palette_color
+                               (<em class="parameter"><code><a class="link" href="harfbuzz-hb-raster.html#hb-raster-paint-t" title="hb_raster_paint_t"><span class="type">hb_raster_paint_t</span></a> *paint</code></em>,
+                                <em class="parameter"><code>unsigned <span class="type">int</span> color_index</code></em>,
+                                <em class="parameter"><code><a class="link" href="harfbuzz-hb-ot-color.html#hb-color-t" title="hb_color_t"><span class="type">hb_color_t</span></a> color</code></em>);</pre>
+<p>Overrides one font palette color entry for subsequent paint operations.
+Overrides are keyed by <em class="parameter"><code>color_index</code></em>
+ and persist on <em class="parameter"><code>paint</code></em>
+ until cleared
+(or replaced for the same index).</p>
+<p>These overrides are consulted by paint operations that resolve CPAL
+entries.</p>
+<div class="refsect3">
+<a name="hb-raster-paint-set-custom-palette-color.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>paint</p></td>
+<td class="parameter_description"><p>a paint context.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>color_index</p></td>
+<td class="parameter_description"><p>color index to override.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>color</p></td>
+<td class="parameter_description"><p>replacement color.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-raster-paint-set-custom-palette-color.returns"></a><h4>Returns</h4>
+<p> <code class="literal">true</code> if the override was set; <code class="literal">false</code> on allocation failure.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-raster-paint-get-funcs"></a><h3>hb_raster_paint_get_funcs ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-paint.html#hb-paint-funcs-t" title="hb_paint_funcs_t"><span class="returnvalue">hb_paint_funcs_t</span></a> *
+hb_raster_paint_get_funcs (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Fetches the singleton <a class="link" href="harfbuzz-hb-paint.html#hb-paint-funcs-t" title="hb_paint_funcs_t"><span class="type">hb_paint_funcs_t</span></a> that renders color glyphs
+into an <a class="link" href="harfbuzz-hb-raster.html#hb-raster-paint-t" title="hb_raster_paint_t"><span class="type">hb_raster_paint_t</span></a>.  Pass the <a class="link" href="harfbuzz-hb-raster.html#hb-raster-paint-t" title="hb_raster_paint_t"><span class="type">hb_raster_paint_t</span></a> as the
+<em class="parameter"><code>paint_data</code></em>
+ argument when calling <a class="link" href="harfbuzz-hb-font.html#hb-font-paint-glyph" title="hb_font_paint_glyph ()"><code class="function">hb_font_paint_glyph()</code></a>.</p>
+<div class="refsect3">
+<a name="hb-raster-paint-get-funcs.returns"></a><h4>Returns</h4>
+<p>The rasterizer paint functions. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-raster-paint-glyph"></a><h3>hb_raster_paint_glyph ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+hb_raster_paint_glyph (<em class="parameter"><code><a class="link" href="harfbuzz-hb-raster.html#hb-raster-paint-t" title="hb_raster_paint_t"><span class="type">hb_raster_paint_t</span></a> *paint</code></em>,
+                       <em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> *font</code></em>,
+                       <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> glyph</code></em>,
+                       <em class="parameter"><code><span class="type">float</span> pen_x</code></em>,
+                       <em class="parameter"><code><span class="type">float</span> pen_y</code></em>,
+                       <em class="parameter"><code><span class="type">unsigned </span> palette</code></em>,
+                       <em class="parameter"><code><a class="link" href="harfbuzz-hb-ot-color.html#hb-color-t" title="hb_color_t"><span class="type">hb_color_t</span></a> foreground</code></em>);</pre>
+<p>Convenience wrapper to paint one color glyph at (<em class="parameter"><code>pen_x</code></em>
+, <em class="parameter"><code>pen_y</code></em>
+) using
+the paint context's current transform. The pen coordinates are applied
+before minification and transformed by the current affine transform.</p>
+<div class="refsect3">
+<a name="hb-raster-paint-glyph.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>paint</p></td>
+<td class="parameter_description"><p>a paint context</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>font</p></td>
+<td class="parameter_description"><p>font to paint from</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>glyph</p></td>
+<td class="parameter_description"><p>glyph ID to paint</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pen_x</p></td>
+<td class="parameter_description"><p>glyph origin x in font coordinates (pre-transform)</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pen_y</p></td>
+<td class="parameter_description"><p>glyph origin y in font coordinates (pre-transform)</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>palette</p></td>
+<td class="parameter_description"><p>palette index</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>foreground</p></td>
+<td class="parameter_description"><p>foreground color</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-raster-paint-glyph.returns"></a><h4>Returns</h4>
+<p> <code class="literal">true</code> if painting succeeded, <code class="literal">false</code> otherwise.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-raster-paint-render"></a><h3>hb_raster_paint_render ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-raster.html#hb-raster-image-t" title="hb_raster_image_t"><span class="returnvalue">hb_raster_image_t</span></a> *
+hb_raster_paint_render (<em class="parameter"><code><a class="link" href="harfbuzz-hb-raster.html#hb-raster-paint-t" title="hb_raster_paint_t"><span class="type">hb_raster_paint_t</span></a> *paint</code></em>);</pre>
+<p>Extracts the rendered image after <a class="link" href="harfbuzz-hb-font.html#hb-font-paint-glyph" title="hb_font_paint_glyph ()"><code class="function">hb_font_paint_glyph()</code></a> has
+completed.  The paint context's surface stack is consumed and
+the result returned as a new <a class="link" href="harfbuzz-hb-raster.html#hb-raster-image-t" title="hb_raster_image_t"><span class="type">hb_raster_image_t</span></a>. Output format is
+always <em class="parameter"><code>HB_RASTER_FORMAT_BGRA32</code></em>
+.</p>
+<p>Call <a class="link" href="harfbuzz-hb-font.html#hb-font-paint-glyph" title="hb_font_paint_glyph ()"><code class="function">hb_font_paint_glyph()</code></a> before calling this function.
+<a class="link" href="harfbuzz-hb-raster.html#hb-raster-paint-set-extents" title="hb_raster_paint_set_extents ()"><code class="function">hb_raster_paint_set_extents()</code></a> or <a class="link" href="harfbuzz-hb-raster.html#hb-raster-paint-set-glyph-extents" title="hb_raster_paint_set_glyph_extents ()"><code class="function">hb_raster_paint_set_glyph_extents()</code></a>
+must be called before painting; otherwise this function returns <code class="literal">NULL</code>.
+Internal drawing state is cleared here so the same object can
+be reused without client-side clearing.</p>
+<div class="refsect3">
+<a name="hb-raster-paint-render.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>paint</p></td>
+<td class="parameter_description"><p>a paint context</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-raster-paint-render.returns"></a><h4>Returns</h4>
+<p>A rendered <a class="link" href="harfbuzz-hb-raster.html#hb-raster-image-t" title="hb_raster_image_t"><span class="type">hb_raster_image_t</span></a>. Returns <code class="literal">NULL</code> if extents were not set
+or if allocation/configuration fails. If extents were set but nothing
+was painted, returns an empty image. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-raster-paint-reset"></a><h3>hb_raster_paint_reset ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_raster_paint_reset (<em class="parameter"><code><a class="link" href="harfbuzz-hb-raster.html#hb-raster-paint-t" title="hb_raster_paint_t"><span class="type">hb_raster_paint_t</span></a> *paint</code></em>);</pre>
+<p>Resets the paint context to its initial state, clearing all
+configuration while preserving internal image caches.</p>
+<div class="refsect3">
+<a name="hb-raster-paint-reset.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>paint</p></td>
+<td class="parameter_description"><p>a paint context</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-raster-paint-recycle-image"></a><h3>hb_raster_paint_recycle_image ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_raster_paint_recycle_image (<em class="parameter"><code><a class="link" href="harfbuzz-hb-raster.html#hb-raster-paint-t" title="hb_raster_paint_t"><span class="type">hb_raster_paint_t</span></a> *paint</code></em>,
+                               <em class="parameter"><code><a class="link" href="harfbuzz-hb-raster.html#hb-raster-image-t" title="hb_raster_image_t"><span class="type">hb_raster_image_t</span></a> *image</code></em>);</pre>
+<p>Recycles <em class="parameter"><code>image</code></em>
+ for reuse by subsequent render calls.
+The caller transfers ownership of <em class="parameter"><code>image</code></em>
+ to <em class="parameter"><code>paint</code></em>
+.</p>
+<div class="refsect3">
+<a name="hb-raster-paint-recycle-image.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>paint</p></td>
+<td class="parameter_description"><p>a paint context</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>image</p></td>
+<td class="parameter_description"><p>a raster image to recycle</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+</div>
+<div class="refsect1">
+<a name="harfbuzz-hb-raster.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="hb-raster-format-t"></a><h3>enum hb_raster_format_t</h3>
+<p>Pixel format for raster images.</p>
+<div class="refsect3">
+<a name="hb-raster-format-t.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="HB-RASTER-FORMAT-A8:CAPS"></a>HB_RASTER_FORMAT_A8</p></td>
+<td class="enum_member_description">
+<p>8-bit alpha-only coverage</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HB-RASTER-FORMAT-BGRA32:CAPS"></a>HB_RASTER_FORMAT_BGRA32</p></td>
+<td class="enum_member_description">
+<p>32-bit BGRA color</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-raster-extents-t"></a><h3>hb_raster_extents_t</h3>
+<pre class="programlisting">typedef struct {
+  int      x_origin, y_origin;
+  unsigned int width, height;
+  unsigned int stride;
+} hb_raster_extents_t;
+</pre>
+<p>Pixel-buffer extents for raster operations.</p>
+<div class="refsect3">
+<a name="hb-raster-extents-t.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="struct_member_name"><p><span class="type">int</span> <em class="structfield"><code><a name="hb-raster-extents-t.x-origin"></a>x_origin</code></em>;</p></td>
+<td class="struct_member_description"><p>X coordinate of the left edge of the image in glyph space</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">int</span> <em class="structfield"><code><a name="hb-raster-extents-t.y-origin"></a>y_origin</code></em>;</p></td>
+<td class="struct_member_description"><p>Y coordinate of the bottom edge of the image in glyph space</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p>unsigned <span class="type">int</span> <em class="structfield"><code><a name="hb-raster-extents-t.width"></a>width</code></em>;</p></td>
+<td class="struct_member_description"><p>Width in pixels</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p>unsigned <span class="type">int</span> <em class="structfield"><code><a name="hb-raster-extents-t.height"></a>height</code></em>;</p></td>
+<td class="struct_member_description"><p>Height in pixels</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p>unsigned <span class="type">int</span> <em class="structfield"><code><a name="hb-raster-extents-t.stride"></a>stride</code></em>;</p></td>
+<td class="struct_member_description"><p>Bytes per row; 0 means auto-calculate on input, filled on output</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-raster-image-t"></a><h3>hb_raster_image_t</h3>
+<pre class="programlisting">typedef struct hb_raster_image_t hb_raster_image_t;
+</pre>
+<p>An opaque raster image object holding a pixel buffer produced by
+<a class="link" href="harfbuzz-hb-raster.html#hb-raster-draw-render" title="hb_raster_draw_render ()"><code class="function">hb_raster_draw_render()</code></a>.  Use <a class="link" href="harfbuzz-hb-raster.html#hb-raster-image-get-buffer" title="hb_raster_image_get_buffer ()"><code class="function">hb_raster_image_get_buffer()</code></a> and
+<a class="link" href="harfbuzz-hb-raster.html#hb-raster-image-get-extents" title="hb_raster_image_get_extents ()"><code class="function">hb_raster_image_get_extents()</code></a> to access the pixels.</p>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-raster-draw-t"></a><h3>hb_raster_draw_t</h3>
+<pre class="programlisting">typedef struct hb_raster_draw_t hb_raster_draw_t;
+</pre>
+<p>An opaque outline rasterizer object.  Accumulates glyph outlines
+via <a class="link" href="harfbuzz-hb-draw.html#hb-draw-funcs-t" title="hb_draw_funcs_t"><span class="type">hb_draw_funcs_t</span></a> callbacks obtained from <a class="link" href="harfbuzz-hb-raster.html#hb-raster-draw-get-funcs" title="hb_raster_draw_get_funcs ()"><code class="function">hb_raster_draw_get_funcs()</code></a>,
+then produces an <a class="link" href="harfbuzz-hb-raster.html#hb-raster-image-t" title="hb_raster_image_t"><span class="type">hb_raster_image_t</span></a> with <a class="link" href="harfbuzz-hb-raster.html#hb-raster-draw-render" title="hb_raster_draw_render ()"><code class="function">hb_raster_draw_render()</code></a>.</p>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-raster-paint-t"></a><h3>hb_raster_paint_t</h3>
+<pre class="programlisting">typedef struct hb_raster_paint_t hb_raster_paint_t;
+</pre>
+<p>An opaque color-glyph paint context.  Implements <a class="link" href="harfbuzz-hb-paint.html#hb-paint-funcs-t" title="hb_paint_funcs_t"><span class="type">hb_paint_funcs_t</span></a>
+callbacks that render COLRv0/v1 color glyphs into a BGRA32
+<a class="link" href="harfbuzz-hb-raster.html#hb-raster-image-t" title="hb_raster_image_t"><span class="type">hb_raster_image_t</span></a>.</p>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.34.0</div>
+</body>
+</html>

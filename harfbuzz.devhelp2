@@ -131,6 +131,8 @@
         <sub name="hb-glib" link="harfbuzz-hb-glib.html"/>
         <sub name="hb-graphite2" link="harfbuzz-hb-graphite2.html"/>
         <sub name="hb-icu" link="harfbuzz-hb-icu.html"/>
+        <sub name="hb-raster" link="harfbuzz-hb-raster.html"/>
+        <sub name="hb-vector" link="harfbuzz-hb-vector.html"/>
         <sub name="hb-uniscribe" link="harfbuzz-hb-uniscribe.html"/>
       </sub>
       <sub name="Style API" link="style-api.html">
@@ -141,6 +143,7 @@
       </sub>
       <sub name="API Index" link="api-index-full.html"/>
       <sub name="Index of deprecated API" link="deprecated-api-index.html"/>
+      <sub name="Index of new symbols in 13.0.0" link="api-index-13-0-0.html"/>
       <sub name="Index of new symbols in 12.1.0" link="api-index-12-1-0.html"/>
       <sub name="Index of new symbols in 11.3.0" link="api-index-11-3-0.html"/>
       <sub name="Index of new symbols in 11.2.0" link="api-index-11-2-0.html"/>
@@ -312,6 +315,7 @@
     <keyword type="function" name="hb_buffer_diff ()" link="harfbuzz-hb-buffer.html#hb-buffer-diff" since="1.5.0"/>
     <keyword type="function" name="hb_buffer_message_func_t ()" link="harfbuzz-hb-buffer.html#hb-buffer-message-func-t" since="1.1.3"/>
     <keyword type="function" name="hb_buffer_set_message_func ()" link="harfbuzz-hb-buffer.html#hb-buffer-set-message-func" since="1.1.3"/>
+    <keyword type="function" name="hb_buffer_changed ()" link="harfbuzz-hb-buffer.html#hb-buffer-changed" since="13.0.0"/>
     <keyword type="macro" name="HB_BUFFER_CLUSTER_LEVEL_IS_CHARACTERS()" link="harfbuzz-hb-buffer.html#HB-BUFFER-CLUSTER-LEVEL-IS-CHARACTERS:CAPS" since="11.0.0"/>
     <keyword type="macro" name="HB_BUFFER_CLUSTER_LEVEL_IS_GRAPHEMES()" link="harfbuzz-hb-buffer.html#HB-BUFFER-CLUSTER-LEVEL-IS-GRAPHEMES:CAPS" since="11.0.0"/>
     <keyword type="macro" name="HB_BUFFER_CLUSTER_LEVEL_IS_MONOTONE()" link="harfbuzz-hb-buffer.html#HB-BUFFER-CLUSTER-LEVEL-IS-MONOTONE:CAPS" since="11.0.0"/>
@@ -808,6 +812,9 @@
     <keyword type="function" name="hb_ot_color_has_png ()" link="harfbuzz-hb-ot-color.html#hb-ot-color-has-png" since="2.1.0"/>
     <keyword type="function" name="hb_ot_color_glyph_reference_png ()" link="harfbuzz-hb-ot-color.html#hb-ot-color-glyph-reference-png" since="2.1.0"/>
     <keyword type="function" name="hb_ot_color_has_svg ()" link="harfbuzz-hb-ot-color.html#hb-ot-color-has-svg" since="2.1.0"/>
+    <keyword type="function" name="hb_ot_color_get_svg_document_count ()" link="harfbuzz-hb-ot-color.html#hb-ot-color-get-svg-document-count" since="12.1.0"/>
+    <keyword type="function" name="hb_ot_color_glyph_get_svg_document_index ()" link="harfbuzz-hb-ot-color.html#hb-ot-color-glyph-get-svg-document-index" since="12.1.0"/>
+    <keyword type="function" name="hb_ot_color_get_svg_document_glyph_range ()" link="harfbuzz-hb-ot-color.html#hb-ot-color-get-svg-document-glyph-range" since="13.0.0"/>
     <keyword type="function" name="hb_ot_color_glyph_reference_svg ()" link="harfbuzz-hb-ot-color.html#hb-ot-color-glyph-reference-svg" since="2.1.0"/>
     <keyword type="typedef" name="hb_color_t" link="harfbuzz-hb-ot-color.html#hb-color-t" since="2.1.0"/>
     <keyword type="struct" name="hb_ot_color_layer_t" link="harfbuzz-hb-ot-color.html#hb-ot-color-layer-t" since="2.1.0"/>
@@ -992,6 +999,105 @@
     <keyword type="function" name="hb_icu_get_unicode_funcs ()" link="harfbuzz-hb-icu.html#hb-icu-get-unicode-funcs" since="0.9.38"/>
     <keyword type="function" name="hb_icu_script_from_script ()" link="harfbuzz-hb-icu.html#hb-icu-script-from-script"/>
     <keyword type="function" name="hb_icu_script_to_script ()" link="harfbuzz-hb-icu.html#hb-icu-script-to-script"/>
+    <keyword type="function" name="hb_raster_image_create_or_fail ()" link="harfbuzz-hb-raster.html#hb-raster-image-create-or-fail" since="13.0.0"/>
+    <keyword type="function" name="hb_raster_image_reference ()" link="harfbuzz-hb-raster.html#hb-raster-image-reference" since="13.0.0"/>
+    <keyword type="function" name="hb_raster_image_destroy ()" link="harfbuzz-hb-raster.html#hb-raster-image-destroy" since="13.0.0"/>
+    <keyword type="function" name="hb_raster_image_set_user_data ()" link="harfbuzz-hb-raster.html#hb-raster-image-set-user-data" since="13.0.0"/>
+    <keyword type="function" name="hb_raster_image_get_user_data ()" link="harfbuzz-hb-raster.html#hb-raster-image-get-user-data" since="13.0.0"/>
+    <keyword type="function" name="hb_raster_image_configure ()" link="harfbuzz-hb-raster.html#hb-raster-image-configure" since="13.0.0"/>
+    <keyword type="function" name="hb_raster_image_clear ()" link="harfbuzz-hb-raster.html#hb-raster-image-clear" since="13.0.0"/>
+    <keyword type="function" name="hb_raster_image_get_buffer ()" link="harfbuzz-hb-raster.html#hb-raster-image-get-buffer" since="13.0.0"/>
+    <keyword type="function" name="hb_raster_image_get_extents ()" link="harfbuzz-hb-raster.html#hb-raster-image-get-extents" since="13.0.0"/>
+    <keyword type="function" name="hb_raster_image_get_format ()" link="harfbuzz-hb-raster.html#hb-raster-image-get-format" since="13.0.0"/>
+    <keyword type="function" name="hb_raster_draw_create_or_fail ()" link="harfbuzz-hb-raster.html#hb-raster-draw-create-or-fail" since="13.0.0"/>
+    <keyword type="function" name="hb_raster_draw_reference ()" link="harfbuzz-hb-raster.html#hb-raster-draw-reference" since="13.0.0"/>
+    <keyword type="function" name="hb_raster_draw_destroy ()" link="harfbuzz-hb-raster.html#hb-raster-draw-destroy" since="13.0.0"/>
+    <keyword type="function" name="hb_raster_draw_set_user_data ()" link="harfbuzz-hb-raster.html#hb-raster-draw-set-user-data" since="13.0.0"/>
+    <keyword type="function" name="hb_raster_draw_get_user_data ()" link="harfbuzz-hb-raster.html#hb-raster-draw-get-user-data" since="13.0.0"/>
+    <keyword type="function" name="hb_raster_draw_set_transform ()" link="harfbuzz-hb-raster.html#hb-raster-draw-set-transform" since="13.0.0"/>
+    <keyword type="function" name="hb_raster_draw_set_scale_factor ()" link="harfbuzz-hb-raster.html#hb-raster-draw-set-scale-factor" since="13.0.0"/>
+    <keyword type="function" name="hb_raster_draw_get_scale_factor ()" link="harfbuzz-hb-raster.html#hb-raster-draw-get-scale-factor" since="13.0.0"/>
+    <keyword type="function" name="hb_raster_draw_get_transform ()" link="harfbuzz-hb-raster.html#hb-raster-draw-get-transform" since="13.0.0"/>
+    <keyword type="function" name="hb_raster_draw_set_extents ()" link="harfbuzz-hb-raster.html#hb-raster-draw-set-extents" since="13.0.0"/>
+    <keyword type="function" name="hb_raster_draw_get_extents ()" link="harfbuzz-hb-raster.html#hb-raster-draw-get-extents" since="13.0.0"/>
+    <keyword type="function" name="hb_raster_draw_set_glyph_extents ()" link="harfbuzz-hb-raster.html#hb-raster-draw-set-glyph-extents" since="13.0.0"/>
+    <keyword type="function" name="hb_raster_draw_reset ()" link="harfbuzz-hb-raster.html#hb-raster-draw-reset" since="13.0.0"/>
+    <keyword type="function" name="hb_raster_draw_get_funcs ()" link="harfbuzz-hb-raster.html#hb-raster-draw-get-funcs" since="13.0.0"/>
+    <keyword type="function" name="hb_raster_draw_glyph ()" link="harfbuzz-hb-raster.html#hb-raster-draw-glyph" since="13.0.0"/>
+    <keyword type="function" name="hb_raster_draw_render ()" link="harfbuzz-hb-raster.html#hb-raster-draw-render" since="13.0.0"/>
+    <keyword type="function" name="hb_raster_draw_recycle_image ()" link="harfbuzz-hb-raster.html#hb-raster-draw-recycle-image" since="13.0.0"/>
+    <keyword type="function" name="hb_raster_paint_create_or_fail ()" link="harfbuzz-hb-raster.html#hb-raster-paint-create-or-fail" since="13.0.0"/>
+    <keyword type="function" name="hb_raster_paint_reference ()" link="harfbuzz-hb-raster.html#hb-raster-paint-reference" since="13.0.0"/>
+    <keyword type="function" name="hb_raster_paint_destroy ()" link="harfbuzz-hb-raster.html#hb-raster-paint-destroy" since="13.0.0"/>
+    <keyword type="function" name="hb_raster_paint_set_user_data ()" link="harfbuzz-hb-raster.html#hb-raster-paint-set-user-data" since="13.0.0"/>
+    <keyword type="function" name="hb_raster_paint_get_user_data ()" link="harfbuzz-hb-raster.html#hb-raster-paint-get-user-data" since="13.0.0"/>
+    <keyword type="function" name="hb_raster_paint_set_transform ()" link="harfbuzz-hb-raster.html#hb-raster-paint-set-transform" since="13.0.0"/>
+    <keyword type="function" name="hb_raster_paint_get_transform ()" link="harfbuzz-hb-raster.html#hb-raster-paint-get-transform" since="13.0.0"/>
+    <keyword type="function" name="hb_raster_paint_set_scale_factor ()" link="harfbuzz-hb-raster.html#hb-raster-paint-set-scale-factor" since="13.0.0"/>
+    <keyword type="function" name="hb_raster_paint_get_scale_factor ()" link="harfbuzz-hb-raster.html#hb-raster-paint-get-scale-factor" since="13.0.0"/>
+    <keyword type="function" name="hb_raster_paint_set_extents ()" link="harfbuzz-hb-raster.html#hb-raster-paint-set-extents" since="13.0.0"/>
+    <keyword type="function" name="hb_raster_paint_get_extents ()" link="harfbuzz-hb-raster.html#hb-raster-paint-get-extents" since="13.0.0"/>
+    <keyword type="function" name="hb_raster_paint_set_glyph_extents ()" link="harfbuzz-hb-raster.html#hb-raster-paint-set-glyph-extents" since="13.0.0"/>
+    <keyword type="function" name="hb_raster_paint_set_foreground ()" link="harfbuzz-hb-raster.html#hb-raster-paint-set-foreground" since="13.0.0"/>
+    <keyword type="function" name="hb_raster_paint_clear_custom_palette_colors ()" link="harfbuzz-hb-raster.html#hb-raster-paint-clear-custom-palette-colors" since="13.0.0"/>
+    <keyword type="function" name="hb_raster_paint_set_custom_palette_color ()" link="harfbuzz-hb-raster.html#hb-raster-paint-set-custom-palette-color" since="13.0.0"/>
+    <keyword type="function" name="hb_raster_paint_get_funcs ()" link="harfbuzz-hb-raster.html#hb-raster-paint-get-funcs" since="13.0.0"/>
+    <keyword type="function" name="hb_raster_paint_glyph ()" link="harfbuzz-hb-raster.html#hb-raster-paint-glyph" since="13.0.0"/>
+    <keyword type="function" name="hb_raster_paint_render ()" link="harfbuzz-hb-raster.html#hb-raster-paint-render" since="13.0.0"/>
+    <keyword type="function" name="hb_raster_paint_reset ()" link="harfbuzz-hb-raster.html#hb-raster-paint-reset" since="13.0.0"/>
+    <keyword type="function" name="hb_raster_paint_recycle_image ()" link="harfbuzz-hb-raster.html#hb-raster-paint-recycle-image" since="13.0.0"/>
+    <keyword type="enum" name="enum hb_raster_format_t" link="harfbuzz-hb-raster.html#hb-raster-format-t" since="13.0.0"/>
+    <keyword type="struct" name="hb_raster_extents_t" link="harfbuzz-hb-raster.html#hb-raster-extents-t" since="13.0.0"/>
+    <keyword type="typedef" name="hb_raster_image_t" link="harfbuzz-hb-raster.html#hb-raster-image-t" since="13.0.0"/>
+    <keyword type="typedef" name="hb_raster_draw_t" link="harfbuzz-hb-raster.html#hb-raster-draw-t" since="13.0.0"/>
+    <keyword type="typedef" name="hb_raster_paint_t" link="harfbuzz-hb-raster.html#hb-raster-paint-t" since="13.0.0"/>
+    <keyword type="function" name="hb_vector_draw_create_or_fail ()" link="harfbuzz-hb-vector.html#hb-vector-draw-create-or-fail" since="13.0.0"/>
+    <keyword type="function" name="hb_vector_draw_reference ()" link="harfbuzz-hb-vector.html#hb-vector-draw-reference" since="13.0.0"/>
+    <keyword type="function" name="hb_vector_draw_destroy ()" link="harfbuzz-hb-vector.html#hb-vector-draw-destroy" since="13.0.0"/>
+    <keyword type="function" name="hb_vector_draw_set_user_data ()" link="harfbuzz-hb-vector.html#hb-vector-draw-set-user-data" since="13.0.0"/>
+    <keyword type="function" name="hb_vector_draw_get_user_data ()" link="harfbuzz-hb-vector.html#hb-vector-draw-get-user-data" since="13.0.0"/>
+    <keyword type="function" name="hb_vector_draw_set_transform ()" link="harfbuzz-hb-vector.html#hb-vector-draw-set-transform" since="13.0.0"/>
+    <keyword type="function" name="hb_vector_draw_get_transform ()" link="harfbuzz-hb-vector.html#hb-vector-draw-get-transform" since="13.0.0"/>
+    <keyword type="function" name="hb_vector_draw_set_scale_factor ()" link="harfbuzz-hb-vector.html#hb-vector-draw-set-scale-factor" since="13.0.0"/>
+    <keyword type="function" name="hb_vector_draw_get_scale_factor ()" link="harfbuzz-hb-vector.html#hb-vector-draw-get-scale-factor" since="13.0.0"/>
+    <keyword type="function" name="hb_vector_draw_set_extents ()" link="harfbuzz-hb-vector.html#hb-vector-draw-set-extents" since="13.0.0"/>
+    <keyword type="function" name="hb_vector_draw_get_extents ()" link="harfbuzz-hb-vector.html#hb-vector-draw-get-extents" since="13.0.0"/>
+    <keyword type="function" name="hb_vector_draw_set_glyph_extents ()" link="harfbuzz-hb-vector.html#hb-vector-draw-set-glyph-extents" since="13.0.0"/>
+    <keyword type="function" name="hb_vector_draw_get_funcs ()" link="harfbuzz-hb-vector.html#hb-vector-draw-get-funcs" since="13.0.0"/>
+    <keyword type="function" name="hb_vector_draw_glyph ()" link="harfbuzz-hb-vector.html#hb-vector-draw-glyph" since="13.0.0"/>
+    <keyword type="function" name="hb_vector_svg_set_flat ()" link="harfbuzz-hb-vector.html#hb-vector-svg-set-flat" since="13.0.0"/>
+    <keyword type="function" name="hb_vector_svg_set_precision ()" link="harfbuzz-hb-vector.html#hb-vector-svg-set-precision" since="13.0.0"/>
+    <keyword type="function" name="hb_vector_draw_render ()" link="harfbuzz-hb-vector.html#hb-vector-draw-render" since="13.0.0"/>
+    <keyword type="function" name="hb_vector_draw_reset ()" link="harfbuzz-hb-vector.html#hb-vector-draw-reset" since="13.0.0"/>
+    <keyword type="function" name="hb_vector_draw_recycle_blob ()" link="harfbuzz-hb-vector.html#hb-vector-draw-recycle-blob" since="13.0.0"/>
+    <keyword type="function" name="hb_vector_paint_create_or_fail ()" link="harfbuzz-hb-vector.html#hb-vector-paint-create-or-fail" since="13.0.0"/>
+    <keyword type="function" name="hb_vector_paint_reference ()" link="harfbuzz-hb-vector.html#hb-vector-paint-reference" since="13.0.0"/>
+    <keyword type="function" name="hb_vector_paint_destroy ()" link="harfbuzz-hb-vector.html#hb-vector-paint-destroy" since="13.0.0"/>
+    <keyword type="function" name="hb_vector_paint_set_user_data ()" link="harfbuzz-hb-vector.html#hb-vector-paint-set-user-data" since="13.0.0"/>
+    <keyword type="function" name="hb_vector_paint_get_user_data ()" link="harfbuzz-hb-vector.html#hb-vector-paint-get-user-data" since="13.0.0"/>
+    <keyword type="function" name="hb_vector_paint_set_transform ()" link="harfbuzz-hb-vector.html#hb-vector-paint-set-transform" since="13.0.0"/>
+    <keyword type="function" name="hb_vector_paint_get_transform ()" link="harfbuzz-hb-vector.html#hb-vector-paint-get-transform" since="13.0.0"/>
+    <keyword type="function" name="hb_vector_paint_set_scale_factor ()" link="harfbuzz-hb-vector.html#hb-vector-paint-set-scale-factor" since="13.0.0"/>
+    <keyword type="function" name="hb_vector_paint_get_scale_factor ()" link="harfbuzz-hb-vector.html#hb-vector-paint-get-scale-factor" since="13.0.0"/>
+    <keyword type="function" name="hb_vector_paint_set_extents ()" link="harfbuzz-hb-vector.html#hb-vector-paint-set-extents" since="13.0.0"/>
+    <keyword type="function" name="hb_vector_paint_get_extents ()" link="harfbuzz-hb-vector.html#hb-vector-paint-get-extents" since="13.0.0"/>
+    <keyword type="function" name="hb_vector_paint_set_glyph_extents ()" link="harfbuzz-hb-vector.html#hb-vector-paint-set-glyph-extents" since="13.0.0"/>
+    <keyword type="function" name="hb_vector_paint_set_foreground ()" link="harfbuzz-hb-vector.html#hb-vector-paint-set-foreground" since="13.0.0"/>
+    <keyword type="function" name="hb_vector_paint_set_palette ()" link="harfbuzz-hb-vector.html#hb-vector-paint-set-palette" since="13.0.0"/>
+    <keyword type="function" name="hb_vector_paint_set_custom_palette_color ()" link="harfbuzz-hb-vector.html#hb-vector-paint-set-custom-palette-color" since="13.0.0"/>
+    <keyword type="function" name="hb_vector_paint_clear_custom_palette_colors ()" link="harfbuzz-hb-vector.html#hb-vector-paint-clear-custom-palette-colors" since="13.0.0"/>
+    <keyword type="function" name="hb_vector_paint_get_funcs ()" link="harfbuzz-hb-vector.html#hb-vector-paint-get-funcs" since="13.0.0"/>
+    <keyword type="function" name="hb_vector_paint_glyph ()" link="harfbuzz-hb-vector.html#hb-vector-paint-glyph" since="13.0.0"/>
+    <keyword type="function" name="hb_vector_svg_paint_set_flat ()" link="harfbuzz-hb-vector.html#hb-vector-svg-paint-set-flat" since="13.0.0"/>
+    <keyword type="function" name="hb_vector_svg_paint_set_precision ()" link="harfbuzz-hb-vector.html#hb-vector-svg-paint-set-precision" since="13.0.0"/>
+    <keyword type="function" name="hb_vector_paint_render ()" link="harfbuzz-hb-vector.html#hb-vector-paint-render" since="13.0.0"/>
+    <keyword type="function" name="hb_vector_paint_reset ()" link="harfbuzz-hb-vector.html#hb-vector-paint-reset" since="13.0.0"/>
+    <keyword type="function" name="hb_vector_paint_recycle_blob ()" link="harfbuzz-hb-vector.html#hb-vector-paint-recycle-blob" since="13.0.0"/>
+    <keyword type="enum" name="enum hb_vector_format_t" link="harfbuzz-hb-vector.html#hb-vector-format-t" since="13.0.0"/>
+    <keyword type="struct" name="hb_vector_extents_t" link="harfbuzz-hb-vector.html#hb-vector-extents-t" since="13.0.0"/>
+    <keyword type="enum" name="enum hb_vector_extents_mode_t" link="harfbuzz-hb-vector.html#hb-vector-extents-mode-t" since="13.0.0"/>
+    <keyword type="typedef" name="hb_vector_draw_t" link="harfbuzz-hb-vector.html#hb-vector-draw-t" since="13.0.0"/>
+    <keyword type="typedef" name="hb_vector_paint_t" link="harfbuzz-hb-vector.html#hb-vector-paint-t" since="13.0.0"/>
     <keyword type="function" name="hb_uniscribe_font_get_hfont ()" link="harfbuzz-hb-uniscribe.html#hb-uniscribe-font-get-hfont"/>
     <keyword type="function" name="hb_uniscribe_font_get_logfontw ()" link="harfbuzz-hb-uniscribe.html#hb-uniscribe-font-get-logfontw"/>
     <keyword type="function" name="hb_style_get_value ()" link="harfbuzz-hb-style.html#hb-style-get-value" since="3.0.0"/>
@@ -1805,6 +1911,12 @@
     <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_PROPORTIONAL_CJK_ROMAN" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-PROPORTIONAL-CJK-ROMAN:CAPS"/>
     <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_DEFAULT_CJK_ROMAN" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-DEFAULT-CJK-ROMAN:CAPS"/>
     <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_FULL_WIDTH_CJK_ROMAN" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-FULL-WIDTH-CJK-ROMAN:CAPS"/>
+    <keyword type="constant" name="HB_RASTER_FORMAT_A8" link="harfbuzz-hb-raster.html#HB-RASTER-FORMAT-A8:CAPS"/>
+    <keyword type="constant" name="HB_RASTER_FORMAT_BGRA32" link="harfbuzz-hb-raster.html#HB-RASTER-FORMAT-BGRA32:CAPS"/>
+    <keyword type="constant" name="HB_VECTOR_FORMAT_INVALID" link="harfbuzz-hb-vector.html#HB-VECTOR-FORMAT-INVALID:CAPS"/>
+    <keyword type="constant" name="HB_VECTOR_FORMAT_SVG" link="harfbuzz-hb-vector.html#HB-VECTOR-FORMAT-SVG:CAPS"/>
+    <keyword type="constant" name="HB_VECTOR_EXTENTS_MODE_NONE" link="harfbuzz-hb-vector.html#HB-VECTOR-EXTENTS-MODE-NONE:CAPS"/>
+    <keyword type="constant" name="HB_VECTOR_EXTENTS_MODE_EXPAND" link="harfbuzz-hb-vector.html#HB-VECTOR-EXTENTS-MODE-EXPAND:CAPS"/>
     <keyword type="constant" name="HB_STYLE_TAG_ITALIC" link="harfbuzz-hb-style.html#HB-STYLE-TAG-ITALIC:CAPS"/>
     <keyword type="constant" name="HB_STYLE_TAG_OPTICAL_SIZE" link="harfbuzz-hb-style.html#HB-STYLE-TAG-OPTICAL-SIZE:CAPS"/>
     <keyword type="constant" name="HB_STYLE_TAG_SLANT_ANGLE" link="harfbuzz-hb-style.html#HB-STYLE-TAG-SLANT-ANGLE:CAPS"/>
@@ -1826,6 +1938,7 @@
     <keyword type="constant" name="HB_SUBSET_FLAGS_NO_BIDI_CLOSURE" link="harfbuzz-hb-subset.html#HB-SUBSET-FLAGS-NO-BIDI-CLOSURE:CAPS"/>
     <keyword type="constant" name="HB_SUBSET_FLAGS_IFTB_REQUIREMENTS" link="harfbuzz-hb-subset.html#HB-SUBSET-FLAGS-IFTB-REQUIREMENTS:CAPS"/>
     <keyword type="constant" name="HB_SUBSET_FLAGS_RETAIN_NUM_GLYPHS" link="harfbuzz-hb-subset.html#HB-SUBSET-FLAGS-RETAIN-NUM-GLYPHS:CAPS"/>
+    <keyword type="constant" name="HB_SUBSET_FLAGS_DOWNGRADE_CFF2" link="harfbuzz-hb-subset.html#HB-SUBSET-FLAGS-DOWNGRADE-CFF2:CAPS"/>
     <keyword type="constant" name="HB_SUBSET_SETS_GLYPH_INDEX" link="harfbuzz-hb-subset.html#HB-SUBSET-SETS-GLYPH-INDEX:CAPS"/>
     <keyword type="constant" name="HB_SUBSET_SETS_UNICODE" link="harfbuzz-hb-subset.html#HB-SUBSET-SETS-UNICODE:CAPS"/>
     <keyword type="constant" name="HB_SUBSET_SETS_NO_SUBSET_TABLE_TAG" link="harfbuzz-hb-subset.html#HB-SUBSET-SETS-NO-SUBSET-TABLE-TAG:CAPS"/>
@@ -1892,6 +2005,15 @@
     <keyword type="member" name="hb-aat-layout-feature-selector-info-t.name-id" link="harfbuzz-hb-aat-layout.html#hb-aat-layout-feature-selector-info-t.name-id"/>
     <keyword type="member" name="hb-aat-layout-feature-selector-info-t.enable" link="harfbuzz-hb-aat-layout.html#hb-aat-layout-feature-selector-info-t.enable"/>
     <keyword type="member" name="hb-aat-layout-feature-selector-info-t.disable" link="harfbuzz-hb-aat-layout.html#hb-aat-layout-feature-selector-info-t.disable"/>
+    <keyword type="member" name="hb-raster-extents-t.x-origin" link="harfbuzz-hb-raster.html#hb-raster-extents-t.x-origin"/>
+    <keyword type="member" name="hb-raster-extents-t.y-origin" link="harfbuzz-hb-raster.html#hb-raster-extents-t.y-origin"/>
+    <keyword type="member" name="hb-raster-extents-t.width" link="harfbuzz-hb-raster.html#hb-raster-extents-t.width"/>
+    <keyword type="member" name="hb-raster-extents-t.height" link="harfbuzz-hb-raster.html#hb-raster-extents-t.height"/>
+    <keyword type="member" name="hb-raster-extents-t.stride" link="harfbuzz-hb-raster.html#hb-raster-extents-t.stride"/>
+    <keyword type="member" name="hb-vector-extents-t.x" link="harfbuzz-hb-vector.html#hb-vector-extents-t.x"/>
+    <keyword type="member" name="hb-vector-extents-t.y" link="harfbuzz-hb-vector.html#hb-vector-extents-t.y"/>
+    <keyword type="member" name="hb-vector-extents-t.width" link="harfbuzz-hb-vector.html#hb-vector-extents-t.width"/>
+    <keyword type="member" name="hb-vector-extents-t.height" link="harfbuzz-hb-vector.html#hb-vector-extents-t.height"/>
     <keyword type="member" name="hb-subset-serialize-link-t.width" link="harfbuzz-hb-subset.html#hb-subset-serialize-link-t.width"/>
     <keyword type="member" name="hb-subset-serialize-link-t.position" link="harfbuzz-hb-subset.html#hb-subset-serialize-link-t.position"/>
     <keyword type="member" name="hb-subset-serialize-link-t.objidx" link="harfbuzz-hb-subset.html#hb-subset-serialize-link-t.objidx"/>

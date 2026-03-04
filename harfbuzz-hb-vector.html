@@ -1,0 +1,2077 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>hb-vector: HarfBuzz Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="HarfBuzz Manual">
+<link rel="up" href="integration-api.html" title="Integration API">
+<link rel="prev" href="harfbuzz-hb-raster.html" title="hb-raster">
+<link rel="next" href="harfbuzz-hb-uniscribe.html" title="hb-uniscribe">
+<meta name="generator" content="GTK-Doc V1.34.0 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#harfbuzz-hb-vector.description" class="shortcut">Description</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="integration-api.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="harfbuzz-hb-raster.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="harfbuzz-hb-uniscribe.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="harfbuzz-hb-vector"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="harfbuzz-hb-vector.top_of_page"></a>hb-vector</span></h2>
+<p>hb-vector — Glyph vector conversion</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="harfbuzz-hb-vector.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="harfbuzz-hb-vector.html#hb-vector-draw-t" title="hb_vector_draw_t"><span class="returnvalue">hb_vector_draw_t</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-vector.html#hb-vector-draw-create-or-fail" title="hb_vector_draw_create_or_fail ()">hb_vector_draw_create_or_fail</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="harfbuzz-hb-vector.html#hb-vector-draw-t" title="hb_vector_draw_t"><span class="returnvalue">hb_vector_draw_t</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-vector.html#hb-vector-draw-reference" title="hb_vector_draw_reference ()">hb_vector_draw_reference</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-vector.html#hb-vector-draw-destroy" title="hb_vector_draw_destroy ()">hb_vector_draw_destroy</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-vector.html#hb-vector-draw-set-user-data" title="hb_vector_draw_set_user_data ()">hb_vector_draw_set_user_data</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span> *
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-vector.html#hb-vector-draw-get-user-data" title="hb_vector_draw_get_user_data ()">hb_vector_draw_get_user_data</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-vector.html#hb-vector-draw-set-transform" title="hb_vector_draw_set_transform ()">hb_vector_draw_set_transform</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-vector.html#hb-vector-draw-get-transform" title="hb_vector_draw_get_transform ()">hb_vector_draw_get_transform</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-vector.html#hb-vector-draw-set-scale-factor" title="hb_vector_draw_set_scale_factor ()">hb_vector_draw_set_scale_factor</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-vector.html#hb-vector-draw-get-scale-factor" title="hb_vector_draw_get_scale_factor ()">hb_vector_draw_get_scale_factor</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-vector.html#hb-vector-draw-set-extents" title="hb_vector_draw_set_extents ()">hb_vector_draw_set_extents</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-vector.html#hb-vector-draw-get-extents" title="hb_vector_draw_get_extents ()">hb_vector_draw_get_extents</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-vector.html#hb-vector-draw-set-glyph-extents" title="hb_vector_draw_set_glyph_extents ()">hb_vector_draw_set_glyph_extents</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="harfbuzz-hb-draw.html#hb-draw-funcs-t" title="hb_draw_funcs_t"><span class="returnvalue">hb_draw_funcs_t</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-vector.html#hb-vector-draw-get-funcs" title="hb_vector_draw_get_funcs ()">hb_vector_draw_get_funcs</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-vector.html#hb-vector-draw-glyph" title="hb_vector_draw_glyph ()">hb_vector_draw_glyph</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-vector.html#hb-vector-svg-set-flat" title="hb_vector_svg_set_flat ()">hb_vector_svg_set_flat</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-vector.html#hb-vector-svg-set-precision" title="hb_vector_svg_set_precision ()">hb_vector_svg_set_precision</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="harfbuzz-hb-blob.html#hb-blob-t" title="hb_blob_t"><span class="returnvalue">hb_blob_t</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-vector.html#hb-vector-draw-render" title="hb_vector_draw_render ()">hb_vector_draw_render</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-vector.html#hb-vector-draw-reset" title="hb_vector_draw_reset ()">hb_vector_draw_reset</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-vector.html#hb-vector-draw-recycle-blob" title="hb_vector_draw_recycle_blob ()">hb_vector_draw_recycle_blob</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="harfbuzz-hb-vector.html#hb-vector-paint-t" title="hb_vector_paint_t"><span class="returnvalue">hb_vector_paint_t</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-vector.html#hb-vector-paint-create-or-fail" title="hb_vector_paint_create_or_fail ()">hb_vector_paint_create_or_fail</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="harfbuzz-hb-vector.html#hb-vector-paint-t" title="hb_vector_paint_t"><span class="returnvalue">hb_vector_paint_t</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-vector.html#hb-vector-paint-reference" title="hb_vector_paint_reference ()">hb_vector_paint_reference</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-vector.html#hb-vector-paint-destroy" title="hb_vector_paint_destroy ()">hb_vector_paint_destroy</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-vector.html#hb-vector-paint-set-user-data" title="hb_vector_paint_set_user_data ()">hb_vector_paint_set_user_data</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span> *
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-vector.html#hb-vector-paint-get-user-data" title="hb_vector_paint_get_user_data ()">hb_vector_paint_get_user_data</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-vector.html#hb-vector-paint-set-transform" title="hb_vector_paint_set_transform ()">hb_vector_paint_set_transform</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-vector.html#hb-vector-paint-get-transform" title="hb_vector_paint_get_transform ()">hb_vector_paint_get_transform</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-vector.html#hb-vector-paint-set-scale-factor" title="hb_vector_paint_set_scale_factor ()">hb_vector_paint_set_scale_factor</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-vector.html#hb-vector-paint-get-scale-factor" title="hb_vector_paint_get_scale_factor ()">hb_vector_paint_get_scale_factor</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-vector.html#hb-vector-paint-set-extents" title="hb_vector_paint_set_extents ()">hb_vector_paint_set_extents</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-vector.html#hb-vector-paint-get-extents" title="hb_vector_paint_get_extents ()">hb_vector_paint_get_extents</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-vector.html#hb-vector-paint-set-glyph-extents" title="hb_vector_paint_set_glyph_extents ()">hb_vector_paint_set_glyph_extents</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-vector.html#hb-vector-paint-set-foreground" title="hb_vector_paint_set_foreground ()">hb_vector_paint_set_foreground</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-vector.html#hb-vector-paint-set-palette" title="hb_vector_paint_set_palette ()">hb_vector_paint_set_palette</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-vector.html#hb-vector-paint-set-custom-palette-color" title="hb_vector_paint_set_custom_palette_color ()">hb_vector_paint_set_custom_palette_color</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-vector.html#hb-vector-paint-clear-custom-palette-colors" title="hb_vector_paint_clear_custom_palette_colors ()">hb_vector_paint_clear_custom_palette_colors</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="harfbuzz-hb-paint.html#hb-paint-funcs-t" title="hb_paint_funcs_t"><span class="returnvalue">hb_paint_funcs_t</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-vector.html#hb-vector-paint-get-funcs" title="hb_vector_paint_get_funcs ()">hb_vector_paint_get_funcs</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-vector.html#hb-vector-paint-glyph" title="hb_vector_paint_glyph ()">hb_vector_paint_glyph</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-vector.html#hb-vector-svg-paint-set-flat" title="hb_vector_svg_paint_set_flat ()">hb_vector_svg_paint_set_flat</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-vector.html#hb-vector-svg-paint-set-precision" title="hb_vector_svg_paint_set_precision ()">hb_vector_svg_paint_set_precision</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="harfbuzz-hb-blob.html#hb-blob-t" title="hb_blob_t"><span class="returnvalue">hb_blob_t</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-vector.html#hb-vector-paint-render" title="hb_vector_paint_render ()">hb_vector_paint_render</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-vector.html#hb-vector-paint-reset" title="hb_vector_paint_reset ()">hb_vector_paint_reset</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-vector.html#hb-vector-paint-recycle-blob" title="hb_vector_paint_recycle_blob ()">hb_vector_paint_recycle_blob</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="harfbuzz-hb-vector.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="harfbuzz-hb-vector.html#hb-vector-format-t" title="enum hb_vector_format_t">hb_vector_format_t</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="harfbuzz-hb-vector.html#hb-vector-extents-t" title="hb_vector_extents_t">hb_vector_extents_t</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="harfbuzz-hb-vector.html#hb-vector-extents-mode-t" title="enum hb_vector_extents_mode_t">hb_vector_extents_mode_t</a></td>
+</tr>
+<tr>
+<td class="typedef_keyword">typedef</td>
+<td class="function_name"><a class="link" href="harfbuzz-hb-vector.html#hb-vector-draw-t" title="hb_vector_draw_t">hb_vector_draw_t</a></td>
+</tr>
+<tr>
+<td class="typedef_keyword">typedef</td>
+<td class="function_name"><a class="link" href="harfbuzz-hb-vector.html#hb-vector-paint-t" title="hb_vector_paint_t">hb_vector_paint_t</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="harfbuzz-hb-vector.includes"></a><h2>Includes</h2>
+<pre class="synopsis">#include &lt;hb-vector.h&gt;
+</pre>
+</div>
+<div class="refsect1">
+<a name="harfbuzz-hb-vector.description"></a><h2>Description</h2>
+<p>Functions for converting glyph draw and paint callbacks to vector output.</p>
+<p>The initial backend is SVG.  Extents must be set before calling render
+functions; otherwise render returns <code class="literal">NULL</code>.</p>
+</div>
+<div class="refsect1">
+<a name="harfbuzz-hb-vector.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="hb-vector-draw-create-or-fail"></a><h3>hb_vector_draw_create_or_fail ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-vector.html#hb-vector-draw-t" title="hb_vector_draw_t"><span class="returnvalue">hb_vector_draw_t</span></a> *
+hb_vector_draw_create_or_fail (<em class="parameter"><code><a class="link" href="harfbuzz-hb-vector.html#hb-vector-format-t" title="enum hb_vector_format_t"><span class="type">hb_vector_format_t</span></a> format</code></em>);</pre>
+<p>Creates a new draw context for vector output.</p>
+<div class="refsect3">
+<a name="hb-vector-draw-create-or-fail.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>format</p></td>
+<td class="parameter_description"><p>output format.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-vector-draw-create-or-fail.returns"></a><h4>Returns</h4>
+<p>a newly allocated <a class="link" href="harfbuzz-hb-vector.html#hb-vector-draw-t" title="hb_vector_draw_t"><span class="type">hb_vector_draw_t</span></a>, or <code class="literal">NULL</code> on failure. </p>
+<p><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-vector-draw-reference"></a><h3>hb_vector_draw_reference ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-vector.html#hb-vector-draw-t" title="hb_vector_draw_t"><span class="returnvalue">hb_vector_draw_t</span></a> *
+hb_vector_draw_reference (<em class="parameter"><code><a class="link" href="harfbuzz-hb-vector.html#hb-vector-draw-t" title="hb_vector_draw_t"><span class="type">hb_vector_draw_t</span></a> *draw</code></em>);</pre>
+<p>Increases the reference count of <em class="parameter"><code>draw</code></em>
+.</p>
+<div class="refsect3">
+<a name="hb-vector-draw-reference.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>draw</p></td>
+<td class="parameter_description"><p>a draw context.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-vector-draw-reference.returns"></a><h4>Returns</h4>
+<p>referenced <em class="parameter"><code>draw</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-vector-draw-destroy"></a><h3>hb_vector_draw_destroy ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_vector_draw_destroy (<em class="parameter"><code><a class="link" href="harfbuzz-hb-vector.html#hb-vector-draw-t" title="hb_vector_draw_t"><span class="type">hb_vector_draw_t</span></a> *draw</code></em>);</pre>
+<p>Decreases the reference count of <em class="parameter"><code>draw</code></em>
+ and destroys it when it reaches zero.</p>
+<div class="refsect3">
+<a name="hb-vector-draw-destroy.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>draw</p></td>
+<td class="parameter_description"><p>a draw context.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-vector-draw-set-user-data"></a><h3>hb_vector_draw_set_user_data ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+hb_vector_draw_set_user_data (<em class="parameter"><code><a class="link" href="harfbuzz-hb-vector.html#hb-vector-draw-t" title="hb_vector_draw_t"><span class="type">hb_vector_draw_t</span></a> *draw</code></em>,
+                              <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-user-data-key-t" title="hb_user_data_key_t"><span class="type">hb_user_data_key_t</span></a> *key</code></em>,
+                              <em class="parameter"><code><span class="type">void</span> *data</code></em>,
+                              <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-destroy-func-t" title="hb_destroy_func_t ()"><span class="type">hb_destroy_func_t</span></a> destroy</code></em>,
+                              <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="type">hb_bool_t</span></a> replace</code></em>);</pre>
+<p>Attaches user data to <em class="parameter"><code>draw</code></em>
+.</p>
+<div class="refsect3">
+<a name="hb-vector-draw-set-user-data.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>draw</p></td>
+<td class="parameter_description"><p>a draw context.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>user-data key.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>user-data value.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>destroy</p></td>
+<td class="parameter_description"><p>destroy callback for <em class="parameter"><code>data</code></em>
+. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>replace</p></td>
+<td class="parameter_description"><p>whether to replace an existing value for <em class="parameter"><code>key</code></em>
+.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-vector-draw-set-user-data.returns"></a><h4>Returns</h4>
+<p> <code class="literal">true</code> on success, <code class="literal">false</code> otherwise.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-vector-draw-get-user-data"></a><h3>hb_vector_draw_get_user_data ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span> *
+hb_vector_draw_get_user_data (<em class="parameter"><code><a class="link" href="harfbuzz-hb-vector.html#hb-vector-draw-t" title="hb_vector_draw_t"><span class="type">hb_vector_draw_t</span></a> *draw</code></em>,
+                              <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-user-data-key-t" title="hb_user_data_key_t"><span class="type">hb_user_data_key_t</span></a> *key</code></em>);</pre>
+<p>Gets previously attached user data from <em class="parameter"><code>draw</code></em>
+.</p>
+<div class="refsect3">
+<a name="hb-vector-draw-get-user-data.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>draw</p></td>
+<td class="parameter_description"><p>a draw context.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>user-data key.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-vector-draw-get-user-data.returns"></a><h4>Returns</h4>
+<p>user-data value associated with <em class="parameter"><code>key</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-vector-draw-set-transform"></a><h3>hb_vector_draw_set_transform ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_vector_draw_set_transform (<em class="parameter"><code><a class="link" href="harfbuzz-hb-vector.html#hb-vector-draw-t" title="hb_vector_draw_t"><span class="type">hb_vector_draw_t</span></a> *draw</code></em>,
+                              <em class="parameter"><code><span class="type">float</span> xx</code></em>,
+                              <em class="parameter"><code><span class="type">float</span> yx</code></em>,
+                              <em class="parameter"><code><span class="type">float</span> xy</code></em>,
+                              <em class="parameter"><code><span class="type">float</span> yy</code></em>,
+                              <em class="parameter"><code><span class="type">float</span> dx</code></em>,
+                              <em class="parameter"><code><span class="type">float</span> dy</code></em>);</pre>
+<p>Sets the affine transform used when drawing glyphs.</p>
+<div class="refsect3">
+<a name="hb-vector-draw-set-transform.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>draw</p></td>
+<td class="parameter_description"><p>a draw context.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>xx</p></td>
+<td class="parameter_description"><p>transform xx component.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>yx</p></td>
+<td class="parameter_description"><p>transform yx component.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>xy</p></td>
+<td class="parameter_description"><p>transform xy component.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>yy</p></td>
+<td class="parameter_description"><p>transform yy component.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>dx</p></td>
+<td class="parameter_description"><p>transform x translation.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>dy</p></td>
+<td class="parameter_description"><p>transform y translation.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-vector-draw-get-transform"></a><h3>hb_vector_draw_get_transform ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_vector_draw_get_transform (<em class="parameter"><code><a class="link" href="harfbuzz-hb-vector.html#hb-vector-draw-t" title="hb_vector_draw_t"><span class="type">hb_vector_draw_t</span></a> *draw</code></em>,
+                              <em class="parameter"><code><span class="type">float</span> *xx</code></em>,
+                              <em class="parameter"><code><span class="type">float</span> *yx</code></em>,
+                              <em class="parameter"><code><span class="type">float</span> *xy</code></em>,
+                              <em class="parameter"><code><span class="type">float</span> *yy</code></em>,
+                              <em class="parameter"><code><span class="type">float</span> *dx</code></em>,
+                              <em class="parameter"><code><span class="type">float</span> *dy</code></em>);</pre>
+<p>Gets the affine transform used when drawing glyphs.</p>
+<div class="refsect3">
+<a name="hb-vector-draw-get-transform.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>draw</p></td>
+<td class="parameter_description"><p>a draw context.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>xx</p></td>
+<td class="parameter_description"><p>transform xx component. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>yx</p></td>
+<td class="parameter_description"><p>transform yx component. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>xy</p></td>
+<td class="parameter_description"><p>transform xy component. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>yy</p></td>
+<td class="parameter_description"><p>transform yy component. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>dx</p></td>
+<td class="parameter_description"><p>transform x translation. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>dy</p></td>
+<td class="parameter_description"><p>transform y translation. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-vector-draw-set-scale-factor"></a><h3>hb_vector_draw_set_scale_factor ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_vector_draw_set_scale_factor (<em class="parameter"><code><a class="link" href="harfbuzz-hb-vector.html#hb-vector-draw-t" title="hb_vector_draw_t"><span class="type">hb_vector_draw_t</span></a> *draw</code></em>,
+                                 <em class="parameter"><code><span class="type">float</span> x_scale_factor</code></em>,
+                                 <em class="parameter"><code><span class="type">float</span> y_scale_factor</code></em>);</pre>
+<p>Sets additional output scaling factors.</p>
+<div class="refsect3">
+<a name="hb-vector-draw-set-scale-factor.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>draw</p></td>
+<td class="parameter_description"><p>a draw context.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>x_scale_factor</p></td>
+<td class="parameter_description"><p>x scale factor.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>y_scale_factor</p></td>
+<td class="parameter_description"><p>y scale factor.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-vector-draw-get-scale-factor"></a><h3>hb_vector_draw_get_scale_factor ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_vector_draw_get_scale_factor (<em class="parameter"><code><a class="link" href="harfbuzz-hb-vector.html#hb-vector-draw-t" title="hb_vector_draw_t"><span class="type">hb_vector_draw_t</span></a> *draw</code></em>,
+                                 <em class="parameter"><code><span class="type">float</span> *x_scale_factor</code></em>,
+                                 <em class="parameter"><code><span class="type">float</span> *y_scale_factor</code></em>);</pre>
+<p>Gets additional output scaling factors.</p>
+<div class="refsect3">
+<a name="hb-vector-draw-get-scale-factor.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>draw</p></td>
+<td class="parameter_description"><p>a draw context.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>x_scale_factor</p></td>
+<td class="parameter_description"><p>x scale factor. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>y_scale_factor</p></td>
+<td class="parameter_description"><p>y scale factor. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-vector-draw-set-extents"></a><h3>hb_vector_draw_set_extents ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_vector_draw_set_extents (<em class="parameter"><code><a class="link" href="harfbuzz-hb-vector.html#hb-vector-draw-t" title="hb_vector_draw_t"><span class="type">hb_vector_draw_t</span></a> *draw</code></em>,
+                            <em class="parameter"><code>const <a class="link" href="harfbuzz-hb-vector.html#hb-vector-extents-t" title="hb_vector_extents_t"><span class="type">hb_vector_extents_t</span></a> *extents</code></em>);</pre>
+<p>Sets or expands output extents on <em class="parameter"><code>draw</code></em>
+. Passing <code class="literal">NULL</code> clears extents.</p>
+<div class="refsect3">
+<a name="hb-vector-draw-set-extents.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>draw</p></td>
+<td class="parameter_description"><p>a draw context.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>extents</p></td>
+<td class="parameter_description"><p>output extents to set or expand. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-vector-draw-get-extents"></a><h3>hb_vector_draw_get_extents ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+hb_vector_draw_get_extents (<em class="parameter"><code><a class="link" href="harfbuzz-hb-vector.html#hb-vector-draw-t" title="hb_vector_draw_t"><span class="type">hb_vector_draw_t</span></a> *draw</code></em>,
+                            <em class="parameter"><code><a class="link" href="harfbuzz-hb-vector.html#hb-vector-extents-t" title="hb_vector_extents_t"><span class="type">hb_vector_extents_t</span></a> *extents</code></em>);</pre>
+<p>Gets current output extents from <em class="parameter"><code>draw</code></em>
+.</p>
+<div class="refsect3">
+<a name="hb-vector-draw-get-extents.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>draw</p></td>
+<td class="parameter_description"><p>a draw context.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>extents</p></td>
+<td class="parameter_description"><p>where to store current output extents. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-vector-draw-get-extents.returns"></a><h4>Returns</h4>
+<p> <code class="literal">true</code> if extents are set, <code class="literal">false</code> otherwise.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-vector-draw-set-glyph-extents"></a><h3>hb_vector_draw_set_glyph_extents ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+hb_vector_draw_set_glyph_extents (<em class="parameter"><code><a class="link" href="harfbuzz-hb-vector.html#hb-vector-draw-t" title="hb_vector_draw_t"><span class="type">hb_vector_draw_t</span></a> *draw</code></em>,
+                                  <em class="parameter"><code>const <a class="link" href="harfbuzz-hb-font.html#hb-glyph-extents-t" title="hb_glyph_extents_t"><span class="type">hb_glyph_extents_t</span></a> *glyph_extents</code></em>);</pre>
+<p>Expands <em class="parameter"><code>draw</code></em>
+ extents using <em class="parameter"><code>glyph_extents</code></em>
+ under the current transform.</p>
+<div class="refsect3">
+<a name="hb-vector-draw-set-glyph-extents.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>draw</p></td>
+<td class="parameter_description"><p>a draw context.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>glyph_extents</p></td>
+<td class="parameter_description"><p>glyph extents in font units.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-vector-draw-set-glyph-extents.returns"></a><h4>Returns</h4>
+<p> <code class="literal">true</code> on success, <code class="literal">false</code> otherwise.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-vector-draw-get-funcs"></a><h3>hb_vector_draw_get_funcs ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-draw.html#hb-draw-funcs-t" title="hb_draw_funcs_t"><span class="returnvalue">hb_draw_funcs_t</span></a> *
+hb_vector_draw_get_funcs (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Gets draw callbacks implemented by the vector draw backend.</p>
+<div class="refsect3">
+<a name="hb-vector-draw-get-funcs.returns"></a><h4>Returns</h4>
+<p>immutable <a class="link" href="harfbuzz-hb-draw.html#hb-draw-funcs-t" title="hb_draw_funcs_t"><span class="type">hb_draw_funcs_t</span></a> singleton. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-vector-draw-glyph"></a><h3>hb_vector_draw_glyph ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+hb_vector_draw_glyph (<em class="parameter"><code><a class="link" href="harfbuzz-hb-vector.html#hb-vector-draw-t" title="hb_vector_draw_t"><span class="type">hb_vector_draw_t</span></a> *draw</code></em>,
+                      <em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> *font</code></em>,
+                      <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> glyph</code></em>,
+                      <em class="parameter"><code><span class="type">float</span> pen_x</code></em>,
+                      <em class="parameter"><code><span class="type">float</span> pen_y</code></em>,
+                      <em class="parameter"><code><a class="link" href="harfbuzz-hb-vector.html#hb-vector-extents-mode-t" title="enum hb_vector_extents_mode_t"><span class="type">hb_vector_extents_mode_t</span></a> extents_mode</code></em>);</pre>
+<p>Draws one glyph into <em class="parameter"><code>draw</code></em>
+.</p>
+<div class="refsect3">
+<a name="hb-vector-draw-glyph.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>draw</p></td>
+<td class="parameter_description"><p>a draw context.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>font</p></td>
+<td class="parameter_description"><p>font object.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>glyph</p></td>
+<td class="parameter_description"><p>glyph ID.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pen_x</p></td>
+<td class="parameter_description"><p>glyph x origin before context transform.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pen_y</p></td>
+<td class="parameter_description"><p>glyph y origin before context transform.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>extents_mode</p></td>
+<td class="parameter_description"><p>extents update mode.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-vector-draw-glyph.returns"></a><h4>Returns</h4>
+<p> <code class="literal">true</code> if glyph data was emitted, <code class="literal">false</code> otherwise.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-vector-svg-set-flat"></a><h3>hb_vector_svg_set_flat ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_vector_svg_set_flat (<em class="parameter"><code><a class="link" href="harfbuzz-hb-vector.html#hb-vector-draw-t" title="hb_vector_draw_t"><span class="type">hb_vector_draw_t</span></a> *draw</code></em>,
+                        <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="type">hb_bool_t</span></a> flat</code></em>);</pre>
+<p>Enables or disables SVG draw flattening.</p>
+<div class="refsect3">
+<a name="hb-vector-svg-set-flat.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>draw</p></td>
+<td class="parameter_description"><p>a draw context.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>flat</p></td>
+<td class="parameter_description"><p>whether to flatten geometry and disable reuse.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-vector-svg-set-precision"></a><h3>hb_vector_svg_set_precision ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_vector_svg_set_precision (<em class="parameter"><code><a class="link" href="harfbuzz-hb-vector.html#hb-vector-draw-t" title="hb_vector_draw_t"><span class="type">hb_vector_draw_t</span></a> *draw</code></em>,
+                             <em class="parameter"><code><span class="type">unsigned </span> precision</code></em>);</pre>
+<p>Sets numeric output precision for SVG draw output.</p>
+<div class="refsect3">
+<a name="hb-vector-svg-set-precision.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>draw</p></td>
+<td class="parameter_description"><p>a draw context.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>precision</p></td>
+<td class="parameter_description"><p>decimal precision.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-vector-draw-render"></a><h3>hb_vector_draw_render ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-blob.html#hb-blob-t" title="hb_blob_t"><span class="returnvalue">hb_blob_t</span></a> *
+hb_vector_draw_render (<em class="parameter"><code><a class="link" href="harfbuzz-hb-vector.html#hb-vector-draw-t" title="hb_vector_draw_t"><span class="type">hb_vector_draw_t</span></a> *draw</code></em>);</pre>
+<p>Renders accumulated draw content to an SVG blob.</p>
+<div class="refsect3">
+<a name="hb-vector-draw-render.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>draw</p></td>
+<td class="parameter_description"><p>a draw context.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-vector-draw-render.returns"></a><h4>Returns</h4>
+<p>output blob, or <code class="literal">NULL</code> if rendering cannot proceed. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-vector-draw-reset"></a><h3>hb_vector_draw_reset ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_vector_draw_reset (<em class="parameter"><code><a class="link" href="harfbuzz-hb-vector.html#hb-vector-draw-t" title="hb_vector_draw_t"><span class="type">hb_vector_draw_t</span></a> *draw</code></em>);</pre>
+<p>Resets <em class="parameter"><code>draw</code></em>
+ state and clears accumulated content.</p>
+<div class="refsect3">
+<a name="hb-vector-draw-reset.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>draw</p></td>
+<td class="parameter_description"><p>a draw context.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-vector-draw-recycle-blob"></a><h3>hb_vector_draw_recycle_blob ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_vector_draw_recycle_blob (<em class="parameter"><code><a class="link" href="harfbuzz-hb-vector.html#hb-vector-draw-t" title="hb_vector_draw_t"><span class="type">hb_vector_draw_t</span></a> *draw</code></em>,
+                             <em class="parameter"><code><a class="link" href="harfbuzz-hb-blob.html#hb-blob-t" title="hb_blob_t"><span class="type">hb_blob_t</span></a> *blob</code></em>);</pre>
+<p>Provides a blob for internal buffer reuse by later render calls.</p>
+<div class="refsect3">
+<a name="hb-vector-draw-recycle-blob.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>draw</p></td>
+<td class="parameter_description"><p>a draw context.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>blob</p></td>
+<td class="parameter_description"><p>previously rendered blob to recycle. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-vector-paint-create-or-fail"></a><h3>hb_vector_paint_create_or_fail ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-vector.html#hb-vector-paint-t" title="hb_vector_paint_t"><span class="returnvalue">hb_vector_paint_t</span></a> *
+hb_vector_paint_create_or_fail (<em class="parameter"><code><a class="link" href="harfbuzz-hb-vector.html#hb-vector-format-t" title="enum hb_vector_format_t"><span class="type">hb_vector_format_t</span></a> format</code></em>);</pre>
+<p>Creates a new paint context for vector output.</p>
+<div class="refsect3">
+<a name="hb-vector-paint-create-or-fail.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>format</p></td>
+<td class="parameter_description"><p>output format.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-vector-paint-create-or-fail.returns"></a><h4>Returns</h4>
+<p>a newly allocated <a class="link" href="harfbuzz-hb-vector.html#hb-vector-paint-t" title="hb_vector_paint_t"><span class="type">hb_vector_paint_t</span></a>, or <code class="literal">NULL</code> on failure. </p>
+<p><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-vector-paint-reference"></a><h3>hb_vector_paint_reference ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-vector.html#hb-vector-paint-t" title="hb_vector_paint_t"><span class="returnvalue">hb_vector_paint_t</span></a> *
+hb_vector_paint_reference (<em class="parameter"><code><a class="link" href="harfbuzz-hb-vector.html#hb-vector-paint-t" title="hb_vector_paint_t"><span class="type">hb_vector_paint_t</span></a> *paint</code></em>);</pre>
+<p>Increases the reference count of <em class="parameter"><code>paint</code></em>
+.</p>
+<div class="refsect3">
+<a name="hb-vector-paint-reference.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>paint</p></td>
+<td class="parameter_description"><p>a paint context.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-vector-paint-reference.returns"></a><h4>Returns</h4>
+<p>referenced <em class="parameter"><code>paint</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-vector-paint-destroy"></a><h3>hb_vector_paint_destroy ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_vector_paint_destroy (<em class="parameter"><code><a class="link" href="harfbuzz-hb-vector.html#hb-vector-paint-t" title="hb_vector_paint_t"><span class="type">hb_vector_paint_t</span></a> *paint</code></em>);</pre>
+<p>Decreases the reference count of <em class="parameter"><code>paint</code></em>
+ and destroys it when it reaches zero.</p>
+<div class="refsect3">
+<a name="hb-vector-paint-destroy.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>paint</p></td>
+<td class="parameter_description"><p>a paint context.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-vector-paint-set-user-data"></a><h3>hb_vector_paint_set_user_data ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+hb_vector_paint_set_user_data (<em class="parameter"><code><a class="link" href="harfbuzz-hb-vector.html#hb-vector-paint-t" title="hb_vector_paint_t"><span class="type">hb_vector_paint_t</span></a> *paint</code></em>,
+                               <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-user-data-key-t" title="hb_user_data_key_t"><span class="type">hb_user_data_key_t</span></a> *key</code></em>,
+                               <em class="parameter"><code><span class="type">void</span> *data</code></em>,
+                               <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-destroy-func-t" title="hb_destroy_func_t ()"><span class="type">hb_destroy_func_t</span></a> destroy</code></em>,
+                               <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="type">hb_bool_t</span></a> replace</code></em>);</pre>
+<p>Attaches user data to <em class="parameter"><code>paint</code></em>
+.</p>
+<div class="refsect3">
+<a name="hb-vector-paint-set-user-data.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>paint</p></td>
+<td class="parameter_description"><p>a paint context.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>user-data key.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>user-data value.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>destroy</p></td>
+<td class="parameter_description"><p>destroy callback for <em class="parameter"><code>data</code></em>
+. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>replace</p></td>
+<td class="parameter_description"><p>whether to replace an existing value for <em class="parameter"><code>key</code></em>
+.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-vector-paint-set-user-data.returns"></a><h4>Returns</h4>
+<p> <code class="literal">true</code> on success, <code class="literal">false</code> otherwise.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-vector-paint-get-user-data"></a><h3>hb_vector_paint_get_user_data ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span> *
+hb_vector_paint_get_user_data (<em class="parameter"><code><a class="link" href="harfbuzz-hb-vector.html#hb-vector-paint-t" title="hb_vector_paint_t"><span class="type">hb_vector_paint_t</span></a> *paint</code></em>,
+                               <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-user-data-key-t" title="hb_user_data_key_t"><span class="type">hb_user_data_key_t</span></a> *key</code></em>);</pre>
+<p>Gets previously attached user data from <em class="parameter"><code>paint</code></em>
+.</p>
+<div class="refsect3">
+<a name="hb-vector-paint-get-user-data.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>paint</p></td>
+<td class="parameter_description"><p>a paint context.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>user-data key.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-vector-paint-get-user-data.returns"></a><h4>Returns</h4>
+<p>user-data value associated with <em class="parameter"><code>key</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-vector-paint-set-transform"></a><h3>hb_vector_paint_set_transform ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_vector_paint_set_transform (<em class="parameter"><code><a class="link" href="harfbuzz-hb-vector.html#hb-vector-paint-t" title="hb_vector_paint_t"><span class="type">hb_vector_paint_t</span></a> *paint</code></em>,
+                               <em class="parameter"><code><span class="type">float</span> xx</code></em>,
+                               <em class="parameter"><code><span class="type">float</span> yx</code></em>,
+                               <em class="parameter"><code><span class="type">float</span> xy</code></em>,
+                               <em class="parameter"><code><span class="type">float</span> yy</code></em>,
+                               <em class="parameter"><code><span class="type">float</span> dx</code></em>,
+                               <em class="parameter"><code><span class="type">float</span> dy</code></em>);</pre>
+<p>Sets the affine transform used when painting glyphs.</p>
+<div class="refsect3">
+<a name="hb-vector-paint-set-transform.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>paint</p></td>
+<td class="parameter_description"><p>a paint context.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>xx</p></td>
+<td class="parameter_description"><p>transform xx component.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>yx</p></td>
+<td class="parameter_description"><p>transform yx component.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>xy</p></td>
+<td class="parameter_description"><p>transform xy component.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>yy</p></td>
+<td class="parameter_description"><p>transform yy component.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>dx</p></td>
+<td class="parameter_description"><p>transform x translation.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>dy</p></td>
+<td class="parameter_description"><p>transform y translation.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-vector-paint-get-transform"></a><h3>hb_vector_paint_get_transform ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_vector_paint_get_transform (<em class="parameter"><code><a class="link" href="harfbuzz-hb-vector.html#hb-vector-paint-t" title="hb_vector_paint_t"><span class="type">hb_vector_paint_t</span></a> *paint</code></em>,
+                               <em class="parameter"><code><span class="type">float</span> *xx</code></em>,
+                               <em class="parameter"><code><span class="type">float</span> *yx</code></em>,
+                               <em class="parameter"><code><span class="type">float</span> *xy</code></em>,
+                               <em class="parameter"><code><span class="type">float</span> *yy</code></em>,
+                               <em class="parameter"><code><span class="type">float</span> *dx</code></em>,
+                               <em class="parameter"><code><span class="type">float</span> *dy</code></em>);</pre>
+<p>Gets the affine transform used when painting glyphs.</p>
+<div class="refsect3">
+<a name="hb-vector-paint-get-transform.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>paint</p></td>
+<td class="parameter_description"><p>a paint context.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>xx</p></td>
+<td class="parameter_description"><p>transform xx component. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>yx</p></td>
+<td class="parameter_description"><p>transform yx component. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>xy</p></td>
+<td class="parameter_description"><p>transform xy component. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>yy</p></td>
+<td class="parameter_description"><p>transform yy component. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>dx</p></td>
+<td class="parameter_description"><p>transform x translation. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>dy</p></td>
+<td class="parameter_description"><p>transform y translation. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-vector-paint-set-scale-factor"></a><h3>hb_vector_paint_set_scale_factor ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_vector_paint_set_scale_factor (<em class="parameter"><code><a class="link" href="harfbuzz-hb-vector.html#hb-vector-paint-t" title="hb_vector_paint_t"><span class="type">hb_vector_paint_t</span></a> *paint</code></em>,
+                                  <em class="parameter"><code><span class="type">float</span> x_scale_factor</code></em>,
+                                  <em class="parameter"><code><span class="type">float</span> y_scale_factor</code></em>);</pre>
+<p>Sets additional output scaling factors.</p>
+<div class="refsect3">
+<a name="hb-vector-paint-set-scale-factor.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>paint</p></td>
+<td class="parameter_description"><p>a paint context.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>x_scale_factor</p></td>
+<td class="parameter_description"><p>x scale factor.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>y_scale_factor</p></td>
+<td class="parameter_description"><p>y scale factor.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-vector-paint-get-scale-factor"></a><h3>hb_vector_paint_get_scale_factor ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_vector_paint_get_scale_factor (<em class="parameter"><code><a class="link" href="harfbuzz-hb-vector.html#hb-vector-paint-t" title="hb_vector_paint_t"><span class="type">hb_vector_paint_t</span></a> *paint</code></em>,
+                                  <em class="parameter"><code><span class="type">float</span> *x_scale_factor</code></em>,
+                                  <em class="parameter"><code><span class="type">float</span> *y_scale_factor</code></em>);</pre>
+<p>Gets additional output scaling factors.</p>
+<div class="refsect3">
+<a name="hb-vector-paint-get-scale-factor.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>paint</p></td>
+<td class="parameter_description"><p>a paint context.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>x_scale_factor</p></td>
+<td class="parameter_description"><p>x scale factor. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>y_scale_factor</p></td>
+<td class="parameter_description"><p>y scale factor. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-vector-paint-set-extents"></a><h3>hb_vector_paint_set_extents ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_vector_paint_set_extents (<em class="parameter"><code><a class="link" href="harfbuzz-hb-vector.html#hb-vector-paint-t" title="hb_vector_paint_t"><span class="type">hb_vector_paint_t</span></a> *paint</code></em>,
+                             <em class="parameter"><code>const <a class="link" href="harfbuzz-hb-vector.html#hb-vector-extents-t" title="hb_vector_extents_t"><span class="type">hb_vector_extents_t</span></a> *extents</code></em>);</pre>
+<p>Sets or expands output extents on <em class="parameter"><code>paint</code></em>
+. Passing <code class="literal">NULL</code> clears extents.</p>
+<div class="refsect3">
+<a name="hb-vector-paint-set-extents.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>paint</p></td>
+<td class="parameter_description"><p>a paint context.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>extents</p></td>
+<td class="parameter_description"><p>output extents to set or expand. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-vector-paint-get-extents"></a><h3>hb_vector_paint_get_extents ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+hb_vector_paint_get_extents (<em class="parameter"><code><a class="link" href="harfbuzz-hb-vector.html#hb-vector-paint-t" title="hb_vector_paint_t"><span class="type">hb_vector_paint_t</span></a> *paint</code></em>,
+                             <em class="parameter"><code><a class="link" href="harfbuzz-hb-vector.html#hb-vector-extents-t" title="hb_vector_extents_t"><span class="type">hb_vector_extents_t</span></a> *extents</code></em>);</pre>
+<p>Gets current output extents from <em class="parameter"><code>paint</code></em>
+.</p>
+<div class="refsect3">
+<a name="hb-vector-paint-get-extents.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>paint</p></td>
+<td class="parameter_description"><p>a paint context.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>extents</p></td>
+<td class="parameter_description"><p>where to store current output extents. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-vector-paint-get-extents.returns"></a><h4>Returns</h4>
+<p> <code class="literal">true</code> if extents are set, <code class="literal">false</code> otherwise.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-vector-paint-set-glyph-extents"></a><h3>hb_vector_paint_set_glyph_extents ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+hb_vector_paint_set_glyph_extents (<em class="parameter"><code><a class="link" href="harfbuzz-hb-vector.html#hb-vector-paint-t" title="hb_vector_paint_t"><span class="type">hb_vector_paint_t</span></a> *paint</code></em>,
+                                   <em class="parameter"><code>const <a class="link" href="harfbuzz-hb-font.html#hb-glyph-extents-t" title="hb_glyph_extents_t"><span class="type">hb_glyph_extents_t</span></a> *glyph_extents</code></em>);</pre>
+<p>Expands <em class="parameter"><code>paint</code></em>
+ extents using <em class="parameter"><code>glyph_extents</code></em>
+ under the current transform.</p>
+<div class="refsect3">
+<a name="hb-vector-paint-set-glyph-extents.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>paint</p></td>
+<td class="parameter_description"><p>a paint context.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>glyph_extents</p></td>
+<td class="parameter_description"><p>glyph extents in font units.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-vector-paint-set-glyph-extents.returns"></a><h4>Returns</h4>
+<p> <code class="literal">true</code> on success, <code class="literal">false</code> otherwise.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-vector-paint-set-foreground"></a><h3>hb_vector_paint_set_foreground ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_vector_paint_set_foreground (<em class="parameter"><code><a class="link" href="harfbuzz-hb-vector.html#hb-vector-paint-t" title="hb_vector_paint_t"><span class="type">hb_vector_paint_t</span></a> *paint</code></em>,
+                                <em class="parameter"><code><a class="link" href="harfbuzz-hb-ot-color.html#hb-color-t" title="hb_color_t"><span class="type">hb_color_t</span></a> foreground</code></em>);</pre>
+<p>Sets fallback foreground color used by paint operations.</p>
+<div class="refsect3">
+<a name="hb-vector-paint-set-foreground.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>paint</p></td>
+<td class="parameter_description"><p>a paint context.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>foreground</p></td>
+<td class="parameter_description"><p>foreground color used for COLR foreground paints.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-vector-paint-set-palette"></a><h3>hb_vector_paint_set_palette ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_vector_paint_set_palette (<em class="parameter"><code><a class="link" href="harfbuzz-hb-vector.html#hb-vector-paint-t" title="hb_vector_paint_t"><span class="type">hb_vector_paint_t</span></a> *paint</code></em>,
+                             <em class="parameter"><code><span class="type">int</span> palette</code></em>);</pre>
+<p>Sets the color palette index used by paint operations.</p>
+<div class="refsect3">
+<a name="hb-vector-paint-set-palette.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>paint</p></td>
+<td class="parameter_description"><p>a paint context.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>palette</p></td>
+<td class="parameter_description"><p>palette index for color glyph painting.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-vector-paint-set-custom-palette-color"></a><h3>hb_vector_paint_set_custom_palette_color ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_vector_paint_set_custom_palette_color
+                               (<em class="parameter"><code><a class="link" href="harfbuzz-hb-vector.html#hb-vector-paint-t" title="hb_vector_paint_t"><span class="type">hb_vector_paint_t</span></a> *paint</code></em>,
+                                <em class="parameter"><code><span class="type">unsigned </span> color_index</code></em>,
+                                <em class="parameter"><code><a class="link" href="harfbuzz-hb-ot-color.html#hb-color-t" title="hb_color_t"><span class="type">hb_color_t</span></a> color</code></em>);</pre>
+<p>Overrides one font palette color entry for subsequent paint operations.
+Overrides are keyed by <em class="parameter"><code>color_index</code></em>
+ and persist on <em class="parameter"><code>paint</code></em>
+ until cleared
+(or replaced for the same index).</p>
+<p>These overrides are consulted by paint operations that resolve CPAL
+entries, including SVG glyph content using <code class="literal">var(--colorN)</code>.</p>
+<div class="refsect3">
+<a name="hb-vector-paint-set-custom-palette-color.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>paint</p></td>
+<td class="parameter_description"><p>a paint context.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>color_index</p></td>
+<td class="parameter_description"><p>color index to override.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>color</p></td>
+<td class="parameter_description"><p>replacement color.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-vector-paint-clear-custom-palette-colors"></a><h3>hb_vector_paint_clear_custom_palette_colors ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_vector_paint_clear_custom_palette_colors
+                               (<em class="parameter"><code><a class="link" href="harfbuzz-hb-vector.html#hb-vector-paint-t" title="hb_vector_paint_t"><span class="type">hb_vector_paint_t</span></a> *paint</code></em>);</pre>
+<p>Clears all custom palette color overrides previously set on <em class="parameter"><code>paint</code></em>
+.</p>
+<p>After this call, palette lookups use the selected font palette without
+custom override entries.</p>
+<div class="refsect3">
+<a name="hb-vector-paint-clear-custom-palette-colors.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>paint</p></td>
+<td class="parameter_description"><p>a paint context.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-vector-paint-get-funcs"></a><h3>hb_vector_paint_get_funcs ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-paint.html#hb-paint-funcs-t" title="hb_paint_funcs_t"><span class="returnvalue">hb_paint_funcs_t</span></a> *
+hb_vector_paint_get_funcs (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Gets paint callbacks implemented by the vector paint backend.</p>
+<div class="refsect3">
+<a name="hb-vector-paint-get-funcs.returns"></a><h4>Returns</h4>
+<p>immutable <a class="link" href="harfbuzz-hb-paint.html#hb-paint-funcs-t" title="hb_paint_funcs_t"><span class="type">hb_paint_funcs_t</span></a> singleton. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-vector-paint-glyph"></a><h3>hb_vector_paint_glyph ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+hb_vector_paint_glyph (<em class="parameter"><code><a class="link" href="harfbuzz-hb-vector.html#hb-vector-paint-t" title="hb_vector_paint_t"><span class="type">hb_vector_paint_t</span></a> *paint</code></em>,
+                       <em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> *font</code></em>,
+                       <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> glyph</code></em>,
+                       <em class="parameter"><code><span class="type">float</span> pen_x</code></em>,
+                       <em class="parameter"><code><span class="type">float</span> pen_y</code></em>,
+                       <em class="parameter"><code><a class="link" href="harfbuzz-hb-vector.html#hb-vector-extents-mode-t" title="enum hb_vector_extents_mode_t"><span class="type">hb_vector_extents_mode_t</span></a> extents_mode</code></em>);</pre>
+<p>Paints one color glyph into <em class="parameter"><code>paint</code></em>
+.</p>
+<div class="refsect3">
+<a name="hb-vector-paint-glyph.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>paint</p></td>
+<td class="parameter_description"><p>a paint context.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>font</p></td>
+<td class="parameter_description"><p>font object.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>glyph</p></td>
+<td class="parameter_description"><p>glyph ID.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pen_x</p></td>
+<td class="parameter_description"><p>glyph x origin before context transform.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pen_y</p></td>
+<td class="parameter_description"><p>glyph y origin before context transform.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>extents_mode</p></td>
+<td class="parameter_description"><p>extents update mode.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-vector-paint-glyph.returns"></a><h4>Returns</h4>
+<p> <code class="literal">true</code> if glyph paint data was emitted, <code class="literal">false</code> otherwise.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-vector-svg-paint-set-flat"></a><h3>hb_vector_svg_paint_set_flat ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_vector_svg_paint_set_flat (<em class="parameter"><code><a class="link" href="harfbuzz-hb-vector.html#hb-vector-paint-t" title="hb_vector_paint_t"><span class="type">hb_vector_paint_t</span></a> *paint</code></em>,
+                              <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="type">hb_bool_t</span></a> flat</code></em>);</pre>
+<p>Enables or disables SVG paint flattening.</p>
+<div class="refsect3">
+<a name="hb-vector-svg-paint-set-flat.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>paint</p></td>
+<td class="parameter_description"><p>a paint context.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>flat</p></td>
+<td class="parameter_description"><p>whether to flatten paint output and disable glyph-group reuse.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-vector-svg-paint-set-precision"></a><h3>hb_vector_svg_paint_set_precision ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_vector_svg_paint_set_precision (<em class="parameter"><code><a class="link" href="harfbuzz-hb-vector.html#hb-vector-paint-t" title="hb_vector_paint_t"><span class="type">hb_vector_paint_t</span></a> *paint</code></em>,
+                                   <em class="parameter"><code><span class="type">unsigned </span> precision</code></em>);</pre>
+<p>Sets numeric output precision for SVG paint output.</p>
+<div class="refsect3">
+<a name="hb-vector-svg-paint-set-precision.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>paint</p></td>
+<td class="parameter_description"><p>a paint context.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>precision</p></td>
+<td class="parameter_description"><p>decimal precision.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-vector-paint-render"></a><h3>hb_vector_paint_render ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-blob.html#hb-blob-t" title="hb_blob_t"><span class="returnvalue">hb_blob_t</span></a> *
+hb_vector_paint_render (<em class="parameter"><code><a class="link" href="harfbuzz-hb-vector.html#hb-vector-paint-t" title="hb_vector_paint_t"><span class="type">hb_vector_paint_t</span></a> *paint</code></em>);</pre>
+<p>Renders accumulated paint content to an SVG blob.</p>
+<div class="refsect3">
+<a name="hb-vector-paint-render.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>paint</p></td>
+<td class="parameter_description"><p>a paint context.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-vector-paint-render.returns"></a><h4>Returns</h4>
+<p>output blob, or <code class="literal">NULL</code> if rendering cannot proceed. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-vector-paint-reset"></a><h3>hb_vector_paint_reset ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_vector_paint_reset (<em class="parameter"><code><a class="link" href="harfbuzz-hb-vector.html#hb-vector-paint-t" title="hb_vector_paint_t"><span class="type">hb_vector_paint_t</span></a> *paint</code></em>);</pre>
+<p>Resets <em class="parameter"><code>paint</code></em>
+ state and clears accumulated content.</p>
+<div class="refsect3">
+<a name="hb-vector-paint-reset.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>paint</p></td>
+<td class="parameter_description"><p>a paint context.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-vector-paint-recycle-blob"></a><h3>hb_vector_paint_recycle_blob ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_vector_paint_recycle_blob (<em class="parameter"><code><a class="link" href="harfbuzz-hb-vector.html#hb-vector-paint-t" title="hb_vector_paint_t"><span class="type">hb_vector_paint_t</span></a> *paint</code></em>,
+                              <em class="parameter"><code><a class="link" href="harfbuzz-hb-blob.html#hb-blob-t" title="hb_blob_t"><span class="type">hb_blob_t</span></a> *blob</code></em>);</pre>
+<p>Provides a blob for internal buffer reuse by later render calls.</p>
+<div class="refsect3">
+<a name="hb-vector-paint-recycle-blob.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>paint</p></td>
+<td class="parameter_description"><p>a paint context.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>blob</p></td>
+<td class="parameter_description"><p>previously rendered blob to recycle. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+</div>
+<div class="refsect1">
+<a name="harfbuzz-hb-vector.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="hb-vector-format-t"></a><h3>enum hb_vector_format_t</h3>
+<p>Output format for vector conversion.</p>
+<div class="refsect3">
+<a name="hb-vector-format-t.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="HB-VECTOR-FORMAT-INVALID:CAPS"></a>HB_VECTOR_FORMAT_INVALID</p></td>
+<td class="enum_member_description">
+<p>Invalid format.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HB-VECTOR-FORMAT-SVG:CAPS"></a>HB_VECTOR_FORMAT_SVG</p></td>
+<td class="enum_member_description">
+<p>SVG output.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-vector-extents-t"></a><h3>hb_vector_extents_t</h3>
+<pre class="programlisting">typedef struct {
+  float x, y;
+  float width, height;
+} hb_vector_extents_t;
+</pre>
+<p>Vector output extents, mapped to SVG viewBox.</p>
+<div class="refsect3">
+<a name="hb-vector-extents-t.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="struct_member_name"><p><span class="type">float</span> <em class="structfield"><code><a name="hb-vector-extents-t.x"></a>x</code></em>;</p></td>
+<td class="struct_member_description"><p>Left edge of the output coordinate system.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">float</span> <em class="structfield"><code><a name="hb-vector-extents-t.y"></a>y</code></em>;</p></td>
+<td class="struct_member_description"><p>Top edge of the output coordinate system.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">float</span> <em class="structfield"><code><a name="hb-vector-extents-t.width"></a>width</code></em>;</p></td>
+<td class="struct_member_description"><p>Width of the output coordinate system.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">float</span> <em class="structfield"><code><a name="hb-vector-extents-t.height"></a>height</code></em>;</p></td>
+<td class="struct_member_description"><p>Height of the output coordinate system.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-vector-extents-mode-t"></a><h3>enum hb_vector_extents_mode_t</h3>
+<p>Controls whether convenience glyph APIs update context extents.</p>
+<div class="refsect3">
+<a name="hb-vector-extents-mode-t.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="HB-VECTOR-EXTENTS-MODE-NONE:CAPS"></a>HB_VECTOR_EXTENTS_MODE_NONE</p></td>
+<td class="enum_member_description">
+<p>Do not update extents.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HB-VECTOR-EXTENTS-MODE-EXPAND:CAPS"></a>HB_VECTOR_EXTENTS_MODE_EXPAND</p></td>
+<td class="enum_member_description">
+<p>Union glyph ink extents into current extents.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-vector-draw-t"></a><h3>hb_vector_draw_t</h3>
+<pre class="programlisting">typedef struct hb_vector_draw_t hb_vector_draw_t;
+</pre>
+<p>Opaque draw context for vector outline conversion.</p>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-vector-paint-t"></a><h3>hb_vector_paint_t</h3>
+<pre class="programlisting">typedef struct hb_vector_paint_t hb_vector_paint_t;
+</pre>
+<p>Opaque paint context for vector color-glyph conversion.</p>
+<p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.34.0</div>
+</body>
+</html>

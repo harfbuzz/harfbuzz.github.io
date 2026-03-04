@@ -2377,13 +2377,15 @@ is no longer needed. </p></td>
                                 <em class="parameter"><code>unsigned <span class="type">int</span> color_index</code></em>,
                                 <em class="parameter"><code><a class="link" href="harfbuzz-hb-ot-color.html#hb-color-t" title="hb_color_t"><span class="type">hb_color_t</span></a> *color</code></em>,
                                 <em class="parameter"><code><span class="type">void</span> *user_data</code></em>);</pre>
-<p>A virtual method for the <a class="link" href="harfbuzz-hb-paint.html#hb-paint-funcs-t" title="hb_paint_funcs_t"><span class="type">hb_paint_funcs_t</span></a> to fetch a color from the custom
-color palette.</p>
-<p>Custom palette colors override the colors from the fonts selected color
-palette. It is not necessary to override all palette entries; for entries
-that should be taken from the font palette, return <code class="literal">false</code>.</p>
-<p>This function might get called multiple times, but the custom palette is
-expected to remain unchanged for duration of a <a class="link" href="harfbuzz-hb-font.html#hb-font-paint-glyph" title="hb_font_paint_glyph ()"><code class="function">hb_font_paint_glyph()</code></a> call.</p>
+<p>A virtual method for <a class="link" href="harfbuzz-hb-paint.html#hb-paint-funcs-t" title="hb_paint_funcs_t"><span class="type">hb_paint_funcs_t</span></a> to fetch a custom palette override
+color for <em class="parameter"><code>color_index</code></em>
+.</p>
+<p>Custom palette colors override colors from the font's selected color palette.
+It is not necessary to override all palette entries; return <code class="literal">false</code> for
+entries that should be taken from the font palette.</p>
+<p>This function might be called multiple times, but the custom palette is
+expected to remain unchanged for the duration of one
+<a class="link" href="harfbuzz-hb-font.html#hb-font-paint-glyph" title="hb_font_paint_glyph ()"><code class="function">hb_font_paint_glyph()</code></a> call.</p>
 <div class="refsect3">
 <a name="hb-paint-custom-palette-color-func-t.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -2395,17 +2397,17 @@ expected to remain unchanged for duration of a <a class="link" href="harfbuzz-hb
 <tbody>
 <tr>
 <td class="parameter_name"><p>funcs</p></td>
-<td class="parameter_description"><p>paint functions object</p></td>
+<td class="parameter_description"><p>paint functions object.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>paint_data</p></td>
-<td class="parameter_description"><p>The data accompanying the paint functions in <a class="link" href="harfbuzz-hb-font.html#hb-font-paint-glyph" title="hb_font_paint_glyph ()"><code class="function">hb_font_paint_glyph()</code></a></p></td>
+<td class="parameter_description"><p>data accompanying the paint functions in <a class="link" href="harfbuzz-hb-font.html#hb-font-paint-glyph" title="hb_font_paint_glyph ()"><code class="function">hb_font_paint_glyph()</code></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>color_index</p></td>
-<td class="parameter_description"><p>the color index</p></td>
+<td class="parameter_description"><p>color index to fetch.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -2415,7 +2417,7 @@ expected to remain unchanged for duration of a <a class="link" href="harfbuzz-hb
 </tr>
 <tr>
 <td class="parameter_name"><p>user_data</p></td>
-<td class="parameter_description"><p>User data pointer passed to <a class="link" href="harfbuzz-hb-paint.html#hb-paint-funcs-set-pop-group-func" title="hb_paint_funcs_set_pop_group_func ()"><code class="function">hb_paint_funcs_set_pop_group_func()</code></a></p></td>
+<td class="parameter_description"><p>user data pointer passed to <a class="link" href="harfbuzz-hb-paint.html#hb-paint-funcs-set-custom-palette-color-func" title="hb_paint_funcs_set_custom_palette_color_func ()"><code class="function">hb_paint_funcs_set_custom_palette_color_func()</code></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -2423,7 +2425,7 @@ expected to remain unchanged for duration of a <a class="link" href="harfbuzz-hb
 </div>
 <div class="refsect3">
 <a name="hb-paint-custom-palette-color-func-t.returns"></a><h4>Returns</h4>
-<p> <code class="literal">true</code> if found, <code class="literal">false</code> otherwise</p>
+<p> <code class="literal">true</code> if a custom color is provided, <code class="literal">false</code> otherwise.</p>
 </div>
 <p class="since">Since: <a class="link" href="api-index-7-0-0.html#api-index-7.0.0">7.0.0</a></p>
 </div>
@@ -2436,7 +2438,8 @@ hb_paint_funcs_set_custom_palette_color_func
                                 <em class="parameter"><code><a class="link" href="harfbuzz-hb-paint.html#hb-paint-custom-palette-color-func-t" title="hb_paint_custom_palette_color_func_t ()"><span class="type">hb_paint_custom_palette_color_func_t</span></a> func</code></em>,
                                 <em class="parameter"><code><span class="type">void</span> *user_data</code></em>,
                                 <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-destroy-func-t" title="hb_destroy_func_t ()"><span class="type">hb_destroy_func_t</span></a> destroy</code></em>);</pre>
-<p>Sets the custom-palette-color callback on the paint functions struct.</p>
+<p>Sets the custom-palette-color callback on <em class="parameter"><code>funcs</code></em>
+.</p>
 <div class="refsect3">
 <a name="hb-paint-funcs-set-custom-palette-color-func.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -2448,23 +2451,23 @@ hb_paint_funcs_set_custom_palette_color_func
 <tbody>
 <tr>
 <td class="parameter_name"><p>funcs</p></td>
-<td class="parameter_description"><p>A paint functions struct</p></td>
+<td class="parameter_description"><p>a paint functions struct.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>func</p></td>
-<td class="parameter_description"><p>The custom-palette-color callback. </p></td>
+<td class="parameter_description"><p>custom-palette-color callback. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym> user_data][<acronym title="This parameter is a 'destroy_data', for callbacks."><span class="acronym">destroy</span></acronym> destroy][<acronym title="The callback is valid until the GDestroyNotify argument is called."><span class="acronym">scope notified</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>user_data</p></td>
-<td class="parameter_description"><p>Data to pass to <em class="parameter"><code>func</code></em>
-</p></td>
+<td class="parameter_description"><p>data to pass to <em class="parameter"><code>func</code></em>
+.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>destroy</p></td>
-<td class="parameter_description"><p>Function to call when <em class="parameter"><code>user_data</code></em>
+<td class="parameter_description"><p>function to call when <em class="parameter"><code>user_data</code></em>
 is no longer needed. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
@@ -3212,7 +3215,7 @@ hb_paint_custom_palette_color (<em class="parameter"><code><a class="link" href=
                                <em class="parameter"><code><span class="type">void</span> *paint_data</code></em>,
                                <em class="parameter"><code>unsigned <span class="type">int</span> color_index</code></em>,
                                <em class="parameter"><code><a class="link" href="harfbuzz-hb-ot-color.html#hb-color-t" title="hb_color_t"><span class="type">hb_color_t</span></a> *color</code></em>);</pre>
-<p>Gets the custom palette color for <em class="parameter"><code>color_index</code></em>
+<p>Gets the custom palette override color for <em class="parameter"><code>color_index</code></em>
 .</p>
 <div class="refsect3">
 <a name="hb-paint-custom-palette-color.parameters"></a><h4>Parameters</h4>
@@ -3225,17 +3228,17 @@ hb_paint_custom_palette_color (<em class="parameter"><code><a class="link" href=
 <tbody>
 <tr>
 <td class="parameter_name"><p>funcs</p></td>
-<td class="parameter_description"><p>paint functions</p></td>
+<td class="parameter_description"><p>paint functions.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>paint_data</p></td>
-<td class="parameter_description"><p>associated data passed by the caller</p></td>
+<td class="parameter_description"><p>associated data passed by the caller.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>color_index</p></td>
-<td class="parameter_description"><p>color index</p></td>
+<td class="parameter_description"><p>color index to fetch.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -3248,7 +3251,7 @@ hb_paint_custom_palette_color (<em class="parameter"><code><a class="link" href=
 </div>
 <div class="refsect3">
 <a name="hb-paint-custom-palette-color.returns"></a><h4>Returns</h4>
-<p> <code class="literal">true</code> if found, <code class="literal">false</code> otherwise</p>
+<p> <code class="literal">true</code> if a custom color is provided, <code class="literal">false</code> otherwise.</p>
 </div>
 <p class="since">Since: <a class="link" href="api-index-7-0-0.html#api-index-7.0.0">7.0.0</a></p>
 </div>
