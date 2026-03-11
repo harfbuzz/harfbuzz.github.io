@@ -42,10 +42,10 @@
       axis structures:
     </p>
 <pre class="programlisting">
-      axes = hb_ot_var_get_axis_count(face);
-      ...
-      hb_ot_var_get_axis_infos(face, 0, axes, axes_array);
-    </pre>
+axes = hb_ot_var_get_axis_count(face);
+...
+hb_ot_var_get_axis_infos(face, 0, axes, axes_array);
+</pre>
 <p>
       For each axis returned in the array, you can can access the
       identifier in its <span class="property">tag</span>. HarfBuzz also has
@@ -65,15 +65,15 @@
       of the axes by tag and assign a value on the axis:
     </p>
 <pre class="programlisting">
-      unsigned int variation_count = 2;
-      hb_variation_t variation_data[variation_count];
-      variation_data[0].tag = HB_OT_TAG_VAR_AXIS_WIDTH;
-      variation_data[1].tag = HB_OT_TAG_VAR_AXIS_WEIGHT;
-      variation_data[0].value = 80;
-      variation_data[1].value = 750;
-      ...
-      hb_font_set_variations(font, variation_data, variation_count);
-    </pre>
+unsigned int variation_count = 2;
+hb_variation_t variation_data[variation_count];
+variation_data[0].tag = HB_OT_TAG_VAR_AXIS_WIDTH;
+variation_data[1].tag = HB_OT_TAG_VAR_AXIS_WEIGHT;
+variation_data[0].value = 80;
+variation_data[1].value = 750;
+...
+hb_font_set_variations(font, variation_data, variation_count);
+</pre>
 <p>
       That should give us a slightly condensed font ("normal" on the
       <code class="literal">wdth</code> axis is 100) at a noticeably bolder

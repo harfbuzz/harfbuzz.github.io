@@ -5,8 +5,8 @@
 <title>hb-raster: HarfBuzz Manual</title>
 <meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
 <link rel="home" href="index.html" title="HarfBuzz Manual">
-<link rel="up" href="integration-api.html" title="Integration API">
-<link rel="prev" href="harfbuzz-hb-icu.html" title="hb-icu">
+<link rel="up" href="rendering-api.html" title="Rendering API">
+<link rel="prev" href="rendering-api.html" title="Rendering API">
 <link rel="next" href="harfbuzz-hb-vector.html" title="hb-vector">
 <meta name="generator" content="GTK-Doc V1.34.0 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
@@ -18,8 +18,8 @@
                   <a href="#harfbuzz-hb-raster.description" class="shortcut">Description</a></span>
 </td>
 <td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
-<td><a accesskey="u" href="integration-api.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
-<td><a accesskey="p" href="harfbuzz-hb-icu.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="rendering-api.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="rendering-api.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
 <td><a accesskey="n" href="harfbuzz-hb-vector.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
 </tr></table>
 <div class="refentry">
@@ -116,6 +116,22 @@
 </td>
 <td class="function_name">
 <a class="link" href="harfbuzz-hb-raster.html#hb-raster-image-get-format" title="hb_raster_image_get_format ()">hb_raster_image_get_format</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-raster.html#hb-raster-image-deserialize-from-png-or-fail" title="hb_raster_image_deserialize_from_png_or_fail ()">hb_raster_image_deserialize_from_png_or_fail</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="harfbuzz-hb-blob.html#hb-blob-t" title="hb_blob_t"><span class="returnvalue">hb_blob_t</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-raster.html#hb-raster-image-serialize-to-png-or-fail" title="hb_raster_image_serialize_to_png_or_fail ()">hb_raster_image_serialize_to_png_or_fail</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 <tr>
@@ -458,29 +474,31 @@
 <p>Functions for rasterizing glyph outlines into pixel buffers.</p>
 <p><a class="link" href="harfbuzz-hb-raster.html#hb-raster-draw-t" title="hb_raster_draw_t"><span class="type">hb_raster_draw_t</span></a> rasterizes outline geometry and always outputs
 <em class="parameter"><code>HB_RASTER_FORMAT_A8</code></em>
-. Typical flow:
-<code class="literal">
-hb_raster_draw_t *draw = <a class="link" href="harfbuzz-hb-raster.html#hb-raster-draw-create-or-fail" title="hb_raster_draw_create_or_fail ()"><code class="function">hb_raster_draw_create_or_fail()</code></a>;
+. Typical flow:</p>
+<div class="informalexample"><pre class="screen">
+hb_raster_draw_t *draw = hb_raster_draw_create_or_fail ();
 hb_raster_draw_set_scale_factor (draw, 64.f, 64.f);
 hb_raster_draw_set_transform (draw, 1.f, 0.f, 0.f, 1.f, 0.f, 0.f);
-hb_raster_draw_set_glyph_extents (draw, &amp;amp;glyph_extents);
+hb_raster_draw_set_glyph_extents (draw, &amp;glyph_extents);
 hb_raster_draw_glyph (draw, font, gid, pen_x, pen_y);
 hb_raster_image_t *mask = hb_raster_draw_render (draw);
-</code></p>
+</pre></div>
+<p></p>
 <p><a class="link" href="harfbuzz-hb-raster.html#hb-raster-paint-t" title="hb_raster_paint_t"><span class="type">hb_raster_paint_t</span></a> renders color paint graphs and always outputs
 <em class="parameter"><code>HB_RASTER_FORMAT_BGRA32</code></em>
-. Typical flow:
-<code class="literal">
-hb_raster_paint_t *paint = <a class="link" href="harfbuzz-hb-raster.html#hb-raster-paint-create-or-fail" title="hb_raster_paint_create_or_fail ()"><code class="function">hb_raster_paint_create_or_fail()</code></a>;
+. Typical flow:</p>
+<div class="informalexample"><pre class="screen">
+hb_raster_paint_t *paint = hb_raster_paint_create_or_fail ();
 hb_raster_paint_set_scale_factor (paint, 64.f, 64.f);
 hb_raster_paint_set_transform (paint, 1.f, 0.f, 0.f, 1.f, 0.f, 0.f);
 hb_raster_paint_set_foreground (paint, foreground);
 hb_glyph_extents_t glyph_extents;
-hb_font_get_glyph_extents (font, gid, &amp;amp;glyph_extents);
-hb_raster_paint_set_glyph_extents (paint, &amp;amp;glyph_extents);
+hb_font_get_glyph_extents (font, gid, &amp;glyph_extents);
+hb_raster_paint_set_glyph_extents (paint, &amp;glyph_extents);
 hb_raster_paint_glyph (paint, font, gid, pen_x, pen_y, 0, foreground);
 hb_raster_image_t *img = hb_raster_paint_render (paint);
-</code></p>
+</pre></div>
+<p></p>
 <p>In both modes, set extents explicitly (or via glyph extents) before
 rendering to avoid implicit allocations and to get deterministic bounds.</p>
 </div>
@@ -734,7 +752,8 @@ hb_raster_image_get_buffer (<em class="parameter"><code><a class="link" href="ha
 <p>Fetches the raw pixel buffer of <em class="parameter"><code>image</code></em>
 .  The buffer layout is
 described by the extents obtained from <a class="link" href="harfbuzz-hb-raster.html#hb-raster-image-get-extents" title="hb_raster_image_get_extents ()"><code class="function">hb_raster_image_get_extents()</code></a>
-and the format from <a class="link" href="harfbuzz-hb-raster.html#hb-raster-image-get-format" title="hb_raster_image_get_format ()"><code class="function">hb_raster_image_get_format()</code></a>.</p>
+and the format from <a class="link" href="harfbuzz-hb-raster.html#hb-raster-image-get-format" title="hb_raster_image_get_format ()"><code class="function">hb_raster_image_get_format()</code></a>. Rows are stored
+bottom-to-top.</p>
 <div class="refsect3">
 <a name="hb-raster-image-get-buffer.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -816,6 +835,80 @@ hb_raster_image_get_format (<em class="parameter"><code><a class="link" href="ha
 <p>The <a class="link" href="harfbuzz-hb-raster.html#hb-raster-format-t" title="enum hb_raster_format_t"><span class="type">hb_raster_format_t</span></a> of the image</p>
 </div>
 <p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-raster-image-deserialize-from-png-or-fail"></a><h3>hb_raster_image_deserialize_from_png_or_fail ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+hb_raster_image_deserialize_from_png_or_fail
+                               (<em class="parameter"><code><a class="link" href="harfbuzz-hb-raster.html#hb-raster-image-t" title="hb_raster_image_t"><span class="type">hb_raster_image_t</span></a> *image</code></em>,
+                                <em class="parameter"><code><a class="link" href="harfbuzz-hb-blob.html#hb-blob-t" title="hb_blob_t"><span class="type">hb_blob_t</span></a> *png</code></em>);</pre>
+<p>Replaces <em class="parameter"><code>image</code></em>
+ contents by deserializing a PNG blob into a
+<a class="link" href="harfbuzz-hb-raster.html#HB-RASTER-FORMAT-BGRA32:CAPS"><span class="type">HB_RASTER_FORMAT_BGRA32</span></a> raster image.</p>
+<p>On success, <em class="parameter"><code>image</code></em>
+ extents are reset to pixel extents with origin
+<code class="literal">(0, 0)</code>. Rows in the resulting image buffer are stored bottom-to-top.
+On failure, <em class="parameter"><code>image</code></em>
+ is left unchanged.</p>
+<div class="refsect3">
+<a name="hb-raster-image-deserialize-from-png-or-fail.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>image</p></td>
+<td class="parameter_description"><p>a raster image</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>png</p></td>
+<td class="parameter_description"><p>PNG data</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-raster-image-deserialize-from-png-or-fail.returns"></a><h4>Returns</h4>
+<p> <code class="literal">true</code> if deserialization succeeded, <code class="literal">false</code> otherwise</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-1-0.html#api-index-13.1.0">13.1.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-raster-image-serialize-to-png-or-fail"></a><h3>hb_raster_image_serialize_to_png_or_fail ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-blob.html#hb-blob-t" title="hb_blob_t"><span class="returnvalue">hb_blob_t</span></a> *
+hb_raster_image_serialize_to_png_or_fail
+                               (<em class="parameter"><code><a class="link" href="harfbuzz-hb-raster.html#hb-raster-image-t" title="hb_raster_image_t"><span class="type">hb_raster_image_t</span></a> *image</code></em>);</pre>
+<p>Serializes <em class="parameter"><code>image</code></em>
+ to a PNG blob.</p>
+<p>Currently only <a class="link" href="harfbuzz-hb-raster.html#HB-RASTER-FORMAT-BGRA32:CAPS"><span class="type">HB_RASTER_FORMAT_BGRA32</span></a> images are supported.</p>
+<div class="refsect3">
+<a name="hb-raster-image-serialize-to-png-or-fail.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>image</p></td>
+<td class="parameter_description"><p>a raster image</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-raster-image-serialize-to-png-or-fail.returns"></a><h4>Returns</h4>
+<p>A newly allocated PNG <a class="link" href="harfbuzz-hb-blob.html#hb-blob-t" title="hb_blob_t"><span class="type">hb_blob_t</span></a>, or <code class="literal">NULL</code> on failure. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-1-0.html#api-index-13.1.0">13.1.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1827,12 +1920,13 @@ hb_raster_paint_set_extents (<em class="parameter"><code><a class="link" href="h
                              <em class="parameter"><code>const <a class="link" href="harfbuzz-hb-raster.html#hb-raster-extents-t" title="hb_raster_extents_t"><span class="type">hb_raster_extents_t</span></a> *extents</code></em>);</pre>
 <p>Sets the output image extents (pixel rectangle).</p>
 <p>Call this before <a class="link" href="harfbuzz-hb-font.html#hb-font-paint-glyph" title="hb_font_paint_glyph ()"><code class="function">hb_font_paint_glyph()</code></a> for each render.
-A common pattern is:
-<code class="literal">
+A common pattern is:</p>
+<div class="informalexample"><pre class="screen">
 hb_glyph_extents_t gext;
-if (hb_font_get_glyph_extents (font, gid, &amp;amp;gext))
-  hb_raster_paint_set_glyph_extents (paint, &amp;amp;gext);
-</code></p>
+if (hb_font_get_glyph_extents (font, gid, &amp;gext))
+  hb_raster_paint_set_glyph_extents (paint, &amp;gext);
+</pre></div>
+<p></p>
 <div class="refsect3">
 <a name="hb-raster-paint-set-extents.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">

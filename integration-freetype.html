@@ -63,12 +63,12 @@
       <span class="type">hb_face_t</span> with size specified.
     </p>
 <pre class="programlisting">
-      #include &lt;hb-ft.h&gt;
-      ...
-      FT_New_Face(ft_library, font_path, index, &amp;face);
-      FT_Set_Char_Size(face, 0, 1000, 0, 0);
-      hb_font_t *font = hb_ft_font_create(face);
-    </pre>
+#include &lt;hb-ft.h&gt;
+...
+FT_New_Face(ft_library, font_path, index, &amp;face);
+FT_Set_Char_Size(face, 0, 1000, 0, 0);
+hb_font_t *font = hb_ft_font_create(face);
+</pre>
 <p>
       <code class="function">hb_ft_font_create_referenced()</code> is
       the recommended function for creating an <span class="type">hb_face_t</span> face
@@ -126,8 +126,8 @@
       All you need to do is call
     </p>
 <pre class="programlisting">
-      hb_ft_font_set_funcs(font);
-    </pre>
+hb_ft_font_set_funcs(font);
+</pre>
 <p>
       and HarfBuzz will use FreeType for the font-functions in
       <code class="literal">font</code>. 

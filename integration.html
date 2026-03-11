@@ -137,12 +137,12 @@
       and it will be ready for use with GLib:
     </p>
 <pre class="programlisting">
-      #include &lt;hb-glib.h&gt;
-      ...
-      hb_unicode_funcs_t *glibufunctions;
-      glibufunctions = hb_glib_get_unicode_funcs();
-      hb_buffer_set_unicode_funcs(buf, glibufunctions);
-    </pre>
+#include &lt;hb-glib.h&gt;
+...
+hb_unicode_funcs_t *glibufunctions;
+glibufunctions = hb_glib_get_unicode_funcs();
+hb_buffer_set_unicode_funcs(buf, glibufunctions);
+</pre>
 <p>
       For script information, GLib uses the
       <span class="type">GUnicodeScript</span> type. Like HarfBuzz's own

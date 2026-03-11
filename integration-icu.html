@@ -44,10 +44,10 @@
       Unicode-functions structure to your buffer:
     </p>
 <pre class="programlisting">
-      hb_unicode_funcs_t *icufunctions;
-      icufunctions = hb_icu_get_unicode_funcs();
-      hb_buffer_set_unicode_funcs(buf, icufunctions);
-    </pre>
+hb_unicode_funcs_t *icufunctions;
+icufunctions = hb_icu_get_unicode_funcs();
+hb_buffer_set_unicode_funcs(buf, icufunctions);
+</pre>
 <p>
       and ICU will be used for Unicode-data access.
     </p>

@@ -27,7 +27,10 @@
 <dd><dl>
 <dt><span class="section"><a href="utilities.html#utilities-command-line-hbshape">hb-shape</a></span></dt>
 <dt><span class="section"><a href="utilities.html#utilities-command-line-hbview">hb-view</a></span></dt>
+<dt><span class="section"><a href="utilities.html#utilities-command-line-hbraster">hb-raster</a></span></dt>
+<dt><span class="section"><a href="utilities.html#utilities-command-line-hbvector">hb-vector</a></span></dt>
 <dt><span class="section"><a href="utilities.html#utilities-command-line-hbsubset">hb-subset</a></span></dt>
+<dt><span class="section"><a href="utilities.html#utilities-command-line-hbinfo">hb-info</a></span></dt>
 </dl></dd>
 <dt><span class="section"><a href="utilities-common-types-apis.html">Common data types and APIs</a></span></dt>
 </dl></div>
@@ -41,9 +44,11 @@
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="utilities-command-line-tools"></a>Command-line tools</h2></div></div></div>
 <p>
-      HarfBuzz include three command-line tools:
-      <span class="command"><strong>hb-shape</strong></span>, <span class="command"><strong>hb-view</strong></span>, and
-      <span class="command"><strong>hb-subset</strong></span>. They can be used to examine
+      HarfBuzz include several command-line tools:
+      <span class="command"><strong>hb-shape</strong></span>, <span class="command"><strong>hb-view</strong></span>,
+      <span class="command"><strong>hb-subset</strong></span>, <span class="command"><strong>hb-info</strong></span>,
+      <span class="command"><strong>hb-raster</strong></span>, and <span class="command"><strong>hb-vector</strong></span>.
+      They can be used to examine
       HarfBuzz's functionality, debug font binaries, or explore the
       various shaping models and features from a terminal.
     </p>
@@ -67,11 +72,7 @@
 	internal state to the output that is sent to the terminal. The
 	general format is
       </p>
-<pre class="programlisting">
-	<span class="command"><strong>hb-shape</strong></span> [<span class="optional">[OPTIONS]</span>]
-      <em class="parameter"><code>path/to/font/file.ttf</code></em>
-      <em class="parameter"><code>yourinputtext</code></em>
-      </pre>
+<pre class="programlisting"><span class="command"><strong>hb-shape</strong></span> [<span class="optional">OPTIONS</span>] <em class="parameter"><code>path/to/font/file.ttf</code></em> <em class="parameter"><code>yourinputtext</code></em></pre>
 <p>
 	The default output format is plain text (although JSON output
 	can be selected instead by specifying the option
@@ -96,9 +97,7 @@
 <p>
 	For a complete explanation of the options available, run
       </p>
-<pre class="programlisting">
-	<span class="command"><strong>hb-shape</strong></span> <em class="parameter"><code>--help</code></em>
-      </pre>
+<pre class="programlisting"><span class="command"><strong>hb-shape</strong></span> <em class="parameter"><code>--help</code></em></pre>
 </div>
 <div class="section">
 <div class="titlepage"><div><div><h3 class="title">
@@ -110,11 +109,7 @@
 	<span class="command"><strong>hb-view</strong></span> takes a font file and a text string
 	as its arguments:
       </p>
-<pre class="programlisting">
-	<span class="command"><strong>hb-view</strong></span> [<span class="optional">[OPTIONS]</span>]
-	<em class="parameter"><code>path/to/font/file.ttf</code></em>
-	<em class="parameter"><code>yourinputtext</code></em>
-      </pre>
+<pre class="programlisting"><span class="command"><strong>hb-view</strong></span> [<span class="optional">OPTIONS</span>] <em class="parameter"><code>path/to/font/file.ttf</code></em> <em class="parameter"><code>yourinputtext</code></em></pre>
 <p>
 	By default, <span class="command"><strong>hb-view</strong></span> renders the shaped
 	text in ASCII block-character images as terminal output. By
@@ -147,6 +142,32 @@
 </div>
 <div class="section">
 <div class="titlepage"><div><div><h3 class="title">
+<a name="utilities-command-line-hbraster"></a>hb-raster</h3></div></div></div>
+<p>
+	<span class="emphasis"><em><span class="command"><strong>hb-raster</strong></span></em></span> takes a font file
+	and a text string, shapes the text, and renders the result as a
+	PPM (Portable Pixel Map) raster image.
+      </p>
+<pre class="programlisting"><span class="command"><strong>hb-raster</strong></span> [<span class="optional">OPTIONS</span>] <em class="parameter"><code>path/to/font/file.ttf</code></em> <em class="parameter"><code>yourinputtext</code></em></pre>
+<p>
+	It is similar to <span class="command"><strong>hb-view</strong></span> but uses HarfBuzz's own rasterizer and currently only outputs PPM images.
+      </p>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="utilities-command-line-hbvector"></a>hb-vector</h3></div></div></div>
+<p>
+	<span class="emphasis"><em><span class="command"><strong>hb-vector</strong></span></em></span> takes a font file
+	and a text string, shapes the text, and renders the result as a
+	SVG vector image.
+      </p>
+<pre class="programlisting"><span class="command"><strong>hb-vector</strong></span> [<span class="optional">OPTIONS</span>] <em class="parameter"><code>path/to/font/file.ttf</code></em> <em class="parameter"><code>yourinputtext</code></em></pre>
+<p>
+	It is similar to <span class="command"><strong>hb-view</strong></span> but uses HarfBuzz's own vector output routines and currently only outputs SVG images.
+      </p>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h3 class="title">
 <a name="utilities-command-line-hbsubset"></a>hb-subset</h3></div></div></div>
 <p>
 	<span class="emphasis"><em><span class="command"><strong>hb-subset</strong></span></em></span> allows you
@@ -159,23 +180,34 @@
 	generate a font that covers the input text exactly like the
 	input font does, but includes no other characters or features.
       </p>
-<pre class="programlisting">
-	<span class="command"><strong>hb-subset</strong></span> [<span class="optional">[OPTIONS]</span>]
-	<em class="parameter"><code>path/to/font/file.ttf</code></em>
-	<em class="parameter"><code>yourinputtext</code></em>
-      </pre>
+<pre class="programlisting"><span class="command"><strong>hb-subset</strong></span> [<span class="optional">OPTIONS</span>] <em class="parameter"><code>path/to/font/file.ttf</code></em> <em class="parameter"><code>yourinputtext</code></em></pre>
 <p>
 	For example, to create a subset of Noto Serif that just includes the
 	numerals and the lowercase Latin alphabet, you could run
       </p>
-<pre class="programlisting">
-	<span class="command"><strong>hb-subset</strong></span> [<span class="optional">[OPTIONS]</span>]
-	<em class="parameter"><code>NotoSerif-Regular.ttf</code></em>
-	<em class="parameter"><code>0123456789abcdefghijklmnopqrstuvwxyz</code></em>
-      </pre>
+<pre class="programlisting"><span class="command"><strong>hb-subset</strong></span> [<span class="optional">OPTIONS</span>] <em class="parameter"><code>NotoSerif-Regular.ttf</code></em> <em class="parameter"><code>0123456789abcdefghijklmnopqrstuvwxyz</code></em></pre>
 <p>
 	There are options available to remove hinting from the
 	subsetted font and to specify a list of variation-axis settings.
+      </p>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="utilities-command-line-hbinfo"></a>hb-info</h3></div></div></div>
+<p>
+	<span class="emphasis"><em><span class="command"><strong>hb-info</strong></span></em></span> allows you to
+	query a font file for various information and prints it to the
+	terminal.
+      </p>
+<p>
+	If no query options are specified, it will output a general
+	summary about the font.
+      </p>
+<pre class="programlisting"><span class="command"><strong>hb-info</strong></span> [<span class="optional">OPTIONS</span>] <em class="parameter"><code>path/to/font/file.ttf</code></em></pre>
+<p>
+	Command-line options are available to list full tables, names,
+	characters, layout features, font variation, or color palettes,
+	as well as retrieve specific font names, metrics, styles, or baselines.
       </p>
 </div>
 </div>

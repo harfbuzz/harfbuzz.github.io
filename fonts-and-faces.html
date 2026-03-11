@@ -69,10 +69,10 @@
       <code class="literal">0</code> as the index when you create a face:
     </p>
 <pre class="programlisting">
-      hb_blob_t* blob = hb_blob_create_from_file(file);
-      ...
-      hb_face_t* face = hb_face_create(blob, 0);
-    </pre>
+hb_blob_t* blob = hb_blob_create_from_file(file);
+...
+hb_face_t* face = hb_face_create(blob, 0);
+</pre>
 <p>
       On its own, a face object is not quite ready to use for
       shaping. The typeface must be set to a specific point size in
@@ -100,8 +100,8 @@
       You can create a font object from a face object:
     </p>
 <pre class="programlisting">
-      hb_font_t* hb_font = hb_font_create(hb_face);
-    </pre>
+hb_font_t* hb_font = hb_font_create(hb_face);
+</pre>
 <p>
       After creating a font, there are a few properties you should
       set. Many fonts enable and disable hints based on the size it
@@ -124,8 +124,8 @@
       access the face object that it comes from. For that, you can call
     </p>
 <pre class="programlisting">
-      hb_face = hb_font_get_face(hb_font);
-    </pre>
+hb_face = hb_font_get_face(hb_font);
+</pre>
 <p>
       You can also create a font object from an existing font object
       using the <code class="function">hb_font_create_sub_font()</code>

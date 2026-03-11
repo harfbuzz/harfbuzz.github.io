@@ -75,9 +75,9 @@
 	characters (top row) and initial cluster values (bottom row):
       </p>
 <pre class="programlisting">
-	A,acute,B,breve,C,circumflex
-	0,1    ,2,3    ,4,5
-      </pre>
+A,acute,B,breve,C,circumflex
+0,1    ,2,3    ,4,5
+</pre>
 <p>
 	If the sequence <code class="literal">A,B,C</code> forms a ligature,
 	then these are the cluster values HarfBuzz will return under
@@ -87,23 +87,23 @@
 	Level 0:
       </p>
 <pre class="programlisting">
-	ABC,acute,breve,circumflex
-	0  ,0    ,0    ,0
-      </pre>
+ABC,acute,breve,circumflex
+0  ,0    ,0    ,0
+</pre>
 <p>
 	Level 1:
       </p>
 <pre class="programlisting">
-	ABC,acute,breve,circumflex
-	0  ,0    ,0    ,5
-      </pre>
+ABC,acute,breve,circumflex
+0  ,0    ,0    ,5
+</pre>
 <p>
 	Level 2:
       </p>
 <pre class="programlisting">
-	ABC,acute,breve,circumflex
-	0  ,1    ,3    ,5
-      </pre>
+ABC,acute,breve,circumflex
+0  ,1    ,3    ,5
+</pre>
 <p>
 	Making sense of the level 2 result is the hardest for a client
 	program, because there is nothing in the cluster values that
@@ -126,26 +126,26 @@
 	values (bottom row):
       </p>
 <pre class="programlisting">
-	A,B,C,D,E
-	0,1,2,3,4
-      </pre>
+A,B,C,D,E
+0,1,2,3,4
+</pre>
 <p>
 	Now imagine <code class="literal">D</code> moves before
 	<code class="literal">B</code> in a reordering operation. The cluster
 	values will then be:
       </p>
 <pre class="programlisting">
-	A,D,B,C,E
-	0,3,1,2,4
-      </pre>
+A,D,B,C,E
+0,3,1,2,4
+</pre>
 <p>
 	Next, if <code class="literal">D</code> forms a ligature with
 	<code class="literal">B</code>, the output is:
       </p>
 <pre class="programlisting">
-	A,DB,C,E
-	0,3 ,2,4
-      </pre>
+A,DB,C,E
+0,3 ,2,4
+</pre>
 <p>
 	However, in a different scenario, in which the shaping rules
 	of the script instead caused <code class="literal">A</code> and
@@ -154,9 +154,9 @@
 	result would be:
       </p>
 <pre class="programlisting">
-	AB,D,C,E
-	0 ,3,2,4   
-      </pre>
+AB,D,C,E
+0 ,3,2,4   
+</pre>
 <p>
 	There is no way for a client program to differentiate between
 	these two scenarios based on the cluster values

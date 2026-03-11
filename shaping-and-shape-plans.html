@@ -103,9 +103,9 @@
       now extract the glyph information and positioning arrays:
     </p>
 <pre class="programlisting">
-      hb_glyph_info_t *glyph_info    = hb_buffer_get_glyph_infos(buf, &amp;glyph_count);
-      hb_glyph_position_t *glyph_pos = hb_buffer_get_glyph_positions(buf, &amp;glyph_count);
-    </pre>
+hb_glyph_info_t *glyph_info    = hb_buffer_get_glyph_infos(buf, &amp;glyph_count);
+hb_glyph_position_t *glyph_pos = hb_buffer_get_glyph_positions(buf, &amp;glyph_count);
+</pre>
 <p>
       The glyph information array holds a <span class="type">hb_glyph_info_t</span>
       for each output glyph, which has two fields:

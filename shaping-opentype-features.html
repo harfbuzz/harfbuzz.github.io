@@ -94,12 +94,12 @@
       "discretionary" ligatures in the font:
     </p>
 <pre class="programlisting">
-      hb_feature_t userfeatures[1];
-      userfeatures[0].tag = HB_TAG('d','l','i','g');
-      userfeatures[0].value = 1;
-      userfeatures[0].start = HB_FEATURE_GLOBAL_START;
-      userfeatures[0].end = HB_FEATURE_GLOBAL_END;
-    </pre>
+hb_feature_t userfeatures[1];
+userfeatures[0].tag = HB_TAG('d','l','i','g');
+userfeatures[0].value = 1;
+userfeatures[0].start = HB_FEATURE_GLOBAL_START;
+userfeatures[0].end = HB_FEATURE_GLOBAL_END;
+</pre>
 <p>
       <code class="literal">HB_FEATURE_GLOBAL_END</code> and
       <code class="literal">HB_FEATURE_GLOBAL_END</code> are macros we can use
@@ -115,8 +115,8 @@
       will get performed:
     </p>
 <pre class="programlisting">
-      hb_shape(font, buf, userfeatures, num_features);
-    </pre>
+hb_shape(font, buf, userfeatures, num_features);
+</pre>
 <p>
       Just like we enabled the <code class="literal">dlig</code> feature by
       setting its <em class="parameter"><code>value</code></em> to

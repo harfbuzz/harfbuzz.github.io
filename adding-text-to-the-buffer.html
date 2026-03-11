@@ -40,18 +40,18 @@
       character to add, and the length of the segment to add:
     </p>
 <pre class="programlisting">
-    hb_buffer_add_utf8 (hb_buffer_t *buf,
-                    const char *text,
-                    int text_length,
-                    unsigned int item_offset,
-                    int item_length)
-    </pre>
+hb_buffer_add_utf8 (hb_buffer_t *buf,
+                const char *text,
+                int text_length,
+                unsigned int item_offset,
+                int item_length)
+</pre>
 <p>
       So, in practice, you can say:
     </p>
 <pre class="programlisting">
-      hb_buffer_add_utf8(buf, text, strlen(text), 0, strlen(text));
-    </pre>
+hb_buffer_add_utf8(buf, text, strlen(text), 0, strlen(text));
+</pre>
 <p>
       This will append your new characters to
       <em class="parameter"><code>buf</code></em>, not replace its existing

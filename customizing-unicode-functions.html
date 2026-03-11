@@ -72,9 +72,9 @@
       your buffer by calling <code class="function">hb_buffer_get_unicode_funcs()</code>:
     </p>
 <pre class="programlisting">
-      hb_unicode_funcs_t *ufunctions;
-      ufunctions = hb_buffer_get_unicode_funcs(buf);
-    </pre>
+hb_unicode_funcs_t *ufunctions;
+ufunctions = hb_buffer_get_unicode_funcs(buf);
+</pre>
 <p>
       The current version of <code class="literal">unicode_funcs</code> uses six functions:
     </p>
@@ -115,8 +115,8 @@
       <code class="function">hb_unicode_general_category_func_t</code>, you can call
     </p>
 <pre class="programlisting">
-      hb_unicode_funcs_set_general_category_func (*ufuncs, func, *user_data, destroy)	    
-    </pre>
+hb_unicode_funcs_set_general_category_func (*ufuncs, func, *user_data, destroy)	    
+</pre>
 <p>
       Virtualizing this set of Unicode functions is primarily intended
       to improve portability. There is no need for every client

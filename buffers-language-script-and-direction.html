@@ -58,10 +58,10 @@
       a buffer, you can call <code class="function">hb_buffer_destroy()</code>:
     </p>
 <pre class="programlisting">
-      hb_buffer_t *buf = hb_buffer_create();
-      ...
-      hb_buffer_destroy(buf);
-    </pre>
+hb_buffer_t *buf = hb_buffer_create();
+...
+hb_buffer_destroy(buf);
+</pre>
 <p>
       This will destroy the object and free its associated memory -
       unless some other part of the program holds a reference to this
@@ -70,17 +70,17 @@
       else destroying it, you should increase its reference count:
     </p>
 <pre class="programlisting">
-      void somefunc(hb_buffer_t *buf) {
-      buf = hb_buffer_reference(buf);
-      ...
-    </pre>
+void somefunc(hb_buffer_t *buf) {
+  buf = hb_buffer_reference(buf);
+  ...
+</pre>
 <p>
       And then decrease it once you're done with it:
     </p>
 <pre class="programlisting">
-      hb_buffer_destroy(buf);
-      }
-    </pre>
+  hb_buffer_destroy(buf);
+}
+</pre>
 <p>
       While we are on the subject of reference-counting buffers, it is
       worth noting that an individual buffer can only meaningfully be
