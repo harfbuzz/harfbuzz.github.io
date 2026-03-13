@@ -390,7 +390,10 @@
     <keyword type="macro" name="HB_HAS_GOBJECT" link="harfbuzz-hb-features.html#HB-HAS-GOBJECT:CAPS"/>
     <keyword type="macro" name="HB_HAS_GRAPHITE" link="harfbuzz-hb-features.html#HB-HAS-GRAPHITE:CAPS"/>
     <keyword type="macro" name="HB_HAS_ICU" link="harfbuzz-hb-features.html#HB-HAS-ICU:CAPS"/>
+    <keyword type="macro" name="HB_HAS_RASTER" link="harfbuzz-hb-features.html#HB-HAS-RASTER:CAPS"/>
+    <keyword type="macro" name="HB_HAS_SUBSET" link="harfbuzz-hb-features.html#HB-HAS-SUBSET:CAPS"/>
     <keyword type="macro" name="HB_HAS_UNISCRIBE" link="harfbuzz-hb-features.html#HB-HAS-UNISCRIBE:CAPS"/>
+    <keyword type="macro" name="HB_HAS_VECTOR" link="harfbuzz-hb-features.html#HB-HAS-VECTOR:CAPS"/>
     <keyword type="macro" name="HB_HAS_WASM" link="harfbuzz-hb-features.html#HB-HAS-WASM:CAPS"/>
     <keyword type="function" name="hb_draw_funcs_create ()" link="harfbuzz-hb-draw.html#hb-draw-funcs-create" since="4.0.0"/>
     <keyword type="function" name="hb_draw_funcs_get_empty ()" link="harfbuzz-hb-draw.html#hb-draw-funcs-get-empty" since="7.0.0"/>
