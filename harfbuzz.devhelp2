@@ -124,6 +124,12 @@
       <sub name="Apple Advanced Typography API" link="apple-advanced-typography-api.html">
         <sub name="hb-aat-layout" link="harfbuzz-hb-aat-layout.html"/>
       </sub>
+      <sub name="Style API" link="style-api.html">
+        <sub name="hb-style" link="harfbuzz-hb-style.html"/>
+      </sub>
+      <sub name="Subset API" link="subset-api.html">
+        <sub name="hb-subset" link="harfbuzz-hb-subset.html"/>
+      </sub>
       <sub name="Rendering API" link="rendering-api.html">
         <sub name="hb-raster" link="harfbuzz-hb-raster.html"/>
         <sub name="hb-vector" link="harfbuzz-hb-vector.html"/>
@@ -140,14 +146,9 @@
         <sub name="hb-icu" link="harfbuzz-hb-icu.html"/>
         <sub name="hb-uniscribe" link="harfbuzz-hb-uniscribe.html"/>
       </sub>
-      <sub name="Style API" link="style-api.html">
-        <sub name="hb-style" link="harfbuzz-hb-style.html"/>
-      </sub>
-      <sub name="Subset API" link="subset-api.html">
-        <sub name="hb-subset" link="harfbuzz-hb-subset.html"/>
-      </sub>
       <sub name="API Index" link="api-index-full.html"/>
       <sub name="Index of deprecated API" link="deprecated-api-index.html"/>
+      <sub name="Index of new symbols in 13.2.0" link="api-index-13-2-0.html"/>
       <sub name="Index of new symbols in 13.1.0" link="api-index-13-1-0.html"/>
       <sub name="Index of new symbols in 13.0.0" link="api-index-13-0-0.html"/>
       <sub name="Index of new symbols in 12.1.0" link="api-index-12-1-0.html"/>
@@ -927,7 +928,9 @@
     <keyword type="typedef" name="hb_ot_name_id_t" link="harfbuzz-hb-ot-name.html#hb-ot-name-id-t" since="2.0.0"/>
     <keyword type="enum" name="enum hb_ot_name_id_predefined_t" link="harfbuzz-hb-ot-name.html#hb-ot-name-id-predefined-t" since="7.0.0"/>
     <keyword type="struct" name="hb_ot_name_entry_t" link="harfbuzz-hb-ot-name.html#hb-ot-name-entry-t" since="2.1.0"/>
+    <keyword type="function" name="hb_ot_shape_get_buffer_format_serial ()" link="harfbuzz-hb-ot-shape.html#hb-ot-shape-get-buffer-format-serial" since="13.2.0"/>
     <keyword type="function" name="hb_ot_shape_glyphs_closure ()" link="harfbuzz-hb-ot-shape.html#hb-ot-shape-glyphs-closure" since="0.9.2"/>
+    <keyword type="macro" name="HB_OT_SHAPE_BUFFER_FORMAT_SERIAL" link="harfbuzz-hb-ot-shape.html#HB-OT-SHAPE-BUFFER-FORMAT-SERIAL:CAPS" since="13.2.0"/>
     <keyword type="function" name="hb_ot_var_has_data ()" link="harfbuzz-hb-ot-var.html#hb-ot-var-has-data" since="1.4.2"/>
     <keyword type="function" name="hb_ot_var_find_axis_info ()" link="harfbuzz-hb-ot-var.html#hb-ot-var-find-axis-info" since="2.2.0"/>
     <keyword type="function" name="hb_ot_var_get_axis_count ()" link="harfbuzz-hb-ot-var.html#hb-ot-var-get-axis-count" since="1.4.2"/>
@@ -955,6 +958,45 @@
     <keyword type="enum" name="enum hb_aat_layout_feature_type_t" link="harfbuzz-hb-aat-layout.html#hb-aat-layout-feature-type-t" since="2.2.0"/>
     <keyword type="enum" name="enum hb_aat_layout_feature_selector_t" link="harfbuzz-hb-aat-layout.html#hb-aat-layout-feature-selector-t" since="2.2.0"/>
     <keyword type="struct" name="hb_aat_layout_feature_selector_info_t" link="harfbuzz-hb-aat-layout.html#hb-aat-layout-feature-selector-info-t"/>
+    <keyword type="function" name="hb_style_get_value ()" link="harfbuzz-hb-style.html#hb-style-get-value" since="3.0.0"/>
+    <keyword type="enum" name="enum hb_style_tag_t" link="harfbuzz-hb-style.html#hb-style-tag-t" since="3.0.0"/>
+    <keyword type="function" name="hb_subset_input_create_or_fail ()" link="harfbuzz-hb-subset.html#hb-subset-input-create-or-fail" since="1.8.0"/>
+    <keyword type="function" name="hb_subset_input_reference ()" link="harfbuzz-hb-subset.html#hb-subset-input-reference" since="1.8.0"/>
+    <keyword type="function" name="hb_subset_input_destroy ()" link="harfbuzz-hb-subset.html#hb-subset-input-destroy" since="1.8.0"/>
+    <keyword type="function" name="hb_subset_input_set_user_data ()" link="harfbuzz-hb-subset.html#hb-subset-input-set-user-data" since="2.9.0"/>
+    <keyword type="function" name="hb_subset_input_get_user_data ()" link="harfbuzz-hb-subset.html#hb-subset-input-get-user-data" since="2.9.0"/>
+    <keyword type="function" name="hb_subset_input_keep_everything ()" link="harfbuzz-hb-subset.html#hb-subset-input-keep-everything" since="7.0.0"/>
+    <keyword type="function" name="hb_subset_input_set_flags ()" link="harfbuzz-hb-subset.html#hb-subset-input-set-flags" since="2.9.0"/>
+    <keyword type="function" name="hb_subset_input_get_flags ()" link="harfbuzz-hb-subset.html#hb-subset-input-get-flags" since="2.9.0"/>
+    <keyword type="function" name="hb_subset_input_unicode_set ()" link="harfbuzz-hb-subset.html#hb-subset-input-unicode-set" since="1.8.0"/>
+    <keyword type="function" name="hb_subset_input_glyph_set ()" link="harfbuzz-hb-subset.html#hb-subset-input-glyph-set" since="1.8.0"/>
+    <keyword type="function" name="hb_subset_input_set ()" link="harfbuzz-hb-subset.html#hb-subset-input-set" since="2.9.1"/>
+    <keyword type="function" name="hb_subset_input_old_to_new_glyph_mapping ()" link="harfbuzz-hb-subset.html#hb-subset-input-old-to-new-glyph-mapping" since="7.3.0"/>
+    <keyword type="function" name="hb_subset_input_pin_all_axes_to_default ()" link="harfbuzz-hb-subset.html#hb-subset-input-pin-all-axes-to-default" since="8.3.1"/>
+    <keyword type="function" name="hb_subset_input_pin_axis_location ()" link="harfbuzz-hb-subset.html#hb-subset-input-pin-axis-location" since="6.0.0"/>
+    <keyword type="function" name="hb_subset_input_pin_axis_to_default ()" link="harfbuzz-hb-subset.html#hb-subset-input-pin-axis-to-default" since="6.0.0"/>
+    <keyword type="function" name="hb_subset_input_get_axis_range ()" link="harfbuzz-hb-subset.html#hb-subset-input-get-axis-range" since="8.5.0"/>
+    <keyword type="function" name="hb_subset_input_set_axis_range ()" link="harfbuzz-hb-subset.html#hb-subset-input-set-axis-range" since="8.5.0"/>
+    <keyword type="function" name="hb_subset_axis_range_from_string ()" link="harfbuzz-hb-subset.html#hb-subset-axis-range-from-string" since="10.2.0"/>
+    <keyword type="function" name="hb_subset_axis_range_to_string ()" link="harfbuzz-hb-subset.html#hb-subset-axis-range-to-string" since="10.2.0"/>
+    <keyword type="function" name="hb_subset_or_fail ()" link="harfbuzz-hb-subset.html#hb-subset-or-fail" since="2.9.0"/>
+    <keyword type="function" name="hb_subset_plan_create_or_fail ()" link="harfbuzz-hb-subset.html#hb-subset-plan-create-or-fail" since="4.0.0"/>
+    <keyword type="function" name="hb_subset_plan_reference ()" link="harfbuzz-hb-subset.html#hb-subset-plan-reference" since="4.0.0"/>
+    <keyword type="function" name="hb_subset_plan_destroy ()" link="harfbuzz-hb-subset.html#hb-subset-plan-destroy" since="4.0.0"/>
+    <keyword type="function" name="hb_subset_plan_set_user_data ()" link="harfbuzz-hb-subset.html#hb-subset-plan-set-user-data" since="4.0.0"/>
+    <keyword type="function" name="hb_subset_plan_get_user_data ()" link="harfbuzz-hb-subset.html#hb-subset-plan-get-user-data" since="4.0.0"/>
+    <keyword type="function" name="hb_subset_plan_execute_or_fail ()" link="harfbuzz-hb-subset.html#hb-subset-plan-execute-or-fail" since="4.0.0"/>
+    <keyword type="function" name="hb_subset_plan_unicode_to_old_glyph_mapping ()" link="harfbuzz-hb-subset.html#hb-subset-plan-unicode-to-old-glyph-mapping" since="4.0.0"/>
+    <keyword type="function" name="hb_subset_plan_new_to_old_glyph_mapping ()" link="harfbuzz-hb-subset.html#hb-subset-plan-new-to-old-glyph-mapping" since="4.0.0"/>
+    <keyword type="function" name="hb_subset_plan_old_to_new_glyph_mapping ()" link="harfbuzz-hb-subset.html#hb-subset-plan-old-to-new-glyph-mapping" since="4.0.0"/>
+    <keyword type="function" name="hb_subset_preprocess ()" link="harfbuzz-hb-subset.html#hb-subset-preprocess" since="6.0.0"/>
+    <keyword type="function" name="hb_subset_serialize_or_fail ()" link="harfbuzz-hb-subset.html#hb-subset-serialize-or-fail" since="10.2.0"/>
+    <keyword type="enum" name="enum hb_subset_flags_t" link="harfbuzz-hb-subset.html#hb-subset-flags-t" since="2.9.0"/>
+    <keyword type="typedef" name="hb_subset_input_t" link="harfbuzz-hb-subset.html#hb-subset-input-t"/>
+    <keyword type="enum" name="enum hb_subset_sets_t" link="harfbuzz-hb-subset.html#hb-subset-sets-t" since="2.9.1"/>
+    <keyword type="typedef" name="hb_subset_plan_t" link="harfbuzz-hb-subset.html#hb-subset-plan-t"/>
+    <keyword type="struct" name="hb_subset_serialize_link_t" link="harfbuzz-hb-subset.html#hb-subset-serialize-link-t" since="10.2.0"/>
+    <keyword type="struct" name="hb_subset_serialize_object_t" link="harfbuzz-hb-subset.html#hb-subset-serialize-object-t" since="10.2.0"/>
     <keyword type="function" name="hb_raster_image_create_or_fail ()" link="harfbuzz-hb-raster.html#hb-raster-image-create-or-fail" since="13.0.0"/>
     <keyword type="function" name="hb_raster_image_reference ()" link="harfbuzz-hb-raster.html#hb-raster-image-reference" since="13.0.0"/>
     <keyword type="function" name="hb_raster_image_destroy ()" link="harfbuzz-hb-raster.html#hb-raster-image-destroy" since="13.0.0"/>
@@ -1111,45 +1153,6 @@
     <keyword type="function" name="hb_icu_script_to_script ()" link="harfbuzz-hb-icu.html#hb-icu-script-to-script"/>
     <keyword type="function" name="hb_uniscribe_font_get_hfont ()" link="harfbuzz-hb-uniscribe.html#hb-uniscribe-font-get-hfont"/>
     <keyword type="function" name="hb_uniscribe_font_get_logfontw ()" link="harfbuzz-hb-uniscribe.html#hb-uniscribe-font-get-logfontw"/>
-    <keyword type="function" name="hb_style_get_value ()" link="harfbuzz-hb-style.html#hb-style-get-value" since="3.0.0"/>
-    <keyword type="enum" name="enum hb_style_tag_t" link="harfbuzz-hb-style.html#hb-style-tag-t" since="3.0.0"/>
-    <keyword type="function" name="hb_subset_input_create_or_fail ()" link="harfbuzz-hb-subset.html#hb-subset-input-create-or-fail" since="1.8.0"/>
-    <keyword type="function" name="hb_subset_input_reference ()" link="harfbuzz-hb-subset.html#hb-subset-input-reference" since="1.8.0"/>
-    <keyword type="function" name="hb_subset_input_destroy ()" link="harfbuzz-hb-subset.html#hb-subset-input-destroy" since="1.8.0"/>
-    <keyword type="function" name="hb_subset_input_set_user_data ()" link="harfbuzz-hb-subset.html#hb-subset-input-set-user-data" since="2.9.0"/>
-    <keyword type="function" name="hb_subset_input_get_user_data ()" link="harfbuzz-hb-subset.html#hb-subset-input-get-user-data" since="2.9.0"/>
-    <keyword type="function" name="hb_subset_input_keep_everything ()" link="harfbuzz-hb-subset.html#hb-subset-input-keep-everything" since="7.0.0"/>
-    <keyword type="function" name="hb_subset_input_set_flags ()" link="harfbuzz-hb-subset.html#hb-subset-input-set-flags" since="2.9.0"/>
-    <keyword type="function" name="hb_subset_input_get_flags ()" link="harfbuzz-hb-subset.html#hb-subset-input-get-flags" since="2.9.0"/>
-    <keyword type="function" name="hb_subset_input_unicode_set ()" link="harfbuzz-hb-subset.html#hb-subset-input-unicode-set" since="1.8.0"/>
-    <keyword type="function" name="hb_subset_input_glyph_set ()" link="harfbuzz-hb-subset.html#hb-subset-input-glyph-set" since="1.8.0"/>
-    <keyword type="function" name="hb_subset_input_set ()" link="harfbuzz-hb-subset.html#hb-subset-input-set" since="2.9.1"/>
-    <keyword type="function" name="hb_subset_input_old_to_new_glyph_mapping ()" link="harfbuzz-hb-subset.html#hb-subset-input-old-to-new-glyph-mapping" since="7.3.0"/>
-    <keyword type="function" name="hb_subset_input_pin_all_axes_to_default ()" link="harfbuzz-hb-subset.html#hb-subset-input-pin-all-axes-to-default" since="8.3.1"/>
-    <keyword type="function" name="hb_subset_input_pin_axis_location ()" link="harfbuzz-hb-subset.html#hb-subset-input-pin-axis-location" since="6.0.0"/>
-    <keyword type="function" name="hb_subset_input_pin_axis_to_default ()" link="harfbuzz-hb-subset.html#hb-subset-input-pin-axis-to-default" since="6.0.0"/>
-    <keyword type="function" name="hb_subset_input_get_axis_range ()" link="harfbuzz-hb-subset.html#hb-subset-input-get-axis-range" since="8.5.0"/>
-    <keyword type="function" name="hb_subset_input_set_axis_range ()" link="harfbuzz-hb-subset.html#hb-subset-input-set-axis-range" since="8.5.0"/>
-    <keyword type="function" name="hb_subset_axis_range_from_string ()" link="harfbuzz-hb-subset.html#hb-subset-axis-range-from-string" since="10.2.0"/>
-    <keyword type="function" name="hb_subset_axis_range_to_string ()" link="harfbuzz-hb-subset.html#hb-subset-axis-range-to-string" since="10.2.0"/>
-    <keyword type="function" name="hb_subset_or_fail ()" link="harfbuzz-hb-subset.html#hb-subset-or-fail" since="2.9.0"/>
-    <keyword type="function" name="hb_subset_plan_create_or_fail ()" link="harfbuzz-hb-subset.html#hb-subset-plan-create-or-fail" since="4.0.0"/>
-    <keyword type="function" name="hb_subset_plan_reference ()" link="harfbuzz-hb-subset.html#hb-subset-plan-reference" since="4.0.0"/>
-    <keyword type="function" name="hb_subset_plan_destroy ()" link="harfbuzz-hb-subset.html#hb-subset-plan-destroy" since="4.0.0"/>
-    <keyword type="function" name="hb_subset_plan_set_user_data ()" link="harfbuzz-hb-subset.html#hb-subset-plan-set-user-data" since="4.0.0"/>
-    <keyword type="function" name="hb_subset_plan_get_user_data ()" link="harfbuzz-hb-subset.html#hb-subset-plan-get-user-data" since="4.0.0"/>
-    <keyword type="function" name="hb_subset_plan_execute_or_fail ()" link="harfbuzz-hb-subset.html#hb-subset-plan-execute-or-fail" since="4.0.0"/>
-    <keyword type="function" name="hb_subset_plan_unicode_to_old_glyph_mapping ()" link="harfbuzz-hb-subset.html#hb-subset-plan-unicode-to-old-glyph-mapping" since="4.0.0"/>
-    <keyword type="function" name="hb_subset_plan_new_to_old_glyph_mapping ()" link="harfbuzz-hb-subset.html#hb-subset-plan-new-to-old-glyph-mapping" since="4.0.0"/>
-    <keyword type="function" name="hb_subset_plan_old_to_new_glyph_mapping ()" link="harfbuzz-hb-subset.html#hb-subset-plan-old-to-new-glyph-mapping" since="4.0.0"/>
-    <keyword type="function" name="hb_subset_preprocess ()" link="harfbuzz-hb-subset.html#hb-subset-preprocess" since="6.0.0"/>
-    <keyword type="function" name="hb_subset_serialize_or_fail ()" link="harfbuzz-hb-subset.html#hb-subset-serialize-or-fail" since="10.2.0"/>
-    <keyword type="enum" name="enum hb_subset_flags_t" link="harfbuzz-hb-subset.html#hb-subset-flags-t" since="2.9.0"/>
-    <keyword type="typedef" name="hb_subset_input_t" link="harfbuzz-hb-subset.html#hb-subset-input-t"/>
-    <keyword type="enum" name="enum hb_subset_sets_t" link="harfbuzz-hb-subset.html#hb-subset-sets-t" since="2.9.1"/>
-    <keyword type="typedef" name="hb_subset_plan_t" link="harfbuzz-hb-subset.html#hb-subset-plan-t"/>
-    <keyword type="struct" name="hb_subset_serialize_link_t" link="harfbuzz-hb-subset.html#hb-subset-serialize-link-t" since="10.2.0"/>
-    <keyword type="struct" name="hb_subset_serialize_object_t" link="harfbuzz-hb-subset.html#hb-subset-serialize-object-t" since="10.2.0"/>
     <keyword type="constant" name="HB_MEMORY_MODE_DUPLICATE" link="harfbuzz-hb-blob.html#HB-MEMORY-MODE-DUPLICATE:CAPS"/>
     <keyword type="constant" name="HB_MEMORY_MODE_READONLY" link="harfbuzz-hb-blob.html#HB-MEMORY-MODE-READONLY:CAPS"/>
     <keyword type="constant" name="HB_MEMORY_MODE_WRITABLE" link="harfbuzz-hb-blob.html#HB-MEMORY-MODE-WRITABLE:CAPS"/>
@@ -1922,12 +1925,6 @@
     <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_PROPORTIONAL_CJK_ROMAN" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-PROPORTIONAL-CJK-ROMAN:CAPS"/>
     <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_DEFAULT_CJK_ROMAN" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-DEFAULT-CJK-ROMAN:CAPS"/>
     <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_SELECTOR_FULL_WIDTH_CJK_ROMAN" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-SELECTOR-FULL-WIDTH-CJK-ROMAN:CAPS"/>
-    <keyword type="constant" name="HB_RASTER_FORMAT_A8" link="harfbuzz-hb-raster.html#HB-RASTER-FORMAT-A8:CAPS"/>
-    <keyword type="constant" name="HB_RASTER_FORMAT_BGRA32" link="harfbuzz-hb-raster.html#HB-RASTER-FORMAT-BGRA32:CAPS"/>
-    <keyword type="constant" name="HB_VECTOR_FORMAT_INVALID" link="harfbuzz-hb-vector.html#HB-VECTOR-FORMAT-INVALID:CAPS"/>
-    <keyword type="constant" name="HB_VECTOR_FORMAT_SVG" link="harfbuzz-hb-vector.html#HB-VECTOR-FORMAT-SVG:CAPS"/>
-    <keyword type="constant" name="HB_VECTOR_EXTENTS_MODE_NONE" link="harfbuzz-hb-vector.html#HB-VECTOR-EXTENTS-MODE-NONE:CAPS"/>
-    <keyword type="constant" name="HB_VECTOR_EXTENTS_MODE_EXPAND" link="harfbuzz-hb-vector.html#HB-VECTOR-EXTENTS-MODE-EXPAND:CAPS"/>
     <keyword type="constant" name="HB_STYLE_TAG_ITALIC" link="harfbuzz-hb-style.html#HB-STYLE-TAG-ITALIC:CAPS"/>
     <keyword type="constant" name="HB_STYLE_TAG_OPTICAL_SIZE" link="harfbuzz-hb-style.html#HB-STYLE-TAG-OPTICAL-SIZE:CAPS"/>
     <keyword type="constant" name="HB_STYLE_TAG_SLANT_ANGLE" link="harfbuzz-hb-style.html#HB-STYLE-TAG-SLANT-ANGLE:CAPS"/>
@@ -1958,6 +1955,12 @@
     <keyword type="constant" name="HB_SUBSET_SETS_NAME_LANG_ID" link="harfbuzz-hb-subset.html#HB-SUBSET-SETS-NAME-LANG-ID:CAPS"/>
     <keyword type="constant" name="HB_SUBSET_SETS_LAYOUT_FEATURE_TAG" link="harfbuzz-hb-subset.html#HB-SUBSET-SETS-LAYOUT-FEATURE-TAG:CAPS"/>
     <keyword type="constant" name="HB_SUBSET_SETS_LAYOUT_SCRIPT_TAG" link="harfbuzz-hb-subset.html#HB-SUBSET-SETS-LAYOUT-SCRIPT-TAG:CAPS"/>
+    <keyword type="constant" name="HB_RASTER_FORMAT_A8" link="harfbuzz-hb-raster.html#HB-RASTER-FORMAT-A8:CAPS"/>
+    <keyword type="constant" name="HB_RASTER_FORMAT_BGRA32" link="harfbuzz-hb-raster.html#HB-RASTER-FORMAT-BGRA32:CAPS"/>
+    <keyword type="constant" name="HB_VECTOR_FORMAT_INVALID" link="harfbuzz-hb-vector.html#HB-VECTOR-FORMAT-INVALID:CAPS"/>
+    <keyword type="constant" name="HB_VECTOR_FORMAT_SVG" link="harfbuzz-hb-vector.html#HB-VECTOR-FORMAT-SVG:CAPS"/>
+    <keyword type="constant" name="HB_VECTOR_EXTENTS_MODE_NONE" link="harfbuzz-hb-vector.html#HB-VECTOR-EXTENTS-MODE-NONE:CAPS"/>
+    <keyword type="constant" name="HB_VECTOR_EXTENTS_MODE_EXPAND" link="harfbuzz-hb-vector.html#HB-VECTOR-EXTENTS-MODE-EXPAND:CAPS"/>
     <keyword type="member" name="hb-glyph-info-t.codepoint" link="harfbuzz-hb-buffer.html#hb-glyph-info-t.codepoint"/>
     <keyword type="member" name="hb-glyph-info-t.cluster" link="harfbuzz-hb-buffer.html#hb-glyph-info-t.cluster"/>
     <keyword type="member" name="hb-glyph-position-t.x-advance" link="harfbuzz-hb-buffer.html#hb-glyph-position-t.x-advance"/>
@@ -2016,15 +2019,6 @@
     <keyword type="member" name="hb-aat-layout-feature-selector-info-t.name-id" link="harfbuzz-hb-aat-layout.html#hb-aat-layout-feature-selector-info-t.name-id"/>
     <keyword type="member" name="hb-aat-layout-feature-selector-info-t.enable" link="harfbuzz-hb-aat-layout.html#hb-aat-layout-feature-selector-info-t.enable"/>
     <keyword type="member" name="hb-aat-layout-feature-selector-info-t.disable" link="harfbuzz-hb-aat-layout.html#hb-aat-layout-feature-selector-info-t.disable"/>
-    <keyword type="member" name="hb-raster-extents-t.x-origin" link="harfbuzz-hb-raster.html#hb-raster-extents-t.x-origin"/>
-    <keyword type="member" name="hb-raster-extents-t.y-origin" link="harfbuzz-hb-raster.html#hb-raster-extents-t.y-origin"/>
-    <keyword type="member" name="hb-raster-extents-t.width" link="harfbuzz-hb-raster.html#hb-raster-extents-t.width"/>
-    <keyword type="member" name="hb-raster-extents-t.height" link="harfbuzz-hb-raster.html#hb-raster-extents-t.height"/>
-    <keyword type="member" name="hb-raster-extents-t.stride" link="harfbuzz-hb-raster.html#hb-raster-extents-t.stride"/>
-    <keyword type="member" name="hb-vector-extents-t.x" link="harfbuzz-hb-vector.html#hb-vector-extents-t.x"/>
-    <keyword type="member" name="hb-vector-extents-t.y" link="harfbuzz-hb-vector.html#hb-vector-extents-t.y"/>
-    <keyword type="member" name="hb-vector-extents-t.width" link="harfbuzz-hb-vector.html#hb-vector-extents-t.width"/>
-    <keyword type="member" name="hb-vector-extents-t.height" link="harfbuzz-hb-vector.html#hb-vector-extents-t.height"/>
     <keyword type="member" name="hb-subset-serialize-link-t.width" link="harfbuzz-hb-subset.html#hb-subset-serialize-link-t.width"/>
     <keyword type="member" name="hb-subset-serialize-link-t.position" link="harfbuzz-hb-subset.html#hb-subset-serialize-link-t.position"/>
     <keyword type="member" name="hb-subset-serialize-link-t.objidx" link="harfbuzz-hb-subset.html#hb-subset-serialize-link-t.objidx"/>
@@ -2034,5 +2028,14 @@
     <keyword type="member" name="hb-subset-serialize-object-t.real-links" link="harfbuzz-hb-subset.html#hb-subset-serialize-object-t.real-links"/>
     <keyword type="member" name="hb-subset-serialize-object-t.num-virtual-links" link="harfbuzz-hb-subset.html#hb-subset-serialize-object-t.num-virtual-links"/>
     <keyword type="member" name="hb-subset-serialize-object-t.virtual-links" link="harfbuzz-hb-subset.html#hb-subset-serialize-object-t.virtual-links"/>
+    <keyword type="member" name="hb-raster-extents-t.x-origin" link="harfbuzz-hb-raster.html#hb-raster-extents-t.x-origin"/>
+    <keyword type="member" name="hb-raster-extents-t.y-origin" link="harfbuzz-hb-raster.html#hb-raster-extents-t.y-origin"/>
+    <keyword type="member" name="hb-raster-extents-t.width" link="harfbuzz-hb-raster.html#hb-raster-extents-t.width"/>
+    <keyword type="member" name="hb-raster-extents-t.height" link="harfbuzz-hb-raster.html#hb-raster-extents-t.height"/>
+    <keyword type="member" name="hb-raster-extents-t.stride" link="harfbuzz-hb-raster.html#hb-raster-extents-t.stride"/>
+    <keyword type="member" name="hb-vector-extents-t.x" link="harfbuzz-hb-vector.html#hb-vector-extents-t.x"/>
+    <keyword type="member" name="hb-vector-extents-t.y" link="harfbuzz-hb-vector.html#hb-vector-extents-t.y"/>
+    <keyword type="member" name="hb-vector-extents-t.width" link="harfbuzz-hb-vector.html#hb-vector-extents-t.width"/>
+    <keyword type="member" name="hb-vector-extents-t.height" link="harfbuzz-hb-vector.html#hb-vector-extents-t.height"/>
   </functions>
 </book>

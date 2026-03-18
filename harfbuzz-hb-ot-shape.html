@@ -38,13 +38,35 @@
 <col width="150px" class="functions_proto_type">
 <col class="functions_proto_name">
 </colgroup>
-<tbody><tr>
+<tbody>
+<tr>
+<td class="function_type">unsigned <span class="returnvalue">int</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-ot-shape.html#hb-ot-shape-get-buffer-format-serial" title="hb_ot_shape_get_buffer_format_serial ()">hb_ot_shape_get_buffer_format_serial</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
 <td class="function_type">
 <span class="returnvalue">void</span>
 </td>
 <td class="function_name">
 <a class="link" href="harfbuzz-hb-ot-shape.html#hb-ot-shape-glyphs-closure" title="hb_ot_shape_glyphs_closure ()">hb_ot_shape_glyphs_closure</a> <span class="c_punctuation">()</span>
 </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="harfbuzz-hb-ot-shape.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
+</colgroup>
+<tbody><tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="harfbuzz-hb-ot-shape.html#HB-OT-SHAPE-BUFFER-FORMAT-SERIAL:CAPS" title="HB_OT_SHAPE_BUFFER_FORMAT_SERIAL">HB_OT_SHAPE_BUFFER_FORMAT_SERIAL</a></td>
 </tr></tbody>
 </table></div>
 </div>
@@ -59,6 +81,19 @@
 </div>
 <div class="refsect1">
 <a name="harfbuzz-hb-ot-shape.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="hb-ot-shape-get-buffer-format-serial"></a><h3>hb_ot_shape_get_buffer_format_serial ()</h3>
+<pre class="programlisting">unsigned <span class="returnvalue">int</span>
+hb_ot_shape_get_buffer_format_serial (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Returns the serial number of the current internal buffer format.
+See <a class="link" href="harfbuzz-hb-ot-shape.html#HB-OT-SHAPE-BUFFER-FORMAT-SERIAL:CAPS" title="HB_OT_SHAPE_BUFFER_FORMAT_SERIAL"><span class="type">HB_OT_SHAPE_BUFFER_FORMAT_SERIAL</span></a> for more information.</p>
+<div class="refsect3">
+<a name="hb-ot-shape-get-buffer-format-serial.returns"></a><h4>Returns</h4>
+<p> The current buffer-format serial number.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-13-2-0.html#api-index-13.2.0">13.2.0</a></p>
+</div>
+<hr>
 <div class="refsect2">
 <a name="hb-ot-shape-glyphs-closure"></a><h3>hb_ot_shape_glyphs_closure ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
@@ -108,6 +143,18 @@ computed as a set, not as a list.</p>
 </table></div>
 </div>
 <p class="since">Since: <a class="link" href="api-index-0-9-2.html#api-index-0.9.2">0.9.2</a></p>
+</div>
+</div>
+<div class="refsect1">
+<a name="harfbuzz-hb-ot-shape.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="HB-OT-SHAPE-BUFFER-FORMAT-SERIAL:CAPS"></a><h3>HB_OT_SHAPE_BUFFER_FORMAT_SERIAL</h3>
+<pre class="programlisting">#define HB_OT_SHAPE_BUFFER_FORMAT_SERIAL 1
+</pre>
+<p>The serial number of the current internal buffer format.</p>
+<p>The serial number will increase when internal <a class="link" href="harfbuzz-hb-buffer.html#hb-glyph-info-t" title="hb_glyph_info_t"><span class="type">hb_glyph_info_t</span></a> and
+<a class="link" href="harfbuzz-hb-buffer.html#hb-glyph-position-t" title="hb_glyph_position_t"><span class="type">hb_glyph_position_t</span></a> members change their format.</p>
+<p class="since">Since: <a class="link" href="api-index-13-2-0.html#api-index-13.2.0">13.2.0</a></p>
 </div>
 </div>
 </div>
