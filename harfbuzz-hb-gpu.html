@@ -1,0 +1,928 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>hb-gpu: HarfBuzz Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="HarfBuzz Manual">
+<link rel="up" href="rendering-api.html" title="Rendering API">
+<link rel="prev" href="harfbuzz-hb-vector.html" title="hb-vector">
+<link rel="next" href="integration-api.html" title="Integration API">
+<meta name="generator" content="GTK-Doc V1.36.0 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#harfbuzz-hb-gpu.description" class="shortcut">Description</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="rendering-api.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="harfbuzz-hb-vector.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="integration-api.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="harfbuzz-hb-gpu"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="harfbuzz-hb-gpu.top_of_page"></a>hb-gpu</span></h2>
+<p>hb-gpu — GPU shape encoding</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="harfbuzz-hb-gpu.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">const <span class="returnvalue">char</span> *
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-gpu.html#hb-gpu-shader-fragment-source" title="hb_gpu_shader_fragment_source ()">hb_gpu_shader_fragment_source</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">char</span> *
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-gpu.html#hb-gpu-shader-vertex-source" title="hb_gpu_shader_vertex_source ()">hb_gpu_shader_vertex_source</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="harfbuzz-hb-gpu.html#hb-gpu-draw-t" title="hb_gpu_draw_t"><span class="returnvalue">hb_gpu_draw_t</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-gpu.html#hb-gpu-draw-create-or-fail" title="hb_gpu_draw_create_or_fail ()">hb_gpu_draw_create_or_fail</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="harfbuzz-hb-gpu.html#hb-gpu-draw-t" title="hb_gpu_draw_t"><span class="returnvalue">hb_gpu_draw_t</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-gpu.html#hb-gpu-draw-reference" title="hb_gpu_draw_reference ()">hb_gpu_draw_reference</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-gpu.html#hb-gpu-draw-destroy" title="hb_gpu_draw_destroy ()">hb_gpu_draw_destroy</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-gpu.html#hb-gpu-draw-set-user-data" title="hb_gpu_draw_set_user_data ()">hb_gpu_draw_set_user_data</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span> *
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-gpu.html#hb-gpu-draw-get-user-data" title="hb_gpu_draw_get_user_data ()">hb_gpu_draw_get_user_data</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="harfbuzz-hb-draw.html#hb-draw-funcs-t" title="hb_draw_funcs_t"><span class="returnvalue">hb_draw_funcs_t</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-gpu.html#hb-gpu-draw-get-funcs" title="hb_gpu_draw_get_funcs ()">hb_gpu_draw_get_funcs</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-gpu.html#hb-gpu-draw-glyph" title="hb_gpu_draw_glyph ()">hb_gpu_draw_glyph</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="harfbuzz-hb-blob.html#hb-blob-t" title="hb_blob_t"><span class="returnvalue">hb_blob_t</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-gpu.html#hb-gpu-draw-encode" title="hb_gpu_draw_encode ()">hb_gpu_draw_encode</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-gpu.html#hb-gpu-draw-get-extents" title="hb_gpu_draw_get_extents ()">hb_gpu_draw_get_extents</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-gpu.html#hb-gpu-draw-reset" title="hb_gpu_draw_reset ()">hb_gpu_draw_reset</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-gpu.html#hb-gpu-draw-recycle-blob" title="hb_gpu_draw_recycle_blob ()">hb_gpu_draw_recycle_blob</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="harfbuzz-hb-gpu.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="harfbuzz-hb-gpu.html#hb-gpu-shader-lang-t" title="enum hb_gpu_shader_lang_t">hb_gpu_shader_lang_t</a></td>
+</tr>
+<tr>
+<td class="typedef_keyword">typedef</td>
+<td class="function_name"><a class="link" href="harfbuzz-hb-gpu.html#hb-gpu-draw-t" title="hb_gpu_draw_t">hb_gpu_draw_t</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="harfbuzz-hb-gpu.includes"></a><h2>Includes</h2>
+<pre class="synopsis">#include &lt;hb-gpu.h&gt;
+</pre>
+</div>
+<div class="refsect1">
+<a name="harfbuzz-hb-gpu.description"></a><h2>Description</h2>
+<p>This module implements the
+<a class="ulink" href="https://github.com/EricLengyel/Slug" target="_top">Slug</a> GPU text
+rasterization algorithm by Eric Lengyel.  Glyph outlines are
+encoded on the CPU into compact blobs that the GPU decodes
+and rasterizes directly in the fragment shader, with no
+intermediate bitmap atlas.</p>
+<p>See the <a class="ulink" href="https://harfbuzz.github.io/hb-gpu-demo/" target="_top">live web demo</a>.</p>
+<div class="refsect2">
+<a name="id-1.3.7.4.6.4"></a><h3>Encoding</h3>
+<p>Each glyph is encoded independently into an opaque blob of
+RGBA16I texels (8 bytes each).  Typical encoding flow:</p>
+<div class="informalexample"><pre class="screen">
+hb_gpu_draw_t *draw = hb_gpu_draw_create_or_fail ();
+
+hb_gpu_draw_glyph (draw, font, gid);
+hb_blob_t *blob = hb_gpu_draw_encode (draw);
+
+// Upload hb_blob_get_data(blob) to the atlas at some offset.
+unsigned atlas_offset = upload_to_atlas (blob);
+
+hb_gpu_draw_recycle_blob (draw, blob);
+hb_gpu_draw_reset (draw);
+// repeat for more glyphs...
+
+hb_gpu_draw_destroy (draw);
+</pre></div>
+<p></p>
+<p>The encoder object and its internal buffers are reused across
+glyphs.  Call <a class="link" href="harfbuzz-hb-gpu.html#hb-gpu-draw-recycle-blob" title="hb_gpu_draw_recycle_blob ()"><code class="function">hb_gpu_draw_recycle_blob()</code></a> after each encode to
+allow buffer reuse; call <a class="link" href="harfbuzz-hb-gpu.html#hb-gpu-draw-reset" title="hb_gpu_draw_reset ()"><code class="function">hb_gpu_draw_reset()</code></a> before each new
+glyph.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="id-1.3.7.4.6.5"></a><h3>Atlas setup</h3>
+<p>All encoded blobs are uploaded into a single GL_TEXTURE_BUFFER
+backed by a GL_RGBA16I format buffer.  Each glyph occupies a
+contiguous range of texels at a known offset:</p>
+<div class="informalexample"><pre class="screen">
+GLuint buf, tex;
+glGenBuffers (1, &amp;buf);
+glGenTextures (1, &amp;tex);
+
+glBindBuffer (GL_TEXTURE_BUFFER, buf);
+glBufferData (GL_TEXTURE_BUFFER, capacity * 8, NULL, GL_STATIC_DRAW);
+
+glBindTexture (GL_TEXTURE_BUFFER, tex);
+glTexBuffer (GL_TEXTURE_BUFFER, GL_RGBA16I, buf);
+
+// Upload a glyph blob at 'offset' texels:
+glBufferSubData (GL_TEXTURE_BUFFER,
+                 offset * 8,
+                 hb_blob_get_length (blob),
+                 hb_blob_get_data (blob, NULL));
+</pre></div>
+<p></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="id-1.3.7.4.6.6"></a><h3>Shader compilation</h3>
+<p>The library provides GLSL source strings for a vertex helper
+function and a fragment rendering function.  Prepend a <span class="type">version</span>
+directive and append your own <code class="function">main()</code>:</p>
+<div class="informalexample"><pre class="screen">
+unsigned vert_count, frag_count;
+const char * const *vert_lib = hb_gpu_shader_vertex_sources (
+    HB_GPU_SHADER_LANG_GLSL, &amp;vert_count);
+const char * const *frag_lib = hb_gpu_shader_fragment_sources (
+    HB_GPU_SHADER_LANG_GLSL, &amp;frag_count);
+
+const char *vert_sources[] = {
+    "#version 330\n",
+    hb_gpu_shader_vertex_source (HB_GPU_SHADER_LANG_GLSL),
+    your_vertex_main
+};
+glShaderSource (vert_shader, 3, vert_sources, NULL);
+// Same pattern for the fragment shader.
+</pre></div>
+<p></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="id-1.3.7.4.6.7"></a><h3>Vertex shader</h3>
+<p>The vertex library provides one function:</p>
+<div class="informalexample"><pre class="screen">
+void hb_gpu_dilate (inout vec2 position, inout vec2 texcoord,
+                    vec2 normal, vec4 jac,
+                    mat4 m, vec2 viewport);
+</pre></div>
+<p></p>
+<p>This expands each glyph quad by approximately half a pixel on
+screen to ensure proper antialiasing coverage at the edges.
+It must be called in the vertex shader before computing
+gl_Position.</p>
+<p>Per-vertex attributes for each glyph quad (2 triangles, 6
+vertices, 4 unique corners):</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p>position (vec2): object-space vertex position, computed from
+the glyph's bounding box.  For corner (cx, cy) where cx,cy
+are 0 or 1:</p>
+<div class="informalexample"><pre class="screen">
+pos.x = pen_x + scale * lerp(extent_min_x, extent_max_x, cx)
+pos.y = pen_y - scale * lerp(extent_min_y, extent_max_y, cy)
+</pre></div>
+<p>
+where scale = font_size / upem.</p>
+</li>
+<li class="listitem"><p>texcoord (vec2): em-space texture coordinates, equal to the
+raw extent values: <code class="literal">(ex, ey)</code> where ex/ey are the glyph's
+bounding box corners in font design units.  The fragment shader
+samples the encoded blob in this coordinate space.</p></li>
+<li class="listitem"><p>normal (vec2): outward normal at each corner.
+<code class="literal">(-1, +1)</code> for (0,0), <code class="literal">(+1, +1)</code> for (1,0),
+<code class="literal">(-1, -1)</code> for (0,1), <code class="literal">(+1, -1)</code> for (1,1).
+Note: y is negated relative to cx,cy because the common
+em-to-object transform flips y.</p></li>
+<li class="listitem">
+<p>jac (vec4): maps object-space displacements back to
+em-space after dilation, stored row-major as
+(j00, j01, j10, j11).  For the common case of uniform
+scaling with y-flip:</p>
+<div class="informalexample"><pre class="screen">
+jac = vec4(emPerPos, 0.0, 0.0, -emPerPos)
+</pre></div>
+<p>
+where emPerPos = upem / font_size.  For non-trivial
+transforms, see the hb_gpu_dilate source.</p>
+</li>
+<li class="listitem"><p>m (mat4): the model-view-projection matrix (uniform).</p></li>
+<li class="listitem"><p>viewport (vec2): the viewport size in pixels (uniform).</p></li>
+</ul></div>
+<p>A typical vertex main:</p>
+<div class="informalexample"><pre class="screen">
+uniform mat4 u_matViewProjection;
+uniform vec2 u_viewport;
+
+in vec2 a_position;
+in vec2 a_texcoord;
+in vec2 a_normal;
+in float a_emPerPos;
+in uint a_glyphLoc;
+
+out vec2 v_texcoord;
+flat out uint v_glyphLoc;
+
+void main () {
+  vec2 pos = a_position;
+  vec2 tex = a_texcoord;
+  vec4 jac = vec4 (a_emPerPos, 0.0, 0.0, -a_emPerPos);
+  hb_gpu_dilate (pos, tex, a_normal, jac,
+                 u_matViewProjection, u_viewport);
+  gl_Position = u_matViewProjection * vec4 (pos, 0.0, 1.0);
+  v_texcoord = tex;
+  v_glyphLoc = a_glyphLoc;
+}
+</pre></div>
+<p></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="id-1.3.7.4.6.8"></a><h3>Font scale</h3>
+<p>The encoder works in font design units (upem).  For best
+results, do not set a scale on the <a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> passed to
+<a class="link" href="harfbuzz-hb-gpu.html#hb-gpu-draw-glyph" title="hb_gpu_draw_glyph ()"><code class="function">hb_gpu_draw_glyph()</code></a> — leave it at the default (upem).
+Scaling is applied later when computing vertex positions:</p>
+<div class="informalexample"><pre class="screen">
+float scale = font_size / upem;
+pos.x = pen_x + scale * extent_x;
+pos.y = pen_y - scale * extent_y;
+</pre></div>
+<p></p>
+<p>If you do set a font scale (e.g. for hinting), the encoded
+blob and extents will be in the scaled coordinate space,
+and you must adjust emPerPos accordingly.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="id-1.3.7.4.6.9"></a><h3>Dilation</h3>
+<p>Each glyph is rendered on a screen-aligned quad whose
+corners match the glyph's bounding box.  Without dilation,
+the antialiased edges at the quad boundary get clipped — the
+fragment shader needs at least half a pixel of padding
+around the glyph to produce smooth coverage gradients.</p>
+<p>hb_gpu_dilate computes a perspective-correct half-pixel
+expansion.  It adjusts both the vertex position (expanding
+the quad) and the texcoord (so the fragment shader samples
+the right location in em-space after expansion).</p>
+<p>The <code class="literal">jac</code> parameter maps object-space displacements back to
+em-space.  For the common case of uniform scaling with
+y-flip (<code class="literal">pos.y = pen_y - scale * ey</code>):</p>
+<div class="informalexample"><pre class="screen">
+float emPerPos = upem / font_size;
+jac = vec4(emPerPos, 0.0, 0.0, -emPerPos);
+</pre></div>
+<p></p>
+<p>For non-uniform scaling or shearing transforms, jac is the
+2x2 inverse of the em-to-object linear transform, stored
+row-major.</p>
+<div class="refsect3">
+<a name="id-1.3.7.4.6.9.8"></a><h4>Static dilation alternative</h4>
+<p>Applications that do not need perspective correctness (e.g.
+strictly 2D rendering at known sizes) can skip hb_gpu_dilate
+and instead expand each quad vertex by a fixed amount along
+its normal, based on the minimum expected font size:</p>
+<div class="informalexample"><pre class="screen">
+float min_ppem = 10.0;  // smallest expected size in pixels
+float pad = 0.5 * upem / min_ppem;  // half-pixel in em units
+pos += normal * pad * scale;
+texcoord += normal * pad;
+</pre></div>
+<p></p>
+<p>This over-dilates at larger sizes (wasting fill rate on
+transparent pixels) but is simpler to implement and avoids
+the need for the MVP matrix and viewport size in the vertex
+shader.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="id-1.3.7.4.6.10"></a><h3>Fragment shader</h3>
+<p>The fragment library provides two functions:</p>
+<div class="informalexample"><pre class="screen">
+float hb_gpu_render (vec2 renderCoord, uint glyphLoc);
+</pre></div>
+<p></p>
+<p>It requires the <code class="literal">hb_gpu_atlas</code> uniform to be bound to the
+texture containing the encoded glyph data.  By default this
+is an <code class="literal">isamplerBuffer</code> (GL_TEXTURE_BUFFER).  For platforms
+without texture buffers (e.g. WebGL2), define
+<code class="literal">HB_GPU_ATLAS_2D</code> before including the shader source; the
+atlas then becomes an <code class="literal">isampler2D</code> and a
+<code class="literal">uniform int hb_gpu_atlas_width</code> must also be set to the
+texture width.</p>
+<p>Parameters:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>renderCoord: the interpolated em-space coordinate from
+the vertex shader (v_texcoord).</p></li>
+<li class="listitem"><p>glyphLoc: the texel offset of this glyph's encoded blob
+in the atlas buffer.  Passed as a flat varying from the
+vertex shader.</p></li>
+</ul></div>
+<p>Returns the coverage in [0, 1]: 1.0 inside the glyph, 0.0
+outside, with antialiased edges.</p>
+<p>A typical fragment main:</p>
+<div class="informalexample"><pre class="screen">
+in vec2 v_texcoord;
+flat in uint v_glyphLoc;
+out vec4 fragColor;
+
+void main () {
+  float coverage = hb_gpu_render (v_texcoord, v_glyphLoc);
+  fragColor = vec4 (0.0, 0.0, 0.0, coverage);
+}
+</pre></div>
+<p></p>
+<p>The coverage value can be used with alpha blending
+(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA) to composite
+over a background, or multiplied with any color.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="id-1.3.7.4.6.11"></a><h3>Stem darkening</h3>
+<div class="informalexample"><pre class="screen">
+float hb_gpu_darken (float coverage, float brightness, float ppem);
+</pre></div>
+<p></p>
+<p>Optional stem darkening adjusts coverage at small sizes so
+thin stems are not washed out by gamma correction.</p>
+<p>Parameters:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>coverage: the output of hb_gpu_render.</p></li>
+<li class="listitem"><p>brightness: foreground brightness in [0, 1], computed as
+<code class="literal">dot (foreground.rgb, vec3 (1.0 / 3.0))</code>.</p></li>
+<li class="listitem"><p>ppem: pixels per em at this fragment, computed as
+<code class="literal">1.0 / max (fwidth (v_texcoord).x, fwidth (v_texcoord).y)</code>.</p></li>
+</ul></div>
+<p>Example:</p>
+<div class="informalexample"><pre class="screen">
+float coverage = hb_gpu_render (v_texcoord, v_glyphLoc);
+float brightness = dot (u_foreground.rgb, vec3 (1.0 / 3.0));
+float ppem = 1.0 / max (fwidth (v_texcoord).x,
+                         fwidth (v_texcoord).y);
+coverage = hb_gpu_darken (coverage, brightness, ppem);
+</pre></div>
+<p></p>
+</div>
+</div>
+<div class="refsect1">
+<a name="harfbuzz-hb-gpu.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="hb-gpu-shader-fragment-source"></a><h3>hb_gpu_shader_fragment_source ()</h3>
+<pre class="programlisting">const <span class="returnvalue">char</span> *
+hb_gpu_shader_fragment_source (<em class="parameter"><code><a class="link" href="harfbuzz-hb-gpu.html#hb-gpu-shader-lang-t" title="enum hb_gpu_shader_lang_t"><span class="type">hb_gpu_shader_lang_t</span></a> lang</code></em>);</pre>
+<p>Returns the fragment shader source for the specified shader
+language.  The returned string is static and must not be freed.</p>
+<p>The caller should prepend a <code class="literal">#version</code> directive and append
+their own <code class="literal"><code class="function">main()</code></code> function, then pass the combined sources
+to <code class="literal"><code class="function">glShaderSource()</code></code>.</p>
+<div class="refsect3">
+<a name="hb-gpu-shader-fragment-source.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>lang</p></td>
+<td class="parameter_description"><p>shader language variant</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-gpu-shader-fragment-source.returns"></a><h4>Returns</h4>
+<p>A shader source string, or <code class="literal">NULL</code> if <em class="parameter"><code>lang</code></em>
+is unsupported. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-14-0-0.html#api-index-14.0.0">14.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-gpu-shader-vertex-source"></a><h3>hb_gpu_shader_vertex_source ()</h3>
+<pre class="programlisting">const <span class="returnvalue">char</span> *
+hb_gpu_shader_vertex_source (<em class="parameter"><code><a class="link" href="harfbuzz-hb-gpu.html#hb-gpu-shader-lang-t" title="enum hb_gpu_shader_lang_t"><span class="type">hb_gpu_shader_lang_t</span></a> lang</code></em>);</pre>
+<p>Returns the vertex shader source for the specified shader
+language.  The returned string is static and must not be freed.</p>
+<div class="refsect3">
+<a name="hb-gpu-shader-vertex-source.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>lang</p></td>
+<td class="parameter_description"><p>shader language variant</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-gpu-shader-vertex-source.returns"></a><h4>Returns</h4>
+<p>A shader source string, or <code class="literal">NULL</code> if <em class="parameter"><code>lang</code></em>
+is unsupported. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-14-0-0.html#api-index-14.0.0">14.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-gpu-draw-create-or-fail"></a><h3>hb_gpu_draw_create_or_fail ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-gpu.html#hb-gpu-draw-t" title="hb_gpu_draw_t"><span class="returnvalue">hb_gpu_draw_t</span></a> *
+hb_gpu_draw_create_or_fail (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Creates a new GPU shape encoder.</p>
+<div class="refsect3">
+<a name="hb-gpu-draw-create-or-fail.returns"></a><h4>Returns</h4>
+<p>A newly allocated <a class="link" href="harfbuzz-hb-gpu.html#hb-gpu-draw-t" title="hb_gpu_draw_t"><span class="type">hb_gpu_draw_t</span></a>, or <code class="literal">NULL</code> on allocation failure. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-14-0-0.html#api-index-14.0.0">14.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-gpu-draw-reference"></a><h3>hb_gpu_draw_reference ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-gpu.html#hb-gpu-draw-t" title="hb_gpu_draw_t"><span class="returnvalue">hb_gpu_draw_t</span></a> *
+hb_gpu_draw_reference (<em class="parameter"><code><a class="link" href="harfbuzz-hb-gpu.html#hb-gpu-draw-t" title="hb_gpu_draw_t"><span class="type">hb_gpu_draw_t</span></a> *draw</code></em>);</pre>
+<p>Increases the reference count on <em class="parameter"><code>draw</code></em>
+ by one.</p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+<div class="refsect3">
+<a name="hb-gpu-draw-reference.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>draw</p></td>
+<td class="parameter_description"><p>a GPU shape encoder</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-gpu-draw-reference.returns"></a><h4>Returns</h4>
+<p>The referenced <a class="link" href="harfbuzz-hb-gpu.html#hb-gpu-draw-t" title="hb_gpu_draw_t"><span class="type">hb_gpu_draw_t</span></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-14-0-0.html#api-index-14.0.0">14.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-gpu-draw-destroy"></a><h3>hb_gpu_draw_destroy ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_gpu_draw_destroy (<em class="parameter"><code><a class="link" href="harfbuzz-hb-gpu.html#hb-gpu-draw-t" title="hb_gpu_draw_t"><span class="type">hb_gpu_draw_t</span></a> *draw</code></em>);</pre>
+<p>Decreases the reference count on <em class="parameter"><code>draw</code></em>
+ by one. When the
+reference count reaches zero, the encoder is freed.</p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+<div class="refsect3">
+<a name="hb-gpu-draw-destroy.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>draw</p></td>
+<td class="parameter_description"><p>a GPU shape encoder</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-14-0-0.html#api-index-14.0.0">14.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-gpu-draw-set-user-data"></a><h3>hb_gpu_draw_set_user_data ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+hb_gpu_draw_set_user_data (<em class="parameter"><code><a class="link" href="harfbuzz-hb-gpu.html#hb-gpu-draw-t" title="hb_gpu_draw_t"><span class="type">hb_gpu_draw_t</span></a> *draw</code></em>,
+                           <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-user-data-key-t" title="hb_user_data_key_t"><span class="type">hb_user_data_key_t</span></a> *key</code></em>,
+                           <em class="parameter"><code><span class="type">void</span> *data</code></em>,
+                           <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-destroy-func-t" title="hb_destroy_func_t ()"><span class="type">hb_destroy_func_t</span></a> destroy</code></em>,
+                           <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="type">hb_bool_t</span></a> replace</code></em>);</pre>
+<p>Attaches user data to <em class="parameter"><code>draw</code></em>
+.</p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+<div class="refsect3">
+<a name="hb-gpu-draw-set-user-data.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>draw</p></td>
+<td class="parameter_description"><p>a GPU shape encoder</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>the user-data key</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>a pointer to the user data</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>destroy</p></td>
+<td class="parameter_description"><p>a callback to call when <em class="parameter"><code>data</code></em>
+is not needed anymore. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>replace</p></td>
+<td class="parameter_description"><p>whether to replace an existing data with the same key</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-gpu-draw-set-user-data.returns"></a><h4>Returns</h4>
+<p> <code class="literal">true</code> if success, <code class="literal">false</code> otherwise</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-14-0-0.html#api-index-14.0.0">14.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-gpu-draw-get-user-data"></a><h3>hb_gpu_draw_get_user_data ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span> *
+hb_gpu_draw_get_user_data (<em class="parameter"><code><a class="link" href="harfbuzz-hb-gpu.html#hb-gpu-draw-t" title="hb_gpu_draw_t"><span class="type">hb_gpu_draw_t</span></a> *draw</code></em>,
+                           <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-user-data-key-t" title="hb_user_data_key_t"><span class="type">hb_user_data_key_t</span></a> *key</code></em>);</pre>
+<p>Fetches the user-data associated with the specified key.</p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+<div class="refsect3">
+<a name="hb-gpu-draw-get-user-data.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>draw</p></td>
+<td class="parameter_description"><p>a GPU shape encoder</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>the user-data key</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-gpu-draw-get-user-data.returns"></a><h4>Returns</h4>
+<p>A pointer to the user data. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-14-0-0.html#api-index-14.0.0">14.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-gpu-draw-get-funcs"></a><h3>hb_gpu_draw_get_funcs ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-draw.html#hb-draw-funcs-t" title="hb_draw_funcs_t"><span class="returnvalue">hb_draw_funcs_t</span></a> *
+hb_gpu_draw_get_funcs (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Fetches the singleton <a class="link" href="harfbuzz-hb-draw.html#hb-draw-funcs-t" title="hb_draw_funcs_t"><span class="type">hb_draw_funcs_t</span></a> that feeds outline data
+into an <a class="link" href="harfbuzz-hb-gpu.html#hb-gpu-draw-t" title="hb_gpu_draw_t"><span class="type">hb_gpu_draw_t</span></a>.  Pass the <a class="link" href="harfbuzz-hb-gpu.html#hb-gpu-draw-t" title="hb_gpu_draw_t"><span class="type">hb_gpu_draw_t</span></a> as the
+<em class="parameter"><code>draw_data</code></em>
+ argument when calling the draw functions.</p>
+<div class="refsect3">
+<a name="hb-gpu-draw-get-funcs.returns"></a><h4>Returns</h4>
+<p>The GPU draw functions. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-14-0-0.html#api-index-14.0.0">14.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-gpu-draw-glyph"></a><h3>hb_gpu_draw_glyph ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_gpu_draw_glyph (<em class="parameter"><code><a class="link" href="harfbuzz-hb-gpu.html#hb-gpu-draw-t" title="hb_gpu_draw_t"><span class="type">hb_gpu_draw_t</span></a> *draw</code></em>,
+                   <em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-font-t" title="hb_font_t"><span class="type">hb_font_t</span></a> *font</code></em>,
+                   <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> codepoint</code></em>);</pre>
+<p>Convenience wrapper that draws a single glyph outline into the
+encoder using <a class="link" href="harfbuzz-hb-font.html#hb-font-draw-glyph" title="hb_font_draw_glyph ()"><code class="function">hb_font_draw_glyph()</code></a>.</p>
+<div class="refsect3">
+<a name="hb-gpu-draw-glyph.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>draw</p></td>
+<td class="parameter_description"><p>a GPU shape encoder</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>font</p></td>
+<td class="parameter_description"><p>font to draw from</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>codepoint</p></td>
+<td class="parameter_description"><p>glyph ID to draw</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-14-0-0.html#api-index-14.0.0">14.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-gpu-draw-encode"></a><h3>hb_gpu_draw_encode ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-blob.html#hb-blob-t" title="hb_blob_t"><span class="returnvalue">hb_blob_t</span></a> *
+hb_gpu_draw_encode (<em class="parameter"><code><a class="link" href="harfbuzz-hb-gpu.html#hb-gpu-draw-t" title="hb_gpu_draw_t"><span class="type">hb_gpu_draw_t</span></a> *draw</code></em>);</pre>
+<p>Encodes the accumulated outlines into a compact blob
+suitable for GPU rendering.  The blob data is an array of
+RGBA16I texels (8 bytes each) to be uploaded to a texture
+buffer object.</p>
+<p>The returned blob owns its own copy of the data.</p>
+<div class="refsect3">
+<a name="hb-gpu-draw-encode.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>draw</p></td>
+<td class="parameter_description"><p>a GPU shape encoder</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-gpu-draw-encode.returns"></a><h4>Returns</h4>
+<p>An <a class="link" href="harfbuzz-hb-blob.html#hb-blob-t" title="hb_blob_t"><span class="type">hb_blob_t</span></a> containing the encoded data, or
+<code class="literal">NULL</code> if encoding fails. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-14-0-0.html#api-index-14.0.0">14.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-gpu-draw-get-extents"></a><h3>hb_gpu_draw_get_extents ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_gpu_draw_get_extents (<em class="parameter"><code><a class="link" href="harfbuzz-hb-gpu.html#hb-gpu-draw-t" title="hb_gpu_draw_t"><span class="type">hb_gpu_draw_t</span></a> *draw</code></em>,
+                         <em class="parameter"><code><a class="link" href="harfbuzz-hb-font.html#hb-glyph-extents-t" title="hb_glyph_extents_t"><span class="type">hb_glyph_extents_t</span></a> *extents</code></em>);</pre>
+<p>Fetches the extents of the accumulated outlines.</p>
+<div class="refsect3">
+<a name="hb-gpu-draw-get-extents.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>draw</p></td>
+<td class="parameter_description"><p>a GPU shape encoder</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>extents</p></td>
+<td class="parameter_description"><p>glyph extents. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-14-0-0.html#api-index-14.0.0">14.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-gpu-draw-reset"></a><h3>hb_gpu_draw_reset ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_gpu_draw_reset (<em class="parameter"><code><a class="link" href="harfbuzz-hb-gpu.html#hb-gpu-draw-t" title="hb_gpu_draw_t"><span class="type">hb_gpu_draw_t</span></a> *draw</code></em>);</pre>
+<p>Resets the encoder, discarding all accumulated outlines.
+The internal encode buffer is kept for reuse.</p>
+<div class="refsect3">
+<a name="hb-gpu-draw-reset.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>draw</p></td>
+<td class="parameter_description"><p>a GPU shape encoder</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-14-0-0.html#api-index-14.0.0">14.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-gpu-draw-recycle-blob"></a><h3>hb_gpu_draw_recycle_blob ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_gpu_draw_recycle_blob (<em class="parameter"><code><a class="link" href="harfbuzz-hb-gpu.html#hb-gpu-draw-t" title="hb_gpu_draw_t"><span class="type">hb_gpu_draw_t</span></a> *draw</code></em>,
+                          <em class="parameter"><code><a class="link" href="harfbuzz-hb-blob.html#hb-blob-t" title="hb_blob_t"><span class="type">hb_blob_t</span></a> *blob</code></em>);</pre>
+<p>Returns a blob to the encoder for potential reuse.
+The caller transfers ownership of <em class="parameter"><code>blob</code></em>
+.</p>
+<p>Currently this simply destroys the blob.  A future version
+may reclaim the underlying buffer to avoid allocation on the
+next <a class="link" href="harfbuzz-hb-gpu.html#hb-gpu-draw-encode" title="hb_gpu_draw_encode ()"><code class="function">hb_gpu_draw_encode()</code></a> call.</p>
+<div class="refsect3">
+<a name="hb-gpu-draw-recycle-blob.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>draw</p></td>
+<td class="parameter_description"><p>a GPU shape encoder</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>blob</p></td>
+<td class="parameter_description"><p>a blob previously returned by <a class="link" href="harfbuzz-hb-gpu.html#hb-gpu-draw-encode" title="hb_gpu_draw_encode ()"><code class="function">hb_gpu_draw_encode()</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-14-0-0.html#api-index-14.0.0">14.0.0</a></p>
+</div>
+</div>
+<div class="refsect1">
+<a name="harfbuzz-hb-gpu.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="hb-gpu-shader-lang-t"></a><h3>enum hb_gpu_shader_lang_t</h3>
+<p>Shader language variant.</p>
+<div class="refsect3">
+<a name="hb-gpu-shader-lang-t.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="HB-GPU-SHADER-LANG-GLSL:CAPS"></a>HB_GPU_SHADER_LANG_GLSL</p></td>
+<td class="enum_member_description">
+<p>GLSL (OpenGL 3.3 / OpenGL ES 3.0 / WebGL 2.0)</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HB-GPU-SHADER-LANG-WGSL:CAPS"></a>HB_GPU_SHADER_LANG_WGSL</p></td>
+<td class="enum_member_description">
+<p>WGSL (WebGPU)</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HB-GPU-SHADER-LANG-MSL:CAPS"></a>HB_GPU_SHADER_LANG_MSL</p></td>
+<td class="enum_member_description">
+<p>MSL (Metal)</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HB-GPU-SHADER-LANG-HLSL:CAPS"></a>HB_GPU_SHADER_LANG_HLSL</p></td>
+<td class="enum_member_description">
+<p>HLSL (Direct3D)</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-14-0-0.html#api-index-14.0.0">14.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-gpu-draw-t"></a><h3>hb_gpu_draw_t</h3>
+<pre class="programlisting">typedef struct hb_gpu_draw_t hb_gpu_draw_t;
+</pre>
+<p>An opaque GPU shape encoder.  Accumulates outlines via draw
+callbacks, then encodes them into a compact blob for GPU
+rendering.</p>
+<p class="since">Since: <a class="link" href="api-index-14-0-0.html#api-index-14.0.0">14.0.0</a></p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.36.0</div>
+</body>
+</html>

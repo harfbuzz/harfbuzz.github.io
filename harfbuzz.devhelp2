@@ -133,6 +133,7 @@
       <sub name="Rendering API" link="rendering-api.html">
         <sub name="hb-raster" link="harfbuzz-hb-raster.html"/>
         <sub name="hb-vector" link="harfbuzz-hb-vector.html"/>
+        <sub name="hb-gpu" link="harfbuzz-hb-gpu.html"/>
       </sub>
       <sub name="Integration API" link="integration-api.html">
         <sub name="hb-cairo" link="harfbuzz-hb-cairo.html"/>
@@ -148,6 +149,7 @@
       </sub>
       <sub name="API Index" link="api-index-full.html"/>
       <sub name="Index of deprecated API" link="deprecated-api-index.html"/>
+      <sub name="Index of new symbols in 14.0.0" link="api-index-14-0-0.html"/>
       <sub name="Index of new symbols in 13.2.0" link="api-index-13-2-0.html"/>
       <sub name="Index of new symbols in 13.1.0" link="api-index-13-1-0.html"/>
       <sub name="Index of new symbols in 13.0.0" link="api-index-13-0-0.html"/>
@@ -390,6 +392,7 @@
     <keyword type="macro" name="HB_HAS_GLIB" link="harfbuzz-hb-features.html#HB-HAS-GLIB:CAPS"/>
     <keyword type="macro" name="HB_HAS_GOBJECT" link="harfbuzz-hb-features.html#HB-HAS-GOBJECT:CAPS"/>
     <keyword type="macro" name="HB_HAS_GRAPHITE" link="harfbuzz-hb-features.html#HB-HAS-GRAPHITE:CAPS"/>
+    <keyword type="macro" name="HB_HAS_GPU" link="harfbuzz-hb-features.html#HB-HAS-GPU:CAPS"/>
     <keyword type="macro" name="HB_HAS_ICU" link="harfbuzz-hb-features.html#HB-HAS-ICU:CAPS"/>
     <keyword type="macro" name="HB_HAS_RASTER" link="harfbuzz-hb-features.html#HB-HAS-RASTER:CAPS"/>
     <keyword type="macro" name="HB_HAS_SUBSET" link="harfbuzz-hb-features.html#HB-HAS-SUBSET:CAPS"/>
@@ -1098,6 +1101,21 @@
     <keyword type="enum" name="enum hb_vector_extents_mode_t" link="harfbuzz-hb-vector.html#hb-vector-extents-mode-t" since="13.0.0"/>
     <keyword type="typedef" name="hb_vector_draw_t" link="harfbuzz-hb-vector.html#hb-vector-draw-t" since="13.0.0"/>
     <keyword type="typedef" name="hb_vector_paint_t" link="harfbuzz-hb-vector.html#hb-vector-paint-t" since="13.0.0"/>
+    <keyword type="function" name="hb_gpu_shader_fragment_source ()" link="harfbuzz-hb-gpu.html#hb-gpu-shader-fragment-source" since="14.0.0"/>
+    <keyword type="function" name="hb_gpu_shader_vertex_source ()" link="harfbuzz-hb-gpu.html#hb-gpu-shader-vertex-source" since="14.0.0"/>
+    <keyword type="function" name="hb_gpu_draw_create_or_fail ()" link="harfbuzz-hb-gpu.html#hb-gpu-draw-create-or-fail" since="14.0.0"/>
+    <keyword type="function" name="hb_gpu_draw_reference ()" link="harfbuzz-hb-gpu.html#hb-gpu-draw-reference" since="14.0.0"/>
+    <keyword type="function" name="hb_gpu_draw_destroy ()" link="harfbuzz-hb-gpu.html#hb-gpu-draw-destroy" since="14.0.0"/>
+    <keyword type="function" name="hb_gpu_draw_set_user_data ()" link="harfbuzz-hb-gpu.html#hb-gpu-draw-set-user-data" since="14.0.0"/>
+    <keyword type="function" name="hb_gpu_draw_get_user_data ()" link="harfbuzz-hb-gpu.html#hb-gpu-draw-get-user-data" since="14.0.0"/>
+    <keyword type="function" name="hb_gpu_draw_get_funcs ()" link="harfbuzz-hb-gpu.html#hb-gpu-draw-get-funcs" since="14.0.0"/>
+    <keyword type="function" name="hb_gpu_draw_glyph ()" link="harfbuzz-hb-gpu.html#hb-gpu-draw-glyph" since="14.0.0"/>
+    <keyword type="function" name="hb_gpu_draw_encode ()" link="harfbuzz-hb-gpu.html#hb-gpu-draw-encode" since="14.0.0"/>
+    <keyword type="function" name="hb_gpu_draw_get_extents ()" link="harfbuzz-hb-gpu.html#hb-gpu-draw-get-extents" since="14.0.0"/>
+    <keyword type="function" name="hb_gpu_draw_reset ()" link="harfbuzz-hb-gpu.html#hb-gpu-draw-reset" since="14.0.0"/>
+    <keyword type="function" name="hb_gpu_draw_recycle_blob ()" link="harfbuzz-hb-gpu.html#hb-gpu-draw-recycle-blob" since="14.0.0"/>
+    <keyword type="enum" name="enum hb_gpu_shader_lang_t" link="harfbuzz-hb-gpu.html#hb-gpu-shader-lang-t" since="14.0.0"/>
+    <keyword type="typedef" name="hb_gpu_draw_t" link="harfbuzz-hb-gpu.html#hb-gpu-draw-t" since="14.0.0"/>
     <keyword type="function" name="hb_cairo_font_face_create_for_font ()" link="harfbuzz-hb-cairo.html#hb-cairo-font-face-create-for-font" since="7.0.0"/>
     <keyword type="function" name="hb_cairo_font_face_get_font ()" link="harfbuzz-hb-cairo.html#hb-cairo-font-face-get-font" since="7.0.0"/>
     <keyword type="function" name="hb_cairo_font_face_create_for_face ()" link="harfbuzz-hb-cairo.html#hb-cairo-font-face-create-for-face" since="7.0.0"/>
@@ -1961,6 +1979,10 @@
     <keyword type="constant" name="HB_VECTOR_FORMAT_SVG" link="harfbuzz-hb-vector.html#HB-VECTOR-FORMAT-SVG:CAPS"/>
     <keyword type="constant" name="HB_VECTOR_EXTENTS_MODE_NONE" link="harfbuzz-hb-vector.html#HB-VECTOR-EXTENTS-MODE-NONE:CAPS"/>
     <keyword type="constant" name="HB_VECTOR_EXTENTS_MODE_EXPAND" link="harfbuzz-hb-vector.html#HB-VECTOR-EXTENTS-MODE-EXPAND:CAPS"/>
+    <keyword type="constant" name="HB_GPU_SHADER_LANG_GLSL" link="harfbuzz-hb-gpu.html#HB-GPU-SHADER-LANG-GLSL:CAPS"/>
+    <keyword type="constant" name="HB_GPU_SHADER_LANG_WGSL" link="harfbuzz-hb-gpu.html#HB-GPU-SHADER-LANG-WGSL:CAPS"/>
+    <keyword type="constant" name="HB_GPU_SHADER_LANG_MSL" link="harfbuzz-hb-gpu.html#HB-GPU-SHADER-LANG-MSL:CAPS"/>
+    <keyword type="constant" name="HB_GPU_SHADER_LANG_HLSL" link="harfbuzz-hb-gpu.html#HB-GPU-SHADER-LANG-HLSL:CAPS"/>
     <keyword type="member" name="hb-glyph-info-t.codepoint" link="harfbuzz-hb-buffer.html#hb-glyph-info-t.codepoint"/>
     <keyword type="member" name="hb-glyph-info-t.cluster" link="harfbuzz-hb-buffer.html#hb-glyph-info-t.cluster"/>
     <keyword type="member" name="hb-glyph-position-t.x-advance" link="harfbuzz-hb-buffer.html#hb-glyph-position-t.x-advance"/>
