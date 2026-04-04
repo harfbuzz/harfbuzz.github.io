@@ -149,6 +149,7 @@
       </sub>
       <sub name="API Index" link="api-index-full.html"/>
       <sub name="Index of deprecated API" link="deprecated-api-index.html"/>
+      <sub name="Index of new symbols in 14.1.0" link="api-index-14-1-0.html"/>
       <sub name="Index of new symbols in 14.0.0" link="api-index-14-0-0.html"/>
       <sub name="Index of new symbols in 13.2.0" link="api-index-13-2-0.html"/>
       <sub name="Index of new symbols in 13.1.0" link="api-index-13-1-0.html"/>
@@ -1109,6 +1110,7 @@
     <keyword type="function" name="hb_gpu_draw_set_user_data ()" link="harfbuzz-hb-gpu.html#hb-gpu-draw-set-user-data" since="14.0.0"/>
     <keyword type="function" name="hb_gpu_draw_get_user_data ()" link="harfbuzz-hb-gpu.html#hb-gpu-draw-get-user-data" since="14.0.0"/>
     <keyword type="function" name="hb_gpu_draw_get_funcs ()" link="harfbuzz-hb-gpu.html#hb-gpu-draw-get-funcs" since="14.0.0"/>
+    <keyword type="function" name="hb_gpu_draw_set_scale ()" link="harfbuzz-hb-gpu.html#hb-gpu-draw-set-scale" since="14.1.0"/>
     <keyword type="function" name="hb_gpu_draw_glyph ()" link="harfbuzz-hb-gpu.html#hb-gpu-draw-glyph" since="14.0.0"/>
     <keyword type="function" name="hb_gpu_draw_encode ()" link="harfbuzz-hb-gpu.html#hb-gpu-draw-encode" since="14.0.0"/>
     <keyword type="function" name="hb_gpu_draw_get_extents ()" link="harfbuzz-hb-gpu.html#hb-gpu-draw-get-extents" since="14.0.0"/>
