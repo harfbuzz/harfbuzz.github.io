@@ -2699,11 +2699,14 @@ hb_font_paint_glyph_or_fail (<em class="parameter"><code><a class="link" href="h
                              <em class="parameter"><code>unsigned <span class="type">int</span> palette_index</code></em>,
                              <em class="parameter"><code><a class="link" href="harfbuzz-hb-ot-color.html#hb-color-t" title="hb_color_t"><span class="type">hb_color_t</span></a> foreground</code></em>);</pre>
 <p>Paints a color glyph.</p>
-<p>This function is similar to, but lower-level than,
-<a class="link" href="harfbuzz-hb-font.html#hb-font-paint-glyph" title="hb_font_paint_glyph ()"><code class="function">hb_font_paint_glyph()</code></a>. It is suitable for clients that
-need more control.  If there are no color glyphs available,
-it will return <code class="literal">false</code>. The client can then fall back to
-<a class="link" href="harfbuzz-hb-font.html#hb-font-draw-glyph-or-fail" title="hb_font_draw_glyph_or_fail ()"><code class="function">hb_font_draw_glyph_or_fail()</code></a> for the monochrome outline glyph.</p>
+<p>Succeeds if <em class="parameter"><code>glyph</code></em>
+ has color paint layers (COLRv0),
+a color paint graph (COLRv1), or a bitmap image that the
+font's callbacks render successfully.  Returns <code class="literal">false</code> if
+the font has no color data for <em class="parameter"><code>glyph</code></em>
+; the client can then
+fall back to <a class="link" href="harfbuzz-hb-font.html#hb-font-draw-glyph-or-fail" title="hb_font_draw_glyph_or_fail ()"><code class="function">hb_font_draw_glyph_or_fail()</code></a> for the monochrome
+outline.</p>
 <p>The painting instructions are returned by way of calls to
 the callbacks of the <em class="parameter"><code>funcs</code></em>
  object, with <em class="parameter"><code>paint_data</code></em>

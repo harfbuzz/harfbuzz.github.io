@@ -223,6 +223,30 @@
 <a class="link" href="harfbuzz-hb-draw.html#hb-draw-close-path" title="hb_draw_close_path ()">hb_draw_close_path</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-draw.html#hb-draw-line" title="hb_draw_line ()">hb_draw_line</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-draw.html#hb-draw-rectangle" title="hb_draw_rectangle ()">hb_draw_rectangle</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-draw.html#hb-draw-circle" title="hb_draw_circle ()">hb_draw_circle</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
 </tbody>
 </table></div>
 </div>
@@ -234,6 +258,10 @@
 <col class="other_proto_name">
 </colgroup>
 <tbody>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="harfbuzz-hb-draw.html#hb-draw-line-cap-t" title="enum hb_draw_line_cap_t">hb_draw_line_cap_t</a></td>
+</tr>
 <tr>
 <td class="define_keyword">#define</td>
 <td class="function_name"><a class="link" href="harfbuzz-hb-draw.html#HB-DRAW-STATE-DEFAULT:CAPS" title="HB_DRAW_STATE_DEFAULT">HB_DRAW_STATE_DEFAULT</a></td>
@@ -1296,9 +1324,282 @@ hb_draw_close_path (<em class="parameter"><code><a class="link" href="harfbuzz-h
 </div>
 <p class="since">Since: <a class="link" href="api-index-4-0-0.html#api-index-4.0.0">4.0.0</a></p>
 </div>
+<hr>
+<div class="refsect2">
+<a name="hb-draw-line"></a><h3>hb_draw_line ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_draw_line (<em class="parameter"><code><a class="link" href="harfbuzz-hb-draw.html#hb-draw-funcs-t" title="hb_draw_funcs_t"><span class="type">hb_draw_funcs_t</span></a> *dfuncs</code></em>,
+              <em class="parameter"><code><span class="type">void</span> *draw_data</code></em>,
+              <em class="parameter"><code><a class="link" href="harfbuzz-hb-draw.html#hb-draw-state-t" title="hb_draw_state_t"><span class="type">hb_draw_state_t</span></a> *st</code></em>,
+              <em class="parameter"><code><span class="type">float</span> x0</code></em>,
+              <em class="parameter"><code><span class="type">float</span> y0</code></em>,
+              <em class="parameter"><code><span class="type">float</span> w0</code></em>,
+              <em class="parameter"><code><span class="type">float</span> x1</code></em>,
+              <em class="parameter"><code><span class="type">float</span> y1</code></em>,
+              <em class="parameter"><code><span class="type">float</span> w1</code></em>,
+              <em class="parameter"><code><a class="link" href="harfbuzz-hb-draw.html#hb-draw-line-cap-t" title="enum hb_draw_line_cap_t"><span class="type">hb_draw_line_cap_t</span></a> cap</code></em>);</pre>
+<p>Emits a tapered line segment as a filled trapezoid.  <em class="parameter"><code>w0</code></em>
+ and
+<em class="parameter"><code>w1</code></em>
+ are the full stroke widths at the start and end points
+respectively; they may differ for a tapered stroke or match
+for a uniform one.  Pass <code class="literal">NaN</code> for <em class="parameter"><code>w1</code></em>
+ to use <em class="parameter"><code>w0</code></em>
+ (uniform
+stroke) without repeating the value.</p>
+<p>With <a class="link" href="harfbuzz-hb-draw.html#HB-DRAW-LINE-CAP-SQUARE:CAPS"><span class="type">HB_DRAW_LINE_CAP_SQUARE</span></a> each endpoint is extended along
+the line direction by half its local stroke width, so four
+<code class="literal"><a class="link" href="harfbuzz-hb-draw.html#hb-draw-line" title="hb_draw_line ()"><code class="function">hb_draw_line()</code></a></code> calls form a closed rectangle without gaps
+at the corners.</p>
+<div class="refsect3">
+<a name="hb-draw-line.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>dfuncs</p></td>
+<td class="parameter_description"><p>draw functions</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>draw_data</p></td>
+<td class="parameter_description"><p>associated draw data passed by the caller</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>st</p></td>
+<td class="parameter_description"><p>current draw state</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>x0</p></td>
+<td class="parameter_description"><p>start X coordinate</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>y0</p></td>
+<td class="parameter_description"><p>start Y coordinate</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>w0</p></td>
+<td class="parameter_description"><p>stroke width at the start</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>x1</p></td>
+<td class="parameter_description"><p>end X coordinate</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>y1</p></td>
+<td class="parameter_description"><p>end Y coordinate</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>w1</p></td>
+<td class="parameter_description"><p>stroke width at the end</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cap</p></td>
+<td class="parameter_description"><p>end-cap shape (butt or square)</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-14-2-0.html#api-index-14.2.0">14.2.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-draw-rectangle"></a><h3>hb_draw_rectangle ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_draw_rectangle (<em class="parameter"><code><a class="link" href="harfbuzz-hb-draw.html#hb-draw-funcs-t" title="hb_draw_funcs_t"><span class="type">hb_draw_funcs_t</span></a> *dfuncs</code></em>,
+                   <em class="parameter"><code><span class="type">void</span> *draw_data</code></em>,
+                   <em class="parameter"><code><a class="link" href="harfbuzz-hb-draw.html#hb-draw-state-t" title="hb_draw_state_t"><span class="type">hb_draw_state_t</span></a> *st</code></em>,
+                   <em class="parameter"><code><span class="type">float</span> x</code></em>,
+                   <em class="parameter"><code><span class="type">float</span> y</code></em>,
+                   <em class="parameter"><code><span class="type">float</span> w</code></em>,
+                   <em class="parameter"><code><span class="type">float</span> h</code></em>,
+                   <em class="parameter"><code><span class="type">float</span> stroke_width</code></em>);</pre>
+<p>Emits an axis-aligned rectangle.  If <em class="parameter"><code>stroke_width</code></em>
+ is a finite
+positive value, the rectangle is rendered as an outlined ring
+of that thickness centered on the edges; if <em class="parameter"><code>stroke_width</code></em>
+ is
+<code class="literal">NaN</code>, the rectangle is rendered filled.</p>
+<p>Note: stroked rectangles produce a bounding box covering the
+full outer rectangle, so if the pen is a GPU fragment-shader
+backend, the shader runs for every interior pixel even though
+only the outline contributes coverage.  For very thin
+outlines where the interior is much larger than the stroke,
+emitting four <a class="link" href="harfbuzz-hb-draw.html#hb-draw-line" title="hb_draw_line ()"><code class="function">hb_draw_line()</code></a> segments (one per edge) is
+considerably cheaper per frame.</p>
+<div class="refsect3">
+<a name="hb-draw-rectangle.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>dfuncs</p></td>
+<td class="parameter_description"><p>draw functions</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>draw_data</p></td>
+<td class="parameter_description"><p>associated draw data passed by the caller</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>st</p></td>
+<td class="parameter_description"><p>current draw state</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>x</p></td>
+<td class="parameter_description"><p>top-left X coordinate</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>y</p></td>
+<td class="parameter_description"><p>top-left Y coordinate</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>w</p></td>
+<td class="parameter_description"><p>width (may be negative)</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>h</p></td>
+<td class="parameter_description"><p>height (may be negative)</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>stroke_width</p></td>
+<td class="parameter_description"><p>stroke width, or <code class="literal">NaN</code> for a filled rectangle</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-14-2-0.html#api-index-14.2.0">14.2.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-draw-circle"></a><h3>hb_draw_circle ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_draw_circle (<em class="parameter"><code><a class="link" href="harfbuzz-hb-draw.html#hb-draw-funcs-t" title="hb_draw_funcs_t"><span class="type">hb_draw_funcs_t</span></a> *dfuncs</code></em>,
+                <em class="parameter"><code><span class="type">void</span> *draw_data</code></em>,
+                <em class="parameter"><code><a class="link" href="harfbuzz-hb-draw.html#hb-draw-state-t" title="hb_draw_state_t"><span class="type">hb_draw_state_t</span></a> *st</code></em>,
+                <em class="parameter"><code><span class="type">float</span> cx</code></em>,
+                <em class="parameter"><code><span class="type">float</span> cy</code></em>,
+                <em class="parameter"><code><span class="type">float</span> r</code></em>,
+                <em class="parameter"><code><span class="type">float</span> stroke_width</code></em>);</pre>
+<p>Emits a circle approximated by four cubic Bezier curves.  If
+<em class="parameter"><code>stroke_width</code></em>
+ is a finite positive value, the circle is
+rendered as an outlined ring of that thickness centered on
+the nominal radius; if <em class="parameter"><code>stroke_width</code></em>
+ is <code class="literal">NaN</code>, the circle is
+rendered as a filled disc.</p>
+<div class="refsect3">
+<a name="hb-draw-circle.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>dfuncs</p></td>
+<td class="parameter_description"><p>draw functions</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>draw_data</p></td>
+<td class="parameter_description"><p>associated draw data passed by the caller</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>st</p></td>
+<td class="parameter_description"><p>current draw state</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cx</p></td>
+<td class="parameter_description"><p>center X coordinate</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cy</p></td>
+<td class="parameter_description"><p>center Y coordinate</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>r</p></td>
+<td class="parameter_description"><p>radius</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>stroke_width</p></td>
+<td class="parameter_description"><p>stroke width, or <code class="literal">NaN</code> for a filled disc</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-14-2-0.html#api-index-14.2.0">14.2.0</a></p>
+</div>
 </div>
 <div class="refsect1">
 <a name="harfbuzz-hb-draw.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="hb-draw-line-cap-t"></a><h3>enum hb_draw_line_cap_t</h3>
+<p>End-cap shape for <a class="link" href="harfbuzz-hb-draw.html#hb-draw-line" title="hb_draw_line ()"><code class="function">hb_draw_line()</code></a>.</p>
+<div class="refsect3">
+<a name="hb-draw-line-cap-t.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="HB-DRAW-LINE-CAP-BUTT:CAPS"></a>HB_DRAW_LINE_CAP_BUTT</p></td>
+<td class="enum_member_description">
+<p>No cap; the line ends exactly at
+its endpoint.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HB-DRAW-LINE-CAP-SQUARE:CAPS"></a>HB_DRAW_LINE_CAP_SQUARE</p></td>
+<td class="enum_member_description">
+<p>Square cap; the line is extended
+past its endpoint by half the local stroke width.  Useful
+for composing closed shapes from line segments (e.g. a
+rectangle made from four lines).</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-14-2-0.html#api-index-14.2.0">14.2.0</a></p>
+</div>
+<hr>
 <div class="refsect2">
 <a name="HB-DRAW-STATE-DEFAULT:CAPS"></a><h3>HB_DRAW_STATE_DEFAULT</h3>
 <pre class="programlisting">#define HB_DRAW_STATE_DEFAULT {0, 0.f, 0.f, 0.f, 0.f, {0}, {0}, {0}, {0}, {0}, {0}, {0}}

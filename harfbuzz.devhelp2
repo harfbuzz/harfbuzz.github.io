@@ -16,6 +16,7 @@
           <sub name="Building on Windows" link="building.html#building.windows"/>
           <sub name="Building on macOS" link="building.html#building.macos"/>
           <sub name="Configuration options" link="building.html#configuration"/>
+          <sub name="Single-file build with harfbuzz-world.cc" link="building.html#building.world"/>
         </sub>
       </sub>
       <sub name="Getting started with HarfBuzz" link="getting-started.html">
@@ -149,6 +150,7 @@
       </sub>
       <sub name="API Index" link="api-index-full.html"/>
       <sub name="Index of deprecated API" link="deprecated-api-index.html"/>
+      <sub name="Index of new symbols in 14.2.0" link="api-index-14-2-0.html"/>
       <sub name="Index of new symbols in 14.1.0" link="api-index-14-1-0.html"/>
       <sub name="Index of new symbols in 14.0.0" link="api-index-14-0-0.html"/>
       <sub name="Index of new symbols in 13.2.0" link="api-index-13-2-0.html"/>
@@ -423,6 +425,10 @@
     <keyword type="function" name="hb_draw_quadratic_to ()" link="harfbuzz-hb-draw.html#hb-draw-quadratic-to" since="4.0.0"/>
     <keyword type="function" name="hb_draw_cubic_to ()" link="harfbuzz-hb-draw.html#hb-draw-cubic-to" since="4.0.0"/>
     <keyword type="function" name="hb_draw_close_path ()" link="harfbuzz-hb-draw.html#hb-draw-close-path" since="4.0.0"/>
+    <keyword type="function" name="hb_draw_line ()" link="harfbuzz-hb-draw.html#hb-draw-line" since="14.2.0"/>
+    <keyword type="function" name="hb_draw_rectangle ()" link="harfbuzz-hb-draw.html#hb-draw-rectangle" since="14.2.0"/>
+    <keyword type="function" name="hb_draw_circle ()" link="harfbuzz-hb-draw.html#hb-draw-circle" since="14.2.0"/>
+    <keyword type="enum" name="enum hb_draw_line_cap_t" link="harfbuzz-hb-draw.html#hb-draw-line-cap-t" since="14.2.0"/>
     <keyword type="macro" name="HB_DRAW_STATE_DEFAULT" link="harfbuzz-hb-draw.html#HB-DRAW-STATE-DEFAULT:CAPS"/>
     <keyword type="typedef" name="hb_draw_funcs_t" link="harfbuzz-hb-draw.html#hb-draw-funcs-t" since="4.0.0"/>
     <keyword type="struct" name="hb_draw_state_t" link="harfbuzz-hb-draw.html#hb-draw-state-t" since="4.0.0"/>
@@ -444,6 +450,10 @@
     <keyword type="function" name="hb_paint_funcs_set_push_clip_glyph_func ()" link="harfbuzz-hb-paint.html#hb-paint-funcs-set-push-clip-glyph-func" since="7.0.0"/>
     <keyword type="function" name="hb_paint_push_clip_rectangle_func_t ()" link="harfbuzz-hb-paint.html#hb-paint-push-clip-rectangle-func-t" since="7.0.0"/>
     <keyword type="function" name="hb_paint_funcs_set_push_clip_rectangle_func ()" link="harfbuzz-hb-paint.html#hb-paint-funcs-set-push-clip-rectangle-func" since="7.0.0"/>
+    <keyword type="function" name="hb_paint_push_clip_path_start_func_t ()" link="harfbuzz-hb-paint.html#hb-paint-push-clip-path-start-func-t" since="14.2.0"/>
+    <keyword type="function" name="hb_paint_funcs_set_push_clip_path_start_func ()" link="harfbuzz-hb-paint.html#hb-paint-funcs-set-push-clip-path-start-func" since="14.2.0"/>
+    <keyword type="function" name="hb_paint_push_clip_path_end_func_t ()" link="harfbuzz-hb-paint.html#hb-paint-push-clip-path-end-func-t" since="14.2.0"/>
+    <keyword type="function" name="hb_paint_funcs_set_push_clip_path_end_func ()" link="harfbuzz-hb-paint.html#hb-paint-funcs-set-push-clip-path-end-func" since="14.2.0"/>
     <keyword type="function" name="hb_paint_pop_clip_func_t ()" link="harfbuzz-hb-paint.html#hb-paint-pop-clip-func-t" since="7.0.0"/>
     <keyword type="function" name="hb_paint_funcs_set_pop_clip_func ()" link="harfbuzz-hb-paint.html#hb-paint-funcs-set-pop-clip-func" since="7.0.0"/>
     <keyword type="function" name="hb_paint_color_func_t ()" link="harfbuzz-hb-paint.html#hb-paint-color-func-t" since="7.0.0"/>
@@ -462,6 +472,8 @@
     <keyword type="function" name="hb_paint_funcs_set_sweep_gradient_func ()" link="harfbuzz-hb-paint.html#hb-paint-funcs-set-sweep-gradient-func" since="7.0.0"/>
     <keyword type="function" name="hb_paint_push_group_func_t ()" link="harfbuzz-hb-paint.html#hb-paint-push-group-func-t" since="7.0.0"/>
     <keyword type="function" name="hb_paint_funcs_set_push_group_func ()" link="harfbuzz-hb-paint.html#hb-paint-funcs-set-push-group-func" since="7.0.0"/>
+    <keyword type="function" name="hb_paint_push_group_for_func_t ()" link="harfbuzz-hb-paint.html#hb-paint-push-group-for-func-t" since="14.2.0"/>
+    <keyword type="function" name="hb_paint_funcs_set_push_group_for_func ()" link="harfbuzz-hb-paint.html#hb-paint-funcs-set-push-group-for-func" since="14.2.0"/>
     <keyword type="function" name="hb_paint_pop_group_func_t ()" link="harfbuzz-hb-paint.html#hb-paint-pop-group-func-t" since="7.0.0"/>
     <keyword type="function" name="hb_paint_funcs_set_pop_group_func ()" link="harfbuzz-hb-paint.html#hb-paint-funcs-set-pop-group-func" since="7.0.0"/>
     <keyword type="function" name="hb_paint_custom_palette_color_func_t ()" link="harfbuzz-hb-paint.html#hb-paint-custom-palette-color-func-t" since="7.0.0"/>
@@ -473,6 +485,8 @@
     <keyword type="function" name="hb_paint_color_glyph ()" link="harfbuzz-hb-paint.html#hb-paint-color-glyph" since="8.2.0"/>
     <keyword type="function" name="hb_paint_push_clip_glyph ()" link="harfbuzz-hb-paint.html#hb-paint-push-clip-glyph" since="7.0.0"/>
     <keyword type="function" name="hb_paint_push_clip_rectangle ()" link="harfbuzz-hb-paint.html#hb-paint-push-clip-rectangle" since="7.0.0"/>
+    <keyword type="function" name="hb_paint_push_clip_path_start ()" link="harfbuzz-hb-paint.html#hb-paint-push-clip-path-start" since="14.2.0"/>
+    <keyword type="function" name="hb_paint_push_clip_path_end ()" link="harfbuzz-hb-paint.html#hb-paint-push-clip-path-end" since="14.2.0"/>
     <keyword type="function" name="hb_paint_pop_clip ()" link="harfbuzz-hb-paint.html#hb-paint-pop-clip" since="7.0.0"/>
     <keyword type="function" name="hb_paint_color ()" link="harfbuzz-hb-paint.html#hb-paint-color" since="7.0.0"/>
     <keyword type="function" name="hb_paint_image ()" link="harfbuzz-hb-paint.html#hb-paint-image" since="7.0.0"/>
@@ -480,8 +494,13 @@
     <keyword type="function" name="hb_paint_radial_gradient ()" link="harfbuzz-hb-paint.html#hb-paint-radial-gradient" since="7.0.0"/>
     <keyword type="function" name="hb_paint_sweep_gradient ()" link="harfbuzz-hb-paint.html#hb-paint-sweep-gradient" since="7.0.0"/>
     <keyword type="function" name="hb_paint_push_group ()" link="harfbuzz-hb-paint.html#hb-paint-push-group" since="7.0.0"/>
+    <keyword type="function" name="hb_paint_push_group_for ()" link="harfbuzz-hb-paint.html#hb-paint-push-group-for" since="14.2.0"/>
     <keyword type="function" name="hb_paint_pop_group ()" link="harfbuzz-hb-paint.html#hb-paint-pop-group" since="7.0.0"/>
     <keyword type="function" name="hb_paint_custom_palette_color ()" link="harfbuzz-hb-paint.html#hb-paint-custom-palette-color" since="7.0.0"/>
+    <keyword type="function" name="hb_paint_reduce_linear_anchors ()" link="harfbuzz-hb-paint.html#hb-paint-reduce-linear-anchors" since="14.2.0"/>
+    <keyword type="function" name="hb_paint_normalize_color_line ()" link="harfbuzz-hb-paint.html#hb-paint-normalize-color-line" since="14.2.0"/>
+    <keyword type="function" name="hb_paint_sweep_gradient_tile_func_t ()" link="harfbuzz-hb-paint.html#hb-paint-sweep-gradient-tile-func-t" since="14.2.0"/>
+    <keyword type="function" name="hb_paint_sweep_gradient_tiles ()" link="harfbuzz-hb-paint.html#hb-paint-sweep-gradient-tiles" since="14.2.0"/>
     <keyword type="typedef" name="hb_paint_funcs_t" link="harfbuzz-hb-paint.html#hb-paint-funcs-t" since="7.0.0"/>
     <keyword type="macro" name="HB_PAINT_IMAGE_FORMAT_PNG" link="harfbuzz-hb-paint.html#HB-PAINT-IMAGE-FORMAT-PNG:CAPS" since="7.0.0"/>
     <keyword type="macro" name="HB_PAINT_IMAGE_FORMAT_SVG" link="harfbuzz-hb-paint.html#HB-PAINT-IMAGE-FORMAT-SVG:CAPS" since="7.0.0"/>
@@ -1025,9 +1044,11 @@
     <keyword type="function" name="hb_raster_draw_set_extents ()" link="harfbuzz-hb-raster.html#hb-raster-draw-set-extents" since="13.0.0"/>
     <keyword type="function" name="hb_raster_draw_get_extents ()" link="harfbuzz-hb-raster.html#hb-raster-draw-get-extents" since="13.0.0"/>
     <keyword type="function" name="hb_raster_draw_set_glyph_extents ()" link="harfbuzz-hb-raster.html#hb-raster-draw-set-glyph-extents" since="13.0.0"/>
+    <keyword type="function" name="hb_raster_draw_clear ()" link="harfbuzz-hb-raster.html#hb-raster-draw-clear" since="14.2.0"/>
     <keyword type="function" name="hb_raster_draw_reset ()" link="harfbuzz-hb-raster.html#hb-raster-draw-reset" since="13.0.0"/>
-    <keyword type="function" name="hb_raster_draw_get_funcs ()" link="harfbuzz-hb-raster.html#hb-raster-draw-get-funcs" since="13.0.0"/>
-    <keyword type="function" name="hb_raster_draw_glyph ()" link="harfbuzz-hb-raster.html#hb-raster-draw-glyph" since="13.0.0"/>
+    <keyword type="function" name="hb_raster_draw_get_funcs ()" link="harfbuzz-hb-raster.html#hb-raster-draw-get-funcs" since="14.2.0"/>
+    <keyword type="function" name="hb_raster_draw_glyph ()" link="harfbuzz-hb-raster.html#hb-raster-draw-glyph" since="14.2.0"/>
+    <keyword type="function" name="hb_raster_draw_glyph_or_fail ()" link="harfbuzz-hb-raster.html#hb-raster-draw-glyph-or-fail" since="14.2.0"/>
     <keyword type="function" name="hb_raster_draw_render ()" link="harfbuzz-hb-raster.html#hb-raster-draw-render" since="13.0.0"/>
     <keyword type="function" name="hb_raster_draw_recycle_image ()" link="harfbuzz-hb-raster.html#hb-raster-draw-recycle-image" since="13.0.0"/>
     <keyword type="function" name="hb_raster_paint_create_or_fail ()" link="harfbuzz-hb-raster.html#hb-raster-paint-create-or-fail" since="13.0.0"/>
@@ -1043,11 +1064,18 @@
     <keyword type="function" name="hb_raster_paint_get_extents ()" link="harfbuzz-hb-raster.html#hb-raster-paint-get-extents" since="13.0.0"/>
     <keyword type="function" name="hb_raster_paint_set_glyph_extents ()" link="harfbuzz-hb-raster.html#hb-raster-paint-set-glyph-extents" since="13.0.0"/>
     <keyword type="function" name="hb_raster_paint_set_foreground ()" link="harfbuzz-hb-raster.html#hb-raster-paint-set-foreground" since="13.0.0"/>
+    <keyword type="function" name="hb_raster_paint_get_foreground ()" link="harfbuzz-hb-raster.html#hb-raster-paint-get-foreground" since="14.2.0"/>
+    <keyword type="function" name="hb_raster_paint_set_background ()" link="harfbuzz-hb-raster.html#hb-raster-paint-set-background" since="14.2.0"/>
+    <keyword type="function" name="hb_raster_paint_get_background ()" link="harfbuzz-hb-raster.html#hb-raster-paint-get-background" since="14.2.0"/>
+    <keyword type="function" name="hb_raster_paint_set_palette ()" link="harfbuzz-hb-raster.html#hb-raster-paint-set-palette" since="14.2.0"/>
+    <keyword type="function" name="hb_raster_paint_get_palette ()" link="harfbuzz-hb-raster.html#hb-raster-paint-get-palette" since="14.2.0"/>
     <keyword type="function" name="hb_raster_paint_clear_custom_palette_colors ()" link="harfbuzz-hb-raster.html#hb-raster-paint-clear-custom-palette-colors" since="13.0.0"/>
     <keyword type="function" name="hb_raster_paint_set_custom_palette_color ()" link="harfbuzz-hb-raster.html#hb-raster-paint-set-custom-palette-color" since="13.0.0"/>
-    <keyword type="function" name="hb_raster_paint_get_funcs ()" link="harfbuzz-hb-raster.html#hb-raster-paint-get-funcs" since="13.0.0"/>
-    <keyword type="function" name="hb_raster_paint_glyph ()" link="harfbuzz-hb-raster.html#hb-raster-paint-glyph" since="13.0.0"/>
+    <keyword type="function" name="hb_raster_paint_get_funcs ()" link="harfbuzz-hb-raster.html#hb-raster-paint-get-funcs" since="14.2.0"/>
+    <keyword type="function" name="hb_raster_paint_glyph ()" link="harfbuzz-hb-raster.html#hb-raster-paint-glyph" since="14.2.0"/>
+    <keyword type="function" name="hb_raster_paint_glyph_or_fail ()" link="harfbuzz-hb-raster.html#hb-raster-paint-glyph-or-fail" since="14.2.0"/>
     <keyword type="function" name="hb_raster_paint_render ()" link="harfbuzz-hb-raster.html#hb-raster-paint-render" since="13.0.0"/>
+    <keyword type="function" name="hb_raster_paint_clear ()" link="harfbuzz-hb-raster.html#hb-raster-paint-clear" since="14.2.0"/>
     <keyword type="function" name="hb_raster_paint_reset ()" link="harfbuzz-hb-raster.html#hb-raster-paint-reset" since="13.0.0"/>
     <keyword type="function" name="hb_raster_paint_recycle_image ()" link="harfbuzz-hb-raster.html#hb-raster-paint-recycle-image" since="13.0.0"/>
     <keyword type="enum" name="enum hb_raster_format_t" link="harfbuzz-hb-raster.html#hb-raster-format-t" since="13.0.0"/>
@@ -1067,11 +1095,19 @@
     <keyword type="function" name="hb_vector_draw_set_extents ()" link="harfbuzz-hb-vector.html#hb-vector-draw-set-extents" since="13.0.0"/>
     <keyword type="function" name="hb_vector_draw_get_extents ()" link="harfbuzz-hb-vector.html#hb-vector-draw-get-extents" since="13.0.0"/>
     <keyword type="function" name="hb_vector_draw_set_glyph_extents ()" link="harfbuzz-hb-vector.html#hb-vector-draw-set-glyph-extents" since="13.0.0"/>
-    <keyword type="function" name="hb_vector_draw_get_funcs ()" link="harfbuzz-hb-vector.html#hb-vector-draw-get-funcs" since="13.0.0"/>
-    <keyword type="function" name="hb_vector_draw_glyph ()" link="harfbuzz-hb-vector.html#hb-vector-draw-glyph" since="13.0.0"/>
-    <keyword type="function" name="hb_vector_svg_set_flat ()" link="harfbuzz-hb-vector.html#hb-vector-svg-set-flat" since="13.0.0"/>
-    <keyword type="function" name="hb_vector_svg_set_precision ()" link="harfbuzz-hb-vector.html#hb-vector-svg-set-precision" since="13.0.0"/>
+    <keyword type="function" name="hb_vector_draw_get_format ()" link="harfbuzz-hb-vector.html#hb-vector-draw-get-format" since="14.2.0"/>
+    <keyword type="function" name="hb_vector_draw_get_funcs ()" link="harfbuzz-hb-vector.html#hb-vector-draw-get-funcs" since="14.2.0"/>
+    <keyword type="function" name="hb_vector_draw_glyph ()" link="harfbuzz-hb-vector.html#hb-vector-draw-glyph" since="14.2.0"/>
+    <keyword type="function" name="hb_vector_draw_glyph_or_fail ()" link="harfbuzz-hb-vector.html#hb-vector-draw-glyph-or-fail" since="14.2.0"/>
+    <keyword type="function" name="hb_vector_draw_set_precision ()" link="harfbuzz-hb-vector.html#hb-vector-draw-set-precision" since="14.2.0"/>
+    <keyword type="function" name="hb_vector_draw_get_precision ()" link="harfbuzz-hb-vector.html#hb-vector-draw-get-precision" since="14.2.0"/>
+    <keyword type="function" name="hb_vector_draw_set_foreground ()" link="harfbuzz-hb-vector.html#hb-vector-draw-set-foreground" since="14.2.0"/>
+    <keyword type="function" name="hb_vector_draw_get_foreground ()" link="harfbuzz-hb-vector.html#hb-vector-draw-get-foreground" since="14.2.0"/>
+    <keyword type="function" name="hb_vector_draw_set_background ()" link="harfbuzz-hb-vector.html#hb-vector-draw-set-background" since="14.2.0"/>
+    <keyword type="function" name="hb_vector_draw_get_background ()" link="harfbuzz-hb-vector.html#hb-vector-draw-get-background" since="14.2.0"/>
+    <keyword type="function" name="hb_vector_draw_new_path ()" link="harfbuzz-hb-vector.html#hb-vector-draw-new-path" since="14.2.0"/>
     <keyword type="function" name="hb_vector_draw_render ()" link="harfbuzz-hb-vector.html#hb-vector-draw-render" since="13.0.0"/>
+    <keyword type="function" name="hb_vector_draw_clear ()" link="harfbuzz-hb-vector.html#hb-vector-draw-clear" since="14.2.0"/>
     <keyword type="function" name="hb_vector_draw_reset ()" link="harfbuzz-hb-vector.html#hb-vector-draw-reset" since="13.0.0"/>
     <keyword type="function" name="hb_vector_draw_recycle_blob ()" link="harfbuzz-hb-vector.html#hb-vector-draw-recycle-blob" since="13.0.0"/>
     <keyword type="function" name="hb_vector_paint_create_or_fail ()" link="harfbuzz-hb-vector.html#hb-vector-paint-create-or-fail" since="13.0.0"/>
@@ -1087,14 +1123,23 @@
     <keyword type="function" name="hb_vector_paint_get_extents ()" link="harfbuzz-hb-vector.html#hb-vector-paint-get-extents" since="13.0.0"/>
     <keyword type="function" name="hb_vector_paint_set_glyph_extents ()" link="harfbuzz-hb-vector.html#hb-vector-paint-set-glyph-extents" since="13.0.0"/>
     <keyword type="function" name="hb_vector_paint_set_foreground ()" link="harfbuzz-hb-vector.html#hb-vector-paint-set-foreground" since="13.0.0"/>
+    <keyword type="function" name="hb_vector_paint_get_foreground ()" link="harfbuzz-hb-vector.html#hb-vector-paint-get-foreground" since="14.2.0"/>
+    <keyword type="function" name="hb_vector_paint_set_background ()" link="harfbuzz-hb-vector.html#hb-vector-paint-set-background" since="14.2.0"/>
+    <keyword type="function" name="hb_vector_paint_get_background ()" link="harfbuzz-hb-vector.html#hb-vector-paint-get-background" since="14.2.0"/>
     <keyword type="function" name="hb_vector_paint_set_palette ()" link="harfbuzz-hb-vector.html#hb-vector-paint-set-palette" since="13.0.0"/>
+    <keyword type="function" name="hb_vector_paint_get_palette ()" link="harfbuzz-hb-vector.html#hb-vector-paint-get-palette" since="14.2.0"/>
     <keyword type="function" name="hb_vector_paint_set_custom_palette_color ()" link="harfbuzz-hb-vector.html#hb-vector-paint-set-custom-palette-color" since="13.0.0"/>
     <keyword type="function" name="hb_vector_paint_clear_custom_palette_colors ()" link="harfbuzz-hb-vector.html#hb-vector-paint-clear-custom-palette-colors" since="13.0.0"/>
-    <keyword type="function" name="hb_vector_paint_get_funcs ()" link="harfbuzz-hb-vector.html#hb-vector-paint-get-funcs" since="13.0.0"/>
-    <keyword type="function" name="hb_vector_paint_glyph ()" link="harfbuzz-hb-vector.html#hb-vector-paint-glyph" since="13.0.0"/>
-    <keyword type="function" name="hb_vector_svg_paint_set_flat ()" link="harfbuzz-hb-vector.html#hb-vector-svg-paint-set-flat" since="13.0.0"/>
-    <keyword type="function" name="hb_vector_svg_paint_set_precision ()" link="harfbuzz-hb-vector.html#hb-vector-svg-paint-set-precision" since="13.0.0"/>
+    <keyword type="function" name="hb_vector_paint_get_format ()" link="harfbuzz-hb-vector.html#hb-vector-paint-get-format" since="14.2.0"/>
+    <keyword type="function" name="hb_vector_paint_get_funcs ()" link="harfbuzz-hb-vector.html#hb-vector-paint-get-funcs" since="14.2.0"/>
+    <keyword type="function" name="hb_vector_paint_glyph ()" link="harfbuzz-hb-vector.html#hb-vector-paint-glyph" since="14.2.0"/>
+    <keyword type="function" name="hb_vector_paint_glyph_or_fail ()" link="harfbuzz-hb-vector.html#hb-vector-paint-glyph-or-fail" since="14.2.0"/>
+    <keyword type="function" name="hb_vector_paint_set_precision ()" link="harfbuzz-hb-vector.html#hb-vector-paint-set-precision" since="14.2.0"/>
+    <keyword type="function" name="hb_vector_paint_get_precision ()" link="harfbuzz-hb-vector.html#hb-vector-paint-get-precision" since="14.2.0"/>
+    <keyword type="function" name="hb_vector_paint_set_svg_prefix ()" link="harfbuzz-hb-vector.html#hb-vector-paint-set-svg-prefix" since="14.2.0"/>
+    <keyword type="function" name="hb_vector_paint_get_svg_prefix ()" link="harfbuzz-hb-vector.html#hb-vector-paint-get-svg-prefix" since="14.2.0"/>
     <keyword type="function" name="hb_vector_paint_render ()" link="harfbuzz-hb-vector.html#hb-vector-paint-render" since="13.0.0"/>
+    <keyword type="function" name="hb_vector_paint_clear ()" link="harfbuzz-hb-vector.html#hb-vector-paint-clear" since="14.2.0"/>
     <keyword type="function" name="hb_vector_paint_reset ()" link="harfbuzz-hb-vector.html#hb-vector-paint-reset" since="13.0.0"/>
     <keyword type="function" name="hb_vector_paint_recycle_blob ()" link="harfbuzz-hb-vector.html#hb-vector-paint-recycle-blob" since="13.0.0"/>
     <keyword type="enum" name="enum hb_vector_format_t" link="harfbuzz-hb-vector.html#hb-vector-format-t" since="13.0.0"/>
@@ -1102,22 +1147,45 @@
     <keyword type="enum" name="enum hb_vector_extents_mode_t" link="harfbuzz-hb-vector.html#hb-vector-extents-mode-t" since="13.0.0"/>
     <keyword type="typedef" name="hb_vector_draw_t" link="harfbuzz-hb-vector.html#hb-vector-draw-t" since="13.0.0"/>
     <keyword type="typedef" name="hb_vector_paint_t" link="harfbuzz-hb-vector.html#hb-vector-paint-t" since="13.0.0"/>
-    <keyword type="function" name="hb_gpu_shader_fragment_source ()" link="harfbuzz-hb-gpu.html#hb-gpu-shader-fragment-source" since="14.0.0"/>
-    <keyword type="function" name="hb_gpu_shader_vertex_source ()" link="harfbuzz-hb-gpu.html#hb-gpu-shader-vertex-source" since="14.0.0"/>
+    <keyword type="function" name="hb_gpu_shader_source ()" link="harfbuzz-hb-gpu.html#hb-gpu-shader-source" since="14.2.0"/>
+    <keyword type="function" name="hb_gpu_draw_shader_source ()" link="harfbuzz-hb-gpu.html#hb-gpu-draw-shader-source" since="14.2.0"/>
     <keyword type="function" name="hb_gpu_draw_create_or_fail ()" link="harfbuzz-hb-gpu.html#hb-gpu-draw-create-or-fail" since="14.0.0"/>
     <keyword type="function" name="hb_gpu_draw_reference ()" link="harfbuzz-hb-gpu.html#hb-gpu-draw-reference" since="14.0.0"/>
     <keyword type="function" name="hb_gpu_draw_destroy ()" link="harfbuzz-hb-gpu.html#hb-gpu-draw-destroy" since="14.0.0"/>
     <keyword type="function" name="hb_gpu_draw_set_user_data ()" link="harfbuzz-hb-gpu.html#hb-gpu-draw-set-user-data" since="14.0.0"/>
     <keyword type="function" name="hb_gpu_draw_get_user_data ()" link="harfbuzz-hb-gpu.html#hb-gpu-draw-get-user-data" since="14.0.0"/>
-    <keyword type="function" name="hb_gpu_draw_get_funcs ()" link="harfbuzz-hb-gpu.html#hb-gpu-draw-get-funcs" since="14.0.0"/>
+    <keyword type="function" name="hb_gpu_draw_get_funcs ()" link="harfbuzz-hb-gpu.html#hb-gpu-draw-get-funcs" since="14.2.0"/>
     <keyword type="function" name="hb_gpu_draw_set_scale ()" link="harfbuzz-hb-gpu.html#hb-gpu-draw-set-scale" since="14.1.0"/>
+    <keyword type="function" name="hb_gpu_draw_get_scale ()" link="harfbuzz-hb-gpu.html#hb-gpu-draw-get-scale" since="14.2.0"/>
     <keyword type="function" name="hb_gpu_draw_glyph ()" link="harfbuzz-hb-gpu.html#hb-gpu-draw-glyph" since="14.0.0"/>
+    <keyword type="function" name="hb_gpu_draw_glyph_or_fail ()" link="harfbuzz-hb-gpu.html#hb-gpu-draw-glyph-or-fail" since="14.2.0"/>
     <keyword type="function" name="hb_gpu_draw_encode ()" link="harfbuzz-hb-gpu.html#hb-gpu-draw-encode" since="14.0.0"/>
-    <keyword type="function" name="hb_gpu_draw_get_extents ()" link="harfbuzz-hb-gpu.html#hb-gpu-draw-get-extents" since="14.0.0"/>
+    <keyword type="function" name="hb_gpu_draw_clear ()" link="harfbuzz-hb-gpu.html#hb-gpu-draw-clear" since="14.2.0"/>
     <keyword type="function" name="hb_gpu_draw_reset ()" link="harfbuzz-hb-gpu.html#hb-gpu-draw-reset" since="14.0.0"/>
     <keyword type="function" name="hb_gpu_draw_recycle_blob ()" link="harfbuzz-hb-gpu.html#hb-gpu-draw-recycle-blob" since="14.0.0"/>
+    <keyword type="function" name="hb_gpu_paint_create_or_fail ()" link="harfbuzz-hb-gpu.html#hb-gpu-paint-create-or-fail" since="14.2.0"/>
+    <keyword type="function" name="hb_gpu_paint_reference ()" link="harfbuzz-hb-gpu.html#hb-gpu-paint-reference" since="14.2.0"/>
+    <keyword type="function" name="hb_gpu_paint_destroy ()" link="harfbuzz-hb-gpu.html#hb-gpu-paint-destroy" since="14.2.0"/>
+    <keyword type="function" name="hb_gpu_paint_set_user_data ()" link="harfbuzz-hb-gpu.html#hb-gpu-paint-set-user-data" since="14.2.0"/>
+    <keyword type="function" name="hb_gpu_paint_get_user_data ()" link="harfbuzz-hb-gpu.html#hb-gpu-paint-get-user-data" since="14.2.0"/>
+    <keyword type="function" name="hb_gpu_paint_get_funcs ()" link="harfbuzz-hb-gpu.html#hb-gpu-paint-get-funcs" since="14.2.0"/>
+    <keyword type="function" name="hb_gpu_paint_set_palette ()" link="harfbuzz-hb-gpu.html#hb-gpu-paint-set-palette" since="14.2.0"/>
+    <keyword type="function" name="hb_gpu_paint_get_palette ()" link="harfbuzz-hb-gpu.html#hb-gpu-paint-get-palette" since="14.2.0"/>
+    <keyword type="function" name="hb_gpu_paint_clear_custom_palette_colors ()" link="harfbuzz-hb-gpu.html#hb-gpu-paint-clear-custom-palette-colors" since="14.2.0"/>
+    <keyword type="function" name="hb_gpu_paint_set_custom_palette_color ()" link="harfbuzz-hb-gpu.html#hb-gpu-paint-set-custom-palette-color" since="14.2.0"/>
+    <keyword type="function" name="hb_gpu_paint_set_scale ()" link="harfbuzz-hb-gpu.html#hb-gpu-paint-set-scale" since="14.2.0"/>
+    <keyword type="function" name="hb_gpu_paint_get_scale ()" link="harfbuzz-hb-gpu.html#hb-gpu-paint-get-scale" since="14.2.0"/>
+    <keyword type="function" name="hb_gpu_paint_glyph ()" link="harfbuzz-hb-gpu.html#hb-gpu-paint-glyph" since="14.2.0"/>
+    <keyword type="function" name="hb_gpu_paint_glyph_or_fail ()" link="harfbuzz-hb-gpu.html#hb-gpu-paint-glyph-or-fail" since="14.2.0"/>
+    <keyword type="function" name="hb_gpu_paint_encode ()" link="harfbuzz-hb-gpu.html#hb-gpu-paint-encode" since="14.2.0"/>
+    <keyword type="function" name="hb_gpu_paint_clear ()" link="harfbuzz-hb-gpu.html#hb-gpu-paint-clear" since="14.2.0"/>
+    <keyword type="function" name="hb_gpu_paint_reset ()" link="harfbuzz-hb-gpu.html#hb-gpu-paint-reset" since="14.2.0"/>
+    <keyword type="function" name="hb_gpu_paint_recycle_blob ()" link="harfbuzz-hb-gpu.html#hb-gpu-paint-recycle-blob" since="14.2.0"/>
+    <keyword type="function" name="hb_gpu_paint_shader_source ()" link="harfbuzz-hb-gpu.html#hb-gpu-paint-shader-source" since="14.2.0"/>
     <keyword type="enum" name="enum hb_gpu_shader_lang_t" link="harfbuzz-hb-gpu.html#hb-gpu-shader-lang-t" since="14.0.0"/>
+    <keyword type="enum" name="enum hb_gpu_shader_stage_t" link="harfbuzz-hb-gpu.html#hb-gpu-shader-stage-t" since="14.2.0"/>
     <keyword type="typedef" name="hb_gpu_draw_t" link="harfbuzz-hb-gpu.html#hb-gpu-draw-t" since="14.0.0"/>
+    <keyword type="typedef" name="hb_gpu_paint_t" link="harfbuzz-hb-gpu.html#hb-gpu-paint-t" since="14.2.0"/>
     <keyword type="function" name="hb_cairo_font_face_create_for_font ()" link="harfbuzz-hb-cairo.html#hb-cairo-font-face-create-for-font" since="7.0.0"/>
     <keyword type="function" name="hb_cairo_font_face_get_font ()" link="harfbuzz-hb-cairo.html#hb-cairo-font-face-get-font" since="7.0.0"/>
     <keyword type="function" name="hb_cairo_font_face_create_for_face ()" link="harfbuzz-hb-cairo.html#hb-cairo-font-face-create-for-face" since="7.0.0"/>
@@ -1401,6 +1469,8 @@
     <keyword type="constant" name="HB_SCRIPT_TAI_YO" link="harfbuzz-hb-common.html#HB-SCRIPT-TAI-YO:CAPS"/>
     <keyword type="constant" name="HB_SCRIPT_TOLONG_SIKI" link="harfbuzz-hb-common.html#HB-SCRIPT-TOLONG-SIKI:CAPS"/>
     <keyword type="constant" name="HB_SCRIPT_INVALID" link="harfbuzz-hb-common.html#HB-SCRIPT-INVALID:CAPS"/>
+    <keyword type="constant" name="HB_DRAW_LINE_CAP_BUTT" link="harfbuzz-hb-draw.html#HB-DRAW-LINE-CAP-BUTT:CAPS"/>
+    <keyword type="constant" name="HB_DRAW_LINE_CAP_SQUARE" link="harfbuzz-hb-draw.html#HB-DRAW-LINE-CAP-SQUARE:CAPS"/>
     <keyword type="constant" name="HB_PAINT_EXTEND_PAD" link="harfbuzz-hb-paint.html#HB-PAINT-EXTEND-PAD:CAPS"/>
     <keyword type="constant" name="HB_PAINT_EXTEND_REPEAT" link="harfbuzz-hb-paint.html#HB-PAINT-EXTEND-REPEAT:CAPS"/>
     <keyword type="constant" name="HB_PAINT_EXTEND_REFLECT" link="harfbuzz-hb-paint.html#HB-PAINT-EXTEND-REFLECT:CAPS"/>
@@ -1979,12 +2049,16 @@
     <keyword type="constant" name="HB_RASTER_FORMAT_BGRA32" link="harfbuzz-hb-raster.html#HB-RASTER-FORMAT-BGRA32:CAPS"/>
     <keyword type="constant" name="HB_VECTOR_FORMAT_INVALID" link="harfbuzz-hb-vector.html#HB-VECTOR-FORMAT-INVALID:CAPS"/>
     <keyword type="constant" name="HB_VECTOR_FORMAT_SVG" link="harfbuzz-hb-vector.html#HB-VECTOR-FORMAT-SVG:CAPS"/>
+    <keyword type="constant" name="HB_VECTOR_FORMAT_PDF" link="harfbuzz-hb-vector.html#HB-VECTOR-FORMAT-PDF:CAPS"/>
     <keyword type="constant" name="HB_VECTOR_EXTENTS_MODE_NONE" link="harfbuzz-hb-vector.html#HB-VECTOR-EXTENTS-MODE-NONE:CAPS"/>
     <keyword type="constant" name="HB_VECTOR_EXTENTS_MODE_EXPAND" link="harfbuzz-hb-vector.html#HB-VECTOR-EXTENTS-MODE-EXPAND:CAPS"/>
+    <keyword type="constant" name="HB_GPU_SHADER_LANG_INVALID" link="harfbuzz-hb-gpu.html#HB-GPU-SHADER-LANG-INVALID:CAPS"/>
     <keyword type="constant" name="HB_GPU_SHADER_LANG_GLSL" link="harfbuzz-hb-gpu.html#HB-GPU-SHADER-LANG-GLSL:CAPS"/>
     <keyword type="constant" name="HB_GPU_SHADER_LANG_WGSL" link="harfbuzz-hb-gpu.html#HB-GPU-SHADER-LANG-WGSL:CAPS"/>
     <keyword type="constant" name="HB_GPU_SHADER_LANG_MSL" link="harfbuzz-hb-gpu.html#HB-GPU-SHADER-LANG-MSL:CAPS"/>
     <keyword type="constant" name="HB_GPU_SHADER_LANG_HLSL" link="harfbuzz-hb-gpu.html#HB-GPU-SHADER-LANG-HLSL:CAPS"/>
+    <keyword type="constant" name="HB_GPU_SHADER_STAGE_VERTEX" link="harfbuzz-hb-gpu.html#HB-GPU-SHADER-STAGE-VERTEX:CAPS"/>
+    <keyword type="constant" name="HB_GPU_SHADER_STAGE_FRAGMENT" link="harfbuzz-hb-gpu.html#HB-GPU-SHADER-STAGE-FRAGMENT:CAPS"/>
     <keyword type="member" name="hb-glyph-info-t.codepoint" link="harfbuzz-hb-buffer.html#hb-glyph-info-t.codepoint"/>
     <keyword type="member" name="hb-glyph-info-t.cluster" link="harfbuzz-hb-buffer.html#hb-glyph-info-t.cluster"/>
     <keyword type="member" name="hb-glyph-position-t.x-advance" link="harfbuzz-hb-buffer.html#hb-glyph-position-t.x-advance"/>
