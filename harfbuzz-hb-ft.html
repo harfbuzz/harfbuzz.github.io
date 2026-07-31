@@ -204,13 +204,13 @@ after the <a class="link" href="harfbuzz-hb-face.html#hb-face-t" title="hb_face_
 <tbody>
 <tr>
 <td class="parameter_name"><p>ft_face</p></td>
-<td class="parameter_description"><p>FT_Face to work upon. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="This parameter is a 'destroy_data', for callbacks."><span class="acronym">destroy</span></acronym> destroy][<acronym title="The callback is valid until the GDestroyNotify argument is called."><span class="acronym">scope notified</span></acronym>]</span></td>
+<td class="parameter_description"><p>FT_Face to work upon</p></td>
+<td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>destroy</p></td>
 <td class="parameter_description"><p>A callback to call when the face object is not needed anymore. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>][<acronym title="The callback is valid until first called."><span class="acronym">scope async</span></acronym>]</span></td>
 </tr>
 </tbody>
 </table></div>
@@ -352,7 +352,7 @@ hb_ft_face_create_from_blob_or_fail (<em class="parameter"><code><a class="link"
                                      <em class="parameter"><code>unsigned <span class="type">int</span> index</code></em>);</pre>
 <p>Creates an <a class="link" href="harfbuzz-hb-face.html#hb-face-t" title="hb_face_t"><span class="type">hb_face_t</span></a> face object from the specified
 font blob and face index.</p>
-<p>This is similar in functionality to <code class="function">hb_face_create_from_blob_or_fail()</code>,
+<p>This is similar in functionality to <a class="link" href="harfbuzz-hb-face.html#hb-face-create-or-fail" title="hb_face_create_or_fail ()"><code class="function">hb_face_create_or_fail()</code></a>,
 but uses the FreeType library for loading the font blob. This can
 be useful, for example, to load WOFF and WOFF2 font data.</p>
 <div class="refsect3">
@@ -422,13 +422,13 @@ destroyed only after the <a class="link" href="harfbuzz-hb-font.html#hb-font-t" 
 <tbody>
 <tr>
 <td class="parameter_name"><p>ft_face</p></td>
-<td class="parameter_description"><p>FT_Face to work upon. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="This parameter is a 'destroy_data', for callbacks."><span class="acronym">destroy</span></acronym> destroy][<acronym title="The callback is valid until the GDestroyNotify argument is called."><span class="acronym">scope notified</span></acronym>]</span></td>
+<td class="parameter_description"><p>FT_Face to work upon</p></td>
+<td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>destroy</p></td>
 <td class="parameter_description"><p>A callback to call when the font object is not needed anymore. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>][<acronym title="The callback is valid until first called."><span class="acronym">scope async</span></acronym>]</span></td>
 </tr>
 </tbody>
 </table></div>

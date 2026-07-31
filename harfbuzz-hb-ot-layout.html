@@ -896,7 +896,7 @@ Output = the actual number of characters returned (may be zero). </p></td>
 <td class="parameter_description"><p>A buffer pointer.
 The Unicode codepoints of the characters for which this feature provides
 glyph variants. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Out parameter, where caller must allocate storage."><span class="acronym">out caller-allocates</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=char_count]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Out parameter, where caller must allocate storage."><span class="acronym">out caller-allocates</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=char_count][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 </tbody>
 </table></div>
@@ -958,7 +958,7 @@ Output = the actual number of lookups returned (may be zero). </p></td>
 <tr>
 <td class="parameter_name"><p>lookup_indexes</p></td>
 <td class="parameter_description"><p>The array of lookup indexes found for the query. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=lookup_count]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=lookup_count][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 </tbody>
 </table></div>
@@ -1105,7 +1105,7 @@ Output = the actual number of lookups returned (may be zero). </p></td>
 <tr>
 <td class="parameter_name"><p>lookup_indexes</p></td>
 <td class="parameter_description"><p>The array of lookups found for the query. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=lookup_count]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=lookup_count][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 </tbody>
 </table></div>
@@ -1161,7 +1161,7 @@ Output = the actual number of attachment points returned (may be zero). </p></td
 <tr>
 <td class="parameter_name"><p>point_array</p></td>
 <td class="parameter_description"><p>The array of attachment points found for the query. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=point_count]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=point_count][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 </tbody>
 </table></div>
@@ -1332,7 +1332,7 @@ hb_ot_layout_get_baseline (<em class="parameter"><code><a class="link" href="har
                            <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="type">hb_tag_t</span></a> script_tag</code></em>,
                            <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="type">hb_tag_t</span></a> language_tag</code></em>,
                            <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-position-t" title="hb_position_t"><span class="type">hb_position_t</span></a> *coord</code></em>);</pre>
-<p>Fetches a baseline value from the face.</p>
+<p>Fetches a baseline value from the font.</p>
 <div class="refsect3">
 <a name="hb-ot-layout-get-baseline.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -1391,7 +1391,7 @@ hb_ot_layout_get_baseline2 (<em class="parameter"><code><a class="link" href="ha
                             <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-script-t" title="enum hb_script_t"><span class="type">hb_script_t</span></a> script</code></em>,
                             <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-language-t" title="hb_language_t"><span class="type">hb_language_t</span></a> language</code></em>,
                             <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-position-t" title="hb_position_t"><span class="type">hb_position_t</span></a> *coord</code></em>);</pre>
-<p>Fetches a baseline value from the face.</p>
+<p>Fetches a baseline value from the font.</p>
 <p>This function is like <a class="link" href="harfbuzz-hb-ot-layout.html#hb-ot-layout-get-baseline" title="hb_ot_layout_get_baseline ()"><code class="function">hb_ot_layout_get_baseline()</code></a> but takes
 <a class="link" href="harfbuzz-hb-common.html#hb-script-t" title="enum hb_script_t"><span class="type">hb_script_t</span></a> and <a class="link" href="harfbuzz-hb-common.html#hb-language-t" title="hb_language_t"><span class="type">hb_language_t</span></a> instead of OpenType <a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="type">hb_tag_t</span></a>.</p>
 <div class="refsect3">
@@ -1453,7 +1453,7 @@ hb_ot_layout_get_baseline_with_fallback
                                 <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="type">hb_tag_t</span></a> script_tag</code></em>,
                                 <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="type">hb_tag_t</span></a> language_tag</code></em>,
                                 <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-position-t" title="hb_position_t"><span class="type">hb_position_t</span></a> *coord</code></em>);</pre>
-<p>Fetches a baseline value from the face, and synthesizes
+<p>Fetches a baseline value from the font, and synthesizes
 it if the font does not have it.</p>
 <div class="refsect3">
 <a name="hb-ot-layout-get-baseline-with-fallback.parameters"></a><h4>Parameters</h4>
@@ -1510,7 +1510,7 @@ hb_ot_layout_get_baseline_with_fallback2
                                 <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-script-t" title="enum hb_script_t"><span class="type">hb_script_t</span></a> script</code></em>,
                                 <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-language-t" title="hb_language_t"><span class="type">hb_language_t</span></a> language</code></em>,
                                 <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-position-t" title="hb_position_t"><span class="type">hb_position_t</span></a> *coord</code></em>);</pre>
-<p>Fetches a baseline value from the face, and synthesizes
+<p>Fetches a baseline value from the font, and synthesizes
 it if the font does not have it.</p>
 <p>This function is like <a class="link" href="harfbuzz-hb-ot-layout.html#hb-ot-layout-get-baseline-with-fallback" title="hb_ot_layout_get_baseline_with_fallback ()"><code class="function">hb_ot_layout_get_baseline_with_fallback()</code></a> but takes
 <a class="link" href="harfbuzz-hb-common.html#hb-script-t" title="enum hb_script_t"><span class="type">hb_script_t</span></a> and <a class="link" href="harfbuzz-hb-common.html#hb-language-t" title="hb_language_t"><span class="type">hb_language_t</span></a> instead of OpenType <a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="type">hb_tag_t</span></a>.</p>
@@ -1688,7 +1688,7 @@ Output = the actual number of caret positions returned (may be zero). </p></td>
 <tr>
 <td class="parameter_name"><p>caret_array</p></td>
 <td class="parameter_description"><p>The array of caret positions found for the query. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=caret_count]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=caret_count][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 </tbody>
 </table></div>
@@ -1960,7 +1960,7 @@ Output: the actual number of feature tags returned (may be zero). </p></td>
 <tr>
 <td class="parameter_name"><p>feature_indexes</p></td>
 <td class="parameter_description"><p>The array of feature indexes found for the query. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=feature_count]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=feature_count][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 </tbody>
 </table></div>
@@ -2029,7 +2029,7 @@ Output = the actual number of feature tags returned (may be zero). </p></td>
 <tr>
 <td class="parameter_name"><p>feature_tags</p></td>
 <td class="parameter_description"><p>The array of <a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="type">hb_tag_t</span></a> feature tags found for the query. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=feature_count]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=feature_count][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 </tbody>
 </table></div>
@@ -2215,7 +2215,7 @@ Output = the actual number of alternate glyphs returned (may be zero). </p></td>
 <td class="parameter_name"><p>alternate_glyphs</p></td>
 <td class="parameter_description"><p>A glyphs buffer.
 Alternate glyphs associated with the glyph id. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Out parameter, where caller must allocate storage."><span class="acronym">out caller-allocates</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=alternate_count]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Out parameter, where caller must allocate storage."><span class="acronym">out caller-allocates</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=alternate_count][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 </tbody>
 </table></div>
@@ -2572,7 +2572,7 @@ Output = the actual number of language tags returned (may be zero). </p></td>
 <tr>
 <td class="parameter_name"><p>language_tags</p></td>
 <td class="parameter_description"><p>Array of language tags found in the table. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=language_count]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=language_count][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 </tbody>
 </table></div>
@@ -2821,7 +2821,7 @@ Output = the actual number of feature tags returned (may be zero). </p></td>
 <tr>
 <td class="parameter_name"><p>feature_tags</p></td>
 <td class="parameter_description"><p>Array of feature tags found in the table. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=feature_count]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=feature_count][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 </tbody>
 </table></div>
@@ -2876,7 +2876,7 @@ Output = the actual number of script tags returned (may be zero). </p></td>
 <tr>
 <td class="parameter_name"><p>script_tags</p></td>
 <td class="parameter_description"><p>The array of <a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="type">hb_tag_t</span></a> script tags found for the query. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=script_count]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=script_count][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 </tbody>
 </table></div>

@@ -1,0 +1,444 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>hb-subset-depend: HarfBuzz Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="HarfBuzz Manual">
+<link rel="up" href="depend-api.html" title="Depend API">
+<link rel="prev" href="depend-api.html" title="Depend API">
+<link rel="next" href="api-index-full.html" title="API Index">
+<meta name="generator" content="GTK-Doc V1.34.0 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#harfbuzz-hb-subset-depend.description" class="shortcut">Description</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="depend-api.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="depend-api.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="api-index-full.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="harfbuzz-hb-subset-depend"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="harfbuzz-hb-subset-depend.top_of_page"></a>hb-subset-depend</span></h2>
+<p>hb-subset-depend — Glyph dependency graph for font optimization</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="harfbuzz-hb-subset-depend.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="harfbuzz-hb-subset-depend.html#hb-subset-depend-t" title="hb_subset_depend_t"><span class="returnvalue">hb_subset_depend_t</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-subset-depend.html#hb-subset-depend-from-face-or-fail" title="hb_subset_depend_from_face_or_fail ()">hb_subset_depend_from_face_or_fail</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">unsigned <span class="returnvalue">int</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-subset-depend.html#hb-subset-depend-lookup-glyph" title="hb_subset_depend_lookup_glyph ()">hb_subset_depend_lookup_glyph</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-subset-depend.html#hb-subset-depend-lookup-set" title="hb_subset_depend_lookup_set ()">hb_subset_depend_lookup_set</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-subset-depend.html#hb-subset-depend-destroy" title="hb_subset_depend_destroy ()">hb_subset_depend_destroy</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="harfbuzz-hb-subset-depend.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="typedef_keyword">typedef</td>
+<td class="function_name"><a class="link" href="harfbuzz-hb-subset-depend.html#hb-subset-depend-t" title="hb_subset_depend_t">hb_subset_depend_t</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="harfbuzz-hb-subset-depend.html#hb-subset-depend-entry-t" title="hb_subset_depend_entry_t">hb_subset_depend_entry_t</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="harfbuzz-hb-subset-depend.html#hb-subset-depend-edge-flags-t" title="enum hb_subset_depend_edge_flags_t">hb_subset_depend_edge_flags_t</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="harfbuzz-hb-subset-depend.includes"></a><h2>Includes</h2>
+<pre class="synopsis">#include &lt;hb-subset-depend.h&gt;
+</pre>
+</div>
+<div class="refsect1">
+<a name="harfbuzz-hb-subset-depend.description"></a><h2>Description</h2>
+<div class="warning">This API is highly experimental and subject to change. It is not
+enabled by default and should not be used in production code without
+understanding the stability implications.</div>
+<p>Functions for extracting a glyph dependency graph.</p>
+<p>A dependency graph represents the relationships between glyphs in a font,
+tracking which glyphs reference or produce other glyphs through OpenType
+mechanisms such as character mapping, glyph substitution, composite
+construction, color layering, and math variants.</p>
+<p>Dependency graphs enable finding all glyphs reachable from a given input set.
+This is useful for font subsetting, analyzing glyph coverage, optimizing
+font delivery, and determining which glyphs are needed to render specific
+characters.</p>
+</div>
+<div class="refsect1">
+<a name="harfbuzz-hb-subset-depend.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="hb-subset-depend-from-face-or-fail"></a><h3>hb_subset_depend_from_face_or_fail ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-subset-depend.html#hb-subset-depend-t" title="hb_subset_depend_t"><span class="returnvalue">hb_subset_depend_t</span></a> *
+hb_subset_depend_from_face_or_fail (<em class="parameter"><code><a class="link" href="harfbuzz-hb-face.html#hb-face-t" title="hb_face_t"><span class="type">hb_face_t</span></a> *face</code></em>);</pre>
+<p>Calculates the dependencies between glyphs in the supplied face.
+Extracts dependency information from GSUB, glyf, CFF, COLR,
+and MATH tables. UVS (Unicode Variation Sequence) dependencies
+are not included; handle those via <a class="link" href="harfbuzz-hb-font.html#hb-font-get-variation-glyph" title="hb_font_get_variation_glyph ()"><code class="function">hb_font_get_variation_glyph()</code></a>.</p>
+<p>Example:
+<code class="literal">c
+hb_subset_depend_t *depend = hb_subset_depend_from_face_or_fail (face);
+if (!depend) {
+  // Handle error (OOM or invalid face)
+  return;
+}
+// ... use depend ...
+hb_subset_depend_destroy (depend);
+</code></p>
+<div class="refsect3">
+<a name="hb-subset-depend-from-face-or-fail.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>face</p></td>
+<td class="parameter_description"><p>font face to collect dependencies from</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-subset-depend-from-face-or-fail.returns"></a><h4>Returns</h4>
+<p>New depend object, or <code class="literal">nullptr</code> if creation
+failed (out of memory or invalid face). Destroy with <a class="link" href="harfbuzz-hb-subset-depend.html#hb-subset-depend-destroy" title="hb_subset_depend_destroy ()"><code class="function">hb_subset_depend_destroy()</code></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-14-3-0.html#api-index-14.3.0">14.3.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-subset-depend-lookup-glyph"></a><h3>hb_subset_depend_lookup_glyph ()</h3>
+<pre class="programlisting">unsigned <span class="returnvalue">int</span>
+hb_subset_depend_lookup_glyph (<em class="parameter"><code><a class="link" href="harfbuzz-hb-subset-depend.html#hb-subset-depend-t" title="hb_subset_depend_t"><span class="type">hb_subset_depend_t</span></a> *depend</code></em>,
+                               <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> gid</code></em>,
+                               <em class="parameter"><code>unsigned <span class="type">int</span> start_offset</code></em>,
+                               <em class="parameter"><code>unsigned <span class="type">int</span> *entry_count</code></em>,
+                               <em class="parameter"><code><a class="link" href="harfbuzz-hb-subset-depend.html#hb-subset-depend-entry-t" title="hb_subset_depend_entry_t"><span class="type">hb_subset_depend_entry_t</span></a> *entries</code></em>);</pre>
+<p>Retrieve dependency edges for a glyph. Follows the standard HarfBuzz array-getter
+pattern: always returns the total number of edges for <em class="parameter"><code>gid</code></em>
+ regardless of
+<em class="parameter"><code>start_offset</code></em>
+ or <em class="parameter"><code>entry_count</code></em>
+.</p>
+<p>Example (iterate all entries):
+<code class="literal">c
+unsigned int total = hb_subset_depend_lookup_glyph (depend, gid, 0, NULL, NULL);
+for (unsigned int i = 0; i &amp;lt; total; i++) {
+  hb_subset_depend_entry_t entry;
+  unsigned int count = 1;
+  hb_subset_depend_lookup_glyph (depend, gid, i, &amp;amp;count, &amp;amp;entry);
+  // Process entry.table_tag, entry.dependent, etc.
+}
+</code></p>
+<div class="refsect3">
+<a name="hb-subset-depend-lookup-glyph.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>depend</p></td>
+<td class="parameter_description"><p>depend object</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>gid</p></td>
+<td class="parameter_description"><p>GID to retrieve dependencies from</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>start_offset</p></td>
+<td class="parameter_description"><p>offset of first entry to retrieve</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>entry_count</p></td>
+<td class="parameter_description"><p>Input = number of entries to fill; output = number
+actually filled. Pass NULL to query total count without filling. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>entries</p></td>
+<td class="parameter_description"><p>Array to fill with dependency
+edge data. May be NULL if <em class="parameter"><code>entry_count</code></em>
+is also NULL. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=entry_count]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-subset-depend-lookup-glyph.returns"></a><h4>Returns</h4>
+<p> Total number of dependency edges for <em class="parameter"><code>gid</code></em>
+.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-14-3-0.html#api-index-14.3.0">14.3.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-subset-depend-lookup-set"></a><h3>hb_subset_depend_lookup_set ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+hb_subset_depend_lookup_set (<em class="parameter"><code><a class="link" href="harfbuzz-hb-subset-depend.html#hb-subset-depend-t" title="hb_subset_depend_t"><span class="type">hb_subset_depend_t</span></a> *depend</code></em>,
+                             <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> index</code></em>,
+                             <em class="parameter"><code><a class="link" href="harfbuzz-hb-set.html#hb-set-t" title="hb_set_t"><span class="type">hb_set_t</span></a> *out</code></em>);</pre>
+<p>Get all glyphs in a set identified by <em class="parameter"><code>index</code></em>
+.
+The set index comes from the ligature_set_index or context_set_index field
+returned by <a class="link" href="harfbuzz-hb-subset-depend.html#hb-subset-depend-lookup-glyph" title="hb_subset_depend_lookup_glyph ()"><code class="function">hb_subset_depend_lookup_glyph()</code></a>.</p>
+<p>Example:
+<code class="literal">c
+hb_set_t *ligature_glyphs = <a class="link" href="harfbuzz-hb-set.html#hb-set-create" title="hb_set_create ()"><code class="function">hb_set_create()</code></a>;
+if (hb_subset_depend_lookup_set (depend, entry.ligature_set_index, ligature_glyphs)) {
+  // Process glyphs in the set...
+}
+hb_set_destroy (ligature_glyphs);
+</code></p>
+<div class="refsect3">
+<a name="hb-subset-depend-lookup-set.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>depend</p></td>
+<td class="parameter_description"><p>depend object</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>index</p></td>
+<td class="parameter_description"><p>the index of the set</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>out</p></td>
+<td class="parameter_description"><p>A pointer to a set to copy into. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-subset-depend-lookup-set.returns"></a><h4>Returns</h4>
+<p> true if there is such a set, false otherwise</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-14-3-0.html#api-index-14.3.0">14.3.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-subset-depend-destroy"></a><h3>hb_subset_depend_destroy ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_subset_depend_destroy (<em class="parameter"><code><a class="link" href="harfbuzz-hb-subset-depend.html#hb-subset-depend-t" title="hb_subset_depend_t"><span class="type">hb_subset_depend_t</span></a> *depend</code></em>);</pre>
+<p>Decreases the reference count on <em class="parameter"><code>depend</code></em>
+, and if it reaches zero, destroys
+<em class="parameter"><code>depend</code></em>
+, freeing all memory.</p>
+<div class="refsect3">
+<a name="hb-subset-depend-destroy.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>depend</p></td>
+<td class="parameter_description"><p>a <a class="link" href="harfbuzz-hb-subset-depend.html#hb-subset-depend-t" title="hb_subset_depend_t"><span class="type">hb_subset_depend_t</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-14-3-0.html#api-index-14.3.0">14.3.0</a></p>
+</div>
+</div>
+<div class="refsect1">
+<a name="harfbuzz-hb-subset-depend.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="hb-subset-depend-t"></a><h3>hb_subset_depend_t</h3>
+<pre class="programlisting">typedef struct hb_subset_depend_t hb_subset_depend_t;
+</pre>
+<p>Data type for holding glyph dependency graphs.</p>
+<div class="warning">Highly experimental API. Subject to change.</div>
+<p class="since">Since: <a class="link" href="api-index-14-3-0.html#api-index-14.3.0">14.3.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-subset-depend-entry-t"></a><h3>hb_subset_depend_entry_t</h3>
+<pre class="programlisting">typedef struct {
+  hb_tag_t table_tag;
+  hb_codepoint_t dependent;
+  hb_tag_t layout_tag;
+  hb_codepoint_t ligature_set_index;
+  hb_codepoint_t context_set_index;
+  hb_subset_depend_edge_flags_t flags;
+} hb_subset_depend_entry_t;
+</pre>
+<p>A single dependency edge returned by <a class="link" href="harfbuzz-hb-subset-depend.html#hb-subset-depend-lookup-glyph" title="hb_subset_depend_lookup_glyph ()"><code class="function">hb_subset_depend_lookup_glyph()</code></a>.</p>
+<div class="refsect3">
+<a name="hb-subset-depend-entry-t.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="type">hb_tag_t</span></a> <em class="structfield"><code><a name="hb-subset-depend-entry-t.table-tag"></a>table_tag</code></em>;</p></td>
+<td class="struct_member_description"><p>Source table (e.g. GSUB, glyf, CFF, COLR, MATH).</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> <em class="structfield"><code><a name="hb-subset-depend-entry-t.dependent"></a>dependent</code></em>;</p></td>
+<td class="struct_member_description"><p>Target glyph ID.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="type">hb_tag_t</span></a> <em class="structfield"><code><a name="hb-subset-depend-entry-t.layout-tag"></a>layout_tag</code></em>;</p></td>
+<td class="struct_member_description"><p>Feature tag for GSUB edges; 0 otherwise.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> <em class="structfield"><code><a name="hb-subset-depend-entry-t.ligature-set-index"></a>ligature_set_index</code></em>;</p></td>
+<td class="struct_member_description"><p>Index into the sets array for ligature component
+glyphs, or <a class="link" href="harfbuzz-hb-common.html#HB-CODEPOINT-INVALID:CAPS" title="HB_CODEPOINT_INVALID"><span class="type">HB_CODEPOINT_INVALID</span></a> if not a ligature edge.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="harfbuzz-hb-common.html#hb-codepoint-t" title="hb_codepoint_t"><span class="type">hb_codepoint_t</span></a> <em class="structfield"><code><a name="hb-subset-depend-entry-t.context-set-index"></a>context_set_index</code></em>;</p></td>
+<td class="struct_member_description"><p>Index into the sets array for context requirement
+glyphs, or <a class="link" href="harfbuzz-hb-common.html#HB-CODEPOINT-INVALID:CAPS" title="HB_CODEPOINT_INVALID"><span class="type">HB_CODEPOINT_INVALID</span></a> if none. Use <a class="link" href="harfbuzz-hb-subset-depend.html#hb-subset-depend-lookup-set" title="hb_subset_depend_lookup_set ()"><code class="function">hb_subset_depend_lookup_set()</code></a>
+to retrieve the set.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="harfbuzz-hb-subset-depend.html#hb-subset-depend-edge-flags-t" title="enum hb_subset_depend_edge_flags_t"><span class="type">hb_subset_depend_edge_flags_t</span></a> <em class="structfield"><code><a name="hb-subset-depend-entry-t.flags"></a>flags</code></em>;</p></td>
+<td class="struct_member_description"><p>Edge flags (<a class="link" href="harfbuzz-hb-subset-depend.html#hb-subset-depend-edge-flags-t" title="enum hb_subset_depend_edge_flags_t"><span class="type">hb_subset_depend_edge_flags_t</span></a>).</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-14-3-0.html#api-index-14.3.0">14.3.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-subset-depend-edge-flags-t"></a><h3>enum hb_subset_depend_edge_flags_t</h3>
+<p>Flags on dependency edges returned by <a class="link" href="harfbuzz-hb-subset-depend.html#hb-subset-depend-lookup-glyph" title="hb_subset_depend_lookup_glyph ()"><code class="function">hb_subset_depend_lookup_glyph()</code></a> that
+mark edges which may produce expected over-approximation when computing
+closure via the depend graph, relative to
+<a class="link" href="harfbuzz-hb-ot-layout.html#hb-ot-layout-lookups-substitute-closure" title="hb_ot_layout_lookups_substitute_closure ()"><code class="function">hb_ot_layout_lookups_substitute_closure()</code></a>. These flags help distinguish
+known limitations of static dependency analysis (expected over-approximation)
+from bugs (unexpected over-approximation).</p>
+<div class="refsect3">
+<a name="hb-subset-depend-edge-flags-t.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="HB-SUBSET-DEPEND-EDGE-FLAG-NONE:CAPS"></a>HB_SUBSET_DEPEND_EDGE_FLAG_NONE</p></td>
+<td class="enum_member_description">
+<p>No flags set.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HB-SUBSET-DEPEND-EDGE-FLAG-FROM-CONTEXT-POSITION:CAPS"></a>HB_SUBSET_DEPEND_EDGE_FLAG_FROM_CONTEXT_POSITION</p></td>
+<td class="enum_member_description">
+<p>Edge from a multi-position
+contextual rule (Context or ChainContext with inputCount &gt; 1). Depend
+extraction records edges based on what glyphs could statically be at each
+position according to input coverage or class. However, at runtime lookups
+within the rule are applied sequentially: a lookup at an earlier position
+may transform the glyph at a later position, and two lookups at the same
+position may interact such that one produces a glyph that another
+immediately consumes as an "intermediate". A glyph that matches the static
+coverage may therefore not persist at that position when the rule actually
+fires, so this edge may not trigger during closure.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HB-SUBSET-DEPEND-EDGE-FLAG-FROM-NESTED-CONTEXT:CAPS"></a>HB_SUBSET_DEPEND_EDGE_FLAG_FROM_NESTED_CONTEXT</p></td>
+<td class="enum_member_description">
+<p>Edge from a lookup invoked
+within another contextual lookup. The outer context's requirements are not
+propagated to this edge, so the edge may fire even when those requirements
+are not met.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-14-3-0.html#api-index-14.3.0">14.3.0</a></p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.34.0</div>
+</body>
+</html>

@@ -1,0 +1,306 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>hb-ot-fetch: HarfBuzz Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="HarfBuzz Manual">
+<link rel="up" href="opentype-api.html" title="OpenType API">
+<link rel="prev" href="harfbuzz-hb-ot-var.html" title="hb-ot-var">
+<link rel="next" href="apple-advanced-typography-api.html" title="Apple Advanced Typography API">
+<meta name="generator" content="GTK-Doc V1.34.0 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#harfbuzz-hb-ot-fetch.description" class="shortcut">Description</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="opentype-api.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="harfbuzz-hb-ot-var.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="apple-advanced-typography-api.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="harfbuzz-hb-ot-fetch"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="harfbuzz-hb-ot-fetch.top_of_page"></a>hb-ot-fetch</span></h2>
+<p>hb-ot-fetch — OpenType bit fields and numbers</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="harfbuzz-hb-ot-fetch.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<span class="returnvalue">uint32_t</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-ot-fetch.html#hb-ot-fetch-bits" title="hb_ot_fetch_bits ()">hb_ot_fetch_bits</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">int32_t</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-ot-fetch.html#hb-ot-fetch-number" title="hb_ot_fetch_number ()">hb_ot_fetch_number</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="harfbuzz-hb-ot-fetch.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="harfbuzz-hb-ot-fetch.html#hb-ot-bits-tag-t" title="enum hb_ot_bits_tag_t">hb_ot_bits_tag_t</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="harfbuzz-hb-ot-fetch.html#hb-ot-number-tag-t" title="enum hb_ot_number_tag_t">hb_ot_number_tag_t</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="harfbuzz-hb-ot-fetch.includes"></a><h2>Includes</h2>
+<pre class="synopsis">#include &lt;hb-ot.h&gt;
+</pre>
+</div>
+<div class="refsect1">
+<a name="harfbuzz-hb-ot-fetch.description"></a><h2>Description</h2>
+<p>Functions for fetching various bit fields and numbers scattered around
+OpenType tables.</p>
+<p>These are raw table values, and many of them are legacy or unreliable, but
+applications might need them for various legacy reasons.</p>
+</div>
+<div class="refsect1">
+<a name="harfbuzz-hb-ot-fetch.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="hb-ot-fetch-bits"></a><h3>hb_ot_fetch_bits ()</h3>
+<pre class="programlisting"><span class="returnvalue">uint32_t</span>
+hb_ot_fetch_bits (<em class="parameter"><code><a class="link" href="harfbuzz-hb-face.html#hb-face-t" title="hb_face_t"><span class="type">hb_face_t</span></a> *face</code></em>,
+                  <em class="parameter"><code><a class="link" href="harfbuzz-hb-ot-fetch.html#hb-ot-bits-tag-t" title="enum hb_ot_bits_tag_t"><span class="type">hb_ot_bits_tag_t</span></a> tag</code></em>);</pre>
+<p>Fetches a bit field of <em class="parameter"><code>face</code></em>
+.</p>
+<div class="refsect3">
+<a name="hb-ot-fetch-bits.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>face</p></td>
+<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-face.html#hb-face-t" title="hb_face_t"><span class="type">hb_face_t</span></a> to work upon</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tag</p></td>
+<td class="parameter_description"><p>tag of the bit field to fetch</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-ot-fetch-bits.returns"></a><h4>Returns</h4>
+<p> the bit field, or zero if the font does not have it.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-14-3-0.html#api-index-14.3.0">14.3.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-ot-fetch-number"></a><h3>hb_ot_fetch_number ()</h3>
+<pre class="programlisting"><span class="returnvalue">int32_t</span>
+hb_ot_fetch_number (<em class="parameter"><code><a class="link" href="harfbuzz-hb-face.html#hb-face-t" title="hb_face_t"><span class="type">hb_face_t</span></a> *face</code></em>,
+                    <em class="parameter"><code><a class="link" href="harfbuzz-hb-ot-fetch.html#hb-ot-number-tag-t" title="enum hb_ot_number_tag_t"><span class="type">hb_ot_number_tag_t</span></a> tag</code></em>);</pre>
+<p>Fetches a number of <em class="parameter"><code>face</code></em>
+ in font units.</p>
+<div class="refsect3">
+<a name="hb-ot-fetch-number.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>face</p></td>
+<td class="parameter_description"><p><a class="link" href="harfbuzz-hb-face.html#hb-face-t" title="hb_face_t"><span class="type">hb_face_t</span></a> to work upon</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tag</p></td>
+<td class="parameter_description"><p>tag of the number to fetch</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-ot-fetch-number.returns"></a><h4>Returns</h4>
+<p> the number, or zero if the font does not have it.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-14-3-0.html#api-index-14.3.0">14.3.0</a></p>
+</div>
+</div>
+<div class="refsect1">
+<a name="harfbuzz-hb-ot-fetch.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="hb-ot-bits-tag-t"></a><h3>enum hb_ot_bits_tag_t</h3>
+<p>Bit fields that can be fetched with <a class="link" href="harfbuzz-hb-ot-fetch.html#hb-ot-fetch-bits" title="hb_ot_fetch_bits ()"><code class="function">hb_ot_fetch_bits()</code></a>.</p>
+<div class="refsect3">
+<a name="hb-ot-bits-tag-t.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="HB-OT-BITS-TAG-FS-TYPE:CAPS"></a>HB_OT_BITS_TAG_FS_TYPE</p></td>
+<td class="enum_member_description">
+<p><code class="literal">fsType</code> of the <code class="literal">OS/2</code> table.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HB-OT-BITS-TAG-FS-SELECTION:CAPS"></a>HB_OT_BITS_TAG_FS_SELECTION</p></td>
+<td class="enum_member_description">
+<p><code class="literal">fsSelection</code> of the <code class="literal">OS/2</code> table.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HB-OT-BITS-TAG-MAC-STYLE:CAPS"></a>HB_OT_BITS_TAG_MAC_STYLE</p></td>
+<td class="enum_member_description">
+<p><code class="literal">macStyle</code> of the <code class="literal">head</code> table.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HB-OT-BITS-TAG-IS-FIXED-PITCH:CAPS"></a>HB_OT_BITS_TAG_IS_FIXED_PITCH</p></td>
+<td class="enum_member_description">
+<p><code class="literal">isFixedPitch</code> of the <code class="literal">post</code> table.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HB-OT-BITS-TAG-UNICODE-RANGE-1:CAPS"></a>HB_OT_BITS_TAG_UNICODE_RANGE_1</p></td>
+<td class="enum_member_description">
+<p><code class="literal">ulUnicodeRange1</code> of the <code class="literal">OS/2</code> table.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HB-OT-BITS-TAG-UNICODE-RANGE-2:CAPS"></a>HB_OT_BITS_TAG_UNICODE_RANGE_2</p></td>
+<td class="enum_member_description">
+<p><code class="literal">ulUnicodeRange2</code> of the <code class="literal">OS/2</code> table.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HB-OT-BITS-TAG-UNICODE-RANGE-3:CAPS"></a>HB_OT_BITS_TAG_UNICODE_RANGE_3</p></td>
+<td class="enum_member_description">
+<p><code class="literal">ulUnicodeRange3</code> of the <code class="literal">OS/2</code> table.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HB-OT-BITS-TAG-UNICODE-RANGE-4:CAPS"></a>HB_OT_BITS_TAG_UNICODE_RANGE_4</p></td>
+<td class="enum_member_description">
+<p><code class="literal">ulUnicodeRange4</code> of the <code class="literal">OS/2</code> table.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HB-OT-BITS-TAG-CODE-PAGE-RANGE-1:CAPS"></a>HB_OT_BITS_TAG_CODE_PAGE_RANGE_1</p></td>
+<td class="enum_member_description">
+<p><code class="literal">ulCodePageRange1</code> of the <code class="literal">OS/2</code> table.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HB-OT-BITS-TAG-CODE-PAGE-RANGE-2:CAPS"></a>HB_OT_BITS_TAG_CODE_PAGE_RANGE_2</p></td>
+<td class="enum_member_description">
+<p><code class="literal">ulCodePageRange2</code> of the <code class="literal">OS/2</code> table.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-14-3-0.html#api-index-14.3.0">14.3.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-ot-number-tag-t"></a><h3>enum hb_ot_number_tag_t</h3>
+<p>Numbers that can be fetched with <a class="link" href="harfbuzz-hb-ot-fetch.html#hb-ot-fetch-number" title="hb_ot_fetch_number ()"><code class="function">hb_ot_fetch_number()</code></a>.</p>
+<div class="refsect3">
+<a name="hb-ot-number-tag-t.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="HB-OT-NUMBER-TAG-FONT-X-MIN:CAPS"></a>HB_OT_NUMBER_TAG_FONT_X_MIN</p></td>
+<td class="enum_member_description">
+<p><code class="literal">xMin</code> of the <code class="literal">head</code> table.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HB-OT-NUMBER-TAG-FONT-Y-MIN:CAPS"></a>HB_OT_NUMBER_TAG_FONT_Y_MIN</p></td>
+<td class="enum_member_description">
+<p><code class="literal">yMin</code> of the <code class="literal">head</code> table.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HB-OT-NUMBER-TAG-FONT-X-MAX:CAPS"></a>HB_OT_NUMBER_TAG_FONT_X_MAX</p></td>
+<td class="enum_member_description">
+<p><code class="literal">xMax</code> of the <code class="literal">head</code> table.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HB-OT-NUMBER-TAG-FONT-Y-MAX:CAPS"></a>HB_OT_NUMBER_TAG_FONT_Y_MAX</p></td>
+<td class="enum_member_description">
+<p><code class="literal">yMax</code> of the <code class="literal">head</code> table.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-14-3-0.html#api-index-14.3.0">14.3.0</a></p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.34.0</div>
+</body>
+</html>

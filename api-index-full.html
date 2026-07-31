@@ -6,7 +6,7 @@
 <meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
 <link rel="home" href="index.html" title="HarfBuzz Manual">
 <link rel="up" href="reference-manual.html" title="Part II. Reference manual">
-<link rel="prev" href="harfbuzz-hb-uniscribe.html" title="hb-uniscribe">
+<link rel="prev" href="harfbuzz-hb-subset-depend.html" title="hb-subset-depend">
 <link rel="next" href="deprecated-api-index.html" title="Index of deprecated API">
 <meta name="generator" content="GTK-Doc V1.34.0 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
@@ -48,7 +48,7 @@
                   <a class="shortcut" href="#idxV">V</a></span></td>
 <td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
 <td><a accesskey="u" href="reference-manual.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
-<td><a accesskey="p" href="harfbuzz-hb-uniscribe.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="p" href="harfbuzz-hb-subset-depend.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
 <td><a accesskey="n" href="deprecated-api-index.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
 </tr></table>
 <div class="index">
@@ -2030,6 +2030,10 @@
 <dd></dd>
 <a name="idxO"></a><h3 class="title">O</h3>
 <dt>
+<a class="link" href="harfbuzz-hb-ot-fetch.html#hb-ot-bits-tag-t" title="enum hb_ot_bits_tag_t">hb_ot_bits_tag_t</a>, enum in <a class="link" href="harfbuzz-hb-ot-fetch.html" title="hb-ot-fetch">hb-ot-fetch</a>
+</dt>
+<dd></dd>
+<dt>
 <a class="link" href="harfbuzz-hb-ot-color.html#hb-ot-color-get-svg-document-count" title="hb_ot_color_get_svg_document_count ()">hb_ot_color_get_svg_document_count</a>, function in <a class="link" href="harfbuzz-hb-ot-color.html" title="hb-ot-color">hb-ot-color</a>
 </dt>
 <dd></dd>
@@ -2103,6 +2107,14 @@
 <dd></dd>
 <dt>
 <a class="link" href="harfbuzz-hb-ot-color.html#hb-ot-color-palette-get-name-id" title="hb_ot_color_palette_get_name_id ()">hb_ot_color_palette_get_name_id</a>, function in <a class="link" href="harfbuzz-hb-ot-color.html" title="hb-ot-color">hb-ot-color</a>
+</dt>
+<dd></dd>
+<dt>
+<a class="link" href="harfbuzz-hb-ot-fetch.html#hb-ot-fetch-bits" title="hb_ot_fetch_bits ()">hb_ot_fetch_bits</a>, function in <a class="link" href="harfbuzz-hb-ot-fetch.html" title="hb-ot-fetch">hb-ot-fetch</a>
+</dt>
+<dd></dd>
+<dt>
+<a class="link" href="harfbuzz-hb-ot-fetch.html#hb-ot-fetch-number" title="hb_ot_fetch_number ()">hb_ot_fetch_number</a>, function in <a class="link" href="harfbuzz-hb-ot-fetch.html" title="hb-ot-fetch">hb-ot-fetch</a>
 </dt>
 <dd></dd>
 <dt>
@@ -2454,6 +2466,10 @@
 </dt>
 <dd></dd>
 <dt>
+<a class="link" href="harfbuzz-hb-ot-fetch.html#hb-ot-number-tag-t" title="enum hb_ot_number_tag_t">hb_ot_number_tag_t</a>, enum in <a class="link" href="harfbuzz-hb-ot-fetch.html" title="hb-ot-fetch">hb-ot-fetch</a>
+</dt>
+<dd></dd>
+<dt>
 <a class="link" href="harfbuzz-hb-ot-shape.html#HB-OT-SHAPE-BUFFER-FORMAT-SERIAL:CAPS" title="HB_OT_SHAPE_BUFFER_FORMAT_SERIAL">HB_OT_SHAPE_BUFFER_FORMAT_SERIAL</a>, macro in <a class="link" href="harfbuzz-hb-ot-shape.html" title="hb-ot-shape">hb-ot-shape</a>
 </dt>
 <dd></dd>
@@ -2651,6 +2667,14 @@
 </dt>
 <dd></dd>
 <dt>
+<a class="link" href="harfbuzz-hb-paint.html#hb-paint-fill-glyph" title="hb_paint_fill_glyph ()">hb_paint_fill_glyph</a>, function in <a class="link" href="harfbuzz-hb-paint.html" title="hb-paint">hb-paint</a>
+</dt>
+<dd></dd>
+<dt>
+<a class="link" href="harfbuzz-hb-paint.html#hb-paint-fill-glyph-func-t" title="hb_paint_fill_glyph_func_t ()">hb_paint_fill_glyph_func_t</a>, user_function in <a class="link" href="harfbuzz-hb-paint.html" title="hb-paint">hb-paint</a>
+</dt>
+<dd></dd>
+<dt>
 <a class="link" href="harfbuzz-hb-paint.html#hb-paint-funcs-create" title="hb_paint_funcs_create ()">hb_paint_funcs_create</a>, function in <a class="link" href="harfbuzz-hb-paint.html" title="hb-paint">hb-paint</a>
 </dt>
 <dd></dd>
@@ -2688,6 +2712,10 @@
 <dd></dd>
 <dt>
 <a class="link" href="harfbuzz-hb-paint.html#hb-paint-funcs-set-custom-palette-color-func" title="hb_paint_funcs_set_custom_palette_color_func ()">hb_paint_funcs_set_custom_palette_color_func</a>, function in <a class="link" href="harfbuzz-hb-paint.html" title="hb-paint">hb-paint</a>
+</dt>
+<dd></dd>
+<dt>
+<a class="link" href="harfbuzz-hb-paint.html#hb-paint-funcs-set-fill-glyph-func" title="hb_paint_funcs_set_fill_glyph_func ()">hb_paint_funcs_set_fill_glyph_func</a>, function in <a class="link" href="harfbuzz-hb-paint.html" title="hb-paint">hb-paint</a>
 </dt>
 <dd></dd>
 <dt>
@@ -3426,6 +3454,34 @@
 <dd></dd>
 <dt>
 <a class="link" href="harfbuzz-hb-subset.html#hb-subset-axis-range-to-string" title="hb_subset_axis_range_to_string ()">hb_subset_axis_range_to_string</a>, function in <a class="link" href="harfbuzz-hb-subset.html" title="hb-subset">hb-subset</a>
+</dt>
+<dd></dd>
+<dt>
+<a class="link" href="harfbuzz-hb-subset-depend.html#hb-subset-depend-destroy" title="hb_subset_depend_destroy ()">hb_subset_depend_destroy</a>, function in <a class="link" href="harfbuzz-hb-subset-depend.html" title="hb-subset-depend">hb-subset-depend</a>
+</dt>
+<dd></dd>
+<dt>
+<a class="link" href="harfbuzz-hb-subset-depend.html#hb-subset-depend-edge-flags-t" title="enum hb_subset_depend_edge_flags_t">hb_subset_depend_edge_flags_t</a>, enum in <a class="link" href="harfbuzz-hb-subset-depend.html" title="hb-subset-depend">hb-subset-depend</a>
+</dt>
+<dd></dd>
+<dt>
+<a class="link" href="harfbuzz-hb-subset-depend.html#hb-subset-depend-entry-t" title="hb_subset_depend_entry_t">hb_subset_depend_entry_t</a>, struct in <a class="link" href="harfbuzz-hb-subset-depend.html" title="hb-subset-depend">hb-subset-depend</a>
+</dt>
+<dd></dd>
+<dt>
+<a class="link" href="harfbuzz-hb-subset-depend.html#hb-subset-depend-from-face-or-fail" title="hb_subset_depend_from_face_or_fail ()">hb_subset_depend_from_face_or_fail</a>, function in <a class="link" href="harfbuzz-hb-subset-depend.html" title="hb-subset-depend">hb-subset-depend</a>
+</dt>
+<dd></dd>
+<dt>
+<a class="link" href="harfbuzz-hb-subset-depend.html#hb-subset-depend-lookup-glyph" title="hb_subset_depend_lookup_glyph ()">hb_subset_depend_lookup_glyph</a>, function in <a class="link" href="harfbuzz-hb-subset-depend.html" title="hb-subset-depend">hb-subset-depend</a>
+</dt>
+<dd></dd>
+<dt>
+<a class="link" href="harfbuzz-hb-subset-depend.html#hb-subset-depend-lookup-set" title="hb_subset_depend_lookup_set ()">hb_subset_depend_lookup_set</a>, function in <a class="link" href="harfbuzz-hb-subset-depend.html" title="hb-subset-depend">hb-subset-depend</a>
+</dt>
+<dd></dd>
+<dt>
+<a class="link" href="harfbuzz-hb-subset-depend.html#hb-subset-depend-t" title="hb_subset_depend_t">hb_subset_depend_t</a>, typedef in <a class="link" href="harfbuzz-hb-subset-depend.html" title="hb-subset-depend">hb-subset-depend</a>
 </dt>
 <dd></dd>
 <dt>

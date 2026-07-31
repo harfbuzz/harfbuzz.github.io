@@ -738,8 +738,7 @@ hb_subset_input_pin_all_axes_to_default
                                (<em class="parameter"><code><a class="link" href="harfbuzz-hb-subset.html#hb-subset-input-t" title="hb_subset_input_t"><span class="type">hb_subset_input_t</span></a> *input</code></em>,
                                 <em class="parameter"><code><a class="link" href="harfbuzz-hb-face.html#hb-face-t" title="hb_face_t"><span class="type">hb_face_t</span></a> *face</code></em>);</pre>
 <p>Pin all axes to default locations in the given subset input object.</p>
-<p>All axes in a font must be pinned. Additionally, <code class="literal">CFF2</code> table, if present,
-will be de-subroutinized.</p>
+<p>The <code class="literal">CFF2</code> table, if present, will be de-subroutinized.</p>
 <p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
 <a name="hb-subset-input-pin-all-axes-to-default.parameters"></a><h4>Parameters</h4>
@@ -778,8 +777,7 @@ hb_subset_input_pin_axis_location (<em class="parameter"><code><a class="link" h
                                    <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="type">hb_tag_t</span></a> axis_tag</code></em>,
                                    <em class="parameter"><code><span class="type">float</span> axis_value</code></em>);</pre>
 <p>Pin an axis to a fixed location in the given subset input object.</p>
-<p>All axes in a font must be pinned. Additionally, <code class="literal">CFF2</code> table, if present,
-will be de-subroutinized.</p>
+<p>The <code class="literal">CFF2</code> table, if present, will be de-subroutinized.</p>
 <p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
 <a name="hb-subset-input-pin-axis-location.parameters"></a><h4>Parameters</h4>
@@ -827,8 +825,7 @@ hb_subset_input_pin_axis_to_default (<em class="parameter"><code><a class="link"
                                      <em class="parameter"><code><a class="link" href="harfbuzz-hb-face.html#hb-face-t" title="hb_face_t"><span class="type">hb_face_t</span></a> *face</code></em>,
                                      <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-tag-t" title="hb_tag_t"><span class="type">hb_tag_t</span></a> axis_tag</code></em>);</pre>
 <p>Pin an axis to its default location in the given subset input object.</p>
-<p>All axes in a font must be pinned. Additionally, <code class="literal">CFF2</code> table, if present,
-will be de-subroutinized.</p>
+<p>The <code class="literal">CFF2</code> table, if present, will be de-subroutinized.</p>
 <p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
 <a name="hb-subset-input-pin-axis-to-default.parameters"></a><h4>Parameters</h4>
@@ -1651,9 +1648,18 @@ included at the end of the font to keep the number of glyphs unchanged.</p>
 <tr>
 <td class="enum_member_name"><p><a name="HB-SUBSET-FLAGS-DOWNGRADE-CFF2:CAPS"></a>HB_SUBSET_FLAGS_DOWNGRADE_CFF2</p></td>
 <td class="enum_member_description">
-<p>If set and instantiating a variable font,
-convert the output CFF2 table to CFF1. This enables compatibility with older
-renderers that don't support CFF2. Since: 13.0.0</p>
+<p>If set and instantiating a variable font
+with all axes pinned, convert the output CFF2 table to CFF1. This enables
+compatibility with older renderers that don't support CFF2. Since: 13.0.0</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HB-SUBSET-FLAGS-CFF-IDENTITY-CHARSET:CAPS"></a>HB_SUBSET_FLAGS_CFF_IDENTITY_CHARSET</p></td>
+<td class="enum_member_description">
+<p>If set and subsetting a CID-keyed CFF
+font, the output CFF charset will use sequential identity CIDs (CID = new
+GID) rather than preserving the original CIDs. Since: 14.3.0</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>

@@ -3901,8 +3901,8 @@ the font's user-data with <em class="parameter"><code>font</code></em>
 </tr>
 <tr>
 <td class="parameter_name"><p>klass</p></td>
-<td class="parameter_description"><p>The font-functions structure. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym> font_data][<acronym title="This parameter is a 'destroy_data', for callbacks."><span class="acronym">destroy</span></acronym> destroy][<acronym title="The callback is valid until the GDestroyNotify argument is called."><span class="acronym">scope notified</span></acronym>]</span></td>
+<td class="parameter_description"><p>The font-functions structure.</p></td>
+<td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>font_data</p></td>
@@ -3914,7 +3914,7 @@ the font's user-data with <em class="parameter"><code>font</code></em>
 <td class="parameter_name"><p>destroy</p></td>
 <td class="parameter_description"><p>The function to call when <em class="parameter"><code>font_data</code></em>
 is not needed anymore. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>][<acronym title="The callback is valid until first called."><span class="acronym">scope async</span></acronym>][<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym> font_data]</span></td>
 </tr>
 </tbody>
 </table></div>
@@ -3948,14 +3948,14 @@ hb_font_set_funcs_data (<em class="parameter"><code><a class="link" href="harfbu
 <tr>
 <td class="parameter_name"><p>font_data</p></td>
 <td class="parameter_description"><p>Data to attach to <em class="parameter"><code>font</code></em>
-. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="This parameter is a 'destroy_data', for callbacks."><span class="acronym">destroy</span></acronym> destroy][<acronym title="The callback is valid until the GDestroyNotify argument is called."><span class="acronym">scope notified</span></acronym>]</span></td>
+</p></td>
+<td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>destroy</p></td>
 <td class="parameter_description"><p>The function to call when <em class="parameter"><code>font_data</code></em>
 is not needed anymore. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>][<acronym title="The callback is valid until first called."><span class="acronym">scope async</span></acronym>][<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym> font_data]</span></td>
 </tr>
 </tbody>
 </table></div>

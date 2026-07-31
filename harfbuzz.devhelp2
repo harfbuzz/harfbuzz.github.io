@@ -121,6 +121,7 @@
         <sub name="hb-ot-name" link="harfbuzz-hb-ot-name.html"/>
         <sub name="hb-ot-shape" link="harfbuzz-hb-ot-shape.html"/>
         <sub name="hb-ot-var" link="harfbuzz-hb-ot-var.html"/>
+        <sub name="hb-ot-fetch" link="harfbuzz-hb-ot-fetch.html"/>
       </sub>
       <sub name="Apple Advanced Typography API" link="apple-advanced-typography-api.html">
         <sub name="hb-aat-layout" link="harfbuzz-hb-aat-layout.html"/>
@@ -148,8 +149,12 @@
         <sub name="hb-icu" link="harfbuzz-hb-icu.html"/>
         <sub name="hb-uniscribe" link="harfbuzz-hb-uniscribe.html"/>
       </sub>
+      <sub name="Depend API" link="depend-api.html">
+        <sub name="hb-subset-depend" link="harfbuzz-hb-subset-depend.html"/>
+      </sub>
       <sub name="API Index" link="api-index-full.html"/>
       <sub name="Index of deprecated API" link="deprecated-api-index.html"/>
+      <sub name="Index of new symbols in 14.3.0" link="api-index-14-3-0.html"/>
       <sub name="Index of new symbols in 14.2.0" link="api-index-14-2-0.html"/>
       <sub name="Index of new symbols in 14.1.0" link="api-index-14-1-0.html"/>
       <sub name="Index of new symbols in 14.0.0" link="api-index-14-0-0.html"/>
@@ -446,6 +451,8 @@
     <keyword type="function" name="hb_paint_funcs_set_pop_transform_func ()" link="harfbuzz-hb-paint.html#hb-paint-funcs-set-pop-transform-func" since="7.0.0"/>
     <keyword type="function" name="hb_paint_color_glyph_func_t ()" link="harfbuzz-hb-paint.html#hb-paint-color-glyph-func-t" since="8.2.0"/>
     <keyword type="function" name="hb_paint_funcs_set_color_glyph_func ()" link="harfbuzz-hb-paint.html#hb-paint-funcs-set-color-glyph-func" since="8.2.0"/>
+    <keyword type="function" name="hb_paint_fill_glyph_func_t ()" link="harfbuzz-hb-paint.html#hb-paint-fill-glyph-func-t" since="14.3.0"/>
+    <keyword type="function" name="hb_paint_funcs_set_fill_glyph_func ()" link="harfbuzz-hb-paint.html#hb-paint-funcs-set-fill-glyph-func" since="14.3.0"/>
     <keyword type="function" name="hb_paint_push_clip_glyph_func_t ()" link="harfbuzz-hb-paint.html#hb-paint-push-clip-glyph-func-t" since="7.0.0"/>
     <keyword type="function" name="hb_paint_funcs_set_push_clip_glyph_func ()" link="harfbuzz-hb-paint.html#hb-paint-funcs-set-push-clip-glyph-func" since="7.0.0"/>
     <keyword type="function" name="hb_paint_push_clip_rectangle_func_t ()" link="harfbuzz-hb-paint.html#hb-paint-push-clip-rectangle-func-t" since="7.0.0"/>
@@ -483,6 +490,7 @@
     <keyword type="function" name="hb_paint_push_inverse_font_transform ()" link="harfbuzz-hb-paint.html#hb-paint-push-inverse-font-transform" since="11.0.0"/>
     <keyword type="function" name="hb_paint_pop_transform ()" link="harfbuzz-hb-paint.html#hb-paint-pop-transform" since="7.0.0"/>
     <keyword type="function" name="hb_paint_color_glyph ()" link="harfbuzz-hb-paint.html#hb-paint-color-glyph" since="8.2.0"/>
+    <keyword type="function" name="hb_paint_fill_glyph ()" link="harfbuzz-hb-paint.html#hb-paint-fill-glyph" since="14.3.0"/>
     <keyword type="function" name="hb_paint_push_clip_glyph ()" link="harfbuzz-hb-paint.html#hb-paint-push-clip-glyph" since="7.0.0"/>
     <keyword type="function" name="hb_paint_push_clip_rectangle ()" link="harfbuzz-hb-paint.html#hb-paint-push-clip-rectangle" since="7.0.0"/>
     <keyword type="function" name="hb_paint_push_clip_path_start ()" link="harfbuzz-hb-paint.html#hb-paint-push-clip-path-start" since="14.2.0"/>
@@ -971,6 +979,10 @@
     <keyword type="macro" name="HB_OT_TAG_VAR_AXIS_WIDTH" link="harfbuzz-hb-ot-var.html#HB-OT-TAG-VAR-AXIS-WIDTH:CAPS"/>
     <keyword type="enum" name="enum hb_ot_var_axis_flags_t" link="harfbuzz-hb-ot-var.html#hb-ot-var-axis-flags-t" since="2.2.0"/>
     <keyword type="struct" name="hb_ot_var_axis_info_t" link="harfbuzz-hb-ot-var.html#hb-ot-var-axis-info-t" since="2.2.0"/>
+    <keyword type="function" name="hb_ot_fetch_bits ()" link="harfbuzz-hb-ot-fetch.html#hb-ot-fetch-bits" since="14.3.0"/>
+    <keyword type="function" name="hb_ot_fetch_number ()" link="harfbuzz-hb-ot-fetch.html#hb-ot-fetch-number" since="14.3.0"/>
+    <keyword type="enum" name="enum hb_ot_bits_tag_t" link="harfbuzz-hb-ot-fetch.html#hb-ot-bits-tag-t" since="14.3.0"/>
+    <keyword type="enum" name="enum hb_ot_number_tag_t" link="harfbuzz-hb-ot-fetch.html#hb-ot-number-tag-t" since="14.3.0"/>
     <keyword type="function" name="hb_aat_layout_feature_type_get_name_id ()" link="harfbuzz-hb-aat-layout.html#hb-aat-layout-feature-type-get-name-id" since="2.2.0"/>
     <keyword type="function" name="hb_aat_layout_feature_type_get_selector_infos ()" link="harfbuzz-hb-aat-layout.html#hb-aat-layout-feature-type-get-selector-infos" since="2.2.0"/>
     <keyword type="function" name="hb_aat_layout_get_feature_types ()" link="harfbuzz-hb-aat-layout.html#hb-aat-layout-get-feature-types" since="2.2.0"/>
@@ -1241,6 +1253,13 @@
     <keyword type="function" name="hb_icu_script_to_script ()" link="harfbuzz-hb-icu.html#hb-icu-script-to-script"/>
     <keyword type="function" name="hb_uniscribe_font_get_hfont ()" link="harfbuzz-hb-uniscribe.html#hb-uniscribe-font-get-hfont"/>
     <keyword type="function" name="hb_uniscribe_font_get_logfontw ()" link="harfbuzz-hb-uniscribe.html#hb-uniscribe-font-get-logfontw"/>
+    <keyword type="function" name="hb_subset_depend_from_face_or_fail ()" link="harfbuzz-hb-subset-depend.html#hb-subset-depend-from-face-or-fail" since="14.3.0"/>
+    <keyword type="function" name="hb_subset_depend_lookup_glyph ()" link="harfbuzz-hb-subset-depend.html#hb-subset-depend-lookup-glyph" since="14.3.0"/>
+    <keyword type="function" name="hb_subset_depend_lookup_set ()" link="harfbuzz-hb-subset-depend.html#hb-subset-depend-lookup-set" since="14.3.0"/>
+    <keyword type="function" name="hb_subset_depend_destroy ()" link="harfbuzz-hb-subset-depend.html#hb-subset-depend-destroy" since="14.3.0"/>
+    <keyword type="typedef" name="hb_subset_depend_t" link="harfbuzz-hb-subset-depend.html#hb-subset-depend-t" since="14.3.0"/>
+    <keyword type="struct" name="hb_subset_depend_entry_t" link="harfbuzz-hb-subset-depend.html#hb-subset-depend-entry-t" since="14.3.0"/>
+    <keyword type="enum" name="enum hb_subset_depend_edge_flags_t" link="harfbuzz-hb-subset-depend.html#hb-subset-depend-edge-flags-t" since="14.3.0"/>
     <keyword type="constant" name="HB_MEMORY_MODE_DUPLICATE" link="harfbuzz-hb-blob.html#HB-MEMORY-MODE-DUPLICATE:CAPS"/>
     <keyword type="constant" name="HB_MEMORY_MODE_READONLY" link="harfbuzz-hb-blob.html#HB-MEMORY-MODE-READONLY:CAPS"/>
     <keyword type="constant" name="HB_MEMORY_MODE_WRITABLE" link="harfbuzz-hb-blob.html#HB-MEMORY-MODE-WRITABLE:CAPS"/>
@@ -1724,6 +1743,20 @@
     <keyword type="constant" name="HB_OT_NAME_ID_VARIATIONS_PS_PREFIX" link="harfbuzz-hb-ot-name.html#HB-OT-NAME-ID-VARIATIONS-PS-PREFIX:CAPS"/>
     <keyword type="constant" name="HB_OT_NAME_ID_INVALID" link="harfbuzz-hb-ot-name.html#HB-OT-NAME-ID-INVALID:CAPS"/>
     <keyword type="constant" name="HB_OT_VAR_AXIS_FLAG_HIDDEN" link="harfbuzz-hb-ot-var.html#HB-OT-VAR-AXIS-FLAG-HIDDEN:CAPS"/>
+    <keyword type="constant" name="HB_OT_BITS_TAG_FS_TYPE" link="harfbuzz-hb-ot-fetch.html#HB-OT-BITS-TAG-FS-TYPE:CAPS"/>
+    <keyword type="constant" name="HB_OT_BITS_TAG_FS_SELECTION" link="harfbuzz-hb-ot-fetch.html#HB-OT-BITS-TAG-FS-SELECTION:CAPS"/>
+    <keyword type="constant" name="HB_OT_BITS_TAG_MAC_STYLE" link="harfbuzz-hb-ot-fetch.html#HB-OT-BITS-TAG-MAC-STYLE:CAPS"/>
+    <keyword type="constant" name="HB_OT_BITS_TAG_IS_FIXED_PITCH" link="harfbuzz-hb-ot-fetch.html#HB-OT-BITS-TAG-IS-FIXED-PITCH:CAPS"/>
+    <keyword type="constant" name="HB_OT_BITS_TAG_UNICODE_RANGE_1" link="harfbuzz-hb-ot-fetch.html#HB-OT-BITS-TAG-UNICODE-RANGE-1:CAPS"/>
+    <keyword type="constant" name="HB_OT_BITS_TAG_UNICODE_RANGE_2" link="harfbuzz-hb-ot-fetch.html#HB-OT-BITS-TAG-UNICODE-RANGE-2:CAPS"/>
+    <keyword type="constant" name="HB_OT_BITS_TAG_UNICODE_RANGE_3" link="harfbuzz-hb-ot-fetch.html#HB-OT-BITS-TAG-UNICODE-RANGE-3:CAPS"/>
+    <keyword type="constant" name="HB_OT_BITS_TAG_UNICODE_RANGE_4" link="harfbuzz-hb-ot-fetch.html#HB-OT-BITS-TAG-UNICODE-RANGE-4:CAPS"/>
+    <keyword type="constant" name="HB_OT_BITS_TAG_CODE_PAGE_RANGE_1" link="harfbuzz-hb-ot-fetch.html#HB-OT-BITS-TAG-CODE-PAGE-RANGE-1:CAPS"/>
+    <keyword type="constant" name="HB_OT_BITS_TAG_CODE_PAGE_RANGE_2" link="harfbuzz-hb-ot-fetch.html#HB-OT-BITS-TAG-CODE-PAGE-RANGE-2:CAPS"/>
+    <keyword type="constant" name="HB_OT_NUMBER_TAG_FONT_X_MIN" link="harfbuzz-hb-ot-fetch.html#HB-OT-NUMBER-TAG-FONT-X-MIN:CAPS"/>
+    <keyword type="constant" name="HB_OT_NUMBER_TAG_FONT_Y_MIN" link="harfbuzz-hb-ot-fetch.html#HB-OT-NUMBER-TAG-FONT-Y-MIN:CAPS"/>
+    <keyword type="constant" name="HB_OT_NUMBER_TAG_FONT_X_MAX" link="harfbuzz-hb-ot-fetch.html#HB-OT-NUMBER-TAG-FONT-X-MAX:CAPS"/>
+    <keyword type="constant" name="HB_OT_NUMBER_TAG_FONT_Y_MAX" link="harfbuzz-hb-ot-fetch.html#HB-OT-NUMBER-TAG-FONT-Y-MAX:CAPS"/>
     <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_TYPE_INVALID" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-TYPE-INVALID:CAPS"/>
     <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_TYPE_ALL_TYPOGRAPHIC" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-TYPE-ALL-TYPOGRAPHIC:CAPS"/>
     <keyword type="constant" name="HB_AAT_LAYOUT_FEATURE_TYPE_LIGATURES" link="harfbuzz-hb-aat-layout.html#HB-AAT-LAYOUT-FEATURE-TYPE-LIGATURES:CAPS"/>
@@ -2037,6 +2070,7 @@
     <keyword type="constant" name="HB_SUBSET_FLAGS_IFTB_REQUIREMENTS" link="harfbuzz-hb-subset.html#HB-SUBSET-FLAGS-IFTB-REQUIREMENTS:CAPS"/>
     <keyword type="constant" name="HB_SUBSET_FLAGS_RETAIN_NUM_GLYPHS" link="harfbuzz-hb-subset.html#HB-SUBSET-FLAGS-RETAIN-NUM-GLYPHS:CAPS"/>
     <keyword type="constant" name="HB_SUBSET_FLAGS_DOWNGRADE_CFF2" link="harfbuzz-hb-subset.html#HB-SUBSET-FLAGS-DOWNGRADE-CFF2:CAPS"/>
+    <keyword type="constant" name="HB_SUBSET_FLAGS_CFF_IDENTITY_CHARSET" link="harfbuzz-hb-subset.html#HB-SUBSET-FLAGS-CFF-IDENTITY-CHARSET:CAPS"/>
     <keyword type="constant" name="HB_SUBSET_SETS_GLYPH_INDEX" link="harfbuzz-hb-subset.html#HB-SUBSET-SETS-GLYPH-INDEX:CAPS"/>
     <keyword type="constant" name="HB_SUBSET_SETS_UNICODE" link="harfbuzz-hb-subset.html#HB-SUBSET-SETS-UNICODE:CAPS"/>
     <keyword type="constant" name="HB_SUBSET_SETS_NO_SUBSET_TABLE_TAG" link="harfbuzz-hb-subset.html#HB-SUBSET-SETS-NO-SUBSET-TABLE-TAG:CAPS"/>
@@ -2059,6 +2093,9 @@
     <keyword type="constant" name="HB_GPU_SHADER_LANG_HLSL" link="harfbuzz-hb-gpu.html#HB-GPU-SHADER-LANG-HLSL:CAPS"/>
     <keyword type="constant" name="HB_GPU_SHADER_STAGE_VERTEX" link="harfbuzz-hb-gpu.html#HB-GPU-SHADER-STAGE-VERTEX:CAPS"/>
     <keyword type="constant" name="HB_GPU_SHADER_STAGE_FRAGMENT" link="harfbuzz-hb-gpu.html#HB-GPU-SHADER-STAGE-FRAGMENT:CAPS"/>
+    <keyword type="constant" name="HB_SUBSET_DEPEND_EDGE_FLAG_NONE" link="harfbuzz-hb-subset-depend.html#HB-SUBSET-DEPEND-EDGE-FLAG-NONE:CAPS"/>
+    <keyword type="constant" name="HB_SUBSET_DEPEND_EDGE_FLAG_FROM_CONTEXT_POSITION" link="harfbuzz-hb-subset-depend.html#HB-SUBSET-DEPEND-EDGE-FLAG-FROM-CONTEXT-POSITION:CAPS"/>
+    <keyword type="constant" name="HB_SUBSET_DEPEND_EDGE_FLAG_FROM_NESTED_CONTEXT" link="harfbuzz-hb-subset-depend.html#HB-SUBSET-DEPEND-EDGE-FLAG-FROM-NESTED-CONTEXT:CAPS"/>
     <keyword type="member" name="hb-glyph-info-t.codepoint" link="harfbuzz-hb-buffer.html#hb-glyph-info-t.codepoint"/>
     <keyword type="member" name="hb-glyph-info-t.cluster" link="harfbuzz-hb-buffer.html#hb-glyph-info-t.cluster"/>
     <keyword type="member" name="hb-glyph-position-t.x-advance" link="harfbuzz-hb-buffer.html#hb-glyph-position-t.x-advance"/>
@@ -2135,5 +2172,11 @@
     <keyword type="member" name="hb-vector-extents-t.y" link="harfbuzz-hb-vector.html#hb-vector-extents-t.y"/>
     <keyword type="member" name="hb-vector-extents-t.width" link="harfbuzz-hb-vector.html#hb-vector-extents-t.width"/>
     <keyword type="member" name="hb-vector-extents-t.height" link="harfbuzz-hb-vector.html#hb-vector-extents-t.height"/>
+    <keyword type="member" name="hb-subset-depend-entry-t.table-tag" link="harfbuzz-hb-subset-depend.html#hb-subset-depend-entry-t.table-tag"/>
+    <keyword type="member" name="hb-subset-depend-entry-t.dependent" link="harfbuzz-hb-subset-depend.html#hb-subset-depend-entry-t.dependent"/>
+    <keyword type="member" name="hb-subset-depend-entry-t.layout-tag" link="harfbuzz-hb-subset-depend.html#hb-subset-depend-entry-t.layout-tag"/>
+    <keyword type="member" name="hb-subset-depend-entry-t.ligature-set-index" link="harfbuzz-hb-subset-depend.html#hb-subset-depend-entry-t.ligature-set-index"/>
+    <keyword type="member" name="hb-subset-depend-entry-t.context-set-index" link="harfbuzz-hb-subset-depend.html#hb-subset-depend-entry-t.context-set-index"/>
+    <keyword type="member" name="hb-subset-depend-entry-t.flags" link="harfbuzz-hb-subset-depend.html#hb-subset-depend-entry-t.flags"/>
   </functions>
 </book>
