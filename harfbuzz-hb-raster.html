@@ -1427,6 +1427,7 @@ hb_raster_draw_set_glyph_extents (<em class="parameter"><code><a class="link" hr
 sets the resulting pixel extents for the next render.</p>
 <p>This is equivalent to computing a transformed bounding box in pixel
 space and calling <a class="link" href="harfbuzz-hb-raster.html#hb-raster-draw-set-extents" title="hb_raster_draw_set_extents ()"><code class="function">hb_raster_draw_set_extents()</code></a>.</p>
+<p>The resulting dimensions are capped at 4096 pixels per side.</p>
 <div class="refsect3">
 <a name="hb-raster-draw-set-glyph-extents.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -2146,6 +2147,7 @@ hb_raster_paint_set_glyph_extents (<em class="parameter"><code><a class="link" h
 sets the resulting output image extents.</p>
 <p>This is equivalent to computing a transformed bounding box in pixel
 space and calling <a class="link" href="harfbuzz-hb-raster.html#hb-raster-paint-set-extents" title="hb_raster_paint_set_extents ()"><code class="function">hb_raster_paint_set_extents()</code></a>.</p>
+<p>The resulting dimensions are capped at 4096 pixels per side.</p>
 <div class="refsect3">
 <a name="hb-raster-paint-set-glyph-extents.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
