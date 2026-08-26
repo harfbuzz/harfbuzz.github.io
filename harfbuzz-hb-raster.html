@@ -551,9 +551,13 @@
 hb_raster_draw_t *draw = hb_raster_draw_create_or_fail ();
 hb_raster_draw_set_scale_factor (draw, 64.f, 64.f);
 hb_raster_draw_set_transform (draw, 1.f, 0.f, 0.f, 1.f, 0.f, 0.f);
+hb_glyph_extents_t glyph_extents;
+hb_font_get_glyph_extents (font, gid, &amp;glyph_extents);
 hb_raster_draw_set_glyph_extents (draw, &amp;glyph_extents);
-hb_raster_draw_glyph (draw, font, gid, pen_x, pen_y);
+hb_raster_draw_glyph (draw, font, gid);
 hb_raster_image_t *mask = hb_raster_draw_render (draw);
+hb_raster_extents_t image_extents;
+hb_raster_image_get_extents (mask, &amp;image_extents);
 </pre></div>
 <p></p>
 <p><a class="link" href="harfbuzz-hb-raster.html#hb-raster-paint-t" title="hb_raster_paint_t"><span class="type">hb_raster_paint_t</span></a> renders color paint graphs and always outputs
@@ -567,12 +571,19 @@ hb_raster_paint_set_foreground (paint, foreground);
 hb_glyph_extents_t glyph_extents;
 hb_font_get_glyph_extents (font, gid, &amp;glyph_extents);
 hb_raster_paint_set_glyph_extents (paint, &amp;glyph_extents);
-hb_raster_paint_glyph (paint, font, gid, pen_x, pen_y);
+hb_raster_paint_glyph (paint, font, gid);
 hb_raster_image_t *img = hb_raster_paint_render (paint);
+hb_raster_extents_t image_extents;
+hb_raster_image_get_extents (img, &amp;image_extents);
 </pre></div>
 <p></p>
 <p>In both modes, set extents explicitly (or via glyph extents) before
-rendering to avoid implicit allocations and to get deterministic bounds.</p>
+rendering to avoid implicit allocations and to get deterministic bounds.
+When caching individual glyph images for later composition, position each
+image using the <code class="literal">x_origin</code> and <code class="literal">y_origin</code> members returned by
+<a class="link" href="harfbuzz-hb-raster.html#hb-raster-image-get-extents" title="hb_raster_image_get_extents ()"><code class="function">hb_raster_image_get_extents()</code></a>.  These are the pixel-space left and bottom
+edges after raster-bound rounding; do not reconstruct them from glyph
+bearings and image dimensions.</p>
 </div>
 <div class="refsect1">
 <a name="harfbuzz-hb-raster.functions_details"></a><h2>Functions</h2>
