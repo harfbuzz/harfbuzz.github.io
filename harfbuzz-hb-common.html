@@ -233,6 +233,14 @@
 </colgroup>
 <tbody>
 <tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="harfbuzz-hb-common.html#HB-BUDGET-DEFAULT:CAPS" title="HB_BUDGET_DEFAULT">HB_BUDGET_DEFAULT</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="harfbuzz-hb-common.html#HB-BUDGET-UNLIMITED:CAPS" title="HB_BUDGET_UNLIMITED">HB_BUDGET_UNLIMITED</a></td>
+</tr>
+<tr>
 <td class="typedef_keyword">typedef</td>
 <td class="function_name"><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t">hb_bool_t</a></td>
 </tr>
@@ -1251,6 +1259,23 @@ allocating big enough size for <em class="parameter"><code>buf</code></em>
 </div>
 <div class="refsect1">
 <a name="harfbuzz-hb-common.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="HB-BUDGET-DEFAULT:CAPS"></a><h3>HB_BUDGET_DEFAULT</h3>
+<pre class="programlisting">#define HB_BUDGET_DEFAULT ((int64_t) (-0x7FFFFFFFFFFFFFFF - 1))
+</pre>
+<p>Use the implementation's finite default work budget.</p>
+<p class="since">Since: <a class="link" href="api-index-14-5-0.html#api-index-14.5.0">14.5.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="HB-BUDGET-UNLIMITED:CAPS"></a><h3>HB_BUDGET_UNLIMITED</h3>
+<pre class="programlisting">#define HB_BUDGET_UNLIMITED ((int64_t) 0x7FFFFFFFFFFFFFFF)
+</pre>
+<p>Use an effectively unlimited work budget. Structural safety limits remain
+active.</p>
+<p class="since">Since: <a class="link" href="api-index-14-5-0.html#api-index-14.5.0">14.5.0</a></p>
+</div>
+<hr>
 <div class="refsect2">
 <a name="hb-bool-t"></a><h3>hb_bool_t</h3>
 <pre class="programlisting">typedef int hb_bool_t;
@@ -2696,6 +2721,27 @@ to the four-letter values defined by <a class="ulink" href="https://unicode.org/
 <td class="enum_member_name"><p><a name="HB-SCRIPT-TOLONG-SIKI:CAPS"></a>HB_SCRIPT_TOLONG_SIKI</p></td>
 <td class="enum_member_description">
 <p><code class="literal">Tols</code>, Since: 11.5.0</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HB-SCRIPT-JURCHEN:CAPS"></a>HB_SCRIPT_JURCHEN</p></td>
+<td class="enum_member_description">
+<p><code class="literal">Jurc</code>, Since: 14.5.0</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HB-SCRIPT-PROTO-CUNEIFORM:CAPS"></a>HB_SCRIPT_PROTO_CUNEIFORM</p></td>
+<td class="enum_member_description">
+<p><code class="literal">Pcun</code>, Since: 14.5.0</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HB-SCRIPT-SEAL:CAPS"></a>HB_SCRIPT_SEAL</p></td>
+<td class="enum_member_description">
+<p><code class="literal">Seal</code>, Since: 14.5.0</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>

@@ -105,6 +105,78 @@
 </tr>
 <tr>
 <td class="function_type">
+<a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+</td>
+<td class="function_name">
+<span class="c_punctuation">(</span><a class="link" href="harfbuzz-hb-paint.html#hb-paint-set-budget-func-t" title="hb_paint_set_budget_func_t ()">*hb_paint_set_budget_func_t</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-paint.html#hb-paint-funcs-set-set-budget-func" title="hb_paint_funcs_set_set_budget_func ()">hb_paint_funcs_set_set_budget_func</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">int64_t</span>
+</td>
+<td class="function_name">
+<span class="c_punctuation">(</span><a class="link" href="harfbuzz-hb-paint.html#hb-paint-get-budget-func-t" title="hb_paint_get_budget_func_t ()">*hb_paint_get_budget_func_t</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-paint.html#hb-paint-funcs-set-get-budget-func" title="hb_paint_funcs_set_get_budget_func ()">hb_paint_funcs_set_get_budget_func</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">int64_t</span> *
+</td>
+<td class="function_name">
+<span class="c_punctuation">(</span><a class="link" href="harfbuzz-hb-paint.html#hb-paint-get-budget-remaining-func-t" title="hb_paint_get_budget_remaining_func_t ()">*hb_paint_get_budget_remaining_func_t</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-paint.html#hb-paint-funcs-set-get-budget-remaining-func" title="hb_paint_funcs_set_get_budget_remaining_func ()">hb_paint_funcs_set_get_budget_remaining_func</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-paint.html#hb-paint-set-budget" title="hb_paint_set_budget ()">hb_paint_set_budget</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">int64_t</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-paint.html#hb-paint-get-budget" title="hb_paint_get_budget ()">hb_paint_get_budget</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">int64_t</span>
+</td>
+<td class="function_name">
+<a class="link" href="harfbuzz-hb-paint.html#hb-paint-get-budget-remaining" title="hb_paint_get_budget_remaining ()">hb_paint_get_budget_remaining</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
 <span class="returnvalue">void</span>
 </td>
 <td class="function_name">
@@ -902,6 +974,396 @@ hb_paint_funcs_is_immutable (<em class="parameter"><code><a class="link" href="h
 is immutable, <code class="literal">false</code> otherwise</p>
 </div>
 <p class="since">Since: <a class="link" href="api-index-7-0-0.html#api-index-7.0.0">7.0.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-paint-set-budget-func-t"></a><h3>hb_paint_set_budget_func_t ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+<span class="c_punctuation">(</span>*hb_paint_set_budget_func_t<span class="c_punctuation">)</span> (<em class="parameter"><code><a class="link" href="harfbuzz-hb-paint.html#hb-paint-funcs-t" title="hb_paint_funcs_t"><span class="type">hb_paint_funcs_t</span></a> *funcs</code></em>,
+                               <em class="parameter"><code><span class="type">void</span> *paint_data</code></em>,
+                               <em class="parameter"><code><span class="type">int64_t</span> budget</code></em>,
+                               <em class="parameter"><code><span class="type">void</span> *user_data</code></em>);</pre>
+<p>Sets the work-budget policy and recharges the live work budget. <em class="parameter"><code>budget</code></em>
+ is
+<a class="link" href="harfbuzz-hb-common.html#HB-BUDGET-DEFAULT:CAPS" title="HB_BUDGET_DEFAULT"><span class="type">HB_BUDGET_DEFAULT</span></a>, <a class="link" href="harfbuzz-hb-common.html#HB-BUDGET-UNLIMITED:CAPS" title="HB_BUDGET_UNLIMITED"><span class="type">HB_BUDGET_UNLIMITED</span></a>, or a non-negative concrete value.</p>
+<div class="refsect3">
+<a name="hb-paint-set-budget-func-t.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>funcs</p></td>
+<td class="parameter_description"><p>paint functions object</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>paint_data</p></td>
+<td class="parameter_description"><p>The data accompanying the paint functions</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>budget</p></td>
+<td class="parameter_description"><p>the new work-budget policy</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>User data pointer passed to <a class="link" href="harfbuzz-hb-paint.html#hb-paint-funcs-set-set-budget-func" title="hb_paint_funcs_set_set_budget_func ()"><code class="function">hb_paint_funcs_set_set_budget_func()</code></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-paint-set-budget-func-t.returns"></a><h4>Returns</h4>
+<p> <code class="literal">true</code> if the budget was set, <code class="literal">false</code> if unsupported</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-14-5-0.html#api-index-14.5.0">14.5.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-paint-funcs-set-set-budget-func"></a><h3>hb_paint_funcs_set_set_budget_func ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_paint_funcs_set_set_budget_func (<em class="parameter"><code><a class="link" href="harfbuzz-hb-paint.html#hb-paint-funcs-t" title="hb_paint_funcs_t"><span class="type">hb_paint_funcs_t</span></a> *funcs</code></em>,
+                                    <em class="parameter"><code><a class="link" href="harfbuzz-hb-paint.html#hb-paint-set-budget-func-t" title="hb_paint_set_budget_func_t ()"><span class="type">hb_paint_set_budget_func_t</span></a> func</code></em>,
+                                    <em class="parameter"><code><span class="type">void</span> *user_data</code></em>,
+                                    <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-destroy-func-t" title="hb_destroy_func_t ()"><span class="type">hb_destroy_func_t</span></a> destroy</code></em>);</pre>
+<p>Sets the budget setter callback.</p>
+<div class="refsect3">
+<a name="hb-paint-funcs-set-set-budget-func.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>funcs</p></td>
+<td class="parameter_description"><p>paint functions object</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>func</p></td>
+<td class="parameter_description"><p>budget setter. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym> user_data][<acronym title="This parameter is a 'destroy_data', for callbacks."><span class="acronym">destroy</span></acronym> destroy][<acronym title="The callback is valid until the GDestroyNotify argument is called."><span class="acronym">scope notified</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>Data to pass to <em class="parameter"><code>func</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>destroy</p></td>
+<td class="parameter_description"><p>callback to destroy <em class="parameter"><code>user_data</code></em>
+. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-14-5-0.html#api-index-14.5.0">14.5.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-paint-get-budget-func-t"></a><h3>hb_paint_get_budget_func_t ()</h3>
+<pre class="programlisting"><span class="returnvalue">int64_t</span>
+<span class="c_punctuation">(</span>*hb_paint_get_budget_func_t<span class="c_punctuation">)</span> (<em class="parameter"><code><a class="link" href="harfbuzz-hb-paint.html#hb-paint-funcs-t" title="hb_paint_funcs_t"><span class="type">hb_paint_funcs_t</span></a> *funcs</code></em>,
+                               <em class="parameter"><code><span class="type">void</span> *paint_data</code></em>,
+                               <em class="parameter"><code><span class="type">void</span> *user_data</code></em>);</pre>
+<p>Fetches the configured work-budget policy.</p>
+<div class="refsect3">
+<a name="hb-paint-get-budget-func-t.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>funcs</p></td>
+<td class="parameter_description"><p>paint functions object</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>paint_data</p></td>
+<td class="parameter_description"><p>The data accompanying the paint functions</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>User data pointer passed to <a class="link" href="harfbuzz-hb-paint.html#hb-paint-funcs-set-get-budget-func" title="hb_paint_funcs_set_get_budget_func ()"><code class="function">hb_paint_funcs_set_get_budget_func()</code></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-paint-get-budget-func-t.returns"></a><h4>Returns</h4>
+<p> the configured work-budget policy</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-14-5-0.html#api-index-14.5.0">14.5.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-paint-funcs-set-get-budget-func"></a><h3>hb_paint_funcs_set_get_budget_func ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_paint_funcs_set_get_budget_func (<em class="parameter"><code><a class="link" href="harfbuzz-hb-paint.html#hb-paint-funcs-t" title="hb_paint_funcs_t"><span class="type">hb_paint_funcs_t</span></a> *funcs</code></em>,
+                                    <em class="parameter"><code><a class="link" href="harfbuzz-hb-paint.html#hb-paint-get-budget-func-t" title="hb_paint_get_budget_func_t ()"><span class="type">hb_paint_get_budget_func_t</span></a> func</code></em>,
+                                    <em class="parameter"><code><span class="type">void</span> *user_data</code></em>,
+                                    <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-destroy-func-t" title="hb_destroy_func_t ()"><span class="type">hb_destroy_func_t</span></a> destroy</code></em>);</pre>
+<p>Sets the budget-policy getter callback.</p>
+<div class="refsect3">
+<a name="hb-paint-funcs-set-get-budget-func.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>funcs</p></td>
+<td class="parameter_description"><p>paint functions object</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>func</p></td>
+<td class="parameter_description"><p>budget getter. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym> user_data][<acronym title="This parameter is a 'destroy_data', for callbacks."><span class="acronym">destroy</span></acronym> destroy][<acronym title="The callback is valid until the GDestroyNotify argument is called."><span class="acronym">scope notified</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>Data to pass to <em class="parameter"><code>func</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>destroy</p></td>
+<td class="parameter_description"><p>callback to destroy <em class="parameter"><code>user_data</code></em>
+. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-14-5-0.html#api-index-14.5.0">14.5.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-paint-get-budget-remaining-func-t"></a><h3>hb_paint_get_budget_remaining_func_t ()</h3>
+<pre class="programlisting"><span class="returnvalue">int64_t</span> *
+<span class="c_punctuation">(</span>*hb_paint_get_budget_remaining_func_t<span class="c_punctuation">)</span>
+                               (<em class="parameter"><code><a class="link" href="harfbuzz-hb-paint.html#hb-paint-funcs-t" title="hb_paint_funcs_t"><span class="type">hb_paint_funcs_t</span></a> *funcs</code></em>,
+                                <em class="parameter"><code><span class="type">void</span> *paint_data</code></em>,
+                                <em class="parameter"><code><span class="type">void</span> *user_data</code></em>);</pre>
+<p>Fetches the address of the live work budget. The returned address must stay
+valid while <em class="parameter"><code>paint_data</code></em>
+ is used with <em class="parameter"><code>funcs</code></em>
+. The live value must be concrete;
+it must not contain <a class="link" href="harfbuzz-hb-common.html#HB-BUDGET-DEFAULT:CAPS" title="HB_BUDGET_DEFAULT"><span class="type">HB_BUDGET_DEFAULT</span></a>.</p>
+<div class="refsect3">
+<a name="hb-paint-get-budget-remaining-func-t.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>funcs</p></td>
+<td class="parameter_description"><p>paint functions object</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>paint_data</p></td>
+<td class="parameter_description"><p>The data accompanying the paint functions</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>User data pointer passed to
+<a class="link" href="harfbuzz-hb-paint.html#hb-paint-funcs-set-get-budget-remaining-func" title="hb_paint_funcs_set_get_budget_remaining_func ()"><code class="function">hb_paint_funcs_set_get_budget_remaining_func()</code></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-paint-get-budget-remaining-func-t.returns"></a><h4>Returns</h4>
+<p>the live work budget, or <code class="literal">NULL</code> if
+live budget accounting is unsupported. </p>
+<p><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-14-5-0.html#api-index-14.5.0">14.5.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-paint-funcs-set-get-budget-remaining-func"></a><h3>hb_paint_funcs_set_get_budget_remaining_func ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hb_paint_funcs_set_get_budget_remaining_func
+                               (<em class="parameter"><code><a class="link" href="harfbuzz-hb-paint.html#hb-paint-funcs-t" title="hb_paint_funcs_t"><span class="type">hb_paint_funcs_t</span></a> *funcs</code></em>,
+                                <em class="parameter"><code><a class="link" href="harfbuzz-hb-paint.html#hb-paint-get-budget-remaining-func-t" title="hb_paint_get_budget_remaining_func_t ()"><span class="type">hb_paint_get_budget_remaining_func_t</span></a> func</code></em>,
+                                <em class="parameter"><code><span class="type">void</span> *user_data</code></em>,
+                                <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-destroy-func-t" title="hb_destroy_func_t ()"><span class="type">hb_destroy_func_t</span></a> destroy</code></em>);</pre>
+<p>Sets the live-budget getter callback.</p>
+<div class="refsect3">
+<a name="hb-paint-funcs-set-get-budget-remaining-func.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>funcs</p></td>
+<td class="parameter_description"><p>paint functions object</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>func</p></td>
+<td class="parameter_description"><p>live-budget getter. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym> user_data][<acronym title="This parameter is a 'destroy_data', for callbacks."><span class="acronym">destroy</span></acronym> destroy][<acronym title="The callback is valid until the GDestroyNotify argument is called."><span class="acronym">scope notified</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>Data to pass to <em class="parameter"><code>func</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>destroy</p></td>
+<td class="parameter_description"><p>callback to destroy <em class="parameter"><code>user_data</code></em>
+. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-14-5-0.html#api-index-14.5.0">14.5.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-paint-set-budget"></a><h3>hb_paint_set_budget ()</h3>
+<pre class="programlisting"><a class="link" href="harfbuzz-hb-common.html#hb-bool-t" title="hb_bool_t"><span class="returnvalue">hb_bool_t</span></a>
+hb_paint_set_budget (<em class="parameter"><code><a class="link" href="harfbuzz-hb-paint.html#hb-paint-funcs-t" title="hb_paint_funcs_t"><span class="type">hb_paint_funcs_t</span></a> *funcs</code></em>,
+                     <em class="parameter"><code><span class="type">void</span> *paint_data</code></em>,
+                     <em class="parameter"><code><span class="type">int64_t</span> budget</code></em>);</pre>
+<p>Sets the work-budget policy and recharges the live work budget. Negative
+values other than <a class="link" href="harfbuzz-hb-common.html#HB-BUDGET-DEFAULT:CAPS" title="HB_BUDGET_DEFAULT"><span class="type">HB_BUDGET_DEFAULT</span></a> are clamped to zero.</p>
+<div class="refsect3">
+<a name="hb-paint-set-budget.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>funcs</p></td>
+<td class="parameter_description"><p>paint functions object</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>paint_data</p></td>
+<td class="parameter_description"><p>associated paint data</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>budget</p></td>
+<td class="parameter_description"><p>the new work-budget policy</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-paint-set-budget.returns"></a><h4>Returns</h4>
+<p> <code class="literal">true</code> if the paint functions support work budgets</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-14-5-0.html#api-index-14.5.0">14.5.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-paint-get-budget"></a><h3>hb_paint_get_budget ()</h3>
+<pre class="programlisting"><span class="returnvalue">int64_t</span>
+hb_paint_get_budget (<em class="parameter"><code><a class="link" href="harfbuzz-hb-paint.html#hb-paint-funcs-t" title="hb_paint_funcs_t"><span class="type">hb_paint_funcs_t</span></a> *funcs</code></em>,
+                     <em class="parameter"><code><span class="type">void</span> *paint_data</code></em>);</pre>
+<p>Fetches the configured work-budget policy.</p>
+<div class="refsect3">
+<a name="hb-paint-get-budget.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>funcs</p></td>
+<td class="parameter_description"><p>paint functions object</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>paint_data</p></td>
+<td class="parameter_description"><p>associated paint data</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-paint-get-budget.returns"></a><h4>Returns</h4>
+<p> the configured policy, or <a class="link" href="harfbuzz-hb-common.html#HB-BUDGET-DEFAULT:CAPS" title="HB_BUDGET_DEFAULT"><span class="type">HB_BUDGET_DEFAULT</span></a> if unsupported</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-14-5-0.html#api-index-14.5.0">14.5.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-paint-get-budget-remaining"></a><h3>hb_paint_get_budget_remaining ()</h3>
+<pre class="programlisting"><span class="returnvalue">int64_t</span>
+hb_paint_get_budget_remaining (<em class="parameter"><code><a class="link" href="harfbuzz-hb-paint.html#hb-paint-funcs-t" title="hb_paint_funcs_t"><span class="type">hb_paint_funcs_t</span></a> *funcs</code></em>,
+                               <em class="parameter"><code><span class="type">void</span> *paint_data</code></em>);</pre>
+<p>Fetches the live work budget. A negative value means the budget was
+exhausted. Zero means the preceding work fit exactly, but no positive-cost
+work can start.</p>
+<div class="refsect3">
+<a name="hb-paint-get-budget-remaining.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>funcs</p></td>
+<td class="parameter_description"><p>paint functions object</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>paint_data</p></td>
+<td class="parameter_description"><p>associated paint data</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="hb-paint-get-budget-remaining.returns"></a><h4>Returns</h4>
+<p> the live work budget; if it is not tracked, the concrete
+configured policy or <a class="link" href="harfbuzz-hb-common.html#HB-BUDGET-UNLIMITED:CAPS" title="HB_BUDGET_UNLIMITED"><span class="type">HB_BUDGET_UNLIMITED</span></a></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-14-5-0.html#api-index-14.5.0">14.5.0</a></p>
 </div>
 <hr>
 <div class="refsect2">

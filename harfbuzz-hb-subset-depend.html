@@ -123,8 +123,8 @@ characters.</p>
 <pre class="programlisting"><a class="link" href="harfbuzz-hb-subset-depend.html#hb-subset-depend-t" title="hb_subset_depend_t"><span class="returnvalue">hb_subset_depend_t</span></a> *
 hb_subset_depend_from_face_or_fail (<em class="parameter"><code><a class="link" href="harfbuzz-hb-face.html#hb-face-t" title="hb_face_t"><span class="type">hb_face_t</span></a> *face</code></em>);</pre>
 <p>Calculates the dependencies between glyphs in the supplied face.
-Extracts dependency information from GSUB, glyf, CFF, COLR,
-and MATH tables. UVS (Unicode Variation Sequence) dependencies
+Extracts dependency information from GSUB, glyf, CFF, COLR, MATH,
+and VARC tables. UVS (Unicode Variation Sequence) dependencies
 are not included; handle those via <a class="link" href="harfbuzz-hb-font.html#hb-font-get-variation-glyph" title="hb_font_get_variation_glyph ()"><code class="function">hb_font_get_variation_glyph()</code></a>.</p>
 <p>Example:
 <code class="literal">c

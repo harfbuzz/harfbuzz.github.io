@@ -154,6 +154,7 @@
       </sub>
       <sub name="API Index" link="api-index-full.html"/>
       <sub name="Index of deprecated API" link="deprecated-api-index.html"/>
+      <sub name="Index of new symbols in 14.5.0" link="api-index-14-5-0.html"/>
       <sub name="Index of new symbols in 14.4.0" link="api-index-14-4-0.html"/>
       <sub name="Index of new symbols in 14.3.0" link="api-index-14-3-0.html"/>
       <sub name="Index of new symbols in 14.2.0" link="api-index-14-2-0.html"/>
@@ -375,6 +376,8 @@
     <keyword type="function" name="hb_variation_from_string ()" link="harfbuzz-hb-common.html#hb-variation-from-string" since="1.4.2"/>
     <keyword type="function" name="hb_variation_to_string ()" link="harfbuzz-hb-common.html#hb-variation-to-string" since="1.4.2"/>
     <keyword type="function" name="hb_destroy_func_t ()" link="harfbuzz-hb-common.html#hb-destroy-func-t"/>
+    <keyword type="macro" name="HB_BUDGET_DEFAULT" link="harfbuzz-hb-common.html#HB-BUDGET-DEFAULT:CAPS" since="14.5.0"/>
+    <keyword type="macro" name="HB_BUDGET_UNLIMITED" link="harfbuzz-hb-common.html#HB-BUDGET-UNLIMITED:CAPS" since="14.5.0"/>
     <keyword type="typedef" name="hb_bool_t" link="harfbuzz-hb-common.html#hb-bool-t"/>
     <keyword type="typedef" name="hb_codepoint_t" link="harfbuzz-hb-common.html#hb-codepoint-t"/>
     <keyword type="macro" name="HB_CODEPOINT_INVALID" link="harfbuzz-hb-common.html#HB-CODEPOINT-INVALID:CAPS" since="8.0.0"/>
@@ -426,6 +429,15 @@
     <keyword type="function" name="hb_draw_funcs_set_cubic_to_func ()" link="harfbuzz-hb-draw.html#hb-draw-funcs-set-cubic-to-func" since="4.0.0"/>
     <keyword type="function" name="hb_draw_close_path_func_t ()" link="harfbuzz-hb-draw.html#hb-draw-close-path-func-t" since="4.0.0"/>
     <keyword type="function" name="hb_draw_funcs_set_close_path_func ()" link="harfbuzz-hb-draw.html#hb-draw-funcs-set-close-path-func" since="4.0.0"/>
+    <keyword type="function" name="hb_draw_set_budget_func_t ()" link="harfbuzz-hb-draw.html#hb-draw-set-budget-func-t" since="14.5.0"/>
+    <keyword type="function" name="hb_draw_funcs_set_set_budget_func ()" link="harfbuzz-hb-draw.html#hb-draw-funcs-set-set-budget-func" since="14.5.0"/>
+    <keyword type="function" name="hb_draw_get_budget_func_t ()" link="harfbuzz-hb-draw.html#hb-draw-get-budget-func-t" since="14.5.0"/>
+    <keyword type="function" name="hb_draw_funcs_set_get_budget_func ()" link="harfbuzz-hb-draw.html#hb-draw-funcs-set-get-budget-func" since="14.5.0"/>
+    <keyword type="function" name="hb_draw_get_budget_remaining_func_t ()" link="harfbuzz-hb-draw.html#hb-draw-get-budget-remaining-func-t" since="14.5.0"/>
+    <keyword type="function" name="hb_draw_funcs_set_get_budget_remaining_func ()" link="harfbuzz-hb-draw.html#hb-draw-funcs-set-get-budget-remaining-func" since="14.5.0"/>
+    <keyword type="function" name="hb_draw_set_budget ()" link="harfbuzz-hb-draw.html#hb-draw-set-budget" since="14.5.0"/>
+    <keyword type="function" name="hb_draw_get_budget ()" link="harfbuzz-hb-draw.html#hb-draw-get-budget" since="14.5.0"/>
+    <keyword type="function" name="hb_draw_get_budget_remaining ()" link="harfbuzz-hb-draw.html#hb-draw-get-budget-remaining" since="14.5.0"/>
     <keyword type="function" name="hb_draw_move_to ()" link="harfbuzz-hb-draw.html#hb-draw-move-to" since="4.0.0"/>
     <keyword type="function" name="hb_draw_line_to ()" link="harfbuzz-hb-draw.html#hb-draw-line-to" since="4.0.0"/>
     <keyword type="function" name="hb_draw_quadratic_to ()" link="harfbuzz-hb-draw.html#hb-draw-quadratic-to" since="4.0.0"/>
@@ -446,6 +458,15 @@
     <keyword type="function" name="hb_paint_funcs_get_user_data ()" link="harfbuzz-hb-paint.html#hb-paint-funcs-get-user-data" since="7.0.0"/>
     <keyword type="function" name="hb_paint_funcs_make_immutable ()" link="harfbuzz-hb-paint.html#hb-paint-funcs-make-immutable" since="7.0.0"/>
     <keyword type="function" name="hb_paint_funcs_is_immutable ()" link="harfbuzz-hb-paint.html#hb-paint-funcs-is-immutable" since="7.0.0"/>
+    <keyword type="function" name="hb_paint_set_budget_func_t ()" link="harfbuzz-hb-paint.html#hb-paint-set-budget-func-t" since="14.5.0"/>
+    <keyword type="function" name="hb_paint_funcs_set_set_budget_func ()" link="harfbuzz-hb-paint.html#hb-paint-funcs-set-set-budget-func" since="14.5.0"/>
+    <keyword type="function" name="hb_paint_get_budget_func_t ()" link="harfbuzz-hb-paint.html#hb-paint-get-budget-func-t" since="14.5.0"/>
+    <keyword type="function" name="hb_paint_funcs_set_get_budget_func ()" link="harfbuzz-hb-paint.html#hb-paint-funcs-set-get-budget-func" since="14.5.0"/>
+    <keyword type="function" name="hb_paint_get_budget_remaining_func_t ()" link="harfbuzz-hb-paint.html#hb-paint-get-budget-remaining-func-t" since="14.5.0"/>
+    <keyword type="function" name="hb_paint_funcs_set_get_budget_remaining_func ()" link="harfbuzz-hb-paint.html#hb-paint-funcs-set-get-budget-remaining-func" since="14.5.0"/>
+    <keyword type="function" name="hb_paint_set_budget ()" link="harfbuzz-hb-paint.html#hb-paint-set-budget" since="14.5.0"/>
+    <keyword type="function" name="hb_paint_get_budget ()" link="harfbuzz-hb-paint.html#hb-paint-get-budget" since="14.5.0"/>
+    <keyword type="function" name="hb_paint_get_budget_remaining ()" link="harfbuzz-hb-paint.html#hb-paint-get-budget-remaining" since="14.5.0"/>
     <keyword type="function" name="hb_paint_push_transform_func_t ()" link="harfbuzz-hb-paint.html#hb-paint-push-transform-func-t" since="7.0.0"/>
     <keyword type="function" name="hb_paint_funcs_set_push_transform_func ()" link="harfbuzz-hb-paint.html#hb-paint-funcs-set-push-transform-func" since="7.0.0"/>
     <keyword type="function" name="hb_paint_pop_transform_func_t ()" link="harfbuzz-hb-paint.html#hb-paint-pop-transform-func-t" since="7.0.0"/>
@@ -1489,6 +1510,9 @@
     <keyword type="constant" name="HB_SCRIPT_SIDETIC" link="harfbuzz-hb-common.html#HB-SCRIPT-SIDETIC:CAPS"/>
     <keyword type="constant" name="HB_SCRIPT_TAI_YO" link="harfbuzz-hb-common.html#HB-SCRIPT-TAI-YO:CAPS"/>
     <keyword type="constant" name="HB_SCRIPT_TOLONG_SIKI" link="harfbuzz-hb-common.html#HB-SCRIPT-TOLONG-SIKI:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_JURCHEN" link="harfbuzz-hb-common.html#HB-SCRIPT-JURCHEN:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_PROTO_CUNEIFORM" link="harfbuzz-hb-common.html#HB-SCRIPT-PROTO-CUNEIFORM:CAPS"/>
+    <keyword type="constant" name="HB_SCRIPT_SEAL" link="harfbuzz-hb-common.html#HB-SCRIPT-SEAL:CAPS"/>
     <keyword type="constant" name="HB_SCRIPT_INVALID" link="harfbuzz-hb-common.html#HB-SCRIPT-INVALID:CAPS"/>
     <keyword type="constant" name="HB_DRAW_LINE_CAP_BUTT" link="harfbuzz-hb-draw.html#HB-DRAW-LINE-CAP-BUTT:CAPS"/>
     <keyword type="constant" name="HB_DRAW_LINE_CAP_SQUARE" link="harfbuzz-hb-draw.html#HB-DRAW-LINE-CAP-SQUARE:CAPS"/>
