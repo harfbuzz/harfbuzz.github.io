@@ -73,11 +73,15 @@
       they will need to make a duplicate of the original.
     </p>
 <p>
-      Finally, object constructors (and, indeed, as much of the
-      shaping API as possible) will never return
-      <code class="literal">NULL</code>.  Instead, if there is an allocation
-      error, each constructor will return an “empty” object
-      singleton.
+      Finally, most object constructors return an “empty” object
+      singleton on allocation failure rather than
+      <code class="literal">NULL</code>. Constructors whose names end in
+      <code class="literal">_or_fail</code>, such as
+      <code class="function">hb_blob_create_or_fail()</code> and
+      <code class="function">hb_blob_create_from_file_or_fail()</code>, instead
+      return <code class="literal">NULL</code> on failure. Check their return
+      values before using the objects, and consult each constructor's
+      API Reference documentation for its failure behavior.
     </p>
 <p>
       These empty-object singletons are inert and safe (although

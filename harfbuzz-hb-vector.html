@@ -559,7 +559,7 @@ paths. Typical flow:</p>
 hb_vector_draw_t *draw = hb_vector_draw_create_or_fail (HB_VECTOR_FORMAT_SVG);
 hb_vector_draw_set_scale_factor (draw, 64.f, 64.f);
 hb_vector_draw_set_foreground (draw, foreground);
-hb_vector_draw_glyph (draw, font, gid, pen_x, pen_y);
+hb_vector_draw_glyph (draw, font, gid, HB_VECTOR_EXTENTS_MODE_EXPAND);
 hb_blob_t *svg = hb_vector_draw_render (draw);
 </pre></div>
 <p></p>
@@ -570,17 +570,16 @@ and compositing. Typical flow:</p>
 hb_vector_paint_t *paint = hb_vector_paint_create_or_fail (HB_VECTOR_FORMAT_SVG);
 hb_vector_paint_set_scale_factor (paint, 64.f, 64.f);
 hb_vector_paint_set_foreground (paint, foreground);
-hb_vector_paint_glyph (paint, font, gid, pen_x, pen_y,
-                       HB_VECTOR_EXTENTS_MODE_EXPAND);
+hb_vector_paint_glyph (paint, font, gid, HB_VECTOR_EXTENTS_MODE_EXPAND);
 hb_blob_t *svg = hb_vector_paint_render (paint);
 </pre></div>
 <p></p>
 <p>Both contexts accumulate multiple glyphs into a single document.
 Call <a class="link" href="harfbuzz-hb-vector.html#hb-vector-draw-render" title="hb_vector_draw_render ()"><code class="function">hb_vector_draw_render()</code></a> / <a class="link" href="harfbuzz-hb-vector.html#hb-vector-paint-render" title="hb_vector_paint_render ()"><code class="function">hb_vector_paint_render()</code></a> to
 retrieve the final blob.  Rendering clears all accumulated
-content (including extents), so retrieve any needed extents
-via <a class="link" href="harfbuzz-hb-vector.html#hb-vector-draw-get-extents" title="hb_vector_draw_get_extents ()"><code class="function">hb_vector_draw_get_extents()</code></a> / <a class="link" href="harfbuzz-hb-vector.html#hb-vector-paint-get-extents" title="hb_vector_paint_get_extents ()"><code class="function">hb_vector_paint_get_extents()</code></a>
-before rendering.</p>
+content (including extents), even on failure, so retrieve any
+needed extents via <a class="link" href="harfbuzz-hb-vector.html#hb-vector-draw-get-extents" title="hb_vector_draw_get_extents ()"><code class="function">hb_vector_draw_get_extents()</code></a> /
+<a class="link" href="harfbuzz-hb-vector.html#hb-vector-paint-get-extents" title="hb_vector_paint_get_extents ()"><code class="function">hb_vector_paint_get_extents()</code></a> before rendering.</p>
 <p>Each glyph is emitted as an independent element.  If glyphs
 overlap and the foreground color is semi-transparent, the
 overlapping regions will be composited separately rather than
@@ -1433,7 +1432,9 @@ don't interact across glyphs.</p>
 <a name="hb-vector-draw-render"></a><h3>hb_vector_draw_render ()</h3>
 <pre class="programlisting"><a class="link" href="harfbuzz-hb-blob.html#hb-blob-t" title="hb_blob_t"><span class="returnvalue">hb_blob_t</span></a> *
 hb_vector_draw_render (<em class="parameter"><code><a class="link" href="harfbuzz-hb-vector.html#hb-vector-draw-t" title="hb_vector_draw_t"><span class="type">hb_vector_draw_t</span></a> *draw</code></em>);</pre>
-<p>Renders accumulated draw content to an output blob.</p>
+<p>Renders accumulated draw content to an output blob.
+Accumulated content and extents are cleared on return, including
+when rendering fails. User configuration is preserved.</p>
 <div class="refsect3">
 <a name="hb-vector-draw-render.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -1464,8 +1465,8 @@ hb_vector_draw_clear (<em class="parameter"><code><a class="link" href="harfbuzz
 <p>Discards accumulated draw output so <em class="parameter"><code>draw</code></em>
  can be reused for
 another render.  User configuration (transform, scale factors,
-precision) is preserved.  Call <a class="link" href="harfbuzz-hb-vector.html#hb-vector-draw-reset" title="hb_vector_draw_reset ()"><code class="function">hb_vector_draw_reset()</code></a> to
-also reset user configuration to defaults.</p>
+precision, foreground, background, and budget) is preserved.  Call
+<a class="link" href="harfbuzz-hb-vector.html#hb-vector-draw-reset" title="hb_vector_draw_reset ()"><code class="function">hb_vector_draw_reset()</code></a> to also reset user configuration to defaults.</p>
 <div class="refsect3">
 <a name="hb-vector-draw-clear.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -1488,8 +1489,8 @@ also reset user configuration to defaults.</p>
 <a name="hb-vector-draw-reset"></a><h3>hb_vector_draw_reset ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 hb_vector_draw_reset (<em class="parameter"><code><a class="link" href="harfbuzz-hb-vector.html#hb-vector-draw-t" title="hb_vector_draw_t"><span class="type">hb_vector_draw_t</span></a> *draw</code></em>);</pre>
-<p>Resets <em class="parameter"><code>draw</code></em>
- state and clears accumulated content.</p>
+<p>Restores user configuration to defaults and clears accumulated content.
+The output format and attached user data are preserved.</p>
 <div class="refsect3">
 <a name="hb-vector-draw-reset.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -1513,7 +1514,13 @@ hb_vector_draw_reset (<em class="parameter"><code><a class="link" href="harfbuzz
 <pre class="programlisting"><span class="returnvalue">void</span>
 hb_vector_draw_recycle_blob (<em class="parameter"><code><a class="link" href="harfbuzz-hb-vector.html#hb-vector-draw-t" title="hb_vector_draw_t"><span class="type">hb_vector_draw_t</span></a> *draw</code></em>,
                              <em class="parameter"><code><a class="link" href="harfbuzz-hb-blob.html#hb-blob-t" title="hb_blob_t"><span class="type">hb_blob_t</span></a> *blob</code></em>);</pre>
-<p>Provides a blob for internal buffer reuse by later render calls.</p>
+<p>Provides a blob for internal buffer reuse by later render calls.
+The caller transfers ownership of one reference to <em class="parameter"><code>draw</code></em>
+ and must
+not destroy that reference after this call. Finish accessing <em class="parameter"><code>blob</code></em>
+
+and its data before recycling: later renders may reuse the blob
+and overwrite its data.</p>
 <div class="refsect3">
 <a name="hb-vector-draw-recycle-blob.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -1531,7 +1538,7 @@ hb_vector_draw_recycle_blob (<em class="parameter"><code><a class="link" href="h
 <tr>
 <td class="parameter_name"><p>blob</p></td>
 <td class="parameter_description"><p>previously rendered blob to recycle. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 </tbody>
 </table></div>
@@ -2567,7 +2574,9 @@ same context.</p>
 <a name="hb-vector-paint-render"></a><h3>hb_vector_paint_render ()</h3>
 <pre class="programlisting"><a class="link" href="harfbuzz-hb-blob.html#hb-blob-t" title="hb_blob_t"><span class="returnvalue">hb_blob_t</span></a> *
 hb_vector_paint_render (<em class="parameter"><code><a class="link" href="harfbuzz-hb-vector.html#hb-vector-paint-t" title="hb_vector_paint_t"><span class="type">hb_vector_paint_t</span></a> *paint</code></em>);</pre>
-<p>Renders accumulated paint content to an output blob.</p>
+<p>Renders accumulated paint content to an output blob.
+Accumulated content and extents are cleared on return, including
+when rendering fails. User configuration is preserved.</p>
 <div class="refsect3">
 <a name="hb-vector-paint-render.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -2598,9 +2607,9 @@ hb_vector_paint_clear (<em class="parameter"><code><a class="link" href="harfbuz
 <p>Discards accumulated paint output so <em class="parameter"><code>paint</code></em>
  can be reused for
 another render.  User configuration (transform, scale factors,
-precision, foreground, palette, custom palette colors)
-is preserved.  Call <a class="link" href="harfbuzz-hb-vector.html#hb-vector-paint-reset" title="hb_vector_paint_reset ()"><code class="function">hb_vector_paint_reset()</code></a> to also reset
-user configuration to defaults.</p>
+precision, foreground, background, palette, custom palette colors,
+SVG id prefix, and budget) is preserved.  Call <a class="link" href="harfbuzz-hb-vector.html#hb-vector-paint-reset" title="hb_vector_paint_reset ()"><code class="function">hb_vector_paint_reset()</code></a>
+to also reset user configuration to defaults.</p>
 <div class="refsect3">
 <a name="hb-vector-paint-clear.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -2623,8 +2632,8 @@ user configuration to defaults.</p>
 <a name="hb-vector-paint-reset"></a><h3>hb_vector_paint_reset ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 hb_vector_paint_reset (<em class="parameter"><code><a class="link" href="harfbuzz-hb-vector.html#hb-vector-paint-t" title="hb_vector_paint_t"><span class="type">hb_vector_paint_t</span></a> *paint</code></em>);</pre>
-<p>Resets <em class="parameter"><code>paint</code></em>
- state and clears accumulated content.</p>
+<p>Restores user configuration to defaults and clears accumulated content.
+The output format and attached user data are preserved.</p>
 <div class="refsect3">
 <a name="hb-vector-paint-reset.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -2648,7 +2657,13 @@ hb_vector_paint_reset (<em class="parameter"><code><a class="link" href="harfbuz
 <pre class="programlisting"><span class="returnvalue">void</span>
 hb_vector_paint_recycle_blob (<em class="parameter"><code><a class="link" href="harfbuzz-hb-vector.html#hb-vector-paint-t" title="hb_vector_paint_t"><span class="type">hb_vector_paint_t</span></a> *paint</code></em>,
                               <em class="parameter"><code><a class="link" href="harfbuzz-hb-blob.html#hb-blob-t" title="hb_blob_t"><span class="type">hb_blob_t</span></a> *blob</code></em>);</pre>
-<p>Provides a blob for internal buffer reuse by later render calls.</p>
+<p>Provides a blob for internal buffer reuse by later render calls.
+The caller transfers ownership of one reference to <em class="parameter"><code>paint</code></em>
+ and must
+not destroy that reference after this call. Finish accessing <em class="parameter"><code>blob</code></em>
+
+and its data before recycling: later renders may reuse the blob
+and overwrite its data.</p>
 <div class="refsect3">
 <a name="hb-vector-paint-recycle-blob.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -2666,7 +2681,7 @@ hb_vector_paint_recycle_blob (<em class="parameter"><code><a class="link" href="
 <tr>
 <td class="parameter_name"><p>blob</p></td>
 <td class="parameter_description"><p>previously rendered blob to recycle. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 </tbody>
 </table></div>

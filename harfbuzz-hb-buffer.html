@@ -939,8 +939,11 @@ attached to the specified buffer.</p>
 <a name="hb-buffer-reset"></a><h3>hb_buffer_reset ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 hb_buffer_reset (<em class="parameter"><code><a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a> *buffer</code></em>);</pre>
-<p>Resets the buffer to its initial status, as if it was just newly created
-with <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-create" title="hb_buffer_create ()"><code class="function">hb_buffer_create()</code></a>.</p>
+<p>Clears the buffer contents and segment properties, and restores the
+default Unicode functions and buffer settings.</p>
+<p>The message callback, its associated data, and any attached user data are
+preserved. To remove the message callback, call
+<a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-set-message-func" title="hb_buffer_set_message_func ()"><code class="function">hb_buffer_set_message_func()</code></a> with a <code class="literal">NULL</code> function.</p>
 <div class="refsect3">
 <a name="hb-buffer-reset.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -963,8 +966,11 @@ with <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-create" title="hb_b
 <a name="hb-buffer-clear-contents"></a><h3>hb_buffer_clear_contents ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 hb_buffer_clear_contents (<em class="parameter"><code><a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t"><span class="type">hb_buffer_t</span></a> *buffer</code></em>);</pre>
-<p>Similar to <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-reset" title="hb_buffer_reset ()"><code class="function">hb_buffer_reset()</code></a>, but does not clear the Unicode functions and
-the replacement code point.</p>
+<p>Clears the buffer contents and segment properties (direction, script,
+language), and resets the random state to its default value of 1.</p>
+<p>Unlike <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-reset" title="hb_buffer_reset ()"><code class="function">hb_buffer_reset()</code></a>, this function preserves the Unicode functions,
+flags, cluster level, replacement code point, and invisible and not-found
+glyphs. The message callback and attached user data are also preserved.</p>
 <div class="refsect3">
 <a name="hb-buffer-clear-contents.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -3405,7 +3411,12 @@ hb_buffer_set_message_func (<em class="parameter"><code><a class="link" href="ha
                             <em class="parameter"><code><a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-message-func-t" title="hb_buffer_message_func_t ()"><span class="type">hb_buffer_message_func_t</span></a> func</code></em>,
                             <em class="parameter"><code><span class="type">void</span> *user_data</code></em>,
                             <em class="parameter"><code><a class="link" href="harfbuzz-hb-common.html#hb-destroy-func-t" title="hb_destroy_func_t ()"><span class="type">hb_destroy_func_t</span></a> destroy</code></em>);</pre>
-<p>Sets the implementation function for <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-message-func-t" title="hb_buffer_message_func_t ()"><span class="type">hb_buffer_message_func_t</span></a>.</p>
+<p>Sets the implementation function for <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-message-func-t" title="hb_buffer_message_func_t ()"><span class="type">hb_buffer_message_func_t</span></a>.
+The callback and its associated data are preserved by <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-reset" title="hb_buffer_reset ()"><code class="function">hb_buffer_reset()</code></a>
+and <a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-clear-contents" title="hb_buffer_clear_contents ()"><code class="function">hb_buffer_clear_contents()</code></a>. The <em class="parameter"><code>destroy</code></em>
+ function is called when the
+callback is replaced or removed, or when <em class="parameter"><code>buffer</code></em>
+ is destroyed.</p>
 <div class="refsect3">
 <a name="hb-buffer-set-message-func.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
