@@ -154,6 +154,7 @@
       </sub>
       <sub name="API Index" link="api-index-full.html"/>
       <sub name="Index of deprecated API" link="deprecated-api-index.html"/>
+      <sub name="Index of new symbols in 15.1.0" link="api-index-15-1-0.html"/>
       <sub name="Index of new symbols in 14.5.0" link="api-index-14-5-0.html"/>
       <sub name="Index of new symbols in 14.4.0" link="api-index-14-4-0.html"/>
       <sub name="Index of new symbols in 14.3.0" link="api-index-14-3-0.html"/>
@@ -323,8 +324,10 @@
     <keyword type="function" name="hb_buffer_serialize ()" link="harfbuzz-hb-buffer.html#hb-buffer-serialize" since="2.7.3"/>
     <keyword type="function" name="hb_buffer_serialize_glyphs ()" link="harfbuzz-hb-buffer.html#hb-buffer-serialize-glyphs" since="0.9.7"/>
     <keyword type="function" name="hb_buffer_deserialize_glyphs ()" link="harfbuzz-hb-buffer.html#hb-buffer-deserialize-glyphs" since="0.9.7"/>
+    <keyword type="function" name="hb_buffer_deserialize_glyphs2 ()" link="harfbuzz-hb-buffer.html#hb-buffer-deserialize-glyphs2" since="15.1.0"/>
     <keyword type="function" name="hb_buffer_serialize_unicode ()" link="harfbuzz-hb-buffer.html#hb-buffer-serialize-unicode" since="2.7.3"/>
     <keyword type="function" name="hb_buffer_deserialize_unicode ()" link="harfbuzz-hb-buffer.html#hb-buffer-deserialize-unicode" since="2.7.3"/>
+    <keyword type="function" name="hb_buffer_deserialize_unicode2 ()" link="harfbuzz-hb-buffer.html#hb-buffer-deserialize-unicode2" since="15.1.0"/>
     <keyword type="function" name="hb_buffer_serialize_format_from_string ()" link="harfbuzz-hb-buffer.html#hb-buffer-serialize-format-from-string" since="0.9.7"/>
     <keyword type="function" name="hb_buffer_serialize_format_to_string ()" link="harfbuzz-hb-buffer.html#hb-buffer-serialize-format-to-string" since="0.9.7"/>
     <keyword type="function" name="hb_buffer_serialize_list_formats ()" link="harfbuzz-hb-buffer.html#hb-buffer-serialize-list-formats" since="0.9.7"/>

@@ -528,6 +528,11 @@ return, <em class="parameter"><code>num_clusters</code></em>
 If the value <em class="parameter"><code>clusters</code></em>
  points at has changed after the call, the caller
 will free the allocated cluster array using <code class="function">cairo_text_cluster_free()</code>.</p>
+<p>Cairo can only represent monotone clusters.  If the cluster values in
+<em class="parameter"><code>buffer</code></em>
+ are not monotone in the buffer's direction, a single cluster
+mapping all of <em class="parameter"><code>utf8</code></em>
+ to all of the glyphs is returned.</p>
 <p>See <a class="link" href="harfbuzz-hb-cairo.html#hb-cairo-font-face-set-scale-factor" title="hb_cairo_font_face_set_scale_factor ()"><code class="function">hb_cairo_font_face_set_scale_factor()</code></a> for the details of
 the <em class="parameter"><code>scale_factor</code></em>
  argument.</p>

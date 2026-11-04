@@ -1669,7 +1669,8 @@ cleared so the rasterizer can be reused. Output format is always
 <div class="refsect3">
 <a name="hb-raster-draw-render.returns"></a><h4>Returns</h4>
 <p>A rendered <a class="link" href="harfbuzz-hb-raster.html#hb-raster-image-t" title="hb_raster_image_t"><span class="type">hb_raster_image_t</span></a>. Returns <code class="literal">NULL</code> on allocation/configuration
-failure. If no geometry was accumulated, returns an empty image. </p>
+failure. If no geometry was accumulated, returns an empty image. If
+rasterizing the geometry would exceed the work budget, returns a blank image. </p>
 <p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 <p class="since">Since: <a class="link" href="api-index-13-0-0.html#api-index-13.0.0">13.0.0</a></p>
@@ -2080,6 +2081,9 @@ hb_raster_paint_get_scale_factor (<em class="parameter"><code>const <a class="li
 hb_raster_paint_set_extents (<em class="parameter"><code><a class="link" href="harfbuzz-hb-raster.html#hb-raster-paint-t" title="hb_raster_paint_t"><span class="type">hb_raster_paint_t</span></a> *paint</code></em>,
                              <em class="parameter"><code>const <a class="link" href="harfbuzz-hb-raster.html#hb-raster-extents-t" title="hb_raster_extents_t"><span class="type">hb_raster_extents_t</span></a> *extents</code></em>);</pre>
 <p>Sets the output image extents (pixel rectangle).</p>
+<p>Changing extents after painting starts does not resize the active image.
+The extents are cleared by <a class="link" href="harfbuzz-hb-raster.html#hb-raster-paint-render" title="hb_raster_paint_render ()"><code class="function">hb_raster_paint_render()</code></a>, so set them again
+before painting the next image.</p>
 <p>Call this before <a class="link" href="harfbuzz-hb-font.html#hb-font-paint-glyph" title="hb_font_paint_glyph ()"><code class="function">hb_font_paint_glyph()</code></a> for each render.
 A common pattern is:</p>
 <div class="informalexample"><pre class="screen">

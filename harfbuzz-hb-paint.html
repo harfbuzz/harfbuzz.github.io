@@ -4661,6 +4661,7 @@ hb_paint_sweep_gradient_tiles (<em class="parameter"><code><a class="link" href=
 <p>Iterates the full 0..2π sweep produced by a color-stop list,
 invoking <em class="parameter"><code>emit_patch</code></em>
  once per (start, end) angular segment.
+Segments are clipped to 0..2π, wherever the angles lie.
 Handles <a class="link" href="harfbuzz-hb-paint.html#HB-PAINT-EXTEND-PAD:CAPS"><span class="type">HB_PAINT_EXTEND_PAD</span></a>, <a class="link" href="harfbuzz-hb-paint.html#HB-PAINT-EXTEND-REPEAT:CAPS"><span class="type">HB_PAINT_EXTEND_REPEAT</span></a>, and
 <a class="link" href="harfbuzz-hb-paint.html#HB-PAINT-EXTEND-REFLECT:CAPS"><span class="type">HB_PAINT_EXTEND_REFLECT</span></a>.  Stops must be pre-sorted by
 offset; use <a class="link" href="harfbuzz-hb-paint.html#hb-paint-normalize-color-line" title="hb_paint_normalize_color_line ()"><code class="function">hb_paint_normalize_color_line()</code></a> first if they
