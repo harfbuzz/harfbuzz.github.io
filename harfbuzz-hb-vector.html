@@ -574,6 +574,9 @@ hb_vector_paint_glyph (paint, font, gid, HB_VECTOR_EXTENTS_MODE_EXPAND);
 hb_blob_t *svg = hb_vector_paint_render (paint);
 </pre></div>
 <p></p>
+<p>For linear and radial gradients, PDF output supports only
+<a class="link" href="harfbuzz-hb-paint.html#HB-PAINT-EXTEND-PAD:CAPS"><code class="literal">HB_PAINT_EXTEND_PAD</code></a>. <a class="link" href="harfbuzz-hb-paint.html#HB-PAINT-EXTEND-REPEAT:CAPS"><code class="literal">HB_PAINT_EXTEND_REPEAT</code></a> and
+<a class="link" href="harfbuzz-hb-paint.html#HB-PAINT-EXTEND-REFLECT:CAPS"><code class="literal">HB_PAINT_EXTEND_REFLECT</code></a> are not supported for these gradients.</p>
 <p>Both contexts accumulate multiple glyphs into a single document.
 Call <a class="link" href="harfbuzz-hb-vector.html#hb-vector-draw-render" title="hb_vector_draw_render ()"><code class="function">hb_vector_draw_render()</code></a> / <a class="link" href="harfbuzz-hb-vector.html#hb-vector-paint-render" title="hb_vector_paint_render ()"><code class="function">hb_vector_paint_render()</code></a> to
 retrieve the final blob.  Rendering clears all accumulated
@@ -1519,8 +1522,10 @@ The caller transfers ownership of one reference to <em class="parameter"><code>d
  and must
 not destroy that reference after this call. Finish accessing <em class="parameter"><code>blob</code></em>
 
-and its data before recycling: later renders may reuse the blob
-and overwrite its data.</p>
+and its data before recycling, and do not keep other references
+to it: later renders may reuse the blob and overwrite its data.
+An immutable blob, such as one that a sub-blob was created from,
+is not reused; it is simply destroyed.</p>
 <div class="refsect3">
 <a name="hb-vector-draw-recycle-blob.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -2662,8 +2667,10 @@ The caller transfers ownership of one reference to <em class="parameter"><code>p
  and must
 not destroy that reference after this call. Finish accessing <em class="parameter"><code>blob</code></em>
 
-and its data before recycling: later renders may reuse the blob
-and overwrite its data.</p>
+and its data before recycling, and do not keep other references
+to it: later renders may reuse the blob and overwrite its data.
+An immutable blob, such as one that a sub-blob was created from,
+is not reused; it is simply destroyed.</p>
 <div class="refsect3">
 <a name="hb-vector-paint-recycle-blob.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">

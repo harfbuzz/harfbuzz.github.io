@@ -387,7 +387,8 @@ RGBA16I texels (8 bytes each).  Typical encoding flow:</p>
 hb_gpu_draw_t *draw = hb_gpu_draw_create_or_fail ();
 
 hb_gpu_draw_glyph (draw, font, gid);
-hb_blob_t *blob = hb_gpu_draw_encode (draw);
+hb_glyph_extents_t extents;
+hb_blob_t *blob = hb_gpu_draw_encode (draw, &amp;extents);
 
 // Upload hb_blob_get_data(blob) to the atlas at some offset.
 unsigned atlas_offset = upload_to_atlas (blob);
@@ -1375,9 +1376,16 @@ hb_gpu_draw_recycle_blob (<em class="parameter"><code><a class="link" href="harf
 <p>Returns a blob to the encoder for potential reuse.
 The caller transfers ownership of <em class="parameter"><code>blob</code></em>
 .</p>
-<p>Currently this simply destroys the blob.  A future version
-may reclaim the underlying buffer to avoid allocation on the
-next <a class="link" href="harfbuzz-hb-gpu.html#hb-gpu-draw-encode" title="hb_gpu_draw_encode ()"><code class="function">hb_gpu_draw_encode()</code></a> call.</p>
+<p>If <em class="parameter"><code>blob</code></em>
+ came from <a class="link" href="harfbuzz-hb-gpu.html#hb-gpu-draw-encode" title="hb_gpu_draw_encode ()"><code class="function">hb_gpu_draw_encode()</code></a> its underlying buffer
+will be reused by the next call to <a class="link" href="harfbuzz-hb-gpu.html#hb-gpu-draw-encode" title="hb_gpu_draw_encode ()"><code class="function">hb_gpu_draw_encode()</code></a>,
+avoiding a malloc / blob allocation per glyph.</p>
+<p>Finish accessing <em class="parameter"><code>blob</code></em>
+ and its data before recycling, and do
+not keep other references to it: later encodes may reuse the
+blob and overwrite its data.  An immutable blob, such as one
+that a sub-blob was created from, is not reused; it is simply
+destroyed.</p>
 <div class="refsect3">
 <a name="hb-gpu-draw-recycle-blob.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -2012,6 +2020,12 @@ transfers ownership of <em class="parameter"><code>blob</code></em>
  came from <a class="link" href="harfbuzz-hb-gpu.html#hb-gpu-paint-encode" title="hb_gpu_paint_encode ()"><code class="function">hb_gpu_paint_encode()</code></a> its underlying buffer
 will be reused by the next call to <a class="link" href="harfbuzz-hb-gpu.html#hb-gpu-paint-encode" title="hb_gpu_paint_encode ()"><code class="function">hb_gpu_paint_encode()</code></a>,
 avoiding a malloc / blob allocation per glyph.</p>
+<p>Finish accessing <em class="parameter"><code>blob</code></em>
+ and its data before recycling, and do
+not keep other references to it: later encodes may reuse the
+blob and overwrite its data.  An immutable blob, such as one
+that a sub-blob was created from, is not reused; it is simply
+destroyed.</p>
 <div class="refsect3">
 <a name="hb-gpu-paint-recycle-blob.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">

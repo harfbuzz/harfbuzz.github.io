@@ -341,8 +341,10 @@ COLR, and CBDT/CBLC. This also includes fonts with variable outlines via OpenTyp
 variations. Notably EBDT/EBLC and SVG are not supported. Layout subsetting is supported
 only for OpenType Layout tables (GSUB, GPOS, GDEF). Notably subsetting of graphite or AAT tables
 is not yet supported.</p>
-<p>Fonts with graphite or AAT tables may still be subsetted but will likely need to use the
-retain glyph ids option and configure the subset to pass through the layout tables untouched.</p>
+<p>Fonts with graphite or AAT tables may still be subsetted but will likely need to
+configure the subset to pass through the unsupported tables untouched. When
+retained tables that cannot be subsetted refer to glyphs, glyph ids are
+preserved automatically.</p>
 </div>
 <div class="refsect1">
 <a name="harfbuzz-hb-subset.functions_details"></a><h2>Functions</h2>
@@ -1535,7 +1537,8 @@ object graph info</p></td>
 <td class="enum_member_name"><p><a name="HB-SUBSET-FLAGS-NO-HINTING:CAPS"></a>HB_SUBSET_FLAGS_NO_HINTING</p></td>
 <td class="enum_member_description">
 <p>If set hinting instructions will be dropped in
-the produced subset. Otherwise hinting instructions will be retained.</p>
+the produced subset. Otherwise hinting instructions will be retained. This
+flag is ignored for fonts whose hinting is required for correct rendering.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -1544,7 +1547,9 @@ the produced subset. Otherwise hinting instructions will be retained.</p>
 <td class="enum_member_description">
 <p>If set glyph indices will not be modified in
 the produced subset. If glyphs are dropped their indices will be retained
-as an empty glyph.</p>
+as an empty glyph. This is implied when the subset retains a table that
+cannot be subsetted and refers to glyphs, such as an AAT, Graphite, SVG, or
+bitmap table.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
